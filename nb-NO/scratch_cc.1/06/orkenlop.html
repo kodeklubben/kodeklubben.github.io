@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ørkenløp — Kodeklubben</title>
+
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/lesson.css">
+  <link rel="stylesheet" href="/css/scratch.css">
+</head>
+<body>
+<header>
+<div class="level">1.6</div>
+<div class="title">Ørkenløp</div>
+<div class="logo"><img src="/img/ccno_logo.png"/></div>
+</header>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.codeclub.org.uk/">Code Club (http://www.codeclub.org.uk/)</a> i England, og oversatt til norsk av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+<section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Dette er et spill for to, der en papegøye og en løvinne kjemper om å komme først gjennom ørkenen. Hver spiller må trykke en tast så fort og ofte som mulig for å flytte figuren sin, og den som kommer først til kanten av skjermen vinner.</p>
+<figure>
+<img src="orkenlop.png" />
+</figure>
+</section>
+<section id="steg-1-lag-en-scene-og-legg-til-figurer" class="level1 activity">
+<h1>Steg 1: Lag en scene og legg til figurer</h1>
+<p><em>Vi begynner med å få på plass bakgrunnen og figurene.</em></p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li>Klikk på Scene og velg en ferdig bakgrunn, <img src="bakgrunn-fra-bibliotek.png" alt="velg en ferdig bakgrunn" />. Velg <code>Natur/desert</code>.</li>
+<li>Fjern katten ved å høyreklikke på figuren og velg <code>slett</code>.</li>
+<li>Legg til en ny figur ved å trykke på <img src="hent-fra-bibliotek.png" alt="velg figur fra biblioteket" />. Velg <code>Dyr/Lionness</code>.</li>
+<li>Legg så til enda en ny figur: velg <code>Dyr/Parrot</code>. Krymp figuren slik at den er omtrent like stor som løvinnen ved å bruke <img src="krymp.png" alt="krymp" />.</li>
+</ul>
+</section>
+</section>
+<section id="steg-2-la-løvinnen-og-papegøyen-bevege-seg" class="level1 activity">
+<h1>Steg 2: La løvinnen og papegøyen bevege seg</h1>
+<p><em>Vi vil at figurene skal bevege seg når du trykker på en knapp.</em></p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg først løvefiguren og få den til å <code class="blockblue">gå 4 steg</code> når du trykker ‘L’ tasten.</p>
+<p><img src="9f826e300b965b829a2fb7877589924ff51a0174.png" alt="    når [l v] trykkes
+    gå (4) steg" /></p></li>
+<li><p>Velg så papegøyefiguren og la den <code class="blockblue">gå 4 steg</code> når du trykker ‘A’ tasten.</p>
+<p><img src="99194c449dfab9112243ec167427dbb854326013.png" alt="    når [a v] trykkes
+    gå (4) steg" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Beveger løvinnen og papegøyen seg over skjermen når du trykker på <code>A</code> og <code>L</code> tastene?</li>
+</ul>
+</section>
+</section>
+<section id="steg-3-start-kappløpet" class="level1 activity">
+<h1>Steg 3: Start kappløpet</h1>
+<p><em>Nå må vi kjøre i gang kappløpet og kåre en vinner. Vi begynner med å lage startknapp.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li>Legg til en ny figur. Velg <code>Ting/Button3</code>. Flytt den til midten av scenen.</li>
+<li>Klikk på <code class="blocklightgrey">Drakter</code>-fanen og verktøyet T for å legge til tekst. Trykk på venstre kant av knappen for å legge til et tekstfelt og skriv inn teksten <code>Start</code>. Du kan flytte på teksten ved å trykke en gang på den, og endre innhold ved å dobbeltklikke.</li>
+<li><p>Legg nå til et skript som viser figuren når spillet starter:</p>
+<p><img src="18d4ac367e995660caa37a644f96f8bdd88b1360.png" alt="    når grønt flagg klikkes
+    vis" /></p></li>
+<li><p>I tillegg vil vi at knappen først teller ned fra 3, sier <code>LØP!</code> og deretter blir skjult når den klikkes. Dette ordner du med følgende skript:</p>
+<p><img src="08ebabfb7b80940f9f79c4df18bb0381f3d443bd.png" alt="    når denne figuren klikkes
+    si [3] i (1) sekunder
+    si [2] i (1) sekunder
+    si [1] i (1) sekunder
+    si [LØP!] i (1) sekunder
+    skjul" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget, og deretter på startknappen.</strong></p>
+<ul>
+<li>Teller knappen ned?</li>
+<li>Sier den <code>LØP!</code>?</li>
+<li>Blir den borte?</li>
+</ul>
+<p>Vi ønsker at figurene bare beveger seg etter at kappløpet er startet og vi ønsker å vite når kappløpet er over.</p>
+</section>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li>For å vite når kappløpet har startet og sluttet lager vi en variabel med navnet <code class="blockorange">kappløp</code>. Variabelen skal være tilgjengelig <code>for alle figurer</code>. Fjern avhukingen foran variabelen, slik at den ikke vises på scenen.</li>
+<li><p>Sett <code class="blockorange">kappløp</code> til 0 når spillet startes ved å forandre <code class="blockgrey">når grønt flagg klikkes</code>-skriptet slik:</p>
+<p><img src="32b8799483ca3113feb515a66cd11d28727f3936.png" alt="    når grønt flagg klikkes
+    vis
+    sett [kappløp v] til (0)" /></p></li>
+<li>Når nedtellingen er ferdig og løpet begynner, forandrer vi <code class="blockorange">kappløp</code>-verdien til 1. Dette gjør du ved å legge til klossen <code class="blockorange">Sett kappløp til 1</code> under <code class="blockpurple">si 1 i 1 sekunder</code> i skriptet som starter med <code class="blockgrey">når denne figuren klikkes</code>.</li>
+<li><p>Nå må vi lage en regel som sier at figurene bare får lov til å bevege seg etter at løpet har startet – det vil si når <code class="blockorange">kappløp</code> har verdien 1. Klikk først på papegøyen. Så endrer du:</p>
+<p><img src="90272982388ce6dddd9166dac08b14acda272ea1.png" alt="    når [a v] trykkes
+    hvis &lt;(kappløp) = [1]&gt;
+        gå (4) steg" /></p></li>
+<li><p>Gjenta det samme for løvinnen.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-2" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Kan løvinnen og papegøyen bare flytte seg når nedtellingen er ferdig?</li>
+</ul>
+</section>
+</section>
+<section id="steg-4-avslutte-kappløpet" class="level1 activity">
+<h1>Steg 4: Avslutte kappløpet</h1>
+<p><em>Nå vil vi finne ut hvem som vinner kappløpet, og i tillegg gjøre klart for en ny runde.</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Legg til en kloss i papegøyens skript som sier <code class="blockorange">sett kappløp til 0</code> hvis figuren berører kanten av skjermen:</p>
+<p><img src="c32367904ba7edd96d97679c3825279f4c90e5ec.png" alt="    når [a v] trykkes
+    hvis &lt;(kappløp) = [1]&gt;
+        gå (4) steg
+        hvis (berører [kant v]?)
+            sett [kappløp v] til (0)" /></p></li>
+<li><p>Spill så inn en lyd som skal spilles av hvis papegøyen vinner.</p>
+<p>Trykk på <code class="blocklightgrey">Lyder</code>-fanen og deretter mikrofon-ikonet og spill inn en morsom trudelutt! Opptaket starter når du har klikket på rundingen slik at den blir rød. Klikk stopp (firkanten) når du er ferdig, og gi lyden et navn – for eksempel <code>Polly</code>. Noen nettlesere kan spørre om tillatelse til å spille inn lyd. Hvis du ikke ønsker dette, bruk lydene som følger med figurene.</p></li>
+<li><p>Deretter legger du til klossene som spiller lyden og lar papegøyen fortelle at den vant:</p>
+<p><img src="7c9b7d8eefc09eff4c8b30c764f209b43961fb9d.png" alt="    når [a v] trykkes
+    hvis &lt;(kappløp) = [1]&gt;
+        gå (4) steg
+        hvis (berører [kant v]?)
+            sett [kappløp v] til (0)
+            spill lyden [Polly v]
+            si [Polly vinner!] i (3) sekunder  " /></p></li>
+<li><p>Gjør tilsvarende for løvinnen.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-3" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Kan du trykke på startknappen og deretter bevege dyrene med tastene <code>A</code> og <code>L</code>?</li>
+<li>Kommer riktig vinnerlyd og melding opp på skjermen?</li>
+</ul>
+</section>
+</section>
+<section id="steg-5-nullstill-spillet" class="level1 activity">
+<h1>Steg 5: Nullstill spillet</h1>
+<p><em>Når kappløpet er over må vi fortelle de andre figurene at spillet er over og nullstille spillet, slik at er klart for en ny runde.</em></p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Klikk på papegøyefiguren og legg til en kloss som sender melding <code>Avslutt</code> etter at figuren sier den har vunnet.</p>
+<p><img src="6761a7977d976f4590e61beaff7f8ade50c88a39.png" alt="    når [a v] trykkes
+    hvis &lt;(kappløp) = [1]&gt;
+        gå (4) steg
+        hvis (berører [kant v]?)
+            sett [kappløp v] til (0)
+            spill lyden [Polly v]
+            si [Polly vinner! v] i (3) sekunder
+            send melding [Avslutt v]" /></p></li>
+<li><p>Vi trenger nå et nytt skript som lytter etter denne avslutningsmeldingen og flytter papegøyen tilbake til start.</p>
+<p><img src="819d0822d654b5a6a875a43c6460796c5707774c.png" alt="    når jeg mottar [Avslutt v]
+    sett x til (-170)" /></p></li>
+<li>Gjør det samme for løvinnen. Test forskjellige <code>x</code>-verdier for å være sikker på at løvinnen og papegøyen starter fra samme sted.</li>
+<li><p>For at figurene skal stå på startstreken når kappløpet starter den aller første gangen må vi også legge til følgende klosser på begge figurene:</p>
+<p><img src="0d55c22f15f17cefa8a74567e4535979c4618982.png" alt="    når grønt flagg klikkes
+    sett x til (-170)" /></p></li>
+<li><p>For at spillerne skal kunne klikke i gang nye runder må vi passe på at start-knappen kommer tilbake etter hver avsluttet runde. Klikk på startknapp-figuren og legg til et skript som viser knappen når avslutningsmeldingen blir mottatt.</p>
+<p><img src="61d7657012d8b995c09244ed9dc3dd4830c1b289.png" alt="    når jeg mottar [Avslutt v]
+    vis" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet-4" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Kan du spille mot en venn? En av dere styrer papegøyen ved å trykke <code>A</code>, og den andre løvinnen ved å trykke <code>L</code>.</li>
+</ul>
+</section>
+<section id="lagre-prosjektet" class="level2 save">
+<h2>Lagre prosjektet</h2>
+<p>Spillet er ferdig! Hvis du vil kan du velge <code>Legg ut</code> slik at venner og familie også kan spille det.</p>
+<p>Nedenfor er det noen forslag og ideer til hvordan du kan utvide spillet og gjøre det enda mer interessant.</p>
+</section>
+<section id="utfordring-1-legg-til-en-rakett" class="level2 challenge">
+<h2>Utfordring 1: Legg til en rakett!</h2>
+<ul>
+<li><strong>Legg til en rakett</strong> som kan brukes én gang per kappløp og som flytter papegøyen eller løvinnen <strong>30 steg på en gang.</strong></li>
+<li><strong>Legg til en ny drakt</strong> med ild som kommer ut bak figurene. La denne aktiveres når raketten avfyres.</li>
+<li><strong>Lag en lyd</strong> som figuren kan gi fra seg når raketten avfyres.</li>
+</ul>
+<p>Nedenfor er et forslag til hvordan et rakett-skript kan se ut. Du må legge til noen lyder og variabler på egen hånd.</p>
+<p><img src="446f972cb62d74820163c59d27548d382b8137c4.png" alt="    når [q v] trykkes
+    hvis &lt;((kappløp) = (1)) og ((rakett_brukt) = (0))&gt; 
+        bytt drakt til [parrot-rakett v]
+        sett [rakett_brukt v] til (1)
+        gå (30) steg
+        spill lyden [motorcycle passing v]
+        hvis (berører [kant v]?)
+            sett [kappløp v] til (0)
+            spill lyden [Polly v]
+            si [Polly vinner! v] i (3) sekunder
+            send melding [Avslutt v]
+        slutt
+        bytt drakt til [parrot-a v]" /></p>
+</section>
+<section id="test-prosjektet-5" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Fungerer raketten slik du hadde planlagt?</li>
+<li>Hva skjer om man forsøker å bruke raketten to ganger?</li>
+<li>Hva skjer om man bruker raketten for å komme til mål?</li>
+</ul>
+</section>
+<section id="utfordring-2-bruk-egendefinerte-klosser-for-å-forenkle-skriptet-ditt" class="level2 challenge">
+<h2>Utfordring 2: Bruk egendefinerte klosser for å forenkle skriptet ditt</h2>
+<p>Koden som brukes til å sjekke om kappløpet er over brukes nå to steder for hver figur; når figuren beveger seg normalt og når den beveger seg med rakett. Vi kan forenkle skriptet vårt ved å bruke en egendefinert kloss. Dette er en samling kode som brukes flere steder. Det er nesten som at vi lager vår egen Scratch-kodekloss!</p>
+<ul>
+<li>Velg papegøyens skript.</li>
+<li>Velg <code class="blockpurple">Flere klosser</code>-paletten og klikk så på <code class="blocklightgrey">Lag en kloss</code> knappen.</li>
+<li>Kall klossen din <code>ferdig</code> og trykk OK.</li>
+<li>Du vil nå få en <code class="blockpurple">definer ferdig</code>-kloss i skriptvinduet ditt. Flytt den litt for seg selv.</li>
+<li>Løsriv hele <code class="blockyellow">hvis</code><code class="blocklightblue">berører kant?</code>-klossen og dra den til <code class="blockpurple">definer ferdig</code>-klossen.</li>
+<li>Kan du dra <code class="blockpurple">ferdig</code>-klossen fra paletten og bruke den på samme måte som andre kodeklosser?</li>
+<li><p>Slett den andre <code class="blockyellow">hvis</code><code class="blocklightblue">berører kant?</code>-klossen fra skriptet ditt og erstatt også den med en <code class="blockpurple">ferdig</code>-kloss.</p>
+<p><img src="1a9107d1a5da40d1ea2644729a2a444e0a3f6e0e.png" alt="    definer ferdig
+    hvis (berører [kant v]?)
+        sett [kappløp v] til (0)
+        spill lyden [Polly v]
+        si [Polly vinner! v] i (3) sekunder
+        send melding [Avslutt v]
+
+    når [a v] trykkes
+    hvis &lt;(kappløp) = [1]&gt;
+        gå (4) steg
+        ferdig
+
+    når [q v] trykkes
+    hvis &lt;((kappløp) = (1)) og ((rakett_brukt) = (0))&gt; 
+        bytt drakt til [parrot-rakett v]
+        sett [rakett_brukt v] til (1)
+        gå (30) steg
+        spill lyden [motorcycle passing v]
+        ferdig
+        bytt drakt til [parrot-a v]" /></p></li>
+<li><p>Gjør dette koden din enklere å lese? Kan du lage en tilsvarende egendefinert kloss for løvinnen?</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-6" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Virker spillet fortsatt slik det skal?</li>
+<li>Er spillet ferdig når papegøyen eller løvinnen kommer til kanten av skjermen?</li>
+</ul>
+</section>
+<section id="lagre-prosjektet-1" class="level2 save">
+<h2>Lagre prosjektet</h2>
+<p>Veldig bra! Nå er du ferdig og kan kose deg med spillet du har laget!</p>
+</section>
+</section>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.codeclub.org.uk/">Code Club (http://www.codeclub.org.uk/)</a> i England, og oversatt til norsk av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+</body>
+</div>
+</html>

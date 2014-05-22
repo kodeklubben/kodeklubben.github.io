@@ -1,0 +1,29 @@
+section  h1{
+    border-radius: 4px 4px 4px 4px;
+    background: #349946;
+    padding: 8px;
+    margin-left: 0px;
+    margin-top: 0px;
+    color: #fff; 
+}
+
+section h2{
+    border-radius: 4px 4px 4px 4px;
+    margin: 15px;
+    padding: 8px;
+    font-size:16px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border: 1px dotted #349946;
+    border-radius: 5px;
+}
+section h2{
+    border-radius: 4px 4px 4px 4px;
+    margin: 15px;
+    padding: 8px;
+    font-size:16px;
+    margin-left: 0px;
+    margin-top: 0px;
+    border: 1px dotted #B1DAAE;
+    border-radius: 5px;
+}
