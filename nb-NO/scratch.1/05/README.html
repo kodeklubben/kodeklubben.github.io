@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Snøballkrig — Kodeklubben</title>
+
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/notes.css">
+  
+</head>
+<body>
+<header>
+<div class="level">1.5</div>
+<div class="title">Snøballkrig</div>
+<div class="logo"><img src="/img/ccno_logo.png"/></div>
+</header>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+<section id="informasjon-til-veiledere" class="level1">
+<h1>Informasjon til Veiledere</h1>
+<p>I dette spillet vil vi kontrollere snøballkaster som prøver å jage bort slemme gutter ved å kaste snøball etter dem.</p>
+<figure>
+<img src="snoballkrig.png" />
+</figure>
+</section>
+<section id="forberedelser" class="level1">
+<h1>Forberedelser</h1>
+<p>Snøballkrig bruker bare ressurser som er inkludert i Scratch-platformen og krever som sådann ingen spesielle forberedelser.</p>
+<p>Oppgaven er dog ganske utfordrende, og ikke all kode er gitt i detalj i oppgaveteksten. Dermed er dette en oppgave for dem som har programmert litt Scratch tidligere.</p>
+</section>
+<section id="læringsmål" class="level1">
+<h1>Læringsmål</h1>
+<p>De viktigste læringsmålene i Snøballkrig er</p>
+<ol type="1">
+<li>hvordan <strong>bruke kloner</strong> for lage mange kopier av en figur,</li>
+<li>hvordan man kan gi forskjellige kloner forskjellige egenskaper, og</li>
+<li>hvordan man setter opp en <strong>bra struktur</strong> for et større program.</li>
+</ol>
+<p>Mot slutten av oppgaven ser vi også på måter man kan gjøre spillet mer utfordrende etterhvert som man spiller.</p>
+</section>
+<section id="kodelisting-scene" class="level1">
+<h1>Kodelisting: Scene</h1>
+<p><img src="accd543d208341252a19ebf798a8a5861a1865b2.png" alt="    når grønt flagg klikkes
+    bytt bakgrunn til [Meny v]
+
+    når [s v] trykkes
+    send melding [start v]
+
+    når jeg mottar [start v]
+    sett [Poeng v] til (0)
+    bytt bakgrunn til [Spill v]
+    for alltid
+        sett [Nivå v] til ((1) + ([gulv v] av ([kvadratrot v] av ((Poeng) / (3)))))
+    slutt
+
+    når jeg mottar [slutt v]
+    stopp [other scripts in stage v]
+    bytt bakgrunn til [Slutt v]" /></p>
+</section>
+<section id="kodelisting-helten" class="level1">
+<h1>Kodelisting: Helten</h1>
+<p><img src="90fad6a4f5dcfea9178175ab3aea861dbdc68444.png" alt="    når grønt flagg klikkes
+    skjul
+    sett størrelse til (75) %
+    begrens rotasjon [vend sideveis v]
+    sett [hastighet v] til (5)
+
+    når jeg mottar [start v]
+    gå til x: (0) y: (-75)
+    vis
+    for alltid
+        hvis (tast [pil høyre v] trykket?)
+            pek i retning (90 v)
+            neste drakt
+            gå (hastighet) steg
+        slutt
+        hvis (tast [pil venstre v] trykket?)
+            pek i retning (-90 v)
+            neste drakt
+            gå (hastighet) steg
+        slutt
+        hvis (tast [mellomrom v] trykket?)
+            vent til (ikke (tast [mellomrom v] trykket?))
+            send melding [kast v]
+        slutt
+    slutt
+
+    når jeg mottar [slutt v]
+    skjul
+    stopp [andre skript i figuren v]" /></p>
+</section>
+<section id="kodelisting-snøball" class="level1">
+<h1>Kodelisting: Snøball</h1>
+<p><img src="29f3c944665b6fa57778e407772e5ea3174e6439.png" alt="    når grønt flagg klikkes
+    skjul
+    sett størrelse til (40) %
+
+    når jeg mottar [kast v]
+    lag klon av [meg v]
+
+    når jeg starter som klon
+    gå til [Helten v]
+    pek i retning ([retning v] av [Helten v])
+    endre y med (15)
+    gå (30) steg
+    vis
+    gjenta til ((berører [Skumling v]?) eller (berører [kant v]?))
+        gå (hastighet) steg
+    slutt
+    hvis (berører [Skumling v]?)
+        vent (0.02) sekunder
+    slutt
+    slett denne klonen
+
+    når jeg mottar [slutt v]
+    slett denne klonen" /></p>
+</section>
+<section id="kodelisting-skumling" class="level1">
+<h1>Kodelisting: Skumling</h1>
+<p><img src="49896a7824fb426ca71aefc0da4a29f99f054f44.png" alt="    når grønt flagg klikkes
+    skjul
+    gå til x: (0) y: (-70)
+    begrens rotasjon [vend sideveis v]
+    sett størrelse til (30) %
+    sett [hastighet v] til [3]
+
+    når jeg mottar [start v]
+    for alltid
+        hvis ((tilfeldig tall fra (0) til (1)) = [0])
+            pek i retning (90 v)
+            sett x til (-250)
+        ellers
+            pek i retning (-90 v)
+            sett x til (250)
+        slutt
+        lag klon av [meg v]
+        vent (tilfeldig tall fra (2) til (4)) sekunder
+    slutt
+
+    når jeg starter som klon
+    sett [Slem v] til (tilfeldig tall fra (1) til (Nivå))
+    sett [Liv v] til (Slem)
+    endre [hastighet v] med (Slem)
+    endre [farge v] effekt med ((10) * (Slem))
+    endre størrelse med ((5) * (Slem))
+    vis
+    for alltid
+        gå (hastighet) steg
+        vent (0.1) sekunder
+    slutt
+
+    når jeg starter som klon
+    for alltid
+        hvis (berører [Helten v]?)
+            send melding [slutt v]
+        slutt
+        hvis (berører [Snøball v]?)
+            endre [Liv v] med (-1)
+            hvis ((Liv) = (0))
+                endre [Poeng v] med (Slem)
+                slett denne klonen
+            slutt
+        slutt
+    slutt
+
+    når jeg mottar [slutt v]
+    slett denne klonen" /></p>
+</section>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+</body>
+</div>
+</html>
