@@ -90,7 +90,7 @@ Hello World!</code></pre>
 </section>
 <section id="cowsay" class="level2 protip">
 <h2>Cowsay</h2>
-<p>Denne kuen er basert på et morsomt lite program som heter <strong>Cowsay</strong>, og som ble laget av Tony Monroe på slutten av 1990-tallet. En web-variant av programmet finnes nå på <a href="http://cowsay.morecode.org/">http://cowsay.morecode.org/</a>.</p>
+<p>Denne kuen er basert på et morsomt lite program som heter <strong>Cowsay</strong>, og som ble laget av Tony Monroe på slutten av 1990-tallet. En web-variant av programmet finnes nå på <a href="http://cowsay.morecode.org/" class="uri">http://cowsay.morecode.org/</a>.</p>
 </section>
 </section>
 <section id="steg-2-en-annen-metode" class="level1 activity">
@@ -265,6 +265,164 @@ skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span cl
 <p>Vi endret også litt i sjekken om <code>Y</code> er slik at ballen skal sprette, siden gravitasjonen gjør at vi ikke trenger å sprette i taket lengre.</p></li>
 </ul>
 </section>
+</section>
+<section id="steg-6-reklamebanner" class="level1 activity">
+<h1>Steg 6: Reklamebanner</h1>
+<p>Vi tar nå en liten pause fra sprettballen vår for å se på hvordan vi kan bruke skjermene til å lage enkle tekstplakater eller reklamebannere.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag et nytt program som du kaller <code>reklame</code>. Vi begynner helt enkelt med kommandoer du allerede kjenner:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span class="ot">(</span><span class="st">&quot;monitor&quot;</span><span class="ot">)</span>
+
+<span class="kw">if</span> skjerm <span class="kw">then</span>
+    skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+    skjerm<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>write<span class="ot">(</span><span class="st">&quot;ComputerCraft&quot;</span><span class="ot">)</span>
+<span class="kw">else</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&quot;Ingen skjerm er koblet til&quot;</span><span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>Kjør programmet. Skriver det til skjermen som det skal?</p></li>
+<li><p>Et problem hvis dette skal være et reklamebanner er at teksten er alt for liten! Du må jo nesten gå helt fram til skjermen for å kunne lese den.</p>
+<p>For skjermer kan vi bruke <code>setTextScale</code> for å endre tekststørrelsen. Legg til linjen</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">skjerm<span class="ot">.</span>setTextScale<span class="ot">(</span><span class="dv">3</span><span class="ot">)</span></code></pre>
+<p>rett før linjen <code>skjerm.clear()</code>, og kjør programmet ditt på nytt. Ble teksten større?</p>
+<figure>
+<img src="reklame.png" />
+</figure>
+<p>Tallet <code>3</code> i <code>setTextScale(3)</code> indikererer størrelsen på teksten. Her kan vi bruke tall mellom 0.5 og 5, hvor 5 gir oss den største mulige teksten. Etter at vi har brukt <code>setTextScale</code> må vi bruke <code>clear</code> før tekststørrelsen blir oppdatert.</p></li>
+<li><p>Prøv å endre verdien i <code>setTextScale</code>. Forandrer størrelsen på teksten seg? Hva skjer hvis du bruker et tall større enn 5? Eller mindre enn 0.5?</p></li>
+<li><p>Vi vil nå la programmet selv bestemme tekststørrelsen. Siden vi vil at dette skal være en reklameplakat ønsker vi at teksten skal være så stor som mulig.</p>
+<p>En måte å gjøre dette på er å lage en løkke hvor vi tester alle tekststørrelsene fra størst til minst, helt til vi finner en størrelse hvor all teksten får plass på skjermen.</p>
+<p>Legg inn denne funksjonen øverst i <code>reklame</code>-koden:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> brukStorTekst<span class="ot">(</span>skjerm<span class="ot">,</span> tekst<span class="ot">)</span>
+    <span class="kw">local</span> lengde <span class="ot">=</span> <span class="ot">#</span>tekst
+
+    <span class="kw">for</span> skala <span class="ot">=</span> <span class="dv">5</span><span class="ot">,</span> <span class="dv">0.5</span><span class="ot">,</span> <span class="ot">-</span><span class="dv">0.5</span> <span class="kw">do</span>
+        skjerm<span class="ot">.</span>setTextScale<span class="ot">(</span>skala<span class="ot">)</span>
+        skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+        bredde<span class="ot">,</span> hoyde <span class="ot">=</span> skjerm<span class="ot">.</span>getSize<span class="ot">()</span>
+        <span class="kw">if</span> lengde <span class="ot">&lt;=</span> bredde <span class="kw">then</span>
+            <span class="kw">break</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+<p>Skjønner du hvordan denne koden fungerer? Vi bruker noen nye triks her som du kanskje ikke har sett før.</p>
+<p>Tegnet <code>#</code> brukes for å telle ting. For eksempel betyr <code>#tekst</code> rett og slett bare antall tegn i (lengden av) <code>tekst</code>. Dette må vi vite når vi senere skal sjekke om skjermen er stor nok.</p>
+<p>I <em>for</em>-løkken bruker vi tre tall i stedet for to som vanlig. Det siste tallet, i dette tilfellet -0.5 bestemmer hvor store steg vi tar i løkken. Siden vi her ville telle ned fra 5 til 0.5 må vi bruke et negativt steg.</p>
+<p>Til slutt, <code>break</code> sier at vi vil avslutte <em>for</em>-løkken før den egentlig er ferdig. Dermed avslutter vi letingen etter tekststørrelser når vi finner en som passer. Tidligere har vi brukt <code>break</code> for å for eksempel avslutte <code>skattejakt</code> når man fant skatten.</p></li>
+<li><p>Nå vil vi bruke denne funksjonen for å sette tekststørrelsen. Prøv selv om du finner ut hvor og hvordan funksjonen bør kalles! Skal noen av de opprinnelige linjene slettes? Sjekk om programmet ditt virker ved å endre størrelsen på skjermen (bygg eller ødelegg noen enkeltskjermer) og kjøre det på nytt.</p></li>
+<li><p>En ting du kanskje ser er at du må skrive teksten som skal stå på skjermen to ganger? Først for at <code>brukStorTekst</code> trenger den for å finne riktig størrelse på skjermen, og deretter for at <code>skjerm.write</code> skal skrive den til skjermen. Da er det lurt å i stedet lage en variabel. Med denne variabelen vil koden din (under funksjonen <code>brukStorTekst</code>) se omtrent slik ut:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tekst <span class="ot">=</span> <span class="st">&quot;ComputerCraft&quot;</span>
+<span class="kw">local</span> skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span class="ot">(</span><span class="st">&quot;monitor&quot;</span><span class="ot">)</span>
+
+<span class="kw">if</span> skjerm <span class="kw">then</span>
+    brukStorTekst<span class="ot">(</span>skjerm<span class="ot">,</span> tekst<span class="ot">)</span>
+    skjerm<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>write<span class="ot">(</span>tekst<span class="ot">)</span>
+<span class="kw">else</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&quot;Ingen skjerm er koblet til&quot;</span><span class="ot">)</span>
+<span class="kw">end</span></code></pre></li>
+</ul>
+<section id="prøv-selv" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Det er flere måter å gjøre <code>reklame</code>-programmet enda bedre på. Her er to forslag:</p>
+<p>Kan du midtstille teksten på skjermen? Du må da endre tallene i <code>setCursorPos</code> ut ifra lengden på teksten og størrelsen på skjermen.</p>
+<p>Om du endrer størrelsen på skjermen blir teksten borte. Vi kan heller få teksten til å bli skrevet i ny og riktig størrelse når skjermen blir endret. Du kan bruke <code>os.pullEvent</code> til å lytte på hendelser som heter <code>monitor_resize</code> og skrive teksten på nytt når disse skjer.</p>
+</section>
+</section>
+</section>
+<section id="steg-7-en-skikkelig-ticker" class="level1 activity">
+<h1>Steg 7: En skikkelig ticker!</h1>
+<p>Dessverre er det en begrensning på hvor stor en skjerm kan være. Du kan maksimalt sette sammen 8 x 6 skjermer til en stor skjerm. Dette begrenser hvor lange tekster vi kan skrive, ihvertfall om vi vil bruke stor og godt synlig tekst.</p>
+<p>Et alternativ for lengre tekster er å bruke en ticker, hvor vi animerer teksten slik at den ruller over skjermen.</p>
+</section>
+<section id="sjekkliste-6" class="level1 check">
+<h1>Sjekkliste</h1>
+<ul>
+<li><p>Lag et nytt program som heter <code>ticker</code>. Vi begynner programmet på en velkjent måte:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tekst <span class="ot">=</span> <span class="st">&quot;Jeg er en lang tekst. Bytt meg gjerne ut!&quot;</span>
+<span class="kw">local</span> skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span class="ot">(</span><span class="st">&quot;monitor&quot;</span><span class="ot">)</span>
+
+<span class="kw">if</span> skjerm <span class="kw">then</span>
+    skjerm<span class="ot">.</span>setTextScale<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+
+    skjerm<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>write<span class="ot">(</span>tekst<span class="ot">)</span>
+<span class="kw">else</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&quot;Ingen skjerm er koblet til&quot;</span><span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>Her setter vi bare størrelsen på teksten fast til <code>5</code>, siden vi vil bruke så stor tekst som mulig. Hva skjer når du kjører dette programmet?</p></li>
+<li><p>I stedet for å prøve å skrive hele teksten til skjermen vil vi nå bare skrive så mye tekst som faktisk får plass. Da bruker vi igjen <code>skjerm.getSize()</code> for å finne ut hvor stor skjermen er. Videre vil vi bruke funksjonen <code>string.sub</code> i <code>string</code>-biblioteket (<em>sub</em> betyr i denne sammenhengen <em>del</em>, den brukes til å finne deltekster).</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tekst <span class="ot">=</span> <span class="st">&quot;Jeg er en lang tekst. Bytt meg gjerne ut!&quot;</span>
+<span class="kw">local</span> skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span class="ot">(</span><span class="st">&quot;monitor&quot;</span><span class="ot">)</span>
+
+<span class="kw">if</span> skjerm <span class="kw">then</span>
+    skjerm<span class="ot">.</span>setTextScale<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+    <span class="kw">local</span> bredde<span class="ot">,</span> hoyde <span class="ot">=</span> skjerm<span class="ot">.</span>getSize<span class="ot">()</span>         <span class="co">-- ny linje</span>
+
+    <span class="kw">local</span> deltekst <span class="ot">=</span> <span class="fu">string.sub</span><span class="ot">(</span>tekst<span class="ot">,</span> <span class="dv">1</span><span class="ot">,</span> bredde<span class="ot">)</span>  <span class="co">-- ny linje</span>
+    skjerm<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>write<span class="ot">(</span>deltekst<span class="ot">)</span>                         <span class="co">-- endret linje</span>
+<span class="kw">else</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&quot;Ingen skjerm er koblet til&quot;</span><span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>I linjen <code>string.sub(tekst, 1, bredde)</code> sier vi at vi vil ta ut en deltekst fra <code>tekst</code> fra tegn nummer <code>1</code> til tegn nummer <code>bredde</code>. Prøv å endre på disse tallene for å se effekten, slik at du skjønner hvordan denne funksjonen virker.</p></li>
+<li><p>Vi kan nå animere teksten ved hjelp av en <em>for</em>-løkke.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tekst <span class="ot">=</span> <span class="st">&quot;Jeg er en lang tekst. Bytt meg gjerne ut!&quot;</span>
+<span class="kw">local</span> skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span class="ot">(</span><span class="st">&quot;monitor&quot;</span><span class="ot">)</span>
+
+<span class="kw">if</span> skjerm <span class="kw">then</span>
+    skjerm<span class="ot">.</span>setTextScale<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+    <span class="kw">local</span> bredde<span class="ot">,</span> hoyde <span class="ot">=</span> skjerm<span class="ot">.</span>getSize<span class="ot">()</span>
+    <span class="kw">local</span> lengde <span class="ot">=</span> <span class="ot">#</span>tekst                     <span class="co">-- ny linje</span>
+
+    <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">0</span><span class="ot">,</span> lengde <span class="ot">-</span> bredde <span class="kw">do</span>             <span class="co">-- ny linje</span>
+        <span class="kw">local</span> deltekst <span class="ot">=</span> <span class="fu">string.sub</span><span class="ot">(</span>tekst<span class="ot">,</span> i<span class="ot">+</span><span class="dv">1</span><span class="ot">,</span> i<span class="ot">+</span>bredde<span class="ot">)</span>
+                                  <span class="co">-- deltekstlinjen er endret</span>
+        skjerm<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+        skjerm<span class="ot">.</span>clear<span class="ot">()</span>                        <span class="co">-- ny linje</span>
+        skjerm<span class="ot">.</span>write<span class="ot">(</span>deltekst<span class="ot">)</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+<span class="kw">else</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&quot;Ingen skjerm er koblet til&quot;</span><span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>Skjønner du hvordan tellevariabelen <code>i</code> virker? Enkelt sagt teller den hvor langt fra det første tegnet i teksten vi har kommet.</p></li>
+<li><p>Kjør programmet. Ser du animasjonen? Hvis du bare ser slutten av teksten på skjermen er det fordi datamaskinen animerer for raskt. Prøv å legg inn en <code>sleep</code>-kommando nederst i <em>for</em>-løkken. Ble det bedre nå?</p></li>
+<li><p>Hvis dette skal være en ticker som står og går vil vi at teksten skal rullere hele tiden, ikke bare en gang. Prøv også å lag en <code>while true do</code>-løkke rundt <em>for</em>-løkken. Gjentas animasjonen? Husk at du kan bruke <code>Ctrl-T</code> for å stoppe programmet ditt.</p></li>
+<li><p>Når animasjonen kommer til slutten av teksten, bare hopper den rett til begynnelsen igjen. Dette ser ikke så bra ut. Vi kan forbedre dette ved å legge på litt luft før og etter teksten.</p>
+<p>Hvor mye luft vi legger på vil ideelt sett avhenge av hvor stor skjermen er. Til dette kan vi bruke <code>string.rep</code> som kan repetere tekststrenger. For eksempel er <code>string.rep(&quot;Hei&quot;, 4)</code> det samme som <code>HeiHeiHeiHei</code>. Vi kan legge på litt luft rundt teksten før vi begynner å animere den.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tekst <span class="ot">=</span> <span class="st">&quot;Jeg er en lang tekst. Bytt meg gjerne ut!&quot;</span>
+<span class="kw">local</span> skjerm <span class="ot">=</span> peripheral<span class="ot">.</span>find<span class="ot">(</span><span class="st">&quot;monitor&quot;</span><span class="ot">)</span>
+
+<span class="kw">if</span> skjerm <span class="kw">then</span>
+    skjerm<span class="ot">.</span>setTextScale<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
+    skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+    <span class="kw">local</span> bredde<span class="ot">,</span> hoyde <span class="ot">=</span> skjerm<span class="ot">.</span>getSize<span class="ot">()</span>
+    <span class="kw">local</span> luft <span class="ot">=</span> <span class="fu">string.rep</span><span class="ot">(</span><span class="st">&quot; &quot;</span><span class="ot">,</span> bredde<span class="ot">)</span>      <span class="co">-- ny linje</span>
+    tekst <span class="ot">=</span> luft <span class="ot">..</span> tekst <span class="ot">..</span> luft             <span class="co">-- ny linje</span>
+
+    <span class="kw">local</span> lengde <span class="ot">=</span> <span class="ot">#</span>tekst
+    <span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">0</span><span class="ot">,</span> lengde <span class="ot">-</span> bredde <span class="kw">do</span>
+            <span class="kw">local</span> deltekst <span class="ot">=</span> <span class="fu">string.sub</span><span class="ot">(</span>tekst<span class="ot">,</span> i<span class="ot">+</span><span class="dv">1</span><span class="ot">,</span> i<span class="ot">+</span>bredde<span class="ot">)</span>
+            skjerm<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+            skjerm<span class="ot">.</span>clear<span class="ot">()</span>
+            skjerm<span class="ot">.</span>write<span class="ot">(</span>deltekst<span class="ot">)</span>
+            sleep<span class="ot">(</span><span class="dv">0.2</span><span class="ot">)</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+<span class="kw">else</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&quot;Ingen skjerm er koblet til&quot;</span><span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>Pass på at det er et mellomromstegn i <code>string.rep(&quot; &quot;, bredde)</code>.</p></li>
+</ul>
+</section>
+<section id="steg-8-whack-a-ball" class="level1 activity">
+<h1>Steg 8: Whack-a-ball</h1>
 </section>
 <section class="legal">
 <div>
