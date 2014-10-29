@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Hvor i All Verden? Del 2 — Kodeklubben</title>
+
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/lesson.css">
+  <link rel="stylesheet" href="/css/scratch.css">
+</head>
+<body>
+<header>
+<div class="level">Scratch</div>
+<div class="title">Hvor i All Verden? Del 2</div>
+<div class="logo"><img src="/img/ccno_logo.png"/></div>
+</header>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+<section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Hvor i All Verden? er et reise- og geografispill hvor man raskest mulig skal fly innom reisemål spredt rundt i Europa. Dette er den andre leksjonen av tre. Her skal vi spesielt se på hvordan vi kan gjøre kartet større enn skjermen, ved å la kartet rulle i bakgrunnen. Underveis vil vi se litt nærmere på hva et koordinatsystem er.</p>
+<p>I den siste leksjonen vil lage lister som gjør det enklere å legge til mange reisemål. Vi vil også lage en skikkelig intro til spillet.</p>
+<figure>
+<img src="hvor_i_all_verden_2.png" />
+</figure>
+</section>
+<section id="steg-0-forrige-gang" class="level1 activity">
+<h1>Steg 0: Forrige gang</h1>
+<p><em>Vi vil nå fortsette med det programmet vi laget i del 1.</em></p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<p>Sjekk spesielt at</p>
+<ul>
+<li><p>du har et helikopter som du kan styre rundt på skjermen med piltastene,</p></li>
+<li><p>du har en stedfigur som kan bli funnet av helikopteret.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-1-bakgrunnen-som-figur" class="level1 activity">
+<h1>Steg 1: Bakgrunnen som figur</h1>
+<p><em>Vi vil nå at bakgrunnen skal bli flyttbar. Vanlige bakgrunner i Scratch kan ikke flyttes. Vi må derfor &quot;jukse litt&quot;, og la bakgrunnen være en figur.</em></p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Slett <code>Europakart</code>-bakgrunnen din. En helt hvit bakgrunn vil passe bra nå.</p></li>
+<li><p>Lag en ny figur ved å klikke <img src="hent-fra-fil.png" alt="Last opp figur fra fil" /> ved siden av <code>Ny figur</code>. Velg filen <code>europakart.png</code> som du lastet ned forrige gang. Hvis du ikke har denne lett tilgjengelig kan du laste den ned på nytt fra <a href="http://kodeklubben.github.io/nb-NO/scratch_kurs.2/02/europakart.png" class="uri">http://kodeklubben.github.io/nb-NO/scratch_kurs.2/02/europakart.png</a>.</p></li>
+<li><p>Gi denne nye kartfiguren navnet <code>Kart</code>.</p></li>
+<li><p>For å være sikre på at denne figuren ligger bakerst som en bakgrunn kan vi starte med følgende kode:</p>
+<p><img src="636e15f725cee8c3bd59adedc146e63f77a5a62d.png" alt="    når grønt flagg klikkes
+    gå nedover (50) lag" /></p></li>
+<li><p>Vi vil nå lage denne figuren så stor som mulig. Dessverre har Scratch en begrensning på hvor store figurer kan være. Du kan se denne om du først krysser av for at <code class="blockpurple">størrelse</code> skal vises på kart-figuren. Deretter kan du endre tallet i</p>
+<p><img src="b82a396bdc3a5baa0e3e43b9f7d0d0cae1b36463.png" alt="    sett størrelse til (9999) %" /></p>
+<p>Du vil se at størrelsen ikke blir satt til <code>9999</code>, men til et mindre tall. Legg på en kloss som setter så stor størrelse som mulig på kartet når det grønne flagget klikkes.</p></li>
+<li><p>Til bruk senere, når vi skal lage en intro til spillet, er det greit å skjule kartfiguren når det grønne flagget klikkes.</p></li>
+</ul>
+</section>
+</section>
+<section id="koordinatsystemer" class="level1 activity">
+<h1>Koordinatsystemer</h1>
+<p>I del 1 så vi såvidt hvordan vi bruker koordinater for å beskrive hvor helikopteret og reisemålet er på skjermen (og på kartet). Om du trykker <code class="blockblue">i</code> på en figur vil du alltid se koordinatene til figuren, som to tall <code>x</code> og <code>y</code>.</p>
+<figure>
+<img src="reisemaal.png" />
+</figure>
+<p>Midt på skjermen har koordinatene <code>x: 0</code> og <code>y: 0</code>. Ellers beskriver <code>x</code> hvor et punkt er sideveis. Dersom <code>x</code> er mindre enn null er punktet til venstre for midten, mens om <code>x</code> er positivt er punktet til høyre for midten. På samme måte sier <code>y</code> hvor høyt på skjermen et punkt er. <code>y</code> større enn null betyr at punktet er over midten, mens et punkt med negativ <code>y</code> vil være nedenfor midten av skjermen.</p>
+<figure>
+<img src="koordinatsystem.png" />
+</figure>
+<p>Vanligvis passer Scratch på disse koordinatene for oss, slik at vi ikke trenger å tenke så mye på dem.</p>
+<p>Men nå skal vi gjøre noe litt spesielt. Vi vil skape en illusjon hvor det ser ut som om helikopteret flytter på seg, mens det egentlig er bakgrunnen som flytter seg. For å gjøre dette må vi lage våre egne <code>X</code>- og <code>Y</code>-variabler som vi bruker til å koble helikopteret, stedet og bakgrunnen.</p>
+</section>
+<section id="steg-2-nye-kontroller-for-helikopteret" class="level1 activity">
+<h1>Steg 2: Nye kontroller for helikopteret</h1>
+<p><em>Vi vil først endre hva som skjer når vi trykker på piltastene.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag to nye variabler som gjelder for alle figurer. Disse skal hete <code>X</code> og <code>Y</code>, og vil beskrive hvor helikopteret er i forhold til kartet.</p></li>
+<li><p>Vi skal nå endre hva som skjer når du trykker på piltastene. I stedet for at helikopteret skal</p>
+<p><img src="998da4f508c5746a9ecaff7c5d1458441fd97f13.png" alt="    gå (hastighet) steg" /></p>
+<p>vil vi endre <code class="blockorange">X</code> eller <code class="blockorange">Y</code> med <code class="blockorange">hastighet</code> eller med</p>
+<p><img src="da0f30cedde7ad067c16e61b5bd97d6ea4db3f2d.png" alt="    ((0) - (hastighet))" /></p>
+<p>Oppdater alle fire hvis-løkkene på helikopteret.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Helikopteret skal nå <strong>ikke</strong> flytte seg når du trykker på piltastene. Hvis helikopteret flytter seg må du slette <code class="blockblue">gå</code>-klossene.</p></li>
+<li><p>Helikopteret skal fortsatt snu seg til høyre eller venstre når du trykker på piltastene.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-flytt-kartet" class="level1 activity">
+<h1>Steg 3: Flytt kartet</h1>
+<p><em>Vi kan nå flytte kartet når helikopteret flyr rundt omkring.</em></p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<p>Dette steget er egentlig ganske lett. Det eneste vi må passe er at vi skal flytte kartet <strong>motsatt</strong> vei av hva helikopteret skal fly. For eksempel, om vi vil at det skal se ut som om helikopteret flytter seg oppover må vi flytte kartet nedover.</p>
+<ul>
+<li><p>Legg til denne koden på kartet:</p>
+<p><img src="b83c52db3305bc87aa5f6d0ddf23c04f9e5d2442.png" alt="    når jeg mottar [Nytt spill v]
+    vis
+    for alltid
+        gå til x: ((0) - (X)) y: ((0) - (Y))
+    slutt" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Ser det ut som om helikopteret flytter på seg når du trykker på piltastene?</p></li>
+<li><p>Se nøye etter. Ser du at helikopteret faktisk står på samme sted hele tiden?</p></li>
+<li><p>Hva skjer om du flyr ut av kartet?</p></li>
+</ul>
+</section>
+<section id="utfordring" class="level2 challenge">
+<h2>Utfordring</h2>
+<p>Hvordan kan du begrense hvor helikopteret flyr? Kan du legge på kode slik at helikopteret ikke kan fly ut av kartet?</p>
+</section>
+</section>
+<section id="steg-4-la-stedet-følge-med" class="level1 activity">
+<h1>Steg 4: La stedet følge med</h1>
+<p><em>Vi må nå la reisemålet også flytte seg med kartet.</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Det er litt vanskelig å teste når vi har gjort reisemålet usynlig. Endre derfor på gjennomsiktigheten til sted-figuren. For eksempel kan du sette</p>
+<p><img src="601e2ab9261d07c2e8d49fedc9bdb7b2a9f804bc.png" alt="    sett [gjennomsiktig v] effekt til (50)" /></p></li>
+<li><p>For at det skal se ut som om stedet ligger i ro på kartet må faktisk sted-figuren flytte seg sammen med kartet. Vi behøver da to variabler som holder rede på hvor stedet skal ligge i forhold til kartet. Lag to variabler som heter <code>stedX</code> og <code>stedY</code>. Begge disse skal gjelde kun for denne figuren.</p></li>
+<li><p>Bytt ut</p>
+<p><img src="6007ff1caf0ef9f61f5e5b95151af4cc3f53231d.png" alt="    gå til x: (-98) y: (-120)" /></p>
+<p>med kode som setter variablene i stedet:</p>
+<p><img src="14d7c0f7f704dea9145abbedef705e8dd84fbeba.png" alt="    sett [stedX v] til (-98)
+    sett [stedY v] til (-120)" /></p></li>
+<li><p>Vi kan nå lage en helt ny blokk som flytter stedet rundt på skjermen.</p>
+<p><img src="829ec492d69e3a32f631e981169876e13a002aec.png" alt="    når jeg mottar [Nytt spill v]
+    for alltid
+        gå til x: ((stedX) - (X)) y: ((stedY) - (Y))
+    slutt" /></p>
+<p>Prøv spillet. Flytter den røde prikken seg rundt på kartet?</p></li>
+<li><p>Du ser kanskje at den røde prikken ikke lenger ligger ved Barcelona? Det er fordi vi har laget et større kart. Da stemmer ikke lengre de gamle koordinatene.</p>
+<p>Endre verdiene for <code>X</code> og <code>Y</code> til det ser ut som om den reisemålet ligger omtrent på riktig sted igjen.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-flere-steder" class="level1 activity">
+<h1>Steg 5: Flere steder</h1>
+<p><em>Vi skal nå se på hvordan vi relativt enkelt kan legge til flere reisemål i spillet vårt.</em></p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<p>Om du bare ser på koden vi har lagt på sted-figuren kan det se ut som om det er mye arbeid å legge til et nytt reisemål. Men om vi ser litt nøyere oppdager vi at om vi vil ha et nytt sted å reise til kan vi bruke mye av den samme koden. Vi må bare endre navnet (<code class="blockorange">Reis til</code>) og koordinatene (<code class="blockorange">X</code> og <code class="blockorange">Y</code>).</p>
+<p>Dette er et bra eksempel på når det kan lønne seg å bruke funksjoner, eller lage egne klosser som man gjør i Scratch.</p>
+<ul>
+<li><p>Klikk på <code class="blockpurple">Flere klosser</code> og lag en kloss som ser slik ut:</p>
+<figure>
+<img src="nykloss.png" />
+</figure>
+<p>hvor <code>sted</code> er tekst, mens <code>x</code> og <code>y</code> er tallverdier:</p></li>
+<li><p>Etter at du klikker <code>OK</code> dukker det opp en ny kloss på skjermen:</p>
+<p><img src="6137725d0f6b081ccebb9e7785270076b03f9452.png" alt="    definer Reis til (sted) (x) (y)" /></p>
+<p>Under denne klossen kan vi definere hva funksjonen vår skal gjøre.</p></li>
+<li><p>Flytt skriptet ditt fra <code class="blockgrey">Nytt sted</code>-blokken til den nye funksjonen, og endre litt - spesielt i variablene - slik at funksjonen din ser slik ut:</p>
+<p><img src="8d6039d008beaaba45f7c412201f2de23e5ee5dc.png" alt="    definer Reis til (sted) (x) (y)
+    sett [gjennomsiktig v] effekt til (100)
+    sett [stedX v] til (x)
+    sett [stedY v] til (y)
+    sett [Reis til v] til (sted)
+    vent til (berører [Helikopter v]?)
+    sett [gjennomsiktig v] effekt til (0)
+    si (sett sammen [Fant ] (sted))
+    gjenta (5) ganger
+        gjenta (10) ganger
+            endre størrelse med (10)
+        slutt
+        gjenta (10) ganger
+            endre størrelse med (-10)
+        slutt
+    slutt
+    si []" /></p></li>
+<li><p>Til slutt kan vi endre på <code class="blockgrey">Nytt spill</code>-blokken slik at vi bruker den nye funksjonen. For eksempel</p>
+<p><img src="1f0f061ba161e07332a35c428b011acb7f7004ef.png" alt="    definer Reis til (sted) (x) (y)
+
+    når jeg mottar [Nytt spill v]
+    vis
+    Reis til [London] (-135) (-30)
+    Reis til [Oslo] (-30) (75)
+    Reis til [Barcelona] (-135) (-175)" /></p></li>
+<li><p>Om du prøver spillet nå vil du kanskje oppdage et lite problem. Dersom du ikke flytter deg etter å ha funnet det første reisemålet, vil det neste reisemålet bli funnet automatisk. Det er fordi vi ikke rekker å flytte sirkelen før vi tester om den berører helikopteret.</p>
+<p>Den enkleste måten å løse dette på er å legge på klossen</p>
+<p><img src="b294ac3217e40be4d776240041e4bd929e959b34.png" alt="    vent til (ikke (berører [Helikopter]?))" /></p>
+<p>rett før vi venter på helikopteret berøres inne i funksjonen vår.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-2" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Flyr helikopteret rundt på kartet på en naturlig måte?</p></li>
+<li><p>Fungerer reisemålene slik de skal? Ligger de omtrent der de skal ligge?</p></li>
+<li><p>Kan du reise til flere reisemål på rad?</p></li>
+</ul>
+</section>
+</section>
+<section id="neste-gang" class="level1 activity">
+<h1>Neste gang</h1>
+<p>Spillet vårt har blitt ganske mye kulere nå! Neste gang skal vi gjøre spillet ferdig ved å lage lister som gjør det enklere å lage en tilfeldig reiserute. Vi skal også se hvordan vi kan lage en intro til spillet, samt legge på en tidsbegrensning og poengsum.</p>
+<section id="prøv-selv" class="level2 try">
+<h2>Prøv selv</h2>
+<p>Spillet blir morsommere hvis ikke reisemålene kommer i samme rekkefølge hver gang du spiller. Hvordan kan du få reisemålene til å komme i tilfeldig rekkefølge? Prøv å lage kode som gjør dette!</p>
+<p>Fortsatt er ikke kartet så veldig stort. En måte å komme seg rundt begrensningen på figurstørrelse i Scratch er å la bakgrunnen bestå av flere deler. Filen <a href="http://kodeklubben.github.io/nb-NO/scratch_kurs.2/02/europakart.zip" class="uri">http://kodeklubben.github.io/nb-NO/scratch_kurs.2/02/europakart.zip</a> inneholder 9 kartfliser du kan prøve å pusle sammen. Du må da laste inn hver av dem som en egen figur. Hver av dem trenger omtrent samme kode som kartet vi har brukt så langt. Du må bare endre litt i <code class="blockblue">gå til</code>-klossene.</p>
+</section>
+</section>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+</body>
+</div>
+</html>
