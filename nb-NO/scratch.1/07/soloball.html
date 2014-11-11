@@ -26,7 +26,7 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 </section>
 <section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
-<p>Vi skal nå lære hvordan vi kan lage et enkelt ballspill med Scratch. I soloball skal du prøve å holde ballen i bevegelse, men slik at den ikke går i nettet.</p>
+<p>Vi skal nå lære hvordan vi kan lage et enkelt ballspill med Scratch. I soloball skal du styre katten som kontrollerer ballen, slik at ballen ikke går i nettet.</p>
 <figure>
 <img src="soloball.png" />
 </figure>
@@ -39,11 +39,12 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <ul>
 <li><p>Start et nytt Scratch-prosjekt. Du vil se en kattefigur midt på scenen.</p></li>
 <li><p>Pusle sammen de følgende klossene i skriptområdet til høyre på skjermen.</p>
-<p><img src="1c6749547bdf422bc87717e6c3622a3f2fef842a.png" alt="    når grønt flagg klikkes
+<p><img src="6cbacb0c8b9dfc70c5cd509bc9329b9b976b9c42.png" alt="    når grønt flagg klikkes
+    gå til x: (0) y: (0)
     for alltid
         pek mot [musepeker v]
     slutt" /></p>
-<p>Dette er et eksempel på et lite program, eller skript som det kalles i Scratch.</p></li>
+<p>Dette er et eksempel på et lite program, eller skript som det kalles i Scratch. Dette skriptet sier at kattefiguren skal stå midt på skjermen og alltid peke mot, eller se mot, musepekeren.</p></li>
 </ul>
 </section>
 <section id="test-prosjektet" class="level2 flag">
@@ -65,9 +66,6 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <ul>
 <li><p>Gi først kattefiguren din navnet <code>Katt</code>. Dette gjør du ved å først klikke på den lille <code class="blockblue">i</code>en på kattefiguren under scenen. Deretter kan du skrive <code>Katt</code> i tekstfeltet. Når du går tilbake, <code class="blockblue">&lt;</code>, ser du at figuren har fått det riktige navnet.</p></li>
 <li><p>Klikk på <code class="blocklightgrey">Drakter</code>-fanen øverst på skjermen. Du vil nå se to kattefigurer. Slett en av dem ved å klikke på den lille x-en i hjørnet av figuren.</p></li>
-</ul>
-<p>Vi skal nå gjøre flere ting. Vi vil lage kattefiguren mindre, snu den 90 grader og flytte den vekk fra sentrum.</p>
-<ul>
 <li><p>Gjør katten mindre ved å klikke på den i det store bildet, og deretter dra i et av hjørnene.</p>
 <figure>
 <img src="katt_krymp.png" />
@@ -99,12 +97,12 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 </section>
 <section id="steg-3-en-ball" class="level1 activity">
 <h1>Steg 3: En ball!</h1>
-<p><em>Nå skal vi lage en ballfigur, og få den til å sprette rundt på skjermen.</em></p>
+<p><em>Nå skal vi lage en ball og få den til å sprette rundt på skjermen.</em></p>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Klikk på <code class="blocklightgrey">Skript</code>-fanen slik at du ser skriptet du skrev tidligere.</p></li>
-<li><p>Klikk på <img src="hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" /> for å hente en ny figur.</p></li>
+<li><p>Klikk på <img src="hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" /> ved siden av <code>Ny figur</code> under scenen for å hente en ny figur.</p></li>
 <li><p>Hvis du klikker kategorien <code>Ting</code> til venstre på skjermen vil du se flere baller. Velg en av dem.</p></li>
 <li><p>Vi skal nå se en annen måte å gjøre figurer mindre på. Klikk <img src="krymp.png" alt="Krymp" /> øverst på skjermen. Klikk deretter på ballfiguren noen ganger slik at den er passe stor i forhold til katten.</p></li>
 <li><p>Nå lager vi et program for ballen. Vi vil at ballen skal starte midt på skjermen. Deretter går den inn i en løkke hvor den flytter seg litt, og snur om katten kommer borti den.</p>
@@ -115,16 +113,21 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
         hvis (berører [Katt v] ?)
             pek i retning ((180) + (retning))
         slutt
-    slutt" /></p></li>
+    slutt" /></p>
+<p>Klossen <code class="blockblue">retning</code> finner du helt nederst i <code class="blockblue">Bevegelse</code>-kategorien.</p></li>
+<li><p>Skjønner du hvorfor</p>
+<p><img src="f7909db2e04416f78dd065849eede6a212fa8bb6.png" alt="    pek i retning ((180) + (retning))" /></p>
+<p>gjør at ballen snur? Vi vil se nærmere på dette i Steg 6.</p></li>
 </ul>
 </section>
 <section id="test-prosjektet-2" class="level2 flag">
 <h2>Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
 <ul>
-<li><p>Beveger ballen seg? Snur den når katten kommer borti den?</p></li>
+<li><p>Beveger ballen seg? Snur ballen når katten berører den?</p></li>
 <li><p>Hva skjer om ballen flyr forbi katten?</p></li>
 <li><p>Starter ballen midt på skjermen igjen hvis du trykker på det grønne flagget en gang til?</p></li>
+<li><p>Hvis du synes ballen blir for lett &quot;fanget&quot; av katten kan du prøve å gjøre katten litt mindre. Vi vil finne en bedre løsning på dette problemet i Ekstra 3-delen.</p></li>
 </ul>
 </section>
 </section>
@@ -148,7 +151,8 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
     gjenta (36) ganger
         vend @ (10) grader
         stemple avtrykk
-    slutt" /></p></li>
+    slutt" /></p>
+<p><code class="blockgreen">stemple avtrykk</code> stempler en figur på bakgrunnen slik at den blir der. Du kan fjerne slike avtrykk ved å bruke <code class="blockgreen">slett</code>-klossen.</p></li>
 </ul>
 </section>
 <section id="test-prosjektet-3" class="level2 flag">
@@ -169,7 +173,7 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <p>Foreløbig har vi ikke laget noe kode som forteller ballen at den har truffet nettet. Det skal vi gjøre nå.</p>
 <ul>
 <li><p>Klikk på ball-figuren, slik at du ser skriptet vi tidligere lagde for denne.</p></li>
-<li><p>Vi skal nå bruke <code>berører fargen</code>{-blocklightblue}-klossen for å oppdage at ballen treffer nettet. Legg til nye klosser i skriptet ditt slik at det blir seende slik ut:</p>
+<li><p>Vi skal nå bruke <code class="blocklightblue">berører fargen</code>-klossen for å oppdage at ballen treffer nettet. Legg til nye klosser i skriptet ditt slik at det blir seende slik ut:</p>
 <p><img src="94c3e1bb85a3a6466abd03aa6a2a4512b4881d4e.png" alt="    når grønt flagg klikkes
     gå til x: (0) y: (0)
     for alltid
@@ -181,7 +185,7 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
             stopp [alle v]
         slutt
     slutt" /></p></li>
-<li><p>For å få riktig farge i berører fargen`{.blocklightblue}-klossen klikker du først på den lille firkanten hvor fargen vises. Deretter flytter du musepekeren slik at den peker på nettet. Da forandres fargen i den lille firkanten. Klikk igjen for å velge denne fargen.</p></li>
+<li><p>For å få riktig farge i <code class="blocklightblue">berører fargen</code>-klossen klikker du først på den lille firkanten hvor fargen vises. Deretter flytter du musepekeren slik at den peker på nettet. Da forandres fargen i den lille firkanten. Klikk igjen for å velge denne fargen.</p></li>
 </ul>
 </section>
 <section id="test-prosjektet-4" class="level2 flag">
@@ -189,13 +193,13 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <p><strong>Klikk på det grønne flagget.</strong></p>
 <ul>
 <li><p>Stopper ballen når den kommer til nettet?</p></li>
-<li><p>Med <code>stopp alle</code>-klossen stoppes hele spillet når ballen treffer nettet. For å spille videre må du klikke det grønne flagget igjen.</p></li>
+<li><p>Med <code class="blockyellow">stopp alle</code>-klossen stoppes hele spillet når ballen treffer nettet. For å spille videre må du klikke det grønne flagget igjen.</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-6-mer-naturlig-sprett" class="level1 activity">
 <h1>Steg 6: Mer naturlig sprett</h1>
-<p><em>Nå spretter ballen bare fram og tilbake på samme linje hele tiden. Vi vil at den skal sprette litt mer naturlig på katten.</em></p>
+<p><em>Nå spretter ballen bare fram og tilbake på samme linje hele tiden. Vi vil at den skal sprette litt mer naturlig når den treffer katten.</em></p>
 <section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <p>En bra modell for hvordan en ball spretter er at vinkelen ut er den samme som vinkelen inn.</p>
@@ -206,10 +210,10 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <figure>
 <img src="sprett_vinkel2.png" />
 </figure>
-<p>Så langt har vi brukt</p>
+<p>I figuren over og i koden videre betyr <code class="blockblue">retning</code> retningen til ballen, siden koden tilhører ballfiguren. Så langt har vi brukt</p>
 <p><img src="f7909db2e04416f78dd065849eede6a212fa8bb6.png" alt="    pek i retning ((180) + (retning))" /></p>
 <p>for at ballen skal snu. I figuren ser vi at dette betyr at ballen spretter tilbake der den kom i fra.</p>
-<p>Vi bør også kompensere for retningen til <code>Katt</code>. Dette kan vi gjøre ved å trekke fra to ganger (<code class="blockblue">retning</code> - <code class="blocklightblue">retning av katt</code>). Det vil si</p>
+<p>Vi bør også kompensere for retningen til <code>Katt</code>. Dette kan vi gjøre ved å trekke fra to ganger (<code class="blockblue">retning</code> - <code class="blocklightblue">retning av katt</code>). Skjønner du hvorfor av figuren? Da blir den nye retningen</p>
 <p><img src="6ae9c6742dc8b319688c26adb65fa094eb447948.png" alt="    (((180) + (retning)) - ((2) * ((retning) - ([retning v] av [Katt v])))" /></p>
 <p>Vi kan forenkle dette til</p>
 <p><img src="568904e08d13c579b23b8870e41483471e6481ab.png" alt="    (((180) - (retning)) + ((2) * ([retning v] av [Katt v])))" /></p>
@@ -232,7 +236,8 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <h2>Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
 <ul>
-<li>Ser du at ballen spretter litt mer naturlig nå?</li>
+<li><p>Ser du at ballen spretter litt mer naturlig nå?</p></li>
+<li><p>Har du noen ideer til hvordan spillet kan bli enda bedre? Prøv dem ut!</p></li>
 </ul>
 </section>
 <section id="lagre-og-legg-ut-prosjektet" class="level2 save">
@@ -244,15 +249,15 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 </section>
 <section id="ekstra-1-tell-poeng" class="level1 activity">
 <h1>Ekstra 1: Tell poeng</h1>
-<p><em>Alle spill blir morsommere når man får poeng!</em></p>
+<p><em>Alle spill blir morsommere hvis man får poeng!</em></p>
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <p>For å telle poeng skal vi bruke noe som kalles en variabel. En variabel er et navn på en verdi som kan variere.</p>
 <ul>
 <li><p>Klikk på <code>Data</code>-kategorien og deretter på <code class="blocklightgrey">Lag en Variabel</code>.</p></li>
-<li><p>Gi variabelen navnet <code>Poeng</code>, og la den gjelde for all figurer. Legg merke til at når du klikker <code>OK</code> dukker det opp en boks som heter <code class="blockorange">Poeng</code> på scenen, og flere nye klosser under <code class="blocklightgrey">Lag en Variabel</code>.</p></li>
+<li><p>Gi variabelen navnet <code class="blockorange">Poeng</code>, og la den gjelde for alle figurer. Legg merke til at når du klikker <code>OK</code> dukker det opp en boks som heter <code class="blockorange">Poeng</code> på scenen, og flere nye klosser under <code class="blocklightgrey">Lag en Variabel</code>.</p></li>
 </ul>
-<p>Vi vil nå at <code class="blockorange">Poeng</code> skal settes til 0 når spillet starter. Deretter skal vi få 1 poeng hver gang vi returnerer ballen.</p>
+<p>Vi vil nå at <code class="blockorange">Poeng</code> skal settes til <code>0</code> når spillet starter. Deretter skal vi få ett poeng hver gang vi returnerer ballen.</p>
 <ul>
 <li><p>Legg på to nye klosser i skriptet som styrer ballen:</p>
 <p><img src="272746f4bd98d1c0a364302bc35cb040ada8803d.png" alt="    når grønt flagg klikkes
@@ -273,19 +278,19 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 </section>
 <section id="ekstra-2-øk-hastigheten" class="level1 activity">
 <h1>Ekstra 2: Øk hastigheten</h1>
-<p><em>Vi skal nå lage spillet vanskeligere etterhvert som tiden går, ved å øke hastigheten på ballen.</em></p>
+<p><em>Vi skal nå lage spillet vanskeligere etterhvert som tiden går, ved at ballen beveger seg stadig raskere.</em></p>
 <section id="sjekkliste-7" class="level2 check">
 <h2>Sjekkliste</h2>
-<p>Hastigheten på ballen styres av klossen</p>
+<p>Hastigheten på ballen styres nå av klossen</p>
 <p><img src="9f22efb4a1268cb0077500d10b66a2d8b16f2461.png" alt="    gå (3) steg" /></p>
-<p>Ved å endre på 3-tallet endrer vi hastigheten på ballen. Prøv dette selv!</p>
+<p>Ved å endre på <code>3</code>-tallet endrer vi hastigheten på ballen. Prøv dette selv!</p>
 <ul>
-<li><p>For å endre hastigheten underveis i spillet trenger vi en ny variabel. Lag en ny variable som du kaller <code>Hastighet</code>. Du kan la denne gjelde kun for denne figuren.</p></li>
-<li><p>Hastigheten er ikke så interessant å vise på scenen. Du kan skjule boksen på scenen ved å fjerne avhukingen ved siden av <code>Hastighet</code>.</p>
+<li><p>For å endre hastigheten underveis i spillet trenger vi en variabel. Lag en ny variabel som du kaller <code class="blockorange">Hastighet</code>. Du kan la denne gjelde kun for denne figuren.</p></li>
+<li><p>Hastigheten er ikke så interessant å vise på scenen. Du kan skjule boksen på scenen ved å fjerne avhukingen ved siden av <code class="blockorange">Hastighet</code>.</p>
 <figure>
 <img src="variabel.png" />
 </figure></li>
-<li><p>Vi vil nå sette hastigheten til 3 (du kan bruke et annet tall om du vil) når spillet starter. Deretter vil vi øke denne littegrann hver gang katten berører ballen. Dette gjør vi på samme måte som når vi teller poeng.</p>
+<li><p>Vi vil nå sette hastigheten til <code>3</code> (du kan bruke et annet tall om du vil) når spillet starter. Deretter vil vi øke denne littegrann hver gang katten berører ballen. Dette gjør vi på samme måte som når vi teller poeng.</p>
 <p><img src="7f04b177b4a4020dc561dba74eb052214c686115.png" alt="    når grønt flagg klikkes
     gå til x: (0) y: (0)
     sett [Poeng v] til [0]
@@ -312,9 +317,9 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <h2>Sjekkliste</h2>
 <p>Av og til virker det som om katten &quot;fanger&quot; ballen. Dette skjer fordi ballen ikke flytter seg langt nok etter at den har snudd. Den fortsetter å berøre katten og blir derfor snudd igjen ... og igjen ... og igjen.</p>
 <ul>
-<li>Vi skal nå lage nok en variabel. Denne skal hete <code>Flytt</code>, kun gjelde for denne figuren, og heller ikke vises på scenen.</li>
+<li>Vi skal nå lage nok en variabel. Denne skal hete <code class="blockorange">Flytt</code>, kun gjelde for denne figuren, og heller ikke vises på scenen.</li>
 </ul>
-<p>Flytt-variabelen vil vi bruke til å telle hvor mange flytt ballen har gjort siden den sist berørte katten. Deretter kan vi si at ballen skal snu kun hvis den har flyttet en del siden den sist snudde.</p>
+<p><code class="blockorange">Flytt</code>-variabelen vil vi bruke til å telle hvor mange flytt ballen har gjort siden den sist berørte katten. Deretter kan vi si at ballen skal snu kun hvis den har flyttet mange ganger siden den sist snudde.</p>
 <ul>
 <li><p>Utvid skriptet ditt som under. Legg spesielt merke til at <code class="blockyellow">hvis</code>-testen har blitt utvidet.</p>
 <p><img src="024fa528c5fd381e168154021339cf77e8bc6a0a.png" alt="    når grønt flagg klikkes
@@ -338,9 +343,9 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 </section>
 <section id="prøv-selv" class="level2 try">
 <h2>Prøv selv</h2>
-<p>I disse ekstrastegene har vi sett på noen måter vi kan gjøre spillet bedre og mer spennende på. Her er noen flere ideer:</p>
-<p>Prøv å legg på lyder, for eksempel når katten berører ballen eller når ballen treffer nettet. Se på de forskjellige klossene i <code>Lyder</code>.{blockpink}-kategorien, og lydene som finnes under <code class="blocklightgrey">Lyder</code>-fanen.</p>
-<p>Du kan gjøre spillet mye vanskeligere ved å lage en ekstra ball! Prøv for eksempel og lag en ny ballfigur, og kopier skriptet fra den første ballen. Du må passe på ingen av ballene inneholder samme farge som nettet.</p>
+<p>I disse ekstrastegene har vi sett på noen måter vi kan gjøre spillet bedre og mer spennende på. Her er enda flere ideer:</p>
+<p>Du kan bytte kattefiguren med en annen figur. Dette gjør du enklest ved å gå til <code class="blocklightgrey">Drakter</code>-fanen fordi da beholder du skriptet du allerede har laget på figuren. Her kan du velge en av de ferdige figurene eller tegne en ny figur selv.</p>
+<p>Prøv å legg på lyder, for eksempel når katten berører ballen eller når ballen treffer nettet. Se på de forskjellige klossene i <code class="blockpink">Lyder</code>-kategorien, og lydene som finnes under <code class="blocklightgrey">Lyder</code>-fanen.</p>
 <p>Det finnes mange andre ting å prøve også. Du bestemmer!</p>
 </section>
 </section>
