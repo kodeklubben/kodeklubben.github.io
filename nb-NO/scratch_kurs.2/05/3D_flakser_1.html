@@ -31,48 +31,63 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <img src="flakser.png" />
 </figure>
 </section>
-<section id="steg-1-lag-ringer-og-få-dem-til-å-komme-mot-deg." class="level1 activity">
-<h1>Steg 1: Lag ringer, og få dem til å komme mot deg.</h1>
+<section id="steg-1-lag-ringer-og-få-dem-til-å-komme-mot-deg" class="level1 activity">
+<h1>Steg 1: Lag ringer, og få dem til å komme mot deg</h1>
 <p>Spillet skal bestå av tre figurer: <strong>Ring</strong>, <strong>Flakser</strong> og <strong>Bakken</strong>.</p>
-<p>Vi begynner med å lage ringefiguren. Du kan enkelt tegne den selv som to sirkler inni hverandre, fyllt med en farge imellom.</p>
+<p>Vi begynner med å lage ringefiguren. Du kan enkelt tegne den selv som to sirkler inni hverandre, fylt med en farge imellom.</p>
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li>Tegn figuren <strong>Ring</strong>. Jo enklere jo bedre.</li>
-<li>Gi ringfiguren disse skriptene:</li>
+<li><p>Tegn figuren <strong>Ring</strong>. Jo enklere jo bedre.</p></li>
+<li><p>Gi ringfiguren disse skriptene:</p>
+<p><img src="32e05cba819e482baa03d04114ceacda9f6d7302.png" alt="    når jeg mottar [nytt spill v]
+    skjul
+    for alltid
+        lag klon av [meg v]
+        vent (1) sekunder
+    slutt
+
+    når jeg starter som klon
+    gå til x: (0) y: (0)
+    vis
+    gjenta (10) ganger
+        endre størrelse med (5)
+        vent (0.1) sekunder
+    slutt
+    slett denne klonen" /></p></li>
 </ul>
-<p><img src="0edeaedf09b769b529126b0a52291ff535572262.png" alt="    når jeg mottar [nytt spill v]
-        skjul
-        for alltid
-            lag klon av [meg v]
-            vent (1) sekunder" /></p>
-<p><img src="828fff058c756a0f11b423a5dfa39ce89445d38e.png" alt="    når jeg starter som klon
-        gå til x: (0) y: (0)
-        vis
-        gjenta (10) ganger
-            endre størrelse med (5)
-            vent (0.1) sekunder
-        slett denne klonen" /></p>
-<p>Du må også lage et skript som sørger for at meldingen ‘nytt spill’ sendes når det grønne flagget klikkes.</p>
+<p>Du må også lage et skript som sørger for at meldingen <code>nytt spill</code> sendes når det grønne flagget klikkes.</p>
 </section>
 <section id="test-prosjektet" class="level2 flag">
 <h2>Test prosjektet</h2>
 <ul>
 <li>Hva gjør de to skriptene over? Ser det ut som om ringene kommer mot deg?</li>
 </ul>
-<p>De to skriptene vi har foreløpig er en OK start, men de er ikke gode nok til å virkelig kalles 3D! Tenk litt på hvordan det virker som om noe vokser i størrelse når det kommer mot deg. Når det er langt unna så vokser det ganske sakte, mens når det er nærme så vokser det mye fortere. Dette skal vi få til ved hjelp av en <em>variabel</em> som vi kaller <code>avstand</code>. Når <code>avstand</code> er stor, så er ringen langt borte, og skal vokse sakte. Når <code>avstand</code> er liten så betyr det at ringen er nærme, og den skal vokse fort.</p>
 </section>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
+<p>De to skriptene vi har foreløpig er en OK start, men de er ikke gode nok til å virkelig kalles 3D! Tenk litt på hvordan det virker som om noe vokser i størrelse når det kommer mot deg. Når det er langt unna så vokser det ganske sakte, mens når det er nærme så vokser det mye fortere. Dette skal vi få til ved hjelp av en <em>variabel</em> som vi kaller <code class="blockorange">distanse</code>. Når <code class="blockorange">distanse</code> er stor, så er ringen langt borte, og skal vokse sakte. Når <code class="blockorange">distanse</code> er liten så betyr det at ringen er nærme, og den skal vokse fort.</p>
 <ul>
-<li>Lag en variabel som heter <code>avstand</code>. Pass på at den kun gjelder ‘for denne figuren’.</li>
-<li>Endre skriptet over til dette:</li>
+<li><p>Lag en variabel som heter <code class="blockorange">distanse</code>. Pass på at den kun gjelder for denne figuren.</p></li>
+<li><p>Endre skriptet over til dette:</p>
+<p><img src="f91db23286695c64815a62252fddc16c2733351f.png" alt="når jeg starter som klon
+gå til x: (0) y: (0)
+vis
+sett [distanse v] til (10)
+gjenta til ((distanse) &lt; (1))
+    sett størrelse til ((150) / (distanse)) %
+    endre [distanse v] med (-0.5)
+    vent (0.1) sekunder
+slutt
+slett denne klonen" /></p></li>
+<li><p>Det kan hende du må endre litt på tallene i skriptet over for at det skal se bra ut. Prøv deg frem!</p></li>
 </ul>
-<p><code>blocks     når jeg starter som klon         gå til x: (0) y: (0)         vis         sett [avstand v] til (10)         gjenta til ((avstand) &lt; (1))             sett størrelse til ((150) / (avstand)) %             endre [avstand v] med (-0.5)             vent (0.1) sekunder         slett denne klonen</code> + Det kan hende du må endre litt på tallene i skriptet over for at det skal se bra ut. Prøv deg frem!</p>
 </section>
 <section id="utfordring-gjennomsiktig-effekt" class="level2 challenge">
 <h2>Utfordring: Gjennomsiktig effekt</h2>
-<p>Dette er ikke viktig for å kunne fortsette med spillet, men prøv hvis du vil. For at det skal se enda mer ut som at ringene først er langt borte og så nærme, så kan du bruke klossen <code class="blockpurple">sett [gjennomsiktig v] effekt til ((100)-((150)/(avstand))</code> for å gjøre ringene mer gjennomsiktig når de er langt borte. Hvilke tall må du putte i denne klossen for at det skal se bra ut?</p>
+<p>Dette er ikke viktig for å kunne fortsette med spillet, men prøv hvis du vil. For at det skal se enda mer ut som at ringene først er langt borte og så nærme, så kan du bruke klossen</p>
+<p><img src="2b7827794aab46a1f02e210d6946ac8d6fd94511.png" alt="    sett [gjennomsiktig v] effekt til ((100)-((150)/(distanse))" /></p>
+<p>for å gjøre ringene mer gjennomsiktig når de er langt borte. Hvilke tall må du putte i denne klossen for at det skal se bra ut?</p>
 </section>
 </section>
 <section id="steg-2-få-ringene-til-å-dukke-opp-tilfeldige-steder" class="level1 activity">
@@ -82,15 +97,15 @@ Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (ht
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Prøv først å endre på blokken som plasserer ring-klonene til</p>
-<p><img src="4314f6cf6d0ce95c0ef7b130c393cf3c7c70ff5b.png" alt="gå til x: (tilfeldig tall fra (-100) til (100)) y: (tilfeldig tall fra (-100) til (100)))" /></p>
+<p><img src="94f5b4cba0131aafdf05a911a6b003fd161ac61d.png" alt="gå til x: (tilfeldig tall fra (-100) til (100)) y: (tilfeldig tall fra (-100) til (100))" /></p>
 <p>Det ser ganske bra ut, men ikke helt riktig, eller hva? Det er fordi <em>midtpunktet</em> til ringen er på samme sted hele tiden mens ringen er på vei mot deg. For at det skal se ut som at den suser <em>forbi deg</em> så må du hele tiden flytte på ringen mens den er på vei mot deg. For å få det til å fungere må ringklonen huske hvor den dukket opp til å begynne med.</p></li>
-<li>Lag variabler <code>ringX</code> og <code>ringY</code>, som <em>kun gjelder for ringfiguren</em></li>
+<li><p>Lag variabler <code class="blockorange">ringX</code> og <code class="blockorange">ringY</code> som <em>kun gjelder for ringfiguren</em>.</p></li>
 <li><p>Erstatt blokken som først plasserer ringen med dette:</p>
 <p><img src="856fd147d1dd0bc55875629f938254df15bb5351.png" alt="sett [ringX v] til (tilfeldig tall fra (-100) til (100)
 sett [ringY v] til (tilfeldig tall fra (-100) til (100)
 gå til x: (ringX) y: (ringY)" /></p>
 <p>Forhåpentligvis har ikke oppførselen til ringene endret seg ennå. For å få midtpunktet til ringene til å flytte på seg mens ringene kommer mot deg kan du putte følgende blokk et sted inni løkken hvor ringen vokser:</p>
-<p><img src="a390605e0cceadef5307f26ae8e55a0c754ce3f9.png" alt="gå til x: ((ringX)/(avstand)) y: ((ringY)/(avstand))" /></p></li>
+<p><img src="1963def03fc77f72095b24549ac0584967bda0be.png" alt="gå til x: ((ringX) / (distanse)) y: ((ringY) / (distanse))" /></p></li>
 </ul>
 </section>
 <section id="test-prosjektet-1" class="level2 flag">
@@ -98,46 +113,47 @@ gå til x: (ringX) y: (ringY)" /></p>
 <p>Trykk på det grønne flagget. Nå burde det se ut som om ringene virkelig kommer mot deg! Nå kan du ta et pust i bakken og se over det du har skrevet så langt.</p>
 </section>
 </section>
-<section id="steg-3-styr-en-flaksfigur-med-piltastene" class="level1 activity">
-<h1>Steg 3: Styr en flaksfigur med piltastene</h1>
+<section id="steg-3-styr-en-flaksefigur-med-piltastene" class="level1 activity">
+<h1>Steg 3: Styr en flaksefigur med piltastene</h1>
 <p>I neste del av dette kurset skal vi få en figur til å fly gjennom ringene. I dette steget skal vi lage den figuren, men ikke kode all flyveoppførselen dens.</p>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li>Lag en ny figur. Det er best om den er symmetrisk, slik at det kan se ut som om den flyr innover i skjermen uten at det ser teit ut, bruk for eksempel flaggermus-figuren. Kall den <strong>Flakse</strong>.</li>
-<li>Lag to nye variabler, <code>x</code> og <code>y</code>. La dem gjelde <em>for alle figurer</em>.</li>
-<li>Gi Flakse følgende skript:</li>
+<li><p>Lag en ny figur. Det er best om den er symmetrisk, slik at det kan se ut som om den flyr innover i skjermen uten at det ser teit ut, bruk for eksempel flaggermus-figuren. Kall den <strong>Flakse</strong>.</p></li>
+<li><p>Lag to nye variabler, <code class="blockorange">x</code> og <code class="blockorange">y</code>. La dem gjelde <em>for alle figurer</em>.</p></li>
+<li><p>Gi Flakse følgende skript:</p>
+<p><img src="8d3baf7229edf5ecf414bf1fb440f9446f6cb7b7.png" alt="når jeg mottar [nytt spill v]
+for alltid
+    hvis (tast [pil høyre v] trykket)
+        endre [x v] med (10)
+        vent (0.05) sekunder
+    slutt
+    hvis (tast [pil venstre v] trykket)
+        endre [x v] med (-10)
+        vent (0.05) sekunder
+    slutt
+    hvis (tast [pil opp v] trykket)
+        endre [y v] med (10)
+        vent (0.05) sekunder
+    slutt
+    hvis (tast [pil ned v] trykket)
+        endre [y v] med (-10)
+        vent (0.05) sekunder
+    slutt" /></p>
+<p>Nå endres <code class="blockorange">x</code> og <code class="blockorange">y</code> når du styrer med piltastene. Vi venter inni hver <code class="blockyellow">hvis</code>-test for at <code class="blockorange">x</code> og <code class="blockorange">y</code> ikke plutselig vokser over alle grenser. Se hva som skjer om vi ikke venter om du vil..</p></li>
+<li><p>Nå vil vi at posisjonen til ringene skal endre seg når vi styrer. Det kan vi få til ved å endre blokken</p>
+<p><img src="1963def03fc77f72095b24549ac0584967bda0be.png" alt="gå til x: ((ringX) / (distanse)) y: ((ringY) / (distanse))" /></p>
+<p>til dette:</p>
+<p><img src="898eb5f7ade0b141f1b32de2ded8a60dd695f06a.png" alt="gå til x: (((ringX)-(x)) / (distanse)) y: (((ringY) - (y)) / (distanse))" /></p>
+<p>Ser det riktig ut nå? Nå er vi igrunn ferdig med det som trengs for å gå videre med del 2. I del 2 skal vi få det til å virke som om Flakse flakser når vi trykker på mellomromstasten, akkurat som i Flappy Bird og Flaksefugl. Prøv deg på disse utfordringene hvis du har mer tid igjen.</p></li>
 </ul>
-<p><img src="535693d08a9158377b55d875c2d74a441ad3620f.png" alt="    når jeg mottar [nytt spill v]
-        for alltid
-            hvis (tast [pil høyre v] trykket)
-                endre [x v] med (10)
-                vent (0.05) sekunder
-                        slutt
-            hvis (tast [pil venstre v] trykket)
-                endre [x v] med (-10)
-                vent (0.05) sekunder
-                        slutt
-            hvis (tast [pil opp v] trykket)
-                endre [y v] med (10)
-                vent (0.05) sekunder
-                        slutt
-            hvis (tast [pil ned v] trykket)
-                endre [y v] med (-10)
-                vent (0.05) sekunder
-                        slutt" /></p>
-<p>Nå endres <code>x</code> og <code>y</code> når du styrer med piltastene. Vi venter inni hver hvis-test for at <code>x</code> og <code>y</code> ikke plutselig vokser over alle grenser. Se hva som skjer om vi ikke venter om du vil..</p>
-<p>Nå vil vi at posisjonen til ringene skal endre seg når vi styrer. Det kan vi få til ved å endre på blokken <code>blocks     gå til x: ((ringX)/(avstand)) y: ((ringY)/(avstand))</code> til dette:</p>
-<p><img src="e6b7f4131804969740b1423674f73fb9da81f14c.png" alt="    gå til x: (((ringX)-(x))/(avstand)) y: (((ringY) - (y))/(avstand))" /></p>
-<p>Ser det riktig ut nå? Nå er vi igrunn ferdig med det som trengs for å gå videre med del 2. I del 2 skal vi få det til å virke som om Flakse flakser når vi trykker på mellomromstasten, akkurat som i Flappy Bird og Flaksefugl. Prøv deg på disse utfordringene hvis du har mer tid igjen.</p>
 </section>
 <section id="ting-å-prøve" class="level2 try">
 <h2>Ting å prøve</h2>
 <ul>
-<li>Er det mulig å styre figuren gjennom alle ringene? Husk at spillet skal være akkurat passe vanskelig, og hvertfall ikke umulig. Gå gjennom alle skriptene og endre på verdiene slik at spillet er gøy å spille, og at det ser bra ut. Kanskje du må endre på størrelsen til ringen, hvor mye ringene skal vokse, hvor mye <code>x</code> og <code>y</code> endrer seg når pilene trykkes, hvor lenge vi venter eller noen av de andre verdiene.</li>
-<li>Tegn din egen figur! Flaggermusfiguren er kankjse ikke helt perfekt. Prøv å se om du kan finne noen bilder på nettet du kan bruke, eller tegn din helt egen figur (den burde være et fugleliknende dyr). Husk at det ser mye bedre ut om figuren er symmetrisk. Det er lurt å gi figuren to drakter; en med vingene ned og en med vingene opp. Da kan vi senere få Flakse til å flakse!</li>
+<li><p>Er det mulig å styre figuren gjennom alle ringene? Husk at spillet skal være akkurat passe vanskelig, og hvertfall ikke umulig. Gå gjennom alle skriptene og endre på verdiene slik at spillet er gøy å spille, og at det ser bra ut. Kanskje du må endre på størrelsen til ringen, hvor mye ringene skal vokse, hvor mye <code>x</code> og <code>y</code> endrer seg når pilene trykkes, hvor lenge vi venter eller noen av de andre verdiene.</p></li>
+<li><p>Tegn din egen figur! Flaggermusfiguren er kankjse ikke helt perfekt. Prøv å se om du kan finne noen bilder på nettet du kan bruke, eller tegn din helt egen figur (den burde være et fugleliknende dyr). Husk at det ser mye bedre ut om figuren er symmetrisk. Det er lurt å gi figuren to drakter; en med vingene ned og en med vingene opp. Da kan vi senere få Flakse til å flakse!</p></li>
 </ul>
-<p>Del 2: + Tyngdekraft og rotasjon + Bakkefiguren følger med + Kollisjon/poeng-deteksjon</p>
 </section>
 </section>
 <section class="legal">
