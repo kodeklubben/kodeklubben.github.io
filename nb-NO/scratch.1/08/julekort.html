@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Julekort — Kodeklubben</title>
+
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/lesson.css">
+  <link rel="stylesheet" href="/css/scratch.css">
+</head>
+<body>
+<header>
+<div class="level">Scratch</div>
+<div class="title">Julekort</div>
+<div class="logo"><img src="/img/ccno_logo.png"/></div>
+</header>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+<section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Vi skal lage et julekort i Scratch. Det skal ha noen enkle funksjoner og animasjoner. Når det er ferdig vil det se omtrent slik ut.</p>
+<figure>
+<img src="julekort.png" />
+</figure>
+</section>
+<section id="steg-1-endre-bakgrunn-og-finne-figurer" class="level1 activity">
+<h1>Steg 1: Endre bakgrunn og finne figurer</h1>
+<p>Når du er klar til å starte velger du <code>Programmering</code> i menyen øverst. Da kommer vi inn i Scratch.</p>
+<figure>
+<img src="programmering.png" />
+</figure>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Klikk på scenen ved siden av kattefiguren <code>Sprite1</code> i vinduet for figurer. Trykk på <img src="bakgrunn-fra-bibliotek.png" /> for å importere en ferdig bakgrunn. Velg den bakgrunnen du vil. Slett deretter den tomme bakgrunnen som ligger der.</p>
+<figure>
+<img src="ny_bakgrunn.png" />
+</figure></li>
+<li><p>Slett kattefiguren <code>Sprite1</code> ved å høyreklikke på ham og slette.</p></li>
+<li><p>Velg nye figurer fra biblioteket. Legg til isbjørnen, snømannen og juletreet.</p>
+<figure>
+<img src="velg_figurer.png" />
+</figure></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-legge-til-kode" class="level1 activity">
+<h1>Steg 2: Legge til kode</h1>
+<p>Nå skal vi få figurene til å gjøre ting når de blir klikket på.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg isbjørnen og fanen <code class="blocklightgrey">Skript</code> og lag denne koden. Når isbjørnen blir klikket på skal den si &quot;God jul!&quot;. Deretter skal den skifte utseende hvert sekund, 10 ganger.</p>
+<p><img src="ad1c5a05d98662f66dc11917df98d13db45138a6.png" alt="    når denne figuren klikkes
+    si [God jul!] i (2) sekunder
+    gjenta (10) ganger
+        neste drakt
+        vent (1) sekunder
+    slutt" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet-ditt" class="level2 flag">
+<h2>Test prosjektet ditt</h2>
+<p><strong>Klikk på isbjørnen og se om koden din virker.</strong></p>
+<ul>
+<li><p>Sier isbjørnen &quot;God jul!&quot;?</p></li>
+<li><p>Forandrer isbjørnen stilling?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg snømannen og fanen <code class="blocklightgrey">Skript</code> og lag denne koden. Snømannen skal spørre etter navnet ditt. Den setter svaret inn i en ny setning. Deretter skal den skifte farge.</p>
+<p><img src="270eb997c924ba9a95df07e0a51e5ed364c0423f.png" alt="    når denne figuren klikkes
+    spør [Hva er navnet ditt?] og vent
+    si (sett sammen [God jul ] (svar)) i (2) sekunder
+    for alltid
+        endre [farge v] effekt med (25)
+    slutt" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet-ditt-1" class="level2 flag">
+<h2>Test prosjektet ditt</h2>
+<p><strong>Klikk på snømannen og se om koden din virker.</strong></p>
+<ul>
+<li><p>Spør snømannen om navnet ditt?</p></li>
+<li><p>Svarer snømannen med navnet ditt når du har skrevet det inn?</p></li>
+<li><p>Forandrer snømannen farge?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg juletreet og fanen <code class="blocklightgrey">Skript</code> og lag denne koden. Nå skal juletreet skifte farge og utseende.</p>
+<p><img src="da8216bbd285d54542d24907c7c6e5437704c0a6.png" alt="    når grønt flagg klikkes
+    for alltid
+        vent (0.3) sekunder
+        endre [farge v] effekt med (25)
+        neste drakt
+    slutt" /></p></li>
+</ul>
+</section>
+<section id="test-prosjektet-ditt-2" class="level2 flag">
+<h2>Test prosjektet ditt</h2>
+<p><strong>Trykk på det grønne flagget og se om alt virker.</strong></p>
+<ul>
+<li><p>Endrer treet farge?</p></li>
+<li><p>Danser treet fra side til side?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-har-du-ledig-tid-sier-du" class="level1 activity">
+<h1>Steg 3: Har du ledig tid, sier du?</h1>
+<p>Da har du jobbet godt! Om du fortsatt har ledig tid kan du:</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Legge til din egen velkomsthilsen, for eksempel &quot;God jul&quot; eller du kan synge din egen julesang.</p>
+<p>Klikk på <code>Scene</code>, og velg fanen <code class="blocklightgrey">Lyder</code>.</p>
+<figure>
+<img src="lyder.png" />
+</figure>
+<p>Ta op din egen lyd, og gi den et navn, for eksempel <code>julehilsen</code>. Gå deretter inn på <code class="blocklightgrey">Skript</code>, og legg inn følgende kode:</p>
+<p><img src="29a0fe443825b78eff73cfbdde5b4e676f85f6ea.png" alt="    når grønt flagg klikkes
+    spill lyden [julehilsen v] til den er ferdig" /></p></li>
+<li><p>Kanskje finne på noen andre morsomme animasjoner? Snømannen kan danse eller turne litt? Kan vi ha snakkende eller hoppende gale julepresanger? Du bestemmer!</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-lagre-og-publisere" class="level1 activity">
+<h1>Steg 4: Lagre og publisere</h1>
+<p>Gi julekortet ditt et navn. Velg deretter <code>Lagre nå</code> fra <code>Fil</code>menyen.</p>
+<figure>
+<img src="lagre.png" />
+</figure>
+<p>Deretter kan du publisere julekortet ditt ved å velge <code>Legg ut</code>.</p>
+<figure>
+<img src="leggut.png" />
+</figure>
+</section>
+<section class="legal">
+<div>
+Dette kurset er utviklet av <a href="http://www.kodeklubben.no/">Kodeklubben (http://www.kodeklubben.no/)</a>.
+</div>
+</section>
+</body>
+</div>
+</html>
