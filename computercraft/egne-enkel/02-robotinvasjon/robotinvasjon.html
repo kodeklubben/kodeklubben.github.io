@@ -1,0 +1,223 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Robotinvasjon | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Robotinvasjon</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Vi har sett enkle datamaskiner. Nå skal vi leke oss med roboter, og finne ut hvordan vi kan få dem til å gjøre forskjellige ting for oss.</p>
+<figure>
+<img src="robotinvasjon.png" />
+</figure>
+</section>
+<section id="steg-1-vår-første-robot" class="level1 activity">
+<h1>Steg 1: Vår første robot</h1>
+<p><em>Vi skal nå bli kjent med roboter og se noe av det de kan brukes til.</em></p>
+<p>En robot er en datamaskin som kan bevege seg. I ComputerCraft kan vi også gi robotene forskjellige verktøy slik at de for eksempel kan grave, bygge, slåss og så videre.</p>
+<p>Vi begynner likevel med en helt enkel robot:</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Åpne inventory’et ditt ved å trykke ‘E’. Finn frem 7 <strong>Iron Ingot</strong>, 1 <strong>Chest</strong> og 1 <strong>Computer</strong>.</p></li>
+<li><p>Start et <strong>Crafting table</strong>, og lag en robot slik:</p>
+<figure>
+<img src="craft_turtle.png" />
+</figure></li>
+<li><p>Legg den nye roboten i hånden din. Lukk inventory’et og lag en robot.</p></li>
+</ul>
+<p>I <em>Creative Mode</em> finner du også robotene ved å trykke <code>E</code>, deretter <code>&gt;</code> og til slutt velge fanen med datamaskinsymbolet. Robotene heter <strong>Turtle</strong> i ComputerCraft.</p>
+<section id="turtles" class="level3 protip">
+<h3>Turtles</h3>
+<p>Navnet <strong>Turtle</strong> betyr <em>skilpadde</em> på norsk. Grunnen til at disse robotene kalles skilpadder er historisk. For nesten 70 år siden bygde William Grey Walter et par roboter som kunne bevege seg rundt. Disse beveget seg ganske sakte, og var lave og skallformet. De fikk derfor etterhvert kallenavnet skilpadder.</p>
+<p>Senere ble måten disse skilpaddene beveget seg på (vi skal se hvordan snart) tatt inn i forskjellige programmeringsspråk, spesielt som en måte å tegne på. Språket <em>Logo</em> er nok det som er mest kjent for slik skilpaddegrafikk, men nesten alle programmeringsspråk støtter dette i dag, inkludert for eksempel <em>Scratch</em>, <em>Python</em> og <em>ComputerCraft</em>.</p>
+</section>
+</section>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<p>På samme måte som med datamaskiner starter du roboter ved å høyreklikke på dem. Dette vil starte kommandolinjen til roboten.</p>
+<ul>
+<li><p>Start en robot. Skriv <code>programs</code> og trykk enter.</p>
+<p>Dette viser hvilke programmer denne roboten kjenner til. Hvis du sammenligner med programmene en datamaskin kjenner til vil du se at det er mange av de samme programmene, men at roboten også kan noen ting som datamaskinen ikke kan.</p></li>
+<li><p>Kjør programmet <code>dance</code>.</p>
+<p>Roboten begynner nå å danse! Trykk <em>Esc</em>-knappen for å stenge kommandolinjen, slik at du ser roboten. Blir du imponert?</p></li>
+<li><p>Hvis du vil at roboten skal slutte å danse kan du høyreklikke på den igjen. I kommandolinjen står det nå en liten tekst som sier at du kan få roboten til å slutte å danse ved å trykke en knapp på tastaturet.</p>
+<p>Hvis du vil kan du også la roboten fortsette å danse. Lag da en ny robot som du kan bruke i de neste oppgavene.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-roboter-og-skilpadder" class="level1 activity">
+<h1>Steg 2: Roboter og skilpadder</h1>
+<p><em>Vi vil nå se hvordan vi kan få robotene våre til å bevege seg rundt.</em></p>
+<p>Som nevnt i boksen <em>Turtles</em> ovenfor beveger vi robotene våre på en måte som ligner slik noen spesielle skilpadderoboter ble kontrollert for nesten 70 år siden. Dette gjør vi ved å bruke programmet <code>go</code> for å bevege robotene rundt.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Kjør programmet <code>go forward</code> i kommandolinjen til en robot.</p></li>
+<li><p>Roboten sier at den er <code>Out of fuel</code>.</p>
+<p>Roboter bruker <em>fuel</em> for å bevege seg. De kan bruke stort sett samme materiale som en <strong>Furnace</strong> som fuel, for eksempel er <strong>Coal</strong> eller <strong>Blaze Rod</strong> fine å bruke.</p></li>
+<li><p>Finn litt <strong>Coal</strong> i inventory’et ditt. Høyreklikk på roboten. Legg merke til at det er et inventory med 16 plasser (4 ganger 4) på høyre side. Dette er robotens inventory. Flytt kullet over til roboten.</p>
+<figure>
+<img src="robot_inventory.png" />
+</figure></li>
+<li><p>Skriv <code>refuel</code> i kommandolinjen og trykk enter.</p>
+<p>Legg merke til at en kull blir borte fra robotens inventory. Roboten svarer også ved å fortelle om sin <em>fuel level</em>. Dette tallet forteller hvor langt roboten kan bevege seg før den går tom for fuel igjen.</p></li>
+<li><p>Gi roboten litt mer <strong>Coal</strong> og skriv <code>refuel all</code>.</p>
+<p>Roboten vil nå spise opp alt kullet, og deretter rapportere at den er klar til å gå ganske så langt!</p></li>
+<li><p>Da prøver vi igjen: Kjør programmet <code>go forward</code>.</p>
+<p>Flytter roboten din seg? Det kan være litt vanskelig å se hva som er fram og bak på en robot. Et triks kan være å tenke på den lange, smale sprekken som øynene til roboten. Altså at den siden med sprekken er foran.</p></li>
+<li><p>Vi kan få roboten til å flytte seg tilbake ved å skrive <code>go back</code>.</p></li>
+</ul>
+<section id="finne-hjelp" class="level3 protip">
+<h3>Finne hjelp</h3>
+<p>Datamaskiner og roboter har et innebygd hjelpesystem. For å se hvordan det virker kan du skrive <code>help</code> og trykke enter. Dette gir deg en rask introduksjon til nyttige hjelpekommandoer. Legg merke til at du kan skrive <code>help &lt;program&gt;</code> for å få hjelp om et spesielt program. Da må du bytte ut <code>&lt;program&gt;</code> med navnet på programmet. For eksempel kan du skrive <code>help go</code> for å se hjelp om <code>go</code>-programmet.</p>
+<p>Det finnes selvsagt også en del hjelp på Internett. Et bra sted å starte er ComputerCraft Wiki’en: <a href="http://computercraft.info/wiki/">http://computercraft.info/wiki/</a>.</p>
+</section>
+</section>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>For å få vite mer om hvordan roboten kan flytte seg kan vi skrive <code>help go</code>.</p>
+<p>Dette viser oss at vi kan bruke <code>go forward</code>, <code>go back</code>, <code>go up</code>, <code>go down</code>, <code>go left</code> og <code>go right</code> for å flytte roboten rundt. I tillegg ser vi at vi kan bruke tall for at roboten skal flytte seg flere steg.</p></li>
+<li><p>Prøv <code>go up 2</code>, <code>go forward 10</code>, <code>go down</code> og lignende kommandoer.</p>
+<p>Hvordan kan vi få roboten til å bevege seg sidelengs?</p></li>
+<li><p>Det finnes ingen kommando som får roboten til å bevege seg sidelengs. Kommandoene <code>go left</code> og <code>go right</code> bare snur roboten. For å få roboten til å gå sidelengs må vi derfor først snu roboten, og deretter bruke for eksempel <code>go forward</code>. Skriv <code>go left</code> og deretter <code>go forward 3</code>.</p></li>
+<li><p>Lek litt mer med <code>go</code>-programmet til du skjønner hvordan du flytter roboten rundt omkring. Dersom du synes <code>go left</code> og <code>go right</code> er litt forvirrende siden roboten ikke går noe sted, kan du bruke <code>turn left</code> og <code>turn right</code> i stedet.</p>
+<p>Hva skjer dersom du ber roboten gå gjennom bakken, gjennom en vegg, eller om du står i veien for roboten?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-gruverobot" class="level1 activity">
+<h1>Steg 3: Gruverobot</h1>
+<p><em>Hvis vi gir roboter de riktige verktøyene kan de grave, bygge og slåss for oss.</em></p>
+<p>Vi skal nå bruke en gruverobot som kan grave for oss.</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Finn en gruverobot i inventory’et ditt ved å gå til datamaskinfanen og plukke ut en <strong>Mining Turtle</strong>. Lag og start en gruverobot.</p></li>
+<li><p>Gi roboten litt <strong>Coal</strong> og kjør <code>refuel all</code>.</p></li>
+<li><p>Vi skal nå bruke et program som heter <code>excavate</code>, dette betyr <em>grav ut</em>. og vil be roboten om å grave ut et hull i bakken.</p>
+<p>Skriv <code>excavate 3</code> og trykk enter.</p>
+<p>Ta et steg tilbake og se på mens roboten graver. Roboten vil fortsette å grave til den går tom for fuel eller kommer til grunnfjellet, <strong>Bedrock</strong>.</p></li>
+<li><p>Hva tror du tallet <code>3</code> i kommandoen vi skrev over betyr? Skriv <code>help excavate</code> for å se om du har rett.</p></li>
+<li><p>Høyreklikk på roboten slik at du ser inventory’et den har. Legg merke til at den tar vare på alt den graver ut.</p>
+<p>Når roboten er ferdig å grave kommer den tilbake dit den startet. Der gir den fra seg alt materialet den har gravd ut slik at du kan plukke det opp om du vil.</p></li>
+<li><p>Lag flere gruveroboter som kan grave større eller mindre hull.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-robotprogrammer" class="level1 activity">
+<h1>Steg 4: Robotprogrammer</h1>
+<p><em>Vi skal nå lære hvordan vi kan kontrollere roboter i våre egne programmer.</em></p>
+<p>Når vi skriver egne programmer som styrer robotene bruker vi kommandoer fra <code>turtle</code>-biblioteket.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start en ny robot. Pass på at den har fått litt kull og blitt <code>refuel</code>et.</p></li>
+<li><p>Vi begynner med å prøve å finne litt mer informasjon om <code>turtle</code>-biblioteket. Skriv <code>help turtle</code>.</p>
+<p>Du får nå se en ganske lang liste med kommandoer som vi kan bruke. Vi vil vise frem noen av disse. Du burde teste alle sammen på egen hånd, og se om du skjønner hvordan alle sammen virker.</p></li>
+<li><p>For å gjøre enkle tester vil vi skrive kommandoene direkte i Lua-tolkeren til å begynne med. Skriv <code>lua</code> og trykk enter. Husk at du skriver <code>exit()</code> for å gå ut av Lua-tolkeren og tilbake til kommandolinjen.</p></li>
+<li><p>Vi begynner med de enkle flytte-kommandoene. Skriv <code>turtle.forward()</code> og trykk enter. Flytter roboten seg forover?</p>
+<p>Husk at du kan trykke <em>Esc</em>-knappen for enklere å se hva roboten gjør. Høyreklikk på roboten for å komme tilbake til Lua-tolkeren.</p></li>
+<li><p>Prøv også de følgende kommandoene. Til sammen gir de oss muligheten til å flytte roboten dit vi vil ha den:</p>
+<p><code>turtle.forward()</code>, <code>turtle.back()</code>, <code>turtle.turnLeft()</code>, <code>turtle.turnRight()</code>, <code>turtle.up()</code>, <code>turtle.down()</code>.</p></li>
+</ul>
+<section id="prøv-selv" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Lag en liten kloss litt unna roboten din, omtrent som på bildet under. Klarer du å bruke <code>turtle</code>-kommandoene over til å plassere roboten på toppen av klossen?</p>
+<figure>
+<img src="flytt_robot_oppgave.png" />
+</figure>
+</section>
+</section>
+</section>
+<section id="steg-5-up-up-up-and-away" class="level1 activity">
+<h1>Steg 5: Up, up, up, and away …</h1>
+<p><em>Kan vi klare å få roboten til å bygge for oss?</em></p>
+<p>Et av poengene med roboter er at de kan gjøre arbeid for oss. I Minecraft betyr det at vi vil at robotene skal kunne for eksempel grave eller bygge.</p>
+<section id="sjekkliste-6" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start en ny robot. Gi den fuel (og kjør <code>refuel</code>). Legg også noe byggemateriale, for eksempel <strong>Grass</strong>, i den øverste venstre boksen i robotens inventory.</p></li>
+<li><p>Pass på at det ikke er noe foran roboten, og skriv <code>turtle.place()</code> inne i Lua-tolkeren.</p>
+<p>Bygde roboten en gresskloss foran seg? Da har du gjort alt riktig. Hvis dette ikke skjedde kan du sjekke</p>
+<p>1 - at du har startet <code>lua</code>,</p>
+<p>2 - at roboten har fuel,</p>
+<p>3 - at roboten har byggemateriale,</p>
+<p>4 - at det ikke står noe foran roboten (husk at den smale sprekken er øynene til roboten), og</p>
+<p>5 - at boksen med byggemateriale i robotens inventory er merket, det vil si at den har en litt tykkere ramme rundt seg enn de andre boksene.</p></li>
+<li><p>Roboten kan også sjekke om den har noe foran seg: Skriv <code>turtle.detect()</code>.</p>
+<p>Du skal få svaret <code>true</code> som betyr at roboten ser at den har noe foran seg.</p></li>
+<li><p>Prøv så <code>turtle.back()</code> etterfulgt av <code>turtle.detect()</code>.</p>
+<p>Siden roboten nå ikke har noe rett foran seg får du svaret <code>false</code>.</p></li>
+</ul>
+<p>I Steg 6 skal vi se hvordan vi kan bruke <code>place()</code> og <code>detect()</code> sammen for å lage en ganske smart byggerobot.</p>
+<p>Men først, en ting vi så når vi brukte <code>go</code> var at hvis vi ville at roboten skulle gå flere steg kunne vi bare skrive et tall, for eksempel <code>go forward 3</code>. Det samme fungerer ikke med <code>turtle</code>-biblioteket. I stedet må vi bruke løkker.</p>
+</section>
+<section id="sjekkliste-7" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>En enkel måte å gjøre noe et bestemt antall ganger er å bruke <code>for</code>-løkker.</p>
+<p>Skriv <code>for i = 1, 5 do turtle.back(); end</code> i Lua-tolkeren.</p>
+<p>Flytter roboten din seg 5 steg bakover?</p></li>
+<li><p>Hvis vi vil kombinere flere kommandoer inne i en løkke i Lua-tolkeren bruker vi semikolon, <code>;</code>.</p>
+<p>Prøv <code>for i = 1, 5 do turtle.back(); turtle.place(); end</code>.</p></li>
+<li><p>Pass på at roboten din har mye byggemateriale, for eksempel 64 <strong>Grass</strong>, i den merkede boksen i inventory’et sitt.</p></li>
+<li><p>La oss bygge et høyt tårn!</p>
+<p>Skriv <code>for i = 1, 60 do turtle.up(); turtle.place(); end</code>.</p>
+<figure>
+<img src="hoyt_tarn.png" />
+</figure></li>
+</ul>
+<p>Men oops! Vi glemte å fortelle roboten at den skulle komme ned når den blir ferdig med å bygge. Hvordan skal vi få tak i den igjen?</p>
+</section>
+</section>
+<section id="steg-6-bygg-en-trapp" class="level1 activity">
+<h1>Steg 6: Bygg en trapp</h1>
+<p><em>Kan vi skrive et program som kan hjelpe oss til å hente ned den forsvunne roboten?</em></p>
+<p>Når vi skal gjøre ting som er litt kompliserte er det som regel enklere å skrive et program, i stedet for å bare gi enkeltkommandoer i Lua-tolkeren. La oss prøve å lage et program som kan bygge en trapp opp til toppen av det høye tårnet.</p>
+<p>Før vi begynner på utfordringen det er å bygge en kjempehøy trapp, la oss øve oss, og teste programmet på et mindre tårn.</p>
+<section id="sjekkliste-8" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Bygg et tårn som er tre klosser høyt. Dette kan du bygge enten med en robot eller bare på egen hånd.</p>
+<figure>
+<img src="lite_tarn.png" />
+</figure></li>
+<li><p>Lag en ny robot inntil det lille tårnet du nettopp bygde. Gi den fuel og byggematerialer.</p></li>
+<li><p>Begynn å skriv et nytt program ved å skrive <code>edit byggtrapp</code>. Skriv inn følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">turtle<span class="ot">.</span>detect<span class="ot">()</span></code></pre>
+<p>Lagre og avslutt ved å bruke <em>Ctrl</em>-tasten.</p></li>
+<li><p>Kjør programmet ved å skrive <code>byggtrapp</code>. Dette programmet bygger ingen trapp enda, det virker faktisk som om det ikke gjør noe som helst. Det eneste som skjer er at roboten merker at den har en kloss foran seg. Men vi har ikke fortalt den hva den skal gjøre etterpå.</p>
+<p>Vi kan bruke <code>detect</code> til å finne toppen av tårnet.</p></li>
+<li><p>Endre på programmet ditt ved å skrive <code>edit byggtrapp</code> igjen. Vi lager nå en løkke hvor roboten klatrer oppover så lenge den merker at tårnet er høyere.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">while</span> turtle<span class="ot">.</span>detect<span class="ot">()</span> <span class="kw">do</span>
+    turtle<span class="ot">.</span>up<span class="ot">()</span>
+done</code></pre>
+<p>Lagre og kjør programmet ditt. Klatrer roboten til toppen av det lille tårnet?</p></li>
+<li><p>Vi har lært av feilen vi gjorde tidligere, så nå vil vi passe på at roboten kommer ned igjen. La oss legge til en ny løkke i programmet, slik at roboten klatrer ned. Denne gangen bruker vi kommandoen <code>detectDown()</code>. Denne gjør det samme som <code>detect()</code>, bortsett fra at den merker om roboten har en kloss under seg i stedet for foran seg.</p>
+<p>Utvid programmet ditt slik:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">while</span> turtle<span class="ot">.</span>detect<span class="ot">()</span> <span class="kw">do</span>
+    turtle<span class="ot">.</span>up<span class="ot">()</span>
+done
+
+<span class="kw">while</span> <span class="kw">not</span> turtle<span class="ot">.</span>detectDown<span class="ot">()</span> <span class="kw">do</span>
+    turtle<span class="ot">.</span>down<span class="ot">()</span>
+done</code></pre>
+<p>Vi sier at så lenge roboten <em>ikke</em> har en kloss under seg kan den ta et steg ned. Kommer roboten ned igjen når du kjører programmet?</p></li>
+<li><p>Nå er vi klar til å la roboten bygge selve trappen. Det gjør vi ved å ta et steg tilbake i den andre løkken, og plassere ut en kloss.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">while</span> turtle<span class="ot">.</span>detect<span class="ot">()</span> <span class="kw">do</span>
+    turtle<span class="ot">.</span>up<span class="ot">()</span>
+done
+
+<span class="kw">while</span> <span class="kw">not</span> turtle<span class="ot">.</span>detectDown <span class="kw">do</span>
+    turtle<span class="ot">.</span>down<span class="ot">()</span>
+    turtle<span class="ot">.</span>back<span class="ot">()</span>
+    turtle<span class="ot">.</span>place<span class="ot">()</span>
+done</code></pre>
+<p>Virker det? Lager roboten en trapp?</p></li>
+<li><p>Nå er vi klare for den store testen. Klarer vi å sende trappebyggeroboten vår opp det høye tårnet?</p>
+<p>Pass på at roboten fortsatt har nok fuel, og fyll opp med byggemateriale. Kjør den bort til det høye tårnet, og la den <code>byggtrapp</code>!</p>
+<figure>
+<img src="byggtrapp.png" />
+</figure></li>
+</ul>
+<p>Gratulerer! Du har nå programmert en robot! Legg merke til at siden <code>byggtrapp</code>-programmet vårt bruker <code>detect</code>-kommandoer kan det bygge trapper opp alle slags tårn og bratte fjellsider!</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

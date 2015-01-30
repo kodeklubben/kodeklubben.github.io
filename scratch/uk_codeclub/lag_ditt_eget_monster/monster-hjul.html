@@ -1,0 +1,21 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Monster - Hjul | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Monster - Hjul</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>For å få et hjul til å bevege seg, kan vi <strong>rotere</strong> det litt av gangen og flytte det når vi mottar en <strong>flyttet melding</strong>.</p>
+<pre class="blocks"><code>    når jeg mottar [flyttet venstre v]
+    endre x med ((hastighet) * (-1))
+    vend høyre (15) grader
+
+    når jeg mottar [flyttet høyre v]
+    endre x med (hastighet)
+    vend venstre (15) grader</code></pre></li>
+<li><p>Hvis du vil, kan du erstatte verdiene med variabler som <code class="blockdata">hastighet</code>, slik at du kan kontrollere hastigheten i alle retninger fra ett sted.</p></li>
+</ul>
+<p><strong>(Merk at vi har multiplisert <code class="blockdata">hastighet</code> med -1 for å få negativ verdi, og bevege hjulet i motsatt retning)</strong></p>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

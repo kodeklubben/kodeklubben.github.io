@@ -1,0 +1,27 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lydmaskin - Tromme | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Lydmaskin - Tromme</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Importer en ny figur ved å velge <code>Ting/Drum1</code>. Gi den navnet <code>Tromme</code>.</p></li>
+<li><p>Vi vil at trommen skal lage lyd når vi klikker på den eller trykker på <code>mellomromstasten</code>.</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    send melding [tromme v]
+
+    når [mellomrom v] trykkes
+    send melding [tromme v]</code></pre></li>
+<li><p>Nå må vi lage lyd når den mottar <code>tromme</code>. Ved å endre tallet, kan du endre lyden trommen lager.</p>
+<pre class="blocks"><code>    når jeg mottar [tromme v]
+    trommeslag (48 v) som varer (0.2) takter</code></pre></li>
+<li><p>Prøv å endre utseende slik at man ser hvilket instrument som spiller.</p>
+<pre class="blocks"><code>    når jeg mottar [tromme v]
+    trommeslag (48 v) som varer (0.2) takter
+    sett størrelse til (110) %
+    vent (0.1) sekunder
+    sett størrelse til (100) %</code></pre></li>
+</ul>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

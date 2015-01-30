@@ -1,0 +1,24 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Monster - Øyne | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Monster - Øyne</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Du kan gi monsteret øyne som følger musepekeren rundt på skjermen. Det kan ha så mange øyne som du vil, kankje har det åtte øyne, som en edderkopp! Siden vi alltid vil at monsterøynene skal følge musepekeren må vi sette <code class="blockcontrol">for alltid</code> klossen. Når man trykker på det grønne flagget og skriptet har startet vil vi at øynene peker i retningen av musepekeren og flytter seg hvert brøkdelssekund.</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    for alltid
+        pek mot [musepeker v]
+        vent (0.2) sekunder
+    slutt
+
+    når jeg mottar [flyttet høyre v]
+    endre x med (hastighet)
+
+    når jeg mottar [flyttet venstre v]
+    endre x med ((hastighet) * (-1))</code></pre></li>
+</ul>
+<p><strong>Merk at vi ogå lytter til meldinger om at kroppen har flyttet seg, slik at øynene beveger seg sammen med kroppen og andre kroppsdeler. Er det noe annet du kan få øynene til å gjøre? Hvis du flytter muspekeren mellom monsterets øyne, så går øynene i kryss!</strong></p>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

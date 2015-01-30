@@ -1,0 +1,100 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Internett | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Internett</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Har du noen gang lurt på hvordan internett virker? Klart du har det! Idag kommer du til å lære hvordan man lager nettsider slik at du også kan hjelpe til med å bygge det. Nettsider blir skrevet ved å bruke <strong>HTML</strong>, som er en forkortelse for <strong>HyperText Markup Language</strong> på engelsk. Du kommer til å finne ut mer om dette ettersom du bygger siden din.</p>
+</section>
+<section id="steg-1-hva-er-nettsider" class="level1 activity">
+<h1>Steg 1: Hva er nettsider?</h1>
+<section id="aktiviteter" class="level2 check">
+<h2>Aktiviteter</h2>
+<ol type="1">
+<li>Åpne et <strong>tekstprogram</strong>.</li>
+<li>Lag et nytt dokument.</li>
+<li>Skriv noe! For eksempel: <code>Hei! Jeg heter …</code></li>
+<li>Lagre filen. Kall den <code>hei.txt</code>.</li>
+<li>Nå kan du finne filen din og prøve å åpne den. Den åpnes i et tekstprogram, og det er jo ikke så gøy.</li>
+<li>Endre filtypen i filnavnet (det som kommer etter punktumet) til <code>.html</code>, sånn at filen nå heter <code>hei.html</code>.</li>
+<li>Åpne filen på nytt.</li>
+</ol>
+<p>Hvilket program ble filen åpnet i denne gangen? Nettleseren er et spesielt program som vet hvordan man skal tolke tekstfiler som er skrevet ved hjelp av <strong>HTML språket</strong>. Vi har ikke laget noe <strong>HTML</strong> enda, vi bare la inn litt tekst, men det bryr ikke nettleseren seg noe om! Så lenge du gir den en <code>.html</code> fil, kommer den til å gjøre sitt beste for å vise deg hva som er i filen.</p>
+<p>Dette er veldig nyttig: selv når en nettside inneholder feil, vil nettleseren prøve å finne ut av hvordan den skal vise den fram uansett.</p>
+<p><strong>Hvordan kan vi se disse filene?</strong></p>
+<p>Når du skriver en adresse inn i nettleseren din, blir forespørselen din sendt avgårde til en datamaskin som alltid står på og er innstilt for å la deg se nettsidene som lever inni den. Denne datamaskinen kalles en server. Når den mottar en forespørsel fra din datamaskin, ser den etter alle de nødvendige filene, som for eksempel <code>.html</code>-filen, og sender deg den sammen med alt det andre nettsiden trenger, for eksempel bilder og videoer.</p>
+<section id="kan-jeg-få-denne-siden-takk" class="level3">
+<h3>Kan jeg få denne siden takk?</h3>
+<p><img src="diagram_screenshot.png" alt="screenshot" /> Her, værsågod</p>
+</section>
+</section>
+</section>
+<section id="steg-2-hva-er-html" class="level1 activity">
+<h1>Steg 2: Hva er HTML?</h1>
+<p>HTML er et <strong>markeringsspråk</strong> - det betyr at det brukes til å beskrive hva ting er.</p>
+<p>Selv om nettleseren prøver å gjøre sitt beste for å vise ting, hjelper det at den vet hva disse tingene er.</p>
+<p>For å fortelle nettleseren det, bruker vi <code>tagger</code>.</p>
+<p>Tagger ser sånn ut: <code>&lt;p&gt;Dette er litt tekst.&lt;/p&gt;</code></p>
+<p><code>&lt;p&gt;</code> er en forkortelse for <strong>paragraf</strong>.</p>
+<p>Den har en åpnings-tag, som er denne: <code>&lt;p&gt;</code> og en tilsvarende avslutnings-tag, med skråstrek: <code>&lt;/p&gt;</code> Nettleseren vet da at alt imellom de to taggene er en paragraf med tekst.</p>
+<p>Tagger kan også ha attributter, som er nyttig informasjon om elementet.</p>
+<p>La oss kikke på link-taggen: <code>&lt;a href=&quot;http://kodeklubben.no/&quot;&gt;Besøk nettsiden til Kodeklubben&lt;/a&gt;</code> <code>&lt;a&gt;</code> betyr <strong>anker</strong>, som er det linker ble kalt før.</p>
+<p>Den har åpnings-taggen: <code>&lt;a&gt;</code> og avslutnings-taggen: <code>&lt;/a&gt;</code> men vi la til en attributt til åpnings-taggen: <code>&lt;a href=&quot;http://kodeklubben.no/&quot;&gt;</code> <code>href</code> er attributten, og <code>http://kodeklubben.no/</code> er attributten sin verdi. <code>href</code> står for <em>hypertekst referanse</em>. En tekst som linket til andre tekster ble en gang kalt <em>hypertekst</em>, fordi den kunne ha bilder og lyd, og kunne linke videre til andre tekster. Det gjorde den til litt annerledes enn annen vanlig tekst. <code>href</code> forteller nettleseren hvor linken skal føre deg, og teksten imellom taggene vil bli synlig som en link.</p>
+<section id="aktiviteter-1" class="level2 check">
+<h2>Aktiviteter</h2>
+<ol type="1">
+<li>Åpne filen <code>side.html</code>.</li>
+<li>Spør den frivillige om du kan bruke X-Ray Goggles eller utvikler-verktøyene for å se på koden (en utvikler er en som lager ting med kode).</li>
+</ol>
+<section id="hvis-du-kan-bruke-x-ray-goggles" class="level4">
+<h4>Hvis du kan bruke X-Ray Goggles:</h4>
+<ol start="3" type="1">
+<li>Klikk på X-Ray Goggles-bokmerket.</li>
+<li>Beveg musen rundt på siden. Da kan du se deler av siden lyse opp, og se hvilke tagger delene er laget av. Så kan du trykke på hver boks for å se kode-snutten som boksen er laget av.</li>
+</ol>
+</section>
+<section id="hvis-du-bruker-utvikler-verktøyene" class="level4">
+<h4>Hvis du bruker utvikler-verktøyene:</h4>
+<ol start="3" type="1">
+<li>Beveg musen rundt på siden. Høyreklikk på noe interessant, og trykk så på <code>Inspiser element</code>. Da vil det åpne seg et panel som vil vise deg koden til siden samtidig som du kan se på siden.</li>
+<li>Beveg musen over forskjellige deler av koden. Når du har musepilen over en del av koden, vil du se at den delen av siden som er laget av den koden blir lyst opp, slik at du kan se hvilken kodesnutt som gjør hva.</li>
+<li>Prøv å inspiser flere deler av siden. Da finner du masse forskjellige tagger:</li>
+</ol>
+<p>Vi kan allerede <code>&lt;p&gt;</code> og <code>&lt;a&gt;</code>. <code>&lt;ol&gt;</code> - sortert liste <code>&lt;ul&gt;</code> - usortert liste <code>&lt;li&gt;</code> - et punkt i en liste <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code> - overskrifter <code>&lt;hr&gt;</code> - horisontal linje <code>&lt;div&gt;</code> - en boks for å gruppere ting <code>&lt;img&gt;</code> - dette er et litt spesielt element, fordi i motsetning til de fleste andre elementer så har ikke dette en avslutnings-tagg. Vi bruker det til å sette inn bilder på siden.</p>
+<p>Det finnes også noen tagger som vi alltid må ha med i HTML dokumenter: <code>&lt;html&gt;</code> - forteller nettleseren at her kommer det HTML-kode <code>&lt;head&gt;</code> - inne i <code>&lt;head&gt;</code> skriver vi ting som kan være nyttig for nettleseren, men som ikke vil dukke opp som tekst på selve siden. I dette eksempelet har vi satt en <code>&lt;title&gt;</code>-tagg her, og det som er inni den vil dukke opp i toppen av nettleser-vinduet. <code>&lt;body&gt;</code> - her putter vi det vi vil skal dukke opp på siden.</p>
+</section>
+</section>
+<section id="aktiviteter-2" class="level2 check">
+<h2>Aktiviteter</h2>
+<ul>
+<li><p>Legg merke til hvordan tagger kan stå på innsiden av andre tagger. Vi har <code>&lt;a&gt;</code> taggen, som er inni <code>&lt;p&gt;</code> taggen, som igjen er inni <code>&lt;div&gt;</code>, som er plassert i <code>&lt;body&gt;</code>. Når det skjer sier vi at taggen som er på innsiden er <code>barnet</code> og taggen som er på utsiden er en <code>forelder</code>. Det er nesten som et slektstre!</p></li>
+<li><p>For nettleseren er alle tagger av samme type like, men du kan skille de fra hverandre ved å bruke klasser og ID’er. For eksempel, noen av paragrafene kan være introduksjoner, så du kan gi de en klasse som du kaller <code>introduksjon</code>. Se om du finner noen klasser i <code>side.html</code> .</p></li>
+<li><p>ID’er brukes for å markere unike elementer på siden din. Se om du kan finne <code>div</code> taggen med en <code>ID</code> lik <code>kattunge</code> på siden.</p></li>
+<li><p>Hva skjer hvis du flytter ting rundt? La oss gå tilbake til tekstprogrammet. Finn en <code>&lt;ol&gt;</code> tagg i koden og velg den og alt som er inne i den, slik som dette:</p></li>
+</ul>
+```HTML
+<ol>
+    <li>
+Kattunger
+</li>
+    <li>
+Universet
+</li>
+    <li>
+Å sove lenge
+</li>
+    <li>
+Å spille spill
+</li>
+  </ol>
+<hr />
+<p>Så kopierer du det og flytter det et annet sted. Lagre siden, og oppdater den i nettleseren. Hvordan påvirker rekkefølgen av koden rekkefølgen på det som vises i nettleseren?</p>
+</section>
+<section id="ting-du-kan-prøve" class="level2 try">
+<h2>Ting du kan prøve</h2>
+<ul>
+<li>Lag din egen paragraf med tekst.</li>
+<li>Lag en link som peker til en annen del av siden (hint: det har noe med ID å gjøre - se etter en link som peker til katten).</li>
+<li>Legg til dine egne overskrifter der du syns de kan passe. Hva skjer hvis du endrer tallet i overskrift-taggen, for eksempel fra <code>&lt;h3&gt;</code> til <code>&lt;h4&gt;</code>?</li>
+<li>Hva må du gjøre for å linke til en annen side?</li>
+<li>Hvis du bruker utvikler-verktøyene: når du åpner panelet med kode, prøv å dobbeltklikk på en kode som ser interessant ut. Se om du kan endre den. Da får du direkte en forhåndsvisning på hva som skjer når du endrer koden, uten at du trenger å bytte mellom nettleseren og tekstprogrammet. Kult, ikke sant? Så oppdaterer du siden. Hva skjedde? Når du redigerer kode på denne måten blir det ikke lagret, så du kan teste hva som skjer uten å ødelegge filen. Sånn kan du eksperimentere masse, men alltid ha muligheten til å gå tilbake.</li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

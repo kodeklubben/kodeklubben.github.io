@@ -1,0 +1,219 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hemmelige koder | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hemmelige koder</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Legg bort skilpaddene dine, i dag skal vi lære hvordan vi kan sende hemmelige beskjeder!</p>
+</section>
+<section id="kodeklubb-koden" class="level1 activity">
+<h1>Kodeklubb-koden</h1>
+<p>Et chiffer er et system for å gjøre om vanlig tekst til kode som ikke andre skal kunne lese. Vi skal bruke et av de eldste og mest berømte chifferene, Cæsar-chifferet eller Cæsars kode - oppkalt etter Gaius Julius Cæsar som sannsynligvis brukte det til å sende hemmelige beskjeder. Det er neppe den beste måten å hindre andre i å lese beskjedene dine, men det kommer vi tilbake til. Det finnes ferdige moduler til Python du kan bruke hvis du vil lage noe som skal være vanskelig å knekke, men nå skal vi forsøke å lage Cæsar-chifferet selv.</p>
+<p>Start med å tegne alle bokstavene i en sirkel.</p>
+<pre><code>                          Å    A
+                     Ø              B
+                 Æ                      C
+             Z                               D
+
+         Y                                       E
+
+      X                                             F
+
+     W                                               G
+
+     V                                               H
+
+      U                                             I
+
+         T                                       J
+
+             S                               K
+                R                        L
+                    Q                M
+                        P    O   N
+</code></pre>
+<p>For å lage en hemmelig bokstav fra en vanlig bokstav, trenger vi et tall vi kan bruke som hemmelig nøkkel. Jeg liker tallet 3, det er et magisk tall, så vi bruker det.</p>
+<pre><code>    A + 3 = D       T + 3 = W       Å + 3 = C</code></pre>
+<p>Vi begynner med A og teller fremover 3 bokstaver: B, C, D. Så bokstaven A blir til bokstaven D. For å dekode gjør vi det samme, men baklengs. Vi begynner med D og teller bakover for å få A.</p>
+</section>
+<section id="steg-1-alfabetet" class="level1 activity">
+<h1>Steg 1: Alfabetet</h1>
+<p>Her kan du få trøbbel med norske bokstaver om du ikke har Python 3. Du har Python 2 dersom det står 2.6 eller 2.7 i IDLE. I så fall må du legge en <code>u</code> foran tekst som er inni <code>&quot;&quot;</code>. For eksempel blir alfabetet under <code>u&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</code>. <code>u</code>-en betyr at teksten er av typen <em>Unicode</em> som støtter alle norske bokstaver.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Først må vi lære python alfabetet. Åpne IDLE og lag en ny fil med koden under:</p>
+<pre class="sourceCode python"><code class="sourceCode python">alphabet = <span class="st">&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</span>
+
+<span class="dt">print</span>(<span class="dt">len</span>(alphabet))</code></pre></li>
+<li><p>Når du kjører dette programmet skal det skrive ut 29. Pass på at du har med alle bokstavene, ellers kommer ikke den hemmelige koden din til å virke.</p>
+<p>Hvis du er fornøyd med alfabetet ditt kan vi begynne å kode en bokstav.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-kode-en-bokstav" class="level1 activity">
+<h1>Steg 2: Kode en bokstav</h1>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Akkurat som vi gjorde med hjulet ovenfor kan vi finne posisjonen til en bokstav ved å telle forover, og så bruke bokstaven vi ender opp med.</p>
+<p>Skriv inn koden under og kjør den:</p>
+<pre class="sourceCode python"><code class="sourceCode python">alphabet = <span class="st">&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</span>
+
+letter = <span class="st">&quot;a&quot;</span>
+secret = <span class="dv">3</span>
+
+pos = alphabet.find(letter)
+
+newpos = (pos + secret)
+
+<span class="kw">if</span> newpos &gt;= <span class="dv">29</span>:
+    newpos = newpos - <span class="dv">29</span>
+
+secretletter = alphabet[newpos]
+
+<span class="dt">print</span>(secretletter)</code></pre>
+<p>Vi slår opp hvor “a” er i alfabetet og legger til det hemmelige tallet vårt for å telle fremover. Vi sjekker om vi har gått rundt, hvis vi har det må vi gå en hel runde tilbake igjen ved å trekke fra 29 (dette er litt som med gradene, å trekke fra 360 gjør at vi er akkurat der vi var). Så slår vi opp i alfabetet igjen for å se hvilken hemmelige bokstav vi fikk.</p></li>
+<li><p>Kjør koden og se hva som skjer.</p></li>
+<li><p>La oss ta en titt på koden igjen, men vi tar det sakte.</p>
+<p>Du trenger ikke å skrive dette! Alt som står bak firkant-tegnet bryr python seg vanligvis ikke om, det er bare kommentarer til mennesker som skal lese koden.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co"># alphabet er navnet på teksten fra a til å</span>
+alphabet = <span class="st">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
+
+<span class="co"># Den hemmelige bokstaven (letter) og det hemmelige tallet</span>
+<span class="co"># (secret) vi bruker for å kode det</span>
+letter = <span class="st">&quot;a&quot;</span>
+secret = <span class="dv">3</span>
+
+<span class="co"># Finn posisjonen til bokstaven. Python vil gi oss et</span>
+<span class="co"># tall fra 0 til 28 (python teller fra 0)</span>
+pos = alphabet.find(letter)
+
+<span class="co"># Gå like langt fremover som det hemmelige tallet sier</span>
+newpos = (pos + secret)
+
+<span class="co"># Hvis vi har telt for langt, må vi gå en runde tilbake</span>
+<span class="co"># for å få et tall mellom 0 og 28</span>
+<span class="kw">if</span> newpos &gt;= <span class="dv">29</span>:
+    newpos = newpos - <span class="dv">29</span>
+
+<span class="co"># Slå opp denne posisjonen for å se hvilken bokstav</span>
+<span class="co"># i alfabetet som står der</span>
+secretletter = alphabet[newpos]
+
+<span class="co"># Skriv denne bokstaven ut på skjermen</span>
+<span class="dt">print</span>(secretletter)</code></pre>
+<p>Det er mye python-ting som skjer her, men ikke bli skremt om du ikke forstår alt til å begynne med. Mye av dette er akkurat som i scratch. <code>if newpos &gt;= 29</code> er bare en <code>if</code>-setning, en ting som bare kjører koden under hvis det som står etter <code>if</code> er sant. En <code>if</code>-setning bruker en innrykksblokk, akkurat som <code>for</code> og <code>def</code> som vi har sett tidligere.</p></li>
+</ul>
+<p>Nå som vi kan kode en bokstav, hva med å dekode en?</p>
+</section>
+</section>
+<section id="steg-3-finne-tilbake-bokstavene" class="level1 activity">
+<h1>Steg 3: Finne tilbake bokstavene</h1>
+<p>Akkurat som i koden fra den forrige oppgaven skal vi finne posisjonen til bokstaven, men denne gangen skal vi gå bakover i alfabetet for å dekode.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Forsøk å skriv inn denne koden og kjør den:</p>
+<pre class="sourceCode python"><code class="sourceCode python">alphabet = <span class="st">&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</span>
+
+secret = <span class="dv">17</span>
+secretletter = <span class="st">&quot;r&quot;</span>
+
+pos = alphabet.find(secretletter)
+
+newpos = pos - secret
+
+<span class="kw">if</span> newpos &lt; <span class="dv">0</span>:
+    newpos = newpos + <span class="dv">29</span>
+
+letter = alphabet[newpos]
+
+<span class="dt">print</span>(letter)</code></pre></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-bygge-funksjoner" class="level1 activity">
+<h1>Steg 4: Bygge funksjoner</h1>
+<p>La oss ta den første programkoden (som laget Cæsar-kode av bokstaver) og gjøre den om til en funksjon <code>encode</code> og den andre programkoden til en funksjon <code>decode</code>. I modul to snakket vi om å bruke prosedyrer for å unngå gjentagelser, denne gangen skal vi lage funksjoner i stedet. Ved første øyekast er prosedyrer og funksjoner veldig like (og Python bryr seg strengt tatt ikke om forskjellen), men når man ser nærmere etter har de ulike egenskaper. Dette spiller ikke så stor rolle nå, men det er like greit å lære seg forskjellen med en gang.</p>
+<p>Prosedyrer bare gjør ting, mens funksjoner bare beregner ting. Noen ganger blander man de to tingene sammen og lager prosedyrer som både beregner og gjør ting, men jo mer du kan skille disse fra hverandre jo enklere blir programmet ditt både for deg selv og for andre. Grunnen til at vi kaller det vi lager nå for funksjoner, er at de bare beregner en verdi - de skriver ingenting ut, de tegner ingenting på skjermen og resultatet blir likt hver eneste gang hvis man gir inn samme bokstav og hemmelige tall.</p>
+<p>For å få en funksjon (eller en prosedyre som beregner noe) til å returnere en verdi som vi kan bruke senere, bruker vi kommandoen <code>return</code>.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en fil som ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python">alphabet = <span class="st">&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</span>
+
+<span class="kw">def</span> encode(letter, secret):
+    pos = alphabet.find(letter)
+
+    newpos = (pos + secret)
+
+    <span class="kw">if</span> newpos &gt;= <span class="dv">29</span>:
+        newpos = newpos - <span class="dv">29</span>
+
+    <span class="kw">return</span> alphabet[newpos]
+
+
+<span class="kw">def</span> decode(letter, secret):
+    pos = alphabet.find(letter)
+
+    newpos = (pos - secret)
+
+    <span class="kw">if</span> newpos &lt; <span class="dv">0</span>:
+        newpos = newpos + <span class="dv">29</span>
+
+    <span class="kw">return</span> alphabet[newpos]
+
+<span class="dt">print</span>(encode(<span class="st">&quot;a&quot;</span>, <span class="dv">17</span>))
+<span class="dt">print</span>(decode(<span class="st">&quot;r&quot;</span>, <span class="dv">17</span>))</code></pre>
+<p>Husk at du kan bruke ‘Tab’ i IDLE for å få innrykk. Du kan også merke deler av koden og rykke alt inn på en gang.</p></li>
+<li><p>Prøv å kode og dekode noen bokstaver!</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-send-et-hemmelig-ord-eller-to-og-finn-dem-tilbake-igjen" class="level1 activity">
+<h1>Steg 5: Send et hemmelig ord eller to, og finn dem tilbake igjen</h1>
+<p>Nå har vi noen funksjoner, la oss bruke dem til å kode ord. Vi kommer til å gå igjennom hver bokstav i ordet og kode det hvis det finnes i alfabetet (vi hopper over tegn som punktum og mellomrom).</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Under de nye funksjonene fra forrige oppgave kan du skrive inn koden under (med andre ord: behold det du gjorde i oppgave 4, og legg til koden under).</p>
+<pre class="sourceCode python"><code class="sourceCode python">secret = <span class="dv">17</span>
+message = <span class="st">&quot;hello world&quot;</span>
+
+output = <span class="st">&quot;&quot;</span>
+
+<span class="kw">for</span> character in message:
+    <span class="kw">if</span> character in alphabet:
+        output = output +  encode(character, secret)
+    <span class="kw">else</span>:
+        output = output + character
+
+
+<span class="dt">print</span>(output)
+
+secret = <span class="dv">17</span>
+message = <span class="st">&quot;yvååc kcfåu&quot;</span>
+output = <span class="st">&quot;&quot;</span>
+
+<span class="kw">for</span> character in message:
+    <span class="kw">if</span> character in alphabet:
+        output = output + decode(character, secret)
+    <span class="kw">else</span>:
+        output = output + character
+
+<span class="dt">print</span>(output)</code></pre></li>
+<li><p>Kjør programmet og se hva som skjer.</p>
+<p>Den første delen av koden burde skrive ut “yvååc kcfåu”, som er den hemmelige versjonen av “hello world”. Den andre delen dekoder det igjen og skriver ut “hello world”</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-6-dekoding-av-noen-hemmelige-beskjeder" class="level1 activity">
+<h1>Steg 6: Dekoding av noen hemmelige beskjeder</h1>
+<p>Her er noen hemmelige beskjeder, forsøk å dekode dem!</p>
+<ol type="1">
+<li><p><code>daczj ym cgyzcdmwwzf?</code>, hemmeligheten er 21.</p></li>
+<li><p><code>æxkxånwn næ bnwwnwn mrwn</code>, hemmeligheten er 9.</p></li>
+</ol>
+<p>Prøv å sende noen beskjeder til vennene dine! Hva med å lage et Python-program som forsøker seg på alle mulige hemmelige tall og forsøker å knekke koder selv om du ikke kan det hemmelige tallet?</p>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

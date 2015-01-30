@@ -1,0 +1,200 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hvor i All Verden? Del 3 | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hvor i All Verden? Del 3</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Hvor i All Verden? er et reise- og geografispill hvor man raskest mulig skal fly innom reisemål spredt rundt i Europa. Dette er den siste av tre leksjoner. I denne delen skal vi se på lister og hvordan vi kan bruke dem til å velge reisemål tilfeldig. Vi vil avslutte med å lage en skikkelig intro til spillet.</p>
+<figure>
+<img src="hvor_i_all_verden_3.png" />
+</figure>
+</section>
+<section id="steg-0-forrige-gang" class="level1 activity">
+<h1>Steg 0: Forrige gang</h1>
+<p><em>Vi fortsetter nå med det programmet vi laget i del 1 og del 2.</em></p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<p>Sjekk spesielt at</p>
+<ul>
+<li><p>du har et helikopter som du kan styre over en rullende bakgrunn med piltastene,</p></li>
+<li><p>du har en stedfigur som kan bli funnet av helikopteret,</p></li>
+<li><p>du har laget en ny kloss (funksjon) som heter <code class="blockmoreblocks">Reis   til</code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-1-lag-lister" class="level1 activity">
+<h1>Steg 1: Lag lister</h1>
+<p><em>Vi skal nå flytte reisemålene våre over i lister. Dette vil gjøre det enklere både å legge til flere reisemål, og å velge reisemål tilfeldig.</em></p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg sted-figuren, og klikk på <code class="blockdata">Data</code>-kategorien. Lag en liste som du kaller <code>steder</code> og lar gjelde bare for denne figuren.</p></li>
+<li><p>Det dukker nå opp en grå boks på scenen som heter <code>Sted: steder</code>. Vi kan la denne ligge på scenen inntil videre. Du vil også se at det har kommet noen nye klosser som gjør ting med lister. Skjønner du hva noen av disse klossene gjør?</p></li>
+<li><p>La oss fylle opp listen! Vi starter med en ny melding, og deretter kan vi legge til ting i listen.</p>
+<pre class="blocks"><code>    når jeg mottar [Lag lister v]
+    legg [London] til [steder v]
+    legg [Oslo] til [steder v]
+    legg [Barcelona] til [steder v]</code></pre>
+<p>Bruk gjerne de samme reisemålene som du allerede har.</p></li>
+<li><p>Klikk på blokken du laget over slik at den kjører. Blir den grå boksen på scenen fyllt med steder? Hva skjer om du klikker flere ganger?</p></li>
+<li><p>Vi kan sikre oss at hvert sted bare ligger en gang i listen ved å tømme listen før vi fyller den opp. Legg til</p>
+<pre class="blocks"><code>    slett (alle v) i [steder v]</code></pre>
+<p>i koden før du legger til det første reisemålet.</p></li>
+</ul>
+<p>En liten utfordring med lister er at de bare inneholder en type verdier. For eksempel stedsnavn i dette tilfellet. Men for reisemålene må vi holde styr på tre ting: Stedsnavnet og de to koordinatene som sier hvor stedet ligger. En måte å gjøre dette på er å bruke tre lister.</p>
+<ul>
+<li><p>Lag to nye lister, <code>stederX</code> og <code>stederY</code> som også gjelder kun for stedfiguren.</p></li>
+<li><p>Vi vil nå utvide <code>Lag lister</code>-blokken slik at vi fyller opp alle tre listene. Bruk dine egne reisemål og koordinater her om du vil:</p>
+<pre class="blocks"><code>    når jeg mottar [Lag lister v]
+    slett (alle v) i [steder v]
+    slett (alle v) i [stederX v]
+    slett (alle v) i [stederY v]
+    legg [London] til [steder v]
+    legg [-135] til [stederX v]
+    legg [-30] til [stederY v]
+    legg [Oslo] til [steder v]
+    legg [-30] til [stederX v]
+    legg [75] til [stederY v]
+    legg [Barcelona] til [steder v]
+    legg [-135] til [stederX v]
+    legg [-175] til [stederY v]</code></pre>
+<p>Pass på at de tre listene er samkjørte slik at det er verdier for samme reisemål som står for eksempel øverst i hver liste.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-velg-et-reisemål-tilfeldig" class="level1 activity">
+<h1>Steg 2: Velg et reisemål tilfeldig</h1>
+<p><em>La oss begynne å bruke listene våre til å velge steder å reise til tilfeldig.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Først vil vi lage listene våre når spillet begynner. Endre på koden for <code class="blockevents">Nytt spill</code> slik,</p>
+<pre class="blocks"><code>    når jeg mottar [Nytt spill v]
+    send melding [Lag lister v]
+    vis
+    send melding [Nytt sted v] og vent</code></pre></li>
+<li><p>Lag en ny variabel som heter <code class="blockdata">sted</code> og som gjelder kun for sted-figuren. Denne variabelen vil være et tall som identifiserer hvilken posisjon i listene det gjeldende reisemålet har.</p></li>
+<li><p>Koden for <code class="blockevents">Nytt sted</code> blir helt ny. Nå skal vi bruke både listene våre og den nye <code class="blockmoreblocks">Reis til</code>-klossen vi lagde forrige gang.</p>
+<pre class="blocks"><code>    definer Reis til (sted) (x) (y)
+
+    når jeg mottar [Nytt sted v]
+    sett [sted v] til (tilfeldig tall fra (1) til (lengden av [steder v]))
+    Reis til (element (sted) av [steder v]) (element (sted) av [stederX v]) (element (sted) av [stederY v])</code></pre></li>
+<li><p>Prøv å kjør spillet flere ganger. Virker det som om reisemålet blir valgt tilfeldig?</p></li>
+<li><p>For å få flere reiseoppgaver i hvert spill kan vi bare legge en <code class="blockcontrol">gjenta _ ganger</code>-løkke rundt sendingen av meldingen <code>Nytt sted</code> i <code class="blockevents">Nytt spill</code>-blokken. Hvor mange ganger vil du gjenta meldingen?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-fjern-reisemål-fra-listen" class="level1 activity">
+<h1>Steg 3: Fjern reisemål fra listen</h1>
+<p><em>I spillet vårt hender det at samme reisemål blir tilfeldig valgt flere ganger etter hverandre. Dette kan vi enkelt unngå ved å fjerne reisemål fra listene etterhvert som vi finner dem.</em></p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste </h2>
+<ul>
+<li><p>For å unngå å bli spurt om å reise til samme sted flere ganger på rad vil vi slette reisemål fra listene etterhvert som vi finner dem. Legg til slettekommandoer helt nederst i <code class="blockevents">Nytt   sted</code>-blokken,</p>
+<pre class="blocks"><code>    slett (sted) i [steder v]
+    slett (sted) i [stederX v]
+    slett (sted) i [stederY v]</code></pre></li>
+<li><p>Hva skjer om du prøver å gi flere oppgaver enn det er reisemål? Prøv selv!</p>
+<p>Den enkleste måten å unngå dette problemet på er å gi færre oppgaver eller legge inn flere reisemål i listene!</p>
+<p>Alternativt kan du øverst i <code>Nytt sted</code>-blokken legge inn en <code class="blockcontrol">hvis</code>-test som sjekker om lengden av <code>steder</code> er 0. Hvis den er det kan du sende en ny <code>Lag lister</code>-melding for å bygge listen på nytt.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-en-introduksjon" class="level1 activity">
+<h1>Steg 4: En introduksjon</h1>
+<p><em>Vi er nå nesten ferdige med spillet vårt. Men vi vil forbedre det som kalles programflyten slik at vi får en startmeny, og slik at vi kan spille flere ganger.</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny bakgrunn som kan brukes på startskjermen. Vi har tegnet en ny bakgrunn selv ved å bruke vektorgrafikk, sette sammen to store firkanter og fylle dem med fargeoverganger. Deretter skrev vi litt tekst på denne bakgrunnen.</p>
+<figure>
+<img src="meny.png" />
+</figure>
+<p>Kall denne bakgrunnen for <code>meny</code>.</p></li>
+</ul>
+<p>Vi skal nå sende flere meldinger som definerer programflyten. Vi vil at menyen vises når vi klikker på det grønne flagget. Fra menyen vil vi at et nytt spill starter når vi trykker mellomrom-tasten. Når spillet er slutt vil vi at menyen skal vises igjen. Vi kan tegne programflyten omtrent som dette:</p>
+<figure>
+<img src="programflyt.png" />
+</figure>
+<ul>
+<li><p>For å lage denne programflyten kan vi stort sett bruke skript på scenen. Lag de følgende enkle skriptene:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    send melding [Vis meny v]
+
+    når jeg mottar [Vis meny v]
+    bytt bakgrunn til [meny v]
+
+    når [mellomrom v] trykkes
+    hvis ((bakgrunnsnavn) = [meny])
+        send melding [Nytt spill v]
+    slutt
+
+    når jeg mottar [Nytt spill v]
+    bytt bakgrunn til [spill v]
+
+    når jeg mottar [Spill slutt v]
+    send melding [Vis meny v]</code></pre>
+<p>Sammenlign disse skriptene med programflyten over. Ser du hvordan de henger sammen?</p></li>
+<li><p>Vi må sende melding når spillet er slutt. Hvordan vet vi at spillet er slutt?</p>
+<p>Spillet slutter etter at vi har besøkt reisemålene. Det betyr at vi må sende en melding <code>Spill slutt</code> etter <code class="blockcontrol">gjenta</code>-blokken på sted-figuren.</p>
+<p>Legg til denne meldingen og prøv spillet ditt. Virker programflyten? Starter spillet når du trykker mellomrom? Kommer du tilbake til menyen når spillet er slutt?</p></li>
+<li><p>Et problem er at helikopteret, stedet og kartet blir liggende over menyen når spillet er slutt. Vi må passe på at disse skjules. Legg følgende kode på alle de tre figurene:</p>
+<pre class="blocks"><code>    når jeg mottar [Spill slutt v]
+    skjul
+    stopp [andre skript i figuren v]</code></pre>
+<p>Med <code class="blockcontrol">stopp</code>-klossen passer vi på at alle skriptene stopper når spillet er slutt.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Fungerer programflyten som den skal? Starter spillet når du trykker på mellomrom-tasten? Kommer du tilbake til menyen når spillet er slutt?</p></li>
+<li><p>Skjules og vises alle figurene når de skal?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-ta-tiden" class="level1 activity">
+<h1>Steg 5: Ta tiden</h1>
+<p><em>For å gjøre spillet litt mer spennende avslutter vi med å gi spilleren begrenset tid til å finne reisemålene.</em></p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny variabel, <code class="blockdata">Tid</code>, som gjelder for alle figurer. Det ser ganske bra ut om du høyreklikker på <code class="blockgrey">Tid</code>-boksen på scenen og velger <code>stor</code>.</p></li>
+<li><p>På scenen, sett <code class="blockdata">Tid</code> til for eksempel 30 (sekunder) etter <code class="blockevents">Nytt spill</code> mottas. Lag så en løkke som gjentas til <code class="blockdata">Tid</code> er 0. Inne i løkken kan du endre <code class="blockdata">Tid</code> med -1, og deretter vente 1 sekund. Avslutt med å sende ut meldingen <code>Spill slutt</code> etter løkken.</p></li>
+<li><p>Kanskje du kan gi spilleren litt ekstra tid hver gang han finner et sted?</p></li>
+<li><p>Til slutt må du legge på en <code class="blockcontrol">stopp</code>-kloss også på scenen når spillet er slutt for at tiden skal stoppe når spilleren har funnet alle reisemålene.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Fungerer tidtakingen? Telles tiden nedover mot 0?</p></li>
+<li><p>Avsluttes spillet når du har funnet alle reisemålene? Avsluttes spillet når tiden går ut?</p></li>
+</ul>
+</section>
+<section id="legg-ut-prosjektet" class="level2 save">
+<h2>Legg ut prosjektet</h2>
+<p>Nå er vi ferdige med spillet! Veldig bra! Vi håper du har lært mye spennende gjennom disse leksjonene. Du kan dele spillet med familie og venner ved å trykke <code>Legg ut</code> øverst til høyre på skjermen.</p>
+</section>
+<section id="prøv-selv" class="level2 try">
+<h2>Prøv selv</h2>
+<ul>
+<li><p>Selv om leksjonene er ferdige betyr ikke det at du ikke kan videreutvikle spillet ditt. En enkel utvidelse er å legge på flere reisemål. Her er for eksempel to steder du kan legge til,</p>
+<pre class="blocks"><code>    legg [Reykjavik] til [steder v]
+    legg [-215] til [stederX v]
+    legg [210] til [stederY v]
+    legg [Roma] til [steder v]
+    legg [-30] til [stederX v]
+    legg [-180] til [stederY v]</code></pre>
+<p>men det er enda bedre om du finner på dine egne reisemål. Husk det trenger ikke bare være byer, det kan også være fjell, sjøer eller kanskje land!</p></li>
+<li><p>En måte å gjøre spillet ganske forskjellig på, og samtidig ganske likt, er å bytte ut kartet over Europa med et kart over et annet område. Det finnes mange kart på nettet. Prøv deg fram!</p></li>
+<li><p>Om spillet kjennes litt vanskelig kan man gi spilleren et hint ved å la den sirkelen sakte komme til syne mens han leter etter reisemålet. Om du lager en løkke som starter når <code class="blockevents">Nytt   spill</code> mottas, og som sakte endrer den gjennomsiktige effekten ned mot 0 vil spilleren enklere kunne finne de vanskelige reisemålene.</p></li>
+<li><p>Du kan også lage flere nivåer, for eksempel lett og vanskelig, ved å lage forskjellige lister avhengig av hvilket nivå spilleren velger (for eksempel ved å trykke <code>1</code> eller <code>2</code> i stedet for mellomrom når spillet starter).</p></li>
+</ul>
+<p>Helt til slutt, husk at dette er ditt spill som du har laget! Du bestemmer selv hvordan du vil at spillet skal fungere!</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

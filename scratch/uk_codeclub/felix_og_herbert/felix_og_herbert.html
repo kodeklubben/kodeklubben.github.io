@@ -1,0 +1,183 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Felix og Herbert | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Felix og Herbert</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Vi skal lage et spill hvor katten <strong>Felix</strong> skal fange musa <strong>Herbert</strong>. Du styrer Herbert med musepekeren og skal prøve å unngå å bli tatt av Felix. Jo lenger du unngår ham jo flere poeng får du, men blir du tatt, går poengsummen din ned.</p>
+<figure>
+<img src="felix_og_herbert.png" />
+</figure>
+</section>
+<section id="steg-1-felix-følger-musepekeren" class="level1 activity">
+<h1>Steg 1: Felix følger musepekeren</h1>
+<p><em>Vi ønsker at katten Felix skal følge etter musepekeren.</em></p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt prosjekt.</p></li>
+<li><p>Trykk på <code class="blockmotion">i</code> i hjørnet av <img src="sprite1.png" alt="Sprite1" /> og bytt navn på figuren til <code>Felix</code>.</p></li>
+<li><p>Sørg for at Felix kun ser til høyre og venstre ved å sette rotasjonsmåte til <img src="../../bilder/rotasjonsmate-hv.png" alt="Høyre/Venstre" />.</p></li>
+<li><p>Klikk på scenen ved siden av Felix i vinduet for figurer. Velg fanen <code class="blocklightgrey">Bakgrunner</code> og trykk på <img src="../../bilder/velg-bakgrunn.png" alt="Velg en ferdig bakgrunn" /> for å importere en ferdig bakgrunn. Velg den bakgrunnen du vil.</p></li>
+<li><p>Klikk på Felix, velg <code class="blocklightgrey">Skript</code>-fanen og lag dette skriptet:</p>
+<pre class="blocks"><code>    Når grønt flagg klikkes
+    for alltid
+        pek mot [musepeker v]
+        gå (10) steg
+        neste drakt
+        trommeslag (3 v) som varer (0.25) takter
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Følger Felix musepekeren?</p></li>
+<li><p>Ser det ut som han går når han beveger seg?</p></li>
+<li><p>Beveger han seg med riktig hastighet?</p></li>
+<li><p>Klikk det røde stopp-symbolet for at Felix skal slutte å følge etter musepekeren.</p></li>
+</ul>
+</section>
+<section id="lagre-prosjektet" class="level2 save">
+<h2>Lagre prosjektet</h2>
+<p>Scratch lagrer alle prosjektene dine automatisk med jevne mellomrom. Det kan likevel være lurt å lagre manuelt innimellom.</p>
+<ul>
+<li>I filmenyen, velg <code>Lagre nå</code>.</li>
+</ul>
+</section>
+</section>
+<section id="steg-2-felix-jager-herbert" class="level1 activity">
+<h1>Steg 2: Felix jager Herbert</h1>
+<p><em>Nå ønsker vi at Felix skal jage musa Herbert i stedet for musepekeren.</em></p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny figur ved å trykke på <img src="../../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" /> og velg figuren <code>Dyr/Mouse1</code>.</p></li>
+<li><p>Bytt navn på figuren til <code>Herbert</code>.</p></li>
+<li><p>Gjør Herbert mindre enn Felix ved å trykke på <img src="../../bilder/krymp.png" alt="krymp" /> (øverst mot midten av vinduet). Prøv seks klikk.</p></li>
+<li><p>Gi Herbert dette skriptet:</p>
+<pre class="blocks"><code>    Når grønt flagg klikkes
+    for alltid
+        gå til [musepeker v]
+        pek mot [Felix v]
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Flytter Herbert seg med musepekeren?</p></li>
+<li><p>Jager Felix Herbert?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-felix-sier-når-han-har-fanget-herbert" class="level1 activity">
+<h1>Steg 3: Felix sier når han har fanget Herbert</h1>
+<p><em>Vi vil at Felix skal vite når han har fanget Herbert og fortelle det til oss.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Endre skriptet til Felix til dette:</p>
+<pre class="blocks"><code>    Når grønt flagg klikkes
+    for alltid
+        pek mot [musepeker v]
+        gå (10) steg
+        neste drakt
+        trommeslag (3 v) som varer (0.25) takter
+        hvis (berører [Herbert v]?)
+            si [Tok deg!] i (1) sekunder
+        slutt
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-2" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Sier Felix fra når han har fanget Herbert?</li>
+</ul>
+</section>
+</section>
+<section id="steg-4-herbert-blir-et-spøkelse-når-han-fanges" class="level1 activity">
+<h1>Steg 4: Herbert blir et spøkelse når han fanges</h1>
+<p><em>I tillegg til at Felix sier noe, vil vi nå at Herbert blir forvandlet til et spøkelse når han fanges.</em></p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Endre skriptet til Felix slik at det sender en melding og lager en lyd når han fanger Herbert:</p>
+<pre class="blocks"><code>    Når grønt flagg klikkes
+    for alltid
+        pek mot [musepeker v]
+        gå (10) steg
+        neste drakt
+        trommeslag (3 v) som varer (0.25) takter
+        hvis (berører [Herbert v]?)
+            send melding [Fanget!]
+            trommeslag (1 v) som varer (0.25) takter
+            si [Tok deg!] i (1) sekunder
+            vent (1) sekunder
+        slutt
+    slutt</code></pre></li>
+<li><p>Velg Herbert og gå til <code class="blocklightgrey">Drakter</code>-fanen.</p></li>
+<li><p>Hent en ny drakt ved å trykke på <img src="../../bilder/hent-fra-bibliotek.png" alt="Velg drakt fra biblioteket" /> og velg <code>Fantasi/ghost2-a</code></p></li>
+<li><p>Gjør drakten mindre ved å velge <img src="../../bilder/krymp.png" alt="Krymp" /> og trykke seks ganger på spøkelsesdrakten.</p></li>
+<li><p>Endre navnene på Herberts drakter slik at musedrakten heter <code>levende</code> og spøkelsesdrakten heter <code>død</code>.</p></li>
+<li><p>Gå til <code class="blocklightgrey">Skript</code>-fanen, og lag et nytt skript for Herbert for å gjøre ham om til et spøkelse. Ikke slett det gamle skriptet:</p>
+<pre class="blocks"><code>    når jeg mottar [Fanget! v]
+    bytt drakt til [død v]
+    vent (0.5) sekunder
+    bytt drakt til [levende v]</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-3" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Forvandles Herbert til et spøkelse når han fanges?</p></li>
+<li><p>Spiller Felix de riktige lydene til riktig tid?</p></li>
+<li><p>Står Felix stille lenge nok til at Herbert kommer seg unna?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-telle-poeng" class="level1 activity">
+<h1>Steg 5: Telle poeng</h1>
+<p><em>La oss legge til en poengsum slik at vi kan se hvor flink man er til å holde Herbert i live. Vi begynner med poengsummen null og øker den med en for hvert sekund. Hvis Felix fanger Herbert, minker vi poengsummen med ti.</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>På <code class="blocklightgrey">Skript</code>-fanen under kategorien <code class="blockdata">Data</code>, lag en ny variabel. Kall variabelen for <code class="blockdata">Poeng</code>, og la den gjelde for alle figurer.</p>
+<figure>
+<img src="ny-variabel-poeng.png" />
+</figure>
+<p>Legg merke til at <code class="blockgrey">Poeng</code><code class="blockdata">0</code><code class="blockgrey"></code> dukket opp øverst til venstre i spillet ditt.</p></li>
+<li><p>Klikk på <code>Scene</code> til venstre på skjermen, ved siden av <code>Figurer</code>. Lag disse to skriptene på scenen:</p>
+<pre class="blocks"><code>    Når grønt flagg klikkes
+    sett [Poeng v] til (0)
+    for alltid
+        vent (1) sekunder
+        endre [Poeng v] med (1)
+
+    når jeg mottar [Fanget! v]
+    endre [Poeng v] med (-10)</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-4" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Øker poengsummen med en hvert sekund?</p></li>
+<li><p>Går poengsummen ned med ti når Herbert blir fanget?</p></li>
+<li><p>Hva skjer om Herbert fanges før du har ti poeng?</p></li>
+<li><p>Går poengsummen tilbake til null når du starter spillet på nytt?</p></li>
+</ul>
+</section>
+<section id="lagre-prosjektet-1" class="level2 save">
+<h2>Lagre prosjektet</h2>
+<p><em>Du er ferdig. Godt gjort. Nå kan du spille spillet!</em></p>
+<p>Du kan dele spillet med familie og venner ved å trykke <code>Legg ut</code> på menylinjen.</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

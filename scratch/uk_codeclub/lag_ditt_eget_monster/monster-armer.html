@@ -1,0 +1,23 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Monster - Hengslede armer | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Monster - Hengslede armer</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>En arm lages av to figurer, og de kan være ganske vanskelige å bygge, siden de to armene må vite om hverandre, slik at de ikke skilles og det blir seende rart ut. Dette kan gjøres med matematiske beregninger som kalles <strong>trigonometri</strong>, noe som regelmessig brukes i produksjon av dataspill, roboter og andre kule teknologier. Armens første figur er overarmen, som ikke er så vanskelig, da den ganske enkelt vil rotere ved skulderen og flytte seg med kroppen og de andre kroppsdelene. En ting vi må legge til er å sette retningen <code class="blockmotion">retning</code> til armen i en variabel (mer om det seinere).</p>
+<pre class="blocks"><code>    når [mellomrom v] trykkes
+    vend venstre (15) grader
+    sett [venstre arm v] til (retning)
+    send melding [flyttet v]
+    endre x med (hastighet)</code></pre></li>
+<li><p>Den neste beregningen brukes for å kontrollere <strong>underarmen</strong>. Her bruker vi trigonometri for å beregne hvor underarmen bør plasseres (Det kan godt være at du trenger å be om hjelp når du skal gjøre dette).</p>
+<pre class="blocks"><code>    når jeg mottar [flyttet v]
+    gå til [Sprite3 v]
+    gå til x: ((x-posisjon) + ((45) * ([sin v] av (venstre arm)))) y: ((y-position) + ((45) * ([cos v] av (venstre arm))))</code></pre></li>
+<li><p>Først oppdaterer armen seg, når meldingen <code class="blockbrown">flyttet</code> blir sendt, men du kan bruke hvilken som helst melding, så lenge overarmen sender den eller flytter seg til samme medling som underarmen.</p></li>
+<li><p>Så flytter underarmen seg selv til <strong>senterpunktet</strong> av overarmen, dette er punktet hvor toppen av overarmen er festet til skulderen. Vi vil så flytte underarmen slik at den møter overarmen. Tenk deg at vi tegner en sirkel mens overarmen roterer rundt skulderen, hva er så radius på den sirkelen? Armen i dette eksempelet er circa <strong>45 pixler</strong> lang. Vi trenger å finne ut hva punktet i den andre enden av armen er, og posisjonerer underarmen vår der. Man kan bruke trigonometri formelen over for å reposisjonere underarmen og lage en albue.</p></li>
+</ul>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

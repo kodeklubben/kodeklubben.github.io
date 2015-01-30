@@ -1,4 +1,4 @@
 kodeklubben.github.io
 =====================
 
-Nettstedet <http://kodeklubben.github.io/> som inneholder ferdig formaterte oppgaver (html og pdf). Dersom du ønsker å gjøre endringer i disse filene så oppdater de tilsvarende grunnlagsfilene i [oppgaver-repositoriet](http://github.com/kodeklubben/oppgaver/).
+Dette er filene for nettstedet <http://kodeklubben.github.io/> som inneholder [kodeklubbens oppgaver](//github.com/kodeklubben/oppgaver) som html. Dersom du ønsker å gjøre endringer til nettstedet må du gjøre endringen i [utgangspunktet som finnes her](//github.com/kodeklubben/oppgaver/), ettersom filene i dette repoet blir generert automatisk.
