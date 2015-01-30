@@ -1,0 +1,352 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Tre på rad | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Tre på rad</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>På tide med et nytt spill! I dag skal vi lage tre på rad, hvor spillerne etter tur merker ruter med X eller O inntil en av spillerne får tre på rad.</p>
+</section>
+<section id="steg-1-tegne-rutenettet" class="level1 activity">
+<h1>Steg 1: Tegne rutenettet</h1>
+<p>Vi vil tegne fire linjer, i et #-mønster, som dette:</p>
+<pre><code>_|_|_
+_|_|_
+ | |</code></pre>
+<p>Vi kunne brukt skilpadde-kommandoer for å tegne rutenettet, men i dag skal vi i stedet lære å bruke tk-biblioteket til tegning.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Åpne IDLE, lag en ny fil og lagre den som ‘xox.py’</p></li>
+<li><p>Skriv følgende kode</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> tkinter <span class="ch">import</span> *
+
+main = Tk()
+
+c = Canvas(main, width=<span class="dv">600</span>, height=<span class="dv">600</span>)
+c.pack()
+
+c.create_line(<span class="dv">200</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>)
+c.create_line(<span class="dv">400</span>, <span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>)
+
+c.create_line(<span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">200</span>)
+c.create_line(<span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>, <span class="dv">400</span>)
+
+mainloop()</code></pre></li>
+<li><p>Lagre og kjør programmet ditt. Du vil se et rutenett tegnet på skjermen! Steng vinduet rutenettet ble tegnet i for å avslutte programmet ditt.</p></li>
+</ul>
+</section>
+<section id="lerretet" class="level2 protip">
+<h2>Lerretet</h2>
+<p>På samme måte som vi brukte <code>turtle</code>-biblioteket når vi tegnet med skilpadder bruker vi her <code>tkinter</code>-biblioteket. Vi lager et 600 ganger 600-piksler lerret som tegnes i et vindu med kommandoen <code>c = Canvas(main, width=600, height=600)</code>. For datamaskinen ser dette slik ut:</p>
+<pre><code>    0       200      400      600   ...
+   0+--------+--------+--------+-----&gt; bortover
+    |
+    |
+    |
+    |
+ 200|        A        B
+    |
+    |
+    |
+    |
+ 400|        C        D
+    |
+    |
+    |
+    |
+ 600|
+    |
+ ...|
+    V
+  nedover</code></pre>
+<p>Her er punkt <code>A</code> ved 200 bortover, 200 nedover. Punkt <code>B</code> er ved 400 bortover, 200 nedover. Punkt <code>C</code> er ved 200 bortover, 400 nedover. Til slutt er punkt <code>D</code> ved 400 bortover, 400 nedover.</p>
+<p>Hver av kodelinjene <code>c.create_line(bortover1, nedover1, bortover2, nedover2)</code> tegner en linje på skjermen, hvor de fire tallene beskriver hvor linjer starter og slutter. For eksempel, om vi vil tegne en linje fra <code>A</code> til <code>D</code> kan vi bruke <code>c.create_line(200, 200, 400, 400)</code>.</p>
+<pre><code>     0       200      400      600   ...
+   0 +--------A--------B--------+-----&gt; bortover
+     |
+     |
+     |
+     |
+ 200 M                          O
+     |
+     |
+     |
+     |
+ 400 N                          P
+     |
+     |
+     |
+     |
+ 600 |        C        D
+     |
+ ... |
+     V
+   nedover</code></pre>
+<p>Med punktene som i den siste figuren vil vi tegne linjer fra A til C, B til D, M til O og N til P.</p>
+<pre class="sourceCode python"><code class="sourceCode python">c.create_line(<span class="dv">200</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>) <span class="co"># A til C</span>
+c.create_line(<span class="dv">400</span>, <span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>) <span class="co"># B til D</span>
+
+c.create_line(<span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">200</span>) <span class="co"># M til O</span>
+c.create_line(<span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>, <span class="dv">400</span>) <span class="co"># N til P</span></code></pre>
+<p>Når vi koder kaller vi ofte bortover for <code>x</code>, mens nedover ofte kalles <code>y</code>. Dette rutenettet ligner ganske mye på koordinatene du kanskje har lært om i mattetimen. Forskjellen er at her begynner vi i øvre, i stedet for nedre, venstre hjørne, slik at <code>y</code> blir større når vi går nedover.</p>
+</section>
+</section>
+<section id="steg-2-tegne-en-sirkel" class="level1 activity">
+<h1>Steg 2: Tegne en sirkel</h1>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>I den samme filen vil vi nå legge til en prosedyre som kan tegne en sirkel når du klikker med musen!</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> tkinter <span class="ch">import</span> *
+
+main = Tk()
+
+c = Canvas(main, width=<span class="dv">600</span>, height=<span class="dv">600</span>)
+c.pack()
+
+c.create_line(<span class="dv">200</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>)
+c.create_line(<span class="dv">400</span>, <span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>)
+
+c.create_line(<span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">200</span>)
+c.create_line(<span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>, <span class="dv">400</span>)
+
+<span class="kw">def</span> click(event):
+    c.create_oval(<span class="dv">200</span>, <span class="dv">200</span>, <span class="dv">400</span>, <span class="dv">400</span>)
+
+c.bind(<span class="st">&quot;&lt;Button-1&gt;&quot;</span>, click)
+
+mainloop()</code></pre></li>
+<li><p>Kjør koden din, og klikk et sted i rutenettet. Hva skjer?</p>
+<p>Du skal se en sirkel i den midterste ruta på skjermen.</p></li>
+<li><p>La oss endre på koden slik at vi tegner sirkelen i den samme ruta som du klikker i.</p>
+<p>For å gjøre dette må vi finne posisjonen til muspekeren og regne ut hvilken rute i rutenettet dette tilsvarer. Dette gjør vi ved å endre på <code>click</code>-prosedyren.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> tkinter <span class="ch">import</span> *
+
+main = Tk()
+
+c = Canvas(main, width=<span class="dv">600</span>, height=<span class="dv">600</span>)
+c.pack()
+
+c.create_line(<span class="dv">200</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>)
+c.create_line(<span class="dv">400</span>, <span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>)
+
+c.create_line(<span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">200</span>)
+c.create_line(<span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>, <span class="dv">400</span>)
+
+<span class="kw">def</span> click(event):
+    across = <span class="dt">int</span>(c.canvasx(event.x) / <span class="dv">200</span>)
+    down = <span class="dt">int</span>(c.canvasy(event.y) / <span class="dv">200</span>)
+
+    c.create_oval(
+            across * <span class="dv">200</span>, down * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>
+    )
+
+c.bind(<span class="st">&quot;&lt;Button-1&gt;&quot;</span>, click)
+
+mainloop()</code></pre>
+<p>Linjen <code>int(c.canvasx(event.x) / 200)</code> finner først posisjonen til muspekeren <code>event.x</code>, gjør om denne til en lerret-posisjon, <code>c.canvas(event.x)</code> og deler denne på 200 og runder nedover slik at vi får et tall som er enten 0, 1 eller 2. Dette tallet forteller oss i hvilken kolonne muspekeren er. Linjen <code>int(c.canvasy(event.y) / 200)</code> finner på samme måte ut hvilken rad muspekeren befinner seg i.</p></li>
+<li><p>Kjør koden. Legg merke til at hver gang du klikker i en rute tegnes en sirkel i den ruten.</p>
+<p>Koden <code>c.create_oval(across * 200, down * 200, (across+1) * 200, (down+1) * 200)</code> gjør om ‘Bortover 1, Nedover 2’ til posisjoner på lerretet som Bortover 200, Nedover 400.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-holde-oversikten" class="level1 activity">
+<h1>Steg 3: Holde oversikten</h1>
+<p>Tilsvarende slik vi gjorde i forrige leksjon om Hangman, vil vi nå innføre en liste som kan holde oversikten over hvor vi allerede har klikket. Dette vil være viktig når vi senere vil sjekke om man har tre på rad.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi lager først en liste <code>grid</code> med ni elementer, en for hver rute. Legg til følgende kode rett før definisjonen av prosedyren <code>click</code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python">grid = [
+    <span class="st">&quot;0&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>,
+    <span class="co">&quot;3&quot;</span>, <span class="st">&quot;4&quot;</span>, <span class="st">&quot;5&quot;</span>,
+    <span class="co">&quot;6&quot;</span>, <span class="st">&quot;7&quot;</span>, <span class="st">&quot;8&quot;</span>,
+]</code></pre>
+<p>Vi kunne ha startet listen med ni tomme strenger, <code>grid = [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;]</code>, men ved å skrive listen som vi gjør er det enklere å huske hvordan rutene på brettet er nummerert.</p></li>
+<li><p>Nå vil vi registrere at vi tegner sirkler i denne listen. Bytt ut <code>click</code>-prosedyren med følgende:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> click(event):
+    across = <span class="dt">int</span>(c.canvasx(event.x) / <span class="dv">200</span>)
+    down = <span class="dt">int</span>(c.canvasy(event.y) / <span class="dv">200</span>)
+    square = across + (down * <span class="dv">3</span>)
+
+    <span class="kw">if</span> grid[square] == <span class="st">&quot;O&quot;</span>:
+        <span class="dt">print</span>(<span class="st">&quot;Du har allerede klikket i rute &quot;</span> + <span class="dt">str</span>(square))
+    <span class="kw">else</span>:
+        <span class="dt">print</span>(<span class="st">&quot;Du klikket i rute &quot;</span> + <span class="dt">str</span>(square))
+
+    c.create_oval(
+            across * <span class="dv">200</span>, down * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>
+    )
+    grid[square] = <span class="st">&quot;O&quot;</span></code></pre>
+<p>For å teste at listen virker bruker vi en enkel <code>print</code>-kommando som forteller oss hvilken rute vi klikker i, og om vi klikker i samme rute to ganger. <code>str</code> gjør om et tall til tekst (en streng) slik at den kan skrives ut sammen med den forklarende teksten.</p></li>
+<li><p>Kjør koden. Klikk i forskjellige ruter slik at du skjønner hvordan vi har nummerert rutene på brettet.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-tegne-et-kryss" class="level1 activity">
+<h1>Steg 4: Tegne et kryss</h1>
+<p>Vi vil nå legge til en spiller til, som tegner kryss i stedet for sirkel.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi lager en prosedyre som bestemmer hvem sin tur det er. <code>choose_shape</code> undersøker <code>grid</code>-listen vår og lar det være <code>X</code> sin tur dersom det allerede er flere <code>O</code> enn <code>X</code> i listen.</p></li>
+<li><p>Vi utvider også <code>click</code>-prosedyren slik at den kan tegne både sirkler og kryss. Koden ser nå slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> tkinter <span class="ch">import</span> *
+
+main = Tk()
+
+c = Canvas(main, width=<span class="dv">600</span>, height=<span class="dv">600</span>)
+c.pack()
+
+c.create_line(<span class="dv">200</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>)
+c.create_line(<span class="dv">400</span>, <span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>)
+
+c.create_line(<span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">200</span>)
+c.create_line(<span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>, <span class="dv">400</span>)
+
+grid = [
+    <span class="st">&quot;0&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>,
+    <span class="co">&quot;3&quot;</span>, <span class="st">&quot;4&quot;</span>, <span class="st">&quot;5&quot;</span>,
+    <span class="co">&quot;6&quot;</span>, <span class="st">&quot;7&quot;</span>, <span class="st">&quot;8&quot;</span>,
+]
+
+<span class="kw">def</span> click(event):
+    shape = choose_shape()
+    across = <span class="dt">int</span>(c.canvasx(event.x) / <span class="dv">200</span>)
+    down = <span class="dt">int</span>(c.canvasy(event.y) / <span class="dv">200</span>)
+    square = across + (down * <span class="dv">3</span>)
+
+    <span class="kw">if</span> grid[square] == <span class="st">&quot;X&quot;</span> or grid[square] == <span class="st">&quot;O&quot;</span>:
+      <span class="kw">return</span>
+
+    <span class="kw">if</span> shape == <span class="st">&quot;O&quot;</span>:
+        c.create_oval(
+            across * <span class="dv">200</span>, down * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>
+        )
+        grid[square] = <span class="st">&quot;O&quot;</span>
+    <span class="kw">else</span>:
+        c.create_line(
+            across * <span class="dv">200</span>, down * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>
+        )
+        c.create_line(
+            across * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, down * <span class="dv">200</span>
+        )
+        grid[square] = <span class="st">&quot;X&quot;</span>
+
+<span class="kw">def</span> choose_shape():
+    <span class="kw">if</span> grid.count(<span class="st">&quot;O&quot;</span>) &gt; grid.count(<span class="st">&quot;X&quot;</span>):
+        <span class="kw">return</span> <span class="st">&quot;X&quot;</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="st">&quot;O&quot;</span>
+
+c.bind(<span class="st">&quot;&lt;Button-1&gt;&quot;</span>, click)
+
+mainloop()</code></pre></li>
+<li><p>Kjør programmet ditt. Prøv å trykk på en rute. Det skal tegnes en O. Klikk på en annen rute. Nå tegnes en X.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-å-finne-en-vinner" class="level1 activity">
+<h1>Steg 5: Å finne en vinner</h1>
+<p>Nå er vi nesten ferdige med spillet, vi mangler bare å sjekke om noen får tre på rad!</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>I den samme filen vil vi nå skrive en ny prosedyre <code>winner</code>. Vi kaller denne etter hvert klikk for å sjekke om en av spillerene har vunnet.</p>
+<p>Den ferdige koden ser ut som følger:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> tkinter <span class="ch">import</span> *
+
+main = Tk()
+
+c = Canvas(main, width=<span class="dv">600</span>, height=<span class="dv">600</span>)
+c.pack()
+
+c.create_line(<span class="dv">200</span>, <span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>)
+c.create_line(<span class="dv">400</span>, <span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>)
+
+c.create_line(<span class="dv">0</span>, <span class="dv">200</span>, <span class="dv">600</span>, <span class="dv">200</span>)
+c.create_line(<span class="dv">0</span>, <span class="dv">400</span>, <span class="dv">600</span>, <span class="dv">400</span>)
+
+grid = [
+    <span class="st">&quot;0&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="st">&quot;2&quot;</span>,
+    <span class="co">&quot;3&quot;</span>, <span class="st">&quot;4&quot;</span>, <span class="st">&quot;5&quot;</span>,
+    <span class="co">&quot;6&quot;</span>, <span class="st">&quot;7&quot;</span>, <span class="st">&quot;8&quot;</span>,
+]
+
+<span class="kw">def</span> click(event):
+    shape = choose_shape()
+    across = <span class="dt">int</span>(c.canvasx(event.x) / <span class="dv">200</span>)
+    down = <span class="dt">int</span>(c.canvasy(event.y) / <span class="dv">200</span>)
+    square = across + (down * <span class="dv">3</span>)
+
+    <span class="kw">if</span> grid[square] == <span class="st">&quot;X&quot;</span> or grid[square] == <span class="st">&quot;O&quot;</span>:
+        <span class="kw">return</span>
+
+    <span class="kw">if</span> winner():
+        <span class="kw">return</span>
+
+    <span class="kw">if</span> shape == <span class="st">&quot;O&quot;</span>:
+        c.create_oval(
+            across * <span class="dv">200</span>, down * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>
+        )
+        grid[square] = <span class="st">&quot;O&quot;</span>
+    <span class="kw">else</span>:
+        c.create_line(
+            across * <span class="dv">200</span>, down * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>
+        )
+        c.create_line(
+            across * <span class="dv">200</span>, (down<span class="dv">+1</span>) * <span class="dv">200</span>,
+            (across<span class="dv">+1</span>) * <span class="dv">200</span>, down * <span class="dv">200</span>
+        )
+        grid[square] = <span class="st">&quot;X&quot;</span>
+
+<span class="kw">def</span> choose_shape():
+    <span class="kw">if</span> grid.count(<span class="st">&quot;O&quot;</span>) &gt; grid.count(<span class="st">&quot;X&quot;</span>):
+        <span class="kw">return</span> <span class="st">&quot;X&quot;</span>
+    <span class="kw">else</span>:
+        <span class="kw">return</span> <span class="st">&quot;O&quot;</span>
+
+<span class="kw">def</span> winner():
+    <span class="kw">for</span> across in <span class="dt">range</span>(<span class="dv">3</span>):
+        row = across * <span class="dv">3</span>
+        line = grid[row] + grid[row<span class="dv">+1</span>] + grid[row<span class="dv">+2</span>]
+        <span class="kw">if</span> line == <span class="st">&quot;XXX&quot;</span> or line == <span class="st">&quot;OOO&quot;</span>:
+            <span class="kw">return</span> <span class="ot">True</span>
+
+    <span class="kw">for</span> down in <span class="dt">range</span>(<span class="dv">3</span>):
+        line = grid[down] + grid[down<span class="dv">+3</span>] + grid[down<span class="dv">+6</span>]
+        <span class="kw">if</span> line == <span class="st">&quot;XXX&quot;</span> or line == <span class="st">&quot;OOO&quot;</span>:
+            <span class="kw">return</span> <span class="ot">True</span>
+
+    line = grid[<span class="dv">0</span>] + grid[<span class="dv">4</span>] + grid[<span class="dv">8</span>]
+    <span class="kw">if</span> line == <span class="st">&quot;XXX&quot;</span> or line == <span class="st">&quot;OOO&quot;</span>:
+            <span class="kw">return</span> <span class="ot">True</span>
+
+    line = grid[<span class="dv">2</span>] + grid[<span class="dv">4</span>] + grid[<span class="dv">6</span>]
+    <span class="kw">if</span> line == <span class="st">&quot;XXX&quot;</span> or line == <span class="st">&quot;OOO&quot;</span>:
+            <span class="kw">return</span> <span class="ot">True</span>
+
+c.bind(<span class="st">&quot;&lt;Button-1&gt;&quot;</span>, click)
+
+mainloop()</code></pre></li>
+<li><p>Prøv å spill spillet slik at du får tre på rad. Kan du klikke i noen flere ruter?</p>
+<p>Prosedyren <code>winner</code> undersøker de fire forskjellige måtene man kan få tre på rad på:</p>
+<ol type="1">
+<li><p>Sjekk hver rad om det er tre X’er eller O’er,</p></li>
+<li><p>Sjekk hver kolonne om det er tre X’er eller O’er,</p></li>
+<li><p>Sjekk diagonalen fra øvre venstre til nedre høyre hjørne,</p></li>
+<li><p>Sjekk diagonalen fra øvre høyre til nedre venstre hjørne.</p></li>
+</ol></li>
+</ul>
+</section>
+</section>
+<section id="steg-6" class="level1 activity">
+<h1>Steg 6:</h1>
+<p>Du er ferdig med en enkel versjon av tre på rad! Prøv å endre koden, for eksempel slik at den tegner andre symboler.</p>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

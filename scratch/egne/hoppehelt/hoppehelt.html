@@ -1,0 +1,182 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hoppehelt | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hoppehelt</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Hoppehelt er litt inspirert av musikkspillet Guitar Hero. I Hoppehelt skal man kontrollere flere helter samtidig mens de hopper over fargede bokser som lager lyd. Gjennom spillet Hoppehelt vil vi se litt nærmere på hvordan kloner brukes når man programmerer i Scratch. Vi vil til og med se eksempler på kloner av kloner!</p>
+<figure>
+<img src="hoppehelt.png" />
+</figure>
+</section>
+<section id="steg-1-streken" class="level1 activity">
+<h1>Steg 1: Streken</h1>
+<p><em>Vi begynner spillet vårt ved å lage en veldig enkel bakgrunn.</em></p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt prosjekt, og slett kattefiguren.</p></li>
+<li><p>Tegn en ny bakgrunn som består av en ensfarget rett strek ganske langt ned på skjermen. Bruk vektorgrafikk. Dette er bakken som vår helt skal løpe på.</p></li>
+<li><p>For å enklere legge på en tittel senere lager vi en <code>Nytt spill</code>-melding på scenen:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    send melding [Nytt spill v]</code></pre></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-en-hoppende-helt" class="level1 activity">
+<h1>Steg 2: En hoppende helt</h1>
+<p><em>Nå skal vi introdusere hoppehelten.</em></p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Tegn en enkel liten strekfigur som ser ut som om han løper mot venstre. Gi figuren navnet <code>Helt 1</code>.</p>
+<p>Du kan senere lage flere drakter slik at spillet ser bedre ut, men vi vil ikke bruke tid på det nå.</p></li>
+<li><p>Lag en ny variabel som du kaller <code class="blockdata">sprett</code>. Det er viktig at denne gjelder kun for denne figuren.</p>
+<p>Vi vil bruke <code class="blockdata">sprett</code>-variabelen til å beskrive heltens bevegelse når han hopper.</p></li>
+<li><p>I heltens hovedløkke lar vi gravitasjonen virke ved at vi stadig prøver å gjøre <code class="blockdata">sprett</code> mindre, samtidig som vi sier at dersom helten berører bakken skal han ikke falle.</p>
+<pre class="blocks"><code>    når jeg mottar [Nytt spill v]
+    gå til x: (210) y: (-120)
+    for alltid
+        endre [sprett v] med (-1)
+        hvis (berører fargen [#00cc00] ?)
+            neste drakt
+            sett [sprett v] til (0)
+        slutt
+        endre y med (sprett)
+    slutt</code></pre>
+<p>Sett fargen i <code class="blocksensing">berører fargen</code>-klossen til samme farge som streken du tegnet på bakgrunnen i Steg 1.</p></li>
+<li><p>Prøv å endre startposisjonen til helten, spesielt y-koordinaten. Får du helten til å falle mot bakken?</p></li>
+<li><p>Legg til en ny <code class="blockcontrol">hvis</code>-test inne i <code class="blockcontrol">hvis</code>-testen du allerede har. Hvis tasten <code>m</code> trykkes setter du <code class="blockdata">sprett</code> til et positivt tall. Prøv deg fram slik at du finner en verdi som gjør at helten gjør passe store hopp.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Står eller løper helten på bakken? Figuren skal ikke bevege seg sidelengs.</p></li>
+<li><p>Hopper helten når du trykker på <code>m</code>-tasten?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-bokser-med-lyd" class="level1 activity">
+<h1>Steg 3: Bokser med lyd</h1>
+<p><em>Vi skal nå lage noen bokser som helten kan hoppe over.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny figur ved å tegne en liten fargelagt boks som helten kan hoppe over. Kall figuren <code>Boks</code>. Bruk <img src="../../bilder/velg_senterpunkt.png" alt="Velg senterpunkt" /> til å sette senterpunktet nederst til venstre på boksen.</p></li>
+<li><p>Når boksen mottar meldingen <code>Nytt spill</code> vil vi at den plasserer seg på bakken helt til venstre på skjermen. Bruk en <code class="blockmotion">gå til</code>-kloss og lag dette skriptet selv. Pass på at boksen ikke berører kanten av skjermen.</p></li>
+<li><p>Etter at du har funnet en bra plassering på boksen kan du utvide skriptet ved å <code class="blocklooks">skjule</code> figuren, samt lage en løkke hvor boksen lager en klone av seg selv hvert andre sekund.</p></li>
+<li><p>Gå til scenen og lag en variabel du kaller <code class="blockdata">hastighet</code>. Lag et skript på scenen som setter denne variabelen til <code>3</code> når meldingen <code>Nytt spill</code> mottas.</p></li>
+<li><p>Gå tilbake til boksfiguren. Vi vil nå at boksklonene flytter seg mot helten. Lag et nytt skript som begynner når boksen starter som klon. I dette skriptet må du <code class="blocklooks">vise</code> boksen. Deretter kan du starte en løkke som gjentas til boksen berører kanten. Inne i løkken vil du endre x med <code class="blockdata">hastighet</code>. Etter løkken kan du slette denne klonen.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Kommer det en jevn strøm av bokser mot helten?</p></li>
+<li><p>Kan du bruke <code>m</code> til å hoppe over boksene?</p></li>
+<li><p>Hva skjer om helten springer inn i en boks?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi vil la spillet stoppe når helten springer inn i en boks. Gå til <code>Helt 1</code>. Bytt nå ut <code class="blockcontrol">for alltid</code>-løkken med en <code class="blockcontrol">gjenta til</code>-løkke som du lar gjenta til helten berører <code>Boks</code>.</p></li>
+<li><p>Etter den nye <code class="blockcontrol">gjenta til</code>-løkken kan du sende ut en ny melding <code>Spill slutt</code>.</p></li>
+<li><p>Klikk på boks-figuren. Legg til et skript som stopper andre skript i figuren, og deretter sletter denne klonen etter at <code>Spill slutt</code> mottas.</p>
+<p>Prøv spillet ditt igjen. Hva skjer nå om helten springer inn i en boks?</p></li>
+<li><p>Vi kan spille en liten lyd hver gang vi har hoppet over en boks. Legg til en</p>
+<pre class="blocks"><code>    spill tone (60) i (0.5) takter</code></pre>
+<p>kloss etter løkken som flytter boksen, men før klonen slettes. Bruk gjerne <code class="blocksound">velg instrument</code>-klossen til å velge et passende instrument før spillet starter.</p></li>
+<li><p>Om du tester dette vil du se at boksene blir hengende litt mens lyden spilles. En enkel måte å unngå dette på er å legge til en <code class="blocklooks">skjul</code>-kloss rett før <code class="blocksound">spill tone</code>-klossen.</p></li>
+</ul>
+</section>
+<section id="prøv-selv" class="level2 try">
+<h2>Prøv selv</h2>
+<p>Før vi går videre skal vi se på et par måter vi kan gjøre hver enkelt boks litt spesiell og forskjellig fra de andre på. Prøv å eksperimentere med disse og de andre innstillingene i spillet ditt.</p>
+<p>Helt først i skriptet hvor boksen starter som klon, før den vises, kan du prøve noe av det følgende. Du kan endre størrelsen på boksen tilfeldig, for eksempel med klossen</p>
+<pre class="blocks"><code>    sett størrelse til (tilfeldig tall fra (30) til (100)) %</code></pre>
+<p>På samme måte kan du bruke</p>
+<pre class="blocks"><code>    sett [farge v] effekt til (tilfeldig tall fra (-100) til (100))</code></pre>
+<p>til å endre fargen på boksene tilfeldig. Finn også på andre effekter, kanskje ved å bruke flere drakter?</p>
+<p>Vi kan også gjøre lydene som kommer når vi har hoppet over boksene inviduelle. Prøv for eksempel å la lengden av tonen være avhengig av størrelsen på boksen.</p>
+<p>Prøv tilslutt å endre på hvor ofte det dukker opp nye bokser. Bruk gjerne en</p>
+<pre class="blocks"><code>    tilfeldig tall fra (1.2) til (3.2)</code></pre>
+<p>kloss. Eksperimenter med verdiene i klossen.</p>
+</section>
+</section>
+<section id="steg-4-flere-streker-og-bokser" class="level1 activity">
+<h1>Steg 4: Flere streker og bokser</h1>
+<p><em>Nå skal vi gjøre spillet ganske mye vanskeligere ved å lage tre rader med bokser.</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Se på skriptene til <code>Boks</code>. Ser du at du har en <em>generator-løkke</em> som lager nye bokser omtrent hvert annet sekund (du har kanskje lagt på en <code class="blockoperators">tilfeldig</code>-kloss i denne løkken). Videre har du en <em>flytte-løkke</em> som flytter boksene mot høyre, med eventuelle tilfeldige innstillinger på boksene.</p>
+<p>Riv løs begge disse to løkkene og legg dem til side. Vi skal bruke dem igjen straks, så ikke slett noe.</p></li>
+<li><p>Lag en ny variabel som du kaller <code class="blockdata">er generator</code>. Denne må gjelde kun for denne figuren. Vi vil bruke denne variabelen til å identifisere generator-løkken.</p></li>
+<li><p>Vi legger nå nemlig på en ny løkke som lager tre uavhengige generator-løkker. Endre skriptet som kjøres for <code>Nytt spill</code> til dette:</p>
+<pre class="blocks"><code>    når jeg mottar [Nytt spill v]
+    gå til x: (-239) y: (-161)
+    sett [er generator v] til [ja]
+    skjul
+    gjenta (3) ganger
+        lag klon av [meg v]
+        endre y med (110)
+    slutt</code></pre>
+<p>Bruk den samme utgangsposisjonen som tidligere. Dette vil lage tre <em>generator-kloner</em> med forskjellige y-verdier.</p></li>
+<li><p>Vi vil nå bygge opp igjen skriptet som kjører når en boks starter som klon. Lag først det følgende</p>
+<pre class="blocks"><code>    når jeg starter som klon
+    hvis ((er generator) = [ja])
+        sett [er generator v] til [nei]
+    ellers
+    slutt</code></pre></li>
+<li><p>Flytt nå generator-løkken som du la til side tidligere inn i <code class="blockcontrol">hvis</code>-testen rett under <code class="blockdata">sett er generator</code>-klossen.</p></li>
+<li><p>Tilsvarende legger du flytt-løkken fra tidligere inn i <code class="blockcontrol">ellers</code>-testen.</p></li>
+</ul>
+<p>Prøv spillet ditt. Du skal nå ha tre rader med bokser som flyttes over skjermen.</p>
+<ul>
+<li>Klikk på <code>Scene</code> helt til venstre på skjermen. Gå til <code class="blocklightgrey">Bakgrunner</code>. Tegn to nye streker i samme farge som den første. Test spillet og flytt strekene slik at boksene flytter seg naturlig på toppen av dem.</li>
+</ul>
+</section>
+<section id="test-prosjektet-2" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Har du tre rader med bokser som kommer skliende over skjermen?</p></li>
+<li><p>Det er foreløpig bare en hoppehelt på den nederste raden?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-hvor-er-alle-heltene" class="level1 activity">
+<h1>Steg 5: Hvor er alle heltene?</h1>
+<p><em>Vi skal nå lage de siste to hoppeheltene!</em></p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en kopi av <code>Helt 1</code>-figuren. Kopien blir automatisk hetende <code>Helt 2</code>.</p></li>
+<li><p>Klikk på <code>Helt 2</code>. Det eneste vi trenger å endre på er y-posisjonen og tasten som brukes til å hoppe.</p>
+<p>Endre y-posisjonen i <code class="blockmotion">gå til</code>-klossen med 110.</p>
+<p>Endre <code>m</code> til <code>k</code> i <code class="blocksensing">tast trykket</code>-testen.</p></li>
+</ul>
+<p>Prøv spillet ditt igjen. Har du nå to hoppehelter? Virker de som de skal?</p>
+<ul>
+<li>Lag en ny kopi av <code>Helt 1</code>-figuren. Endre denne kopien slik at den har posisjon 110 høyere enn <code>Helt 2</code>, og slik at den hopper når du trykker på <code>o</code>.</li>
+</ul>
+</section>
+<section id="test-prosjektet-3" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Du skal nå ha tre hoppehelter som alle må hoppe over boksene som kommer! Dette har plutselig blitt et ganske vanskelig spill som krever konsentrasjon og koordinasjon!</li>
+</ul>
+</section>
+<section id="prøv-selv-1" class="level2 try">
+<h2>Prøv selv</h2>
+<p>Oppgaven slutter her, men det er jo fortsatt mange spennende ting du kan gjøre med spillet ditt for å gjøre det enda bedre.</p>
+<p>Prøv for eksempel å legge til poeng ved å lage en <code class="blockdata">Poeng</code>-variabel som du øker hver gang en boks har blitt hoppet over. Du kan også øke hastigheten etterhvert som spillet går.</p>
+<p>Prøv å gjøre tonen som spilles avhengig av y-posisjonen til boksen. Dette er litt vanskelig, men blir veldig kult da det høres ut hoppeheltene spiller en liten sang ved å hoppe over boksene.</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

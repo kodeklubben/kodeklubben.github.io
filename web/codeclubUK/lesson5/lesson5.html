@@ -1,0 +1,110 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Endre utseende og stil på tekst | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Endre utseende og stil på tekst</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level2 intro">
+<h2><strong>Introduksjon:</strong></h2>
+<p>I denne oppgaven skal vi se på og lære hvordan vi kan forandre skrifttyper, farge og størrelse. Vi skal også lære hvordan vi kan legge til en bakgrunnsfarge og ramme. Vi vil fortsette å bruke det samme prosjektet som i forrige oppgave. Så vi må være sikre på at vi har åpnet filen index.html fra mappen Felix.</p>
+</section>
+<section id="steg-1-skrifttyper" class="level1 activity">
+<h1>Steg 1: Skrifttyper</h1>
+<p>Vi kan forandre utseende på teksten ved å endre <strong>skrifttypen</strong>. De mest vanlige skrifttypene heter:</p>
+<ul>
+<li>Arial</li>
+<li>Courier New, Courier</li>
+<li>Garamond</li>
+<li>Georgia</li>
+<li>Lucida Sans, Lucida Grande, Lucida</li>
+<li>Palatino Linotype</li>
+<li>Tahoma</li>
+<li>Times New Roman, Times</li>
+<li>Trebuchet</li>
+<li>Verdana</li>
+</ul>
+<p>Ikke alle skrifttyper finnes på alle datamaskiner, så vi trenger å angi en <strong>reserve skrifttype</strong> også. Den som blir oftest bruker er ‘sans serif’ eller ‘serif’.</p>
+<p>La oss prøve å endre skrifttyper på overskriften ved å bruke <code>font-family</code> egenskapene:</p>
+<p>```CSS h1 { color: red; background-color:black; font-size:72px; text-transform:uppercase; text-decoration:underline; text-decoration:blink; font-family:impact, sans-serif; } — Og nå – endre skrifttypen i en paragraf…</p>
+<section id="css" class="level2">
+<h2>```CSS</h2>
+<pre><code>font-family:georgia, &#39;times new roman&#39;, serif;</code></pre>
+</section>
+<section id="section" class="level2">
+<h2>}</h2>
+</section>
+<section id="lagre-og-se-det-i-nettleseren." class="level2 save">
+<h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
+<p>Prøv nå med forskjellige skrifttyper som du liker best. Legg merke til at vi kan skille mellom hver skrifttype ved å bruke komma, og hvis navnet på skrifttypen består av flere ord – må navnet skrives inn i anførselstegn.</p>
+<p>Hvilken av skrifttypene som står listet over synes du er finest? Hvilken skrifttype synes du er enklest å lese?</p>
+<p>Har du en annen skrifttype på din datamaskin som ikke er nevnt over? (Det har du helt sikkert). Prøv å åpne programmet Word eller Pages, alle skrifttypene som er på datamaskinen kan du finne der.</p>
+<figure>
+<img src="fonts.png" alt="screenshot" /><figcaption>screenshot</figcaption>
+</figure>
+<p>Finn en du liker og prøv om du kan legge den ut på websiden! Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge deler ved hjelp av skrifttype-stilegenskaper. La oss forandre epostteksten (husk at den finner vi inne i a-taggen)</p>
+</section>
+<section id="css-1" class="level2">
+<h2>```CSS</h2>
+<pre><code>font-style:bold;</code></pre>
+</section>
+<section id="section-1" class="level2">
+<h2>}</h2>
+</section>
+<section id="lagre-og-se-det-i-nettleseren.-1" class="level2 save">
+<h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
+<p>Eller vi kan sette teksten til <em>kursiv</em>.</p>
+</section>
+<section id="css-2" class="level2">
+<h2>```CSS</h2>
+<pre><code>font-style:italic;</code></pre>
+</section>
+<section id="section-2" class="level2">
+<h2>}</h2>
+</section>
+<section id="lagre-og-se-det-i-nettleseren.-2" class="level2 save">
+<h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
+<p>Det er også en skriftstil-verdi som heter ‘oblique’. Hvordan ser den ut?</p>
+<p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen font-weight-. Den bruker verdier som <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste skrifttypen og 900 er den tykkeste (feteste skriften). Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle skrifttyper alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke normal- eller fet- skrift. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
+<p>```CSS h2 { font-weight:normal; } —</p>
+<p>Prøv det!</p>
+</section>
+</section>
+<section id="step-2-kantlinjer" class="level1 activity">
+<h1>Step 2: Kantlinjer!</h1>
+<p>LLa oss legge til en kantlinje rundt et bilde.</p>
+<p>```CSS img { border-color:green; border-width:5px; border-style:solid; } — ## <strong>Lagre</strong> og <strong>se</strong> det i nettleseren. { .save}</p>
+<p>Prøv nå å forandre farge, bredden, og linje-stil til du er fornøyd. Her er noen linje-stiler: <code>dashed</code>, <code>dotted</code>, <code>double</code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>.</p>
+<p>Du kan sette på kantlinjer på alle slags elementer, vi prøver litt mer.</p>
+</section>
+<section id="step-3-ider-og-klasser" class="level1 activity">
+<h1>Step 3: IDer og klasser</h1>
+<p>Vi ønsker å lage et kontaktavsnitt som er <strong>uthevet</strong>. Vi kan ikke bruke <code>&lt;p&gt;</code> tag fordi det vil endre alle andre paragrafer også. For å gjøre dette må vi legge til en stil for disse egenskapene. For å lage denne stilen må vi lage noe som kalles en ID. Vi trenger da følgende HTML:</p>
+```html
+<p  id ="uthevet">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Har du sett Felix? Vennligst kontakt eieren hans på <a href="mailto:eierentilfelix@email.com">eierentilfelix@email.com</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nå kan vi endre stilen til IDen slik:</td>
+</tr>
+</tbody>
+</table>
+<p>```CSS #uthevet { color:red; } — ## <strong>Lagre</strong> og <strong>se</strong> det i nettleseren. { .save} En ID er unik og kan bare bli brukt en gang per side. Så hva gjør vi hvis du ønsker å lage to paragrafer med større skrift? Dette kan vi løse ved å bruke klasser. Det første vi må gjøre er å gi teksten klassenavnet for den teksten vi ønsker å gjøre større.</p>
+```HTML
+<p class="stor">
+Han forvant fra hagen i går.
+</p>
+<p class="stor">
+<strong>Takk!</strong>
+<p>
+<hr />
+<p>Deretter setter vi stilen slik (legg merke til at vi bruker <code>.</code> i stedet for <code>#</code>):</p>
+<p>```CSS .stor { font-size:24px; } —</p>
+<section id="ting-du-kan-prøve" class="level2 try">
+<h2>Ting du kan prøve:</h2>
+<ul>
+<li><p>Hvordan vil du endre siden for å få den til å se bedre ut? Hvorfor ikke prøve å bruke din favorittskrifttype, farge, osv?</p></li>
+<li><p>Hvis du er tidlig ferdig. Gå tilbake og legg på en stil i HTML dokumentet fra forrige leksjon</p></li>
+<li><p>Forresten, visste du at egenskapene for bakgrunn, ikke bare lar deg endre farger, men også legge til et bilde?</p></li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

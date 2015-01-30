@@ -1,0 +1,64 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lydmaskin - Piano | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Lydmaskin - Piano</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Tegn et piano ved å lage svarte og hvite rektangler.</p>
+<figure>
+<img src="piano-costume-1.png" alt="costume1" /><figcaption>costume1</figcaption>
+</figure></li>
+<li><p>Lag et skript som spiller en note når <code>A</code> trykkes.</p>
+<pre class="blocks"><code>    når [a v] trykkes
+    send melding [piano-1 v]
+
+    når jeg mottar [piano-1 v]
+    spill tone (60 v) i (0.5) takter</code></pre></li>
+<li><p>Lag to noter til for når man trykker <code>S</code> eller <code>D</code> på tastaturet.</p>
+<pre class="blocks"><code>    når [a v] trykkes
+    send melding [piano-1 v]
+
+    når [s v] trykkes
+    send melding [piano-2 v]
+
+    når [d v] trykkes
+    send melding [piano-3 v]
+
+    når jeg mottar [piano-1 v]
+    spill tone (60 v) i (0.5) takter
+
+    når jeg mottar [piano-2 v]
+    spill tone (64 v) i (0.5) takter
+
+    når jeg mottar [piano-3 v]
+    spill tone (67 v) i (0.5) takter</code></pre></li>
+<li><p>Kopier drakten 3 ganger og fyll ulike tangenter.</p>
+<figure>
+<img src="piano-costume-3.png" />
+</figure></li>
+<li><p>Sørg for at hver note bytter til en annen drakt og tilbake til <code>drakt1</code> slik at det ser ut som tangenten blir trykket på.</p>
+<pre class="blocks"><code>    når jeg mottar [piano-1 v]
+    bytt drakt til [costume2 v]
+    spill tone (60 v) i (0.5) takter
+    bytt drakt til [costume1 v]
+
+    når jeg mottar [piano-2 v]
+    bytt drakt til [costume3 v]
+    spill tone (60 v) i (0.5) takter
+    bytt drakt til [costume1 v]
+
+    når jeg mottar [piano-3 v]
+    bytt drakt til [costume4 v]
+    spill tone (60 v) i (0.5) takter
+    bytt drakt til [costume1 v]</code></pre></li>
+</ul>
+</section>
+<section id="utfordring" class="level2 challenge">
+<h2>Utfordring</h2>
+<p>En måte å endre hvilket instrument som spilles.</p>
+<pre class="blocks"><code>    når [pil opp v] trykkes
+    velg instrument (tilfeldig tall fra (1) til (99))</code></pre>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

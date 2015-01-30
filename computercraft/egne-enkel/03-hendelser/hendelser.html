@@ -1,0 +1,339 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hendelser | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hendelser</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>I denne leksjonen skal vi se nærmere på hvordan datamaskinene bruker såkalte hendelser for å reagere på ting som tastetrykk, museklikk og så videre. Etterhvert vil vi bli enda bedre kjent med datamaskinene, og lære hvordan vi flytter filer og programmer rundt omkring på en datamaskin eller mellom forskjellige datamaskiner.</p>
+<figure>
+<img src="hendelser.png" />
+</figure>
+</section>
+<section id="steg-1-skattejakt" class="level1 activity">
+<h1>Steg 1: Skattejakt</h1>
+<p>Datamaskiner bruker noe som kalles hendelser for å registrere tastetrykk, museklikk og så videre. Vi vil først se på hvordan vi kan lage et enkelt spill hvor vi styrer en figur med piltastene.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt program ved å skrive <code>edit skattejakt</code>, skriv inn det følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> x <span class="ot">=</span> <span class="dv">20</span>
+<span class="kw">local</span> y <span class="ot">=</span> <span class="dv">10</span>
+
+term<span class="ot">.</span>clear<span class="ot">()</span>
+term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>
+<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;O&#39;</span><span class="ot">)</span></code></pre>
+<p>Lagre og kjør programmet. Skjønner du hva det gjør? Prøv å forandre verdiene av <code>x</code> og <code>y</code> og kjør igjen.</p></li>
+<li><p>Så langt skriver programmet bare ut en <code>O</code> på en gitt posisjon. Nå vil vi bruke hendelser for å kunne flytte denne figuren rundt på skjermen.</p>
+<p>For å vente på hendelser bruker vi <code>os.pullEvent()</code>. Vi vil spesielt vente på taste-hendelser. Disse hendelsene kalles <code>key</code> i ComputerCraft. Forandre programmet ditt som under:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> x <span class="ot">=</span> <span class="dv">20</span>
+<span class="kw">local</span> y <span class="ot">=</span> <span class="dv">10</span>
+
+term<span class="ot">.</span>clear<span class="ot">()</span>
+term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>
+<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;O&#39;</span><span class="ot">)</span>
+
+<span class="kw">local</span> hendelse<span class="ot">,</span> tast <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;key&#39;</span><span class="ot">)</span>    <span class="co">-- ny linje</span>
+<span class="fu">print</span><span class="ot">(</span>hendelse<span class="ot">)</span>                               <span class="co">-- ny linje</span>
+<span class="fu">print</span><span class="ot">(</span>tast<span class="ot">)</span>                                   <span class="co">-- ny linje</span></code></pre>
+<p>Når du kjører programmet ditt nå blir programmet stående og vente til du trykker en tast. Deretter skrives teksten <strong>key</strong> samt et tall til skjermen. Teksten <strong>key</strong> betyr bare at det var en taste-hendelse som skjedde. Dette er ikke så veldig interessant for oss nå, men kan være nyttig i andre programmet om man lytter på flere forskjellige hendelser.</p>
+<p>Tallet vi fikk er derimot veldig viktig. Hver tast på tastaturet har sin egen tastekode. Prøv å kjøre programmet flere ganger, ser du at om du trykker samme tast får du samme tall tilbake. For eksempel er <code>A</code> alltid 30, mens <code>pil opp</code> alltid er 200.</p></li>
+<li><p>Vi trenger heldigvis ikke huske disse kodene. Biblioteket <code>keys</code> kjenner alle disse, og gjør at vi kan skrive for eksempel <code>keys.q</code> for å representere <code>Q</code>-tasten. Endre programmet ditt igjen:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> x <span class="ot">=</span> <span class="dv">20</span>
+<span class="kw">local</span> y <span class="ot">=</span> <span class="dv">10</span>
+
+term<span class="ot">.</span>clear<span class="ot">()</span>
+term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>
+<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;O&#39;</span><span class="ot">)</span>
+
+<span class="kw">local</span> hendelse<span class="ot">,</span> tast <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;key&#39;</span><span class="ot">)</span>
+<span class="kw">if</span> tast <span class="ot">==</span> keys<span class="ot">.</span>q <span class="kw">then</span>                        <span class="co">-- ny linje</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Du trykket Q&#39;</span><span class="ot">)</span>                     <span class="co">-- ny linje</span>
+<span class="kw">else</span>                                          <span class="co">-- ny linje</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Du trykket ikke Q&#39;</span><span class="ot">)</span>                <span class="co">-- ny linje</span>
+<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre></li>
+<li><p>Vi kan nå lage en løkke hvor vi alltid sjekker hvilken tast som er trykket. Dersom tasten <code>Q</code> trykkes avslutter vi løkken med <code>break</code>.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> x <span class="ot">=</span> <span class="dv">20</span>
+<span class="kw">local</span> y <span class="ot">=</span> <span class="dv">10</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>                                 <span class="co">-- ny linje</span>
+    term<span class="ot">.</span>clear<span class="ot">()</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;O&#39;</span><span class="ot">)</span>
+
+    <span class="kw">local</span> hendelse<span class="ot">,</span> tast <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;key&#39;</span><span class="ot">)</span>
+    <span class="kw">if</span> tast <span class="ot">==</span> keys<span class="ot">.</span>q <span class="kw">then</span>
+        <span class="kw">break</span>                                 <span class="co">-- endret linje</span>
+    <span class="kw">end</span>
+<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre>
+<p>Når du kjører dette programmet vil det tilsynelatende ikke skje noe før du trykker <code>Q</code>, siden det er den eneste hendelsen vi har kode som reagerer på.</p></li>
+<li><p>Vi er nå klare til å sjekke om piltastene trykkes, og flytte figuren rundt på skjermen. For å gjøre dette trenger vi bare å endre verdiene av <code>x</code> og <code>y</code> avhengig av hvilken piltast som trykkes.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> x <span class="ot">=</span> <span class="dv">20</span>
+<span class="kw">local</span> y <span class="ot">=</span> <span class="dv">10</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+    term<span class="ot">.</span>clear<span class="ot">()</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;O&#39;</span><span class="ot">)</span>
+
+    <span class="kw">local</span> hendelse<span class="ot">,</span> tast <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;key&#39;</span><span class="ot">)</span>
+    <span class="kw">if</span> tast <span class="ot">==</span> keys<span class="ot">.</span>q <span class="kw">then</span>
+        <span class="kw">break</span>
+    <span class="kw">end</span>
+
+    <span class="kw">if</span> tast <span class="ot">==</span> keys<span class="ot">.</span>right <span class="kw">then</span>                <span class="co">-- ny linje</span>
+        x <span class="ot">=</span> x <span class="ot">+</span> <span class="dv">1</span>                             <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+<span class="kw">end</span></code></pre>
+<p>Når du kjører dette programmet vil du se at du kan bruke <code>pil høyre</code> til å bevege figuren mot høyre.</p></li>
+</ul>
+<section id="prøv-selv" class="level3 try">
+<h3>Prøv selv</h3>
+<p>De andre piltastene kan du programmere selv på samme måte. Du trenger da å sammenligne med kodene <code>keys.left</code>, <code>keys.down</code> og <code>keys.up</code>. Hvordan må du endre verdiene av <code>x</code> og <code>y</code>? Prøv deg frem!</p>
+</section>
+</section>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Til slutt vil vi legge til en skatt som figuren vår skal lete etter. Vi bruker tilfeldige tall for å bestemme hvor skatten skal ligge. Endre begynnelsen av programmet ditt som følger:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> x <span class="ot">=</span> <span class="dv">20</span>
+<span class="kw">local</span> y <span class="ot">=</span> <span class="dv">10</span>
+<span class="kw">local</span> skattX <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">50</span><span class="ot">)</span>             <span class="co">-- ny linje</span>
+<span class="kw">local</span> skattY <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">18</span><span class="ot">)</span>             <span class="co">-- ny linje</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+    term<span class="ot">.</span>clear<span class="ot">()</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span>skattX<span class="ot">,</span> skattY<span class="ot">)</span>         <span class="co">-- ny linje</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;X&#39;</span><span class="ot">)</span>                                <span class="co">-- ny linje</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;O&#39;</span><span class="ot">)</span>
+
+    <span class="kw">if</span> x <span class="ot">==</span> skattX <span class="kw">and</span> y <span class="ot">==</span> skattY <span class="kw">then</span>       <span class="co">-- ny linje</span>
+        term<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>               <span class="co">-- ny linje</span>
+        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Du fant skatten!&#39;</span><span class="ot">)</span>             <span class="co">-- ny linje</span>
+        <span class="kw">break</span>                                 <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+
+    <span class="kw">local</span> hendelse<span class="ot">,</span> tast <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;key&#39;</span><span class="ot">)</span>
+    <span class="co">-- resten av programmet er som tidligere</span></code></pre>
+<p>Prøv spillet! Fungerer det som du hadde trodd? Klarer du å kanskje legge til flere skatter?</p></li>
+</ul>
+<section id="prøv-selv-1" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Ved hjelp av <code>local maxX, maxY = term.getSize()</code> kan du finne størrelsen på skjermen. Kan du bruke dette til å begrense figuren din slik at den ikke kan gå av skjermen?</p>
+<p>En litt utfordrende oppgave: Prøv å skriv et tilsvarende program til en robot, men i stedet for at piltastene bare flytter en figur på skjermen skal piltastene flytte roboten!</p>
+</section>
+</section>
+</section>
+<section id="steg-2-hvordan-bevege-seg-rundt-i-filsystemet" class="level1 activity">
+<h1>Steg 2: Hvordan bevege seg rundt i filsystemet</h1>
+<p>Datamaskiner organiserer informasjon i filer, og disse filene legges i et filsystem. Dette filsystemet har du kanskje sett på en vanlig datamaskin i programmene Windows Utforsker eller Finder på Mac. I ComputerCraft bruker vi kommandolinjen for å se på filene. Vi skal her se på noen enkle kommandoer for å kopiere og flytte filer.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny <strong>Computer</strong>, sett den ut og start den ved å høyre-klikke på den.</p></li>
+<li><p>Kommandoen <code>dir</code> brukes for å se på innholdet i en katalog (dir er en forkortelse for <em>directory</em> som betyr <em>katalog</em>). Prøv den nå! Skriv <code>dir</code> og trykk enter.</p>
+<p>Datamaskinen svarer <strong>rom</strong> og <strong>skattejakt</strong>. Den første er en katalog som inneholder alle de innebygde programmene på datamaskinen (rom er en forkortelse for <em>Read Only Memory</em> som betyr <em>kun-lese-minne</em> eller <em>skrivebeskyttet minne</em>). Vi skal se mer på denne katalogen senere.</p></li>
+<li><p>Når du bruker <code>dir</code> er det vanskelig å se forskjell på filer og kataloger. Til dette kan du bruke <code>type</code>. Prøv for eksempel å skriv <code>type skattejakt</code>. Datamaskinen vil da fortelle deg at <strong>skattejakt</strong> er en fil. Tilsvarende vil <code>type rom</code> fortelle deg at <strong>rom</strong> er en katalog.</p></li>
+<li><p>Du kan lage egne kataloger om du vil, for å organisere filene dine bedre. Skriv <code>mkdir mine_programmer</code>. Kommandoen <code>mkdir</code> lager nye kataloger (mkdir er en forkortelse for <em>make directory</em> som betyr <em>lag katalog</em>). Du kan bekrefte at katalogen <strong>mine_programmer</strong> ble laget ved å skrive <code>dir</code> og <code>type mine_programmer</code>.</p></li>
+<li><p>Kommandoen <code>move</code> flytter filer. Skriv <code>move skattejakt   mine_programmer</code>. Dette flytter filen <strong>skattejakt</strong> inn i katalogen <strong>mine_programmer</strong>. Hvis du nå skriver <code>dir</code> vil du se at <strong>skattejakt</strong> har blitt borte. For å sjekke at den ble flyttet riktig kan du skrive <code>dir mine_programmer</code>. Dette viser alle filene og katalogene som finnes inne i katalogen <strong>mine_programmer</strong>.</p></li>
+<li><p>Vi kan også flytte oss rundt i filsystemet. Dette vil si at vi endrer hvilken katalog som er utgangspunktet vårt (for eksempel når vi skriver <code>dir</code>). Til dette bruker vi <code>cd</code> (cd er en forkortelse for <em>change directory</em> som betyr <em>endre katalog</em>). Skriv <code>cd mine_programmer</code>. Du vil se at det som står foran <code>&gt;</code> endrer seg for å vise deg hvilken katalog du er i. Prøv også å skriv <code>dir</code> for å bekrefte at du er i samme katalogen som <strong>skattejakt</strong>.</p>
+<p>For å gå tilbake en katalog bruker du det spesielle navnet <strong>..</strong>. Skriv <code>cd ..</code>. Du vil nå komme tilbake til utgangspunktet.</p></li>
+</ul>
+<section id="prøv-selv-2" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Du har nå sett ganske mange kommandoer: <code>dir</code>, <code>edit</code>, <code>type</code>, <code>mkdir</code>, <code>move</code> og <code>cd</code>. I tillegg finnes også <code>delete</code> som kan brukes til å slette filer og kataloger, og <code>copy</code> som brukes på samme måte som <code>move</code>, men som kopierer filer i stedet for å flytte dem.</p>
+<p>Prøv å bruke disse kommandoene til å flytte deg litt rundt i filsystemet, lag nye filer og kataloger, flytt dem rundt og så videre inntil du er ganske komfortabel med hvordan filsystemet fungerer.</p>
+</section>
+</section>
+</section>
+<section id="steg-3-et-bedre-passord-program" class="level1 activity">
+<h1>Steg 3: Et bedre passord-program</h1>
+<p>Vi har tidligere laget et passord-program. Dette passord-programmet har et par svakheter.</p>
+<ol type="1">
+<li><p>Programmet må startes manuelt ved å skrive <code>passord</code> etter at datamaskinen er skrudd på.</p></li>
+<li><p>I stedet for å skrive passordet kan man bare trykke <code>Ctrl-T</code> for å stoppe programmet, og se inni programmet for å finne det hemmelige passordet.</p></li>
+</ol>
+<p>Vi skal her se på et par triks for å gjøre passord-programmet litt tryggere.</p>
+<figure>
+<img src="passord.png" />
+</figure>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Om du ikke allerede har gjort det: Sett opp en datamaskin ved siden av en dør og legg inn passord-programmet datamaskinen, det vil si skriv <code>edit passord</code> og skriv inn følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+    term<span class="ot">.</span>clear<span class="ot">()</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
+    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">(</span><span class="st">&#39;*&#39;</span><span class="ot">)</span>
+
+    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
+        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>
+        sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
+        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+<p>Kjør programmet, og sjekk at det virker som det skal.</p></li>
+<li><p>Når en datamaskin starter sjekker den først om det finnes et program som heter <code>startup</code> (<em>startup</em> betyr <em>oppstart</em>). Om den finner dette programmet kjøres dette før noe annet skjer. Det betyr at om vi kaller passord-programmet vårt for <strong>startup</strong> så vil det kjøre automatisk.</p>
+<p>Skriv <code>move passord startup</code>. Dette endre navnet på passord-programmet vårt. Vi kan nå starte datamaskinen på nytt ved å skrive <code>reboot</code>. Datamaskinen vil nå direkte spørre deg om passordet.</p></li>
+<li><p>Trykk <code>Ctrl-T</code> for å stanse passord-programmet. At vi kan bruke <code>Ctrl-T</code> til å avslutte programmer er noe <code>os.pullEvent</code> gjør for oss automatisk uten at vi trenger å gjøre noe. Dersom vi ikke vil at dette skal være mulig kan vi bytte ut <code>os.pullEvent</code> med noe som heter <code>os.pullEventRaw</code>. Disse fungerer omtrent på samme måte, men den siste bryr seg ikke om <code>Ctrl-T</code>.</p>
+<p>Skriv <code>edit startup</code> og legg til en linje øverst i koden din:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">os<span class="ot">.</span>pullEvent <span class="ot">=</span> os<span class="ot">.</span>pullEventRaw                <span class="co">-- ny linje</span>
+<span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+    term<span class="ot">.</span>clear<span class="ot">()</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
+    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">(</span><span class="st">&#39;*&#39;</span><span class="ot">)</span>
+
+    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
+        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>
+        sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
+        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre></li>
+<li><p>Du kan nå starte datamaskinen på nytt igjen med <code>reboot</code>. Nå har du en datamaskin som bare spør om passord hele tiden!</p>
+<p>Vær litt forsiktig med dette siden det ikke er noen enkel måte å få datamaskinen til å gjøre noe annet enn å spørre om passord! Men det du lærer i de to neste stegene kan være nyttig.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-bruk-av-diskettstasjoner" class="level1 activity">
+<h1>Steg 4: Bruk av diskettstasjoner</h1>
+<p>Vi skal nå se hvordan vi kan bruke disketter og diskettstasjoner til å flytte filer mellom forskjellige datamaskiner.</p>
+<figure>
+<img src="diskettstasjon.png" />
+</figure>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en <strong>Disk Drive</strong> (diskettstasjon) og plasser den inntil datamaskinen din. Hent også en <strong>Floppy Disk</strong> (diskett) fra inventory’et ditt (du kan velge hvilken farge som helst).</p></li>
+<li><p>Åpne diskettstasjonen ved å høyre-klikke på den. Sett inn disketten ved å flytte den opp til den ledige slot’en øverst.</p></li>
+<li><p>Start datamaskinen din ved å høyre-klikke på den. Skriv <code>dir</code>. Du vil se at det nå finnes en ny katalog som heter <strong>disk</strong>. Dette er disketten vi nettopp satte inn.</p></li>
+<li><p>La oss lage et enkelt program. Skriv <code>edit navn</code> og skriv inn følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva heter du?&#39;</span><span class="ot">)</span>
+navn <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hei, &#39;</span> <span class="ot">..</span> navn<span class="ot">)</span></code></pre>
+<p>Test at programmet virker ved å skrive <code>navn</code>.</p></li>
+<li><p>Vi kan nå kopiere dette programmet over til disketten ved å skrive <code>copy navn disk</code>.</p></li>
+<li><p>Vi kan nå ta med oss dette programmet til en annen datamaskin:</p>
+<p>1 Steng datamaskinen.</p>
+<p>2 Åpne diskettstasjonen, og flytt disketten til inventory’et ditt.</p>
+<p>3 Lag en ny datamaskin, også denne med en diskettstasjon inntil seg.</p>
+<p>4 Sett disketten inn i den nye diskettstasjonen.</p>
+<p>5 Åpne den nye datamaskinen. Skriv <code>dir</code> og <code>dir disk</code> slik at du ser at programmet ditt er flyttet til den nye datamaskinen ved hjelp av disketten.</p></li>
+<li><p>Vi kan nå kopiere programmet fra disketten til denne nye datamaskinen slik at vi kan ta med disketten videre og likevel bruke programmet. For å kopiere filen kan du skrive <code>copy disk/navn .</code>. Legg merke til at det skal være et <code>.</code> på slutten. Dette er et spesielt katalognavn som alltid betyr <em>denne katalogen</em>. Skriv tilslutt <code>dir</code> og <code>navn</code> for å bekrefte at programmet har blitt kopiert.</p></li>
+</ul>
+<section id="hva-er-en-diskett" class="level3 protip">
+<h3>Hva er en diskett?</h3>
+<p>Disketter var en vanlig måte å lagre programmer og filer på fra de ble introdusert på 1970-tallet og fram til tidlig 2000-tall. Disketter var også den vanligste måten å overføre filer mellom forskjellige datamaskiner på. I nyere tid har internett, samt USB minnepenner og eksterne harddisker overtatt for diskettenes bruksområder.</p>
+<p>Morsomt nok, lever likevel diskettene videre som det mest vanlige symbolet for å lagre filer i forskjellige programmer.</p>
+</section>
+</section>
+</section>
+<section id="steg-5-skrive-kode-utenfor-computercraft" class="level1 activity">
+<h1>Steg 5: Skrive kode utenfor ComputerCraft</h1>
+<p>Vi kan også se på og endre programmene våre utenfor Minecraft og ComputerCraft. Dette kan være nyttig på flere måter.</p>
+<ol type="1">
+<li><p>Om vi ved et uhell ødelegger en datamaskin kan vi hente tilbake programmene på den datamaskinen, og kopiere de til en annen datamaskin.</p></li>
+<li><p>Vi kan raskere kopiere filer mellom datamaskiner enn om vi bruker disketter som vi lærte i forrige steg.</p></li>
+<li><p>Programmet <code>edit</code> som vi bruker til å skrive programmer er ikke så lett å skrive i. Det er enklere å bruke for eksempel Notepad eller andre tekstprogrammer vi har installert.</p></li>
+</ol>
+<p>Som du kanskje vet blir omtrent alle data i Minecraft lagret i en <em>Minecraft</em>-katalog på datamaskinen din. For å finne denne kan du gjøre følgende (utenfor Minecraft):</p>
+<ul>
+<li><p><strong>Windows</strong>: Under Windows finner du <em>Minecraft</em>-katalogen under <code>%appdata%\.minecraft</code>. Søk etter <code>%appdata%</code> i en utforsker eller i kjør-feltet etter å ha klikket start-knappen.</p></li>
+<li><p><strong>Mac OS X</strong>: Under Mac ligger <em>Minecraft</em>-katalogen i <code>Library/Application Support/minecraft/</code> under hjemmekatalogen din. På norsk heter <code>Library</code> <code>Bibliotek</code>.</p></li>
+<li><p><strong>Linux</strong>: På Linux finner du <em>Minecraft</em>-katalogen som en skjult katalog <code>.minecraft</code> rett under hjemmekatalogen din.</p></li>
+</ul>
+<p>Finn <em>Minecraft</em>-katalogen din i en filutforsker. Gå videre til katalogen <code>saves</code>, deretter velger du navnet på den verden du spiller nå, og til slutt katalogen <code>computer</code>. Denne katalogen inneholder flere kataloger som bare har et tall som navn. Disse katalogene representerer de forskjellige datamaskinene i spillet ditt. Du vil også se en katalog som heter disk, som også har nummererte kataloger inne i seg. Disse representerer diskettene i spillet ditt.</p>
+<figure>
+<img src="tekstprogram.png" />
+</figure>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Gå tilbake til Minecraft-spillet ditt. Åpne en datamaskin hvor du har lagret et program. Skriv <code>id</code> og trykk enter. Dette vil fortelle deg hvilket nummer denne datamaskinen er.</p></li>
+<li><p>I filutforskeren kan du nå finne katalogen som representerer denne datamaskinen (se over). Åpne et av programmene i et tekstprogram som for eksempel Notepad. Gjør en liten endring i programmet ditt.</p></li>
+<li><p>Gå tilbake til Minecraft igjen. Åpne det samme programmet med <code>edit</code>-kommandoen. Ser du endringen du nettopp gjorde?</p></li>
+<li><p>I filutforskeren kan du også kopiere filer mellom forskjellige datamaskiner. Prøv å kopiere programmet du nettopp endret til en annen datamaskin. Finner du igjen dette programmet inne i Minecraft også?</p></li>
+</ul>
+<section id="flytt-en-datamaskin" class="level3 protip">
+<h3>Flytt en datamaskin</h3>
+<p>Om du oppdager at du må flytte en datamaskin må du være litt forsiktig, siden om du bare ødelegger en datamaskin og setter ut en ny er alle programmene borte. Du kan da bruke metoden i denne seksjonen for å kopiere programmene tilbake, men det finnes en bedre måte.</p>
+<p>Med kommandoen <code>label</code> kan vi gi en datamaskin navn. Prøv for eksempel å skriv <code>label set snakker</code>. Dette gir denne datamaskinen navnet <strong>snakker</strong>, du kan gi maskinen akkurat det navnet du vil. Om du nå ødelegger maskinen vil du se at du kan plukke den opp igjen, og at den da legger seg i inventory’et ditt med navnet <strong>snakker</strong>. Om du nå setter ut maskinen igjen vil du se at alle programmene du har skrevet fortsatt finnes på maskinen.</p>
+</section>
+</section>
+</section>
+<section id="steg-6-de-innebygde-programmene" class="level1 activity">
+<h1>Steg 6: De innebygde programmene</h1>
+<p>Vi skal nå kikke raskt på katalogen <strong>rom</strong>. Dette er som nevnt katalogen som inneholder de innebygde programmene på datamaskinen. Ved hjelp av kommandoene vi har lært kan vi nå se hvordan disse programmene er programmert, og til og med lage våre egne versjoner av dem.</p>
+<section id="sjekkliste-6" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Bruk <code>cd</code> kommandoen til å gå først til <strong>rom</strong>, deretter <strong>programs</strong> og til slutt til <strong>fun</strong>-katalogen. Bruk gjerne <code>dir</code> underveis for å se på hvilke andre filer og kataloger som finnes.</p></li>
+<li><p>Denne <strong>fun</strong>-katalogen inneholder flere spill og programmer. La oss se på <strong>hello</strong> som er det enkleste programmet. Dette er en variant av <strong>heisann</strong> som vi skrev tidligere.</p>
+<p>Prøv først å kjøre programmet ved å skrive <code>hello</code>. Teksten <strong>Hello World!</strong> skrives til skjermen, ett tegn om gangen.</p></li>
+<li><p>La oss se på koden til <strong>hello</strong>. Skriv <code>edit hello</code>. Du vil se det følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">if</span> term<span class="ot">.</span>isColour<span class="ot">()</span> <span class="kw">then</span>
+    term<span class="ot">.</span>setTextColour<span class="ot">(</span> <span class="dv">2</span><span class="ot">^</span><span class="fu">math.random</span><span class="ot">(</span><span class="dv">0</span><span class="ot">,</span><span class="dv">15</span><span class="ot">)</span> <span class="ot">)</span>
+<span class="kw">end</span>
+textutils<span class="ot">.</span>slowPrint<span class="ot">(</span> <span class="st">&quot;Hello World!&quot;</span> <span class="ot">)</span>
+term<span class="ot">.</span>setTextColour<span class="ot">(</span> colours<span class="ot">.</span>white <span class="ot">)</span></code></pre>
+<p>Ser du hvilken kodelinje det er som har ansvaret for å skrive teksten til skjermen?</p></li>
+<li><p>Nå vil vi endre teksten <strong>Hello World!</strong> til noe annet. Men om du prøver å bare endre på teksten vil du oppdage at det ikke går an. Videre, om du trykker <code>Ctrl</code> vil du se at valget <code>Save</code> er borte. Dette er fordi vi ser på en fil som ligger i <strong>rom</strong>, det skrivebeskyttede minnet.</p></li>
+<li><p>Hvis vi vil lage vår egen versjon av <strong>hello</strong> må vi først kopiere filen ut av <strong>rom</strong>. Skriv <code>copy hello ../../../</code>. Den litt mystiske rekken av <code>..</code> og <code>/</code> betyr at vi kopierer filen tre nivåer opp. Husk at <code>..</code> betydde at man går en katalog opp.</p></li>
+<li><p>Nå vil vi flytte oss tilbake til utgangspunktet eller roten av filsystemet. Skriv <code>cd ..</code> tre ganger. Om du nå skriver <code>dir</code> skal du se filen <strong>hello</strong> i tillegg til <strong>rom</strong>.</p></li>
+<li><p>Nå kan du skrive <code>edit hello</code> og endre teksten <strong>Hello World!</strong> til noe annet, kanskje den kan si <strong>Hei</strong> og deretter navnet ditt? Lagre og lukk filen, og skriv deretter <code>hello</code> for å se om du fikk det til.</p></li>
+</ul>
+<section id="resten-av-programmet" class="level3 protip">
+<h3>Resten av programmet</h3>
+<p>Vi har så langt bare brydd oss om linje 4 i <strong>hello</strong>-programmet. Skjønner du hva de andre linjene gjør?</p>
+<p>Ut fra kommandoene <code>term.isColour()</code> og <code>term.setTextColour()</code> kan vi kanskje gjette på at de har noe med tekstfargen å gjøre? Faktisk sier de første tre linjene at dersom programmet kjøres på datamaskin som har farger så skal tekstfargen settes til en tilfeldig farge. Den siste linjen setter tekstfargen tilbake til hvit.</p>
+<p>Om du vil se hvordan dette virker kan du prøve å lage en <strong>Advanced Computer</strong>, og kjøre programmet <code>hello</code> på den.</p>
+</section>
+<section id="prøv-selv-3" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Prøv å se på noen av de andre programmene du kjenner til, som for eksempel <code>cd</code>, <code>go</code> eller <code>refuel</code>. Du må kanskje lete litt i katalogstrukturen for å finne dem. Disse programmene er litt mer kompliserte enn de vi har laget så langt. Prøv likevel å se om du skjønner hva deler av koden gjør. Finner du for eksempel kodelinjen som bytter katalog i <code>cd</code> eller linjen som rapporterer fuelnivået i <code>refuel</code>?</p>
+</section>
+</section>
+</section>
+<section id="steg-7-andre-typer-datamaskiner" class="level1 activity">
+<h1>Steg 7: Andre typer datamaskiner</h1>
+<p>Vi har så langt stort sett bare brukt vanlige datamaskiner, <strong>Computer</strong>. Men om du ser i inventory’et ditt ser du at det finnes flere andre typer datamaskiner, inkludert <strong>Advanced Computer</strong> og <strong>Pocket Computer</strong>. Disse virker typisk ganske likt en vanlig datamaskin, men har noen ekstra muligheter.</p>
+<section id="sjekkliste-7" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag og start en <strong>Advanced Computer</strong>. De viktigste ekstra mulighetene på denne typen datamaskin er at den kan vise farger og du kan bruke musen.</p></li>
+<li><p>La oss lage et enkelt tegneprogram. Skriv <code>edit tegne</code>, og skriv</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">term<span class="ot">.</span>clear<span class="ot">()</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+    <span class="kw">local</span> hendelse<span class="ot">,</span> knapp<span class="ot">,</span> x<span class="ot">,</span> y <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;mouse_click&#39;</span><span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Du klikket &#39;</span> <span class="ot">..</span> knapp<span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Posisjon: x = &#39;</span> <span class="ot">..</span> x <span class="ot">..</span> <span class="st">&#39;, y = &#39;</span> <span class="ot">..</span> y<span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>Kjør programmet og prøv å klikk litt rundt omkring på skjermen. Bruk både venstre og høyre museknapp. Skjønner du hvordan museklikk-hendelser fungerer? Bruk <code>Ctrl-T</code> for å avslutte programmet.</p></li>
+<li><p>La oss legge til litt kode som tegner på skjermen når du venstre-klikker. Vi kan også bruke høyre-klikk til å viske vekk det som er tegnet. Endre koden til</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">term<span class="ot">.</span>clear<span class="ot">()</span>
+
+<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
+    <span class="kw">local</span> hendelse<span class="ot">,</span> knapp<span class="ot">,</span> x<span class="ot">,</span> y <span class="ot">=</span> os<span class="ot">.</span>pullEvent<span class="ot">(</span><span class="st">&#39;mouse_click&#39;</span><span class="ot">)</span>
+    term<span class="ot">.</span>setCursorPos<span class="ot">(</span>x<span class="ot">,</span> y<span class="ot">)</span>                   <span class="co">-- ny linje</span>
+
+    <span class="kw">if</span> knapp <span class="ot">==</span> <span class="dv">1</span> <span class="kw">then</span>                        <span class="co">-- ny linje</span>
+        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;#&#39;</span><span class="ot">)</span>                            <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+
+    <span class="kw">if</span> knapp <span class="ot">==</span> <span class="dv">2</span> <span class="kw">then</span>                        <span class="co">-- ny linje</span>
+        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39; &#39;</span><span class="ot">)</span>                            <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+<span class="kw">end</span></code></pre></li>
+</ul>
+<section id="prøv-selv-4" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Kan du legge til farger i tegneprogrammet? Se tilbake på <code>hello</code>-programmet hvordan du kan bruke <code>term.setTextColour()</code> til å endre farge. Kanskje du kan bruke talltastene til å endre farge?</p>
+<p>Når du vil sjekke forskjellige typer hendelser, for eksempel både museklikk og tastetrykk, er det best å bruke <code>os.pullEvent()</code> uten navnet på en hendelse i parantes. Deretter kan du sjekke variabelen <code>hendelse</code> for hvilken hendelse som faktisk skjedde.</p>
+<p>Etterhvert som du tegner merker du at du må klikke hver gang du vil tegne et punkt. Det ville vært bedre om man kunne bare klikket en gang, og deretter dra musen rundt. Se på hendelsen <code>mouse_drag</code> og prøv å forbedre programmet ditt.</p>
+</section>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

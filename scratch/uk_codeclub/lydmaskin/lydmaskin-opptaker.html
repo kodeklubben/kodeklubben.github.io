@@ -1,0 +1,69 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lydmaskin - Opptaker | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Lydmaskin - Opptaker</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag to nye lister (for alle figurer). Kall en av dem <code class="blocklist">instrument</code> og den andre <code class="blocklist">timing</code>.</p></li>
+<li><p>Lag en ny variabel (for alle figurer) som heter <code class="blockdata">opptak</code></p></li>
+<li><p>For hvert av instrumentene (tromme, piano, lyder etc.), må du legge til følgende i <code class="blockevents">når jeg mottar</code> klossen.</p>
+<pre class="blocks"><code>    hvis &lt;(opptak) = (1)&gt;
+        legg (tid) til [timing v]
+        legg (katt) til [instrument v]
+    slutt</code></pre>
+<p>Endre ordet <code>katt</code> i <code class="blocklist">legg katt til instrument</code> slik at det stemmer med navnet til meldingen som brukes for å spille denne lyden.</p>
+<pre class="blocks"><code>    når jeg mottar [drum v]
+    trommeslag (48 v) som varer (0.2) takter
+    hvis &lt;(opptak) = (1)&gt;
+        legg (tid) til [timing v]
+        legg (katt) til [instrument v]
+    slutt
+    sett størrelse til (110) %
+    vent (0.1) sekunder
+    sett størrelse til (100) %</code></pre></li>
+<li><p>Tegn en ny figur og gi den en rød sirkeldrakt. Gi denne figuren navnet <code>Opptak</code>.</p>
+<figure>
+<img src="record-costume.png" />
+</figure></li>
+<li><p>Lag et skript som setter <code class="blockdata">opptak</code> til 1 og sletter alle <code class="blocklist">instrument</code> og <code class="blocklist">timing</code> når man trykker på det.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p>Trykk på opptaksknappen. Hva skjer når du spiller på instrumentene?</p>
+</section>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny figur og lag en drakt som ser ut som en grønn pil. Kall denne <code>Spill av</code>.</p>
+<figure>
+<img src="play-costume.png" />
+</figure></li>
+<li><p>Lag en ny variabel som du kaller <code class="blockdata">index</code>.</p></li>
+<li><p>Nå må vi få avspillingen til å gjøre noe. Legg dette skriptet til <code>Spill av</code>.</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    sett [recording v] til (0)
+    sett [index v] til (1)
+    nullstill klokka
+    for alltid
+        hvis &lt;(element (index) av [timing v]) &lt; (timer)&gt;
+            send melding (element (index) av [instrument v])
+            endre [index v] med (1)
+            hvis &lt;(index) &gt; (lengden av [timing v])&gt;
+                stopp [dette skriptet]
+            slutt
+        slutt
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<ul>
+<li><p>Trykk på den grønne play knappen. Hva skjer?</p></li>
+<li><p>Trykk på den røde knappen og spill på noen intrumenter. Etter at du er ferdig, trykk på den grønne play knappen igjen. Hva skjer?</p></li>
+<li><p>Spill på flere instrumenter uten å trykke på record. Trykk så på den grønne play knappen igjen. Hva skjer?</p></li>
+</ul>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

@@ -1,0 +1,125 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Pong | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Pong</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Pong er et av de aller første dataspillene som ble laget, og det første dataspillet som ble en kommersiell suksess. Selve spillet er en forenklet variant av tennis hvor to spillere slår en ball frem og tilbake. Hvis en av spillerne ikke klarer å returnere ballen får den andre spilleren poeng.</p>
+<figure>
+<img src="pong.png" />
+</figure>
+</section>
+<section id="oversikt-over-prosjektet" class="level1 activity">
+<h1>Oversikt over prosjektet</h1>
+<p><em>Mesteparten av kodingen av Pong skal du gjøre på egen hånd. Men vi vil gi litt tips underveis. Spesielt vil vi se litt på hvordan vi kontrollerer en ballfigur mens den spretter rundt på skjermen. I resten av leksjonen vil du finne følgende:</em></p>
+<section id="plan" class="level2 check">
+<h2>Plan</h2>
+<ul>
+<li><p>Hvordan lage en sprettende ball-figur</p></li>
+<li><p>Litt mer kontroll på hvordan ballen spretter</p></li>
+<li><p>Racketer som spillerne kan styre</p></li>
+<li><p>Poeng, lyder og slikt</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-1-en-sprettende-ball" class="level1 activity">
+<h1>Steg 1: En sprettende ball</h1>
+<p><em>Når man lager nye programmer og spill er det alltid lurt å begynne med en enkel versjon som gjør litt av det det ferdige programmet skal gjøre. Da kan du begynne og teste at programmet virker som det skal nesten med en gang.</em></p>
+<p>I vår enkle versjon skal vi bare få en ball til å sprette over skjermen. Ingen spillere, ingen poeng, ingenting annet enn en sprettende ball!</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt prosjekt. Slett kattefiguren.</p></li>
+<li><p>Lag en ny ball-figur. Du kan enten finne en i biblioteket, eller tegne en selv.</p></li>
+<li><p>Vi vil ha muligheten til senere enkelt å endre hastigheten til ballen. Lag derfor en ny variabel <code class="blockdata">hastighet</code> som gjelder for ball-figuren.</p></li>
+<li><p>Vår enkle kode for en sprettende ball består essensielt av to deler: Den første delen passer på at ballen starter riktig (riktig hastighet, riktig sted, riktig retning), mens den andre delen er løkken som gjør at ballen beveger seg og snur når den treffer kanten av skjermen.</p>
+<pre class="blocks"><code>    når jeg mottar [Ny ball v]
+    sett [hastighet v] til [7]
+    gå til x: (0) y: (0)
+    pek i retning (tilfeldig tall fra (1) til (360))
+    for alltid
+        gå (hastighet) steg
+        sprett tilbake ved kanten
+    slutt</code></pre>
+<p>Les koden nøye mens du legger den til på ball-figuren. Pass på at du skjønner hva hver enkelt kloss gjør, fordi denne koden skal du endre selv etterhvert.</p></li>
+<li><p>Klikk på kodeblokken din for at den skal kjøre, og for at ballen skal begynne å bevege seg. Ser det bra ut?</p></li>
+</ul>
+<section id="en-bedre-måte-å-starte-programmet-på" class="level3 protip">
+<h3>En bedre måte å starte programmet på</h3>
+<p>Vi har laget meldingen <code>Ny ball</code> siden vi tenker at i selve spillet vil vi at ballen begynner fra midten av skjermen etter hver gang en spiller har gjort poeng. I denne enkle versjonen kan vi sende meldingen <code>Ny ball</code> hver gang det grønne flagget klikkes, for å enklere starte spillet.</p>
+<ul>
+<li><p>Legg denne enkle kodesnutten til på scenen:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    send melding [Ny ball v]</code></pre></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="steg-2-litt-mer-kontroll-på-ballen" class="level1 activity">
+<h1>Steg 2: Litt mer kontroll på ballen</h1>
+<p><em>Klossen <code class="blockmotion">sprett tilbake ved kanten</code> er veldig enkel å bruke, men dessverre gir den oss ikke så mye kontroll. For eksempel kan vi ikke bruke den om vi vil at ballen skal sprette andre steder enn ved kanten (for eksempel i en racket). Den er også vanskelig å bruke om vi vil at andre ting skal skje når ballen spretter, kanskje vi vil spille en lyd, endring på hastigheten eller endre litt i retningen.</em></p>
+<p>Vi vil bruke <code class="blocksensing">sansning</code>-klosser for å bedre kontrollere hvordan ballen spretter. Da kan vi oppdage når ballen berører andre figurer (som for eksempel racketene til spillerene), eller når den berører spesielle farger.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Legg til din egen bakgrunn hvor du bruker forskjellige farger der du vil at ballen skal sprette (vi har brukt lyseblått) og der du vil gi poeng (vi har brukt mørkeblått).</p>
+<figure>
+<img src="bakgrunn.png" />
+</figure></li>
+<li><p>Om ballen treffer mål (mørkeblå) vil vi at den stopper, og etterhvert skal vi telle poeng. Dette kan vi gjøre ved å bytte ut</p>
+<pre class="blocks"><code>    for alltid
+    slutt</code></pre>
+<p>med</p>
+<pre class="blocks"><code>    gjenta til (berører fargen [#0000FF])
+    slutt
+    send melding [Poeng v]</code></pre></li>
+<li><p>For at ballen skal sprette når den treffer veggen (lyseblå) vil vi endre retningen på ballen selv. Igjen undersøker vi om ballen berører en spesiell farge ved å bytte ut</p>
+<pre class="blocks"><code>    sprett tilbake ved kanten</code></pre>
+<p>med for eksempel</p>
+<pre class="blocks"><code>    hvis (berører fargen [#9999FF])
+        pek i retning ((180) - (retning))
+        trommeslag (15 v) som varer (0.01) takter
+    slutt</code></pre>
+<p>Skjønner du hva tallet <code>180</code> gjør? Prøv å tenk på hvordan en ball spretter i en vegg, og hvordan retningen på ballen endrer seg.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-racketer-til-spillerene" class="level1 activity">
+<h1>Steg 3: Racketer til spillerene</h1>
+<p><em>Nå som ballen spretter fint kan vi lage racketene som spillerene skal styre. Disse vil være veldig like hverandre, slik at vi kan først lage den ene racketen og deretter kopiere denne.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Tegn en ny figur. Lag for eksempel et rektangel som kan fungere som racket.</p></li>
+<li><p>Skriv kode som starter på meldingen <code>Ny ball</code>. På samme måte som for ballen skal denne bestå av to deler: Først må koden passe på at racketen starter på riktig sted. Deretter går koden inn i en løkke hvor racketen flyttes opp og ned (<code class="blockmotion">endre y</code>) når for eksempel tastene <code>W</code> og <code>S</code> trykkes.</p></li>
+<li><p>Test at du kan flytte racketen. Du vil kanskje også legge inn en begrensning slik at ikke racketen kan forsvinne ut av skjermen? Det kan du gjøre for eksempel med en test som ser omtrent slik ut:</p>
+<pre class="blocks"><code>    hvis ((tast [w v] trykket) og ((y-posisjon) &lt; (150)))
+    slutt</code></pre></li>
+<li><p>Når du er fornøyd med hvordan denne racketen styres kan du kopiere den.</p></li>
+<li><p>Endre litt på den nye racket-figuren. Du kan for eksempel endre fargen på den om du vil? Du må også endre litt i koden, slik at den starter på andre siden av skjermen og slik at den reagerer på andre taster, for eksempel <code>pil opp</code> og <code>pil ned</code>.</p></li>
+<li><p>Til slutt må vi legge til kode på ball-figuren slik at ballen spretter når den berører en racket. Dette kan gjøres veldig likt hvordan vi fikk ballen til å sprette på veggen. Du må bare bruke <code class="blocksensing">berører farge</code> i stedet for <code class="blocksensing">berører</code>.</p></li>
+<li><p>Siden ballen nå treffer en vertikal racket i stedet for en horisontal vegg må vi også bytte ut tallet <code>180</code> i <code class="blockmotion">pek i   retning</code>-klossen. Hvilket tall kan du bruke? Prøv deg fram, eller tenk gjennom hvordan en ball spretter når den treffer en vegg.</p></li>
+<li><p>Sjekk at spillet nå fungerer! Ballen spretter fram og tilbake mellom de to racketene. For å slippe å stadig starte spillet på nytt kan du lage litt enkel kode for ballen når den mottar meldingen <code>Poeng</code>. La denne koden spille en passende poeng-lyd til den er ferdig. Deretter kan den sende meldingen <code>Ny ball</code> igjen.</p></li>
+<li><p>Du vil kanskje oppleve at racketene beveger seg raskere og raskere for hver ny ball? Dette skjer fordi hver gang meldingen <code>Ny ball</code> blir sendt startes en ny løkke som flytter racketene. For å fikse dette kan du <code class="blockcontrol">stoppe andre skript i figuren</code> for de to racketene når meldingen <code>Poeng</code> mottas.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-videreutvikling-av-spillet" class="level1 activity">
+<h1>Steg 4: Videreutvikling av spillet</h1>
+<p><em>Vi har nå laget en enkel versjon av et av de første dataspillene i historien. Men det er mange muligheter for videreutvikling av spillet.</em></p>
+<p>Du står helt fritt i hvordan du vil jobbe videre med spillet ditt, men her er noen ideer som kan gjøre spillet enda morsommere å spille:</p>
+<section id="ideer-til-videreutvikling" class="level2 check">
+<h2>Ideer til videreutvikling</h2>
+<ul>
+<li><p>Legg til en poeng-teller. Dette kan du gjøre for eksempel med to variabler, en for hver spiller. Når meldingen <code>Poeng</code> mottas kan du sjekke <code>x</code>-posisjonen av ball-figuren for å finne ut hvem som skal få poeng.</p></li>
+<li><p>La hastigheten øke etterhvert som ballen går frem og tilbake. For eksempel kan du la hastigheten øke hver gang ballen berører en av de to racketene.</p></li>
+<li><p>Det kan være et problem at ballen bare går opp og ned, og ikke sidelengs (eller veldig sakte sidelengs) siden vi har satt utgangsretningen til ballen helt tilfeldig. Kan du begrense hvilke retninger ballen starter i slik at den alltid beveger seg noe sidelengs?</p></li>
+<li><p>I stedet for at ballen spretter perfekt på racketene kan du endre retning litt tilfeldig, for eksempel ved å legge til et lite tilfeldig tall (positivt eller negativt) etter at ballen har snudd i racketen.</p></li>
+<li><p>En morsommere, og mer naturlig, sprett på racketen kan du få ved å ta hensyn til hvor på racketen ballen treffer. Dette kan du gjøre for eksempel ved å sammenligne <code>y</code>-posisjonen til ballen og racketen.</p></li>
+<li><p>Hva om man kan flytte racketene sidelengs også? Ikke bare opp og ned? Det kan være lurt å begrense hvor langt racketene kan bevege seg sidelengs, for eksempel kun over halve skjermen. Da vil spillet ligne enda litt mer på tennis.</p></li>
+<li><p>Kanskje du kan videreutvikle hele konseptet, slik at det er mulig å plukke opp power-ups etterhvert som man spiller. For eksempel noe som endrer hastigheten på racketen eller ballen, eller kanskje lager litt skru på ballen. På nettet, for eksempel på <a href="http://www.ponggame.org/">http://www.ponggame.org/</a> finnes forskjellige Pong-varianter du kan hente inspirasjon fra.</p></li>
+<li><p>Pong er morsomst når man er to spillere. Men av og til er man alene, og da hadde det vært morsomt om man kunne spilt mot datamaskinen. Klarer du å kode en av racketene slik at datamaskinen kan styre den? Det er ikke så veldig vanskelig, du kan for eksempel la datamaskinen flytte racketen sin opp eller ned ved å sammenligne <code>y</code>-posisjonen til ballen med <code>y</code>-posisjonen til racketen til datamaskinen.</p></li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

@@ -1,0 +1,246 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Skilpaddekunst | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddekunst</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Skilpadder (turtles på engelsk) er en form for roboter som har vært i bruk innen programmering i lang tid. Vi vil bruke skilpadde-biblioteket i Python til å utforske flere programmeringskonsepter samtidig som vi tegner kule bilder.</p>
+<figure>
+<img src="skilpaddekunst.png" />
+</figure>
+</section>
+<section id="steg-1-møt-skilpadden" class="level1 activity">
+<h1>Steg 1: Møt skilpadden</h1>
+<p>For å bruke skilpadder i Python må vi importere et bibliotek som heter <code>turtle</code>. Slike biblioteker kalles <em>modules</em> i Python og brukes mye for å organisere og gjenbruke kode som andre har skrevet. Det finnes flere måter å importere biblioteker på i Python. Vi vil her bruke den enkleste, hvor vi starter alle skilpaddeprogrammene våre med linjen</p>
+<p>```python from turtle import * —</p>
+<p>Her betyr <code>*</code> alt, slik at linjen sier <code>Importer all kode fra turtle-biblioteket</code>.</p>
+<section id="turtles" class="level3 protip">
+<h3>Turtles</h3>
+<p>Navnet <strong>Turtle</strong> betyr <em>skilpadde</em> på norsk. Bakgrunnen til dette navnet er historisk. For nesten 70 år siden bygde William Grey Walter et par roboter som kunne bevege seg rundt. Disse beveget seg ganske sakte, og var lave og skallformet. De fikk derfor etterhvert kallenavnet skilpadder.</p>
+<p>Senere ble måten disse skilpaddene beveget seg på (vi skal se hvordan snart) tatt inn i forskjellige programmeringsspråk, spesielt som en måte å tegne på. Språket <em>Logo</em> er nok det som er mest kjent for slik skilpaddegrafikk, men nesten alle programmeringsspråk støtter dette i dag, inkludert for eksempel <em>Scratch</em>, <em>Lua</em> og <em>Python</em>.</p>
+</section>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Det er på tide å lage vår første skilpadde. Start IDLE og åpne et nytt programmeringsvindu. I dette nye vinduet kan du skrive inn følgende kode:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)</code></pre>
+<p>Lagre programmet med navnet <code>skilpadde.py</code> og kjør det. Du skal nå få opp et nytt vindu med en gul skilpadde på en blå bakgrunn. Hvis dette ikke skjer kan du se i det opprinnelige <code>Python Shell</code>-vinduet om du har fått en feilmelding.</p></li>
+<li><p>La oss se litt nøyere på hva programmet gjør så langt. Det er en god ide å prøve å endre på ting i programmet for å se effekten av endringene og bedre forstå hvordan ting virker.</p></li>
+<li><p>Linjen <code>shape('turtle')</code> sier at vi vil bruke en skilpaddefigur. I stedet for <code>turtle</code> kan du også prøve <code>arrow</code>, <code>circle</code>, <code>square</code>, <code>triangle</code> eller <code>classic</code>.</p></li>
+<li><p>Med <code>shapesize(2)</code> forteller vi programmet hvor stor vi vil at skilpaddefiguren skal være. Prøv med andre tall!</p></li>
+<li><p>Kommandoene <code>bgcolor</code> og <code>color</code> bestemmer fargene på henholdsvis bakgrunnen og på skilpaddefiguren. Python kjenner til veldig mange farger (men bare på engelsk), så prøv om du kan endre fargene til noe du liker.</p></li>
+<li><p>I de senere programmene vil vi bruke disse linjene på toppen. Du kan gjerne bruke en variant av farger og figur som du liker bedre i stedet.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-en-kunstnerisk-skilpadde" class="level1 activity">
+<h1>Steg 2: En kunstnerisk skilpadde</h1>
+<p>Skilpadden er ikke bare fin å se på. Den kan også tegne! I dette steget vil vi bli kjent med noen enkle kommandoer som gjør skilpadden om til en kunstner.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Legg til en linje nederst i programmet ditt, slik at det ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+forward(<span class="dv">200</span>)</code></pre></li>
+<li><p>Når du kjører programmet vil du se at skilpadden har beveget seg forover et lite stykke, og at den har tegnet en strek der den beveget seg.</p></li>
+<li><p>I tillegg til <code>forward</code> kan vi også bruke kommandoene <code>backward</code> for å gå bakover, <code>left</code> for å svinge mot venstre og <code>right</code> for å svinge mot høyre. Prøv for eksempel å endre programmet ditt til det følgende:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+forward(<span class="dv">200</span>)
+left(<span class="dv">60</span>)
+forward(<span class="dv">50</span>)
+backward(<span class="dv">200</span>)
+right(<span class="dv">90</span>)
+forward(<span class="dv">100</span>)</code></pre>
+<p>Ser du at skilpadden utfører alle kommandoene du gir den?</p></li>
+<li><p>Hvis vi setter sammen kommandoene litt systematisk kan vi tegne noen grunnleggende geometriske figurer. For eksempel, om vi vil tegne en firkant kan vi først gå fremover, deretter svinge 90 grader (mot høyre eller venstre), deretter fremover igjen, så svinge, så fremover, så svinge og til slutt fremover en gang til. I Python kan vi skrive dette som</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+forward(<span class="dv">100</span>)
+right(<span class="dv">90</span>)
+forward(<span class="dv">100</span>)
+right(<span class="dv">90</span>)
+forward(<span class="dv">100</span>)
+right(<span class="dv">90</span>)
+forward(<span class="dv">100</span>)
+right(<span class="dv">90</span>)</code></pre>
+<p>Tegner skilpadden en firkant når du kjører dette programmet?</p></li>
+<li><p>Hva med en trekant? Hvordan må du forandre koden din for at skilpadden skal tegne en trekant i stedet for en firkant? Prøv selv å endre koden og kjør den, ble resultatet som du trodde?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-gjenta-deg-selv" class="level1 activity">
+<h1>Steg 3: Gjenta deg selv</h1>
+<p>Hvis du ser på koden vi har brukt for å tegne trekanter og firkanter har vi stadig gjentatt oss selv. I stedet for at vi skriver samme kode om og om igjen kan vi be Python gjenta deler av koden. Til dette bruker vi <strong>for-løkker</strong>.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Det følgende programmet tegner også en firkant, akkurat som det tidligere programmet vi lagde:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+<span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">4</span>):
+    forward(<span class="dv">100</span>)
+    right(<span class="dv">90</span>)</code></pre>
+<p>Endre koden din som over, og kjør programmet.</p></li>
+<li><p>Legg merke til at linjene som kommer etter <code>for</code> er skjøvet inn til høyre. Dette er veldig viktig i Python, fordi det forteller hvor mye kode som skal gjentas i løkken. For å skyve koden inn på denne måten kan du bruke <code>Tab</code>-tasten i IDLE. For å trekke koden tilbake til venstre kan du trykke <code>Shift</code> og <code>Tab</code>.</p></li>
+<li><p>Prøv å trekk linjen <code>right(90)</code> til venstre, slik at for-løkken ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">4</span>):
+    forward(<span class="dv">100</span>)
+right(<span class="dv">90</span>)</code></pre>
+<p>Hva tror du programmet ditt vil gjøre nå? Forsøk å kjøre programmet for å se om du har rett!</p>
+<p>Skilpadden vil bare gå fremover fire ganger før den svinger til høyre en gang til slutt. Det betyr at den vil tegne en rett linje i stedet for en firkant.</p></li>
+<li><p>Nå som vi bruker en for-løkke har det også blitt mye enklere å endre koden til å for eksempel tegne en trekant. Vi må endre 4 til 3 i for-løkken. I tillegg må vi endre vinkelen skilpadden snur ved hvert hjørne. For at skilpadden skal gå en runde rundt trekanten må den snu totalt 360 grader. Siden den snur tre ganger må den snu 120 grader (360 delt på 3) i hvert hjørne. Programmet for å tegne en trekant blir dermed seende slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+<span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">3</span>):
+    forward(<span class="dv">100</span>)
+    right(<span class="dv">120</span>)</code></pre></li>
+<li><p>Prøv å endre programmet slik at det tegner andre mangekanter. Hvordan kan du tegne for eksempel en femkant, åttekant eller kanskje en femtenkant.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-alle-ting-fortjener-et-navn" class="level1 activity">
+<h1>Steg 4: Alle ting fortjener et navn</h1>
+<p>Vi skal fortsette med å gjøre koden vår enda mer fleksibel ved å gi ting navn. Dette vil også gjøre det enklere å forstå hva koden gjør.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi innfører først variabler som sier hvor mange sider vi vil tegne, hvor lang hver side skal være og hvor mange grader vi skal snu ved hvert hjørne. Endre programmet ditt slik at det ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+sides = <span class="dv">4</span>
+length = <span class="dv">100</span>
+angle = <span class="dv">90</span>
+
+<span class="kw">for</span> i in <span class="dt">range</span>(sides):
+    forward(length)
+    right(angle)</code></pre>
+<p>Tegner programmet fortsatt en firkant?</p></li>
+<li><p>Nå kan du få programmet til å tegne en trekant bare ved å endre verdiene på variablene dine. Prøv om du får det til?</p></li>
+<li><p>Vi kan gjøre programmet enda smartere. I stedet for at du selv må regne vinkelen kan programmet gjøre det. Bytt ut linjen <code>angle = 90</code> med</p>
+<pre class="sourceCode python"><code class="sourceCode python">angle = <span class="dv">360</span> / sides</code></pre>
+<p>Nå kan du prøve å bare endre verdien av <code>sides</code> og kjøre om igjen. Tegner programmet de riktige mangekantene?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-egne-kommandoer" class="level1 activity">
+<h1>Steg 5: Egne kommandoer</h1>
+<p>I Python kan vi også lage våre egne kommandoer ved å definere funksjoner. Dette er en annen måte vi kan unngå å gjenta oss selv på.</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi skal nå lage en funksjon som tegner en mangekant. Dette gjør vi ved å bruke kommandoen <code>def</code> (def er en forkortelse for <em>define</em> som betyr definer). Endre programmet ditt slik at det ser ut som under:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+<span class="kw">def</span> polygon(sides, length):
+    angle = <span class="dv">360</span> / sides
+
+    <span class="kw">for</span> i in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+
+polygon(<span class="dv">4</span>, <span class="dv">100</span>)</code></pre>
+<p>Kjør programmet. Kjenner du igjen firkanten?</p></li>
+<li><p>Nå som vi har laget <code>polygon</code>-funksjonen er det kjempelett å tegne forskjellige mangekanter. Legg for eksempel til de følgende linjene nederst i programmet ditt:</p>
+<pre class="sourceCode python"><code class="sourceCode python">polygon(<span class="dv">3</span>, <span class="dv">100</span>)
+polygon(<span class="dv">4</span>, <span class="dv">100</span>)
+polygon(<span class="dv">5</span>, <span class="dv">100</span>)
+forward(<span class="dv">125</span>)
+right(<span class="dv">180</span>)
+polygon(<span class="dv">3</span>, <span class="dv">150</span>)
+polygon(<span class="dv">5</span>, <span class="dv">150</span>)
+polygon(<span class="dv">7</span>, <span class="dv">150</span>)</code></pre></li>
+</ul>
+</section>
+</section>
+<section id="steg-6-skilpaddekunst" class="level1 activity">
+<h1>Steg 6: Skilpaddekunst</h1>
+<p>Vi vil til slutt generalisere funksjonen vår litt slik at den ikke bare tegner kjedelige mangekanter.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi lager nå en ny funksjon <code>polylines</code> som ligner veldig mye på <code>polygon</code>, men hvor vi også kan endre på vinklene slik at de ikke alltid summerer seg til 360. Dette gjør underverker for kunsten vår! Endre programmet ditt slik at det ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+<span class="kw">def</span> polylines(sides, length, angle):
+    <span class="kw">for</span> i in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+
+polylines(<span class="dv">5</span>, <span class="dv">100</span>, <span class="dv">144</span>)</code></pre>
+<p>Kjør programmet. Hva tegner skilpadden nå?</p></li>
+<li><p>En annen variant kan være hvor vi tegner en litt skjev mangekant. For eksempel den følgende kommandoen vil tegne firkanter hvor vinklene er 91 grader i stedet for 90 grader. Dette blir overraskende stilig. Bytt ut <code>polylines</code>-kommandoen med</p>
+<pre class="sourceCode python"><code class="sourceCode python">polylines(<span class="dv">91</span>, <span class="dv">200</span>, <span class="dv">91</span>)</code></pre></li>
+<li><p>Vi kan også endre lengden av strekene etterhvert som vi tegner. Dette skaper en fin spiraleffekt. Legg merke til hvor mye funksjonen <code>spiral</code> ligner på <code>polylines</code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+shape(<span class="st">&#39;turtle&#39;</span>)
+shapesize(<span class="dv">2</span>)
+bgcolor(<span class="st">&#39;darkblue&#39;</span>)
+color(<span class="st">&#39;yellow&#39;</span>)
+
+<span class="kw">def</span> polylines(sides, length, angle):
+    <span class="kw">for</span> i in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+
+<span class="kw">def</span> spiral(sides, length, angle):
+    <span class="kw">for</span> i in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+        length = length + <span class="dv">5</span>
+
+spiral(<span class="dv">100</span>, <span class="dv">5</span>, <span class="dv">125</span>)</code></pre></li>
+<li><p>Prøv forskjellige verdier i stedet for 100, 5 og 125 når du kaller <code>spiral</code>. Finner du noen verdier som gir spesielt fine bilder synes du?</p></li>
+</ul>
+</section>
+<section id="prøv-selv" class="level2 try">
+<h2>Prøv selv</h2>
+<p>Kombiner de forskjellige funksjonene vi har laget, <code>polygon</code>, <code>polylines</code> og <code>spiral</code> med de andre skilpadde-kommandoene du har lært som for eksempel <code>forward</code> og <code>left</code>. Klarer du å tegne enda mer spennende kunstverk? Eller kanskje du kan tegne en by? Et hus kan for eksempel lages ved først å tegne en firkant og deretter en trekant på toppen for taket.</p>
+<p>Et tips helt på slutten er at funksjonene <code>penup()</code> og <code>pendown()</code> styrer om skilpadden tegner mens den flytter på seg. Disse er veldig nyttige når man vil tegne flere figurer som ikke henger sammen.</p>
+<p>Et annet tips er funksjonen <code>speed()</code>. Denne justerer hastigheten som skilpadden tegner med. For eksempel vil <code>speed(1)</code> tegne veldig sakte, mens <code>speed(11)</code> tegner kjempefort.</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

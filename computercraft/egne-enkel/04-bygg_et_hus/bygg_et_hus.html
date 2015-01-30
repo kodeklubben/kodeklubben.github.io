@@ -1,0 +1,407 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bygg et Hus | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Bygg et Hus</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>I denne leksjonen vil vi se litt på hvordan vi kan få en robot til å bygge et hus for oss. Underveis vil vi lære hvordan vi kan bruke løkker og funksjoner for å gjenta ting som gjøres flere ganger.</p>
+<figure>
+<img src="bygg_et_hus.png" />
+</figure>
+</section>
+<section id="steg-1-prøv-selv-først" class="level1 activity">
+<h1>Steg 1: Prøv selv først</h1>
+<p>Vi har tidligere lært om hvordan roboter behøver fuel for å kjøre og byggemateriell for å bygge. Pass på at roboten din har nok fuel mens du gjør oppgavene under.</p>
+<p>Tidligere har vi sett hvordan vi bruker <code>turtle</code>-biblioteket for å få roboter til å gjøre forskjellige ting. Spesielt bruker vi kommandoene</p>
+<p><code>turtle.forward()</code>, <code>turtle.back()</code>, <code>turtle.turnLeft()</code>, <code>turtle.turnRight()</code>, <code>turtle.up()</code>, <code>turtle.down()</code></p>
+<p>for å flytte roboten. Videre kan vi bruke <code>turtle.place()</code> eller <code>turtle.placeDown()</code> for å plassere ut en kloss, og vi har sett at vi kan bruke <code>for</code>-løkker for å gjenta ting.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en robot, gi den fuel og legg en del byggemateriell i robotens inventory.</p></li>
+<li><p>Lag et nytt program, <code>edit byggmitthus</code>, og skriv den følgende koden:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>
+    turtle<span class="ot">.</span>back<span class="ot">()</span>
+    turtle<span class="ot">.</span>place<span class="ot">()</span>
+<span class="kw">end</span></code></pre>
+<p>Kjør programmet. Bygger roboten en liten vegg av klosser?</p></li>
+</ul>
+<section id="prøv-selv" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Jobb videre med <code>bygghus</code>-programmet, og se om du klarer å utvide det slik at roboten bygger et enkelt hus med fire vegger og tak. Bruk litt tid på denne oppgaven slik at du får tenkt gjennom hva som kreves for å bygge et enkelt hus.</p>
+<p>Et par små tips:</p>
+<p>Det er nok å bruke kommandoene vi har nevnt så langt.</p>
+<p>Du vil helst bruke flere for-løkker. For at dette skal virke må du bruke forskjellige variabler, det vil si at du må bytte ut <code>i</code> men andre bokstaver eller variabelnavn i de andre løkkene du lager.</p>
+<p>For å lage dør eller vinduer i huset ditt vil det enkleste være å bruke <code>if</code>-tester for å sjekke hvor på huset roboten bygger.</p>
+</section>
+</section>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Når du har laget et enkelt hus så vis det frem til de andre. Hvilke problemer fikk dere underveis?</p>
+<p>Ingen skriver programmer riktig første gangen, og det er veldig nyttig å diskutere både hvordan man løser en utfordring, og hvilke metoder som ikke virker.</p></li>
+</ul>
+<p>I de neste stegene vil vi utvikle et mer avansert program for husbyggeroboten vår. Underveis vil vi lære om noen nye kommandoer og konsepter som gjør at programmet blir både kraftigere og enklere.</p>
+</section>
+</section>
+<section id="steg-2-flyvende-robot" class="level1 activity">
+<h1>Steg 2: Flyvende robot</h1>
+<p>Et problem du kanskje allerede har oppdaget er at roboten innimellom krasjer i ting, og derfor ender opp litt andre steder enn du hadde tenkt. Et eksempel på dette er i den følgende koden, hvor meningen var å bygge grunnmuren til et hus.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Skriv programmet <code>grunnmur</code> med koden</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">4</span> <span class="kw">do</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>
+        turtle<span class="ot">.</span>back<span class="ot">()</span>
+        turtle<span class="ot">.</span>place<span class="ot">()</span>
+    <span class="kw">end</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+<span class="kw">end</span></code></pre>
+<p>Lagre og kjør programmet? Ser du problemet?</p></li>
+<li><p>På slutten av byggingen av grunnmuren krasjer roboten inn i muren vi allerede har bygd, slik at den ikke får bygd den siste klossen. En smart måte å unngå dette problemet på er å la roboten fly over bakken, mens den plasserer klosser under seg med <code>turtle.placeDown()</code>. Dette har den ekstra fordelen at vi kan la roboten gå fremover i stedet for bakover, som jo er mer logisk.</p>
+<p>Endre programmet som følger:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">turtle<span class="ot">.</span>up<span class="ot">()</span>                                   <span class="co">-- ny linje</span>
+<span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">4</span> <span class="kw">do</span>
+    <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>
+        turtle<span class="ot">.</span>forward<span class="ot">()</span>                      <span class="co">-- endret linje</span>
+        turtle<span class="ot">.</span>placeDown<span class="ot">()</span>                    <span class="co">-- endret linje</span>
+    <span class="kw">end</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+<span class="kw">end</span></code></pre>
+<p>Når du kjører programmet nå klarer roboten å bygge hele firkanten uten å krasje! Vi vil bruke <code>turtle.placeDown()</code> i resten av denne leksjonen.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-bygg-en-vegg" class="level1 activity">
+<h1>Steg 3: Bygg en vegg</h1>
+<p>Når vi skal skrive større programmer (som for eksempel et som bygger et hus) er det lurt å prøve dele programmer i deloppgaver som er relativt enkle. Da kan vi heller kode disse deloppgavene som typisk er enklere enn hele det store programmet.</p>
+<p>En naturlig deloppgave når vi skal bygge et hus er å bygge en vegg. La oss starte med det! Husk å teste at robotprogrammet ditt virker etterhvert som du skriver det inn.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag et nytt program <code>bygghus</code>. Vi begynner med en enkel stripe:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">turtle<span class="ot">.</span>up<span class="ot">()</span>
+<span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>
+    turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+    turtle<span class="ot">.</span>forward<span class="ot">()</span>
+<span class="kw">end</span></code></pre></li>
+<li><p>For å bygge en vegg vil vi bygge flere slike striper på toppen av hverandre. En enkel måte å gjøre dette på er å la roboten rygge tilbake med <code>turtle.back()</code> for å bygge neste stripe.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">3</span> <span class="kw">do</span>                               <span class="co">-- ny linje</span>
+    turtle<span class="ot">.</span>up<span class="ot">()</span>
+    <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>
+        turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+        turtle<span class="ot">.</span>forward<span class="ot">()</span>
+    <span class="kw">end</span>
+
+    <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>                           <span class="co">-- ny linje</span>
+        turtle<span class="ot">.</span>back<span class="ot">()</span>                         <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre></li>
+<li><p>Før vi fortsetter med programmet vårt vil vi også introdusere et par variabler som kan forklare hva tallene <code>3</code> og <code>5</code> betyr. Dette vil også gjøre det enklere for oss å endre størrelsen på veggen senere.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> hoyde <span class="ot">=</span> <span class="dv">3</span>                               <span class="co">-- ny linje</span>
+<span class="kw">local</span> lengde <span class="ot">=</span> <span class="dv">5</span>                              <span class="co">-- ny linje</span>
+
+<span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>                           <span class="co">-- endret linje</span>
+    turtle<span class="ot">.</span>up<span class="ot">()</span>
+    <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>                      <span class="co">-- endret linje</span>
+        turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+        turtle<span class="ot">.</span>forward<span class="ot">()</span>
+    <span class="kw">end</span>
+
+    <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>                      <span class="co">-- endret linje</span>
+        turtle<span class="ot">.</span>back<span class="ot">()</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+<p>Legg merke til at vi skriver <code>hoyde</code> med <code>o</code> og ikke med <code>ø</code>. Siden ComputerCraft er et engelsk programmeringsspråk kan ikke variabler ha navn som inneholder de norske bokstavene æ, ø og å.</p></li>
+</ul>
+<section id="prøv-selv-1" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Prøv å endre verdiene av variablene <code>hoyde</code> og <code>lengde</code>. Gjør roboten som du ber den om?</p>
+</section>
+</section>
+</section>
+<section id="steg-4-funksjoner" class="level1 activity">
+<h1>Steg 4: Funksjoner</h1>
+<p>Vi har nå lært roboten hvordan den lager en vegg. For at vi enkelt skal kunne bruke dette senere vil vi definere som en funksjon. I praksis betyr det at vi lærer roboten en ny kommando, som vi senere kan bruke på samme måte som de innebygde kommandoene (som for eksempel <code>turtle.forward()</code>).</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi definerer en funksjon ved hjelp av den innebygde kommandoen <code>function</code>.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggVegg<span class="ot">()</span>                           <span class="co">-- ny linje</span>
+    <span class="kw">local</span> hoyde <span class="ot">=</span> <span class="dv">3</span>
+    <span class="kw">local</span> lengde <span class="ot">=</span> <span class="dv">5</span>
+
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>up<span class="ot">()</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+            turtle<span class="ot">.</span>forward<span class="ot">()</span>
+        <span class="kw">end</span>
+
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            turtle<span class="ot">.</span>back<span class="ot">()</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre></li>
+<li><p>Om du kjører programmet slik det er nå vil du se at roboten ikke gjør noenting. Det er fordi vi bare har <em>definert</em> funksjonen, det vil si vi har fortalt roboten hvordan den kan bygge en vegg. Vi har ikke sagt til roboten at den faktisk skal bygge veggen. Legg til den følgende linjen helt nederst i programmet ditt.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">byggVegg<span class="ot">()</span></code></pre>
+<p>Nå sier vi at roboten også skal bygge veggen.</p></li>
+<li><p>En veldig nyttig ting med funksjoner er at vi kan la variablene være noe som heter parametre. I praksis betyr det at vi bestemmer verdien på variablene utenfor selve funksjonen. Endre programmet ditt slik at det ser ut som dette, pass på at du sletter de to linjene som pleide å gi verdi til <code>hoyde</code> og <code>lengde</code>.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> lengde<span class="ot">)</span>              <span class="co">-- endret linje</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>up<span class="ot">()</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+            turtle<span class="ot">.</span>forward<span class="ot">()</span>
+        <span class="kw">end</span>
+
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            turtle<span class="ot">.</span>back<span class="ot">()</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+<span class="kw">end</span>
+
+byggVegg<span class="ot">(</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">)</span>                                <span class="co">-- endret linje</span></code></pre></li>
+</ul>
+<section id="prøv-selv-2" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Endre tallene <code>3</code> og <code>5</code> i den siste linjen. Bygger roboten vegger av forskjellig størrelse?</p>
+</section>
+</section>
+</section>
+<section id="steg-5-bygg-et-hus" class="level1 activity">
+<h1>Steg 5: Bygg et hus</h1>
+<p>Nå som vi vet hvordan vi bygger en vegg er vi ikke veldig langt unna å bygge et enkelt hus. La oss prøve å sette sammen fire vegger!</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi begynner enkelt. La oss prøve å bygge en vegg, snu roboten, bygge en ny vegg og så videre. Bytt ut den siste linjen <code>byggVegg(3, 5)</code> i programmet ditt med den følgende løkken:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">4</span> <span class="kw">do</span>
+    byggVegg<span class="ot">(</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+<span class="kw">end</span></code></pre>
+<p>Hva skjer når du kjører programmet ditt?</p>
+<figure>
+<img src="firevegger.png" />
+</figure></li>
+<li><p>Hmm … det ble jo litt stilig, men et hus er det definitivt ikke. Problemet er at vi ikke har tenkt gjennom hvor roboten er etter at den er ferdig med å bygge en vegg.</p>
+<p>Vi burde legge til litt kode i <code>byggVegg()</code> slik at roboten er klar til å bygge neste vegg. Dette kan vi gjøre ved å gå nedover i stedet for bakover etter at vi har bygd ferdig veggen. Endre funksjonen <code>byggVegg</code> slik at den ser slik ut:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> lengde<span class="ot">)</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>up<span class="ot">()</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+            turtle<span class="ot">.</span>forward<span class="ot">()</span>
+        <span class="kw">end</span>
+
+        <span class="kw">if</span> j <span class="ot">&lt;</span> hoyde <span class="kw">then</span>                     <span class="co">-- ny linje</span>
+            <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+                turtle<span class="ot">.</span>back<span class="ot">()</span>
+            <span class="kw">end</span>
+        <span class="kw">end</span>                                   <span class="co">-- ny linje</span>
+    <span class="kw">end</span>
+
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>                       <span class="co">-- ny linje</span>
+        turtle<span class="ot">.</span>down<span class="ot">()</span>                         <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+<span class="kw">end</span></code></pre></li>
+<li><p>Programmet vårt klarer nesten å bygge et hus av fire vegger. Men igjen får vi et lite problem med at roboten krasjer inn i ting den har bygd tidligere. Vi må rett og slett være litt mer forsiktige med at roboten ikke går mer enn den trenger.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> lengde<span class="ot">)</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>up<span class="ot">()</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            turtle<span class="ot">.</span>placeDown<span class="ot">()</span>
+            <span class="kw">if</span> i <span class="ot">&lt;</span> lengde <span class="kw">then</span>                <span class="co">-- ny linje</span>
+                turtle<span class="ot">.</span>forward<span class="ot">()</span>
+            <span class="kw">end</span>                               <span class="co">-- ny linje</span>
+        <span class="kw">end</span>
+
+        <span class="kw">if</span> j <span class="ot">&lt;</span> hoyde <span class="kw">then</span>
+            <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="ot">-</span> <span class="dv">1</span> <span class="kw">do</span>          <span class="co">-- endret linje</span>
+                turtle<span class="ot">.</span>back<span class="ot">()</span>
+            <span class="kw">end</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+
+    turtle<span class="ot">.</span>forward<span class="ot">()</span>                          <span class="co">-- ny linje</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>down<span class="ot">()</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre></li>
+</ul>
+<p>Nå har huset vårt fått fire vegger. Vi skal snart se på hvordan vi kan bygge taket, men først skal vi se på hvordan vi kan passe på at roboten har materiale å bygge med.</p>
+</section>
+</section>
+<section id="steg-6-mer-byggemateriale" class="level1 activity">
+<h1>Steg 6: Mer byggemateriale</h1>
+<p>Et problem du helt sikkert har oppdaget nå, er at roboten stadig går tom for byggemateriale. Selv om roboten har 16 slots for materiale, vil den bare bruke en av dem. Ved hjelp av funksjonene <code>getItemCount()</code>, <code>getSelectedSlot()</code> og <code>select()</code> i <code>turtle</code>-biblioteket kan vi gjøre noe med dette.</p>
+<section id="sjekkliste-6" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi vil nå lage en ny funksjon som sjekker at det er materiale tilgjengelig før den plasserer det ut. Nedenfor har vi byttet ut <code>turtle.placeDown()</code> med et kall på vår egen funksjon <code>plasser()</code>:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> lengde<span class="ot">)</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>up<span class="ot">()</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            plasser<span class="ot">()</span>                         <span class="co">-- endret linje</span>
+            <span class="kw">if</span> i <span class="ot">&lt;</span> lengde <span class="kw">then</span>
+                turtle<span class="ot">.</span>forward<span class="ot">()</span>
+            <span class="kw">end</span>
+        <span class="kw">end</span>
+
+        <span class="kw">if</span> j <span class="ot">&lt;</span> hoyde <span class="kw">then</span>
+            <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="ot">-</span> <span class="dv">1</span> <span class="kw">do</span>
+                turtle<span class="ot">.</span>back<span class="ot">()</span>
+            <span class="kw">end</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+
+    turtle<span class="ot">.</span>forward<span class="ot">()</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>down<span class="ot">()</span>
+    <span class="kw">end</span>
+<span class="kw">end</span>
+
+<span class="kw">function</span> plasser<span class="ot">()</span>                            <span class="co">-- ny linje</span>
+    <span class="kw">while</span> turtle<span class="ot">.</span>getItemCount<span class="ot">()</span> <span class="ot">==</span> <span class="dv">0</span> <span class="kw">do</span>       <span class="co">-- ny linje</span>
+        slot <span class="ot">=</span> turtle<span class="ot">.</span>getSelectedSlot<span class="ot">()</span>       <span class="co">-- ny linje</span>
+        <span class="kw">if</span> slot <span class="ot">&lt;</span> <span class="dv">16</span> <span class="kw">then</span>                     <span class="co">-- ny linje</span>
+            turtle<span class="ot">.</span>select<span class="ot">(</span>slot <span class="ot">+</span> <span class="dv">1</span><span class="ot">)</span>           <span class="co">-- ny linje</span>
+        <span class="kw">else</span>                                  <span class="co">-- ny linje</span>
+            turtle<span class="ot">.</span>select<span class="ot">(</span><span class="dv">1</span><span class="ot">)</span>                  <span class="co">-- ny linje</span>
+        <span class="kw">end</span>                                   <span class="co">-- ny linje</span>
+    <span class="kw">end</span>                                       <span class="co">-- ny linje</span>
+
+    turtle<span class="ot">.</span>placeDown<span class="ot">()</span>                        <span class="co">-- ny linje</span>
+<span class="kw">end</span>                                           <span class="co">-- ny linje</span>
+
+<span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">4</span> <span class="kw">do</span>
+    byggVegg<span class="ot">(</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+<span class="kw">end</span></code></pre>
+<p>Les nøye gjennom den nye funksjonen <code>plasser()</code>. Skjønner du hva den gjør?</p>
+<p>Det siste funksjonen gjør er å plassere ut en kloss med <code>turtle.placeDown()</code>. Men før den plasserer ut klossen bruker vi <code>turtle.getItemCount()</code> til å sjekke om det finnes tilgjengelig byggemateriale. Hvis det er 0 klosser i sloten roboten bruker, går vi inn i <code>while</code>-løkken hvor vi velger en annen slot. Vi sjekker først hvilken slot roboten bruker med <code>turtle.getSelectedSlot()</code>. Hvis dette ikke er den siste sloten (slot 16), bruker vi <code>turtle.select()</code> til å velge den neste sloten. Hvis vi allerede er på den siste sloten velger vi heller den første.</p></li>
+<li><p>Kjør programmet. Hva skjer når roboten går helt tom for byggemateriale? Den blir da bare stående å vente på at du skal fylle den opp med nytt materiale.</p>
+<figure>
+<img src="flerefarger.png" />
+</figure></li>
+</ul>
+<section id="prøv-selv-3" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Nå som roboten bruker flere slotter kan du eksperimentere med å legge forskjellig materiale i de forskjellige slottene. På den måten kan du for eksempel få roboten til å bygge et fargerikt hus!</p>
+</section>
+</section>
+</section>
+<section id="steg-7-vi-trenger-et-tak" class="level1 activity">
+<h1>Steg 7: Vi trenger et tak!</h1>
+<p>Nå er det på tide å lære roboten hvordan den bygger tak på huset vårt!</p>
+<section id="sjekkliste-7" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Før vi begynner å bygge taket vil vi flytte koden som bygger huset til en egen funksjon, på samme måte som vi gjorde med <code>byggVegg()</code> tidligere. Bytt den nederste løkken i koden din (den som faktisk bygger veggene dine) med den følgende koden:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggHus<span class="ot">(</span>hoyde<span class="ot">,</span> bredde<span class="ot">,</span> dybde<span class="ot">)</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> bredde <span class="ot">-</span> <span class="dv">1</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> dybde <span class="ot">-</span> <span class="dv">1</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> bredde <span class="ot">-</span> <span class="dv">1</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> dybde <span class="ot">-</span> <span class="dv">1</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+<span class="kw">end</span>
+
+byggHus<span class="ot">(</span><span class="dv">3</span><span class="ot">,</span> <span class="dv">5</span><span class="ot">,</span> <span class="dv">4</span><span class="ot">)</span></code></pre>
+<p>Ser du hvorfor vi bruker <code>bredde - 1</code> i stedet for <code>bredde</code>? Sjekk at huset ditt får riktig størrelse med denne koden!</p></li>
+<li><p>Nå kan vi lage en ny funksjon <code>byggTak()</code>. Legg først til denne linjen nederst i <code>byggHus()</code>-funksjonen din:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua">byggTak<span class="ot">(</span>bredde<span class="ot">,</span> dybde<span class="ot">)</span></code></pre></li>
+<li><p>Selve funksjonen for å bygge taket kan være ganske lik funksjonen for å bygge en vegg. Forskjellen er at der veggen står oppover, vil taket ligge flatt. Legg til funksjonen <code>byggTak</code> i koden din:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggTak<span class="ot">(</span>bredde<span class="ot">,</span> dybde<span class="ot">)</span>
+    turtle<span class="ot">.</span>up<span class="ot">()</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> dybde <span class="kw">do</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> bredde <span class="kw">do</span>
+            plasser<span class="ot">()</span>
+            turtle<span class="ot">.</span>forward<span class="ot">()</span>
+        <span class="kw">end</span>
+
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> bredde <span class="kw">do</span>
+            turtle<span class="ot">.</span>back<span class="ot">()</span>
+        <span class="kw">end</span>
+        turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+        turtle<span class="ot">.</span>forward<span class="ot">()</span>
+        turtle<span class="ot">.</span>turnRight<span class="ot">()</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre></li>
+</ul>
+</section>
+</section>
+<section id="steg-8-dører-og-vinduer" class="level1 activity">
+<h1>Steg 8: Dører og vinduer</h1>
+<p>Da er vi nesten ferdig med programmet vårt. Det som mangler på at dette ligner et skikkelig hus er dører og vinduer.</p>
+<section id="sjekkliste-8" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi velger en relativt enkel løsning denne gangen, og lar roboten rett og slett lage hull der dørene og vinduene skal være. Siden vi ikke vil ha dører på alle veggene, og vil ha litt mulighet til å velge hvor vinduene skal være, lager vi to nye parametre til <code>byggVegg()</code>-funksjonen vår. Endre denne funksjonen som følger:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> lengde<span class="ot">,</span> dor<span class="ot">,</span> vindu<span class="ot">)</span>    <span class="co">-- endret linje</span>
+    <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+        turtle<span class="ot">.</span>up<span class="ot">()</span>
+        <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="kw">do</span>
+            <span class="kw">if</span> <span class="kw">not</span> <span class="ot">(</span>j <span class="ot">&lt;=</span> <span class="dv">2</span> <span class="kw">and</span> i <span class="ot">==</span> dor <span class="kw">or</span>      <span class="co">-- ny linje</span>
+                    j <span class="ot">==</span> <span class="dv">2</span> <span class="kw">and</span> i <span class="ot">==</span> vindu<span class="ot">)</span> <span class="kw">then</span> <span class="co">-- ny linje</span>
+                plasser<span class="ot">()</span>
+            <span class="kw">end</span>                                 <span class="co">-- ny linje</span>
+            <span class="kw">if</span> i <span class="ot">&lt;</span> lengde <span class="kw">then</span>
+                turtle<span class="ot">.</span>forward<span class="ot">()</span>
+            <span class="kw">end</span>
+        <span class="kw">end</span>
+
+        <span class="kw">if</span> j <span class="ot">&lt;</span> hoyde <span class="kw">then</span>
+            <span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> lengde <span class="ot">-</span> <span class="dv">1</span> <span class="kw">do</span>
+                turtle<span class="ot">.</span>back<span class="ot">()</span>
+            <span class="kw">end</span>
+        <span class="kw">end</span>
+    <span class="kw">end</span>
+
+    turtle<span class="ot">.</span>forward<span class="ot">()</span>
+        <span class="kw">for</span> j <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> hoyde <span class="kw">do</span>
+            turtle<span class="ot">.</span>down<span class="ot">()</span>
+    <span class="kw">end</span>
+<span class="kw">end</span></code></pre>
+<p>Med den nye <code>if</code>-testen lager vi en dør ved å ikke bygge de to nederste klossene, mens vinduene lages i høyde 2.</p></li>
+<li><p>Vi må til slutt også endre koden i <code>byggHus()</code> som kaller <code>byggVegg()</code>:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">function</span> byggHus<span class="ot">(</span>hoyde<span class="ot">,</span> bredde<span class="ot">,</span> dybde<span class="ot">)</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> bredde <span class="ot">-</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">,</span> <span class="kw">nil</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> dybde <span class="ot">-</span> <span class="dv">1</span><span class="ot">,</span> <span class="kw">nil</span><span class="ot">,</span> <span class="fu">math.floor</span><span class="ot">(</span>dybde <span class="ot">/</span> <span class="dv">2</span><span class="ot">))</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> bredde <span class="ot">-</span> <span class="dv">1</span><span class="ot">,</span> <span class="kw">nil</span><span class="ot">,</span> bredde <span class="ot">-</span> <span class="dv">2</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+    byggVegg<span class="ot">(</span>hoyde<span class="ot">,</span> dybde <span class="ot">-</span> <span class="dv">1</span><span class="ot">,</span> <span class="kw">nil</span><span class="ot">,</span> <span class="dv">2</span><span class="ot">)</span>
+    turtle<span class="ot">.</span>turnLeft<span class="ot">()</span>
+
+    byggTak<span class="ot">(</span>bredde<span class="ot">,</span> dybde<span class="ot">)</span>
+<span class="kw">end</span></code></pre>
+<p>Legg merke til at vi bruker det spesielle ordet <code>nil</code> hvis vi ikke skal lage en dør eller et vindu på en gitt vegg. Skjønner du hvor vinduene på de forskjellige veggene plasseres?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-9-forskjellige-hus" class="level1 activity">
+<h1>Steg 9: Forskjellige hus</h1>
+<p>Vi har nå laget et program som gjør at roboten vår er en husbyggerobot! Vi skal bare gjøre en ørliten forbedring før vi sier oss helt ferdige!</p>
+<p>Nå har vi kodet hvor stort huset skal være inn i den siste linjen i programmet vårt, <code>byggHus(3, 5, 4)</code>. Det betyr at om vi vil bygge et større eller mindre hus, må vi forandre på programmet. Dette er tungvint. Det vil være bedre om vi kan fortelle hvor stort huset skal være når vi starter programmet.</p>
+<section id="sjekkliste-9" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Bytt ut linjen <code>byggHus(3, 5, 4)</code> med det følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tArgs <span class="ot">=</span> <span class="ot">{</span> <span class="ot">...</span> <span class="ot">}</span>
+<span class="kw">if</span> <span class="ot">#</span>tArgs <span class="ot">~=</span> <span class="dv">3</span> <span class="kw">then</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Skriv: bygghus &lt;høyde&gt; &lt;bredde&gt; &lt;dybde&gt;&#39;</span><span class="ot">)</span>
+    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;F.eks. bygghus 3 5 4&#39;</span><span class="ot">)</span>
+    <span class="kw">return</span>
+<span class="kw">end</span>
+
+byggHus<span class="ot">(</span><span class="fu">tonumber</span><span class="ot">(</span>tArgs<span class="ot">[</span><span class="dv">1</span><span class="ot">]),</span> <span class="fu">tonumber</span><span class="ot">(</span>tArgs<span class="ot">[</span><span class="dv">2</span><span class="ot">]),</span>
+        <span class="fu">tonumber</span><span class="ot">(</span>tArgs<span class="ot">[</span><span class="dv">3</span><span class="ot">]))</span></code></pre>
+<p>Dette kan virke litt mystisk, og vi skal ikke forklare alt som skjer her nå. Vi vil komme tilbake til dette i senere leksjoner.</p></li>
+<li><p>Om du prøver å kjøre programmet ditt ved å bare skrive <code>bygghus</code> nå vil du få en melding om at du også må oppgi høyde, bredde og dybde. Prøv for eksempel å skrive <code>bygghus 3 5 4</code> for å starte husbyggeroboten.</p></li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

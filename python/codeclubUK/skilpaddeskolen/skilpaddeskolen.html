@@ -1,0 +1,224 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Skilpaddeskolen | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddeskolen</h1></header></div><div class="col-xs-12"><div class="content"><section id="steg-1-flere-firkanter" class="level1 activity">
+<h1>Steg 1: Flere firkanter</h1>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Åpne IDLE-editoren, og åpne en ny fil ved å trykke <code>File &gt; New Window</code>, og la oss begynne.</p>
+<p>Husk at du skal ha to vinduer åpne. Det ene er ‘Python Shell’ og det andre er for å skrive kode i.</p>
+<p>Som sist vil den første linjen alltid være <code>from turtle import *</code> for å fortelle Python at vi vil tegne ved hjelp av skilpadde-biblioteket!</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+<span class="kw">for</span> n in <span class="dt">range</span>(<span class="dv">4</span>):
+    forward(<span class="dv">100</span>)
+    right(<span class="dv">90</span>)</code></pre></li>
+<li><p>Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</p>
+<p>Husk at <code>for n in range(4)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk ‘Tab’ (knappen over Caps-Lock) for å flytte kode.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-forskjellige-firkanter" class="level1 activity">
+<h1>Steg 2: Forskjellige firkanter</h1>
+<p>La oss bruke variabler for å gjøre programmet vårt lettere å lese og lettere å endre, akkurat som vi gjorde i forrige modul.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Endre programmet så det ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+sides = <span class="dv">4</span>
+length = <span class="dv">100</span>
+angle = <span class="dv">360</span>/sides
+
+<span class="kw">for</span> n in <span class="dt">range</span>(sides):
+    forward(length)
+    right(angle)</code></pre></li>
+<li><p>Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</p></li>
+</ul>
+<p>Dette er et litt langt program, men nå kan vi endre det til å tegne hvilken figur vi vil. Problemet er bare at vi er nødt til å klippe og lime programmet for å få det til. Som tidligere kan vi skrive kode for å slippe å gjenta oss selv (programmerere anstrenger seg gjerne litt slik at de kan være late etterpå!). Denne gangen vil vi definere en ny kommando.</p>
+</section>
+</section>
+<section id="steg-3-en-ny-kommando-dukker-opp" class="level1 activity">
+<h1>Steg 3: En ny kommando dukker opp</h1>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi endrer koden og legger til <code>def poly():</code>. Pass på at koden har riktig innrykk (du kan merke den og trykke Tab) og bruk den nye prosedyren. (Å bruke en prosedyre heter å kalle prosedyren).</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+<span class="kw">def</span> poly():
+    sides = <span class="dv">4</span>
+    length = <span class="dv">100</span>
+    angle = <span class="dv">360</span>/sides
+
+    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+
+pencolor(<span class="st">&#39;red&#39;</span>)
+poly()
+right(<span class="dv">180</span>)
+poly()</code></pre></li>
+<li><p>Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</p></li>
+</ul>
+<p>Vi sparte litt tid ved å definere en ny prosedyre i Python, og nå kan vi tegne en rød firkant to ganger, uten å skrive hele greia to ganger. Disse nye kommandoene heter prosedyrer i Python, og de er fine for å slippe å skrive så mye.</p>
+</section>
+</section>
+<section id="steg-4-hvorfor-stoppe-med-firkanter" class="level1 activity">
+<h1>Steg 4: Hvorfor stoppe med firkanter</h1>
+<p>Vi er ikke ferdige ennå - hva med å endre prosedyren så den kan tegne hvilken som helst form? Som med <code>forward</code> og <code>right</code>, kan vi sende verdier inn i prosedyren istedenfor å endre koden hver gang.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Endre koden så den ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+<span class="kw">def</span> poly(sides, length):
+    angle = <span class="dv">360</span>/sides
+
+    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+
+pencolor(<span class="st">&#39;red&#39;</span>)
+poly(<span class="dv">4</span>, <span class="dv">100</span>)
+right(<span class="dv">180</span>)
+pencolor(<span class="st">&#39;blue&#39;</span>)
+poly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
+<li><p>Kjør den og se hva som skjer.</p>
+<p>La oss ta dette litt sakte, for dette er ganske kule greier. Istedenfor å bestemme variablene i prosedyren, sier vi at prosedyren tar noen verdier som har navn, og så bruker vi verdiene der vi trenger dem.</p>
+<p>Vi flyttet noen verdier ut av prosedyren, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste prosedyre, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p></li>
+</ul>
+<p>Å være i stand til å definere nye prosedyrer som kan oppføre seg forskjellig basert på verdiene vi gir inn er et av de kraftigste verktøyene i programmering.</p>
+<section id="tips" class="level3 protip">
+<h3>Tips</h3>
+<p>Vi skiller mellom prosedyrer og funksjoner når vi snakker om dem, men de er ser helt like ut i Python. Det kommer funksjoner i neste kapittel, men vi nevner det allerede nå så du har hørt om det. Forskjellen er at en prosedyre kan gjøre noe med omverdenen, for eksempel tegne noe eller skrive noe på skjermen. Både prosedyrer og funksjoner kan returnere en verdi også, det kommer vi tilbake til, men prosedyren kan finne på å gi forskjellig resultat selv om du gir inn samme verdier. For eksempel kan en prosedyre <code>erDet(&quot;fredag&quot;)</code> svare ja på fredager og nei på lørdager. En funksjon derimot må alltid svare det samme hvis den får de samme verdiene.</p>
+</section>
+</section>
+</section>
+<section id="steg-5-skilpaddestreker" class="level1 activity">
+<h1>Steg 5: Skilpaddestreker</h1>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Selv om skilpadden er en liten robot som kan tegne, kan den også flytte seg uten å tegne. Husk at vi kan bruke <code>penup()</code> og <code>pendown()</code> for å slå av og på at skilpadden setter spor. Åpne en ny Python-fil, og skriv inn koden under:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+
+length = <span class="dv">200</span>
+<span class="kw">for</span> num in <span class="dt">range</span>(<span class="dv">8</span>):
+    forward(length/<span class="dv">16</span>)
+    penup()
+    forward(length/<span class="dv">16</span>)
+    pendown()</code></pre></li>
+<li><p>Dette programmet tegner en stiplet linje over skjermen. Kjør det og sjekk!</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-6-tegne-figurer" class="level1 activity">
+<h1>Steg 6: Tegne figurer</h1>
+<p>Vi kan koble figur-programmet og stiplet-linje-programmet sammen ved å bytte ut kommandoen <code>forward</code> med koden vi har for stiplete linjer. Vi bruker koden for å tegne figurer ytterst, og inni der bruker vi koden for å lage stiplete linjer istedenfor hele streker.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Endre koden så den ser ut som følgende:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+speed(<span class="dv">11</span>)
+shape(<span class="st">&quot;turtle&quot;</span>)
+
+<span class="kw">def</span> dashpoly(sides, length):
+    angle = <span class="dv">360</span>/sides
+
+    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+        <span class="kw">for</span> num in <span class="dt">range</span>(<span class="dv">8</span>):
+            forward(length/<span class="dv">16</span>)
+            penup()
+            forward(length/<span class="dv">16</span>)
+            pendown()
+        right(angle)
+
+pencolor(<span class="st">&#39;red&#39;</span>)
+dashpoly(<span class="dv">4</span>, <span class="dv">100</span>)
+right(<span class="dv">180</span>)
+pencolor(<span class="st">&#39;blue&#39;</span>)
+dashpoly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
+<li><p>Kjør koden og se hva den gjør.</p>
+<p>Vi har to for-løkker inni hverandre, en ytre og en indre. Den ytre løkken <code>for n in range(sides)</code> tegner hver kant av figuren, og hver gang kjører den indre løkken <code>for num in range(8)</code> som tegner stiplete linjer.</p>
+<p>Den ytre løkken bruker variabelen <code>n</code> for å holde styr på hvor mange ganger den har gjentatt seg selv, og den indre løkken bruker variabelen <code>num</code> på tilsvarende måte. Du må bruke forskjellige variabelnavn inni løkken, ellers roter du det bare til.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-7-byggeklosser-for-figurer" class="level1 activity">
+<h1>Steg 7: Byggeklosser for figurer</h1>
+<section id="sjekkliste-6" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>La oss bruke prosedyrer igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+speed(<span class="dv">11</span>)
+shape(<span class="st">&quot;turtle&quot;</span>)
+
+<span class="kw">def</span> dashforward(length):
+    <span class="kw">for</span> num in <span class="dt">range</span>(<span class="dv">8</span>):
+        forward(length/<span class="dv">16</span>)
+        penup()
+        forward(length/<span class="dv">16</span>)
+        pendown()
+
+<span class="kw">def</span> dashpoly(sides, length):
+    angle = <span class="dv">360</span>/sides
+
+    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+        dashforward(length)
+        right(angle)
+
+pencolor(<span class="st">&#39;red&#39;</span>)
+dashpoly(<span class="dv">4</span>, <span class="dv">100</span>)
+right(<span class="dv">180</span>)
+pencolor(<span class="st">&#39;blue&#39;</span>)
+dashpoly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
+<li><p>Kjør koden og se at den gjør akkurat det samme som før.</p></li>
+</ul>
+<section id="tips-1" class="level3 protip">
+<h3>Tips</h3>
+<p>Trikset er at istedenfor å bygge programmer ved å klippe og lime, kan vi definere nye kommandoer og gjenbruke dem. Da blir koden kortere og litt lettere å forstå.</p>
+</section>
+</section>
+</section>
+<section id="steg-8-litt-tilfeldigheter" class="level1 activity">
+<h1>Steg 8: Litt tilfeldigheter</h1>
+<p>Hva om vi gjør litt tilfeldige sprell rett før vi er ferdige? Vi kan be datamaskinen velge et tall for oss, eller velge en farge for oss, litt som om vi kaster terning. Scratch kan dette også, da brukte vi <code>pick</code>.</p>
+<section id="sjekkliste-7" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>I en ny fil, skriv inn følgende:</p>
+<pre class="sourceCode python"><code class="sourceCode python">
+<span class="ch">from</span> turtle <span class="ch">import</span> *
+<span class="ch">from</span> random <span class="ch">import</span> randrange, choice
+colors = [<span class="st">&#39;red&#39;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;green&#39;</span>]
+
+
+<span class="kw">def</span> poly(sides, length):
+    angle = <span class="dv">360</span>/sides
+
+    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+        forward(length)
+        right(angle)
+
+<span class="kw">for</span> count in <span class="dt">range</span>(<span class="dv">10</span>):
+    pencolor(choice(colors))
+    right(randrange(<span class="dv">0</span>,<span class="dv">360</span>))
+    poly(randrange(<span class="dv">3</span>,<span class="dv">9</span>), randrange(<span class="dv">10</span>,<span class="dv">30</span>))</code></pre></li>
+<li><p>Lagre og kjør koden</p>
+<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen <code>from random import randrange, random</code> gir oss to nye prosedyrer, <code>randrange()</code> og <code>choice()</code>.</p>
+<p><code>randrange()</code> plukker ut et tall mellom det laveste og det høyeste tallet vi gir inn, så <code>randrange(1, 10)</code> velger et tall mellom 1 og 9 (Python begynner med 1, og stopper rett før 10).</p>
+<p><code>choice()</code> velger en ting fra listen vi gir inn. En liste er en samling av verdier, for eksempel <code>[1, 2, 3]</code>. I koden ovenfor bruker vi listen <code>colors</code>, som har verdiene <code>'red'</code>, <code>'blue'</code>, and <code>'green'</code>.</p>
+<p>Ved å bruke <code>choice()</code> og <code>randrange()</code> kan vi be datamaskinen om å velge farge, størrelse og form for oss, og det kommer til å bli forskjellig resultat nesten hver eneste gang du kjører programmet.</p></li>
+</ul>
+</section>
+<section id="flere-ting-å-prøve" class="level2 try">
+<h2>Flere ting å prøve</h2>
+<p>Hva med å prøve flere farger, eller å endre tallene? Hva skjer?</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script></body></html>

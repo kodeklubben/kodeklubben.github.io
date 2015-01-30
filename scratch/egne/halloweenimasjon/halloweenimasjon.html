@@ -1,0 +1,264 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Halloweenimasjon | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Halloweenimasjon</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Vi vil her se på hvordan vi kan lage forskjellige animasjoner med et Halloween-tema. Disse kan vi enten dele med vennene våre gjennom Scratch, eller kanskje enda morsommere: Vi kan projisere dem på en gardin, et laken eller en vegg under Halloween.</p>
+<figure>
+<img src="halloweenimasjon.jpg" />
+</figure>
+</section>
+<section id="steg-1-en-første-animasjon" class="level1 activity">
+<h1>Steg 1: En første animasjon</h1>
+<p><em>Vi begynner med å la et skummelt spøkelse fly fram og tilbake over skjermen.</em></p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt prosjekt. Slett kattefiguren, ved for eksempel å klikke på <img src="../../bilder/slett.png" alt="Slett" /> i menylinjen øverst på skjermen, og deretter på katten.</p></li>
+<li><p>Velg en ny figur ved å klikke <img src="../../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" />. Finn et skummelt spøkelse! Vi har brukt <code>Fantasi/Ghost2</code>.</p></li>
+<li><p>Trykk på <code class="blockmotion">i</code> øverst til venstre på den nye spøkelsesfiguren din. Gi den navnet <code>Spøkelse</code>.</p>
+<figure>
+<img src="spokelse.png" />
+</figure></li>
+<li><p>Nå skal vi lage et enkelt skript som får spøkelset til å fly over skjermen. Bygg sammen en <code class="blockcontrol">gjenta</code>- og en <code class="blockmotion">gå</code>-kloss på denne måten:</p>
+<pre class="blocks"><code>    gjenta (200) ganger
+        gå (5) steg
+    slutt</code></pre></li>
+<li><p>Klikk på skriptet ditt for å starte animasjonen. Flytter spøkelset ditt på seg? Ser du et problem?</p></li>
+<li><p>Spøkelset ser ut som om det setter seg fast når det kommer til kanten! Dette kan vi fikse med en <code class="blockmotion">sprett tilbake</code>-kloss:</p>
+<pre class="blocks"><code>    gjenta (200) ganger
+        gå (5) steg
+        sprett tilbake ved kanten
+    slutt</code></pre></li>
+<li><p>Klikk på skriptet ditt igjen. Virker det bedre nå?</p></li>
+<li><p>Hmm … Spøkelset flyr opp-ned … Det ser litt rart ut. Vi kan si at spøkelset bare skal snu seg sidelengs med en <code class="blockmotion">begrens rotasjon</code>-kloss. Denne legger vi helt først i skriptet på denne måten:</p>
+<pre class="blocks"><code>    begrens rotasjon [vend sideveis v]
+    gjenta (200) ganger
+        gå (5) steg
+        sprett tilbake ved kanten
+    slutt</code></pre></li>
+<li><p>Til slutt, det ser skumlere ut med en svart bakgrunn! Klikk på <code>Scene</code> helt til venstre på skjermen, og deretter på <code class="blocklightgrey">Bakgrunner</code>-fanen nesten øverst på skjermen.</p></li>
+<li><p>Klikk på malingsspannet, <img src="../../bilder/fyll-med-farge.png" alt="Fyll med farge" />, og deretter på den hvite bakgrunnen for å male denne svart.</p></li>
+<li><p>Gi bakgrunnen navnet <code>Svart</code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-enda-en-animasjon" class="level1 activity">
+<h1>Steg 2: Enda en animasjon</h1>
+<p><em>For vår andre animasjon vil en demon komme flyvende mot oss.</em></p>
+<figure>
+<img src="demon.png" />
+</figure>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny figur ved å klikke <img src="../../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" />. Vi har brukt <code>Fantasi/Ghoul</code>. Endre navnet på figuren til <code>Demon</code>.</p></li>
+<li><p>For at det skal se ut som demonen kommer flyvende mot oss, vil vi at den skal starte veldig liten, og deretter bli større. Lag dette skriptet.</p>
+<pre class="blocks"><code>    sett størrelse til (0) %
+    gjenta (100) ganger
+        endre størrelse med (4)
+    slutt</code></pre></li>
+<li><p>Trykk på skriptet for å se om det virker.</p></li>
+<li><p>Et lite problem er at spøkelset også ligger på skjermen. Det vil være bedre å skjule spøkelset når det ikke animeres. Klikk på spøkelsesfiguren, og legg til en <code class="blocklooks">vis</code>- og en <code class="blocklooks">skjul</code>-kloss i skriptet:</p>
+<pre class="blocks"><code>    begrens rotasjon [vend sideveis v]
+    vis
+    gjenta (200) ganger
+        gå (5) steg
+        sprett tilbake ved kanten
+    slutt
+    skjul</code></pre></li>
+<li><p>Klikk på spøkelset sitt skript. Skjules spøkelset etter at det er ferdig med å fly frem og tilbake?</p></li>
+<li><p>Vi kan også gjøre det samme med demonen sitt skript. Klikk på demon-figuren, og endre skriptet til</p>
+<pre class="blocks"><code>    sett størrelse til (0) %
+    vis
+    gjenta (100) ganger
+        endre størrelse med (4)
+    slutt
+    skjul</code></pre></li>
+<li><p>For å få litt variasjon vil vi at demonen skal animeres over en skummel skog-bakgrunn. Klikk på <img src="../../bilder/bakgrunn-fra-bibliotek.png" alt="Velg en ferdig bakgrunn" /> helt til venstre på skjermen, og velg bakgrunnen <code>Utendørs/forest</code>. Gi bakgrunnen navnet <code>Skog</code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-bytte-bakgrunner" class="level1 activity">
+<h1>Steg 3: Bytte bakgrunner</h1>
+<p><em>Vi vil nå se på hvordan vi lett kan bytte bakgrunn når vi starter en animasjon.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<p>Hvis vi for eksempel vil vise spøkelsesanimasjonen på svart bakgrunn må vi først klikke <code>Scene</code>, deretter <code>Bakgrunner</code>-fanen og den svarte bakgrunnen. Videre må vi klikke på spøkelsesfiguren, <code>Skript</code>-fanen og til slutt på selve skriptet. Dette er veldig tungvint! Vi vil nå se hvordan vi kan bruke meldinger for å gjøre dette mye enklere.</p>
+<p>Meldinger gjør det lett å få flere ting til å skje samtidig. Vi skal nå først lage en melding, <code>Animer spøkelse</code>. Vi vil at denne meldingen skal både bytte bakgrunnen og starte spøkelsesanimasjonen.</p>
+<ul>
+<li><p>Klikk på <code>Scene</code> og lag dette skriptet:</p>
+<pre class="blocks"><code>    når jeg mottar [Animer spøkelse v]
+    bytt bakgrunn til [Svart v]</code></pre></li>
+<li><p>Klikk på spøkelsesfiguren og endre skriptet ved å legge til en kloss på toppen:</p>
+<pre class="blocks"><code>    når jeg mottar [Animer spøkelse v]
+    begrens rotasjon [vend sideveis v]
+    vis
+    gjenta (200) ganger
+        gå (5) steg
+        sprett tilbake ved kanten
+    slutt
+    skjul</code></pre></li>
+<li><p>Nå venter skriptene våre på meldingen. For å teste kan vi dra klossen</p>
+<pre class="blocks"><code>    send melding [Animer spøkelse v]</code></pre>
+<p>ut ved siden av det store skriptet til spøkelset.</p></li>
+<li><p>Send meldingen ved å klikke på <code class="blockevents">send melding</code>-klossen. Animeres spøkelset over en svart bakgrunn?</p></li>
+<li><p>Vi vil nå gjøre det samme for demonen. Legg til et nytt skript på scenen:</p>
+<pre class="blocks"><code>    når jeg mottar [Animer demon v]
+    bytt bakgrunn til [Skog v]</code></pre></li>
+<li><p>Klikk på demonfiguren og endre skriptet slik</p>
+<pre class="blocks"><code>    når jeg mottar [Animer demon v]
+    sett størrelse til (0) %
+    vis
+    gjenta (100) ganger
+        endre størrelse med (4)
+    slutt
+    skjul</code></pre></li>
+<li><p>Legg også til klossen</p>
+<pre class="blocks"><code>    send melding [Animer demon v]</code></pre>
+<p>for å teste at animasjonen fungerer.</p></li>
+<li><p>Send meldingene som animerer spøkelset og demonen. Starter animasjonene når du klikker på meldingene? Byttes bakgrunnene riktig?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-koble-sammen-animasjonene" class="level1 activity">
+<h1>Steg 4: Koble sammen animasjonene</h1>
+<p><em>Nå skal vi se hvordan vi kan koble sammen animasjonene slik at de vises i sekvens etter hverandre.</em></p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi begynner med å lage en <code class="blockcontrol">for alltid</code>-løkke på scenen, som sender meldinger:</p>
+<pre class="blocks"><code>    for alltid
+        send melding [Animer spøkelse v] og vent
+        send melding [Animer demon v] og vent
+    slutt</code></pre></li>
+<li><p>Klikk på skriptet for å teste det. Trykk den røde stopp-sirkelen for å stoppe animasjonen. Vises animasjonene etter hverandre i en evig løkke?</p></li>
+<li><p>Det vil se litt bedre ut med en kort pause mellom animasjonene. Legg til et par <code class="blockcontrol">vent</code>-klosser i skriptet.</p>
+<pre class="blocks"><code>    for alltid
+        send melding [Animer spøkelse v] og vent
+        vent (1) sekunder
+        send melding [Animer demon v] og vent
+        vent (1) sekunder
+    slutt</code></pre></li>
+<li><p>For å gjøre det enklere å starte animasjonen legger vi til en kloss som gjør at animasjonen starter når det grønne flagget øverst på skjermen klikkes.</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        send melding [Animer spøkelse v] og vent
+        vent (1) sekunder
+        send melding [Animer demon v] og vent
+        vent (1) sekunder
+    slutt</code></pre></li>
+<li><p>Vi kan også bruke grønt flagg-klosser på figurene for å være sikre på at de starter animasjonen på riktig måte. Legg dette skriptet på spøkelset:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    skjul
+    gå til x: (0) y:(0)</code></pre></li>
+<li><p>Legg et tilsvarende skript på demonen:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    skjul
+    gå til x: (0) y:(0)</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Kjøres begge animasjonene etter hverandre? Dukker figurene opp når de skal?</p></li>
+<li><p>Endre gjerne i animasjonene slik at du synes de ser bedre ut. Kanskje du vil ha litt andre figurer? Hvordan kan du få figurene til å bevege seg raskere? Kanskje litt mer tilfeldig? Prøv deg frem!</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-tegn-egne-figurer" class="level1 activity">
+<h1>Steg 5: Tegn egne figurer</h1>
+<p><em>Vi vil nå lage en tredje animasjon hvor vi tegner en figur på egen hånd</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny figur ved å trykke på <img src="../../bilder/tegn-ny.png" alt="Tegn ny figur" /> ved siden av <code>Ny   figur</code>. Du kan tegne hva du vil. Her har vi tegnet et Jack-O’-Lantern-gresskar.</p>
+<figure>
+<img src="gresskar.png" />
+</figure></li>
+<li><p>Lag en kopi av drakten du nettopp tegnet ved å høyreklikke på miniatyren under <code>Ny drakt</code>-overskriften og velg <code>lag en kopi</code>.</p>
+<figure>
+<img src="kopier_gresskar.png" />
+</figure></li>
+<li><p>Endre litt på den kopierte drakten, slik at du får to drakter som er ganske, men ikke helt, like. Vi vil nå animere figuren ved å bytte mellom de to draktene.</p></li>
+<li><p>Klikk på <code class="blocklightgrey">Skript</code>-fanen og legg på dette skriptet:</p>
+<pre class="blocks"><code>    når jeg mottar [Animer gresskar v]
+    vis
+    gjenta (50) ganger
+        neste drakt
+        vent (tilfeldig tall fra (0.1) til (0.3)) sekunder
+    slutt
+    skjul</code></pre>
+<p>Bytt gjerne ut meldingsnavnet <code>Animer gresskar</code> med noe som passer for din figur. Klikk på skriptet (eller send en melding) for å teste animasjonen. Ser det bra ut?</p></li>
+<li><p>Legg også til startposisjonen for den figuren:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    skjul
+    gå til x: (0) y: (0)</code></pre></li>
+<li><p>Gå så til scenen og legg på et skript som bytter til riktig bakgrunn for den siste animasjonen. Her har vi brukt den svarte bakgrunnen.</p>
+<pre class="blocks"><code>    når jeg mottar [Animer gresskar v]
+    bytt bakgrunn til [Svart v]</code></pre></li>
+<li><p>Til slutt legger vi denne siste animasjonen til i hovedløkken som viser animasjonene:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        send melding [Animer spøkelse v] og vent
+        vent (1) sekunder
+        send melding [Animer demon v] og vent
+        vent (1) sekunder
+        send melding [Animer gresskar v] og vent
+        vent (1) sekunder
+    slutt</code></pre></li>
+</ul>
+</section>
+</section>
+<section id="steg-6-enda-flere-animasjoner" class="level1 activity">
+<h1>Steg 6: Enda flere animasjoner?</h1>
+<section id="prøv-selv" class="level3 try">
+<h3>Prøv selv</h3>
+<p>Vi har nå sett noen eksempler på hvordan vi kan lage skumle halloween-animasjoner. Prøv å bruk lignende teknikker for å lage dine egne animasjoner!</p>
+</section>
+<section id="legg-ut-prosjektet" class="level2 save">
+<h2>Legg ut prosjektet</h2>
+<p>Når du er fornøyd med animasjonene dine kan du dele det med familie og venner, ved å trykke <code>Legg ut</code>.</p>
+</section>
+</section>
+<section id="projiser-animasjonene" class="level1 activity">
+<h1>Projiser animasjonene</h1>
+<p><em>Vi avslutter med å se på hvordan du kan skremme nabolaget med de skumle animasjonene dine slik at alle kan se dem.</em></p>
+<p>Det enkleste er å sette skjermen i vinduet, og klikke på firkanten for fullskjermvisning øverst til venstre under Scratch-logoen. Men hvis du kan låne en prosjektør til Halloween kan du vise animasjonen utendørs, på en vegg eller på et gardin eller laken, slik bildet i begynnelsen viser. I begge tilfeller er det litt dumt at Scratch viser animasjonen med en hvit ramme på skjermen. For å få en bedre visning kan du følge tipsene nedenfor.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Først lager vi en fil som viser animasjonen din i et større vindu med svart bakgrunn. Dette gjør vi med litt HTML-kode. HTML er det språket som brukes til å lage nettsider.</p>
+<p>Last ned filen <a href="http://kodeklubben.github.io/nb-NO/scratch.1/06/projiser.html">http://kodeklubben.github.io/nb-NO/scratch.1/06/projiser.html</a>. Etter at du har gått til denne adressen kan du velge <code>Fil &gt; lagre som</code>, eller noe som ligner, i menyen til nettleseren din. Legg filen et sted du finner den igjen.</p></li>
+<li><p>Åpne filen i Notepad eller et tilsvarende program. Du vil se en tekst som ser slik ut:</p>
+<pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;html&gt;</span>
+<span class="kw">&lt;head&gt;</span>
+<span class="kw">&lt;title&gt;</span>Halloweenimasjon<span class="kw">&lt;/title&gt;</span>
+<span class="kw">&lt;/head&gt;</span>
+
+<span class="kw">&lt;body</span><span class="ot"> bgcolor=</span><span class="st">&quot;#000000&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;div</span><span class="ot"> style=</span><span class="st">&quot;overflow-y: hidden; height: 890px; margin-left: auto; margin-right: auto; width: 1180px;&quot;</span><span class="ot"> id=</span><span class="st">&quot;applet&quot;</span><span class="kw">&gt;</span>
+<span class="kw">&lt;iframe</span><span class="ot"> style=</span><span class="st">&quot;margin-top:-56px; margin-left: -10px&quot;</span><span class="ot"> allowtransparency=</span><span class="st">&quot;true&quot;</span><span class="ot"> width=</span><span class="st">&quot;1200&quot;</span><span class="ot"> height=</span><span class="st">&quot;960&quot;</span><span class="ot"> src=</span><span class="st">&quot;http://scratch.mit.edu/projects/embed/30923784/?autostart=true&quot;</span><span class="ot"> frameborder=</span><span class="st">&quot;0&quot;</span><span class="ot"> scrolling=</span><span class="st">&quot;no&quot;</span><span class="ot"> seamless=</span><span class="st">&quot;seamless&quot;</span><span class="ot"> allowfullscreen=</span><span class="st">&quot;&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span>
+<span class="kw">&lt;/div&gt;</span>
+<span class="kw">&lt;/body&gt;</span>
+<span class="kw">&lt;/html&gt;</span></code></pre></li>
+<li><p>Gjemt inne i denne teksten står det et Scratch-prosjektnummer. I dette tilfelle er nummeret <code>30923784</code>. Du må bytte dette nummeret med prosjektnummeret ditt.</p></li>
+</ul>
+<section id="prosjektnummer" class="level3 protip">
+<h3>Prosjektnummer</h3>
+<p>For å finne prosjektnummeret ditt kan du se i adressefeltet i nettleseren din mens du jobber med prosjektet. Som en del av adressen finner du et 8-sifret tall. Dette er ditt prosjektnummer.</p>
+</section>
+</section>
+<section id="sjekkliste-6" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Bytt <code>30923784</code> med ditt prosjektnummer og lagre filen.</p></li>
+<li><p>I nettleseren din kan du nå åpne filen du nettopp endret. Velg <code>Fil &gt; åpne fil</code>, eller noe som ligner, i nettleseren din. Velg den riktige filen.</p></li>
+<li><p>Du skal nå se animasjonen din på svart bakgrunn.</p></li>
+<li><p>Koble datamaskinen din til en prosjektør, og vis animasjonen din på et hvitt laken, en gardin eller kanskje en vegg!</p></li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Torbjørn Skauli</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

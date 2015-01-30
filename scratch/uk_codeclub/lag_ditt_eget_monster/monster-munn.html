@@ -1,0 +1,58 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Monster - Pratende Munn | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Monster - Pratende Munn</h1></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>For å få monsteret til å snakke, kan du bruke en <code class="blocklooks">si</code>-kloss.</p>
+<pre class="blocks"><code>    når [mellomrom v] trykkes
+    si [Hallo!] i (2) sekunder</code></pre></li>
+<li><p>For å gjøre det litt mer imponerende, kan du få monsteret til å <strong>åpne</strong> og <strong>lukke munnen</strong> mens det prater. For å gjøre dette, rediger figuren som inneholder munnen - opprett en ny <code>drakt</code> som har lukket munn. Ved å bytte mellom de to, kan du animere at munnen åpner og lukker seg.</p>
+<pre class="blocks"><code>    gjenta (8) ganger
+        vent (0.1) sekunder
+        bytt drakt til [munnLukket v]
+        vent (0.1) sekunder
+        bytt drakt til [munnÅpen v]
+    slutt</code></pre></li>
+<li><p>For å koble de to skriptene sammen, kan du få <code class="blocklooks">si</code>-klossen til å sende en melding, som den andre blokken kan reagere på.</p>
+<pre class="blocks"><code>    når [mellomrom v] trykkes
+    send melding [snakk v]
+    si [Hallo!] i (2) sekunder
+
+    når jeg mottar [snakk v]
+    gjenta (8) ganger
+        vent (0.1) sekunder
+        bytt drakt til [munnLukket v]
+        vent (0.1) sekunder
+        bytt drakt til [munnÅpen v]
+    slutt</code></pre></li>
+<li><p>For å gjøre det litt mer fleksibelt, bruk en variabel for å kontrollere <code class="blockdata">snakketid</code>, hvor lenge monsteret sier noe, og for å kontrollere hvor mange ganger animasjonsløkken er gjentatt.</p>
+<pre class="blocks"><code>    når [mellomrom v] trykkes
+    sett [snakketid v] til (2)
+    send melding [snakk v]
+    si [Hallo!] i (snakketid) sekunder
+
+    når [a v] trykkes
+    sett [snakketid v] til (4)
+    send melding [snakk v]
+    si [Noe litt lengre] i (snakketid) sekunder
+
+    når jeg mottar [snakk v]
+    gjenta ((snakketid) * (4)) ganger
+        vent (0.1) sekunder
+        bytt drakt til [munnLukket v]
+        vent (0.1) sekunder
+        bytt drakt til [munnÅpen v]
+    slutt</code></pre></li>
+</ul>
+<p><strong>(Merk at vi multipliserer snakketid med 4 for å være sikre på at løkken gjentas nok ganger)</strong></p>
+<ul>
+<li><p>Du kan også få monsteret ditt til å si lyder ved å bruke en av lydklossene. Husk å importere lydene under <code>Lyd</code>-fanen.</p>
+<pre class="blocks"><code>    når jeg mottar [snakk v]
+    spill lyden [Screech v]</code></pre></li>
+</ul>
+<p><strong>Prøv å legge til lyder til andre hendelser, du kan bruke en skummel svevende lyd for et spøkelse som flyr rundt på skjermen! Har du mikrofon på datamaskinen kan du ta opp dine egne lyder, overrask de andre ved å ta opp et høyt monster BRØØØØØØØØØL!!!</strong></p>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

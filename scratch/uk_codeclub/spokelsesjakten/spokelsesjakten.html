@@ -1,0 +1,205 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Spøkelsesjakten | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Spøkelsesjakten</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Dette prosjektet er inspirert av tivolispillet <strong>Whack-a-mole</strong>, hvor man slår muldvarper ned igjen i hullene sine. I vårt spill er det spøkelsene som blir borte når vi klikker på dem. Målet er å klikke bort flest mulig i løpet av 30 sekunder.</p>
+<figure>
+<img src="spokelsesjakten.png" />
+</figure>
+</section>
+<section id="steg-1-lag-et-flyvende-spøkelse" class="level1 activity">
+<h1>Steg 1: Lag et flyvende spøkelse</h1>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt Scratch-prosjekt.</p></li>
+<li><p>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code></p></li>
+<li><p>Endre bakgrunnen til <code>Natur/woods</code>.</p></li>
+<li><p>For å legge til et spøkelse klikker du på <img src="../../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" />-knappen. Velg <code>Fantasi/Ghost1</code>-figuren.</p></li>
+<li><p>Gi spøkelset navnet <code>spøkelse1</code>, ved å klikke på <code class="blockmotion">i</code> på figuren.</p></li>
+</ul>
+<p>Du skal nå <strong>lage en variabel</strong> som styrer hvor fort spøkelset beveger seg. Denne kan vi senere bruke til å endre hastigheten når spillet er i gang.</p>
+<ul>
+<li><p>Under <code class="blocklightgrey">Skript</code>, trykk på <code class="blockdata">Data</code> og så <code>Lag en variabel</code>. Kall variabelen <code>hastighet</code>. Huk av der det står <code>For denne figuren</code>.</p></li>
+<li><p>På scenen skal variabelen hete <code>spøkelse1: hastighet</code>. Hvis den bare heter <code>hastighet</code>, så slett den og legg den til en gang til.</p></li>
+<li><p>Fjern avhukingen ved siden av variabelen, slik at den ikke vises på scenen: <img src="hastighet.png" /></p></li>
+<li><p>Vi vil at spøkelset skal bevege seg når spillet starter. Det gjør vi ved å lage følgende skript:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    sett [hastighet v] til (5)
+    for alltid
+        gå (hastighet) steg
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test Prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Flyr spøkelset over skjermen?</p></li>
+<li><p>Hvorfor sitter spøkelset fast når det treffer kanten på skjermen?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>For å unngå at spøkelset sitter fast i kanten må vi få det til å snu når det treffer den. Dette gjøres ved å legge til klossen <code class="blockmotion">sprett   tilbake ved kanten</code>. Skriptet ser da slik ut:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    sett [hastighet v] til (5)
+    for alltid
+        gå (hastighet) steg
+        sprett tilbake ved kanten
+    slutt</code></pre></li>
+<li><p>For å hindre at spøkelset snur seg opp-ned, klikk på <img src="../../bilder/rotasjonsmate-hv.png" alt="venstre/høyre" />-knappen i spøkelsets infoboks, <code class="blockmotion">i</code>.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Flyr spøkelset fram og tilbake?</p></li>
+<li><p>Flyr spøkelset riktig vei?</p></li>
+</ul>
+</section>
+<section id="ting-å-prøve" class="level2 try">
+<h2>Ting å prøve</h2>
+<ul>
+<li><p><strong>Endre hastighetsvariabelen</strong>, slik at spøkelset går raskere eller saktere.</p></li>
+<li><p>Hvordan kan vi få spøkelset til å <strong>fly fortere jo lenger det flyr?</strong> (Dette er nokså vanskelig, så ikke vær bekymret hvis du ikke skjønner hvordan. Du vil få flere hint underveis.)</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-få-spøkelset-til-å-dukke-opp-og-forsvinne" class="level1 activity">
+<h1>Steg 2: Få spøkelset til å dukke opp og forsvinne</h1>
+<p><em>For å gjøre spillet morsommere vil vi få spøkelset til å dukke opp og forsvinne.</em></p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi lager et nytt skript, som skal kjøre samtidig med skriptet som beveger på spøkelset. Det nye skriptet <strong>viser spøkelset en tilfeldig periode</strong> og <strong>gjemmer det deretter bort i en tilfeldig periode</strong>. Dette skal skje om og om igjen, frem til spillet er slutt. Slik lager du skriptet:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        vis
+        vent (tilfeldig tall fra (3) til (5)) sekunder
+        skjul
+        vent (tilfeldig tall fra (2) til (4)) sekunder
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-2" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Flytter spøkelset seg fra side til side?</p></li>
+<li><p>Forsvinner det og dukker opp igjen helt tilfeldig?</p></li>
+</ul>
+</section>
+<section id="ting-å-prøve-1" class="level2 try">
+<h2>Ting å prøve</h2>
+<ul>
+<li>Prøv å <strong>endre tallene i koden</strong> der det står <code class="blockoperators">tilfeldig tall fra _   til _</code>. Hva skjer hvis du velger veldig store eller små tall? (Dette gir deg kanskje et nytt hint for hvordan vi skal få spøkelset til å gå fortere jo lenger man spiller.)</li>
+</ul>
+</section>
+</section>
+<section id="steg-3-tryll-bort-spøkelset-med-et-klikk" class="level1 activity">
+<h1>Steg 3: Tryll bort spøkelset med et klikk!</h1>
+<p><em>For å gjøre dette til et ordentlig spill må vi gi spilleren noe å gjøre - for eksempel å klikke bort spøkelset. Når det skjer vil vi også at det skal komme en stilig tryllelyd!</em></p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Hent lyden <code>Elektronisk/fairydust</code> fra <code class="blocklightgrey">Lyder</code>-fanen.</p></li>
+<li><p>Lag skriptet som får <strong>spøkelset til å forsvinne</strong> når det blir klikket på:</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    skjul
+    spill lyden [fairydust v]</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-3" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Forsvinner spøkelset med en tryllelyd når du klikker på det?</li>
+</ul>
+</section>
+<section id="ting-å-prøve-2" class="level2 try">
+<h2>Ting å prøve</h2>
+<ul>
+<li>Spør de voksne om du kan ta opp en egen lyd. Denne kan du bruke i stedet for tryllelyden.</li>
+</ul>
+</section>
+</section>
+<section id="steg-4-legg-til-tid-og-poeng" class="level1 activity">
+<h1>Steg 4: Legg til tid og poeng</h1>
+<p><em>Vi har et spøkelse å trylle bort, så nå vil vi ha poeng for å gjøre det! Vi vil også ha en tidsfrist, slik at det er om å gjøre å få flest mulig poeng på denne tiden. Vi løser begge deler ved å bruke variabler.</em></p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny variabel som heter <code class="blockdata">Poeng</code>. Denne skal gjelde <code>For alle figurer</code>. Legg til en ny kloss som gjør at <code class="blockdata">Poeng</code>-variabelen økes med 1 poeng for hver gang spilleren klikker på spøkelset.</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    skjul
+    spill lyden [fairydust v]
+    endre [Poeng v] med (1)</code></pre></li>
+<li><p>Klikk på <code>Scene</code> og lag en ny variabel som heter <code>Tid</code>. La variablen vises på skjermen.</p></li>
+<li><p>Lag et nytt skript som setter <code class="blockdata">Tid</code>-variabelen til <strong>30</strong> og <code>Poeng</code>-variablen til <strong>0</strong> når det grønne flagget klikkes.</p></li>
+<li><p>Bruk så en <code class="blockcontrol">gjenta til</code>-kloss for å vente i <strong>1</strong> sekund og deretter redusere tiden med 1 sekund. Denne skal kjøre fram til tiden er ute. Til slutt stopper du hele spillet med en <code class="blockcontrol">stopp alle</code>-kloss.</p>
+<pre class="blocks"><code>    Når grønt flagg klikkes
+    sett [Tid v] til (30)
+    sett [Poeng v] til (0)
+    gjenta til ((tid) = (0))
+        vent (1) sekunder
+        endre [Tid v] med (-1)
+    slutt
+    stopp [alle v]</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-4" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+</section>
+<section id="ting-å-prøve-3" class="level2 try">
+<h2>Ting å prøve</h2>
+<ul>
+<li>Hvordan kan du få spøkelset til å gå fortere etter at spillet er i gang?</li>
+</ul>
+</section>
+<section id="lagre-prosjektet" class="level2 save">
+<h2>Lagre prosjektet</h2>
+<ul>
+<li><strong>Bra jobba!</strong> Nå er du egentlig ferdig med spillet, men prøv deg gjerne på neste steg også.</li>
+</ul>
+</section>
+<section id="en-ekstra-utfordring-flere-spøkelser" class="level2 challenge">
+<h2>En ekstra utfordring: Flere spøkelser!</h2>
+<p><em>Hvis ett spøkelse er bra, må vel flere være enda bedre! La oss ha tre spøkelser flyvende rundt!</em></p>
+<ul>
+<li><p><strong>Lag flere spøkelser</strong> ved å høyreklikke på det du allerede har, og så kopiere dette.</p></li>
+<li><p><strong>La spøkelsene få ulik størrelse</strong>. Dette gjør du ved å bruke én av knappene under. Den til venstre forstørrer figuren og den til høyre forminsker: <img src="endre-storrelse.png" /></p></li>
+<li><p>Du kan også <strong>endre spøkelsenes flyvefart</strong>. Dette gjøres i <code class="blockdata">hastighet</code>-variabelen i det øverste skriptet for hver enkelt figur.</p></li>
+<li><p>Til slutt kan du <strong>spre spøkelsene</strong> litt bedre ut på scenen. Dette gjør du ved å klikke og dra figurene rundt i selve skjermbildet.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-5" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Har du nå tre spøkelser som flyr fra side til side?</p></li>
+<li><p>Som plutselig forsvinner og dukker opp igjen?</p></li>
+<li><p>Forsvinner de når du klikker på dem?</p></li>
+</ul>
+<p>Gratulerer! Da har du gjort alt riktig!</p>
+</section>
+<section id="ting-å-prøve-4" class="level2 try">
+<h2>Ting å prøve</h2>
+<ul>
+<li><p>Hvor mange spøkelser synes du spillet fungerer best med? <strong>Legg til flere</strong> og prøv!</p></li>
+<li><p>Klarer du å få spøkelsene til <strong>å se forskjellige ut</strong>? Klikk på <code class="blocklightgrey">Drakter</code> og prøv deg frem. Du kan også velge noen av klossene under <code class="blocklooks">Utseende</code>.</p></li>
+<li><p>Kan du få spøkelsene til <strong>å bli verdt forskjellige antall poeng?</strong> Hva med å få den minste og raskeste til å gi 10 poeng?</p></li>
+</ul>
+</section>
+<section id="lagre-prosjektet-1" class="level2 save">
+<h2>Lagre prosjektet</h2>
+<p>Bra jobba! Nå er du ferdig, og det er på tide med litt seriøs spilling. Husk også at du kan dele spillet med vennene dine. Det gjør du ved å klikke på <code>Legg ut</code> i toppmenyen.</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>

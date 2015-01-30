@@ -1,0 +1,127 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Julekort | kodeklubben</title><link href="../../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Julekort</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Vi skal lage et julekort i Scratch. Det skal ha noen enkle funksjoner og animasjoner. Når det er ferdig vil det se omtrent slik ut.</p>
+<figure>
+<img src="julekort.png" />
+</figure>
+</section>
+<section id="steg-1-endre-bakgrunn-og-finne-figurer" class="level1 activity">
+<h1>Steg 1: Endre bakgrunn og finne figurer</h1>
+<p>Når du er klar til å starte velger du <code>Programmering</code> i menyen øverst på siden <a href="http://scratch.mit.edu/">http://scratch.mit.edu/</a>. Da kommer vi inn i Scratch.</p>
+<figure>
+<img src="programmering.png" />
+</figure>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Klikk på scenen ved siden av kattefiguren <code>Sprite1</code> i vinduet for figurer. Trykk på <img src="../../bilder/bakgrunn-fra-bibliotek.png" /> for å importere en ferdig bakgrunn. Velg den bakgrunnen du vil. Slett deretter den tomme bakgrunnen som ligger der.</p>
+<figure>
+<img src="ny_bakgrunn.png" />
+</figure></li>
+<li><p>Slett kattefiguren <code>Sprite1</code> ved å høyreklikke på ham og slette.</p></li>
+<li><p>Velg nye figurer fra biblioteket. Legg til isbjørnen, snømannen og juletreet.</p>
+<figure>
+<img src="velg_figurer.png" />
+</figure></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-legge-til-kode" class="level1 activity">
+<h1>Steg 2: Legge til kode</h1>
+<p>Nå skal vi få figurene til å gjøre ting når de blir klikket på.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg isbjørnen og fanen <code class="blocklightgrey">Skript</code> og lag denne koden. Når isbjørnen blir klikket på skal den si <code>God jul!</code>. Deretter skal den skifte utseende hvert sekund, 10 ganger.</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    si [God jul!] i (2) sekunder
+    gjenta (10) ganger
+        neste drakt
+        vent (1) sekunder
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-ditt" class="level2 flag">
+<h2>Test prosjektet ditt</h2>
+<p><strong>Klikk på isbjørnen og se om koden din virker.</strong></p>
+<ul>
+<li><p>Sier isbjørnen <code>God jul!</code>?</p></li>
+<li><p>Forandrer isbjørnen stilling?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg snømannen og fanen <code>Skript</code> og lag denne koden. Snømannen skal spørre etter navnet ditt. Den setter svaret inn i en ny setning. Deretter skal den skifte farge.</p>
+<pre class="blocks"><code>    når denne figuren klikkes
+    spør [Hva er navnet ditt?] og vent
+    si (sett sammen [God jul ] (svar)) i (2) sekunder
+    for alltid
+        endre [farge v] effekt med (25)
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-ditt-1" class="level2 flag">
+<h2>Test prosjektet ditt</h2>
+<p><strong>Klikk på snømannen og se om koden din virker.</strong></p>
+<ul>
+<li><p>Spør snømannen om navnet ditt?</p></li>
+<li><p>Svarer snømannen med navnet ditt når du har skrevet det inn?</p></li>
+<li><p>Forandrer snømannen farge?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg juletreet og fanen <code class="blocklightgrey">Skript</code> og lag denne koden. Nå skal juletreet skifte farge og utseende.</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        vent (0.3) sekunder
+        endre [farge v] effekt med (25)
+        neste drakt
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-ditt-2" class="level2 flag">
+<h2>Test prosjektet ditt</h2>
+<p><strong>Trykk på det grønne flagget og se om alt virker.</strong></p>
+<ul>
+<li><p>Endrer treet farge?</p></li>
+<li><p>Danser treet fra side til side?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-har-du-ledig-tid-sier-du" class="level1 activity">
+<h1>Steg 3: Har du ledig tid, sier du?</h1>
+<p>Da har du jobbet godt! Om du fortsatt har ledig tid kan du:</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Legge til din egen velkomsthilsen, for eksempel “God jul” eller du kan synge din egen julesang.</p>
+<p>Klikk på <code>Scene</code>, og velg fanen <code class="blocklightgrey">Lyder</code>.</p>
+<figure>
+<img src="lyder.png" />
+</figure>
+<p>Ta op din egen lyd, og gi den et navn, for eksempel <code>julehilsen</code>. Gå deretter inn på <code class="blocklightgrey">Skript</code>, og legg inn følgende kode:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    spill lyden [julehilsen v] til den er ferdig</code></pre></li>
+<li><p>Kanskje finne på noen andre morsomme animasjoner? Snømannen kan danse eller turne litt? Kan vi ha snakkende eller hoppende gale julepresanger? Du bestemmer!</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-lagre-og-publisere" class="level1 activity">
+<h1>Steg 4: Lagre og publisere</h1>
+<p>Gi julekortet ditt et navn. Velg deretter <code>Lagre nå</code> fra <code>Fil</code>menyen.</p>
+<figure>
+<img src="lagre.png" />
+</figure>
+<p>Deretter kan du publisere julekortet ditt ved å velge <code>Legg ut</code>.</p>
+<figure>
+<img src="leggut.png" />
+</figure>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.no">CC-BY 4.0 Internasjonal</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Espen Clausen</p>
+</div></div></div></div></div><script src="../../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>
