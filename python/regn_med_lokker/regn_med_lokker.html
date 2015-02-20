@@ -1,0 +1,49 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Regn med løkker | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Regn med løkker</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1">
+<h1>Introduksjon</h1>
+<p>En ting som mennesker ikke er så flinke til, men som datamaskiner er eksperter på, er å gjenta noe mange ganger etter hverandre. I python kan vi gjøre dette med løkker, og dere vil snart se at dette kan spare oss for mye tid og skriving.</p>
+</section>
+<section id="hello-world" class="level1 activity">
+<h1>Hello world!</h1>
+<p>La oss ta et eksempel der vi vil ha Python til å si <strong>Hei!</strong> 100 ganger. En mulighet er da å sette i gang å skrive:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="dt">print</span>(<span class="st">&quot;Hello  world!&quot;</span>)
+<span class="dt">print</span>(<span class="st">&quot;Hello  world!&quot;</span>)
+<span class="dt">print</span>(<span class="st">&quot;Hello  world!&quot;</span>)
+...</code></pre>
+<p>Som du ser vil dette ta lang tid. Programmerere vil gjerne løse en oppgave på enklest mulig måte, og derfor har man funnet opp løkker som kan gjøre dette for oss! Koden under løser problemet vi skulle løse på bare to linjer:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">100</span>):
+    <span class="dt">print</span>(i, <span class="st">&quot;Hello  world!&quot;</span>)</code></pre>
+<p>Lurt, ikke sant?</p>
+</section>
+<section id="range" class="level1 protip">
+<h1>Range()</h1>
+<p>Range-funksjonen er svært nytting når vi skal jobbe med løkker i Python. Når du skriver <code>range(10)</code> får du en liste med tallene 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Range kan også ta inn flere parametre. Skriver du <code>range(4, 6)</code>, får du en liste med tallene fra 4 til (ikke med) 6, og hvis du skriver <code>range(6, 4, -1)</code> får du de samme tallene i motsatt rekkefølge.</p>
+</section>
+<section id="telle-til-10" class="level1 activity">
+<h1>Telle til 10</h1>
+<p>Bruk en for-løkke til å skrive ut alle tallene mellom 0 og 10.</p>
+</section>
+<section id="liftoff" class="level1 activity">
+<h1>Liftoff</h1>
+<p>Bruk en for-løkke og range-funksjonen for å telle ned fra 10. Når du kommer til 0, skal programmet skrive <strong>liftoff!</strong></p>
+<figure>
+<img src="liftoff.png" title="program som teller ned til liftoff" />
+</figure>
+</section>
+<section id="summere-100-tall" class="level1 activity">
+<h1>Summere 100 tall</h1>
+<p>Et vanlig problem i matematikk er å summere sammen en rekke med tall. Dette er veldig lett når man kan programmere! Lag en for-løkke som går fra 0 til 100, som legger sammen alle tallene før den skriver ut resultatet. Svaret skal bli 5050.</p>
+</section>
+<section id="summere-n-tall" class="level1 activity">
+<h1>Summere n tall</h1>
+<p>Lag en funksjon <code>summer(n)</code>, som tar inn en parameter og returnerer summen av alle tallene fra 0 til <code>n</code>. Definer funksjonen slik:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> summer(n):
+    <span class="dt">sum</span> = <span class="dv">0</span>
+    <span class="co"># Din kode</span>
+    <span class="kw">return</span> <span class="dt">sum</span></code></pre>
+<p>Når koden din er rett, skal den fungere slik som dette:</p>
+<figure>
+<img src="summer.png" title="summering av tallrekker med python" />
+</figure>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Tjerand Silde</p>
+</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>

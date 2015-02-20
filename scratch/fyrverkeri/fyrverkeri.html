@@ -1,19 +1,30 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Fyrverkeri | kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Fyrverkeri</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Fyrverkeri | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Fyrverkeri</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>I dette prosjektet skal vi skyte opp fyrverkeri over en by.</p>
 <figure>
 <img src="fyrverkeri.png" />
 </figure>
 </section>
+<section id="forberedelser-last-ned-bildefiler" class="level1 activity">
+<h1>Forberedelser: Last ned bildefiler</h1>
+<p>Denne første delen kan du godt få hjelp fra en voksen til å gjøre!</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Last ned zip-filen <a href="fyrverkeri_lydogbilder.zip">fyrverkeri_lydogbilder.zip</a> og legg den på skrivebordet på datamaskinen din eller en annen plass du finner igjen.</p></li>
+<li><p>Pakk ut zip-filen ved å høyreklikke på den og velge <code>Extract All</code>, <code>Pakk ut filer</code> eller noe lignende.</p></li>
+</ul>
+</section>
+</section>
 <section id="steg-1-lag-en-rakett-som-flyr-mot-musepekeren" class="level1 activity">
 <h1>Steg 1: Lag en rakett som flyr mot musepekeren</h1>
 <p><em>Vi starter med å importere forskjellige bilder vi skal bruke i spillet</em></p>
-<section id="sjekkliste" class="level2 check">
+<section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag et nytt Scratch-prosjekt. Fjern katten ved å høyreklikke på den og velge <code>slett</code>.</p></li>
 <li><p>Bytt bakgrunnsbilde til for eksempel <code>utendørs/city-with-water</code>.</p></li>
-<li><p>Klikk på <em>Ny figur: Last opp figur fra fil</em>, <img src="../bilder/hent-fra-fil.png" alt="Last opp figur fra fil" />, for å legge til en rakett-figur i prosjektet, <code>ressurser/rocket.png</code>.</p></li>
+<li><p>Klikk på <em>Ny figur: Last opp figur fra fil</em>, <img src="../bilder/hent-fra-fil.png" alt="Last opp figur fra fil" />, for å legge til en rakett-figur i prosjektet, <code>fyrverkeri_lydogbilder/rocket.png</code>.</p></li>
 <li><p>Vi vil at raketten skal skjules når du klikker på det grønne flagget.</p>
 <pre class="blocks"><code>    når grønt flagg klikkes
     skjul</code></pre></li>
@@ -35,7 +46,7 @@
 <li><p>Hva skjer hvis du flytter på musepekeren og trykker mellomromstasten igjen?</p></li>
 </ul>
 </section>
-<section id="sjekkliste-1" class="level2 check">
+<section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <p>Fyrverkeri pleier ikke å fly fra side til side, så du bør gjøre det slik at raketten alltid flyr mot musepekeren fra bunnen av skjermen.</p>
 <ul>
@@ -58,7 +69,7 @@
 <li><p>Hva skjer hvis du flytter på musa og trykker mellomromstasten igjen?</p></li>
 </ul>
 </section>
-<section id="sjekkliste-2" class="level2 check">
+<section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endelig, prøv å få til det samme ved å bruke museknappen i stedet for mellomromstasten. For å gjøre dette kan vi pakke skriptet vårt inn i <code class="blockcontrol">for alltid</code>- og <code class="blockcontrol">hvis museknappen er   nede</code>-klosser.</p></li>
@@ -93,10 +104,10 @@
 <section id="steg-2-få-raketten-til-å-eksplodere" class="level1 activity">
 <h1>Steg 2: Få raketten til å eksplodere</h1>
 <p><em>Nå skal vi få raketten til å eksplodere med et digert smell!</em></p>
-<section id="sjekkliste-3" class="level2 check">
+<section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Første steg for å få raketten til å eksplodere er å spille av en bang-lyd før den begynner å bevege seg, og deretter gjemme seg når den når musepekeren. For å importere en lyd gå til fanen <code class="blocklightgrey">Lyder</code> og klikk på <em>Last opp lyd fra fil</em>, <img src="../bilder/hent-fra-fil.png" alt="Last opp lyd fra fil" />. Last opp lyden <code>ressurser/bang.wav</code>.</p>
+<li><p>Første steg for å få raketten til å eksplodere er å spille av en bang-lyd før den begynner å bevege seg, og deretter gjemme seg når den når musepekeren. For å importere en lyd gå til fanen <code class="blocklightgrey">Lyder</code> og klikk på <em>Last opp lyd fra fil</em>, <img src="../bilder/hent-fra-fil.png" alt="Last opp lyd fra fil" />. Last opp lyden <code>fyrverkeri_lydogbilder/bang.wav</code>.</p>
 <pre class="blocks"><code>    når grønt flagg klikkes
     skjul
     for alltid
@@ -131,10 +142,10 @@
 <li><p>Prøv å endre tallet i <code class="blockmotion">gli</code>-klossen slik at raketten skjules akkurat samtidig som det smeller.</p></li>
 </ul>
 </section>
-<section id="sjekkliste-4" class="level2 check">
+<section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Last opp en ny figur fra fil, <code>ressurser/firework1.png</code>.</p></li>
+<li><p>Last opp en ny figur fra fil, <code>fyrverkeri_lydogbilder/firework1.png</code>.</p></li>
 <li><p>Når denne figuren får meldingen <code>Eksploder</code> passer vi på at den er gjemt, flytter den til raketten ved bruk av klossen <code class="blockmotion">gå   til</code>, viser den og skjuler den igjen 1 sekund senere.</p>
 <pre class="blocks"><code>    når jeg mottar [Eksploder v]
     skjul
@@ -156,7 +167,7 @@
 <section id="steg-3-gjør-hver-eksplosjon-unik" class="level1 activity">
 <h1>Steg 3: Gjør hver eksplosjon unik</h1>
 <p><em>Nå skal vi lage litt variasjon slik at ikke alle eksplosjonene ser helt like ut.</em></p>
-<section id="sjekkliste-5" class="level2 check">
+<section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi kan gjøre hver eksplosjon unik ved å bruke klossen <code class="blocklooks">sett   fargeeffekt</code> og velge en tilfeldig farge før eksplosjonen vises.</p>
@@ -167,7 +178,7 @@
     vis
     vent (1) sekunder
     skjul</code></pre></li>
-<li><p>Legg til forskjellige bilder av eksplosjoner som drakter ved å velge <code class="blocklightgrey">Drakter</code>-fanen til <code>firework1</code>. Ved å klikke <em>Last opp drakt fra fil</em>, <img src="../bilder/hent-fra-fil.png" alt="Last opp drakt fra fil" />, kan du legge til <code>firework2.png</code>, <code>firework3.png</code> og <code>firework4.png</code> fra <code>ressurser</code>.</p></li>
+<li><p>Legg til forskjellige bilder av eksplosjoner som drakter ved å velge <code class="blocklightgrey">Drakter</code>-fanen til <code>firework1</code>. Ved å klikke <em>Last opp drakt fra fil</em>, <img src="../bilder/hent-fra-fil.png" alt="Last opp drakt fra fil" />, kan du legge til <code>firework2.png</code>, <code>firework3.png</code> og <code>firework4.png</code> fra <code>fyrverkeri_lydogbilder</code>.</p></li>
 <li><p>Klarer du å få eksplosjonene til å bruke forskjellige drakter? (Hint: Du kan for eksempel bruke <code class="blocklooks">neste drakt</code> et passende sted i skriptet til Firework1.)</p></li>
 </ul>
 </section>
@@ -179,7 +190,7 @@
 <li><p>Ser hver eksplosjon forskjellig ut?</p></li>
 </ul>
 </section>
-<section id="sjekkliste-6" class="level2 check">
+<section id="sjekkliste-7" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Til slutt, gjør eksplosjonen større etter at raketten eksploderer! I stedet for å vente i 1 sekund sett størrelsen til figuren til 5% før den vises, og etter at den blir synlig øk størrelsen med 5 tjue ganger ved bruk av klossen <code class="blockcontrol">gjenta</code>.</p>
@@ -215,7 +226,7 @@
 <p>Husker du at vi tidligere hadde et problem med å holde museknappen nede?</p>
 <p>Dette problemet oppstår fordi når raketten sender sin melding om eksplosjonen, gjentar den <code class="blockcontrol">hvis</code>-løkken med en gang. Dermed blir det sendt en eksplosjonsmelding før den forrige er ferdig med animasjonen.</p>
 <p>I programmeringsverden kaller vi denne type problemer for <em>bugs</em>, fordi man i gamle dager (da datamaskiner var mye større) kunne ha problemer med at innsekter ble fanget inne i datamaskinene og ødela programmer.</p>
-<section id="sjekkliste-7" class="level2 check">
+<section id="sjekkliste-8" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>For å fikse dette kan du erstatte klossen <code class="blockevents">send melding</code> med <code class="blockevents">send melding og vent</code>. Da vil ikke løkken gjentas før den forrige eksplosjonen er ferdig. Gå tilbake til <code>rocket</code> og endre skriptet:</p>
