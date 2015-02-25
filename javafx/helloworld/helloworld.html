@@ -1,0 +1,35 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hello world | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hello world</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Formålet til denne leksjonen er å lære hvordan man får satt opp et Java-prosjekt i Eclipse og kjørt et JavaFX-program. I tillegg skal du lære litt om sammenhengen mellom JavaFX-koden og innholdet i app-vindeuet en får opp.</p>
+</section>
+<section id="steg-1-sette-opp-java-prosjekt-og-lage-app-mappe-og-app-klasse" class="level1 activity">
+<h1>Steg 1: Sette opp Java-prosjekt, og lage app-mappe og app-klasse</h1>
+<p>Eclipse strukturerer koden i såkalt prosjekter. Vanligvis har en ett Java-prosjekt for hver app en lager, men hvis en for det meste lager små app-er, så er det greit å samle dem i ett Java-prosjekt. Da blir det mindre arbeid med oppsett.</p>
+<p>Et prosjekt er enkelt sagt en mappe med innhold/oppsett tilpasset typen app en skal lage. Først og fremst handler det om å velge programmeringsspråk, så når du skal lage en ny app med JavaFX, så må du lage et <em>Java-prosjekt</em>. Du vil da få en mappe med flere under-mapper, og en av disse heter <code>src</code> og vil inneholde all koden din. For at de ikke skal bli for uoversiktlig, spesielt hvis du har flere app-er i samme prosjekt, så bør du så lage en Java-mappe for app-en din. Når det er gjort så kan lage Java-filen for app-en din!</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag et nytt Java-prosjekt ved å velge <code>File &gt; New &gt; Java Project</code> (altså <code>New &gt; Java Project</code> fra <code>File</code>-menyen). Du vil da få opp et skjema hvor du bl.a. kan fylle inn navnet på prosjektet. Skriv <code>kodeklubben</code> eller et annet passende navn. Merk at du bør holde deg til de engelske bokstavene a-z og A-Z, ellers får du lett problemer siden. De andre innstillingene lar du være.</p>
+<figure>
+<img src="../images/new-java-project.png" title="Skjema for New Java Project" />
+</figure>
+<p>I <code>Package Explorer</code>-panelet vil du se at det dukker opp en mappe med navnet du valgte. Inne mappa vil du ha en <code>src</code>-mappe og en mappe som heter <code>JRE System Library [JavaSE-1.8]</code>. <code>src</code>-mappe er der du legger koden din, mens <code>JRE System Library [JavaSE-1.8]</code> viser at prosjektet er satt for å bruke Java 8, som vi trenger for å bruke JavaFX.</p>
+<figure>
+<img src="../images/etter-new-java-project.png" title="Etter New Java Project" />
+</figure></li>
+<li><p>Lag en ny Java-<em>mappe</em> for app-en i denne leksjonen. I Java kalles slike mapper for <em>pakker</em>, men du kan tenke på dem som mapper. Pass først på at du har valgt (klikket på) riktig Java-prosjekt i <code>Package Exporer</code>-panelet. Velg så <code>File &gt; New &gt; Package</code> eller ikonet som ser ut som en pakke med et pluss-tegn i hjørnet. Alternativt kan du høyre-klikke på src-mappa og velge <code>New &gt; Package</code>.</p>
+<p>Du vil da få opp et skjema hvor du kan skrive inn hvilken kode-mappe (<code>Source Folder</code>) som pakken skal puttes i og pakke-navnet. Kode-mappen skal være <code>kodeklubben/src</code> (eller prosjektnavnet du skrev inn tidligere etterfulgt av <code>/src</code>. Pakkenavn inneholder som regel bare små bokstaver, altså bokstaven a-z. Derfor kan du kalle mappa <code>helloworld</code>.</p>
+<p><img src="../images/new-java-package.png" title="New Java Package" /> <img src="../images/etter-new-java-package.png" title="Etter New Java Package" /></p></li>
+<li><p>Lag en ny Java-klasse (Java-filer kalles <em>klasser</em>) ved å høyre-klikke på <code>helloworld</code>-pakka du nettopp lagde og velge <code>New &gt; Class</code>.</p>
+<figure>
+<img src="../images/new-java-class-menuitem.png" title="Meny for New Java Class" />
+</figure>
+<p>Du vil da få opp et skjema hvor kode-mappa og pakken allerede er fylt inn, mens navnet (<code>Name</code>) må fylles inn. Klassenavn starter alltid med stor forbokstav, og hvert delord som navnet består av, begynner også med stor forbokstav. Så når vi nå skal lage en app vi kaller Hello World-app, så blir navnet klassenavnet <code>HelloWorldApp</code>.</p>
+<p><img src="../images/new-java-class.png" title="New Java Class" /> <img src="../images/etter-new-java-class.png" title="Etter New Java Class" /></p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-skrive-og-kjøre-helloworldapp-klassen" class="level1 activity">
+<h1>Steg 2: Skrive og kjøre HelloWorldApp-klassen</h1>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
