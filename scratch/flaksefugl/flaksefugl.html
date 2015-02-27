@@ -1,4 +1,4 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Flaksefugl | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Flaksefugl</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Flaksefugl | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Flaksefugl<a href="/scratch/flaksefugl/flaksefugl.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>Nå skal vi lage vår egen versjon av spillet <strong>Flappy Bird</strong>. Du styrer fuglen <strong>Flakse</strong> ved å trykke på mellomromtasten for å flakse med vingene. Du må holde Flakse flyvende og prøve å styre mellom rørene!</p>
 <figure>
@@ -168,10 +168,10 @@
     spill lyden [screech v]
     si [Du tapte!]
     send melding [Tap v]
-    stopp [andre skript i figuren v]</code></pre></li>
+    stopp [andre skript i figuren v] :: control</code></pre></li>
 <li><p>Klikk så på <code>Rør</code>-figuren og legg til dette skriptet:</p>
 <pre class="blocks"><code>    når jeg mottar [Tap v]
-    stopp [andre skript i figuren v]</code></pre></li>
+    stopp [andre skript i figuren v] :: control</code></pre></li>
 </ul>
 </section>
 <section id="test-prosjektet-4" class="level2 flag">
@@ -266,7 +266,7 @@
     slutt
     skjul
     send melding [Tap v]
-    stopp [andre skript i figuren v]</code></pre></li>
+    stopp [andre skript i figuren v] :: control</code></pre></li>
 <li><p>Du må også legge til en <code class="blocklooks">vis</code>-kloss samt sette Flakses retning når spillet starter på nytt.</p></li>
 </ul>
 </section>
@@ -287,7 +287,7 @@
     hvis &lt;(poeng) &gt; (Rekord)&gt;
         sett [Rekord v] til (poeng)
     slutt
-    stopp [andre skript i figuren v]</code></pre></li>
+    stopp [andre skript i figuren v] :: control</code></pre></li>
 </ul>
 </section>
 <section id="nettvariabler" class="level2 protip">
@@ -310,6 +310,7 @@
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
 </div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div><div class="translator"><p><strong>Oversetter:</strong></p><p>Helge Astad</p>
 </div></div></div></div></div><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
   scratchblocks2.load_language(scratchblocks2._translations['nb']);
   scratchblocks2.parse("pre.blocks");

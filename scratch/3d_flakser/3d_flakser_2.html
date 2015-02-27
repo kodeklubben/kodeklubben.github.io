@@ -1,4 +1,4 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>3D-Flakser, Del 2 | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">3D-Flakser, Del 2</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>3D-Flakser, Del 2 | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">3D-Flakser, Del 2<a href="/scratch/3d_flakser/3d_flakser_2.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>Velkommen til andre og siste del av <strong>3D-Flakser</strong>! I denne delen skal vi få Flakse til å flakse som en fugl, og snu seg i luften når vi svinger med piltastene. Til slutt skal vi gjøre det slik at man får poeng når man flyr igjennom en ring og taper hvis man treffer en ring. Etter det er det opp til deg; lag en meny, lag flere vanskelighetsgrader eller lag noe helt annet!</p>
 <figure>
@@ -21,7 +21,7 @@
         sett y til ((20) - (y))
         hvis (berører [Flakse v])
             si [du tapte!] i (2) sekunder
-            stopp [alle v]
+            stopp [alle v] :: control
         slutt
     slutt</code></pre></li>
 <li><p>Til slutt så vil vi helst at bakken skal forsvinne når Flakse flyr veldig høyt. Det kan vi gjøre med <code class="blocklooks">skjul</code> og <code class="blocklooks">vis</code> kommandoene, slik</p>
@@ -98,7 +98,7 @@
 <li><p>Vi begynner med å sjekke om Flakse berører den ringen som ligger nærmest. Husk at det er <code class="blockdata">distanse</code> variablen til ringen som forteller oss hvor nærme ringen er. Så vi må hele tiden sjekke om Flakse berører ringen, <em>og</em> om ringen faktisk er nærme. Du må legge til denne klossen et sted i skriptet til ring-klonene.</p>
 <pre class="blocks"><code>    hvis ((berører [Flakse v]) og ((distanse) &lt; (1.2)))
         si [du tapte!] i (1) sekunder
-        stopp [alle v] 
+        stopp [alle v] :: control
     slutt</code></pre>
 <p>Nå stopper spillet om man treffer en ring som er nærme. Hvis du vil kan du kode noe annen oppførsel når man treffer en ring (kanskje man bare mister et liv, eller det spilles en lyd?)</p></li>
 <li><p>Så ønsker vi å få poeng når vi fly gjennom ringene. Lag først en variabel <code class="blockdata">poeng</code> som gjelder for alle figurene. Nå må vi sjekke at variablene <code class="blockdata">x</code> og <code class="blockdata">y</code>, som sier hvor flakse-figuren er, ikke er altfor langt unna <code class="blockdata">ringX</code> og <code class="blockdata">ringY</code>. Vi legger til følgende klosser rett under hovedløkken til ringene, slik at det siste ringene gjør før de slettes er å sjekke om Flakse er inni.</p>

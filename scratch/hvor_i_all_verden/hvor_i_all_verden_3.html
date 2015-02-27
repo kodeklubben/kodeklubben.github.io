@@ -1,4 +1,4 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hvor i All Verden? Del 3 | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hvor i All Verden? Del 3</h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hvor i All Verden? Del 3 | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hvor i All Verden? Del 3<a href="/scratch/hvor_i_all_verden/hvor_i_all_verden_3.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>Hvor i All Verden? er et reise- og geografispill hvor man raskest mulig skal fly innom reisemål spredt rundt i Europa. Dette er den siste av tre leksjoner. I denne delen skal vi se på lister og hvordan vi kan bruke dem til å velge reisemål tilfeldig. Vi vil avslutte med å lage en skikkelig intro til spillet.</p>
 <figure>
@@ -71,11 +71,9 @@
     send melding [Nytt sted v] og vent</code></pre></li>
 <li><p>Lag en ny variabel som heter <code class="blockdata">sted</code> og som gjelder kun for sted-figuren. Denne variabelen vil være et tall som identifiserer hvilken posisjon i listene det gjeldende reisemålet har.</p></li>
 <li><p>Koden for <code class="blockevents">Nytt sted</code> blir helt ny. Nå skal vi bruke både listene våre og den nye <code class="blockmoreblocks">Reis til</code>-klossen vi lagde forrige gang.</p>
-<pre class="blocks"><code>    definer Reis til (sted) (x) (y)
-
-    når jeg mottar [Nytt sted v]
+<pre class="blocks"><code>    når jeg mottar [Nytt sted v]
     sett [sted v] til (tilfeldig tall fra (1) til (lengden av [steder v]))
-    Reis til (element (sted) av [steder v]) (element (sted) av [stederX v]) (element (sted) av [stederY v])</code></pre></li>
+    Reis til (element (sted) av [steder v]) (element (sted) av [stederX v]) (element (sted) av [stederY v]) :: custom</code></pre></li>
 <li><p>Prøv å kjør spillet flere ganger. Virker det som om reisemålet blir valgt tilfeldig?</p></li>
 <li><p>For å få flere reiseoppgaver i hvert spill kan vi bare legge en <code class="blockcontrol">gjenta _ ganger</code>-løkke rundt sendingen av meldingen <code>Nytt sted</code> i <code class="blockevents">Nytt spill</code>-blokken. Hvor mange ganger vil du gjenta meldingen?</p></li>
 </ul>
@@ -138,7 +136,7 @@
 <li><p>Et problem er at helikopteret, stedet og kartet blir liggende over menyen når spillet er slutt. Vi må passe på at disse skjules. Legg følgende kode på alle de tre figurene:</p>
 <pre class="blocks"><code>    når jeg mottar [Spill slutt v]
     skjul
-    stopp [andre skript i figuren v]</code></pre>
+    stopp [andre skript i figuren v] :: control</code></pre>
 <p>Med <code class="blockcontrol">stopp</code>-klossen passer vi på at alle skriptene stopper når spillet er slutt.</p></li>
 </ul>
 </section>
