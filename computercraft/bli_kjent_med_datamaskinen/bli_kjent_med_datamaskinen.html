@@ -2,7 +2,7 @@
 <h1>Introduksjon</h1>
 <p>Vi begynner med å bygge en enkel datamaskin. Etter å ha brukt litt tid på å bli kjent med hvordan datamaskinen virker, bruker vi den til å låse opp en dør ved hjelp av passord.</p>
 <figure>
-<img src="bli_kjent_med_datamaskinen.png" />
+<img src="bli_kjent_med_datamaskinen.png">
 </figure>
 </section>
 <section id="steg-1-vår-første-datamaskin" class="level1 activity">
@@ -16,7 +16,7 @@
 <li>Trykk <code>E</code> for å åpne inventory’et ditt. Finn frem 7 <strong>Stone</strong>, 1 <strong>Redstone</strong> og 1 <strong>Glass pane</strong>.</li>
 <li><p>Åpne et <strong>Crafting table</strong>, og legg ut materialet slik:</p>
 <figure>
-<img src="craft_computer.png" />
+<img src="craft_computer.png">
 </figure></li>
 <li>Legg den nye datamaskinen i den nederste raden i inventory’et ditt, slik at du kan ta den på hånden. Lukk inventory’et.</li>
 <li><p>Bruk talltastene til å velge datamaskinen, og høyreklikk for å lage en datamaskin.</p></li>
@@ -47,7 +47,7 @@
 <li>Start en datamaskin.</li>
 <li>Skriv <code>edit heiverden</code> for å begynne å skrive på et nytt program som heter <code>heiverden</code>.</li>
 <li><p>I det nye vinduet, skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hei verden!&#39;</span><span class="ot">)</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-python">print(<span class="hljs-string">'Hei verden!'</span>)</code></pre>
 <p>Etter at du har skrevet dette så trykker du på <em>Ctrl</em>-tasten og velger <code>Save</code>. Deretter trykker du <em>Ctrl</em> en gang til og velger <code>Exit</code>.</p></li>
 <li>Vi har nå laget vårt første program. Prøv å skriv <code>programs</code> og du vil se at <code>heiverden</code> er på listen over programmer.</li>
 <li><p>For å kjøre programmet vi har laget, skriver vi <code>heiverden</code> og trykker enter.</p></li>
@@ -72,21 +72,21 @@
 <p>Vi skal nå prøve å skrive noen kommandoer direkte i Lua. Dette er en fin måte å teste enkle ting på.</p>
 <ul>
 <li>Skriv <code>lua</code> og trykk enter. Dette starter en <em>Lua-tolker</em> som vil utføre hver enkelt kommando du skriver med en gang.</li>
-<li>Vi begynner med kommandoen fra det første programmet vårt. Skriv <code>print('Hei verden!')</code> og trykk enter. Skjer det samme som tidligere?</li>
+<li>Vi begynner med kommandoen fra det første programmet vårt. Skriv <code class="lang-python">print(<span class="hljs-string">'Hei verden!'</span>)</code> og trykk enter. Skjer det samme som tidligere?</li>
 <li><p>Som de aller fleste programmeringsspråk er Lua glad i å regne. Skriv <code>1 + 1</code> og trykk enter.</p>
 <p>Lua kjenner alle de vanlige matematikk-operasjonene. Prøv for eksempel <code>17 - 8</code>, <code>3 * 4</code> eller <code>22 / 7</code>. Kjenner du igjen hva hver av disse betyr?</p></li>
-<li><p>Skriv <code>math.random(1, 10)</code> og trykk enter.</p>
-<p>Dette skriver ut et tilfeldig tall mellom 1 og 10. Dette er et eksempel på å kalle en <em>funksjon</em>, noe vi gjør ofte når vi programmerer. I dette tilfellet heter funksjonen <code>random</code> og den hører hjemme i <code>math</code>-<em>biblioteket</em>.</p></li>
+<li><p>Skriv <code class="lang-lua"><span class="hljs-built_in">math</span>.random(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)</code> og trykk enter.</p>
+<p>Dette skriver ut et tilfeldig tall mellom 1 og 10. Dette er et eksempel på å kalle en <em>funksjon</em>, noe vi gjør ofte når vi programmerer. I dette tilfellet heter funksjonen <code>random</code> og den hører hjemme i <code class="lang-lua"><span class="hljs-built_in">math</span></code>-<em>biblioteket</em>.</p></li>
 </ul>
 <section id="funksjoner" class="level3 protip">
 <h3>Funksjoner</h3>
-<p>Alle programmeringsspråk lar deg lage noe som kalles <em>funksjoner</em>. Dette er en samling instruksjoner som utføres sammen slik at det blir enklere å gjøre vanskelige ting. Lua kommer med innebygde funksjoner. Vi har så langt sett <code>print</code> og <code>math.random</code> som eksempler på dette. Senere vil vi også lære hvordan vi lager egne funksjoner.</p>
+<p>Alle programmeringsspråk lar deg lage noe som kalles <em>funksjoner</em>. Dette er en samling instruksjoner som utføres sammen slik at det blir enklere å gjøre vanskelige ting. Lua kommer med innebygde funksjoner. Vi har så langt sett <code class="lang-python"><span class="hljs-keyword">print</span></code> og <code class="lang-lua"><span class="hljs-built_in">math</span>.random</code> som eksempler på dette. Senere vil vi også lære hvordan vi lager egne funksjoner.</p>
 </section>
 </section>
 <section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li>Trykk pil opp-tasten slik at du kan kjøre <code>math.random(1, 10)</code> en gang til. Trykk enter. Gjør dette flere ganger. Får du forskjellige tall tilbake?</li>
+<li>Trykk pil opp-tasten slik at du kan kjøre <code class="lang-lua"><span class="hljs-built_in">math</span>.random(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)</code> en gang til. Trykk enter. Gjør dette flere ganger. Får du forskjellige tall tilbake?</li>
 <li>Avslutt Lua-tolkeren ved å skrive <code>exit()</code> og trykk enter.</li>
 </ul>
 </section>
@@ -99,83 +99,83 @@
 <ul>
 <li>Start et nytt program ved å skrive <code>edit mattetest</code> og trykk enter.</li>
 <li><p>Skriv inn følgende program</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tall1 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-<span class="kw">local</span> tall2 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">..</span> <span class="st">&#39; ganger &#39;</span> <span class="ot">..</span> tall2 <span class="ot">..</span> <span class="st">&#39;?&#39;</span><span class="ot">)</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)</code></pre>
 <p>Pass på at du skriver de to punktumene <code>..</code> riktig. Disse betyr at vi setter sammen tekst.</p></li>
 <li><p>Lagre og avslutt editoren. Kjør programmet ved å skrive <code>mattetest</code>.</p>
 <p>Blir du spurt om svaret på et gangestykke? Spør den om et annet gangestykke om du kjører programmet en gang til? Hva skjer om du prøver å svare?</p></li>
 </ul>
 <section id="variabler" class="level3 protip">
 <h3>Variabler</h3>
-<p>Vi har sett det meste i programmet vårt tidligere. <code>math.random</code> lager tilfeldige tall, og <code>print</code> skriver en melding til skjermen. Det nye er at vi bruker <em>variabler</em> til å huske verdiene av de tilfeldige tallene. Den første linjen sier at vi vil ha et tilfeldig tall mellom 2 og 12. Dette tilfeldige tallet husker vi så med en variabel som heter <code>tall1</code>. Ordet <code>local</code> foran variabelen sier at vi bare skal huske variabelen i dette programmet (lokalt).</p>
+<p>Vi har sett det meste i programmet vårt tidligere. <code class="lang-lua"><span class="hljs-built_in">math</span>.random</code> lager tilfeldige tall, og <code class="lang-python"><span class="hljs-keyword">print</span></code> skriver en melding til skjermen. Det nye er at vi bruker <em>variabler</em> til å huske verdiene av de tilfeldige tallene. Den første linjen sier at vi vil ha et tilfeldig tall mellom 2 og 12. Dette tilfeldige tallet husker vi så med en variabel som heter <code>tall1</code>. Ordet <code class="lang-lua"><span class="hljs-keyword">local</span></code> foran variabelen sier at vi bare skal huske variabelen i dette programmet (lokalt).</p>
 </section>
 </section>
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi skal nå jobbe videre med programmet. Skriv <code>edit mattetest</code> igjen, og legg til en linje nederst i programmet.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tall1 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-<span class="kw">local</span> tall2 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">..</span> <span class="st">&#39; ganger &#39;</span> <span class="ot">..</span> tall2 <span class="ot">..</span> <span class="st">&#39;?&#39;</span><span class="ot">)</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>                                 <span class="co">-- ny linje</span></code></pre>
+svar = read()                                 <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Lagre, avslutt, og kjør programmet på nytt. Får du lov til å svare nå? Funksjonen <code>read</code> brukes for å lese ting du skriver på tastaturet.</p></li>
-<li><p>Det neste vi vil er at programmet skal sjekke om vi svarer riktig. For å gjøre dette vil vi bruke noe som heter <code>if</code>-tester. Disse kan teste om noe er sant, og vi vil bruke dem for å sjekke om det er sant at svaret ditt er likt med det faktiske svaret. Legg til en <code>if</code>-test nederst i programmet ditt slik som dette:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> tall1 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-<span class="kw">local</span> tall2 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">..</span> <span class="st">&#39; ganger &#39;</span> <span class="ot">..</span> tall2 <span class="ot">..</span> <span class="st">&#39;?&#39;</span><span class="ot">)</span>
+<li><p>Det neste vi vil er at programmet skal sjekke om vi svarer riktig. For å gjøre dette vil vi bruke noe som heter <code class="lang-java"><span class="hljs-keyword">if</span></code>-tester. Disse kan teste om noe er sant, og vi vil bruke dem for å sjekke om det er sant at svaret ditt er likt med det faktiske svaret. Legg til en <code class="lang-java"><span class="hljs-keyword">if</span></code>-test nederst i programmet ditt slik som dette:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+svar = read()
 
-<span class="kw">if</span> <span class="fu">tonumber</span><span class="ot">(</span>svar<span class="ot">)</span> <span class="ot">==</span> tall1 <span class="ot">*</span> tall2 <span class="kw">then</span>  <span class="co">-- alle linjer herifra</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Ja, svaret er &#39;</span> <span class="ot">..</span> svar<span class="ot">)</span>      <span class="co">-- og ned er nye</span>
-<span class="kw">else</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Nei, det riktige svaret er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">*</span> tall2<span class="ot">)</span>
-<span class="kw">end</span></code></pre>
+<span class="hljs-keyword">if</span> <span class="hljs-built_in">tonumber</span>(svar) == tall1 * tall2 <span class="hljs-keyword">then</span>  <span class="hljs-comment">-- alle linjer herifra</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Ja, svaret er '</span> .. svar)      <span class="hljs-comment">-- og ned er nye</span>
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Nei, det riktige svaret er '</span> .. tall1 * tall2)
+<span class="hljs-keyword">end</span></code></pre>
 <p>Kjør programmet igjen. Hva skjer når du svarer riktig? Hva skjer når du svarer feil? Skjønner du hvorfor?</p></li>
-<li><p>Det er kjedelig at vi hele tiden må starte programmet på nytt. Vi lager derfor en løkke som kan spørre oss flere spørsmål hver gang vi spiller. Her bruker vi en <code>for</code>-løkke som bare teller fra 1 til 5 for å stille oss fem spørsmål.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span>                               <span class="co">-- ny linje</span>
-    <span class="kw">local</span> tall1 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-    <span class="kw">local</span> tall2 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">..</span> <span class="st">&#39; ganger &#39;</span> <span class="ot">..</span> tall2 <span class="ot">..</span> <span class="st">&#39;?&#39;</span><span class="ot">)</span>
+<li><p>Det er kjedelig at vi hele tiden må starte programmet på nytt. Vi lager derfor en løkke som kan spørre oss flere spørsmål hver gang vi spiller. Her bruker vi en <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkke som bare teller fra 1 til 5 for å stille oss fem spørsmål.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>                               <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+    svar = read()
 
-    <span class="kw">if</span> <span class="fu">tonumber</span><span class="ot">(</span>svar<span class="ot">)</span> <span class="ot">==</span> tall1 <span class="ot">*</span> tall2 <span class="kw">then</span>
-        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Ja, svaret er &#39;</span> <span class="ot">..</span> svar<span class="ot">)</span>
-    <span class="kw">else</span>
-        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Nei, det riktige svaret er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">*</span> tall2<span class="ot">)</span>
-    <span class="kw">end</span>
-<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">tonumber</span>(svar) == tall1 * tall2 <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'Ja, svaret er '</span> .. svar)
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'Nei, det riktige svaret er '</span> .. tall1 * tall2)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Test programmet ditt igjen. Blir du spurt om fem gangestykker? Kan du forandre programmet slik at det spør om et annet antall gangestykker? Kan du bruke en variabel som sier hvor mange gangestykker programmet skal bruke?</p></li>
 <li><p>Til slutt vil vi at programmet skal telle hvor mange riktige svar vi klarer. For å gjøre dette bruker vi en ny variabel. Men denne gangen vil vi endre verdien av variabelen etterhvert som svarer riktig.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> ant_stykker <span class="ot">=</span> <span class="dv">5</span>                         <span class="co">-- ny linje</span>
-<span class="kw">local</span> ant_riktig  <span class="ot">=</span> <span class="dv">0</span>                         <span class="co">-- ny linje</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> ant_stykker = <span class="hljs-number">5</span>                         <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> ant_riktig  = <span class="hljs-number">0</span>                         <span class="hljs-comment">-- ny linje</span>
 
-<span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> ant_stykker <span class="kw">do</span>                     <span class="co">-- endret linje</span>
-    <span class="kw">local</span> tall1 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-    <span class="kw">local</span> tall2 <span class="ot">=</span> <span class="fu">math.random</span><span class="ot">(</span><span class="dv">2</span><span class="ot">,</span> <span class="dv">12</span><span class="ot">)</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">..</span> <span class="st">&#39; ganger &#39;</span> <span class="ot">..</span> tall2 <span class="ot">..</span> <span class="st">&#39;?&#39;</span><span class="ot">)</span>
+<span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, ant_stykker <span class="hljs-keyword">do</span>                     <span class="hljs-comment">-- endret linje</span>
+    <span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+    svar = read()
 
-    <span class="kw">if</span> <span class="fu">tonumber</span><span class="ot">(</span>svar<span class="ot">)</span> <span class="ot">==</span> tall1 <span class="ot">*</span> tall2 <span class="kw">then</span>
-        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Ja, svaret er &#39;</span> <span class="ot">..</span> svar<span class="ot">)</span>
-        ant_riktig <span class="ot">=</span> ant_riktig <span class="ot">+</span> <span class="dv">1</span>           <span class="co">-- ny linje</span>
-    <span class="kw">else</span>
-        <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Nei, det riktige svaret er &#39;</span> <span class="ot">..</span> tall1 <span class="ot">*</span> tall2<span class="ot">)</span>
-    <span class="kw">end</span>
-<span class="kw">end</span>
-                                         <span class="co">-- ny linje nedenfor</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Du klarte &#39;</span> <span class="ot">..</span> ant_riktig <span class="ot">..</span> <span class="st">&#39; av &#39;</span> <span class="ot">..</span> ant_stykker<span class="ot">)</span></code></pre></li>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">tonumber</span>(svar) == tall1 * tall2 <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'Ja, svaret er '</span> .. svar)
+        ant_riktig = ant_riktig + <span class="hljs-number">1</span>           <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'Nei, det riktige svaret er '</span> .. tall1 * tall2)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+                                         <span class="hljs-comment">-- ny linje nedenfor</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Du klarte '</span> .. ant_riktig .. <span class="hljs-string">' av '</span> .. ant_stykker)</code></pre></li>
 </ul>
 <section id="prøv-selv-1" class="level3 try">
 <h3>Prøv selv</h3>
 <p>Kan du endre programmet slik at det spør om andre typer mattestykker? For eksempel plusstykker, minusstykker eller delestykker?</p>
 <p>For minusstykker, hvordan kan du lage tilfeldige <code>tall2</code> på en slik måte at <code>tall2</code> aldri er større enn <code>tall1</code>?</p>
 <p>For delestykker, hvordan kan du enkelt lage stykker som du vet går opp, det vil si slik at svaret blir et helt tall?</p>
-<p>Kan du bruke <code>math.random</code> og passende <code>if</code>-tester for å tilfeldig velge hvilken type mattestykke det spørres om?</p>
+<p>Kan du bruke <code class="lang-lua"><span class="hljs-built_in">math</span>.random</code> og passende <code class="lang-java"><span class="hljs-keyword">if</span></code>-tester for å tilfeldig velge hvilken type mattestykke det spørres om?</p>
 </section>
 </section>
 </section>
@@ -188,23 +188,23 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <li><p>Gå ut av datamaskinen ved å trykke <em>Esc</em>-knappen.</p></li>
 <li><p>Samle sammen litt <strong>Stone</strong>, en <strong>Iron door</strong> og en <strong>Computer</strong>, og lag en vegg hvor du setter inn en dør og med datamaskinen rett ved siden av døren. Det skal se omtrent slik ut:</p>
 <figure>
-<img src="passord.png" />
+<img src="passord.png">
 </figure></li>
 <li>Start datamaskinen.</li>
 <li><p>Lag et nytt program som heter <code>passord</code>:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+    svar = read()
 
-    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
-        <span class="fu">print</span> <span class="st">&#39;Riktig&#39;</span>
-    <span class="kw">else</span>
-        <span class="fu">print</span> <span class="st">&#39;Feil&#39;</span>
-    <span class="kw">end</span>
-<span class="kw">end</span></code></pre>
-<p>Dette programmet ligner ganske mye på <code>mattetest</code>-programmet vi laget tidligere. Det er bare èn ny ting her som vi ikke har sett tidligere, nemlig en <code>while</code>-løkke. Slike løkker vil fortsette å gjøre ting om igjen så lenge noe er sant. I vårt tilfelle er dette <em>noe</em> verdien <code>true</code> som alltid er sann. Det betyr at vi har laget en <em>evig løkke</em>. Dette programmet vil fortsette å spørre oss om passordet for alltid!</p></li>
+    <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">print</span> <span class="hljs-string">'Riktig'</span>
+    <span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">print</span> <span class="hljs-string">'Feil'</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre>
+<p>Dette programmet ligner ganske mye på <code>mattetest</code>-programmet vi laget tidligere. Det er bare èn ny ting her som vi ikke har sett tidligere, nemlig en <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkke. Slike løkker vil fortsette å gjøre ting om igjen så lenge noe er sant. I vårt tilfelle er dette <em>noe</em> verdien <code class="lang-java"><span class="hljs-keyword">true</span></code> som alltid er sann. Det betyr at vi har laget en <em>evig løkke</em>. Dette programmet vil fortsette å spørre oss om passordet for alltid!</p></li>
 <li><p>Kjør programmet. Oppfører programmet seg slik du hadde trodd? Husker du passordet?</p></li>
 </ul>
 <section id="avslutte-programmer" class="level3 protip">
@@ -216,35 +216,35 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi vil at døren skal åpne seg når vi skriver riktig passord. Dette kan vi gjøre ved å bruke <strong>redstone</strong> som brukes for å overføre energi i Minecraft. Endre programmet <code>passord</code> som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+    svar = read()
 
-    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>      <span class="co">-- endret linje</span>
-        sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>                              <span class="co">-- endret linje</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>     <span class="co">-- endret linje</span>
-    <span class="kw">end</span>
-<span class="kw">end</span></code></pre>
+    <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)      <span class="hljs-comment">-- endret linje</span>
+        sleep(<span class="hljs-number">5</span>)                              <span class="hljs-comment">-- endret linje</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)     <span class="hljs-comment">-- endret linje</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre>
 <p>Kjør programmet. Hva skjer nå når du skriver riktig passord?</p>
 <p>Funksjonen <code>setOutput</code> i <code>redstone</code>-biblioteket skrur av eller på litt <em>redstone</em>-energi som åpner døren. Her forteller <code>left</code> hvilken side av datamaskinen døren står på. Du kan også bruke for eksempel <code>right</code>, <code>top</code> eller <code>bottom</code>. Funksjonen <code>sleep</code> gjør at datamaskinen sover, det vil si gjør ingenting. I dette tilfellet sover datamaskinen i 5 sekunder, før energien skrus av igjen og døren lukker seg.</p></li>
 <li><p>Før vi er helt fornøyde med dette programmet vil vi gjøre noen små forbedringer. Først kaller vi to funksjoner fra <code>term</code>-biblioteket. Den ene vil rense skjermen, mens den andre setter posisjonen hvor vi skriver teksten til <code>(1, 1)</code> som betyr øverst til venstre. I tillegg forteller vi <code>read</code> at vi ikke vil at passordet vi skriver inn skal synes på skjermen, i stedet vil vi at <code>*</code>-tegn skal vises. Programmet ser da slik ut:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
-    term<span class="ot">.</span>clear<span class="ot">()</span>                              <span class="co">-- ny linje</span>
-    term<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>                   <span class="co">-- ny linje</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">(</span><span class="st">&#39;*&#39;</span><span class="ot">)</span>                          <span class="co">-- endret linje</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    term.clear()                              <span class="hljs-comment">-- ny linje</span>
+    term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)                   <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+    svar = read(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
 
-    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>
-        sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>
-    <span class="kw">end</span>
-<span class="kw">end</span></code></pre></li>
+    <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        sleep(<span class="hljs-number">5</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre></li>
 </ul>
 <p>Gratulerer, du har nå lært ganske mye om hvordan man programmerer datamaskiner med ComputerCraft i Minecraft! Prøv gjerne å forandre noen av programmene vi har laget. Kan du lage dem enda bedre?</p>
 <section id="prøv-selv-2" class="level3 try">

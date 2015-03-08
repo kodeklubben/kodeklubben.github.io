@@ -5,13 +5,13 @@
 <section id="hello-world" class="level1 activity">
 <h1>Hello world!</h1>
 <p>La oss ta et eksempel der vi vil ha Python til å si <strong>Hei!</strong> 100 ganger. En mulighet er da å sette i gang å skrive:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="dt">print</span>(<span class="st">&quot;Hello  world!&quot;</span>)
-<span class="dt">print</span>(<span class="st">&quot;Hello  world!&quot;</span>)
-<span class="dt">print</span>(<span class="st">&quot;Hello  world!&quot;</span>)
+<pre class="sourceCode python"><code class="sourceCode python lang-python">print(<span class="hljs-string">"Hello  world!"</span>)
+print(<span class="hljs-string">"Hello  world!"</span>)
+print(<span class="hljs-string">"Hello  world!"</span>)
 ...</code></pre>
 <p>Som du ser vil dette ta lang tid. Programmerere vil gjerne løse en oppgave på enklest mulig måte, og derfor har man funnet opp løkker som kan gjøre dette for oss! Koden under løser problemet vi skulle løse på bare to linjer:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">for</span> i in <span class="dt">range</span>(<span class="dv">100</span>):
-    <span class="dt">print</span>(i, <span class="st">&quot;Hello  world!&quot;</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+    print(i, <span class="hljs-string">"Hello  world!"</span>)</code></pre>
 <p>Lurt, ikke sant?</p>
 </section>
 <section id="range" class="level1 protip">
@@ -26,7 +26,7 @@
 <h1>Liftoff</h1>
 <p>Bruk en for-løkke og range-funksjonen for å telle ned fra 10. Når du kommer til 0, skal programmet skrive <strong>liftoff!</strong></p>
 <figure>
-<img src="liftoff.png" title="program som teller ned til liftoff" />
+<img src="liftoff.png" title="program som teller ned til liftoff">
 </figure>
 </section>
 <section id="summere-100-tall" class="level1 activity">
@@ -36,13 +36,13 @@
 <section id="summere-n-tall" class="level1 activity">
 <h1>Summere n tall</h1>
 <p>Lag en funksjon <code>summer(n)</code>, som tar inn en parameter og returnerer summen av alle tallene fra 0 til <code>n</code>. Definer funksjonen slik:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> summer(n):
-    <span class="dt">sum</span> = <span class="dv">0</span>
-    <span class="co"># Din kode</span>
-    <span class="kw">return</span> <span class="dt">sum</span></code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">summer</span><span class="hljs-params">(n)</span>:</span>
+    sum = <span class="hljs-number">0</span>
+    <span class="hljs-comment"># Din kode</span>
+    <span class="hljs-keyword">return</span> sum</code></pre>
 <p>Når koden din er rett, skal den fungere slik som dette:</p>
 <figure>
-<img src="summer.png" title="summering av tallrekker med python" />
+<img src="summer.png" title="summering av tallrekker med python">
 </figure>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Tjerand Silde</p>

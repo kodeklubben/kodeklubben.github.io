@@ -8,7 +8,7 @@
 <p>Vigenere er litt smartere enn krypteringen i <a href="../hemmelige_koder/hemmelige_koder.html">Hemmelige koder</a>, men den er ikke så annerledes. I stegene under skal du prøve å forstå vigenere-koden. Det er viktig at du forstår denne koden, ettersom du skal lage nesten lik kode selv.</p>
 <section id="python-2" class="level2 protip">
 <h2>Python 2</h2>
-<p>Denne koden fungerer best med python 3. Dersom du har python 2, må du legge en <code>u</code> foran alle strenger. Altså <code>'asdf'</code> må skrives slik som dette: <code>u'asdf'</code>.</p>
+<p>Denne koden fungerer best med python 3. Dersom du har python 2, må du legge en <code>u</code> foran alle strenger. Altså <code class="lang-java"><span class="hljs-string">'asdf'</span></code> må skrives slik som dette: <code class="lang-python"><span class="hljs-string">u'asdf'</span></code>.</p>
 </section>
 <section id="lag-kommentarer-med-forklaring" class="level2 check">
 <h2>Lag kommentarer med forklaring</h2>
@@ -17,45 +17,45 @@
 <li>Hva er forskjellig fra <a href="../hemmelige_koder/hemmelige_koder.html">Hemmelige koder</a>?</li>
 <li>Hva gjør <code>alphabet.find</code>?</li>
 <li>Hva betyr det at <code>alphabet.find</code> gir <code>-1</code> som svar?</li>
-<li>Legg til kommentarer med <code>#</code> over/bak hver linjene med din forklaring.</li>
+<li>Legg til kommentarer med <code class="lang-python"><span class="hljs-comment">#</span></code> over/bak hver linjene med din forklaring.</li>
 </ul>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="co">&quot;&quot;&quot;Vigenere encoding, by Arve Seljebu(arve@seljebu.no), MIT License, 2014&quot;&quot;&quot;</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-string">"""Vigenere encoding, by Arve Seljebu(arve@seljebu.no), MIT License, 2014"""</span>
 
-alphabet = <span class="st">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå .,?-_;:+1234567890&quot;&#39;</span>
+alphabet = <span class="hljs-string">'ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå .,?-_;:+1234567890"'</span>
 
-<span class="kw">def</span> vigenere_encode(msg, key):
-    <span class="co">&quot;&quot;&quot;Function that encodes a string with Vigenere cipher. The encrypted</span>
-<span class="co">       string is returned.</span>
-<span class="co">    &quot;&quot;&quot;</span>
-    secret = <span class="st">&#39;&#39;</span>
-    key_length = <span class="dt">len</span>(key)
-    alphabet_length = <span class="dt">len</span>(alphabet)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">vigenere_encode</span><span class="hljs-params">(msg, key)</span>:</span>
+    <span class="hljs-string">"""Function that encodes a string with Vigenere cipher. The encrypted
+       string is returned.
+    """</span>
+    secret = <span class="hljs-string">''</span>
+    key_length = len(key)
+    alphabet_length = len(alphabet)
 
-    <span class="kw">for</span> i, char in <span class="dt">enumerate</span>(msg):
+    <span class="hljs-keyword">for</span> i, char <span class="hljs-keyword">in</span> enumerate(msg):
         msgInt = alphabet.find(char)
         encInt = alphabet.find(key[i % key_length])
 
-        <span class="kw">if</span> msgInt == -<span class="dv">1</span> or encInt == -<span class="dv">1</span>:
-            <span class="kw">return</span> <span class="st">&#39;&#39;</span>
+        <span class="hljs-keyword">if</span> msgInt == -<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> encInt == -<span class="hljs-number">1</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>
 
         encoded = (msgInt + encInt) % alphabet_length
         secret += alphabet[encoded]
 
-    <span class="kw">return</span> secret
+    <span class="hljs-keyword">return</span> secret
 
-message = <span class="st">&#39;My first computer program was a song called Popcorn written in QBasic. The second computer program I made was a bot made for IRC.&#39;</span>
-keyword = <span class="st">&#39;source&#39;</span>
+message = <span class="hljs-string">'My first computer program was a song called Popcorn written in QBasic. The second computer program I made was a bot made for IRC.'</span>
+keyword = <span class="hljs-string">'source'</span>
 
 encrypted = vigenere_encode(message, keyword)
-<span class="dt">print</span>(encrypted)</code></pre>
+print(encrypted)</code></pre>
 </section>
 <section id="hint" class="level2 protip">
 <h2>Hint</h2>
-<p>Du kan bruke kommandoen <code>help('funksjonsnavn')</code> i python-terminalen for lese manualen. Prøv disse:</p>
+<p>Du kan bruke kommandoen <code class="lang-java">help(<span class="hljs-string">'funksjonsnavn'</span>)</code> i python-terminalen for lese manualen. Prøv disse:</p>
 <ul>
-<li><code>help('def')</code></li>
-<li><code>help('len')</code></li>
-<li><code>help('vigenere_encode')</code></li>
+<li><code class="lang-java">help(<span class="hljs-string">'def'</span>)</code></li>
+<li><code class="lang-java">help(<span class="hljs-string">'len'</span>)</code></li>
+<li><code class="lang-java">help(<span class="hljs-string">'vigenere_encode'</span>)</code></li>
 </ul>
 </section>
 </section>
@@ -76,7 +76,7 @@ encrypted = vigenere_encode(message, keyword)
 <section id="cracking" class="level2 check">
 <h2>Cracking</h2>
 <p>Du skal nå prøve å knekke en kodet streng. Dette er vanskelig, så du må lage en plan først. Strengen er:</p>
-<p><code>q0Ø:;AI&quot;E47FRBQNBG4WNB8B4LQN8ERKC88U8GEN?T6LaNBG4GØ&quot;&quot;N6K086HB&quot;Ø8CRHW&quot;+LS79Ø&quot;&quot;N29QCLN5WNEBS8GENBG4FØ47a</code></p>
+<p><code class="lang-java">q0Ø:;AI<span class="hljs-string">"E47FRBQNBG4WNB8B4LQN8ERKC88U8GEN?T6LaNBG4GØ"</span><span class="hljs-string">"N6K086HB"</span>Ø<span class="hljs-number">8</span>CRHW<span class="hljs-string">"+LS79Ø"</span><span class="hljs-string">"N29QCLN5WNEBS8GENBG4FØ47a</span></code></p>
 </section>
 <section id="hint-1" class="level2 protip">
 <h2>Hint</h2>
@@ -84,14 +84,14 @@ encrypted = vigenere_encode(message, keyword)
 <li>Nøkkelen er seks små bokstaver.</li>
 <li>Språket i setningen er engelsk.</li>
 <li>Finn en metode å sjekke om den dekrypterte strengen er korrekt. For eksempel kan du tenke på hvor mange mellomrom den burde inneholde?</li>
-<li>For å generere mulige nøkler kan du bruke <code>itertools.product()</code>, prøv for eksempel å se hva du får om du looper over <code>itertools.product('abcd', repeat=2)</code>.</li>
+<li>For å generere mulige nøkler kan du bruke <code>itertools.product()</code>, prøv for eksempel å se hva du får om du looper over <code class="lang-lua">itertools.product(<span class="hljs-string">'abcd'</span>, <span class="hljs-keyword">repeat</span>=<span class="hljs-number">2</span>)</code>.</li>
 </ul>
 </section>
 <section id="bruk-en-ordbok" class="level2 check">
 <h2>Bruk en ordbok</h2>
 <p>Sålenge vi har brukt engelske ord som nøkler er det mye raskere å knekke krypteringen med en ordbok. En ordbok finner du på alle Linux/Mac/Unix-maskiner under <strong>/usr/share/dict</strong>. Bruker du Windows, kan du laste ned en slik fil fra internett. Søk på <em>large english vocabulary word lists</em>.</p>
 <p>Disse filene inneholder alle ord som finnes i en engelsk ordbok, separert med linjeskift. Finn ut hvordan du kan laste inn ordene fra filen (pass på at du fjerner linjeskiftene) og bruk dem til å dekryptere en ny streng:</p>
-<p><code>t-JO:BK0aM,:CQ+ÆAGW?FJGB0KVCGMQ6SQN&quot;GAIDL-PÅ7954E:7Jr,IÆoCF0M&quot;CQdØVlHD53CÅ;IA2DMG5ØHDØVåL:JQØ439LRBBVEMTBÆ6CF0M&quot;CQNAG8G1V6LÅ8FF4Z</code></p>
+<p><code class="lang-css"><span class="hljs-tag">t-JO</span><span class="hljs-pseudo">:BK0aM</span>,<span class="hljs-pseudo">:CQ+</span>Æ<span class="hljs-tag">AGW</span>?<span class="hljs-tag">FJGB0KVCGMQ6SQN</span>"<span class="hljs-tag">GAIDL-P</span>Å7954<span class="hljs-tag">E</span><span class="hljs-pseudo">:7Jr</span>,<span class="hljs-tag">I</span>Æ<span class="hljs-tag">oCF0M</span>"<span class="hljs-tag">CQd</span>Ø<span class="hljs-tag">VlHD53C</span>Å;<span class="hljs-tag">IA2DMG5</span>Ø<span class="hljs-tag">HD</span>Ø<span class="hljs-tag">V</span>å<span class="hljs-tag">L</span><span class="hljs-pseudo">:JQ</span>Ø439<span class="hljs-tag">LRBBVEMTB</span>Æ6<span class="hljs-tag">CF0M</span>"<span class="hljs-tag">CQNAG8G1V6L</span>Å8<span class="hljs-tag">FF4Z</span></code></p>
 <p>Bruk metodene du laget i oppgaven over for å detektere om vi har funnet riktig nøkkel. Dersom du kjører scriptet ditt med kommandoen <code>time python3 vigenere.py</code> kan du se hvor lang tid den bruker.</p>
 </section>
 <section id="premie" class="level2 flag">

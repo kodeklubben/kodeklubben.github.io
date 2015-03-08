@@ -5,14 +5,14 @@
 <ul>
 <li><p>Åpne IDLE-editoren, og åpne en ny fil ved å trykke <code>File &gt; New Window</code>, og la oss begynne.</p>
 <p>Husk at du skal ha to vinduer åpne. Det ene er ‘Python Shell’ og det andre er for å skrive kode i.</p>
-<p>Som sist vil den første linjen alltid være <code>from turtle import *</code> for å fortelle Python at vi vil tegne ved hjelp av skilpadde-biblioteket!</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<p>Som sist vil den første linjen alltid være <code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *</code> for å fortelle Python at vi vil tegne ved hjelp av skilpadde-biblioteket!</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">for</span> n in <span class="dt">range</span>(<span class="dv">4</span>):
-    forward(<span class="dv">100</span>)
-    right(<span class="dv">90</span>)</code></pre></li>
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+    forward(<span class="hljs-number">100</span>)
+    right(<span class="hljs-number">90</span>)</code></pre></li>
 <li><p>Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</p>
-<p>Husk at <code>for n in range(4)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk ‘Tab’ (knappen over Caps-Lock) for å flytte kode.</p></li>
+<p>Husk at <code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk ‘Tab’ (knappen over Caps-Lock) for å flytte kode.</p></li>
 </ul>
 </section>
 </section>
@@ -23,13 +23,13 @@
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre programmet så det ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-sides = <span class="dv">4</span>
-length = <span class="dv">100</span>
-angle = <span class="dv">360</span>/sides
+sides = <span class="hljs-number">4</span>
+length = <span class="hljs-number">100</span>
+angle = <span class="hljs-number">360</span>/sides
 
-<span class="kw">for</span> n in <span class="dt">range</span>(sides):
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
     forward(length)
     right(angle)</code></pre></li>
 <li><p>Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</p></li>
@@ -42,21 +42,21 @@ angle = <span class="dv">360</span>/sides
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi endrer koden og legger til <code>def poly():</code>. Pass på at koden har riktig innrykk (du kan merke den og trykke Tab) og bruk den nye prosedyren. (Å bruke en prosedyre heter å kalle prosedyren).</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<li><p>Vi endrer koden og legger til <code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span></code>. Pass på at koden har riktig innrykk (du kan merke den og trykke Tab) og bruk den nye prosedyren. (Å bruke en prosedyre heter å kalle prosedyren).</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> poly():
-    sides = <span class="dv">4</span>
-    length = <span class="dv">100</span>
-    angle = <span class="dv">360</span>/sides
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span>
+    sides = <span class="hljs-number">4</span>
+    length = <span class="hljs-number">100</span>
+    angle = <span class="hljs-number">360</span>/sides
 
-    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+    <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
         forward(length)
         right(angle)
 
-pencolor(<span class="st">&#39;red&#39;</span>)
+pencolor(<span class="hljs-string">'red'</span>)
 poly()
-right(<span class="dv">180</span>)
+right(<span class="hljs-number">180</span>)
 poly()</code></pre></li>
 <li><p>Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</p></li>
 </ul>
@@ -70,20 +70,20 @@ poly()</code></pre></li>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre koden så den ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> poly(sides, length):
-    angle = <span class="dv">360</span>/sides
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">(sides, length)</span>:</span>
+    angle = <span class="hljs-number">360</span>/sides
 
-    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+    <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
         forward(length)
         right(angle)
 
-pencolor(<span class="st">&#39;red&#39;</span>)
-poly(<span class="dv">4</span>, <span class="dv">100</span>)
-right(<span class="dv">180</span>)
-pencolor(<span class="st">&#39;blue&#39;</span>)
-poly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
+pencolor(<span class="hljs-string">'red'</span>)
+poly(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
+right(<span class="hljs-number">180</span>)
+pencolor(<span class="hljs-string">'blue'</span>)
+poly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre></li>
 <li><p>Kjør den og se hva som skjer.</p>
 <p>La oss ta dette litt sakte, for dette er ganske kule greier. Istedenfor å bestemme variablene i prosedyren, sier vi at prosedyren tar noen verdier som har navn, og så bruker vi verdiene der vi trenger dem.</p>
 <p>Vi flyttet noen verdier ut av prosedyren, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste prosedyre, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p></li>
@@ -91,7 +91,7 @@ poly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
 <p>Å være i stand til å definere nye prosedyrer som kan oppføre seg forskjellig basert på verdiene vi gir inn er et av de kraftigste verktøyene i programmering.</p>
 <section id="tips" class="level3 protip">
 <h3>Tips</h3>
-<p>Vi skiller mellom prosedyrer og funksjoner når vi snakker om dem, men de er ser helt like ut i Python. Det kommer funksjoner i neste kapittel, men vi nevner det allerede nå så du har hørt om det. Forskjellen er at en prosedyre kan gjøre noe med omverdenen, for eksempel tegne noe eller skrive noe på skjermen. Både prosedyrer og funksjoner kan returnere en verdi også, det kommer vi tilbake til, men prosedyren kan finne på å gi forskjellig resultat selv om du gir inn samme verdier. For eksempel kan en prosedyre <code>erDet(&quot;fredag&quot;)</code> svare ja på fredager og nei på lørdager. En funksjon derimot må alltid svare det samme hvis den får de samme verdiene.</p>
+<p>Vi skiller mellom prosedyrer og funksjoner når vi snakker om dem, men de er ser helt like ut i Python. Det kommer funksjoner i neste kapittel, men vi nevner det allerede nå så du har hørt om det. Forskjellen er at en prosedyre kan gjøre noe med omverdenen, for eksempel tegne noe eller skrive noe på skjermen. Både prosedyrer og funksjoner kan returnere en verdi også, det kommer vi tilbake til, men prosedyren kan finne på å gi forskjellig resultat selv om du gir inn samme verdier. For eksempel kan en prosedyre <code class="lang-java">erDet(<span class="hljs-string">"fredag"</span>)</code> svare ja på fredager og nei på lørdager. En funksjon derimot må alltid svare det samme hvis den får de samme verdiene.</p>
 </section>
 </section>
 </section>
@@ -101,13 +101,13 @@ poly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Selv om skilpadden er en liten robot som kan tegne, kan den også flytte seg uten å tegne. Husk at vi kan bruke <code>penup()</code> og <code>pendown()</code> for å slå av og på at skilpadden setter spor. Åpne en ny Python-fil, og skriv inn koden under:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-length = <span class="dv">200</span>
-<span class="kw">for</span> num in <span class="dt">range</span>(<span class="dv">8</span>):
-    forward(length/<span class="dv">16</span>)
+length = <span class="hljs-number">200</span>
+<span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+    forward(length/<span class="hljs-number">16</span>)
     penup()
-    forward(length/<span class="dv">16</span>)
+    forward(length/<span class="hljs-number">16</span>)
     pendown()</code></pre></li>
 <li><p>Dette programmet tegner en stiplet linje over skjermen. Kjør det og sjekk!</p></li>
 </ul>
@@ -120,28 +120,28 @@ length = <span class="dv">200</span>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre koden så den ser ut som følgende:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-<span class="kw">def</span> dashpoly(sides, length):
-    angle = <span class="dv">360</span>/sides
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dashpoly</span><span class="hljs-params">(sides, length)</span>:</span>
+    angle = <span class="hljs-number">360</span>/sides
 
-    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
-        <span class="kw">for</span> num in <span class="dt">range</span>(<span class="dv">8</span>):
-            forward(length/<span class="dv">16</span>)
+    <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
+        <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+            forward(length/<span class="hljs-number">16</span>)
             penup()
-            forward(length/<span class="dv">16</span>)
+            forward(length/<span class="hljs-number">16</span>)
             pendown()
         right(angle)
 
-pencolor(<span class="st">&#39;red&#39;</span>)
-dashpoly(<span class="dv">4</span>, <span class="dv">100</span>)
-right(<span class="dv">180</span>)
-pencolor(<span class="st">&#39;blue&#39;</span>)
-dashpoly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
+pencolor(<span class="hljs-string">'red'</span>)
+dashpoly(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
+right(<span class="hljs-number">180</span>)
+pencolor(<span class="hljs-string">'blue'</span>)
+dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre></li>
 <li><p>Kjør koden og se hva den gjør.</p>
-<p>Vi har to for-løkker inni hverandre, en ytre og en indre. Den ytre løkken <code>for n in range(sides)</code> tegner hver kant av figuren, og hver gang kjører den indre løkken <code>for num in range(8)</code> som tegner stiplete linjer.</p>
+<p>Vi har to for-løkker inni hverandre, en ytre og en indre. Den ytre løkken <code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides)</code> tegner hver kant av figuren, og hver gang kjører den indre løkken <code class="lang-python"><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>)</code> som tegner stiplete linjer.</p>
 <p>Den ytre løkken bruker variabelen <code>n</code> for å holde styr på hvor mange ganger den har gjentatt seg selv, og den indre løkken bruker variabelen <code>num</code> på tilsvarende måte. Du må bruke forskjellige variabelnavn inni løkken, ellers roter du det bare til.</p></li>
 </ul>
 </section>
@@ -152,29 +152,29 @@ dashpoly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></l
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>La oss bruke prosedyrer igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-<span class="kw">def</span> dashforward(length):
-    <span class="kw">for</span> num in <span class="dt">range</span>(<span class="dv">8</span>):
-        forward(length/<span class="dv">16</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dashforward</span><span class="hljs-params">(length)</span>:</span>
+    <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+        forward(length/<span class="hljs-number">16</span>)
         penup()
-        forward(length/<span class="dv">16</span>)
+        forward(length/<span class="hljs-number">16</span>)
         pendown()
 
-<span class="kw">def</span> dashpoly(sides, length):
-    angle = <span class="dv">360</span>/sides
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dashpoly</span><span class="hljs-params">(sides, length)</span>:</span>
+    angle = <span class="hljs-number">360</span>/sides
 
-    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+    <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
         dashforward(length)
         right(angle)
 
-pencolor(<span class="st">&#39;red&#39;</span>)
-dashpoly(<span class="dv">4</span>, <span class="dv">100</span>)
-right(<span class="dv">180</span>)
-pencolor(<span class="st">&#39;blue&#39;</span>)
-dashpoly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></li>
+pencolor(<span class="hljs-string">'red'</span>)
+dashpoly(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
+right(<span class="hljs-number">180</span>)
+pencolor(<span class="hljs-string">'blue'</span>)
+dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre></li>
 <li><p>Kjør koden og se at den gjør akkurat det samme som før.</p></li>
 </ul>
 <section id="tips-1" class="level3 protip">
@@ -190,27 +190,26 @@ dashpoly(<span class="dv">3</span>, <span class="dv">150</span>)</code></pre></l
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>I en ny fil, skriv inn følgende:</p>
-<pre class="sourceCode python"><code class="sourceCode python">
-<span class="ch">from</span> turtle <span class="ch">import</span> *
-<span class="ch">from</span> random <span class="ch">import</span> randrange, choice
-colors = [<span class="st">&#39;red&#39;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;green&#39;</span>]
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange, choice
+colors = [<span class="hljs-string">'red'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'green'</span>]
 
 
-<span class="kw">def</span> poly(sides, length):
-    angle = <span class="dv">360</span>/sides
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">(sides, length)</span>:</span>
+    angle = <span class="hljs-number">360</span>/sides
 
-    <span class="kw">for</span> n in <span class="dt">range</span>(sides):
+    <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
         forward(length)
         right(angle)
 
-<span class="kw">for</span> count in <span class="dt">range</span>(<span class="dv">10</span>):
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
     pencolor(choice(colors))
-    right(randrange(<span class="dv">0</span>,<span class="dv">360</span>))
-    poly(randrange(<span class="dv">3</span>,<span class="dv">9</span>), randrange(<span class="dv">10</span>,<span class="dv">30</span>))</code></pre></li>
+    right(randrange(<span class="hljs-number">0</span>,<span class="hljs-number">360</span>))
+    poly(randrange(<span class="hljs-number">3</span>,<span class="hljs-number">9</span>), randrange(<span class="hljs-number">10</span>,<span class="hljs-number">30</span>))</code></pre></li>
 <li><p>Lagre og kjør koden</p>
-<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen <code>from random import randrange, random</code> gir oss to nye prosedyrer, <code>randrange()</code> og <code>choice()</code>.</p>
+<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen <code class="lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange, random</code> gir oss to nye prosedyrer, <code>randrange()</code> og <code>choice()</code>.</p>
 <p><code>randrange()</code> plukker ut et tall mellom det laveste og det høyeste tallet vi gir inn, så <code>randrange(1, 10)</code> velger et tall mellom 1 og 9 (Python begynner med 1, og stopper rett før 10).</p>
-<p><code>choice()</code> velger en ting fra listen vi gir inn. En liste er en samling av verdier, for eksempel <code>[1, 2, 3]</code>. I koden ovenfor bruker vi listen <code>colors</code>, som har verdiene <code>'red'</code>, <code>'blue'</code>, and <code>'green'</code>.</p>
+<p><code>choice()</code> velger en ting fra listen vi gir inn. En liste er en samling av verdier, for eksempel <code class="lang-css"><span class="hljs-attr_selector">[1, 2, 3]</span></code>. I koden ovenfor bruker vi listen <code>colors</code>, som har verdiene <code class="lang-java"><span class="hljs-string">'red'</span></code>, <code class="lang-java"><span class="hljs-string">'blue'</span></code>, and <code class="lang-java"><span class="hljs-string">'green'</span></code>.</p>
 <p>Ved å bruke <code>choice()</code> og <code>randrange()</code> kan vi be datamaskinen om å velge farge, størrelse og form for oss, og det kommer til å bli forskjellig resultat nesten hver eneste gang du kjører programmet.</p></li>
 </ul>
 </section>

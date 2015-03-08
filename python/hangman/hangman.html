@@ -10,15 +10,15 @@
 <ul>
 <li><p>Åpne IDLE, og åpne et nytt vindu</p></li>
 <li><p>Skriv inn følgende kode:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> random <span class="ch">import</span> choice
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
-word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])
+word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
-<span class="dt">print</span>(word)</code></pre></li>
+print(word)</code></pre></li>
 <li><p>Lagre programmet ditt og kjør det. Hvilket ord skrives ut?</p></li>
 <li><p>Kjør programmet en gang til. Skriver det ut et annet ord?</p></li>
 </ul>
-<p>Hver gang du kjører dette programmet vil det velge et tilfeldig ord fra listen <code>[&quot;kode&quot;, &quot;kurs&quot;]</code> ved hjelp av <code>choice</code>-funksjonen.</p>
+<p>Hver gang du kjører dette programmet vil det velge et tilfeldig ord fra listen <code class="lang-java">[<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>]</code> ved hjelp av <code>choice</code>-funksjonen.</p>
 </section>
 </section>
 <section id="steg-2-gjett-en-bokstav" class="level1 activity">
@@ -28,38 +28,38 @@ word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>I den samme filen, endre koden så den ser ut som følger</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> random <span class="ch">import</span> choice
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
-word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])
+word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
-out = <span class="st">&quot;&quot;</span>
+out = <span class="hljs-string">""</span>
 
-<span class="kw">for</span> letter in word:
-    out = out + <span class="st">&quot;_&quot;</span>
+<span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> word:
+    out = out + <span class="hljs-string">"_"</span>
 
-<span class="dt">print</span>(<span class="st">&quot;Gjett en bokstav i ordet:&quot;</span>, out)</code></pre></li>
+print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)</code></pre></li>
 <li><p>Lagre og kjør programmet.</p></li>
 <li><p>Du burde se <code>Gjett en bokstav i ordet: ____</code>, i output-vinduet (det andre vinduet, ikke vinduet du har skrevet programmet ditt i).</p>
-<p>Vi bruker en <code>for</code>-løkke for å bygge en tekst hvor hver bokstav i ordet er byttet med en understrek <code>_</code>. Ordet <code>kode</code> vil da for eksempel skrives som <code>____</code> til skjermen.</p></li>
+<p>Vi bruker en <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkke for å bygge en tekst hvor hver bokstav i ordet er byttet med en understrek <code>_</code>. Ordet <code>kode</code> vil da for eksempel skrives som <code>____</code> til skjermen.</p></li>
 <li><p>La oss gjette på en bokstav! Endre koden så den ser ut som dette</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> random <span class="ch">import</span> choice
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
-word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])
+word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
-out = <span class="st">&quot;&quot;</span>
+out = <span class="hljs-string">""</span>
 
-<span class="kw">for</span> letter in word:
-    out = out + <span class="st">&quot;_&quot;</span>
+<span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> word:
+    out = out + <span class="hljs-string">"_"</span>
 
-<span class="dt">print</span>(<span class="st">&quot;Gjett en bokstav i ordet, avslutt med enter:&quot;</span>, out)
+print(<span class="hljs-string">"Gjett en bokstav i ordet, avslutt med enter:"</span>, out)
 
-guess = <span class="dt">input</span>()
+guess = input()
 
-<span class="kw">if</span> guess in word:
-    <span class="dt">print</span>(<span class="st">&quot;Yay&quot;</span>)
-<span class="kw">else</span>:
-    <span class="dt">print</span>(<span class="st">&quot;Nope&quot;</span>)</code></pre>
-<p>Vi bruker en ny prosedyre <code>input()</code> for å finne ut hvilken bokstav spilleren skriver. Vi bruker <code>if</code> for å sjekke om bokstaven er i ordet.</p></li>
+<span class="hljs-keyword">if</span> guess <span class="hljs-keyword">in</span> word:
+    print(<span class="hljs-string">"Yay"</span>)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">"Nope"</span>)</code></pre>
+<p>Vi bruker en ny prosedyre <code>input()</code> for å finne ut hvilken bokstav spilleren skriver. Vi bruker <code class="lang-java"><span class="hljs-keyword">if</span></code> for å sjekke om bokstaven er i ordet.</p></li>
 </ul>
 <p>Da har vi gjort det viktigste, la oss fortsette videre.</p>
 </section>
@@ -70,44 +70,44 @@ guess = <span class="dt">input</span>()
 </section>
 <section id="steg-3-husk-bokstavene-som-er-gjettet" class="level1 activity">
 <h1>Steg 3: Husk bokstavene som er gjettet</h1>
-<p>Nå skal vi bruke to nye komponenter i python, lister og <code>while</code>-løkker.</p>
+<p>Nå skal vi bruke to nye komponenter i python, lister og <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkker.</p>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>I den samme filen, endre koden så den ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> random <span class="ch">import</span> choice
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
-word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])
+word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
 guessed = []
 
-<span class="kw">while</span> <span class="ot">True</span>:
-    out = <span class="st">&quot;&quot;</span>
-    <span class="kw">for</span> letter in word:
-        <span class="kw">if</span> letter in guessed:
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    out = <span class="hljs-string">""</span>
+    <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> word:
+        <span class="hljs-keyword">if</span> letter <span class="hljs-keyword">in</span> guessed:
             out = out + letter
-        <span class="kw">else</span>:
-            out = out + <span class="st">&quot;_&quot;</span>
+        <span class="hljs-keyword">else</span>:
+            out = out + <span class="hljs-string">"_"</span>
 
-    <span class="kw">if</span> out == word:
-        <span class="dt">print</span>(<span class="st">&quot;Du gjettet&quot;</span>, word)
-        <span class="kw">break</span>
+    <span class="hljs-keyword">if</span> out == word:
+        print(<span class="hljs-string">"Du gjettet"</span>, word)
+        <span class="hljs-keyword">break</span>
 
 
-    <span class="dt">print</span>(<span class="st">&quot;Gjett en bokstav i ordet:&quot;</span>, out)
-    guess = <span class="dt">input</span>()
+    print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)
+    guess = input()
 
-    <span class="kw">if</span> guess in guessed:
-        <span class="dt">print</span>(<span class="st">&quot;Bokstaven er allerede gjettet på:&quot;</span>, guess)
-    <span class="kw">elif</span> guess in word:
-        <span class="dt">print</span>(<span class="st">&quot;Yay&quot;</span>)
+    <span class="hljs-keyword">if</span> guess <span class="hljs-keyword">in</span> guessed:
+        print(<span class="hljs-string">"Bokstaven er allerede gjettet på:"</span>, guess)
+    <span class="hljs-keyword">elif</span> guess <span class="hljs-keyword">in</span> word:
+        print(<span class="hljs-string">"Yay"</span>)
         guessed.append(guess)
-    <span class="kw">else</span>:
-        <span class="dt">print</span>(<span class="st">&quot;Nope&quot;</span>)
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">"Nope"</span>)
 
-    <span class="dt">print</span>()</code></pre></li>
+    print()</code></pre></li>
 <li><p>Kjør koden og prøv å gjette bokstavene.</p>
-<p>Vi har laget en <code>while True</code>-løkke, tilsvarende <code>for alltid</code> i scratch. Denne vil i utgangspunktet fortsette å spørre spilleren om å gjette bokstaver for alltid. For å komme ut av løkken bruker vi kommandoen <code>break</code> når ordet har blitt gjettet.</p>
+<p>Vi har laget en <code class="lang-python"><span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span></code>-løkke, tilsvarende <code class="lang-java"><span class="hljs-keyword">for</span> alltid</code> i scratch. Denne vil i utgangspunktet fortsette å spørre spilleren om å gjette bokstaver for alltid. For å komme ut av løkken bruker vi kommandoen <code class="lang-java"><span class="hljs-keyword">break</span></code> når ordet har blitt gjettet.</p>
 <p>Vi bruker også en liste, <code>guessed</code>, hvor vi legger til bokstavene som er riktige for å huske dem senere.</p></li>
 </ul>
 </section>
@@ -116,42 +116,42 @@ guessed = []
 <h1>Steg 4: Tell feilene</h1>
 <p>For at Hangman skal holde oversikt over alle bokstavene som er gjettet på må vi også huske på når spilleren gjetter feil.</p>
 <section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste </h2>
+<h2>Sjekkliste&nbsp;</h2>
 <ul>
 <li><p>Endre filen du jobber med slik at den blir seende ut som dette:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> random <span class="ch">import</span> choice
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
-word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])
+word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
 guessed = []
 wrong = []
 
-<span class="kw">while</span> <span class="ot">True</span>:
-    out = <span class="st">&quot;&quot;</span>
-    <span class="kw">for</span> letter in word:
-        <span class="kw">if</span> letter in guessed:
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    out = <span class="hljs-string">""</span>
+    <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> word:
+        <span class="hljs-keyword">if</span> letter <span class="hljs-keyword">in</span> guessed:
             out = out + letter
-        <span class="kw">else</span>:
-            out = out + <span class="st">&quot;_&quot;</span>
+        <span class="hljs-keyword">else</span>:
+            out = out + <span class="hljs-string">"_"</span>
 
-    <span class="kw">if</span> out == word:
-        <span class="dt">print</span>(<span class="st">&quot;Du gjettet&quot;</span>, word)
-        <span class="kw">break</span>
+    <span class="hljs-keyword">if</span> out == word:
+        print(<span class="hljs-string">"Du gjettet"</span>, word)
+        <span class="hljs-keyword">break</span>
 
-    <span class="dt">print</span>(<span class="st">&quot;Gjett en bokstav i ordet:&quot;</span>, out)
+    print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)
 
-    guess = <span class="dt">input</span>()
+    guess = input()
 
-    <span class="kw">if</span> guess in guessed or guess in wrong:
-        <span class="dt">print</span>(<span class="st">&quot;Bokstaven er allerede gjettet på:&quot;</span>, guess)
-    <span class="kw">elif</span> guess in word:
-        <span class="dt">print</span>(<span class="st">&quot;Yay&quot;</span>)
+    <span class="hljs-keyword">if</span> guess <span class="hljs-keyword">in</span> guessed <span class="hljs-keyword">or</span> guess <span class="hljs-keyword">in</span> wrong:
+        print(<span class="hljs-string">"Bokstaven er allerede gjettet på:"</span>, guess)
+    <span class="hljs-keyword">elif</span> guess <span class="hljs-keyword">in</span> word:
+        print(<span class="hljs-string">"Yay"</span>)
         guessed.append(guess)
-    <span class="kw">else</span>:
-        <span class="dt">print</span>(<span class="st">&quot;Nope&quot;</span>)
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">"Nope"</span>)
         wrong.append(guess)
 
-    <span class="dt">print</span>()</code></pre>
+    print()</code></pre>
 <p>Vi bruker en ny liste <code>wrong</code> som tar vare på alle bokstavene vi har gjettet som er feil.</p></li>
 </ul>
 </section>
@@ -163,49 +163,49 @@ wrong = []
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre filen for å legge til en ny variabel, <code>tries</code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> random <span class="ch">import</span> choice
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
-word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])
+word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
 guessed = []
 wrong = []
 
-tries = <span class="dv">7</span>
+tries = <span class="hljs-number">7</span>
 
-<span class="kw">while</span> tries &gt; <span class="dv">0</span>:
-    out = <span class="st">&quot;&quot;</span>
-    <span class="kw">for</span> letter in word:
-        <span class="kw">if</span> letter in guessed:
+<span class="hljs-keyword">while</span> tries &gt; <span class="hljs-number">0</span>:
+    out = <span class="hljs-string">""</span>
+    <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> word:
+        <span class="hljs-keyword">if</span> letter <span class="hljs-keyword">in</span> guessed:
             out = out + letter
-        <span class="kw">else</span>:
-            out = out + <span class="st">&quot;_&quot;</span>
+        <span class="hljs-keyword">else</span>:
+            out = out + <span class="hljs-string">"_"</span>
 
-    <span class="kw">if</span> out == word:
-        <span class="kw">break</span>
+    <span class="hljs-keyword">if</span> out == word:
+        <span class="hljs-keyword">break</span>
 
-    <span class="dt">print</span>(<span class="st">&quot;Gjett en bokstav i ordet:&quot;</span>, out)
-    <span class="dt">print</span>(tries, <span class="st">&quot;forsøk igjen&quot;</span>)
+    print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)
+    print(tries, <span class="hljs-string">"forsøk igjen"</span>)
 
-    guess = <span class="dt">input</span>()
+    guess = input()
 
-    <span class="kw">if</span> guess in guessed or guess in wrong:
-        <span class="dt">print</span>(<span class="st">&quot;Bokstaven er allerede gjettet på:&quot;</span>, guess)
-    <span class="kw">elif</span> guess in word:
-        <span class="dt">print</span>(<span class="st">&quot;Yay&quot;</span>)
+    <span class="hljs-keyword">if</span> guess <span class="hljs-keyword">in</span> guessed <span class="hljs-keyword">or</span> guess <span class="hljs-keyword">in</span> wrong:
+        print(<span class="hljs-string">"Bokstaven er allerede gjettet på:"</span>, guess)
+    <span class="hljs-keyword">elif</span> guess <span class="hljs-keyword">in</span> word:
+        print(<span class="hljs-string">"Yay"</span>)
         guessed.append(guess)
-    <span class="kw">else</span>:
-        <span class="dt">print</span>(<span class="st">&quot;Nope&quot;</span>)
-        tries = tries - <span class="dv">1</span>
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">"Nope"</span>)
+        tries = tries - <span class="hljs-number">1</span>
         wrong.append(guess)
 
-    <span class="dt">print</span>()
+    print()
 
-<span class="kw">if</span> tries:
-    <span class="dt">print</span>(<span class="st">&quot;Du gjettet&quot;</span>, word)
-<span class="kw">else</span>:
-    <span class="dt">print</span>(<span class="st">&quot;Du klarte ikke å gjette&quot;</span>, word)</code></pre></li>
+<span class="hljs-keyword">if</span> tries:
+    print(<span class="hljs-string">"Du gjettet"</span>, word)
+<span class="hljs-keyword">else</span>:
+    print(<span class="hljs-string">"Du klarte ikke å gjette"</span>, word)</code></pre></li>
 <li><p>Kjør programmet, og se hva som skjer når du gjetter feil bokstaver.</p>
-<p>Legg merke til at vi endret <code>while</code>-løkken ved å legge inn en forutsetning, <code>while tries &gt; 0</code>. Dette betyr at løkken bare kjøres så lenge variabelen <code>tries</code> er større enn 0. Kikker du litt rundt i koden ser du at <code>tries</code> starter med verdien 7, også blir den 1 mindre for hver feil bokstav som gjettes. Altså vil spilleren kunne gjette opp til 7 bokstaver feil før spillet er slutt.</p></li>
+<p>Legg merke til at vi endret <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkken ved å legge inn en forutsetning, <code class="lang-java"><span class="hljs-keyword">while</span> tries &gt; <span class="hljs-number">0</span></code>. Dette betyr at løkken bare kjøres så lenge variabelen <code>tries</code> er større enn 0. Kikker du litt rundt i koden ser du at <code>tries</code> starter med verdien 7, også blir den 1 mindre for hver feil bokstav som gjettes. Altså vil spilleren kunne gjette opp til 7 bokstaver feil før spillet er slutt.</p></li>
 </ul>
 </section>
 </section>
@@ -215,9 +215,9 @@ tries = <span class="dv">7</span>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Finn linjen i programkoden som sier:</p>
-<pre class="sourceCode python"><code class="sourceCode python">word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>])</code></pre></li>
+<pre class="sourceCode python"><code class="sourceCode python lang-java">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])</code></pre></li>
 <li><p>Vi kan endre denne linjen for å legge til flere ord i spillet. Prøv for eksempel</p>
-<pre class="sourceCode python"><code class="sourceCode python">word = choice([<span class="st">&quot;kode&quot;</span>, <span class="st">&quot;kurs&quot;</span>, <span class="st">&quot;robot&quot;</span>, <span class="st">&quot;klubb&quot;</span>])</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-java">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>, <span class="hljs-string">"robot"</span>, <span class="hljs-string">"klubb"</span>])</code></pre>
 <p>Husk at ordene må stå i anførselstegn og at det må være komma mellom ordene for å lage en liste. Legg til flere ord som du finner på selv.</p></li>
 </ul>
 </section>

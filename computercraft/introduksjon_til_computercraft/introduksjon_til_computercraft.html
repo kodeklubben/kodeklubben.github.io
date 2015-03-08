@@ -3,7 +3,7 @@
 <p><strong>ComputerCraft</strong> er en mod til <strong>Minecraft</strong>, som gir deg muligheten til å bygge og programmere <strong>datamaskiner</strong> og <strong>roboter</strong> inne i Minecraft-verdenen.</p>
 <p>Vi begynner med å bygge en enkel datamaskin. Etter å ha brukt litt tid på å bli kjent med hvordan datamaskinen virker, bruker vi den til å låse opp en dør ved hjelp av passord. Etter at vi har klart dette begynner vi å se på datamaskiner som kan bevege seg, altså roboter! Disse kan vi bruke til både å grave og bygge ting for oss.</p>
 <figure>
-<img src="introduksjon_til_computercraft.png" />
+<img src="introduksjon_til_computercraft.png">
 </figure>
 </section>
 <section id="steg-1-vår-første-datamaskin" class="level1 activity">
@@ -17,7 +17,7 @@
 <li>Trykk <code>E</code> for å åpne inventory’et ditt. Finn frem 7 <strong>Stone</strong>, 1 <strong>Redstone</strong> og 1 <strong>Glass pane</strong>.</li>
 <li><p>Åpne et <strong>Crafting table</strong>, og legg ut materialet slik:</p>
 <figure>
-<img src="../bli_kjent_med_datamaskinen/craft_computer.png" />
+<img src="../bli_kjent_med_datamaskinen/craft_computer.png">
 </figure></li>
 <li>Legg den nye datamaskinen i den nederste raden i inventory’et ditt, slik at du kan ta den på hånden. Lukk inventory’et.</li>
 <li><p>Bruk talltastene til å velge datamaskinen, og høyreklikk for å lage en datamaskin.</p></li>
@@ -48,7 +48,7 @@
 <li>Start en datamaskin.</li>
 <li>Skriv <code>edit heiverden</code> for å begynne å skrive på et nytt program som heter <code>heiverden</code>.</li>
 <li><p>I det nye vinduet, skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hei verden!&#39;</span><span class="ot">)</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-python">print(<span class="hljs-string">'Hei verden!'</span>)</code></pre>
 <p>Etter at du har skrevet dette så trykker du på <em>Ctrl</em>-tasten og velger <code>Save</code>. Deretter trykker du <em>Ctrl</em> en gang til og velger <code>Exit</code>.</p></li>
 <li>Vi har nå laget vårt første program. Prøv å skriv <code>programs</code> og du vil se at <code>heiverden</code> er på listen over programmer.</li>
 <li><p>For å kjøre programmet vi har laget, skriver vi <code>heiverden</code> og trykker enter.</p></li>
@@ -75,29 +75,29 @@
 <li><p>Gå ut av datamaskinen ved å trykke <code>Esc</code>-knappen.</p></li>
 <li><p>Samle sammen litt <strong>Stone</strong>, en <strong>Iron door</strong> og en <strong>Computer</strong>, og lag en vegg hvor du setter inn en dør og med datamaskinen rett ved siden av døren. Det skal se omtrent slik ut:</p>
 <figure>
-<img src="../bli_kjent_med_datamaskinen/passord.png" />
+<img src="../bli_kjent_med_datamaskinen/passord.png">
 </figure></li>
 <li><p>Start datamaskinen.</p></li>
 </ul>
 <p>Vi skal nå prøve å skrive noen kommandoer direkte i Lua. Dette er en fin måte å teste enkle ting på.</p>
 <ul>
 <li><p>Skriv <code>lua</code> og trykk enter. Dette starter en <em>Lua-tolker</em> som vil utføre hver enkelt kommando du skriver med en gang.</p></li>
-<li><p>Vi begynner med kommandoen fra det første programmet vårt. Skriv <code>print('Hei verden!')</code> og trykk enter. Skjer det samme som tidligere?</p></li>
+<li><p>Vi begynner med kommandoen fra det første programmet vårt. Skriv <code class="lang-python">print(<span class="hljs-string">'Hei verden!'</span>)</code> og trykk enter. Skjer det samme som tidligere?</p></li>
 <li><p>Som de aller fleste programmeringsspråk er Lua glad i å regne. Skriv <code>1 + 1</code> og trykk enter.</p>
 <p>Lua kjenner alle de vanlige matematikk-operasjonene. Prøv for eksempel <code>17 - 8</code>, <code>3 * 4</code> eller <code>22 / 7</code>. Kjenner du igjen hva hver av disse betyr?</p></li>
-<li><p>Skriv <code>redstone.setOutput('left', true)</code> og trykk enter.</p>
+<li><p>Skriv <code class="lang-java">redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)</code> og trykk enter.</p>
 <p>Denne kommandoen skal åpne døren til venstre for datamaskinen. Her forteller <code>left</code> hvilken side av datamaskinen døren står på. Du kan også bruke for eksempel <code>right</code>, <code>top</code> eller <code>bottom</code>.</p>
 <p>Dette er et eksempel på å kalle en <em>funksjon</em>, noe vi gjør ofte når vi programmerer. I dette tilfellet heter funksjonen <code>setOutput</code> og den hører hjemme i <code>redstone</code>-<em>biblioteket</em>.</p></li>
 </ul>
 <section id="funksjoner" class="level3 protip">
 <h3>Funksjoner</h3>
-<p>Alle programmeringsspråk lar deg lage noe som kalles <em>funksjoner</em>. Dette er en samling instruksjoner som utføres sammen slik at det blir enklere å gjøre vanskelige ting. Lua kommer med innebygde funksjoner. Vi har så langt sett <code>print</code> og <code>redstone.setOutput</code> som eksempler på dette. Det går også an å lage egne funksjoner.</p>
+<p>Alle programmeringsspråk lar deg lage noe som kalles <em>funksjoner</em>. Dette er en samling instruksjoner som utføres sammen slik at det blir enklere å gjøre vanskelige ting. Lua kommer med innebygde funksjoner. Vi har så langt sett <code class="lang-python"><span class="hljs-keyword">print</span></code> og <code>redstone.setOutput</code> som eksempler på dette. Det går også an å lage egne funksjoner.</p>
 </section>
 </section>
 <section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Trykk pil opp-tasten slik at du kan endre <code>redstone.setOutput('left', true)</code> til <code>redstone.setOutput('left', false)</code>. Trykk enter. Nå lukker døren seg igjen fordi vi skrur av <em>redstone</em>-energien.</p></li>
+<li><p>Trykk pil opp-tasten slik at du kan endre <code class="lang-java">redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)</code> til <code class="lang-java">redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)</code>. Trykk enter. Nå lukker døren seg igjen fordi vi skrur av <em>redstone</em>-energien.</p></li>
 <li><p>Avslutt Lua-tolkeren ved å skrive <code>exit()</code> og trykk enter.</p></li>
 </ul>
 </section>
@@ -110,62 +110,62 @@
 <ul>
 <li>Start et nytt program ved å skrive <code>edit passord</code> og trykk enter.</li>
 <li><p>Skriv inn følgende program nøyaktig slik det står</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Passordet er &#39;</span> <span class="ot">..</span> passord <span class="ot">..</span> <span class="st">&#39;!&#39;</span><span class="ot">)</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Passordet er '</span> .. passord .. <span class="hljs-string">'!'</span>)</code></pre>
 <p>Pass på at du skriver de to punktumene <code>..</code> riktig. Disse betyr at vi setter sammen tekst.</p></li>
 <li><p>Lagre og avslutt editoren. Kjør programmet ved å skrive <code>passord</code>.</p>
 <p>Programmet forteller deg hva passordet er. Klarer du å endre passordet til noe annet? Kanskje til <code>ComputerCraft</code> eller til navnet ditt?</p></li>
 </ul>
 <section id="variabler" class="level3 protip">
 <h3>Variabler</h3>
-<p>Vi har nå laget en variabel. Variabelen <code>passord</code> husker hva passordet skal være. På denne måten blir det enkelt å endre passordet senere. Ordet <code>local</code> foran variabelen sier at vi bare skal huske variabelen i dette programmet (lokalt).</p>
+<p>Vi har nå laget en variabel. Variabelen <code>passord</code> husker hva passordet skal være. På denne måten blir det enkelt å endre passordet senere. Ordet <code class="lang-lua"><span class="hljs-keyword">local</span></code> foran variabelen sier at vi bare skal huske variabelen i dette programmet (lokalt).</p>
 </section>
 </section>
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi skal nå jobbe videre med programmet. Vi vil jo at datamaskinen skal spørre oss om passordet, ikke fortelle oss hva det er. Skriv <code>edit passord</code> igjen, og endre programmet slik at det blir seende ut som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>                    <span class="co">-- endret linje</span>
-svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>                                 <span class="co">-- ny linje</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)                    <span class="hljs-comment">-- endret linje</span>
+svar = read()                                 <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Lagre, avslutt, og kjør programmet på nytt. Nå vil programmet spørre deg om passordet. Skjer det noe når du svarer? Funksjonen <code>read</code> brukes for å lese ting du skriver på tastaturet, men programmet gjør foreløbig ingenting med svaret ditt.</p></li>
-<li><p>Det neste vi vil er derfor at programmet skal sjekke om du svarer med riktig passord. For å gjøre dette vil vi bruke noe som heter <code>if</code>-tester. Disse kan teste om noe er sant, og vi vil bruke dem for å sjekke om det er sant at svaret ditt er likt med det faktiske passordet. Legg til en <code>if</code>-test nederst i programmet ditt slik som dette:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+<li><p>Det neste vi vil er derfor at programmet skal sjekke om du svarer med riktig passord. For å gjøre dette vil vi bruke noe som heter <code class="lang-java"><span class="hljs-keyword">if</span></code>-tester. Disse kan teste om noe er sant, og vi vil bruke dem for å sjekke om det er sant at svaret ditt er likt med det faktiske passordet. Legg til en <code class="lang-java"><span class="hljs-keyword">if</span></code>-test nederst i programmet ditt slik som dette:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+svar = read()
 
-<span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>                       <span class="co">-- ny linje</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Riktig, passordet er &#39;</span> <span class="ot">..</span> passord<span class="ot">)</span> <span class="co">-- ny linje</span>
-<span class="kw">else</span>                                          <span class="co">-- ny linje</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Feil, passordet er ikke &#39;</span> <span class="ot">..</span> svar<span class="ot">)</span> <span class="co">-- ny linje</span>
-<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre>
+<span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>                       <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Riktig, passordet er '</span> .. passord) <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">else</span>                                          <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Feil, passordet er ikke '</span> .. svar) <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Kjør programmet igjen. Hva skjer når du svarer riktig? Hva skjer når du svarer feil? Skjønner du hvorfor?</p></li>
 <li><p>Nå kan vi koble sammen passordet med <code>redstone</code>-kommandoene vi så tidligere. La oss åpne døren hvis passordet er riktig. Etter 5 sekunder kan vi lukke døren igjen. Endre programmet slik:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
-<span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+svar = read()
 
-<span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
-    redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>          <span class="co">-- endret linje</span>
-    sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>                                  <span class="co">-- endret linje</span>
-    redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>         <span class="co">-- endret linje</span>
-<span class="kw">end</span></code></pre>
+<span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
+    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)          <span class="hljs-comment">-- endret linje</span>
+    sleep(<span class="hljs-number">5</span>)                                  <span class="hljs-comment">-- endret linje</span>
+    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)         <span class="hljs-comment">-- endret linje</span>
+<span class="hljs-keyword">end</span></code></pre>
 <p>Kjør programmet. Hva skjer nå når du skriver riktig passord?</p>
 <p>Funksjonen <code>sleep</code> gjør at datamaskinen sover, det vil si gjør ingenting. I dette tilfellet sover datamaskinen i 5 sekunder, før energien skrus av igjen og døren lukker seg.</p></li>
 <li><p>Det er kjedelig at vi hele tiden må starte programmet på nytt. Vi lager derfor en løkke som kan spørre oss om passord igjen og igjen.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>                                 <span class="co">-- ny linje</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>                                 <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+    svar = read()
 
-    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>
-        sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>
-    <span class="kw">end</span>
-<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre>
-<p>Det er bare èn ny ting her som vi ikke har sett tidligere, nemlig en <code>while</code>-løkke. Slike løkker vil fortsette å gjøre ting om igjen så lenge noe er sant. I vårt tilfelle er dette <em>noe</em> verdien <code>true</code> som alltid er sann. Det betyr at vi har laget en <em>evig løkke</em>. Dette programmet vil fortsette å spørre oss om passordet for alltid!</p></li>
+    <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        sleep(<span class="hljs-number">5</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
+<p>Det er bare èn ny ting her som vi ikke har sett tidligere, nemlig en <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkke. Slike løkker vil fortsette å gjøre ting om igjen så lenge noe er sant. I vårt tilfelle er dette <em>noe</em> verdien <code class="lang-java"><span class="hljs-keyword">true</span></code> som alltid er sann. Det betyr at vi har laget en <em>evig løkke</em>. Dette programmet vil fortsette å spørre oss om passordet for alltid!</p></li>
 <li><p>Kjør programmet. Oppfører programmet seg slik du hadde trodd? Husker du passordet?</p></li>
 </ul>
 <section id="avslutte-programmer" class="level3 protip">
@@ -177,20 +177,20 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Før vi er helt fornøyde med dette programmet vil vi gjøre noen små forbedringer. Først kaller vi to funksjoner fra <code>term</code>-biblioteket. Den ene vil rense skjermen, mens den andre setter posisjonen hvor vi skriver teksten til <code>(1, 1)</code> som betyr øverst til venstre. I tillegg forteller vi <code>read</code> at vi ikke vil at passordet vi skriver inn skal synes på skjermen. I stedet vil vi at <code>*</code>-tegn skal vises. Programmet ser da slik ut:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">local</span> passord <span class="ot">=</span> <span class="st">&#39;kodeklubben&#39;</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="kw">while</span> <span class="kw">true</span> <span class="kw">do</span>
-    term<span class="ot">.</span>clear<span class="ot">()</span>                              <span class="co">-- ny linje</span>
-    term<span class="ot">.</span>setCursorPos<span class="ot">(</span><span class="dv">1</span><span class="ot">,</span> <span class="dv">1</span><span class="ot">)</span>                   <span class="co">-- ny linje</span>
-    <span class="fu">print</span><span class="ot">(</span><span class="st">&#39;Hva er passordet?&#39;</span><span class="ot">)</span>
-    svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">(</span><span class="st">&#39;*&#39;</span><span class="ot">)</span>                          <span class="co">-- endret linje</span>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    term.clear()                              <span class="hljs-comment">-- ny linje</span>
+    term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)                   <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
+    svar = read(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
 
-    <span class="kw">if</span> svar <span class="ot">==</span> passord <span class="kw">then</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">true</span><span class="ot">)</span>
-        sleep<span class="ot">(</span><span class="dv">5</span><span class="ot">)</span>
-        redstone<span class="ot">.</span>setOutput<span class="ot">(</span><span class="st">&#39;left&#39;</span><span class="ot">,</span> <span class="kw">false</span><span class="ot">)</span>
-    <span class="kw">end</span>
-<span class="kw">end</span></code></pre></li>
+    <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        sleep(<span class="hljs-number">5</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre></li>
 </ul>
 <p>Gratulerer, du har allerede lært ganske mye om hvordan man programmerer datamaskiner med ComputerCraft i Minecraft! Prøv gjerne å forandre noen av programmene vi har laget. Kan du lage dem enda bedre?</p>
 </section>
@@ -206,7 +206,7 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <li><p>Åpne inventory’et ditt ved å trykke ‘E’. Finn frem 7 <strong>Iron Ingot</strong>, 1 <strong>Chest</strong> og 1 <strong>Computer</strong>.</p></li>
 <li><p>Start et <strong>Crafting table</strong>, og lag en robot slik:</p>
 <figure>
-<img src="../robotinvasjon/craft_turtle.png" />
+<img src="../robotinvasjon/craft_turtle.png">
 </figure></li>
 <li><p>Legg den nye roboten i hånden din. Lukk inventory’et og lag en robot.</p></li>
 </ul>
@@ -242,7 +242,7 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <p>Roboter bruker <em>fuel</em> for å bevege seg. De kan bruke stort sett samme materiale som en <strong>Furnace</strong> som fuel, for eksempel er <strong>Coal</strong> eller <strong>Blaze Rod</strong> fine å bruke.</p></li>
 <li><p>Finn litt <strong>Coal</strong> i inventory’et ditt. Høyreklikk på roboten. Legg merke til at det er et inventory med 16 plasser (4 ganger 4) på høyre side. Dette er robotens inventory. Flytt kullet over til roboten.</p>
 <figure>
-<img src="../robotinvasjon/robot_inventory.png" />
+<img src="../robotinvasjon/robot_inventory.png">
 </figure></li>
 <li><p>Skriv <code>refuel</code> i kommandolinjen og trykk enter.</p>
 <p>Legg merke til at en kull blir borte fra robotens inventory. Roboten svarer også ved å fortelle om sin <em>fuel level</em>. Dette tallet forteller hvor langt roboten kan bevege seg før den går tom for fuel igjen.</p></li>
@@ -254,7 +254,7 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 </ul>
 <section id="finne-hjelp" class="level3 protip">
 <h3>Finne hjelp</h3>
-<p>Datamaskiner og roboter har et innebygd hjelpesystem. For å se hvordan det virker kan du skrive <code>help</code> og trykke enter. Dette gir deg en rask introduksjon til nyttige hjelpekommandoer. Legg merke til at du kan skrive <code>help &lt;program&gt;</code> for å få hjelp om et spesielt program. Da må du bytte ut <code>&lt;program&gt;</code> med navnet på programmet. For eksempel kan du skrive <code>help go</code> for å finne hjelp om <code>go</code>-programmet.</p>
+<p>Datamaskiner og roboter har et innebygd hjelpesystem. For å se hvordan det virker kan du skrive <code>help</code> og trykke enter. Dette gir deg en rask introduksjon til nyttige hjelpekommandoer. Legg merke til at du kan skrive <code class="lang-html">help <span class="hljs-tag">&lt;<span class="hljs-title">program</span>&gt;</span></code> for å få hjelp om et spesielt program. Da må du bytte ut <code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">program</span>&gt;</span></code> med navnet på programmet. For eksempel kan du skrive <code>help go</code> for å finne hjelp om <code>go</code>-programmet.</p>
 <p>Det finnes selvsagt også en del hjelp på Internett. Et bra sted å starte er ComputerCraft Wiki’en: <a href="http://computercraft.info/wiki/">http://computercraft.info/wiki/</a>.</p>
 </section>
 </section>
@@ -312,7 +312,7 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <h3>Prøv selv</h3>
 <p>Lag en liten kloss litt unna roboten din, omtrent som på bildet under. Klarer du å bruke <code>turtle</code>-kommandoene over til å plassere roboten på toppen av klossen?</p>
 <figure>
-<img src="../robotinvasjon/flytt_robot_oppgave.png" />
+<img src="../robotinvasjon/flytt_robot_oppgave.png">
 </figure>
 </section>
 </section>
@@ -333,9 +333,9 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <p><strong>4</strong>: at det ikke står noe foran roboten (husk at den smale sprekken er øynene til roboten), og</p>
 <p><strong>5</strong>: at boksen med byggemateriale i robotens inventory er merket, det vil si at den har en litt tykkere ramme rundt seg enn de andre boksene.</p></li>
 <li><p>Roboten kan også sjekke om den har noe foran seg: Skriv <code>turtle.detect()</code>.</p>
-<p>Du skal få svaret <code>true</code> som betyr at roboten merker at den har noe foran seg.</p></li>
+<p>Du skal få svaret <code class="lang-java"><span class="hljs-keyword">true</span></code> som betyr at roboten merker at den har noe foran seg.</p></li>
 <li><p>Prøv så <code>turtle.back()</code> etterfulgt av <code>turtle.detect()</code>.</p>
-<p>Siden roboten nå ikke har noe rett foran seg får du svaret <code>false</code>.</p></li>
+<p>Siden roboten nå ikke har noe rett foran seg får du svaret <code class="lang-java"><span class="hljs-keyword">false</span></code>.</p></li>
 </ul>
 <p>I Steg 10 skal vi se hvordan vi kan bruke <code>place()</code> og <code>detect()</code> sammen for å lage en ganske smart byggerobot.</p>
 <p>Men først, en ting vi kunne gjøre med <code>go</code> var å flytte roboten flere steg ved å skrive et tall, for eksempel <code>go forward 3</code>. Det samme fungerer ikke med <code>turtle</code>-biblioteket. I stedet må vi bruke løkker.</p>
@@ -343,18 +343,18 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <section id="sjekkliste-15" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>En enkel måte å gjøre noe et bestemt antall ganger er å bruke <code>for</code>-løkker.</p>
+<li><p>En enkel måte å gjøre noe et bestemt antall ganger er å bruke <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker.</p>
 <p>Skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span> turtle<span class="ot">.</span>back<span class="ot">();</span> <span class="kw">end</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> turtle.back(); <span class="hljs-keyword">end</span></code></pre>
 <p>i Lua-tolkeren. Flytter roboten din seg 5 steg bakover?</p></li>
 </ul>
 <section id="for-løkker" class="level3 protip">
-<h3><code>for</code>-løkker</h3>
-<p>En <code>for</code>-løkke brukes ofte når vi vet hvor mange ganger vi vil gjøre en bestemt ting. I eksempelet over så vi at roboten flyttet seg 5 ganger bakover. En nyttig ting er at vi også kan følge med på hvor i løkken vi er, fordi <code>i</code> i koden over er en variabel. For eksempel kan vi skrive</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span> <span class="fu">print</span><span class="ot">(</span>i<span class="ot">);</span> <span class="kw">end</span></code></pre>
+<h3><code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker</h3>
+<p>En <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkke brukes ofte når vi vet hvor mange ganger vi vil gjøre en bestemt ting. I eksempelet over så vi at roboten flyttet seg 5 ganger bakover. En nyttig ting er at vi også kan følge med på hvor i løkken vi er, fordi <code>i</code> i koden over er en variabel. For eksempel kan vi skrive</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> <span class="hljs-built_in">print</span>(i); <span class="hljs-keyword">end</span></code></pre>
 <p>Dette vil skrive tallene 1, 2, 3, 4, 5 til skjermen på hver sin linje.</p>
 <p>Vi kan også bruke andre variabelnavn enn <code>i</code>, og vi kan starte på andre tall enn <code>1</code>:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> tall <span class="ot">=</span> <span class="dv">10</span><span class="ot">,</span> <span class="dv">20</span> <span class="kw">do</span> <span class="fu">print</span><span class="ot">(</span>tall<span class="ot">);</span> <span class="kw">end</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> tall = <span class="hljs-number">10</span>, <span class="hljs-number">20</span> <span class="hljs-keyword">do</span> <span class="hljs-built_in">print</span>(tall); <span class="hljs-keyword">end</span></code></pre>
 </section>
 </section>
 <section id="sjekkliste-16" class="level2 check">
@@ -362,13 +362,13 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <ul>
 <li><p>Hvis vi vil kombinere flere kommandoer inne i en løkke i Lua-tolkeren bruker vi semikolon, <code>;</code>.</p>
 <p>Prøv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">5</span> <span class="kw">do</span> turtle<span class="ot">.</span>back<span class="ot">();</span> turtle<span class="ot">.</span>place<span class="ot">();</span> <span class="kw">end</span></code></pre></li>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> turtle.back(); turtle.place(); <span class="hljs-keyword">end</span></code></pre></li>
 <li><p>Pass på at roboten din har mye byggemateriale, for eksempel 64 <strong>Grass</strong>, i den merkede boksen i inventory’et sitt.</p></li>
 <li><p>La oss bygge et høyt tårn!</p>
 <p>Skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">for</span> i <span class="ot">=</span> <span class="dv">1</span><span class="ot">,</span> <span class="dv">60</span> <span class="kw">do</span> turtle<span class="ot">.</span>up<span class="ot">();</span> turtle<span class="ot">.</span>place<span class="ot">();</span> <span class="kw">end</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">60</span> <span class="hljs-keyword">do</span> turtle.up(); turtle.place(); <span class="hljs-keyword">end</span></code></pre>
 <figure>
-<img src="../robotinvasjon/hoyt_tarn.png" />
+<img src="../robotinvasjon/hoyt_tarn.png">
 </figure></li>
 </ul>
 <p>Oops! Vi glemte å fortelle roboten at den skulle komme ned når den blir ferdig med å bygge. Hvordan skal vi få tak i den igjen?</p>
@@ -384,44 +384,44 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <ul>
 <li><p>Bygg et tårn som er tre klosser høyt. Dette kan du bygge enten med en robot eller bare på egen hånd.</p>
 <figure>
-<img src="../robotinvasjon/lite_tarn.png" />
+<img src="../robotinvasjon/lite_tarn.png">
 </figure></li>
 <li><p>Lag en ny robot inntil det lille tårnet du nettopp bygde. Gi den fuel og byggematerialer. Pass på at den peker mot tårnet.</p></li>
 <li><p>Begynn et nytt program ved å skrive <code>edit byggTrapp</code>. Skriv inn følgende:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua">turtle<span class="ot">.</span>detect<span class="ot">()</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua">turtle.detect()</code></pre>
 <p>Lagre og avslutt ved å bruke <em>Ctrl</em>-tasten.</p></li>
 <li><p>Kjør programmet ved å skrive <code>byggTrapp</code>. Dette programmet bygger ingen trapp enda, det virker faktisk som om det ikke gjør noe som helst. Det eneste som skjer er at roboten merker at den har en kloss foran seg. Men vi har ikke fortalt den hva den skal gjøre etterpå.</p>
 <p>Vi kan bruke <code>turtle.detect()</code> til å finne toppen av tårnet.</p></li>
 <li><p>Endre på programmet ditt ved å skrive <code>edit byggTrapp</code> igjen. Vi lager nå en løkke hvor roboten klatrer oppover så lenge den merker at tårnet er høyere.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">while</span> turtle<span class="ot">.</span>detect<span class="ot">()</span> <span class="kw">do</span>                      <span class="co">-- endret linje</span>
-    turtle<span class="ot">.</span>up<span class="ot">()</span>                               <span class="co">-- ny linje</span>
-<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>                      <span class="hljs-comment">-- endret linje</span>
+    turtle.up()                               <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Lagre og kjør programmet ditt. Klatrer roboten til toppen av det lille tårnet?</p></li>
 <li><p>Vi har lært av feilen vi gjorde tidligere, så nå vil vi passe på at roboten kommer ned igjen. La oss legge til en ny løkke i programmet, slik at roboten klatrer ned. Denne gangen bruker vi kommandoen <code>detectDown()</code>. Denne gjør det samme som <code>detect()</code>, bortsett fra at den merker om roboten har en kloss under seg i stedet for foran seg.</p>
 <p>Utvid programmet ditt slik:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">while</span> turtle<span class="ot">.</span>detect<span class="ot">()</span> <span class="kw">do</span>
-    turtle<span class="ot">.</span>up<span class="ot">()</span>
-<span class="kw">end</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
+    turtle.up()
+<span class="hljs-keyword">end</span>
 
-<span class="kw">while</span> <span class="kw">not</span> turtle<span class="ot">.</span>detectDown<span class="ot">()</span> <span class="kw">do</span>              <span class="co">-- ny linje</span>
-    turtle<span class="ot">.</span>down<span class="ot">()</span>                             <span class="co">-- ny linje</span>
-<span class="kw">end</span>                                           <span class="co">-- ny linje</span></code></pre>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> turtle.detectDown() <span class="hljs-keyword">do</span>              <span class="hljs-comment">-- ny linje</span>
+    turtle.down()                             <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Vi sier at så lenge roboten <em>ikke</em> har en kloss under seg kan den ta et steg ned. Kommer roboten ned igjen når du kjører programmet?</p></li>
 <li><p>Nå er vi klar til å la roboten bygge selve trappen. Det gjør vi ved å ta et steg tilbake i den andre løkken, og plassere ut en kloss.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua"><span class="kw">while</span> turtle<span class="ot">.</span>detect<span class="ot">()</span> <span class="kw">do</span>
-    turtle<span class="ot">.</span>up<span class="ot">()</span>
-<span class="kw">end</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
+    turtle.up()
+<span class="hljs-keyword">end</span>
 
-<span class="kw">while</span> <span class="kw">not</span> turtle<span class="ot">.</span>detectDown<span class="ot">()</span> <span class="kw">do</span>
-    turtle<span class="ot">.</span>down<span class="ot">()</span>
-    turtle<span class="ot">.</span>back<span class="ot">()</span>                             <span class="co">-- ny linje</span>
-    turtle<span class="ot">.</span>place<span class="ot">()</span>                            <span class="co">-- ny linje</span>
-<span class="kw">end</span></code></pre>
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> turtle.detectDown() <span class="hljs-keyword">do</span>
+    turtle.down()
+    turtle.back()                             <span class="hljs-comment">-- ny linje</span>
+    turtle.place()                            <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">end</span></code></pre>
 <p>Virker det? Lager roboten en trapp?</p></li>
 <li><p>Nå er vi klare for den store testen. Klarer vi å sende trappebyggeroboten vår opp det høye tårnet?</p>
 <p>Pass på at roboten fortsatt har nok fuel, og fyll opp med byggemateriale. Kjør den bort til det høye tårnet, og la den <code>byggTrapp</code>!</p>
 <figure>
-<img src="../robotinvasjon/byggtrapp.png" />
+<img src="../robotinvasjon/byggtrapp.png">
 </figure></li>
 </ul>
 <p>Gratulerer! Du har nå programmert en robot! Legg merke til at siden <code>byggTrapp</code>-programmet vårt bruker <code>detect</code>-kommandoer kan det bygge trapper opp alle slags tårn og bratte fjellsider!</p>
@@ -430,8 +430,8 @@ svar <span class="ot">=</span> <span class="fu">read</span><span class="ot">()</
 <p>Vi har nå laget et program som kan bygge trapper oppover. Kan du lage et program som kan grave trapper ned under bakken?</p>
 <p>Lag et program som heter <code>gravTrapp</code>. For å gjøre dette trenger du en <strong>Mining Turtle</strong>.</p>
 <p>Se på kommandoene <code>turtle.dig()</code> og <code>turtle.digDown()</code>. Disse vil grave henholdsvis foran og under roboten. <code>turtle.digUp()</code> kan også være nyttig om du vil lage nok plass til at man kan gå ned i trappen.</p>
-<p>For å vite hvor langt ned roboten skal grave, er det enkleste å bruke en <code>for</code>-løkke. For eksempel kan du si at roboten skal grave 10 trinn nedover.</p>
-<p>Hvis du vil ha en utfordring kan du la roboten grave nedover til den finner for eksempel grunnfjellet, <strong>Bedrock</strong>. For å gjøre dette kan du legge en <strong>Bedrock</strong> øverst til venstre i inventory’et til roboten. Deretter kan du bruke <code>turtle.select(1)</code> og <code>turtle.compareDown()</code> for å finne ut om roboten har kommet ned til grunnfjellet.</p>
+<p>For å vite hvor langt ned roboten skal grave, er det enkleste å bruke en <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkke. For eksempel kan du si at roboten skal grave 10 trinn nedover.</p>
+<p>Hvis du vil ha en utfordring kan du la roboten grave nedover til den finner for eksempel grunnfjellet, <strong>Bedrock</strong>. For å gjøre dette kan du legge en <strong>Bedrock</strong> øverst til venstre i inventory’et til roboten. Deretter kan du bruke <code class="lang-lua">turtle.<span class="hljs-built_in">select</span>(<span class="hljs-number">1</span>)</code> og <code>turtle.compareDown()</code> for å finne ut om roboten har kommet ned til grunnfjellet.</p>
 </section>
 </section>
 </section>

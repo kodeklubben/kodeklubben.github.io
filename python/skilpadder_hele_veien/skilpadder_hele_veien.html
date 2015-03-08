@@ -20,28 +20,28 @@ ____/\___/      \___/\___
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Å tegne den første er lett. Som alltid er den første linjen <code>from turtle import *</code> så Python vet at vi vil tegne. Dette programmet tegner linjen, sjekk at du får det til</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<li><p>Å tegne den første er lett. Som alltid er den første linjen <code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *</code> så Python vet at vi vil tegne. Dette programmet tegner linjen, sjekk at du får det til</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> first():
-    forward(<span class="dv">30</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span><span class="hljs-params">()</span>:</span>
+    forward(<span class="hljs-number">30</span>)
 
 first()</code></pre>
 <p>Jeg har puttet det inn i en prosedyre fordi jeg liker prosedyrer. Vi kommer til å lage prosedyrer for alle formene, så la oss legge dem til i filen vi lager.</p></li>
 <li><p>Legg til litt kode så koden din blir slik som denne:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> first():
-    forward(<span class="dv">30</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span><span class="hljs-params">()</span>:</span>
+    forward(<span class="hljs-number">30</span>)
 
-<span class="kw">def</span> second():
-    forward(<span class="dv">30</span>)
-    left(<span class="dv">60</span>)
-    forward(<span class="dv">30</span>)
-    right(<span class="dv">120</span>)
-    forward(<span class="dv">30</span>)
-    left(<span class="dv">60</span>)
-    forward(<span class="dv">30</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">second</span><span class="hljs-params">()</span>:</span>
+    forward(<span class="hljs-number">30</span>)
+    left(<span class="hljs-number">60</span>)
+    forward(<span class="hljs-number">30</span>)
+    right(<span class="hljs-number">120</span>)
+    forward(<span class="hljs-number">30</span>)
+    left(<span class="hljs-number">60</span>)
+    forward(<span class="hljs-number">30</span>)
 
 second()</code></pre></li>
 <li><p>Kjør koden din og se hva den gjør, tegner den riktig figur? Det skal se slik ut</p>
@@ -65,24 +65,24 @@ ____/\___/      \___/\___
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Istedenfor å skrive alle bevegelsene, la oss tegne den tredje figuren ved å kalle <code>second</code></p>
-<pre><code>from turtle import *
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-def second():
-    forward(30)
-    left(60)
-    forward(30)
-    right(120)
-    forward(30)
-    left(60)
-    forward(30)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">second</span><span class="hljs-params">()</span>:</span>
+    forward(<span class="hljs-number">30</span>)
+    left(<span class="hljs-number">60</span>)
+    forward(<span class="hljs-number">30</span>)
+    right(<span class="hljs-number">120</span>)
+    forward(<span class="hljs-number">30</span>)
+    left(<span class="hljs-number">60</span>)
+    forward(<span class="hljs-number">30</span>)
 
-def third():
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">third</span><span class="hljs-params">()</span>:</span>
     second()
-    left(60)
+    left(<span class="hljs-number">60</span>)
     second()
-    right(120)
+    right(<span class="hljs-number">120</span>)
     second()
-    left(60)
+    left(<span class="hljs-number">60</span>)
     second()
 
 third()</code></pre>
@@ -98,23 +98,23 @@ third()</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag en ny fil med koden under:</p>
-<pre><code>from turtle import *
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-def mountain(depth):
-    if depth == 1:
-           forward(10)
-    else:
-        newdepth = depth -1
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mountain</span><span class="hljs-params">(depth)</span>:</span>
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
+           forward(<span class="hljs-number">10</span>)
+    <span class="hljs-keyword">else</span>:
+        newdepth = depth -<span class="hljs-number">1</span>
         mountain(newdepth)
-        left(60)
+        left(<span class="hljs-number">60</span>)
         mountain(newdepth)
-        right(120)
+        right(<span class="hljs-number">120</span>)
         mountain(newdepth)
-        left(60)
+        left(<span class="hljs-number">60</span>)
         mountain(newdepth)
 
-mountain(3)</code></pre>
-<p>Du kan se at vi har brukt kode som er veldig likt <code>first</code>, <code>second</code> og <code>third</code>. Vi bruker en <code>if</code>-setning for å finne ut om vi skal tegne det enkle tilfellet eller spesialtilfellet. I det spesielle tilfellet ber vi om å tegne et fjell, akkurat slik som <code>third</code> kalte <code>second</code>, men vi ber den om å tegne en enklere hver gang, med en ny verdi for <code>depth</code>, en mindre enn det vi startet med.</p></li>
+mountain(<span class="hljs-number">3</span>)</code></pre>
+<p>Du kan se at vi har brukt kode som er veldig likt <code>first</code>, <code>second</code> og <code>third</code>. Vi bruker en <code class="lang-java"><span class="hljs-keyword">if</span></code>-setning for å finne ut om vi skal tegne det enkle tilfellet eller spesialtilfellet. I det spesielle tilfellet ber vi om å tegne et fjell, akkurat slik som <code>third</code> kalte <code>second</code>, men vi ber den om å tegne en enklere hver gang, med en ny verdi for <code>depth</code>, en mindre enn det vi startet med.</p></li>
 <li><p>Kjør det og se hva som skjer. Hva skjer om du prøver <code>mountain(1)</code>, <code>mountain(2)</code>, eller <code>mountain(4)</code>?</p></li>
 </ul>
 </section>
@@ -125,31 +125,31 @@ mountain(3)</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>La oss bare legge til en siste ting til filen fra i sted, så den ser ut som under. Vi legger til en ny prosedyre <code>snowflake</code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python">
-<span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python">
+<span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> mountain(depth, length):
-    <span class="kw">if</span> depth == <span class="dv">1</span>:
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mountain</span><span class="hljs-params">(depth, length)</span>:</span>
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
            forward(length)
-    <span class="kw">else</span>:
-        newdepth = depth -<span class="dv">1</span>
+    <span class="hljs-keyword">else</span>:
+        newdepth = depth -<span class="hljs-number">1</span>
         mountain(newdepth, length)
-        left(<span class="dv">60</span>)
+        left(<span class="hljs-number">60</span>)
         mountain(newdepth, length)
-        right(<span class="dv">120</span>)
+        right(<span class="hljs-number">120</span>)
         mountain(newdepth, length)
-        left(<span class="dv">60</span>)
+        left(<span class="hljs-number">60</span>)
         mountain(newdepth, length)
 
-<span class="kw">def</span> snowflake(depth, length):
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">snowflake</span><span class="hljs-params">(depth, length)</span>:</span>
     mountain(depth, length)
-    right(<span class="dv">120</span>)
+    right(<span class="hljs-number">120</span>)
     mountain(depth, length)
-    right(<span class="dv">120</span>)
+    right(<span class="hljs-number">120</span>)
     mountain(depth, length)
-    right(<span class="dv">120</span>)
+    right(<span class="hljs-number">120</span>)
 
-snowflake(<span class="dv">4</span>,<span class="dv">5</span>)</code></pre>
+snowflake(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</code></pre>
 <p>Dette bildet heter Kochs snøflak. Hvis du vil kan du forsøke å endre på vinklene og se hva som skjer.</p>
 <p>Dette heter et fraktal, fordi de små bildene er laget av små versjoner av seg selv.</p></li>
 <li><p>Prøv å kjøre <code>snowflake(1, 50)</code>, <code>snowflake(2, 25)</code>, <code>snowflake(3, 20)</code>. Jo større dybde, jo lenger tar det å tegne, så husk å putte inn <code>speed(11)</code> så skilpadden går så fort den kan!</p></li>
@@ -185,17 +185,17 @@ ___| |__|         |__| |___
 <h1>Sjekkliste</h1>
 <ul>
 <li><p>La oss åpne en ny fil og forsøke å tegne det andre bildet, som er det vi skal gjenta:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-forward(<span class="dv">30</span>)
-left(<span class="dv">90</span>)
-forward(<span class="dv">30</span>)
-right(<span class="dv">90</span>)
-forward(<span class="dv">30</span>)
-right(<span class="dv">90</span>)
-forward(<span class="dv">30</span>)
-left(<span class="dv">90</span>)
-forward(<span class="dv">30</span>)</code></pre></li>
+forward(<span class="hljs-number">30</span>)
+left(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)
+left(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)</code></pre></li>
 <li><p>Kjør det og sjekk at du får denne figuren:</p>
 <pre><code>
         ___________
@@ -213,31 +213,31 @@ ________|         |________</code></pre></li>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne en ny fil i IDLE og skriv inn følgende:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> box(depth, length):
-    <span class="kw">if</span> depth == <span class="dv">1</span>:
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">box</span><span class="hljs-params">(depth, length)</span>:</span>
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
            forward(length)
-    <span class="kw">else</span>:
-        newdepth = depth -<span class="dv">1</span>
+    <span class="hljs-keyword">else</span>:
+        newdepth = depth -<span class="hljs-number">1</span>
 
-        <span class="co"># Hva skal vi skrive her?</span>
-        <span class="co"># Kopier inn koden fra steg 5 hit, men</span>
-        <span class="co"># bruk box(newdepth, length) istedenfor forward(100)</span>
-        <span class="co"># Spør om hjelp om du ikke forstår helt, men prøv</span>
-        <span class="co"># deg gjerne frem først.</span>
+        <span class="hljs-comment"># Hva skal vi skrive her?</span>
+        <span class="hljs-comment"># Kopier inn koden fra steg 5 hit, men</span>
+        <span class="hljs-comment"># bruk box(newdepth, length) istedenfor forward(100)</span>
+        <span class="hljs-comment"># Spør om hjelp om du ikke forstår helt, men prøv</span>
+        <span class="hljs-comment"># deg gjerne frem først.</span>
 
-<span class="kw">def</span> xcurve(depth, length):
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">xcurve</span><span class="hljs-params">(depth, length)</span>:</span>
     box(depth, length)
-    left(<span class="dv">90</span>)
+    left(<span class="hljs-number">90</span>)
     box(depth, length)
-    left(<span class="dv">90</span>)
+    left(<span class="hljs-number">90</span>)
     box(depth, length)
-    left(<span class="dv">90</span>)
+    left(<span class="hljs-number">90</span>)
     box(depth, length)
-    left(<span class="dv">90</span>)
+    left(<span class="hljs-number">90</span>)
 
-xcurve(<span class="dv">4</span>,<span class="dv">5</span>)</code></pre></li>
+xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</code></pre></li>
 <li><p>Vi har ikke skrevet inn spesialtilfellet, det har vi tenkt å la deg gjøre. Det er ganske likt som å programmere linjen vi hadde før, det burde holde å kalle <code>box(newdepth, length)</code> for å få det til. Koden burde se veldig lik ut som fjellet og snøflaket.</p></li>
 </ul>
 </section>
@@ -246,72 +246,72 @@ xcurve(<span class="dv">4</span>,<span class="dv">5</span>)</code></pre></li>
 <h1>Steg 7: Trekanter igjen</h1>
 <p>La oss tegne et siste fraktal, og som før har vi et enkelt tilfelle og et spesialtilfelle.</p>
 <p>De første tre versjonene ser ut som dette. Vi tegner et triangel, og så tegner vi det som tre trekanter sammen.</p>
-<pre><code>       /\
+<pre><code class="lang-lua">       /\
       /  \
      /    \
     /      \
    /        \
   /          \
  /            \
-----------------
+<span class="hljs-comment">----------------</span>
 
        /\
       /  \
      /    \
-    --------
+    <span class="hljs-comment">--------</span>
    /\      /\
   /  \    /  \
  /    \  /    \
-----------------
+<span class="hljs-comment">----------------</span>
 
 
        /\
-      ----
+      <span class="hljs-comment">----</span>
      /\  /\
-    --------
+    <span class="hljs-comment">--------</span>
    /\      /\
-  ----    ----
+  <span class="hljs-comment">----    ----</span>
  /\  /\  /\  /\
-----------------</code></pre>
+<span class="hljs-comment">----------------</span></code></pre>
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag en ny fil og prøv det!</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> triforce(depth, length):
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">triforce</span><span class="hljs-params">(depth, length)</span>:</span>
 
-    <span class="kw">if</span> depth == <span class="dv">0</span>:
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">0</span>:
         pendown()
         forward(length)
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
         forward(length)
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
         forward(length)
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
         penup()
-    <span class="kw">else</span>:
+    <span class="hljs-keyword">else</span>:
         penup()
-        newlength = length/<span class="dv">2</span>
-        newdepth = depth - <span class="dv">1</span>
+        newlength = length/<span class="hljs-number">2</span>
+        newdepth = depth - <span class="hljs-number">1</span>
 
         triforce(newdepth, newlength)
         forward(newlength)
         triforce(newdepth, newlength)
 
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
         forward(newlength)
-        right(<span class="dv">120</span>)
+        right(<span class="hljs-number">120</span>)
         triforce(newdepth, newlength)
 
-        right(<span class="dv">120</span>)
+        right(<span class="hljs-number">120</span>)
         forward(newlength)
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
 
-speed(<span class="dv">11</span>)
+speed(<span class="hljs-number">11</span>)
 penup()
-setpos(-<span class="dv">255</span>,-<span class="dv">255</span>)
-triforce(<span class="dv">7</span>, <span class="dv">512</span>)</code></pre>
+setpos(-<span class="hljs-number">255</span>,-<span class="hljs-number">255</span>)
+triforce(<span class="hljs-number">7</span>, <span class="hljs-number">512</span>)</code></pre>
 <p>Du har kanskje lagt merke til at vi bruker en ny kommando <code>setpos</code> for å flytte skilpadden til hjørnet av skjermen.</p></li>
 <li><p>Kjør det og se hva som skjer. Vi kan se at det enkle tilfellet er bare å tegne en trekant, og at spesialtilfellet er å tegne tre små trekanter.</p></li>
 <li><p>Prøv å endre verdiene vi sender til <code>triforce()</code>, endre den siste linjen til <code>triforce(5, 300)</code>, hva gjør den?</p></li>
@@ -324,32 +324,32 @@ triforce(<span class="dv">7</span>, <span class="dv">512</span>)</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Hvis du vil kan du tegne med sirkler istedenfor trekanter! Åpne en ny fil og skriv inn følgende kode:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="kw">def</span> bubble(depth, length):
-    <span class="kw">if</span> depth == <span class="dv">0</span>:
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bubble</span><span class="hljs-params">(depth, length)</span>:</span>
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">0</span>:
         pendown()
-        circle(length/<span class="dv">2</span>)
+        circle(length/<span class="hljs-number">2</span>)
         penup()
-    <span class="kw">else</span>:
+    <span class="hljs-keyword">else</span>:
         penup()
-        newlength = length/<span class="dv">2</span>
-        newdepth = depth - <span class="dv">1</span>
+        newlength = length/<span class="hljs-number">2</span>
+        newdepth = depth - <span class="hljs-number">1</span>
         bubble(newdepth, newlength)
         forward(newlength)
         bubble(newdepth, newlength)
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
         forward(newlength)
-        right(<span class="dv">120</span>)
+        right(<span class="hljs-number">120</span>)
         bubble(newdepth, newlength)
-        right(<span class="dv">120</span>)
+        right(<span class="hljs-number">120</span>)
         forward(newlength)
-        left(<span class="dv">120</span>)
+        left(<span class="hljs-number">120</span>)
 
-speed(<span class="dv">11</span>)
+speed(<span class="hljs-number">11</span>)
 penup()
-setpos(-<span class="dv">255</span>,-<span class="dv">255</span>)
-bubble(<span class="dv">6</span>, <span class="dv">512</span>)</code></pre></li>
+setpos(-<span class="hljs-number">255</span>,-<span class="hljs-number">255</span>)
+bubble(<span class="hljs-number">6</span>, <span class="hljs-number">512</span>)</code></pre></li>
 <li><p>Hva skjer? Hva ser det ut som? Vi har brukt <code>circle</code> kommandoen for å tegne en sirkel på skjermen, som tar en radius.</p></li>
 <li><p>Forsøk å endre sirkelens radius, bytt ut <code>circle(length/2)</code> med <code>circle(length)</code>, dette tegner en større sirkel istedenfor.</p></li>
 </ul>

@@ -22,7 +22,7 @@
 <li><p>Åpne IDLE, editoren som følger med Python. Vi kommer til å skrive all koden vår i denne editoren. Når du åpner den ser du et Output-vindu. I dette vinduet kommer feilmeldinger og resultater til å dukke opp.</p></li>
 <li><p>Hvis du ikke har gjort det ennå, velg <code>File -&gt; New Window</code>. Et tomt vindu dukker opp, med ‘<em>Untitled</em>’ i tittelfeltet. Du skal ha to vinduer åpne nå, et for å skrive programmet ditt i, og et annet for å vise resultater i. Pass på at du skriver i det riktige!</p></li>
 <li><p>Skrive følgende kode inn i det nye vinduet:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="dt">print</span>(<span class="st">&quot;Hello, World!&quot;</span>)</code></pre></li>
+<pre class="sourceCode python"><code class="sourceCode python lang-python">print(<span class="hljs-string">"Hello, World!"</span>)</code></pre></li>
 <li><p>Dobbeltsjekk at du ikke er i Output-vinduet og lagre koden din.</p></li>
 </ul>
 <p>Du kan lagre ved å velge <code>File -&gt; Save</code>. Når du blir bedt om å skrive inn et filnavn, skriv hello.py, og lagre filen på skrivebordet ditt. Så kan du velge <code>Run -&gt; Run Module</code>.</p>
@@ -43,9 +43,9 @@
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne et nytt kodevindu (Fra <code>File</code> menyen) og skriv dette:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-forward(<span class="dv">100</span>)</code></pre></li>
+forward(<span class="hljs-number">100</span>)</code></pre></li>
 <li><p>Lagre programmet ditt som myturtle.py og velg <code>Run -&gt; Run Module</code>. Ser du hvordan skilpadden beveget seg 100 punkter fremover på skjermen? Skilpadden har en penn festet til seg, så den tegner linjer når den beveger seg rundt.</p></li>
 </ul>
 <section id="tips-1" class="level3 protip">
@@ -57,48 +57,48 @@ forward(<span class="dv">100</span>)</code></pre></li>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>La oss få skilpadden til å bevege seg rundt på skjermen! Forsøk å bruke <code>backward(distance)</code> i tillegg til å snu den ved å bruke <code>right(angle)</code> og <code>left(angle)</code>. Instruksjonen <code>backward(20)</code> forteller for eksempel skilpadden at den skal bevege seg bakover 20 pixler, og <code>right(90)</code> forteller den at den skal snu seg 90 grader til høyre. Du kan gi den mer enn en instruksjon om gangen, de blir utført i rekkefølge.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)
-forward(<span class="dv">100</span>)
-left(<span class="dv">90</span>)
-backward(<span class="dv">100</span>)
-left(<span class="dv">90</span>)
-forward(<span class="dv">50</span>)</code></pre></li>
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)
+forward(<span class="hljs-number">100</span>)
+left(<span class="hljs-number">90</span>)
+backward(<span class="hljs-number">100</span>)
+left(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">50</span>)</code></pre></li>
 </ul>
 <section id="vinkler-og-grader" class="level3">
 <h3>Vinkler og grader</h3>
 <p>Lek deg litt med å lage dine egne figurer ved å bruke <code>forward</code>, <code>backward</code>, <code>left</code>, <code>right</code>. Husk at <code>forward</code> og <code>backward</code> bruker pixler, mens <code>left</code> og <code>right</code> bruker grader. La oss undersøke en skilpadde som bever seg til høyre.</p>
-<pre><code>        Nord
-          0
+<pre><code class="lang-lua">        Nord
+          <span class="hljs-number">0</span>
           |
 Vest      |     Øst
- 270 -----+----- 90
+ <span class="hljs-number">270</span> <span class="hljs-comment">-----+----- 90</span>
           |
           |
-         180
+         <span class="hljs-number">180</span>
          Syd</code></pre>
 <p>Når skilpadden ser nordover og du ber den snu seg 90 grader til høyre, ser den østover. Snur du den 180 grader fra nord, ser den sydover, og snur du den 270 grader fra nord ser den vestover. Snur du 360 grader stopper den der den begynte. Kanskje er det lettere å tenke på som snowboard-triks?</p>
 <p>Hva med å snu mot venstre?</p>
-<pre><code>        Nord
-          0
+<pre><code class="lang-lua">        Nord
+          <span class="hljs-number">0</span>
           |
 Vest      |      Øst
-  90 -----+----- 270
+  <span class="hljs-number">90</span> <span class="hljs-comment">-----+----- 270</span>
           |
           |
-         180
+         <span class="hljs-number">180</span>
          Syd</code></pre>
 <p>Når skilpadden ser nordover og du ber den snu seg 90 grader mot venstre, ser den vestover. Når skilpadden ser nordover og du ber den snu seg 180 grader mot venstre ser den sydover, og om den ser nordover og du ber den snu seg 270 grader ser den østover. Snur du 360 grader er du tilbake der du starter, 360 grader er alltid helt rundt.</p>
 </section>
 <section id="hva-gjør-koden-på-starten-av-programmet-vårt" class="level3 protip">
 <h3>Hva gjør koden på starten av programmet vårt?</h3>
 <ul>
-<li><code>from turtle import *</code> forteller Python at vi vil bruke skilpadde-biblioteket (turtle), en samling av kode vi kan bruke for å tegne på skjermen. Å bruke et ferdig bibliotek gjør at vi kan spare tid og gjenbruke andres arbeid.</li>
+<li><code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *</code> forteller Python at vi vil bruke skilpadde-biblioteket (turtle), en samling av kode vi kan bruke for å tegne på skjermen. Å bruke et ferdig bibliotek gjør at vi kan spare tid og gjenbruke andres arbeid.</li>
 <li><code>speed()</code> bestemmer farten til skilpadden. Vi må gi inn en verdi mellom 1 og 11, der 11 er det raskeste og 1 er det treigeste.</li>
 <li><code>shape()</code> Vi bruker formen(shape) “turtle” (skilpadde), men vi kan også si at vi vil at figuren skal se ut som “arrow” (pil), “circle” (sirkel), “square” (kvadrat), “triangle” (trekant) eller “classic” (klassisk).</li>
 </ul>
@@ -113,33 +113,33 @@ Vest      |      Øst
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne en ny fil i IDLE og skriv inn følgende kode:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-forward(<span class="dv">100</span>)
-right(<span class="dv">90</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">90</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">90</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">90</span>)</code></pre>
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">90</span>)</code></pre>
 <p>Lagre programmet ditt og velg <code>Run -&gt; New Module</code>. Ser du en firkant? Skilpadden snur seg 90 grader fire ganger, og ender opp med å se den samme retningen som den starten. å snu 90, 90, 90 og så 90 grader igjen snur skilpadden totalt 360 grader.</p>
 <p>Hva med en trekant? En trekant har tre hjørner, så vi må snu tre ganger. Hvis vi vil ende opp i samme retning, må vi snu 360 grader, akkurat som med firkanten. Derfor snur vi 120 grader, deretter 120 grader og så en gang til.</p></li>
 <li><p>Endre koden din til å se ut som koden under for å få den til å tegne en trekant:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)</code></pre></li>
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)</code></pre></li>
 <li><p>Kjør koden. Ser du en trekant?</p></li>
 </ul>
 <section id="velg-en-farge" class="level3">
@@ -151,68 +151,68 @@ right(<span class="dv">120</span>)</code></pre></li>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre koden fra eksemplet over til å se ut som det neste eksemplet, ved å legge til disse nye kommandoene:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-pensize(<span class="dv">10</span>)
-pencolor(<span class="st">&quot;red&quot;</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)
-pencolor(<span class="st">&quot;blue&quot;</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)
-pencolor(<span class="st">&quot;green&quot;</span>)
-forward(<span class="dv">100</span>)
-right(<span class="dv">120</span>)</code></pre></li>
+pensize(<span class="hljs-number">10</span>)
+pencolor(<span class="hljs-string">"red"</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)
+pencolor(<span class="hljs-string">"blue"</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)
+pencolor(<span class="hljs-string">"green"</span>)
+forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">120</span>)</code></pre></li>
 <li><p>Kjør koden din, hva tegner den på skjermen? Denne koden tegner en tykk trekant i tre forskjellige farver.</p></li>
-<li><p>Forsøk å endre fargene i koden din, kjør den og se hva som skjer. Skilpadden kan mange hundre forskjellige farger, ikke bare blå, rød og grønn. Forsøk med din yndlingsfarge! Du kan også bruke farger i <strong>hex</strong>, som du kanskje har gjort med CSS før. Istedenfor å bruke <code>pencolor(&quot;red&quot;)</code> kan du bruke hex <code>pencolor(&quot;#FF0000&quot;)</code>. Hvilken farge er #FF4F00?</p></li>
+<li><p>Forsøk å endre fargene i koden din, kjør den og se hva som skjer. Skilpadden kan mange hundre forskjellige farger, ikke bare blå, rød og grønn. Forsøk med din yndlingsfarge! Du kan også bruke farger i <strong>hex</strong>, som du kanskje har gjort med CSS før. Istedenfor å bruke <code class="lang-java">pencolor(<span class="hljs-string">"red"</span>)</code> kan du bruke hex <code class="lang-java">pencolor(<span class="hljs-string">"#FF0000"</span>)</code>. Hvilken farge er #FF4F00?</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-4-gjenta-deg-selv-med-en-for-løkke" class="level1 activity">
 <h1>Steg 4: Gjenta deg selv (med en for-løkke)</h1>
-<p>Det siste programmet var de samme kommandoene igjen og igjen. Istedenfor å skrive dem ned, la oss be maskinen om å gjenta dem for oss. Du har vært borti <em>iterasjon</em> i Scratch ved å bruke <code>Forever</code> og <code>Repeat</code>/<code>Repeat until</code> blokker. I Python brukes <strong>for-løkker</strong> når du har kode som du vil gjenta n ganger. I dette eksemplet vil vi gjenta koden (den som er skjøvet inn) 4 ganger fordi en firkant har 4 sider.</p>
+<p>Det siste programmet var de samme kommandoene igjen og igjen. Istedenfor å skrive dem ned, la oss be maskinen om å gjenta dem for oss. Du har vært borti <em>iterasjon</em> i Scratch ved å bruke <code>Forever</code> og <code>Repeat</code>/<code class="lang-lua">Repeat <span class="hljs-keyword">until</span></code> blokker. I Python brukes <strong>for-løkker</strong> når du har kode som du vil gjenta n ganger. I dette eksemplet vil vi gjenta koden (den som er skjøvet inn) 4 ganger fordi en firkant har 4 sider.</p>
 <section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne en ny fil og skriv inn følgende:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-<span class="kw">for</span> count in <span class="dt">range</span>(<span class="dv">4</span>):
-    forward(<span class="dv">100</span>)
-    right(<span class="dv">90</span>)</code></pre></li>
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+    forward(<span class="hljs-number">100</span>)
+    right(<span class="hljs-number">90</span>)</code></pre></li>
 <li><p>Lagre programmet og velg: Run -&gt; Run module.</p>
 <p>Legg merke til at koden er skjøvet inn, <em>indentert</em>, eller dyttet til høyre under for-løkken. Python bruker mellomrom for å vite hvilke kommandoer som skal gjentas. Du kan bruke Tab-tasten for å få IDLE til å <em>indentere</em>, eller bruke Shift-Tab til å ta dem bort.</p></li>
 <li><p>La oss se hva som skjer hvis vi bare indenterer (skyver inn) <code>forward</code>. Gjør om programmet ditt så det ser ut som dette:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-<span class="kw">for</span> count in <span class="dt">range</span>(<span class="dv">4</span>):
-    forward(<span class="dv">100</span>)
-right(<span class="dv">90</span>)</code></pre></li>
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+    forward(<span class="hljs-number">100</span>)
+right(<span class="hljs-number">90</span>)</code></pre></li>
 <li><p>Legg merke til at <code>forward</code> er indendert og <code>right</code> ikke er det. Hva tror du dette programmet gjør? Forsøk å kjøre det og finn det ut.</p>
 <p>Fikk du en rett linje? Python vil gjenta <code>forward</code> fire ganger, og deretter snu til høyre. Python bruker mellomrom for å gruppere kommandoer sammen, akkurat som Scratch bruker blokker. Python klager til deg om du ikke har fått mellomrommene riktig.</p></li>
 <li><p>La oss endre programmet tilbake slik at det lager en firkant igjen, men istedenfor å bruke tall i koden skal vi gi tallene navn. Dette gjør det lettere å se hva programmet gjør, og gjør at vi slipper å gjenta oss selv.</p>
 <p>Endre filen så den ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-sides = <span class="dv">4</span>
-length = <span class="dv">100</span>
-angle = <span class="dv">90</span>
-<span class="kw">for</span> count in <span class="dt">range</span>(sides):
+sides = <span class="hljs-number">4</span>
+length = <span class="hljs-number">100</span>
+angle = <span class="hljs-number">90</span>
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(sides):
     forward(length)
     right(angle)</code></pre></li>
-<li><p>Lagre programmet og velg: <code>Run -&gt; Run module</code>.</p></li>
+<li><p>Lagre programmet og velg: <code class="lang-lua">Run -&gt; Run <span class="hljs-built_in">module</span></code>.</p></li>
 </ul>
 </section>
 <section id="oppgave-tegn-de-andre-formene" class="level2 challenge">
@@ -235,16 +235,16 @@ angle = <span class="dv">90</span>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre programmet ditt til å regne ut vinkelen.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-sides = <span class="dv">4</span>
-length = <span class="dv">20</span>
+sides = <span class="hljs-number">4</span>
+length = <span class="hljs-number">20</span>
 
-angle = <span class="dv">360</span>/sides
-<span class="kw">for</span> count in <span class="dt">range</span>(sides):
+angle = <span class="hljs-number">360</span>/sides
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(sides):
     forward(length)
     right(angle)</code></pre></li>
 <li><p>Nå kan du endre antall sider, klarer Python å gjøre jobben riktig? Prøv med så mange kanter du vil!</p></li>
@@ -257,20 +257,20 @@ angle = <span class="dv">360</span>/sides
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi kan be skilpadden om å fylle figurene med en farge ved å bruke <code>begin_fill()</code> og <code>end_fill()</code>. Endre koden din til å bruke disse kommandoene:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-sides = <span class="dv">4</span>
-length = <span class="dv">20</span>
+sides = <span class="hljs-number">4</span>
+length = <span class="hljs-number">20</span>
 
-fillcolor(<span class="st">&#39;red&#39;</span>)
-pencolor(<span class="st">&#39;red&#39;</span>)
+fillcolor(<span class="hljs-string">'red'</span>)
+pencolor(<span class="hljs-string">'red'</span>)
 begin_fill()
 
-angle = <span class="dv">360</span>/sides
-<span class="kw">for</span> count in <span class="dt">range</span>(sides):
+angle = <span class="hljs-number">360</span>/sides
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(sides):
     forward(length)
     right(angle)
 end_fill()</code></pre>
@@ -287,18 +287,18 @@ end_fill()</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Forsøk dette i en ny fil:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">from</span> turtle <span class="ch">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(<span class="dv">11</span>)
-shape(<span class="st">&quot;turtle&quot;</span>)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-pencolor(<span class="st">&#39;red&#39;</span>)
+pencolor(<span class="hljs-string">'red'</span>)
 
-<span class="kw">for</span> count in <span class="dt">range</span>(<span class="dv">20</span>):
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(<span class="hljs-number">20</span>):
     penup()
-    forward(<span class="dv">10</span>)
+    forward(<span class="hljs-number">10</span>)
     pendown()
-    forward(<span class="dv">20</span>)</code></pre></li>
+    forward(<span class="hljs-number">20</span>)</code></pre></li>
 <li><p>Dette burde tegne en stiplet strek over skjermen din. Kjør det og se!</p></li>
 </ul>
 <section id="hjem-kjære-hjem-på-skjermen" class="level3 protip">
@@ -309,7 +309,7 @@ pencolor(<span class="st">&#39;red&#39;</span>)
 </section>
 <section id="steg-8-gjør-hva-du-vil" class="level1 activity">
 <h1>Steg 8: Gjør hva du vil!</h1>
-<p>Du kan <code>forward()</code>, <code>backward()</code>, <code>left()</code>, <code>right()</code>, du kan gjenta ting med <code>for count in range(4)</code>, endre farger, endre fart og til og med fylle figurer!</p>
+<p>Du kan <code>forward()</code>, <code>backward()</code>, <code>left()</code>, <code>right()</code>, du kan gjenta ting med <code class="lang-python"><span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>)</code>, endre farger, endre fart og til og med fylle figurer!</p>
 <p>Kan du tegne et hus, en fugl? En slange? En katt? En hund? En løve? Du kan kombinere figurer og se hva du kan lage. Kan du tegne en robot?</p>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
