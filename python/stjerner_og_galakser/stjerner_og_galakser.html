@@ -34,7 +34,7 @@ done()</code></pre>
 <li><p>Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code>drawStar()</code> og kaller denne tre ganger for å tegne tre stjerner.</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="hljs-comment"># En funskjon for å tegne stjerner</span>
+<span class="hljs-comment"># En funksjon for å tegne stjerner</span>
 <span class="hljs-comment"># 'def' er kort for 'define' på engelsk</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">()</span>:</span>
     pendown()
@@ -45,7 +45,7 @@ done()</code></pre>
     end_fill()
     penup()
 
-<span class="hljs-comment"># Denne koden tenger en liten grå stjerne på en mørke blå bakgrunn</span>
+<span class="hljs-comment"># Denne koden tegner en liten grå stjerne på en mørkeblå bakgrunn</span>
 color(<span class="hljs-string">"WhiteSmoke"</span>)
 bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
@@ -74,7 +74,7 @@ done()</code></pre>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Her er et program med en “stjernetegne-funksjon” som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funskjonen.</p>
+<li><p>Her er et program med en “stjernetegne-funksjon” som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funksjonen.</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse</span>
@@ -87,7 +87,7 @@ done()</code></pre>
     end_fill()
     penup()
 
-<span class="hljs-comment"># Denne koden tenger en liten grå stjerne på en mørke blå bakgrunn</span>
+<span class="hljs-comment"># Denne koden tegner en liten grå stjerne på en mørkeblå bakgrunn</span>
 color(<span class="hljs-string">"WhiteSmoke"</span>)
 bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
@@ -143,7 +143,7 @@ done()</code></pre>
 </section>
 <section id="utfordring" class="level2 challenge">
 <h2>Utfordring</h2>
-<p>Lag en funksjon for å tenge planeter og kall den <code>drawPlanet()</code> Send verdier inn i funksjonen slik at du kan bestemme hvor stor og hvilken farge den skal ha.</p>
+<p>Lag en funksjon for å tegne planeter og kall den <code>drawPlanet()</code> Send verdier inn i funksjonen slik at du kan bestemme hvor stor og hvilken farge den skal ha.</p>
 </section>
 </section>
 <section id="steg-3-tilfeldige-stjerner" class="level1 activity">
@@ -152,7 +152,7 @@ done()</code></pre>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tenger en hvit stjerne der.</p>
+<li><p>Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tegner en hvit stjerne der.</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
@@ -178,7 +178,7 @@ drawStar(<span class="hljs-number">50</span>, <span class="hljs-string">"White"<
 
 hideturtle()
 done()</code></pre></li>
-<li><p>Vi bruker funskjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
+<li><p>Vi bruker funksjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
 <figure>
 <img src="sky-xy.png">
 </figure></li>
@@ -203,7 +203,7 @@ done()</code></pre></li>
     end_fill()
     penup()
 
-<span class="hljs-comment"># Mørke blå bakgrunn</span>
+<span class="hljs-comment"># mørkeblå bakgrunn</span>
 bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
 <span class="hljs-comment"># Tegner 30 stjerner med tilfeldig størrelse og posisjon</span>
@@ -221,8 +221,8 @@ done()</code></pre>
 </ul>
 </section>
 </section>
-<section id="steg-4-funksjoner-inne-i-funskjoner" class="level1 activity">
-<h1>Steg 4: Funksjoner inne i funskjoner</h1>
+<section id="steg-4-funksjoner-inne-i-funksjoner" class="level1 activity">
+<h1>Steg 4: Funksjoner inne i funksjoner</h1>
 <p>Du kan skrive funksjoner som kjører andre funksjoner. Dette gjør det lettere å ha oversikt når man lager store programmer.</p>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
