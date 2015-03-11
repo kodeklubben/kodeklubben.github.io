@@ -12,7 +12,7 @@
     forward(<span class="hljs-number">100</span>)
     right(<span class="hljs-number">90</span>)</code></pre></li>
 <li><p>Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</p>
-<p>Husk at <code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk ‘Tab’ (knappen over Caps-Lock) for å flytte kode.</p></li>
+<p>Husk at <code class="lang-python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk <em>tab</em> (knappen rett over <em>caps lock</em>) for å flytte kode.</p></li>
 </ul>
 </section>
 </section>
@@ -34,18 +34,18 @@ angle = <span class="hljs-number">360</span>/sides
     right(angle)</code></pre></li>
 <li><p>Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</p></li>
 </ul>
-<p>Dette er et litt langt program, men nå kan vi endre det til å tegne hvilken figur vi vil. Problemet er bare at vi er nødt til å klippe og lime programmet for å få det til. Som tidligere kan vi skrive kode for å slippe å gjenta oss selv (programmerere anstrenger seg gjerne litt slik at de kan være late etterpå!). Denne gangen vil vi definere en ny kommando.</p>
+<p>Dette er et litt langt program, men nå kan vi endre det til å tegne hvilken figur vi vil. Problemet er bare at vi er nødt til å klippe og lime programmet for å få det til. Som tidligere kan vi skrive kode for å slippe å gjenta oss selv (programmerere anstrenger seg gjerne litt slik at de kan være late etterpå!). Denne gangen skal vi lage en <em>funksjon</em>. En funksjon er en enkel måte for å gjenbruke en kodeblokk (eller oppskrift om du vil) mange ganger. Funksjonen får et navn, og dette navnet kan vi senere bruke.</p>
 </section>
 </section>
-<section id="steg-3-en-ny-kommando-dukker-opp" class="level1 activity">
-<h1>Steg 3: En ny kommando dukker opp</h1>
+<section id="steg-3-vi-lager-en-funksjon" class="level1 activity">
+<h1>Steg 3: Vi lager en funksjon</h1>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi endrer koden og legger til <code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span></code>. Pass på at koden har riktig innrykk (du kan merke den og trykke Tab) og bruk den nye prosedyren. (Å bruke en prosedyre heter å kalle prosedyren).</p>
+<li><p>Vi endrer koden og legger til <code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span></code>. <code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span></span></code> betyr definer, altså å lage. Pass på at koden har riktig innrykk og bruk den nye funksjonen. For å få innrykk på flere linjer kan man merke linjene og deretter trykke <em>tab</em> (knappen rett over <em>caps lock</em>). Dersom du vil ha mindre innrykk, bruk <em>shift + tab</em>.</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment"># vi lager funksjonen</span>
     sides = <span class="hljs-number">4</span>
     length = <span class="hljs-number">100</span>
     angle = <span class="hljs-number">360</span>/sides
@@ -55,17 +55,17 @@ angle = <span class="hljs-number">360</span>/sides
         right(angle)
 
 pencolor(<span class="hljs-string">'red'</span>)
-poly()
+poly() <span class="hljs-comment"># vi kaller på funksjonen</span>
 right(<span class="hljs-number">180</span>)
 poly()</code></pre></li>
 <li><p>Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</p></li>
 </ul>
-<p>Vi sparte litt tid ved å definere en ny prosedyre i Python, og nå kan vi tegne en rød firkant to ganger, uten å skrive hele greia to ganger. Disse nye kommandoene heter prosedyrer i Python, og de er fine for å slippe å skrive så mye.</p>
+<p>Vi sparte litt tid ved å lage en ny funksjon i Python, og nå kan vi tegne en rød firkant to ganger, uten å skrive hele greia to ganger. Den nye funksjonen <code>poly()</code> er fin for å slippe å skrive så mye.</p>
 </section>
 </section>
 <section id="steg-4-hvorfor-stoppe-med-firkanter" class="level1 activity">
-<h1>Steg 4: Hvorfor stoppe med firkanter</h1>
-<p>Vi er ikke ferdige ennå - hva med å endre prosedyren så den kan tegne hvilken som helst form? Som med <code>forward</code> og <code>right</code>, kan vi sende verdier inn i prosedyren istedenfor å endre koden hver gang.</p>
+<h1>Steg 4: Hvorfor stoppe med firkanter?</h1>
+<p>Vi er ikke ferdige ennå - hva med å endre funksjonen så den kan tegne hvilken som helst form? Som med <code>forward</code> og <code>right</code>, kan vi sende verdier inn i funksjonen istedenfor å endre koden hver gang.</p>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
@@ -85,13 +85,13 @@ right(<span class="hljs-number">180</span>)
 pencolor(<span class="hljs-string">'blue'</span>)
 poly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre></li>
 <li><p>Kjør den og se hva som skjer.</p>
-<p>La oss ta dette litt sakte, for dette er ganske kule greier. Istedenfor å bestemme variablene i prosedyren, sier vi at prosedyren tar noen verdier som har navn, og så bruker vi verdiene der vi trenger dem.</p>
-<p>Vi flyttet noen verdier ut av prosedyren, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste prosedyre, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p></li>
+<p>La oss ta dette litt sakte, for dette er ganske kule greier. Istedenfor å bestemme variablene i funksjonen, sier vi at funksjonen tar noen verdier som har navn, og så bruker vi verdiene der vi trenger dem.</p>
+<p>Vi flyttet noen verdier ut av funksjonen, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste funksjon, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p></li>
 </ul>
-<p>Å være i stand til å definere nye prosedyrer som kan oppføre seg forskjellig basert på verdiene vi gir inn er et av de kraftigste verktøyene i programmering.</p>
+<p>Å være i stand til å lage nye funksjoner som kan oppføre seg forskjellig basert på verdiene vi gir inn er et av de kraftigste verktøyene i programmering.</p>
 <section id="tips" class="level3 protip">
 <h3>Tips</h3>
-<p>Vi skiller mellom prosedyrer og funksjoner når vi snakker om dem, men de er ser helt like ut i Python. Det kommer funksjoner i neste kapittel, men vi nevner det allerede nå så du har hørt om det. Forskjellen er at en prosedyre kan gjøre noe med omverdenen, for eksempel tegne noe eller skrive noe på skjermen. Både prosedyrer og funksjoner kan returnere en verdi også, det kommer vi tilbake til, men prosedyren kan finne på å gi forskjellig resultat selv om du gir inn samme verdier. For eksempel kan en prosedyre <code class="lang-java">erDet(<span class="hljs-string">"fredag"</span>)</code> svare ja på fredager og nei på lørdager. En funksjon derimot må alltid svare det samme hvis den får de samme verdiene.</p>
+<p>I python finnes det funksjoner, mens i andre programmeringsspråk finnes det også noe som blir kalt prosedyrer. Disse begrepene går litt inn i hverandre, så det er ikke så farlig om dere ikke ser forskjellen. En funksjon skal gjerne returnere noe, og den skal helst ikke gjøre noe annet enn å regne ut returverdien. I tillegg burde funksjonen alltid returnere det samme når den får samme innputt. Prosedyrer ligner veldig på funksjoner, men de får lov til å returnere forskjellige ting avhenging av andre ting enn innputt. I tillegg er det lov for en prosedyre å gjøre noe annet enn å returnere noe. For eksempel kan en prosedyre tegne på skjermen. I python er det ingen forskjell på funksjoner og prosedyrer, så det er vanlig å bare kalle begge deler for funksjoner.</p>
 </section>
 </section>
 </section>
@@ -115,7 +115,7 @@ length = <span class="hljs-number">200</span>
 </section>
 <section id="steg-6-tegne-figurer" class="level1 activity">
 <h1>Steg 6: Tegne figurer</h1>
-<p>Vi kan koble figur-programmet og stiplet-linje-programmet sammen ved å bytte ut kommandoen <code>forward</code> med koden vi har for stiplete linjer. Vi bruker koden for å tegne figurer ytterst, og inni der bruker vi koden for å lage stiplete linjer istedenfor hele streker.</p>
+<p>Vi kan koble figur-programmet og stiplet-linje-programmet sammen ved å bytte ut funksjonen <code>forward</code> med koden vi har for stiplete linjer. Vi bruker koden for å tegne figurer ytterst, og inni der bruker vi koden for å lage stiplete linjer istedenfor hele streker.</p>
 <section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
@@ -151,7 +151,7 @@ dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>La oss bruke prosedyrer igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
+<li><p>La oss bruke funksjoner igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 speed(<span class="hljs-number">11</span>)
 shape(<span class="hljs-string">"turtle"</span>)
@@ -179,7 +179,7 @@ dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span
 </ul>
 <section id="tips-1" class="level3 protip">
 <h3>Tips</h3>
-<p>Trikset er at istedenfor å bygge programmer ved å klippe og lime, kan vi definere nye kommandoer og gjenbruke dem. Da blir koden kortere og litt lettere å forstå.</p>
+<p>Trikset er at istedenfor å bygge programmer ved å klippe og lime, kan vi lage nye funksjoner og gjenbruke dem. Da blir koden kortere og litt lettere å forstå.</p>
 </section>
 </section>
 </section>
@@ -207,7 +207,7 @@ colors = [<span class="hljs-string">'red'</span>, <span class="hljs-string">'blu
     right(randrange(<span class="hljs-number">0</span>,<span class="hljs-number">360</span>))
     poly(randrange(<span class="hljs-number">3</span>,<span class="hljs-number">9</span>), randrange(<span class="hljs-number">10</span>,<span class="hljs-number">30</span>))</code></pre></li>
 <li><p>Lagre og kjør koden</p>
-<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen <code class="lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange, random</code> gir oss to nye prosedyrer, <code>randrange()</code> og <code>choice()</code>.</p>
+<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen <code class="lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange, random</code> henter inn funksjonene <code>randrange()</code> og <code>choice()</code>.</p>
 <p><code>randrange()</code> plukker ut et tall mellom det laveste og det høyeste tallet vi gir inn, så <code>randrange(1, 10)</code> velger et tall mellom 1 og 9 (Python begynner med 1, og stopper rett før 10).</p>
 <p><code>choice()</code> velger en ting fra listen vi gir inn. En liste er en samling av verdier, for eksempel <code class="lang-css"><span class="hljs-attr_selector">[1, 2, 3]</span></code>. I koden ovenfor bruker vi listen <code>colors</code>, som har verdiene <code class="lang-java"><span class="hljs-string">'red'</span></code>, <code class="lang-java"><span class="hljs-string">'blue'</span></code>, and <code class="lang-java"><span class="hljs-string">'green'</span></code>.</p>
 <p>Ved å bruke <code>choice()</code> og <code>randrange()</code> kan vi be datamaskinen om å velge farge, størrelse og form for oss, og det kommer til å bli forskjellig resultat nesten hver eneste gang du kjører programmet.</p></li>
