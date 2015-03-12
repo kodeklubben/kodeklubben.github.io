@@ -10,8 +10,8 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="../../assets/img/ccno_logo.png" style="margin:20px; height:84px;"></td>
-<td style="text-align: center;"><img src="logo2_ntnu_u-slagord.gif" style="margin:20px; height:84px;"></td>
+<td style="text-align: center;"><img src="../../assets/img/ccno_logo.png" style="margin:20px; height:168px;"></td>
+<td style="text-align: center;"><img src="logo2_ntnu_u-slagord.gif" style="margin:20px; height:168px;"></td>
 </tr>
 </tbody>
 </table>
@@ -24,15 +24,15 @@
 <li><p>Lag først en ny app-pakke og app-klasse som forklart i <a href="../helloworld/helloworld.html">Hello world-leksjonen</a>. Bruk <strong>fxmllogo</strong> som navn på pakken og <strong>FxmlLogoApp</strong> som navn på app-klassen.</p></li>
 <li><p>Høyreklikk på <strong>fxmllogo</strong>-pakken og velg <code>New &gt; Other...</code> så du får opp en liste med såkalte <em>veivisere</em> (eng: <em>wizards</em>). Vi skal bruke den som heter <strong>New FXML Document</strong>. Det enkleste er å skrive inn ‘fx’ i søkefeltet, for å snevre inn utvalget:</p>
 <figure>
-<img src="../images/new-fxml-document.png" title="New FXML document">
+<img src="new-fxml-document.png" title="New FXML document">
 </figure>
 <p>Trykk <code>Next</code> for å velge veiviseren. Du vil da få opp følgende skjema:</p>
 <figure>
-<img src="../images/new-fxml-file-wizard.png" title="New FXML file">
+<img src="new-fxml-file-wizard.png" title="New FXML file">
 </figure>
 <p>Fyll inn <code>FxmlLogoApp</code> og trykk <code>Finish</code>. Du vil da få opp en FXML-editor med den nye FXML-fila:</p>
 <figure>
-<img src="../images/initial-FxmlLogoApp.fxml.png" title="Initial FxmlLogoApp.fxml">
+<img src="initial-FxmlLogoApp.fxml.png" title="Initial FxmlLogoApp.fxml">
 </figure></li>
 <li><p>Denne FXML-en gir bare et tomt panel (av typen <strong>AnchorPane</strong>), så for å få noe å jobbe med, så trenger vi Rediger teksten slik at den blir som følger:</p>
 <pre class="sourceCode xml"><code class="sourceCode xml lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">AnchorPane</span> <span class="hljs-attribute">xmlns:fx</span>=<span class="hljs-value">"http://javafx.com/fxml/1"</span> <span class="hljs-attribute">prefWidth</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">prefHeight</span>=<span class="hljs-value">"400"</span>&gt;</span>
@@ -55,7 +55,10 @@
 <p><code class="lang-html"><span class="hljs-pi">&lt;?import javafx.scene.shape.Rectangle?&gt;</span></code></p>
 <p>(Hvis du ikke bruker kode-kompletteringsfunksjonen, så må du skrive inn import-setningen selv.) Tilsvarende kan du bruke kode-komplettering på attributt-navnene <strong>layoutX</strong>, <strong>layoutY</strong>, <strong>width</strong>, <strong>height</strong>, <strong>fill</strong> osv.</p></li>
 <li><p>Mens du redigerer FXML-koden, så kan det være kjekt å se hvordan innholdet vil bli seende ut, når det lastes inn og vises frem. Eclipse har et eget panel kalt <strong>JavaFX preview</strong> som hele tiden laster inn FXML-koden du redigerer og viser frem innholdet. Dette åpnes ved å velge <code>Window &gt; Show View...</code> og så finne panelet i lista. Bruk søkefeltet for å filtrere lista (skriv ‘pre’, så panelet blir enklere å finne.</p>
-<p><img src="../images/fxml-editor-with-preview-pane.png" title="FXML-editor med preview-panel"> Som du ser så inneholder FXML-fila allerede mange av de grafiske elementene som trengs for å lage begge logoene, men ikke alle. Din jobb blir å justere på FXML-koden, så logoene blir omtrent som vist øverst i denne leksjonen.</p></li>
+<figure>
+<img src="fxml-editor-with-preview-pane.png" title="FXML-editor med preview-panel">
+</figure>
+<p>Som du ser så inneholder FXML-fila allerede mange av de grafiske elementene som trengs for å lage begge logoene, men ikke alle. Din jobb blir å justere på FXML-koden, så logoene blir omtrent som vist øverst i denne leksjonen.</p></li>
 </ul>
 <section id="litt-om-fxml" class="level2">
 <h2>Litt om FXML</h2>
@@ -82,21 +85,21 @@ pane.getChildren().add(circle);</code></pre>
 <ul>
 <li><p>Høyreklikk på FXML-fila og velg <code class="lang-python">Open <span class="hljs-keyword">with</span> SceneBuilder</code></p>
 <figure>
-<img src="../images/open-with-scenebuilder.png" title="Åpne med SceneBuilder">
+<img src="open-with-scenebuilder.png" title="Åpne med SceneBuilder">
 </figure>
 <p>Hvis du har installer SceneBuilder riktig, så skal du etter litt venting få opp følgende</p>
 <figure>
-<img src="../images/scene-builder-FxmlLogoApp-1.png" title="FxmlLogoApp.fxml åpnet med SceneBuilder">
+<img src="scene-builder-FxmlLogoApp-1.png" title="FxmlLogoApp.fxml åpnet med SceneBuilder">
 </figure>
 <p>Som du ser så inneholder panelet i midten de samme grafiske elementene som JavaFX Preview-panelet. Her kan du imidlertid <em>redigere</em> på dem, ved å velge, dra og slippe, som i vanlige tegneprogrammer.</p>
 <p>Nederst til venstre ser du trestrukturen av objekter, med et panel (<strong>AnchorPane</strong>) som inneholder et rektangel (<strong>Rectangle</strong>), en sirkel (<strong>Circle</strong>) og to tekst-objekter (<strong>Text</strong>).</p>
 <p>Øverst til venstre ser du en kategorisert liste med elementer som kan dras og slippes inn i redigeringspanelet i midten. I figuren vises bare såkalte <strong>Containers</strong>, som inneholder andre elementer, men (hvis du scroller) lenger ned finner du bl.a. <strong>Controls</strong> (interaktive elementer) og <strong>Shapes</strong> (grafiske elementer). Prøv å finne <strong>Line</strong>-typen og dra og slipp den litt til høyre for det svarte rektangelet. Hvis du vil endre på hvordan streken ser ut, så kan du redigere ulike <em>egenskaper</em> i panelet til høyre. Prøv f.eks. å gjøre streken tykkere (<strong>Stroke Width</strong> = 10), endre fargen til grønn (<strong>Stroke</strong> = #569900) og enden til avrundet (<strong>Stroke Line Cap</strong> = <strong>ROUND</strong>). Da skal det se omtrent slik ut:</p>
 <figure>
-<img src="../images/scene-builder-FxmlLogoApp-2.png" title="FxmlLogoApp.fxml åpnet med SceneBuilder">
+<img src="scene-builder-FxmlLogoApp-2.png" title="FxmlLogoApp.fxml åpnet med SceneBuilder">
 </figure>
 <p>Dette er omtrent de grafiske elementen du trenger for å lage Kodeklubben- og NTNU-logoene. Prøv å bruke redigeringsmulighetene til å få tegningen til å bli seende omtrent slik ut:</p>
 <figure>
-<img src="../images/scene-builder-FxmlLogoApp-3.png" title="Logoer redigert med SceneBuilder">
+<img src="scene-builder-FxmlLogoApp-3.png" title="Logoer redigert med SceneBuilder">
 </figure>
 <p>Her er noen tips om nyttige redigeringsfunksjoner som du kan bruke for å få laget og redigert grafikken:</p>
 <ul>
@@ -114,8 +117,8 @@ pane.getChildren().add(circle);</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="../images/color-picker.png"></td>
-<td style="text-align: center;"><img src="../images/font-picker.png"></td>
+<td style="text-align: center;"><img src="color-picker.png"></td>
+<td style="text-align: center;"><img src="font-picker.png"></td>
 </tr>
 </tbody>
 </table>
@@ -129,7 +132,7 @@ pane.getChildren().add(circle);</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><img src="../images/layout-properties.png"></td>
+<td style="text-align: center;"><img src="layout-properties.png"></td>
 <td style="text-align: left;">Det er egentlig disse egenskapene du endrer, når du velger, drar og slipper de grafiske elementene og de små hjørne-boksene. Ved å redigere tallene, så kan du styre dem helt presist.</td>
 </tr>
 </tbody>
@@ -170,7 +173,7 @@ pane.getChildren().add(circle);</code></pre>
 Trikset her er å lage et <strong>FXMLLoader</strong>-objekt (første linje i start-metoden, og be denne laste inn FXML-fila med load-metoden (andre linje).</li>
 <li><p>Kjør app-en ved å høyre-klikke på fila eller i editoren og velge <code class="lang-python">Run <span class="hljs-keyword">as</span> &gt; Java Application</code>. Da skal det (etter litt venting) dukke opp et vindu som dette:</p>
 <figure>
-<img src="../images/run-FxmlLogoApp-as-java-application.png">
+<img src="run-FxmlLogoApp-as-java-application.png">
 </figure></li>
 </ul>
 </section>
