@@ -1,0 +1,90 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Gjettelek | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Gjettelek<a href="/python/gjettelek/gjettelek.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="gjett-et-tall" class="level1 intro">
+<h1>Gjett et tall!</h1>
+<p>I denne oppgaven skal du lage en spill som kalles gjetteleken. Det er meningen at du i denne oppgaven skal skrive all koden selv, ved hjelp av litt hint.</p>
+<p>Spillet er som følger:</p>
+<ol type="1">
+<li>Programmet finner et tilfeldig tall mellom 1 og 100</li>
+<li>Brukeren gjetter et tall mellom 1 og 100.</li>
+<li>Programmet skriver ut:
+<ul>
+<li><code>Higher!</code> hvis tallet var for lavt.</li>
+<li><code>Lower!</code> hvis tallet var for høyt.</li>
+<li>Hvis brukeren gjetter riktig tall skal programmet skrive ut <code>Correct!</code> og avslutte.</li>
+</ul></li>
+<li>Så lenge brukeren ikke har gjettet tallet, så må programmet spørre om et nytt tall (brukeren har uendelig mange forsøk).</li>
+</ol>
+<p>Slik ser det ut når programmet kjører:</p>
+<figure>
+<img src="python_guessing_game.png">
+</figure>
+</section>
+<section id="klar-ferdig-programmer" class="level1 activity">
+<h1>Klar, ferdig, programmer!</h1>
+<p>Nå er det bare å sette i gang! Pass på at du forstår hvordan spillet fungerer før du begynner å programmere! Her er noen hint for å hjelpe deg på vei:</p>
+<section id="randint" class="level2 protip">
+<h2>randint()</h2>
+<p>For å generere tilfelige tall kan det være lurt å bruke funksjonen <code>randint()</code>. For å bruke <code>randint()</code>, må vi importere funksjonen:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint</code></pre>
+<p>Hva gjør disse funksjonskallene?</p>
+<ul>
+<li><code>randint(1, 100)</code></li>
+<li><code>randint(1000, 1000000)</code></li>
+<li><code>randint(101, 102)</code></li>
+</ul>
+</section>
+<section id="int" class="level2 protip">
+<h2>int()</h2>
+<p>Når man får input fra brukeren får man en <em>tekststreng</em>, selv om brukeren skrev et tall, da kan det være greit å kunne konvertere teksten til et tall, ved hjelp av <code class="lang-java"><span class="hljs-keyword">int</span>()</code>.</p>
+<p>Hva er forskjellen på disse kodesnuttene? (Kjør koden og test selv!)</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python">tall = input(<span class="hljs-string">"Skriv et tall: "</span>)
+svar = <span class="hljs-number">3</span> + tall
+print(svar)</code></pre>
+<pre class="python3"><code class="lang-java">tall = <span class="hljs-keyword">int</span>(input(<span class="hljs-string">"Skriv et tall: "</span>))
+svar = <span class="hljs-number">3</span> + <span class="hljs-function">tall
+<span class="hljs-title">print</span><span class="hljs-params">(svar)</span></span></code></pre>
+</section>
+<section id="kontrollstrukturer" class="level2 protip">
+<h2>Kontrollstrukturer</h2>
+<p>Hva slags kontrollstrukturer trenger du?</p>
+<p>Eksempel på kontrollstrukturer er <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker, <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkker og <code class="lang-python"><span class="hljs-keyword">if</span>-<span class="hljs-keyword">elif</span>-<span class="hljs-keyword">else</span></code>-uttrykk.</p>
+<ul>
+<li><p><code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker bruker vi når vi vil gjøre noe mange ganger.</p>
+<p><strong>Eksempel:</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-comment"># skriv ut ti tall</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
+    print(<span class="hljs-string">'variabelen i er: '</span> + str(i))</code></pre></li>
+<li><p><code class="lang-java"><span class="hljs-keyword">while</span></code>-løkker brukes når vi vil gjøre noe mange ganger inntil en variabel endrer seg.</p>
+<p><strong>Eksempel:</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"> a = <span class="hljs-number">0</span>
+ <span class="hljs-comment"># så lenge variablen `a` ikke er lik `10`</span>
+ <span class="hljs-keyword">while</span> a != <span class="hljs-number">10</span>:
+     print(a)
+     a = a + <span class="hljs-number">1</span></code></pre>
+<p>Prøv å se hva som skjer dersom du ikke tar med linjen <code>a = a + 1</code>.</p></li>
+<li><p><code class="lang-python"><span class="hljs-keyword">if</span>-<span class="hljs-keyword">elif</span>-<span class="hljs-keyword">else</span></code>-uttrykk kan bestemme om vi skal kjøre en spesiell kode.</p>
+<p><strong>Eksempel:</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python">a = <span class="hljs-number">1</span>
+<span class="hljs-keyword">if</span> a == <span class="hljs-number">2</span>:
+  print(<span class="hljs-string">'a er 2'</span>)
+<span class="hljs-keyword">elif</span> a == <span class="hljs-number">3</span>:
+  print(<span class="hljs-string">'a er 3'</span>)
+<span class="hljs-keyword">else</span>:
+  print(<span class="hljs-string">'a er ikke 2 og ikke 3'</span>)</code></pre>
+<p>Prøv å endre verdien <code>a</code> på toppen til <code>2</code> eller <code>3</code> og se hva som skjer.</p></li>
+</ul>
+</section>
+</section>
+<section id="test-programmet-ditt" class="level1 activity">
+<h1>Test programmet ditt</h1>
+<p>Fungerer det slik som i beskrivelsen i begynnelsen av oppgaven? Hvis ikke må du rette feilene dine.</p>
+<section id="forsøk" class="level2 challenge">
+<h2>7 forsøk</h2>
+<p>Ettersom vi bare har tall mellom 1 og 100 kan vi alltid gjette tallet på 7 forsøk eller bedre. Klarer du dette selv?</p>
+</section>
+<section id="begrense-brukerens-forsøk" class="level2 challenge">
+<h2>Begrense brukerens forsøk</h2>
+<p>Til nå har brukeren hatt uendelig mange forsøk. Klarer du å skrive om koden din slik at brukeren bare får 12 forsøk?</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Ole Kristian Pedersen, Kodeklubben Trondheim</p>
+</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
