@@ -27,9 +27,9 @@
     <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value">underline</span></span>;
     <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value">blink</span></span>;
     <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value">impact, sans-serif</span></span>;
-<span class="hljs-rule">}</span></span></code></pre>
+}</span></code></pre>
 <p>Og nå – endre skrifttypen i en paragraf…</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-java">    font-family:georgia, <span class="hljs-string">'times new roman'</span>, serif;
+<pre class="sourceCode css"><code class="sourceCode css lang-css">    <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value">georgia, <span class="hljs-string">'times new roman'</span>, serif</span></span>;
 }</code></pre>
 <section id="lagre-og-se-det-i-nettleseren." class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
@@ -40,13 +40,13 @@
 <img src="fonts.png" alt="screenshot"><figcaption>screenshot</figcaption>
 </figure>
 <p>Finn en du liker og prøv om du kan legge den ut på websiden! Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge deler ved hjelp av skrifttype-stilegenskaper. La oss forandre epostteksten (husk at den finner vi inne i a-taggen)</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css">    <span class="hljs-tag">font-style</span><span class="hljs-pseudo">:bold</span>;
+<pre class="sourceCode css"><code class="sourceCode css lang-css">    <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value">bold</span></span>;
 }</code></pre>
 </section>
 <section id="lagre-og-se-det-i-nettleseren.-1" class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>Eller vi kan sette teksten til <em>kursiv</em>.</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css">    <span class="hljs-tag">font-style</span><span class="hljs-pseudo">:italic</span>;
+<pre class="sourceCode css"><code class="sourceCode css lang-css">    <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value">italic</span></span>;
 }</code></pre>
 </section>
 <section id="lagre-og-se-det-i-nettleseren.-2" class="level2 save">
@@ -55,7 +55,7 @@
 <p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen font-weight-. Den bruker verdier som <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste skrifttypen og 900 er den tykkeste (feteste skriften). Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle skrifttyper alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke normal- eller fet- skrift. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">h2</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value">normal</span></span>;
-<span class="hljs-rule">}</span></span></code></pre>
+}</span></code></pre>
 <p>Prøv det!</p>
 </section>
 </section>
@@ -66,7 +66,7 @@
     <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value">green</span></span>;
     <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"><span class="hljs-number">5px</span></span></span>;
     <span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value">solid</span></span>;
-<span class="hljs-rule">}</span></span></code></pre>
+}</span></code></pre>
 <section id="lagre-og-se-det-i-nettleseren.-3" class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>Prøv nå å forandre farge, bredden, og linje-stil til du er fornøyd. Her er noen linje-stiler: <code>dashed</code>, <code>dotted</code>, <code class="lang-java"><span class="hljs-keyword">double</span></code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>.</p>
@@ -80,7 +80,7 @@
 <p>Nå kan vi endre stilen til IDen slik:</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-id">#uthevet</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-<span class="hljs-rule">}</span></span></code></pre>
+}</span></code></pre>
 <section id="lagre-og-se-det-i-nettleseren.-4" class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>En ID er unik og kan bare bli brukt en gang per side. Så hva gjør vi hvis du ønsker å lage to paragrafer med større skrift? Dette kan vi løse ved å bruke klasser. Det første vi må gjøre er å gi teksten klassenavnet for den teksten vi ønsker å gjøre større.</p>
@@ -89,7 +89,7 @@
 <p>Deretter setter vi stilen slik (legg merke til at vi bruker <code>.</code> i stedet for <code class="lang-python"><span class="hljs-comment">#</span></code>):</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-class">.stor</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">24px</span></span></span>;
-<span class="hljs-rule">}</span></span></code></pre>
+}</span></code></pre>
 </section>
 <section id="ting-du-kan-prøve" class="level2 try">
 <h2>Ting du kan prøve:</h2>

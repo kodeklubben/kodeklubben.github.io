@@ -22,14 +22,14 @@
 display = (800,600)
 pygame.display.set_mode(display, OPENGL | DOUBLEBUF)</code></pre>
 <p>Hvis du kjører programmet ditt nå så vil du trolig få opp et vindu på skjermen som umiddelbart lukkes, og programmet ditt vil avslutte. Det vi trenger nå er noe som sørger for at programmet vårt ikke avslutter før vi vil at det skal avslutte.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
-  <span class="hljs-keyword">for</span> event <span class="hljs-keyword">in</span> pygame.event.get():
-      <span class="hljs-keyword">if</span> event.type==pygame.QUIT:
-          pygame.quit()
-          quit()
+<pre class="sourceCode python"><code class="sourceCode python lang-css"><span class="hljs-tag">while</span> <span class="hljs-rule"><span class="hljs-attribute">True</span>:<span class="hljs-value">
+  for event in pygame.event.<span class="hljs-function">get</span>():
+      if event.type==pygame.QUIT:
+          pygame.<span class="hljs-function">quit</span>()
+          <span class="hljs-function">quit</span>()
 
-  pygame.display.flip()
-  pygame.time.wait(<span class="hljs-number">10</span>)</code></pre>
+  pygame.display.<span class="hljs-function">flip</span>()
+  pygame.time.<span class="hljs-function">wait</span>(<span class="hljs-number">10</span>)</span></span></code></pre>
 <p>Dette er en while-løkke som kjører helt til noen krysser ut vinduet. Det er inne i denne løkken at vi kommer til å legge koden som tegner og roterer kuben vår.</p>
 </section>
 <section id="steg-2-tegne-en-firkant" class="level1 activity">
