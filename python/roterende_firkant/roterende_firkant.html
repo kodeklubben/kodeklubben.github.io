@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Roterende firkant | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Roterende firkant<a href="/python/roterende_firkant/roterende_firkant.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Roterende firkant | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Roterende firkant</h1><div class="lesson-icons"><div class="level"><img title="Level 4" src="../../assets/img/level4.png"/><span>Expert</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/roterende_firkant/roterende_firkant.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>I denne oppgaven skal du få en enkel introduksjon til hvordan man kan lage 3D-grafikk ved hjelp av python og OpenGL. Målet med denne oppgaven er å lage en kube som roterer, enkelt og greit.</p>
 <section id="ting-du-trenger-for-å-komme-i-gang" class="level2 check">
@@ -12,47 +20,47 @@
 <section id="steg-1-lage-et-tomt-pygame-program" class="level1 activity">
 <h1>Steg 1 Lage et tomt pygame-program</h1>
 <p>Det første vi må gjøre er å importere en del fra diverse kodebiblioteker. Pygame er et bibliotek for å lage spill i python, og OpenGL kan brukes til å tegne grafikk både i 2D og 3D.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">import</span> pygame
-<span class="hljs-keyword">from</span> OpenGL.GL <span class="hljs-keyword">import</span> *
-<span class="hljs-keyword">from</span> OpenGL.GLU <span class="hljs-keyword">import</span> *
-<span class="hljs-keyword">from</span> pygame.locals <span class="hljs-keyword">import</span> *</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-monkey"><span class="hljs-preprocessor"><span class="hljs-keyword">import</span> pygame</span>
+from OpenGL.GL <span class="hljs-preprocessor"><span class="hljs-keyword">import</span> *</span>
+from OpenGL.GLU <span class="hljs-preprocessor"><span class="hljs-keyword">import</span> *</span>
+from pygame.locals <span class="hljs-preprocessor"><span class="hljs-keyword">import</span> *</span></code></pre>
 <p>Når vi har importert alt vi trenger så er det på tide å opprette et vindu som vi kan tegne i. Før vi kan bruke pygame så må vi kalle på funksjonen som heter pygame.init().</p>
 <p>Den neste linjen kaller på funksjonen set_mode() som vi bruker for å sette opp et vindu som vi kan tegne i. Den første parameteren til set_mode sier hvor mange pixler vi skal ha i bredden og høyden på vinduet vårt. Siden vi skal bruke denne informasjonen senere i programmet så lagrer vi den i en variabel som heter display. I eksempelet er vinduet vårt 800 pixler bredt og 600 pixler høyt.</p>
-<pre class="sourceCode python"><code class="sourceCode python">pygame.init()
-display = (800,600)
-pygame.display.set_mode(display, OPENGL | DOUBLEBUF)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-gams">pygame.init()
+<span class="hljs-keyword">display</span> = (<span class="hljs-number">800</span>,<span class="hljs-number">600</span>)
+pygame.<span class="hljs-keyword">display</span>.set_mode(<span class="hljs-keyword">display</span>, OPENGL | DOUBLEBUF)</code></pre>
 <p>Hvis du kjører programmet ditt nå så vil du trolig få opp et vindu på skjermen som umiddelbart lukkes, og programmet ditt vil avslutte. Det vi trenger nå er noe som sørger for at programmet vårt ikke avslutter før vi vil at det skal avslutte.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-css"><span class="hljs-tag">while</span> <span class="hljs-rule"><span class="hljs-attribute">True</span>:<span class="hljs-value">
-  for event in pygame.event.<span class="hljs-function">get</span>():
-      if event.type==pygame.QUIT:
-          pygame.<span class="hljs-function">quit</span>()
-          <span class="hljs-function">quit</span>()
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">while True:
+  <span class="hljs-keyword">for</span> event <span class="hljs-keyword">in</span> pygame<span class="hljs-class">.event</span><span class="hljs-class">.get</span>():
+      <span class="hljs-keyword">if</span> event.type==pygame<span class="hljs-class">.QUIT</span>:
+          pygame.<span class="hljs-function"><span class="hljs-title">quit</span><span class="hljs-params">()</span></span>
+          <span class="hljs-function"><span class="hljs-title">quit</span><span class="hljs-params">()</span></span>
 
-  pygame.display.<span class="hljs-function">flip</span>()
-  pygame.time.<span class="hljs-function">wait</span>(<span class="hljs-number">10</span>)</span></span></code></pre>
+  pygame<span class="hljs-class">.display</span><span class="hljs-class">.flip</span>()
+  pygame<span class="hljs-class">.time</span><span class="hljs-class">.wait</span>(<span class="hljs-number">10</span>)</code></pre>
 <p>Dette er en while-løkke som kjører helt til noen krysser ut vinduet. Det er inne i denne løkken at vi kommer til å legge koden som tegner og roterer kuben vår.</p>
 </section>
 <section id="steg-2-tegne-en-firkant" class="level1 activity">
 <h1>Steg 2 Tegne en firkant</h1>
 <p>Til nå har vi bare et tomt vindu som ikke viser noe fornuftig. Nå er det på tide å faktisk tegne en firkant. Det første du må gjøre er å legge til tre linjer rett over while-loopen din.</p>
-<pre class="sourceCode python"><code class="sourceCode python">gluPerspective(45, display[0]/display[1], 0.1, 50)
-glTranslatef(0, 0, -5)
-glColor3fv((0, 127, 127))</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">gluPerspective(<span class="hljs-number">45</span>, display[<span class="hljs-number">0</span>]/display[<span class="hljs-number">1</span>], <span class="hljs-number">0.1</span>, <span class="hljs-number">50</span>)
+glTranslatef(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">5</span>)
+glColor3fv((<span class="hljs-number">0</span>, <span class="hljs-number">127</span>, <span class="hljs-number">127</span>))</code></pre>
 <p>Det er ikke lett å registrere at disse linjene gjør noe spesielt før vi faktisk begynner å tegne noe på skjermen. I korte trekk så beskriver vi hvordan vi skal vise de tre dimensjonene på dataskjermen, flytter kameraposisjonen vår, og til slutt sier hvilken farge vi skal tegne med.</p>
 <p>Gå inn i while-loopen og legg til de følgende linjene.</p>
-<pre class="sourceCode python"><code class="sourceCode python">glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-glBegin(GL_QUADS)
-glEnd()</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">glClear</span><span class="hljs-params">(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)</span></span>
+<span class="hljs-function"><span class="hljs-title">glBegin</span><span class="hljs-params">(GL_QUADS)</span></span>
+<span class="hljs-function"><span class="hljs-title">glEnd</span><span class="hljs-params">()</span></span></code></pre>
 <p>Fikk du tidligere en del rare ting tegnet i vinduet ditt når du kjørte det? Dette slipper vi når vi kaller glClear slik som det er vist over. Denne linjen sier enkelt og greit i fra om at vi skal ha en tom skjerm, det eneste som vil bli vist er det vi sier at skal tegnes i etterkant.</p>
 <p>OpenGL er biblioteket som vi bruker for å tegne 3D-grafikk. OpenGL fungerer stort sett slik at man oppgir en rekke punkter og så vil OpenGL tegne mellom disse punktene på en gitt måte. Når vi kaller glBegin(GL_QUADS) så vil OpenGL ta hver gruppe på fire punkter og tegne en flate mellom dem. glEnd sier ifra om at vi er ferdig med å tegne det vi skulle med GL_QUADS, og vi kan eventuelt tegne noe annet på en annen måte.</p>
 <p>For å sende inn et punkt som OpenGL skal bruke til å tegne med så bruker vi funksjonen glVertex3fv. Denne funksjonen tar inn et punkt, siden vi jobber i 3D så vil det bety at vi må ha tre tallverdier, en for x-aksen, y-aksen, og z-aksen.</p>
 <p>Det vi skal tegne er en firkant, derfor trenger vi å oppgi fire punkter. Legg følgende mellom glBegin og glEnd.</p>
-<pre class="sourceCode python"><code class="sourceCode python">glVertex3fv((-1,-1, 0))
-glVertex3fv((-1, 1, 0))
-glVertex3fv(( 1, 1, 0))
-glVertex3fv(( 1,-1, 0))</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">glVertex3fv((-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+glVertex3fv((-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+glVertex3fv(( <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+glVertex3fv(( <span class="hljs-number">1</span>,-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>))</code></pre>
 <p>Hvis alt har gått rett for seg så skal du nå ha en nydelig og turkis firkant på skjermen din. Dessverre er det lite som avslører at dette er 3D og ikke bare 2D. Det fikser vi enkelt og greit ved å legge til litt rotasjon. Legg til den følgende linjen inne i while-løkken din.</p>
-<pre class="sourceCode python"><code class="sourceCode python">glRotatef(1, 1, 0, 0)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">glRotatef(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)</code></pre>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>H. Kaurel</p>
-</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

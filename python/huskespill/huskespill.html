@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Huskespill | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Huskespill<a href="/python/huskespill/huskespill.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="huskespill" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Huskespill | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Huskespill</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Journeyman</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/huskespill/huskespill.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="huskespill" class="level1 intro">
 <h1>Huskespill</h1>
 <p>I denne oppgaven skal du lage et huskespill hvor spilleren skal huske flest mulig ord i riktig rekkefølge. Spilleren skal få opp en liste med ord, deretter skal listen forsvinne og spilleren skal så skrive inn ordene i riktig rekkefølge. Skrives ordene inn i riktig rekkefølge, vil listen utvides med et nytt ord som må huskes. Programmet holder på slik helt til spilleren gjetter feil. Når spillet er ferdig får spilleren vite hvor mange ord han eller hun klarte å huske etter hverandre.</p>
 <p>Vi vil bygge programmet gradvis steg for steg. I hvert steg vil det gis viktige tips som ligner på slik en bør løse steget.</p>
@@ -19,31 +27,31 @@
 <h2>Tips: Lister</h2>
 <p><strong>Hva:</strong> En liste er en variabel som kan lagre flere verdier på en gang.</p>
 <p><strong>Hvordan lage lister:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">liste = [<span class="hljs-string">'sau'</span>, <span class="hljs-string">'gris'</span>, <span class="hljs-string">'menneske'</span>]
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">liste = [<span class="hljs-string">'sau'</span>, <span class="hljs-string">'gris'</span>, <span class="hljs-string">'menneske'</span>]
 tom_liste = []
-print(liste)
-print(tom_liste)</code></pre>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(liste)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(tom_liste)</span></span></code></pre>
 <p><strong>Hvordan hente ut verdier fra en liste:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(liste[<span class="hljs-number">2</span>])</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(liste[<span class="hljs-number">2</span>])</span></span></code></pre>
 <p>Husk at vi begynner å telle på 0, så første posisjon i lista er posisjon 0. Deretter teller vi oppover 0,1,2,3…</p>
 <p><strong>Hvordan finne lengden til liste:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">lengde = len(liste)
-print(lengde)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">lengde = <span class="hljs-function"><span class="hljs-title">len</span><span class="hljs-params">(liste)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(lengde)</span></span></code></pre>
 <p><strong>Hvordan legge til ny verdi på slutten av liste:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(liste)
-liste.append(<span class="hljs-string">'nils'</span>)
-print(liste)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(liste)</span></span>
+liste.<span class="hljs-function"><span class="hljs-title">append</span><span class="hljs-params">(<span class="hljs-string">'nils'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(liste)</span></span></code></pre>
 <p>Prøv ut eksemplene for å forstå hvordan du kan bruke dem til å løse oppgaven.</p>
 </section>
 <section id="tips-velge-et-tilfeldig-element-i-en-liste" class="level2 protip">
 <h2>Tips: Velge et tilfeldig element i en liste</h2>
-<p>For å hente et tilfeldig element i en liste kan man bruke <a href="https://docs.python.org/3.4/library/random.html#random.choice"><code>choice()</code></a> i random-biblioteket.</p>
+<p>For å hente et tilfeldig element i en liste kan man bruke <a href="https://docs.python.org/3.4/library/random.html#random.choice"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">choice</span><span class="hljs-params">()</span></span></code></a> i random-biblioteket.</p>
 <p><strong>Eksempel:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">import</span> random
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">import random
 liste = [<span class="hljs-string">'asdf'</span>, <span class="hljs-string">'qwerty'</span>, <span class="hljs-string">'nils'</span>]
 
-tilfeldig = random.choice(liste)
-print(tilfeldig)</code></pre>
+tilfeldig = random.<span class="hljs-function"><span class="hljs-title">choice</span><span class="hljs-params">(liste)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(tilfeldig)</span></span></code></pre>
 <p>Prøv å kjør denne koden mange ganger!</p>
 </section>
 </section>
@@ -51,25 +59,25 @@ print(tilfeldig)</code></pre>
 <h1>Steg 2: Hent inn tekst og lag liste av den</h1>
 <ul>
 <li>Lag en funksjon som tar inn tekst og lager en liste av den.</li>
-<li>Teksten som tas inn skal splittes ved <code>-</code>.</li>
+<li>Teksten som tas inn skal splittes ved <code class="lang-diff"><span class="hljs-deletion">-</span></code>.</li>
 <li>Funksjonen skal returnere listen.</li>
 <li><strong>Før du går videre til steg 3, sjekk at funksjonen din fungerer som den skal.</strong></li>
 </ul>
 <section id="tips-hente-innputt" class="level2 protip">
 <h2>Tips: Hente innputt</h2>
-<p>For å hente innputt og lagre det til en variabel kan vi bruke <a href="https://docs.python.org/3.4/library/functions.html#input"><code>input()</code></a>.</p>
+<p>For å hente innputt og lagre det til en variabel kan vi bruke <a href="https://docs.python.org/3.4/library/functions.html#input"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">()</span></span></code></a>.</p>
 <p><strong>Eksempel:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-java">tekst = input(<span class="hljs-string">'Skriv noe'</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">tekst = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">'Skriv noe'</span>)</span></span></code></pre>
 <p>Det som brukeren skriver inn vil lagres i variabelen <code>tekst</code>.</p>
 </section>
 <section id="tips-splitte-tekst-til-en-liste" class="level2 protip">
 <h2>Tips: Splitte tekst til en liste</h2>
-<p>Siden spilleren ikke kan skrive inn en liste, men kun tekst, må vi forandre teksten til en liste. Dette kan vi gjøre med <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>split()</code></a>. Hvis vi skiller ordene som skal være i lista med et bestemt tegn, kan <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>split()</code></a> hente ut alle ordene og legge dem i en liste.</p>
+<p>Siden spilleren ikke kan skrive inn en liste, men kun tekst, må vi forandre teksten til en liste. Dette kan vi gjøre med <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">()</span></span></code></a>. Hvis vi skiller ordene som skal være i lista med et bestemt tegn, kan <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">()</span></span></code></a> hente ut alle ordene og legge dem i en liste.</p>
 <p><strong>Eksempel:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">tekst = <span class="hljs-string">'giraff-neshorn-bjørn-pelikan'</span>
-liste = tekst.split(<span class="hljs-string">'-'</span>)
-print(liste)</code></pre>
-<p>Merk <code class="lang-java"><span class="hljs-string">'-'</span></code> som står i parentesen <code class="lang-java">split(<span class="hljs-string">'-'</span>)</code>. Denne forteller hvilket tegn som skiller ordene fra hverandre.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">tekst = <span class="hljs-string">'giraff-neshorn-bjørn-pelikan'</span>
+liste = tekst.<span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">(<span class="hljs-string">'-'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(liste)</span></span></code></pre>
+<p>Merk <code class="lang-actionscript"><span class="hljs-string">'-'</span></code> som står i parentesen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">split</span><span class="hljs-params">(<span class="hljs-string">'-'</span>)</span></span></code>. Denne forteller hvilket tegn som skiller ordene fra hverandre.</p>
 <p><strong>Test ut eksempelet for å se hva som skjer.</strong></p>
 </section>
 </section>
@@ -91,4 +99,4 @@ print(liste)</code></pre>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Sindre O. Rasmussen, Kodeklubben Trondheim</p>
-</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Introduksjon til ComputerCraft | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Introduksjon til ComputerCraft<a href="/computercraft/introduksjon_til_computercraft/introduksjon_til_computercraft.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Introduksjon til ComputerCraft | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Introduksjon til ComputerCraft</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Novice</span></div><div class="course"><img src="../logo-white.png"/><span>ComputerCraft</span></div><div class="pdf"><a href="/computercraft/introduksjon_til_computercraft/introduksjon_til_computercraft.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p><strong>ComputerCraft</strong> er en mod til <strong>Minecraft</strong>, som gir deg muligheten til å bygge og programmere <strong>datamaskiner</strong> og <strong>roboter</strong> inne i Minecraft-verdenen.</p>
 <p>Vi begynner med å bygge en enkel datamaskin. Etter å ha brukt litt tid på å bli kjent med hvordan datamaskinen virker, bruker vi den til å låse opp en dør ved hjelp av passord. Etter at vi har klart dette begynner vi å se på datamaskiner som kan bevege seg, altså roboter! Disse kan vi bruke til både å grave og bygge ting for oss.</p>
@@ -14,7 +22,7 @@
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li>Trykk <code>E</code> for å åpne inventory’et ditt. Finn frem 7 <strong>Stone</strong>, 1 <strong>Redstone</strong> og 1 <strong>Glass pane</strong>.</li>
+<li>Trykk <code class="lang-mathematica"><span class="hljs-keyword">E</span></code> for å åpne inventory’et ditt. Finn frem 7 <strong>Stone</strong>, 1 <strong>Redstone</strong> og 1 <strong>Glass pane</strong>.</li>
 <li><p>Åpne et <strong>Crafting table</strong>, og legg ut materialet slik:</p>
 <figure>
 <img src="../bli_kjent_med_datamaskinen/craft_computer.png">
@@ -22,7 +30,7 @@
 <li>Legg den nye datamaskinen i den nederste raden i inventory’et ditt, slik at du kan ta den på hånden. Lukk inventory’et.</li>
 <li><p>Bruk talltastene til å velge datamaskinen, og høyreklikk for å lage en datamaskin.</p></li>
 </ul>
-<p>I <em>Creative Mode</em> kan du også få tak i datamaskiner ved å trykke <code>E</code>, deretter klikke <code>&gt;</code> for å gå til neste side, og til slutt velge fanen med datamaskinsymbolet.</p>
+<p>I <em>Creative Mode</em> kan du også få tak i datamaskiner ved å trykke <code class="lang-mathematica"><span class="hljs-keyword">E</span></code>, deretter klikke <code>&gt;</code> for å gå til neste side, og til slutt velge fanen med datamaskinsymbolet.</p>
 <section id="computercraft-datamaskiner" class="level3 protip">
 <h3>ComputerCraft-datamaskiner</h3>
 <p>Høyreklikk en datamaskin for å starte den opp. Den vil åpne en svart skjerm med teksten <code>CraftOS</code> på toppen. Dette er datamaskinens <em>kommandolinje</em>, og vi vil bruke den til å styre datamaskinen med.</p>
@@ -31,8 +39,8 @@
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Prøv å skriv <code>help</code> og trykk enter.</p>
-<p>Du får nå se noen tips om hvordan du kan finne ut mer om datamaskinen. For eksempel kan du skrive <code>programs</code> for å se en liste over hvilke programmer som er på datamaskinen, eller <code>help programming</code> for å få noen tips til hvordan man programmerer datamaskinen.</p></li>
+<li><p>Prøv å skriv <code class="lang-bash"><span class="hljs-built_in">help</span></code> og trykk enter.</p>
+<p>Du får nå se noen tips om hvordan du kan finne ut mer om datamaskinen. For eksempel kan du skrive <code>programs</code> for å se en liste over hvilke programmer som er på datamaskinen, eller <code class="lang-bash"><span class="hljs-built_in">help</span> programming</code> for å få noen tips til hvordan man programmerer datamaskinen.</p></li>
 <li><p>Skriv <code>programs</code> og trykk enter.</p>
 <p>Mange av disse programmene er enkle programmer som lar deg undersøke datamaskinen nærmere. Etter kurset kan du prøve å utforske flere av disse programmene.</p></li>
 </ul>
@@ -46,17 +54,17 @@
 <h2>Sjekkliste</h2>
 <ul>
 <li>Start en datamaskin.</li>
-<li>Skriv <code>edit heiverden</code> for å begynne å skrive på et nytt program som heter <code>heiverden</code>.</li>
+<li>Skriv <code class="lang-axapta"><span class="hljs-keyword">edit</span> heiverden</code> for å begynne å skrive på et nytt program som heter <code>heiverden</code>.</li>
 <li><p>I det nye vinduet, skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-python">print(<span class="hljs-string">'Hei verden!'</span>)</code></pre>
-<p>Etter at du har skrevet dette så trykker du på <em>Ctrl</em>-tasten og velger <code>Save</code>. Deretter trykker du <em>Ctrl</em> en gang til og velger <code>Exit</code>.</p></li>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hei verden!'</span>)</span></span></code></pre>
+<p>Etter at du har skrevet dette så trykker du på <em>Ctrl</em>-tasten og velger <code class="lang-fortran"><span class="hljs-keyword">Save</span></code>. Deretter trykker du <em>Ctrl</em> en gang til og velger <code class="lang-autoit"><span class="hljs-keyword">Exit</span></code>.</p></li>
 <li>Vi har nå laget vårt første program. Prøv å skriv <code>programs</code> og du vil se at <code>heiverden</code> er på listen over programmer.</li>
 <li><p>For å kjøre programmet vi har laget, skriver vi <code>heiverden</code> og trykker enter.</p></li>
 </ul>
 <section id="prøv-selv" class="level3 try">
 <h3>Prøv selv</h3>
 <p>Klarer du å endre på programmet slik at det for eksempel sier hei til deg, eller kanskje til de som sitter ved siden av deg?</p>
-<p>Prøv å skriv <code>edit heiverden</code> en gang til. Da åpner programmet ditt seg igjen, og du kan endre på det slik at det sier noe annet. Som tidligere må du bruke <em>Ctrl</em>-tasten for å gå til menyen slik at du kan lagre og avslutte endringene.</p>
+<p>Prøv å skriv <code class="lang-axapta"><span class="hljs-keyword">edit</span> heiverden</code> en gang til. Da åpner programmet ditt seg igjen, og du kan endre på det slik at det sier noe annet. Som tidligere må du bruke <em>Ctrl</em>-tasten for å gå til menyen slik at du kan lagre og avslutte endringene.</p>
 </section>
 </section>
 </section>
@@ -81,24 +89,24 @@
 </ul>
 <p>Vi skal nå prøve å skrive noen kommandoer direkte i Lua. Dette er en fin måte å teste enkle ting på.</p>
 <ul>
-<li><p>Skriv <code>lua</code> og trykk enter. Dette starter en <em>Lua-tolker</em> som vil utføre hver enkelt kommando du skriver med en gang.</p></li>
-<li><p>Vi begynner med kommandoen fra det første programmet vårt. Skriv <code class="lang-python">print(<span class="hljs-string">'Hei verden!'</span>)</code> og trykk enter. Skjer det samme som tidligere?</p></li>
-<li><p>Som de aller fleste programmeringsspråk er Lua glad i å regne. Skriv <code>1 + 1</code> og trykk enter.</p>
-<p>Lua kjenner alle de vanlige matematikk-operasjonene. Prøv for eksempel <code>17 - 8</code>, <code>3 * 4</code> eller <code>22 / 7</code>. Kjenner du igjen hva hver av disse betyr?</p></li>
-<li><p>Skriv <code class="lang-java">redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)</code> og trykk enter.</p>
-<p>Denne kommandoen skal åpne døren til venstre for datamaskinen. Her forteller <code>left</code> hvilken side av datamaskinen døren står på. Du kan også bruke for eksempel <code>right</code>, <code>top</code> eller <code>bottom</code>.</p>
-<p>Dette er et eksempel på å kalle en <em>funksjon</em>, noe vi gjør ofte når vi programmerer. I dette tilfellet heter funksjonen <code>setOutput</code> og den hører hjemme i <code>redstone</code>-<em>biblioteket</em>.</p></li>
+<li><p>Skriv <code class="lang-vim"><span class="hljs-keyword">lua</span></code> og trykk enter. Dette starter en <em>Lua-tolker</em> som vil utføre hver enkelt kommando du skriver med en gang.</p></li>
+<li><p>Vi begynner med kommandoen fra det første programmet vårt. Skriv <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hei verden!'</span>)</span></span></code> og trykk enter. Skjer det samme som tidligere?</p></li>
+<li><p>Som de aller fleste programmeringsspråk er Lua glad i å regne. Skriv <code class="lang-cpp"><span class="hljs-number">1</span> + <span class="hljs-number">1</span></code> og trykk enter.</p>
+<p>Lua kjenner alle de vanlige matematikk-operasjonene. Prøv for eksempel <code class="lang-cpp"><span class="hljs-number">17</span> - <span class="hljs-number">8</span></code>, <code class="lang-cpp"><span class="hljs-number">3</span> * <span class="hljs-number">4</span></code> eller <code class="lang-cpp"><span class="hljs-number">22</span> / <span class="hljs-number">7</span></code>. Kjenner du igjen hva hver av disse betyr?</p></li>
+<li><p>Skriv <code class="lang-stylus">redstone.<span class="hljs-function"><span class="hljs-title">setOutput</span><span class="hljs-params">(<span class="hljs-string">'left'</span>, true)</span></span></code> og trykk enter.</p>
+<p>Denne kommandoen skal åpne døren til venstre for datamaskinen. Her forteller <code class="lang-scss"><span class="hljs-attribute">left</span></code> hvilken side av datamaskinen døren står på. Du kan også bruke for eksempel <code class="lang-livecodeserver"><span class="hljs-constant">right</span></code>, <code class="lang-scss"><span class="hljs-attribute">top</span></code> eller <code class="lang-scss"><span class="hljs-attribute">bottom</span></code>.</p>
+<p>Dette er et eksempel på å kalle en <em>funksjon</em>, noe vi gjør ofte når vi programmerer. I dette tilfellet heter funksjonen <code class="lang-bash"><span class="hljs-built_in">set</span>Output</code> og den hører hjemme i <code>redstone</code>-<em>biblioteket</em>.</p></li>
 </ul>
 <section id="funksjoner" class="level3 protip">
 <h3>Funksjoner</h3>
-<p>Alle programmeringsspråk lar deg lage noe som kalles <em>funksjoner</em>. Dette er en samling instruksjoner som utføres sammen slik at det blir enklere å gjøre vanskelige ting. Lua kommer med innebygde funksjoner. Vi har så langt sett <code class="lang-python"><span class="hljs-keyword">print</span></code> og <code>redstone.setOutput</code> som eksempler på dette. Det går også an å lage egne funksjoner.</p>
+<p>Alle programmeringsspråk lar deg lage noe som kalles <em>funksjoner</em>. Dette er en samling instruksjoner som utføres sammen slik at det blir enklere å gjøre vanskelige ting. Lua kommer med innebygde funksjoner. Vi har så langt sett <code class="lang-bash"><span class="hljs-built_in">print</span></code> og <code class="lang-css"><span class="hljs-tag">redstone</span><span class="hljs-class">.setOutput</span></code> som eksempler på dette. Det går også an å lage egne funksjoner.</p>
 </section>
 </section>
 <section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Trykk pil opp-tasten slik at du kan endre <code class="lang-java">redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)</code> til <code class="lang-java">redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)</code>. Trykk enter. Nå lukker døren seg igjen fordi vi skrur av <em>redstone</em>-energien.</p></li>
-<li><p>Avslutt Lua-tolkeren ved å skrive <code>exit()</code> og trykk enter.</p></li>
+<li><p>Trykk pil opp-tasten slik at du kan endre <code class="lang-stylus">redstone.<span class="hljs-function"><span class="hljs-title">setOutput</span><span class="hljs-params">(<span class="hljs-string">'left'</span>, true)</span></span></code> til <code class="lang-stylus">redstone.<span class="hljs-function"><span class="hljs-title">setOutput</span><span class="hljs-params">(<span class="hljs-string">'left'</span>, false)</span></span></code>. Trykk enter. Nå lukker døren seg igjen fordi vi skrur av <em>redstone</em>-energien.</p></li>
+<li><p>Avslutt Lua-tolkeren ved å skrive <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">exit</span><span class="hljs-params">()</span></span></code> og trykk enter.</p></li>
 </ul>
 </section>
 </section>
@@ -108,28 +116,28 @@
 <section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li>Start et nytt program ved å skrive <code>edit passord</code> og trykk enter.</li>
+<li>Start et nytt program ved å skrive <code class="lang-axapta"><span class="hljs-keyword">edit</span> passord</code> og trykk enter.</li>
 <li><p>Skriv inn følgende program nøyaktig slik det står</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">'Passordet er '</span> .. passord .. <span class="hljs-string">'!'</span>)</code></pre>
-<p>Pass på at du skriver de to punktumene <code>..</code> riktig. Disse betyr at vi setter sammen tekst.</p></li>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus">local passord = <span class="hljs-string">'kodeklubben'</span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Passordet er '</span> .. passord .. <span class="hljs-string">'!'</span>)</span></span></code></pre>
+<p>Pass på at du skriver de to punktumene <code class="lang-erlang">..</code> riktig. Disse betyr at vi setter sammen tekst.</p></li>
 <li><p>Lagre og avslutt editoren. Kjør programmet ved å skrive <code>passord</code>.</p>
 <p>Programmet forteller deg hva passordet er. Klarer du å endre passordet til noe annet? Kanskje til <code>ComputerCraft</code> eller til navnet ditt?</p></li>
 </ul>
 <section id="variabler" class="level3 protip">
 <h3>Variabler</h3>
-<p>Vi har nå laget en variabel. Variabelen <code>passord</code> husker hva passordet skal være. På denne måten blir det enkelt å endre passordet senere. Ordet <code class="lang-lua"><span class="hljs-keyword">local</span></code> foran variabelen sier at vi bare skal huske variabelen i dette programmet (lokalt).</p>
+<p>Vi har nå laget en variabel. Variabelen <code>passord</code> husker hva passordet skal være. På denne måten blir det enkelt å endre passordet senere. Ordet <code class="lang-applescript"><span class="hljs-keyword">local</span></code> foran variabelen sier at vi bare skal huske variabelen i dette programmet (lokalt).</p>
 </section>
 </section>
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi skal nå jobbe videre med programmet. Vi vil jo at datamaskinen skal spørre oss om passordet, ikke fortelle oss hva det er. Skriv <code>edit passord</code> igjen, og endre programmet slik at det blir seende ut som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)                    <span class="hljs-comment">-- endret linje</span>
-svar = read()                                 <span class="hljs-comment">-- ny linje</span></code></pre>
-<p>Lagre, avslutt, og kjør programmet på nytt. Nå vil programmet spørre deg om passordet. Skjer det noe når du svarer? Funksjonen <code>read</code> brukes for å lese ting du skriver på tastaturet, men programmet gjør foreløbig ingenting med svaret ditt.</p></li>
-<li><p>Det neste vi vil er derfor at programmet skal sjekke om du svarer med riktig passord. For å gjøre dette vil vi bruke noe som heter <code class="lang-java"><span class="hljs-keyword">if</span></code>-tester. Disse kan teste om noe er sant, og vi vil bruke dem for å sjekke om det er sant at svaret ditt er likt med det faktiske passordet. Legg til en <code class="lang-java"><span class="hljs-keyword">if</span></code>-test nederst i programmet ditt slik som dette:</p>
+<li><p>Vi skal nå jobbe videre med programmet. Vi vil jo at datamaskinen skal spørre oss om passordet, ikke fortelle oss hva det er. Skriv <code class="lang-axapta"><span class="hljs-keyword">edit</span> passord</code> igjen, og endre programmet slik at det blir seende ut som følger:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus">local passord = <span class="hljs-string">'kodeklubben'</span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hva er passordet?'</span>)</span></span>                    -- endret linje
+svar = <span class="hljs-function"><span class="hljs-title">read</span><span class="hljs-params">()</span></span>                                 -- ny linje</code></pre>
+<p>Lagre, avslutt, og kjør programmet på nytt. Nå vil programmet spørre deg om passordet. Skjer det noe når du svarer? Funksjonen <code class="lang-applescript"><span class="hljs-command">read</span></code> brukes for å lese ting du skriver på tastaturet, men programmet gjør foreløbig ingenting med svaret ditt.</p></li>
+<li><p>Det neste vi vil er derfor at programmet skal sjekke om du svarer med riktig passord. For å gjøre dette vil vi bruke noe som heter <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-tester. Disse kan teste om noe er sant, og vi vil bruke dem for å sjekke om det er sant at svaret ditt er likt med det faktiske passordet. Legg til en <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-test nederst i programmet ditt slik som dette:</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
 svar = read()
@@ -141,17 +149,17 @@ svar = read()
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Kjør programmet igjen. Hva skjer når du svarer riktig? Hva skjer når du svarer feil? Skjønner du hvorfor?</p></li>
 <li><p>Nå kan vi koble sammen passordet med <code>redstone</code>-kommandoene vi så tidligere. La oss åpne døren hvis passordet er riktig. Etter 5 sekunder kan vi lukke døren igjen. Endre programmet slik:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-svar = read()
+<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
+print(<span class="hljs-string">'Hva er passordet?'</span>)
+svar = <span class="hljs-built_in">read</span>()
 
 <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)          <span class="hljs-comment">-- endret linje</span>
+    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-constant">true</span>)          <span class="hljs-comment">-- endret linje</span>
     sleep(<span class="hljs-number">5</span>)                                  <span class="hljs-comment">-- endret linje</span>
-    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)         <span class="hljs-comment">-- endret linje</span>
+    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-constant">false</span>)         <span class="hljs-comment">-- endret linje</span>
 <span class="hljs-keyword">end</span></code></pre>
 <p>Kjør programmet. Hva skjer nå når du skriver riktig passord?</p>
-<p>Funksjonen <code>sleep</code> gjør at datamaskinen sover, det vil si gjør ingenting. I dette tilfellet sover datamaskinen i 5 sekunder, før energien skrus av igjen og døren lukker seg.</p></li>
+<p>Funksjonen <code class="lang-autoit"><span class="hljs-built_in">sleep</span></code> gjør at datamaskinen sover, det vil si gjør ingenting. I dette tilfellet sover datamaskinen i 5 sekunder, før energien skrus av igjen og døren lukker seg.</p></li>
 <li><p>Det er kjedelig at vi hele tiden må starte programmet på nytt. Vi lager derfor en løkke som kan spørre oss om passord igjen og igjen.</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
@@ -165,7 +173,7 @@ svar = read()
         redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
-<p>Det er bare èn ny ting her som vi ikke har sett tidligere, nemlig en <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkke. Slike løkker vil fortsette å gjøre ting om igjen så lenge noe er sant. I vårt tilfelle er dette <em>noe</em> verdien <code class="lang-java"><span class="hljs-keyword">true</span></code> som alltid er sann. Det betyr at vi har laget en <em>evig løkke</em>. Dette programmet vil fortsette å spørre oss om passordet for alltid!</p></li>
+<p>Det er bare èn ny ting her som vi ikke har sett tidligere, nemlig en <code class="lang-actionscript"><span class="hljs-keyword">while</span></code>-løkke. Slike løkker vil fortsette å gjøre ting om igjen så lenge noe er sant. I vårt tilfelle er dette <em>noe</em> verdien <code class="lang-actionscript"><span class="hljs-literal">true</span></code> som alltid er sann. Det betyr at vi har laget en <em>evig løkke</em>. Dette programmet vil fortsette å spørre oss om passordet for alltid!</p></li>
 <li><p>Kjør programmet. Oppfører programmet seg slik du hadde trodd? Husker du passordet?</p></li>
 </ul>
 <section id="avslutte-programmer" class="level3 protip">
@@ -176,21 +184,21 @@ svar = read()
 <section id="sjekkliste-7" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Før vi er helt fornøyde med dette programmet vil vi gjøre noen små forbedringer. Først kaller vi to funksjoner fra <code>term</code>-biblioteket. Den ene vil rense skjermen, mens den andre setter posisjonen hvor vi skriver teksten til <code>(1, 1)</code> som betyr øverst til venstre. I tillegg forteller vi <code>read</code> at vi ikke vil at passordet vi skriver inn skal synes på skjermen. I stedet vil vi at <code>*</code>-tegn skal vises. Programmet ser da slik ut:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
+<li><p>Før vi er helt fornøyde med dette programmet vil vi gjøre noen små forbedringer. Først kaller vi to funksjoner fra <code>term</code>-biblioteket. Den ene vil rense skjermen, mens den andre setter posisjonen hvor vi skriver teksten til <code class="lang-cpp">(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)</code> som betyr øverst til venstre. I tillegg forteller vi <code class="lang-applescript"><span class="hljs-command">read</span></code> at vi ikke vil at passordet vi skriver inn skal synes på skjermen. I stedet vil vi at <code class="lang-gherkin"><span class="hljs-keyword">*</span></code>-tegn skal vises. Programmet ser da slik ut:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
-    term.clear()                              <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">while</span> <span class="hljs-constant">true</span> <span class="hljs-built_in">do</span>
+    term.<span class="hljs-built_in">clear</span>()                              <span class="hljs-comment">-- ny linje</span>
     term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)                   <span class="hljs-comment">-- ny linje</span>
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
+    print(<span class="hljs-string">'Hva er passordet?'</span>)
+    svar = <span class="hljs-built_in">read</span>(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-constant">true</span>)
         sleep(<span class="hljs-number">5</span>)
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
-    <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span></code></pre></li>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-constant">false</span>)
+    <span class="hljs-function"><span class="hljs-keyword">end</span>
+<span class="hljs-title">end</span></span></code></pre></li>
 </ul>
 <p>Gratulerer, du har allerede lært ganske mye om hvordan man programmerer datamaskiner med ComputerCraft i Minecraft! Prøv gjerne å forandre noen av programmene vi har laget. Kan du lage dem enda bedre?</p>
 </section>
@@ -210,7 +218,7 @@ svar = read()
 </figure></li>
 <li><p>Legg den nye roboten i hånden din. Lukk inventory’et og lag en robot.</p></li>
 </ul>
-<p>I <em>Creative Mode</em> finner du også robotene ved å trykke <code>E</code>, deretter <code>&gt;</code> og til slutt velge fanen med datamaskinsymbolet. Robotene heter <strong>Turtle</strong> i ComputerCraft.</p>
+<p>I <em>Creative Mode</em> finner du også robotene ved å trykke <code class="lang-mathematica"><span class="hljs-keyword">E</span></code>, deretter <code>&gt;</code> og til slutt velge fanen med datamaskinsymbolet. Robotene heter <strong>Turtle</strong> i ComputerCraft.</p>
 <section id="turtles" class="level3 protip">
 <h3>Turtles</h3>
 <p>Navnet <strong>Turtle</strong> betyr <em>skilpadde</em> på norsk. Grunnen til at disse robotene kalles skilpadder er historisk. For nesten 70 år siden bygde William Grey Walter et par roboter som kunne bevege seg rundt. Disse beveget seg ganske sakte, og var lave og skallformet. De fikk derfor etterhvert kallenavnet skilpadder.</p>
@@ -233,12 +241,12 @@ svar = read()
 <section id="steg-6-roboter-og-skilpadder" class="level1 activity">
 <h1>Steg 6: Roboter og skilpadder</h1>
 <p><em>Vi vil nå se hvordan vi kan få robotene våre til å bevege seg rundt.</em></p>
-<p>Som nevnt i boksen <em>Turtles</em> ovenfor beveger vi robotene våre på en måte som ligner slik noen spesielle skilpadderoboter ble kontrollert for nesten 70 år siden. Dette gjør vi ved å bruke programmet <code>go</code> for å bevege robotene rundt.</p>
+<p>Som nevnt i boksen <em>Turtles</em> ovenfor beveger vi robotene våre på en måte som ligner slik noen spesielle skilpadderoboter ble kontrollert for nesten 70 år siden. Dette gjør vi ved å bruke programmet <code class="lang-go"><span class="hljs-keyword">go</span></code> for å bevege robotene rundt.</p>
 <section id="sjekkliste-10" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Kjør programmet <code>go forward</code> i kommandolinjen til en robot.</p></li>
-<li><p>Roboten sier at den er <code class="lang-js">Out <span class="hljs-keyword">of</span> fuel</code>.</p>
+<li><p>Kjør programmet <code class="lang-go"><span class="hljs-keyword">go</span> forward</code> i kommandolinjen til en robot.</p></li>
+<li><p>Roboten sier at den er <code class="lang-delphi"><span class="hljs-keyword">Out</span> <span class="hljs-keyword">of</span> fuel</code>.</p>
 <p>Roboter bruker <em>fuel</em> for å bevege seg. De kan bruke stort sett samme materiale som en <strong>Furnace</strong> som fuel, for eksempel er <strong>Coal</strong> eller <strong>Blaze Rod</strong> fine å bruke.</p></li>
 <li><p>Finn litt <strong>Coal</strong> i inventory’et ditt. Høyreklikk på roboten. Legg merke til at det er et inventory med 16 plasser (4 ganger 4) på høyre side. Dette er robotens inventory. Flytt kullet over til roboten.</p>
 <figure>
@@ -246,28 +254,28 @@ svar = read()
 </figure></li>
 <li><p>Skriv <code>refuel</code> i kommandolinjen og trykk enter.</p>
 <p>Legg merke til at en kull blir borte fra robotens inventory. Roboten svarer også ved å fortelle om sin <em>fuel level</em>. Dette tallet forteller hvor langt roboten kan bevege seg før den går tom for fuel igjen.</p></li>
-<li><p>Gi roboten litt mer <strong>Coal</strong> og skriv <code>refuel all</code>.</p>
+<li><p>Gi roboten litt mer <strong>Coal</strong> og skriv <code class="lang-apache"><span class="hljs-keyword">refuel</span> <span class="hljs-literal">all</span></code>.</p>
 <p>Roboten vil nå spise opp alt kullet, og deretter rapportere at den er klar til å gå ganske så langt!</p></li>
-<li><p>Da prøver vi igjen: Kjør programmet <code>go forward</code>. Dette skal flytte roboten forover ett steg.</p>
+<li><p>Da prøver vi igjen: Kjør programmet <code class="lang-go"><span class="hljs-keyword">go</span> forward</code>. Dette skal flytte roboten forover ett steg.</p>
 <p>Flytter roboten din seg? Det kan være litt vanskelig å se hva som er fram og bak på en robot. Et triks kan være å tenke på den lange, smale sprekken som øynene til roboten. Altså at den siden med sprekken er foran.</p></li>
-<li><p>Vi kan få roboten til å flytte seg bakover ved å skrive <code>go back</code>.</p></li>
+<li><p>Vi kan få roboten til å flytte seg bakover ved å skrive <code class="lang-applescript">go <span class="hljs-keyword">back</span></code>.</p></li>
 </ul>
 <section id="finne-hjelp" class="level3 protip">
 <h3>Finne hjelp</h3>
-<p>Datamaskiner og roboter har et innebygd hjelpesystem. For å se hvordan det virker kan du skrive <code>help</code> og trykke enter. Dette gir deg en rask introduksjon til nyttige hjelpekommandoer. Legg merke til at du kan skrive <code class="lang-html">help <span class="hljs-tag">&lt;<span class="hljs-title">program</span>&gt;</span></code> for å få hjelp om et spesielt program. Da må du bytte ut <code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">program</span>&gt;</span></code> med navnet på programmet. For eksempel kan du skrive <code>help go</code> for å finne hjelp om <code>go</code>-programmet.</p>
+<p>Datamaskiner og roboter har et innebygd hjelpesystem. For å se hvordan det virker kan du skrive <code class="lang-bash"><span class="hljs-built_in">help</span></code> og trykke enter. Dette gir deg en rask introduksjon til nyttige hjelpekommandoer. Legg merke til at du kan skrive <code class="lang-fortran">help &lt;<span class="hljs-function"><span class="hljs-keyword">program</span></span>&gt;</code> for å få hjelp om et spesielt program. Da må du bytte ut <code class="lang-fortran">&lt;<span class="hljs-function"><span class="hljs-keyword">program</span></span>&gt;</code> med navnet på programmet. For eksempel kan du skrive <code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">help</span> <span class="hljs-keyword">go</span></span></code> for å finne hjelp om <code class="lang-go"><span class="hljs-keyword">go</span></code>-programmet.</p>
 <p>Det finnes selvsagt også en del hjelp på Internett. Et bra sted å starte er ComputerCraft Wiki’en: <a href="http://computercraft.info/wiki/">http://computercraft.info/wiki/</a>.</p>
 </section>
 </section>
 <section id="sjekkliste-11" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>For å få vite mer om hvordan roboten kan flytte seg kan vi skrive <code>help go</code>.</p>
-<p>Dette viser oss at vi kan bruke <code>go forward</code>, <code>go back</code>, <code>go up</code>, <code>go down</code>, <code>go left</code> og <code>go right</code> for å flytte roboten rundt. I tillegg ser vi at vi kan bruke tall for at roboten skal flytte seg flere steg.</p></li>
-<li><p>Prøv <code>go up 2</code>, <code>go forward 10</code>, <code>go down</code> og lignende kommandoer.</p>
+<li><p>For å få vite mer om hvordan roboten kan flytte seg kan vi skrive <code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">help</span> <span class="hljs-keyword">go</span></span></code>.</p>
+<p>Dette viser oss at vi kan bruke <code class="lang-go"><span class="hljs-keyword">go</span> forward</code>, <code class="lang-applescript">go <span class="hljs-keyword">back</span></code>, <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">up</span></code>, <code class="lang-go"><span class="hljs-keyword">go</span> down</code>, <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">left</span></code> og <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">right</span></code> for å flytte roboten rundt. I tillegg ser vi at vi kan bruke tall for at roboten skal flytte seg flere steg.</p></li>
+<li><p>Prøv <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">up</span> <span class="hljs-number">2</span></code>, <code class="lang-cpp">go forward <span class="hljs-number">10</span></code>, <code class="lang-go"><span class="hljs-keyword">go</span> down</code> og lignende kommandoer.</p>
 <p>Hvordan kan vi få roboten til å bevege seg sidelengs?</p></li>
-<li><p>Det finnes ingen kommando som får roboten til å bevege seg sidelengs. Kommandoene <code>go left</code> og <code>go right</code> bare snur roboten. For å få roboten til å gå sidelengs må vi derfor først snu roboten, og deretter bruke for eksempel <code>go forward</code>. Skriv <code>go left</code> og deretter <code>go forward 3</code>.</p></li>
-<li><p>Vi kan også kombinere flere kommandoer i et kall. For eksempel vil <code>go forward 3 left forward 4 up 2</code> gjøre at roboten først går fremover 3 steg, så snur den seg mot venstre, deretter går den 4 steg til før den løfter seg 2 steg oppover.</p></li>
-<li><p>Lek litt mer med <code>go</code>-programmet til du skjønner hvordan du flytter roboten rundt omkring. Dersom du synes <code>go left</code> og <code>go right</code> er litt forvirrende siden roboten ikke går noe sted, kan du bruke <code>turn left</code> og <code>turn right</code> i stedet.</p>
+<li><p>Det finnes ingen kommando som får roboten til å bevege seg sidelengs. Kommandoene <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">left</span></code> og <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">right</span></code> bare snur roboten. For å få roboten til å gå sidelengs må vi derfor først snu roboten, og deretter bruke for eksempel <code class="lang-go"><span class="hljs-keyword">go</span> forward</code>. Skriv <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">left</span></code> og deretter <code class="lang-cpp">go forward <span class="hljs-number">3</span></code>.</p></li>
+<li><p>Vi kan også kombinere flere kommandoer i et kall. For eksempel vil <code class="lang-cpp">go forward <span class="hljs-number">3</span> left forward <span class="hljs-number">4</span> up <span class="hljs-number">2</span></code> gjøre at roboten først går fremover 3 steg, så snur den seg mot venstre, deretter går den 4 steg til før den løfter seg 2 steg oppover.</p></li>
+<li><p>Lek litt mer med <code class="lang-go"><span class="hljs-keyword">go</span></code>-programmet til du skjønner hvordan du flytter roboten rundt omkring. Dersom du synes <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">left</span></code> og <code class="lang-vim"><span class="hljs-keyword">go</span> <span class="hljs-keyword">right</span></code> er litt forvirrende siden roboten ikke går noe sted, kan du bruke <code class="lang-nginx"><span class="hljs-title">turn</span> left</code> og <code class="lang-livecodeserver">turn <span class="hljs-constant">right</span></code> i stedet.</p>
 <p>Hva skjer dersom du ber roboten gå gjennom bakken, gjennom en vegg, eller om du står i veien for roboten?</p></li>
 </ul>
 </section>
@@ -280,11 +288,11 @@ svar = read()
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Finn en gruverobot i inventory’et ditt ved å gå til datamaskinfanen og plukke ut en <strong>Mining Turtle</strong>. Lag og start en gruverobot.</p></li>
-<li><p>Gi roboten litt <strong>Coal</strong> og kjør <code>refuel all</code>.</p></li>
+<li><p>Gi roboten litt <strong>Coal</strong> og kjør <code class="lang-apache"><span class="hljs-keyword">refuel</span> <span class="hljs-literal">all</span></code>.</p></li>
 <li><p>Vi skal nå bruke et program som heter <code>excavate</code>, dette betyr <em>grav ut</em>. og vil be roboten om å grave ut et hull i bakken.</p>
-<p>Skriv <code>excavate 3</code> og trykk enter.</p>
+<p>Skriv <code class="lang-cpp">excavate <span class="hljs-number">3</span></code> og trykk enter.</p>
 <p>Ta et steg tilbake og se på mens roboten graver. Roboten vil fortsette å grave til den går tom for fuel eller kommer til grunnfjellet, <strong>Bedrock</strong>.</p></li>
-<li><p>Hva tror du tallet <code>3</code> i kommandoen vi skrev over betyr? Skriv <code>help excavate</code> for å se om du har rett.</p></li>
+<li><p>Hva tror du tallet <code class="lang-cpp"><span class="hljs-number">3</span></code> i kommandoen vi skrev over betyr? Skriv <code class="lang-bash"><span class="hljs-built_in">help</span> excavate</code> for å se om du har rett.</p></li>
 <li><p>Høyreklikk på roboten slik at du ser inventory’et den har. Legg merke til at den tar vare på alt den graver ut.</p>
 <p>Når roboten er ferdig å grave kommer den tilbake dit den startet. Der gir den fra seg alt materialet den har gravd ut slik at du kan plukke det opp om du vil.</p></li>
 <li><p>Lag flere gruveroboter som kan grave større eller mindre hull.</p></li>
@@ -299,14 +307,14 @@ svar = read()
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Start en ny robot. Pass på at den har fått litt kull og blitt <code>refuel</code>et.</p></li>
-<li><p>Vi begynner med å prøve å finne litt mer informasjon om <code>turtle</code>-biblioteket. Skriv <code>help turtle</code>.</p>
+<li><p>Vi begynner med å prøve å finne litt mer informasjon om <code>turtle</code>-biblioteket. Skriv <code class="lang-bash"><span class="hljs-built_in">help</span> turtle</code>.</p>
 <p>Du får nå se en ganske lang liste med kommandoer som vi kan bruke. Vi vil vise frem noen av disse. Du kan senere teste alle sammen på egen hånd, og se om du skjønner hvordan de alle virker.</p>
 <p>For å komme ut av listen kan du for eksempel holde mellomromtasten nede en liten stund.</p></li>
-<li><p>For å gjøre enkle eksperimenter vil vi begynne med å skrive kommandoene direkte i Lua-tolkeren. Skriv <code>lua</code> og trykk enter. Husk at du skriver <code>exit()</code> for å gå ut av Lua-tolkeren og tilbake til kommandolinjen.</p></li>
-<li><p>Vi begynner med de enkle flytte-kommandoene. Skriv <code>turtle.forward()</code> og trykk enter. Flytter roboten seg forover?</p>
+<li><p>For å gjøre enkle eksperimenter vil vi begynne med å skrive kommandoene direkte i Lua-tolkeren. Skriv <code class="lang-vim"><span class="hljs-keyword">lua</span></code> og trykk enter. Husk at du skriver <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">exit</span><span class="hljs-params">()</span></span></code> for å gå ut av Lua-tolkeren og tilbake til kommandolinjen.</p></li>
+<li><p>Vi begynner med de enkle flytte-kommandoene. Skriv <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">()</span></span></code> og trykk enter. Flytter roboten seg forover?</p>
 <p>Husk at du kan trykke <em>Esc</em>-knappen for enklere å se hva roboten gjør. Høyreklikk på roboten for å komme tilbake til Lua-tolkeren.</p></li>
-<li><p>Prøv også de følgende kommandoene. Disse tilsvarer <code>go</code>-programmet, og til sammen gir de oss muligheten til å flytte roboten dit vi vil ha den:</p>
-<p><code>turtle.forward()</code>, <code>turtle.back()</code>, <code>turtle.turnLeft()</code>, <code>turtle.turnRight()</code>, <code>turtle.up()</code>, <code>turtle.down()</code>.</p></li>
+<li><p>Prøv også de følgende kommandoene. Disse tilsvarer <code class="lang-go"><span class="hljs-keyword">go</span></code>-programmet, og til sammen gir de oss muligheten til å flytte roboten dit vi vil ha den:</p>
+<p><code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">back</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">turnLeft</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">turnRight</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">up</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">down</span><span class="hljs-params">()</span></span></code>.</p></li>
 </ul>
 <section id="prøv-selv-1" class="level3 try">
 <h3>Prøv selv</h3>
@@ -325,48 +333,48 @@ svar = read()
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Start en ny robot. Gi den fuel (og kjør <code>refuel</code>). Legg også noe byggemateriale, for eksempel <strong>Grass</strong>, i den øverste venstre boksen i robotens inventory.</p></li>
-<li><p>Pass på at det ikke er noe foran roboten, og skriv <code>turtle.place()</code> inne i Lua-tolkeren.</p>
+<li><p>Pass på at det ikke er noe foran roboten, og skriv <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">place</span><span class="hljs-params">()</span></span></code> inne i Lua-tolkeren.</p>
 <p>Bygde roboten en gresskloss foran seg? Da har du gjort alt riktig. Hvis dette ikke skjedde kan du sjekke</p>
-<p><strong>1</strong>: at du har startet <code>lua</code>,</p>
+<p><strong>1</strong>: at du har startet <code class="lang-vim"><span class="hljs-keyword">lua</span></code>,</p>
 <p><strong>2</strong>: at roboten har fuel,</p>
 <p><strong>3</strong>: at roboten har byggemateriale,</p>
 <p><strong>4</strong>: at det ikke står noe foran roboten (husk at den smale sprekken er øynene til roboten), og</p>
 <p><strong>5</strong>: at boksen med byggemateriale i robotens inventory er merket, det vil si at den har en litt tykkere ramme rundt seg enn de andre boksene.</p></li>
-<li><p>Roboten kan også sjekke om den har noe foran seg: Skriv <code>turtle.detect()</code>.</p>
-<p>Du skal få svaret <code class="lang-java"><span class="hljs-keyword">true</span></code> som betyr at roboten merker at den har noe foran seg.</p></li>
-<li><p>Prøv så <code>turtle.back()</code> etterfulgt av <code>turtle.detect()</code>.</p>
-<p>Siden roboten nå ikke har noe rett foran seg får du svaret <code class="lang-java"><span class="hljs-keyword">false</span></code>.</p></li>
+<li><p>Roboten kan også sjekke om den har noe foran seg: Skriv <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">detect</span><span class="hljs-params">()</span></span></code>.</p>
+<p>Du skal få svaret <code class="lang-actionscript"><span class="hljs-literal">true</span></code> som betyr at roboten merker at den har noe foran seg.</p></li>
+<li><p>Prøv så <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">back</span><span class="hljs-params">()</span></span></code> etterfulgt av <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">detect</span><span class="hljs-params">()</span></span></code>.</p>
+<p>Siden roboten nå ikke har noe rett foran seg får du svaret <code class="lang-actionscript"><span class="hljs-literal">false</span></code>.</p></li>
 </ul>
-<p>I Steg 10 skal vi se hvordan vi kan bruke <code>place()</code> og <code>detect()</code> sammen for å lage en ganske smart byggerobot.</p>
-<p>Men først, en ting vi kunne gjøre med <code>go</code> var å flytte roboten flere steg ved å skrive et tall, for eksempel <code>go forward 3</code>. Det samme fungerer ikke med <code>turtle</code>-biblioteket. I stedet må vi bruke løkker.</p>
+<p>I Steg 10 skal vi se hvordan vi kan bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">place</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">detect</span><span class="hljs-params">()</span></span></code> sammen for å lage en ganske smart byggerobot.</p>
+<p>Men først, en ting vi kunne gjøre med <code class="lang-go"><span class="hljs-keyword">go</span></code> var å flytte roboten flere steg ved å skrive et tall, for eksempel <code class="lang-cpp">go forward <span class="hljs-number">3</span></code>. Det samme fungerer ikke med <code>turtle</code>-biblioteket. I stedet må vi bruke løkker.</p>
 </section>
 <section id="sjekkliste-15" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>En enkel måte å gjøre noe et bestemt antall ganger er å bruke <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker.</p>
+<li><p>En enkel måte å gjøre noe et bestemt antall ganger er å bruke <code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkker.</p>
 <p>Skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> turtle.back(); <span class="hljs-keyword">end</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> turtle.back(); end</code></pre>
 <p>i Lua-tolkeren. Flytter roboten din seg 5 steg bakover?</p></li>
 </ul>
 <section id="for-løkker" class="level3 protip">
-<h3><code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker</h3>
-<p>En <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkke brukes ofte når vi vet hvor mange ganger vi vil gjøre en bestemt ting. I eksempelet over så vi at roboten flyttet seg 5 ganger bakover. En nyttig ting er at vi også kan følge med på hvor i løkken vi er, fordi <code>i</code> i koden over er en variabel. For eksempel kan vi skrive</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> <span class="hljs-built_in">print</span>(i); <span class="hljs-keyword">end</span></code></pre>
+<h3><code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkker</h3>
+<p>En <code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkke brukes ofte når vi vet hvor mange ganger vi vil gjøre en bestemt ting. I eksempelet over så vi at roboten flyttet seg 5 ganger bakover. En nyttig ting er at vi også kan følge med på hvor i løkken vi er, fordi <code class="lang-matlab"><span class="hljs-built_in">i</span></code> i koden over er en variabel. For eksempel kan vi skrive</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-function"><span class="hljs-keyword">do</span> <span class="hljs-title">print</span><span class="hljs-params">(i)</span></span>; end</code></pre>
 <p>Dette vil skrive tallene 1, 2, 3, 4, 5 til skjermen på hver sin linje.</p>
-<p>Vi kan også bruke andre variabelnavn enn <code>i</code>, og vi kan starte på andre tall enn <code>1</code>:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> tall = <span class="hljs-number">10</span>, <span class="hljs-number">20</span> <span class="hljs-keyword">do</span> <span class="hljs-built_in">print</span>(tall); <span class="hljs-keyword">end</span></code></pre>
+<p>Vi kan også bruke andre variabelnavn enn <code class="lang-matlab"><span class="hljs-built_in">i</span></code>, og vi kan starte på andre tall enn <code class="lang-cpp"><span class="hljs-number">1</span></code>:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> tall = <span class="hljs-number">10</span>, <span class="hljs-number">20</span> <span class="hljs-function"><span class="hljs-keyword">do</span> <span class="hljs-title">print</span><span class="hljs-params">(tall)</span></span>; end</code></pre>
 </section>
 </section>
 <section id="sjekkliste-16" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Hvis vi vil kombinere flere kommandoer inne i en løkke i Lua-tolkeren bruker vi semikolon, <code>;</code>.</p>
+<li><p>Hvis vi vil kombinere flere kommandoer inne i en løkke i Lua-tolkeren bruker vi semikolon, <code class="lang-dns"><span class="hljs-comment">;</span></code>.</p>
 <p>Prøv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> turtle.back(); turtle.place(); <span class="hljs-keyword">end</span></code></pre></li>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span> turtle.back(); turtle.place(); end</code></pre></li>
 <li><p>Pass på at roboten din har mye byggemateriale, for eksempel 64 <strong>Grass</strong>, i den merkede boksen i inventory’et sitt.</p></li>
 <li><p>La oss bygge et høyt tårn!</p>
 <p>Skriv</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">60</span> <span class="hljs-keyword">do</span> turtle.up(); turtle.place(); <span class="hljs-keyword">end</span></code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">60</span> <span class="hljs-keyword">do</span> turtle.up(); turtle.place(); end</code></pre>
 <figure>
 <img src="../robotinvasjon/hoyt_tarn.png">
 </figure></li>
@@ -387,17 +395,17 @@ svar = read()
 <img src="../robotinvasjon/lite_tarn.png">
 </figure></li>
 <li><p>Lag en ny robot inntil det lille tårnet du nettopp bygde. Gi den fuel og byggematerialer. Pass på at den peker mot tårnet.</p></li>
-<li><p>Begynn et nytt program ved å skrive <code>edit byggTrapp</code>. Skriv inn følgende:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua">turtle.detect()</code></pre>
+<li><p>Begynn et nytt program ved å skrive <code class="lang-axapta"><span class="hljs-keyword">edit</span> byggTrapp</code>. Skriv inn følgende:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">detect</span><span class="hljs-params">()</span></span></code></pre>
 <p>Lagre og avslutt ved å bruke <em>Ctrl</em>-tasten.</p></li>
 <li><p>Kjør programmet ved å skrive <code>byggTrapp</code>. Dette programmet bygger ingen trapp enda, det virker faktisk som om det ikke gjør noe som helst. Det eneste som skjer er at roboten merker at den har en kloss foran seg. Men vi har ikke fortalt den hva den skal gjøre etterpå.</p>
-<p>Vi kan bruke <code>turtle.detect()</code> til å finne toppen av tårnet.</p></li>
-<li><p>Endre på programmet ditt ved å skrive <code>edit byggTrapp</code> igjen. Vi lager nå en løkke hvor roboten klatrer oppover så lenge den merker at tårnet er høyere.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>                      <span class="hljs-comment">-- endret linje</span>
+<p>Vi kan bruke <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">detect</span><span class="hljs-params">()</span></span></code> til å finne toppen av tårnet.</p></li>
+<li><p>Endre på programmet ditt ved å skrive <code class="lang-axapta"><span class="hljs-keyword">edit</span> byggTrapp</code> igjen. Vi lager nå en løkke hvor roboten klatrer oppover så lenge den merker at tårnet er høyere.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-built_in">do</span>                      <span class="hljs-comment">-- endret linje</span>
     turtle.up()                               <span class="hljs-comment">-- ny linje</span>
-<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
+<span class="hljs-function"><span class="hljs-keyword">end</span>                                           -- <span class="hljs-title">ny</span> <span class="hljs-title">linje</span></span></code></pre>
 <p>Lagre og kjør programmet ditt. Klatrer roboten til toppen av det lille tårnet?</p></li>
-<li><p>Vi har lært av feilen vi gjorde tidligere, så nå vil vi passe på at roboten kommer ned igjen. La oss legge til en ny løkke i programmet, slik at roboten klatrer ned. Denne gangen bruker vi kommandoen <code>detectDown()</code>. Denne gjør det samme som <code>detect()</code>, bortsett fra at den merker om roboten har en kloss under seg i stedet for foran seg.</p>
+<li><p>Vi har lært av feilen vi gjorde tidligere, så nå vil vi passe på at roboten kommer ned igjen. La oss legge til en ny løkke i programmet, slik at roboten klatrer ned. Denne gangen bruker vi kommandoen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">detectDown</span><span class="hljs-params">()</span></span></code>. Denne gjør det samme som <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">detect</span><span class="hljs-params">()</span></span></code>, bortsett fra at den merker om roboten har en kloss under seg i stedet for foran seg.</p>
 <p>Utvid programmet ditt slik:</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
     turtle.up()
@@ -408,14 +416,14 @@ svar = read()
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
 <p>Vi sier at så lenge roboten <em>ikke</em> har en kloss under seg kan den ta et steg ned. Kommer roboten ned igjen når du kjører programmet?</p></li>
 <li><p>Nå er vi klar til å la roboten bygge selve trappen. Det gjør vi ved å ta et steg tilbake i den andre løkken, og plassere ut en kloss.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
-    turtle.up()
+<pre class="sourceCode lua"><code class="sourceCode lua lang-sml"><span class="hljs-keyword">while</span> turtle.detect<span class="hljs-literal">()</span> <span class="hljs-keyword">do</span>
+    turtle.up<span class="hljs-literal">()</span>
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> turtle.detectDown() <span class="hljs-keyword">do</span>
-    turtle.down()
-    turtle.back()                             <span class="hljs-comment">-- ny linje</span>
-    turtle.place()                            <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">while</span> not turtle.detectDown<span class="hljs-literal">()</span> <span class="hljs-keyword">do</span>
+    turtle.down<span class="hljs-literal">()</span>
+    turtle.back<span class="hljs-literal">()</span>                             -- ny linje
+    turtle.place<span class="hljs-literal">()</span>                            -- ny linje
 <span class="hljs-keyword">end</span></code></pre>
 <p>Virker det? Lager roboten en trapp?</p></li>
 <li><p>Nå er vi klare for den store testen. Klarer vi å sende trappebyggeroboten vår opp det høye tårnet?</p>
@@ -429,11 +437,11 @@ svar = read()
 <h3>Prøv selv</h3>
 <p>Vi har nå laget et program som kan bygge trapper oppover. Kan du lage et program som kan grave trapper ned under bakken?</p>
 <p>Lag et program som heter <code>gravTrapp</code>. For å gjøre dette trenger du en <strong>Mining Turtle</strong>.</p>
-<p>Se på kommandoene <code>turtle.dig()</code> og <code>turtle.digDown()</code>. Disse vil grave henholdsvis foran og under roboten. <code>turtle.digUp()</code> kan også være nyttig om du vil lage nok plass til at man kan gå ned i trappen.</p>
-<p>For å vite hvor langt ned roboten skal grave, er det enkleste å bruke en <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkke. For eksempel kan du si at roboten skal grave 10 trinn nedover.</p>
-<p>Hvis du vil ha en utfordring kan du la roboten grave nedover til den finner for eksempel grunnfjellet, <strong>Bedrock</strong>. For å gjøre dette kan du legge en <strong>Bedrock</strong> øverst til venstre i inventory’et til roboten. Deretter kan du bruke <code class="lang-lua">turtle.<span class="hljs-built_in">select</span>(<span class="hljs-number">1</span>)</code> og <code>turtle.compareDown()</code> for å finne ut om roboten har kommet ned til grunnfjellet.</p>
+<p>Se på kommandoene <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">dig</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">digDown</span><span class="hljs-params">()</span></span></code>. Disse vil grave henholdsvis foran og under roboten. <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">digUp</span><span class="hljs-params">()</span></span></code> kan også være nyttig om du vil lage nok plass til at man kan gå ned i trappen.</p>
+<p>For å vite hvor langt ned roboten skal grave, er det enkleste å bruke en <code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkke. For eksempel kan du si at roboten skal grave 10 trinn nedover.</p>
+<p>Hvis du vil ha en utfordring kan du la roboten grave nedover til den finner for eksempel grunnfjellet, <strong>Bedrock</strong>. For å gjøre dette kan du legge en <strong>Bedrock</strong> øverst til venstre i inventory’et til roboten. Deretter kan du bruke <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">select</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span></code> og <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">compareDown</span><span class="hljs-params">()</span></span></code> for å finne ut om roboten har kommet ned til grunnfjellet.</p>
 </section>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
-</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

@@ -1,0 +1,117 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Ordbøker | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Ordbøker</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/ordboeker/ordboeker.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Dette er en kort oppgave som viser hvordan man bruker <em>ordbøker</em>.</p>
+</section>
+<section id="nøkler-og-verdier" class="level1 activity">
+<h1>Nøkler og verdier</h1>
+<section id="section" class="level2 protip">
+<h2></h2>
+<p>En ordbok (<em>dictionary</em> på engelsk) brukes for å lagre <em>nøkkel/verdi</em>-par. Tenk deg at du skal ha en norsk-engelsk ordbok. Da vil <em>nøkkelen</em> være ordet du slår opp på, for eksempel det norske ordet. <em>Verdien</em> vil være det engelske ordet. F.eks. nøkkelen <code class="lang-1c"><span class="hljs-string">"ost"</span></code> og verdien <code class="lang-1c"><span class="hljs-string">"cheese"</span></code>. I Python skrives ordbøker med <code class="lang-clojure"><span class="hljs-collection">{}</span></code> slik som dette:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d = {<span class="hljs-string">'ost'</span><span class="hljs-symbol">:<span class="hljs-string">'cheese'</span></span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:<span class="hljs-string">'bread'</span></span>}
+<span class="hljs-prompt">&gt;&gt;</span>&gt; d
+{<span class="hljs-string">'ost'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'bread'</span>}</code></pre>
+<p>I eksempelet over lagde vi en norsk-engelsk ordbok til variabelen <code class="lang-stata"><span class="hljs-literal">d</span></code>. Nøkkel og verdi har et kolon <code>:</code> mellom seg, og <code class="lang-ocaml"><span class="hljs-symbol">'n</span>økkel':<span class="hljs-symbol">'verdi'</span></code>-parene skilles med <code>,</code>. For å slå opp på en nøkkel, bruker vi <code class="lang-json">[nøkkel]</code>, slik som dette:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d[<span class="hljs-string">'ost'</span>]
+<span class="hljs-string">'cheese'</span></code></pre>
+<p>Vi kan bruke den samme skrivemåten for å lage nye nøkkel/verdi-par eller endre verdien knyttet til en nøkkel:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d[<span class="hljs-string">'farge'</span>] = <span class="hljs-string">'colour'</span>    <span class="hljs-comment"># legger til en ny verdi</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; d
+{<span class="hljs-string">'ost'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'bread'</span>, <span class="hljs-string">'farge'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'colour'</span>}
+<span class="hljs-prompt">&gt;&gt;</span>&gt; d[<span class="hljs-string">'farge'</span>] = <span class="hljs-string">'color'</span>     <span class="hljs-comment"># endrer verdien</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; d
+{<span class="hljs-string">'ost'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'bread'</span>, <span class="hljs-string">'farge'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'color'</span>}</code></pre>
+<p>En tom ordbok opprettes slik:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d = {}
+<span class="hljs-prompt">&gt;&gt;</span>&gt; d
+{}</code></pre>
+<p><strong>Merk:</strong> Bare tekst og tall kan brukes som nøkler, men verdiene kan være hva som helst: strenger, tall, lister, ordbøker, funksjoner, osv.</p>
+</section>
+</section>
+<section id="section-1" class="level1 check">
+<h1></h1>
+<p>Vi skal nå skrive et program som lar en bruker lage en ordbok. Programmet skal ta i mot 3 nøkkel/verdi-par, deretter be om en nøkkel å slå opp på og til slutt vise hvilken verdi som tilhører nøkkelen. Det skal fungere slik:</p>
+<pre>Skriv inn en nøkkel: <font color="green">ost</font>
+Skriv inn en verdi: <font color="green">cheese</font>
+Skriv inn en nøkkel: <font color="green">brød</font>
+Skriv inn en verdi: <font color="green">bread</font>
+Skriv inn en nøkkel: <font color="green">farge</font>
+Skriv inn en verdi: <font color="green">color</font>
+Hvilken nøkkel vil du slå opp på? <font color="green">brød</font>
+Tilhørende verdi er bread
+</pre>
+
+<p>Dette må du gjøre:</p>
+<ul>
+<li>Lag ei tom ordbok.</li>
+<li><p>Bruk ei løkke for å hente inn 3 nøkkel/verdi-par.</p>
+<ul>
+<li>Lagre nøkkel/verdi-parene i ordboka.</li>
+</ul></li>
+<li>Spør om en nøkkel.</li>
+<li><p>Skriv ut verdien som hører til nøkkelen.</p></li>
+</ul>
+</section>
+<section id="gå-igjennom-ordbøker" class="level1 activity">
+<h1>Gå igjennom ordbøker</h1>
+<section id="section-2" class="level2 protip">
+<h2></h2>
+<p>Du kan bruke en løkke til å hente ut nøklene til en ordbok:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stata">&gt;&gt;&gt; <span class="hljs-keyword">d</span> = {'<span class="hljs-keyword">br</span>ø<span class="hljs-keyword">d</span>': 3, 'ost': 1}
+&gt;&gt;&gt; <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> <span class="hljs-keyword">d</span>:
+...     <span class="hljs-keyword">print</span>(<span class="hljs-string">"Nøkkel:"</span>, key)
+...     <span class="hljs-keyword">print</span>(<span class="hljs-string">"Verdi:"</span>, <span class="hljs-keyword">d</span>[key])
+...
+<span class="hljs-keyword">N</span>økkel: ost
+Verdi: 1
+<span class="hljs-keyword">N</span>økkel: <span class="hljs-keyword">br</span>ø<span class="hljs-literal">d</span>
+Verdi: 3</code></pre>
+<p>Dersom du bare trenger verdiene kan du bruke <code class="lang-stylus">d.<span class="hljs-function"><span class="hljs-title">values</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">&gt;&gt;&gt; <span class="hljs-keyword">for</span> val <span class="hljs-keyword">in</span> d.<span class="hljs-function"><span class="hljs-title">values</span><span class="hljs-params">()</span></span>:
+...     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Verdi:"</span>, val)</span></span>
+...
+Verdi: <span class="hljs-number">1</span>
+Verdi: <span class="hljs-number">3</span></code></pre>
+<p>Dersom du ønsker få tilgang til både nøkkel og verdi kan du bruke <code class="lang-stylus">d.<span class="hljs-function"><span class="hljs-title">items</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">&gt;&gt;&gt; <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> d.<span class="hljs-function"><span class="hljs-title">items</span><span class="hljs-params">()</span></span>:
+...     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(key, value)</span></span>
+...
+ost <span class="hljs-number">1</span>
+brød <span class="hljs-number">3</span></code></pre>
+</section>
+</section>
+<section id="section-3" class="level1 check">
+<h1></h1>
+<p>Vi skal nå lage et handleliste-program som lar brukeren velge hva og hvor mye som skal være på handlelista. Programmet skal se slik ut:</p>
+<pre>Skriv en gjenstand: <font color="green">brød</font>
+Hvor mange? <font color="green">2</font>
+Skriv en gjenstand: <font color="green">tomat</font>
+Hvor mange? <font color="green">5</font>
+Skriv en gjenstand:
+Her er handlelista:
+2 brød
+5 tomat
+</pre>
+
+<p>Dette må du gjøre:</p>
+<ul>
+<li>Ta imot input for gjenstand.</li>
+<li>Så lenge gjenstanden ikke er en tom streng <code class="lang-1c"><span class="hljs-string">""</span></code>:
+<ul>
+<li>Be om antall.</li>
+<li>Lagre til en ordliste.</li>
+<li>Bruk gjenstanden som nøkkel og antallet som verdi.</li>
+</ul></li>
+<li><p>Skriv ut handlelista.</p>
+<p><strong>Hint:</strong> Gå gjennom nøklene.</p></li>
+</ul>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Ole Kristian Pedersen, Kodeklubben Trondheim</p>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

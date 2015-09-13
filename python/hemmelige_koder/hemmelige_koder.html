@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hemmelige koder | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hemmelige koder<a href="/python/hemmelige_koder/hemmelige_koder.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hemmelige koder | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hemmelige koder</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/hemmelige_koder/hemmelige_koder.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>Legg bort skilpaddene dine, i dag skal vi lære hvordan vi kan sende hemmelige beskjeder!</p>
 </section>
@@ -6,42 +14,42 @@
 <h1>Kodeklubb-koden</h1>
 <p>Et chiffer er et system for å gjøre om vanlig tekst til kode som ikke andre skal kunne lese. Vi skal bruke et av de eldste og mest berømte chifferene, Cæsar-chifferet eller Cæsars kode - oppkalt etter Gaius Julius Cæsar som sannsynligvis brukte det til å sende hemmelige beskjeder. Det er neppe den beste måten å hindre andre i å lese beskjedene dine, men det kommer vi tilbake til. Det finnes ferdige moduler til Python du kan bruke hvis du vil lage noe som skal være vanskelig å knekke, men nå skal vi forsøke å lage Cæsar-chifferet selv.</p>
 <p>Start med å tegne alle bokstavene i en sirkel.</p>
-<pre><code>                          Å    A
+<pre><code class="lang-stata">                          Å    A
                      Ø              B
                  Æ                      C
-             Z                               D
+             Z                               <span class="hljs-literal">D</span>
 
-         Y                                       E
+         Y                                       <span class="hljs-literal">E</span>
 
-      X                                             F
+      X                                             <span class="hljs-literal">F</span>
 
-     W                                               G
+     W                                               <span class="hljs-keyword">G</span>
 
-     V                                               H
+     V                                               <span class="hljs-literal">H</span>
 
-      U                                             I
+      <span class="hljs-keyword">U</span>                                             <span class="hljs-literal">I</span>
 
-         T                                       J
+         T                                       <span class="hljs-literal">J</span>
 
              S                               K
-                R                        L
-                    Q                M
-                        P    O   N
+                R                        <span class="hljs-keyword">L</span>
+                    Q                <span class="hljs-literal">M</span>
+                        P    O   <span class="hljs-keyword">N</span>
 </code></pre>
 <p>For å lage en hemmelig bokstav fra en vanlig bokstav, trenger vi et tall vi kan bruke som hemmelig nøkkel. Jeg liker tallet 3, det er et magisk tall, så vi bruker det.</p>
-<pre><code>    A + 3 = D       T + 3 = W       Å + 3 = C</code></pre>
+<pre><code class="lang-cpp">    A + <span class="hljs-number">3</span> = D       T + <span class="hljs-number">3</span> = W       Å + <span class="hljs-number">3</span> = C</code></pre>
 <p>Vi begynner med A og teller fremover 3 bokstaver: B, C, D. Så bokstaven A blir til bokstaven D. For å dekode gjør vi det samme, men baklengs. Vi begynner med D og teller bakover for å få A.</p>
 </section>
 <section id="steg-1-alfabetet" class="level1 activity">
 <h1>Steg 1: Alfabetet</h1>
-<p>Her kan du få trøbbel med norske bokstaver om du ikke har Python 3. Du har Python 2 dersom det står 2.6 eller 2.7 i IDLE. I så fall må du legge en <code>u</code> foran tekst som er inni <code class="lang-java"><span class="hljs-string">""</span></code>. For eksempel blir alfabetet under <code class="lang-python"><span class="hljs-string">u"abcdefghijklmnopqrstuvwxyzæøå"</span></code>. <code>u</code>-en betyr at teksten er av typen <em>Unicode</em> som støtter alle norske bokstaver.</p>
+<p>Her kan du få trøbbel med norske bokstaver om du ikke har Python 3. Du har Python 2 dersom det står 2.6 eller 2.7 i IDLE. I så fall må du legge en <code class="lang-stata"><span class="hljs-keyword">u</span></code> foran tekst som er inni <code class="lang-1c"><span class="hljs-string">""</span></code>. For eksempel blir alfabetet under <code class="lang-python"><span class="hljs-string">u"abcdefghijklmnopqrstuvwxyzæøå"</span></code>. <code class="lang-stata"><span class="hljs-keyword">u</span></code>-en betyr at teksten er av typen <em>Unicode</em> som støtter alle norske bokstaver.</p>
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Først må vi lære python alfabetet. Åpne IDLE og lag en ny fil med koden under:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-lisp">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
-print(len(alphabet))</code></pre></li>
+print<span class="hljs-list">(<span class="hljs-keyword">len</span><span class="hljs-list">(<span class="hljs-keyword">alphabet</span>)</span>)</span></code></pre></li>
 <li><p>Når du kjører dette programmet skal det skrive ut 29. Pass på at du har med alle bokstavene, ellers kommer ikke den hemmelige koden din til å virke.</p>
 <p>Hvis du er fornøyd med alfabetet ditt kan vi begynne å kode en bokstav.</p></li>
 </ul>
@@ -54,12 +62,12 @@ print(len(alphabet))</code></pre></li>
 <ul>
 <li><p>Akkurat som vi gjorde med hjulet ovenfor kan vi finne posisjonen til en bokstav ved å telle forover, og så bruke bokstaven vi ender opp med.</p>
 <p>Skriv inn koden under og kjør den:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 letter = <span class="hljs-string">"a"</span>
 secret = <span class="hljs-number">3</span>
 
-pos = alphabet.find(letter)
+pos = alphabet.<span class="hljs-function"><span class="hljs-title">find</span><span class="hljs-params">(letter)</span></span>
 
 newpos = (pos + secret)
 
@@ -68,38 +76,38 @@ newpos = (pos + secret)
 
 secretletter = alphabet[newpos]
 
-print(secretletter)</code></pre>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(secretletter)</span></span></code></pre>
 <p>Vi slår opp hvor “a” er i alfabetet og legger til det hemmelige tallet vårt for å telle fremover. Vi sjekker om vi har gått rundt, hvis vi har det må vi gå en hel runde tilbake igjen ved å trekke fra 29 (dette er litt som med gradene, å trekke fra 360 gjør at vi er akkurat der vi var). Så slår vi opp i alfabetet igjen for å se hvilken hemmelige bokstav vi fikk.</p></li>
 <li><p>Kjør koden og se hva som skjer.</p></li>
 <li><p>La oss ta en titt på koden igjen, men vi tar det sakte.</p>
 <p>Du trenger ikke å skrive dette! Alt som står bak firkant-tegnet bryr python seg vanligvis ikke om, det er bare kommentarer til mennesker som skal lese koden.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-comment"># alphabet er navnet på teksten fra a til å</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-vala"><span class="hljs-preprocessor"># alphabet er navnet på teksten fra a til å</span>
 alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyz"</span>
 
-<span class="hljs-comment"># Den hemmelige bokstaven (letter) og det hemmelige tallet</span>
-<span class="hljs-comment"># (secret) vi bruker for å kode det</span>
+<span class="hljs-preprocessor"># Den hemmelige bokstaven (letter) og det hemmelige tallet</span>
+<span class="hljs-preprocessor"># (secret) vi bruker for å kode det</span>
 letter = <span class="hljs-string">"a"</span>
 secret = <span class="hljs-number">3</span>
 
-<span class="hljs-comment"># Finn posisjonen til bokstaven. Python vil gi oss et</span>
-<span class="hljs-comment"># tall fra 0 til 28 (python teller fra 0)</span>
+<span class="hljs-preprocessor"># Finn posisjonen til bokstaven. Python vil gi oss et</span>
+<span class="hljs-preprocessor"># tall fra 0 til 28 (python teller fra 0)</span>
 pos = alphabet.find(letter)
 
-<span class="hljs-comment"># Gå like langt fremover som det hemmelige tallet sier</span>
+<span class="hljs-preprocessor"># Gå like langt fremover som det hemmelige tallet sier</span>
 newpos = (pos + secret)
 
-<span class="hljs-comment"># Hvis vi har telt for langt, må vi gå en runde tilbake</span>
-<span class="hljs-comment"># for å få et tall mellom 0 og 28</span>
-<span class="hljs-keyword">if</span> newpos &gt;= <span class="hljs-number">29</span>:
+<span class="hljs-preprocessor"># Hvis vi har telt for langt, må vi gå en runde tilbake</span>
+<span class="hljs-preprocessor"># for å få et tall mellom 0 og 28</span>
+if newpos &gt;= <span class="hljs-number">29</span>:
     newpos = newpos - <span class="hljs-number">29</span>
 
-<span class="hljs-comment"># Slå opp denne posisjonen for å se hvilken bokstav</span>
-<span class="hljs-comment"># i alfabetet som står der</span>
+<span class="hljs-preprocessor"># Slå opp denne posisjonen for å se hvilken bokstav</span>
+<span class="hljs-preprocessor"># i alfabetet som står der</span>
 secretletter = alphabet[newpos]
 
-<span class="hljs-comment"># Skriv denne bokstaven ut på skjermen</span>
+<span class="hljs-preprocessor"># Skriv denne bokstaven ut på skjermen</span>
 print(secretletter)</code></pre>
-<p>Det er mye python-ting som skjer her, men ikke bli skremt om du ikke forstår alt til å begynne med. Mye av dette er akkurat som i scratch. <code class="lang-java"><span class="hljs-keyword">if</span> newpos &gt;= <span class="hljs-number">29</span></code> er bare en <code class="lang-java"><span class="hljs-keyword">if</span></code>-setning, en ting som bare kjører koden under hvis det som står etter <code class="lang-java"><span class="hljs-keyword">if</span></code> er sant. En <code class="lang-java"><span class="hljs-keyword">if</span></code>-setning bruker en innrykksblokk, akkurat som <code class="lang-java"><span class="hljs-keyword">for</span></code> og <code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span></span></code> som vi har sett tidligere.</p></li>
+<p>Det er mye python-ting som skjer her, men ikke bli skremt om du ikke forstår alt til å begynne med. Mye av dette er akkurat som i scratch. <code class="lang-cpp"><span class="hljs-keyword">if</span> newpos &gt;= <span class="hljs-number">29</span></code> er bare en <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning, en ting som bare kjører koden under hvis det som står etter <code class="lang-actionscript"><span class="hljs-keyword">if</span></code> er sant. En <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning bruker en innrykksblokk, akkurat som <code class="lang-actionscript"><span class="hljs-keyword">for</span></code> og <code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span></span></code> som vi har sett tidligere.</p></li>
 </ul>
 <p>Nå som vi kan kode en bokstav, hva med å dekode en?</p>
 </section>
@@ -111,12 +119,12 @@ print(secretletter)</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Forsøk å skriv inn denne koden og kjør den:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 secret = <span class="hljs-number">17</span>
 secretletter = <span class="hljs-string">"r"</span>
 
-pos = alphabet.find(secretletter)
+pos = alphabet.<span class="hljs-function"><span class="hljs-title">find</span><span class="hljs-params">(secretletter)</span></span>
 
 newpos = pos - secret
 
@@ -125,14 +133,14 @@ newpos = pos - secret
 
 letter = alphabet[newpos]
 
-print(letter)</code></pre></li>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(letter)</span></span></code></pre></li>
 </ul>
 </section>
 </section>
 <section id="steg-4-bygge-funksjoner" class="level1 activity">
 <h1>Steg 4: Bygge funksjoner</h1>
-<p>La oss ta koden som lager og leser Cæsar-koder og gjøre den om til to <em>funksjoner</em>. Gi den ene funksjonen navnet <code>encode</code> og den andre funksjonen navnet <code>decode</code>. <strong>Tips:</strong> Dersom du aldri har hørt om funksjoner, kan du lese mer om de i <a href="../skilpaddeskolen/skilpaddeskolen.html">Skilpaddeskolen</a>.</p>
-<p>For å få en funksjon til å sende tilbake en verdi bruker vi <code class="lang-java"><span class="hljs-keyword">return</span></code>. Dette gjør at vi kan lagre funksjonens resultat til en variabel og deretter bruke variabelen.</p>
+<p>La oss ta koden som lager og leser Cæsar-koder og gjøre den om til to <em>funksjoner</em>. Gi den ene funksjonen navnet <code class="lang-stata"><span class="hljs-keyword">encode</span></code> og den andre funksjonen navnet <code class="lang-stata"><span class="hljs-keyword">decode</span></code>. <strong>Tips:</strong> Dersom du aldri har hørt om funksjoner, kan du lese mer om de i <a href="../skilpaddeskolen/skilpaddeskolen.html">Skilpaddeskolen</a>.</p>
+<p>For å få en funksjon til å sende tilbake en verdi bruker vi <code class="lang-actionscript"><span class="hljs-keyword">return</span></code>. Dette gjør at vi kan lagre funksjonens resultat til en variabel og deretter bruke variabelen.</p>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
@@ -174,19 +182,19 @@ print(decode(<span class="hljs-string">"r"</span>, <span class="hljs-number">17<
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Under de nye funksjonene fra forrige oppgave kan du skrive inn koden under (med andre ord: behold det du gjorde i oppgave 4, og legg til koden under).</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">secret = <span class="hljs-number">17</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">secret = <span class="hljs-number">17</span>
 message = <span class="hljs-string">"hello world"</span>
 
 output = <span class="hljs-string">""</span>
 
 <span class="hljs-keyword">for</span> character <span class="hljs-keyword">in</span> message:
     <span class="hljs-keyword">if</span> character <span class="hljs-keyword">in</span> alphabet:
-        output = output +  encode(character, secret)
+        output = output +  <span class="hljs-function"><span class="hljs-title">encode</span><span class="hljs-params">(character, secret)</span></span>
     <span class="hljs-keyword">else</span>:
         output = output + character
 
 
-print(output)
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(output)</span></span>
 
 secret = <span class="hljs-number">17</span>
 message = <span class="hljs-string">"yvååc kcfåu"</span>
@@ -194,11 +202,11 @@ output = <span class="hljs-string">""</span>
 
 <span class="hljs-keyword">for</span> character <span class="hljs-keyword">in</span> message:
     <span class="hljs-keyword">if</span> character <span class="hljs-keyword">in</span> alphabet:
-        output = output + decode(character, secret)
+        output = output + <span class="hljs-function"><span class="hljs-title">decode</span><span class="hljs-params">(character, secret)</span></span>
     <span class="hljs-keyword">else</span>:
         output = output + character
 
-print(output)</code></pre></li>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(output)</span></span></code></pre></li>
 <li><p>Kjør programmet og se hva som skjer.</p>
 <p>Den første delen av koden burde skrive ut “yvååc kcfåu”, som er den hemmelige versjonen av “hello world”. Den andre delen dekoder det igjen og skriver ut “hello world”</p></li>
 </ul>
@@ -208,12 +216,12 @@ print(output)</code></pre></li>
 <h1>Steg 6: Dekoding av noen hemmelige beskjeder</h1>
 <p>Her er noen hemmelige beskjeder, forsøk å dekode dem!</p>
 <ol type="1">
-<li><p><code>daczj ym cgyzcdmwwzf?</code>, hemmeligheten er 21.</p></li>
-<li><p><code>æxkxånwn næ bnwwnwn mrwn</code>, hemmeligheten er 9.</p></li>
+<li><p><code class="lang-nginx"><span class="hljs-title">daczj</span> ym cgyzcdmwwzf?</code>, hemmeligheten er 21.</p></li>
+<li><p><code class="lang-armasm">æxkxånwn næ <span class="hljs-keyword">bnwwnwn </span>mrwn</code>, hemmeligheten er 9.</p></li>
 </ol>
 <p>Prøv å sende noen beskjeder til vennene dine! Hva med å lage et Python-program som forsøker seg på alle mulige hemmelige tall og forsøker å knekke koder selv om du ikke kan det hemmelige tallet?</p>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
 </div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
 </div><div class="translator"><p><strong>Oversetter:</strong></p><p>Bjørn Einar Bjartnes</p>
-</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

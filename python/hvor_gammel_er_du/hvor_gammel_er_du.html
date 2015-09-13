@@ -1,42 +1,50 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hvor gammel er du? | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hvor gammel er du?<a href="/python/hvor_gammel_er_du/hvor_gammel_er_du.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="hvor-gammel-er-du" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hvor gammel er du? | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hvor gammel er du?</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/hvor_gammel_er_du/hvor_gammel_er_du.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="hvor-gammel-er-du" class="level1 intro">
 <h1>Hvor gammel er du?</h1>
 <p>I dette oppgavesettet skal du i hvert steg lære om noen av de grunnleggende byggeklossene i python. Oppgaven gir ingen kode, men forteller hva du skal lage og hvordan du skal gjøre det. Det er derfor viktig at du leser oppgaven for å vite hva du skal gjøre. Når du har gjort alle stegene vil du sitte igjen med et program som spør hvilket år du er født og regner ut alderen din. For hver oppgave du er ferdig med bør du spørre veilederne om de kan se om du har gjort riktig. Start ved å åpne en ny blank Python-fil.</p>
 </section>
 <section id="del-1-skrive-ut-til-skjerm" class="level1 activity">
 <h1>Del 1: Skrive ut til skjerm</h1>
 <p><strong>Hva:</strong> Vi kan be datamaskinen om å skrive hva som helst av tekst eller tall.</p>
-<p><strong>Hvordan:</strong> Funksjonen <code class="lang-python">print()</code> skriver ut det som er mellom <code>()</code> . Tekst må starte og slutte med <code>'</code> slik som <code class="lang-java"><span class="hljs-string">'denne teksten'</span></code>.</p>
+<p><strong>Hvordan:</strong> Funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">()</span></span></code> skriver ut det som er mellom <code class="lang-clojure"><span class="hljs-list">()</span></code> . Tekst må starte og slutte med <code class="lang-vbnet"><span class="hljs-comment">'</span></code> slik som <code class="lang-ocaml"><span class="hljs-symbol">'denne</span> teksten'</code>.</p>
 <p><strong>Eksempler:</strong> Prøv dem ut og se hva som skjer.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(<span class="hljs-string">'Hei'</span>)
-print(<span class="hljs-number">2</span>)
-print(<span class="hljs-number">2</span>+<span class="hljs-number">2</span>)
-print(<span class="hljs-string">'2+2'</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hei'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-number">2</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-number">2</span>+<span class="hljs-number">2</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'2+2'</span>)</span></span></code></pre>
 <p>Kan du forklare det som skjer?</p>
 <p>Husk å ta bort eksemplene når du forsetter med oppgaven</p>
 <section id="gjøre-selv" class="level2 check">
 <h2>Gjøre selv</h2>
 <p><strong>Skriv ut teksten under. Den skal dekke 3 linjer.</strong></p>
-<pre><code>Hei, jeg er en datamaskin.
-Jeg er derfor kjempeflink i matematikk.
-Skal jeg vise deg?</code></pre>
+<pre><code class="lang-erlang"><span class="hljs-variable">Hei</span>, jeg er en datamaskin.
+<span class="hljs-variable">Jeg</span> er derfor kjempeflink i matematikk.
+<span class="hljs-variable">Skal</span> jeg vise deg?</code></pre>
 </section>
 </section>
 <section id="del-2-variabler" class="level1 activity">
 <h1>Del 2: Variabler</h1>
 <p><strong>Hva:</strong> Variabler gjør at vi kan lagre tekst eller tall i datamaskinen. Tenk på det som en eske som vi putter tall eller bokstaver inni. Utenpå skriver vi hva som er inni esken. Dette er variabelnavnet.</p>
-<p><strong>Hvordan:</strong> For å lage en variabel skriver du navnet på variabelen som du velger selv, deretter <code>=</code> og det du ønsker å lagre i variabelen.</p>
+<p><strong>Hvordan:</strong> For å lage en variabel skriver du navnet på variabelen som du velger selv, deretter <code class="lang-haml">=<span class="ruby"></span></code> og det du ønsker å lagre i variabelen.</p>
 <p><strong>Eksempler:</strong> Prøv dem ut og se hva som skjer</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">variabel = <span class="hljs-number">4</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">variabel = <span class="hljs-number">4</span>
 petter = <span class="hljs-string">'En gutt'</span>
 frida = <span class="hljs-string">'En jente'</span>
 et_tall = <span class="hljs-number">3</span>
 enda_et_tall = variabel + etTall
 
-print(frida)
-print(frida)
-print(petter)
-print(variabel - et_tall)
-print(enda_et_tall)</code></pre>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(frida)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(frida)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(petter)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(variabel - et_tall)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(enda_et_tall)</span></span></code></pre>
 <p>Husk å ta bort eksemplene når du forsetter med oppgaven</p>
 <section id="gjøre-selv-1" class="level2 check">
 <h2>Gjøre selv</h2>
@@ -44,7 +52,7 @@ print(enda_et_tall)</code></pre>
 <ul>
 <li><p>Lag to variabler som du selv gir navnet på. Den ene variabelen skal være dette året, altså 2015. Den andre variabelen skal være året du ble født i.</p></li>
 <li><p>Lag så en tredje variabel som skal inneholde alderen din. Hvordan kan du regne ut alderen ved hjelp av variablene i steget over?</p></li>
-<li><p>Skriv ut teksten: <code class="lang-css"><span class="hljs-tag">Jeg</span> <span class="hljs-tag">regnet</span> <span class="hljs-tag">ut</span> <span class="hljs-tag">at</span> <span class="hljs-tag">alderen</span> <span class="hljs-tag">din</span> <span class="hljs-rule"><span class="hljs-attribute">er</span>:<span class="hljs-value"></span></span></code></p></li>
+<li><p>Skriv ut teksten: <code class="lang-applescript">Jeg regnet ut <span class="hljs-keyword">at</span> alderen din er:</code></p></li>
 <li><p>Skriv ut variabelen som inneholder alderen din.</p></li>
 </ul>
 </section>
@@ -52,18 +60,18 @@ print(enda_et_tall)</code></pre>
 <section id="del-3-innputt" class="level1 activity">
 <h1>Del 3: Innputt</h1>
 <p><strong>Hva:</strong> Innputt er en måte vi kan hente tekst som skrives på tastaturet.</p>
-<p><strong>Hvordan:</strong> Tekst hentes ved at du skriver: <code class="lang-java">input(<span class="hljs-string">'Tekst som forteller hva en skal skrive'</span>)</code></p>
-<p>Skal man hente inn et tall: <code class="lang-java"><span class="hljs-keyword">int</span>(input(<span class="hljs-string">'Tekst som forteller hva en skal skrive'</span>))</code></p>
+<p><strong>Hvordan:</strong> Tekst hentes ved at du skriver: <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">'Tekst som forteller hva en skal skrive'</span>)</span></span></code></p>
+<p>Skal man hente inn et tall: <code class="lang-lisp">int<span class="hljs-list">(<span class="hljs-keyword">input</span><span class="hljs-list">(<span class="hljs-quoted">'Tekst</span> som forteller hva en skal skrive')</span>)</span></code></p>
 <p><strong>Eksempler:</strong> Prøv dem ut og se hva som skjer</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">navn = input(<span class="hljs-string">'Skriv navnet ditt '</span>)
-print(navn)
-tall = int(input(<span class="hljs-string">'Skriv et tall '</span>))
-print(<span class="hljs-number">2</span>+tall)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">'Skriv navnet ditt '</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(navn)</span></span>
+tall = <span class="hljs-function"><span class="hljs-title">int</span><span class="hljs-params">(input(<span class="hljs-string">'Skriv et tall '</span>)</span></span>)
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-number">2</span>+tall)</span></span></code></pre>
 <section id="gjøre-selv-2" class="level2 check">
 <h2>Gjøre selv</h2>
 <p><strong>Du skal nå endre på koden som du skrev i del 2</strong>.</p>
 <ul>
-<li>Bruk <code>input()</code> slik at variabelen for året du er født lagres ved hjelp av innputt når programmet kjøres.</li>
+<li>Bruk <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">()</span></span></code> slik at variabelen for året du er født lagres ved hjelp av innputt når programmet kjøres.</li>
 <li>Test at det fungerer. Husk at året du skriver må være et tall, ikke tekst.</li>
 </ul>
 </section>
@@ -72,38 +80,38 @@ print(<span class="hljs-number">2</span>+tall)</code></pre>
 <h1>Del 4: If-setningen</h1>
 <p><strong>Hva:</strong> En <em>if-setning</em> er en måte for å bestemme hva datamaskinen skal gjøre ved å sjekke om noe er sant (if* betyr <em>hvis</em> på engelsk). Dersom <em>if-setningen</em> ikke er sann kan vi be datamaskinen gjøre noe annet, og vi bruker da <em>else</em> som er engelsk for <em>eller</em>.</p>
 <p><strong>Hvordan:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-css"><span class="hljs-tag">if</span> <span class="hljs-rule"><span class="hljs-attribute">dette_er_sant</span>:<span class="hljs-value">
-    <span class="hljs-function">gjor_dette</span>()
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-keyword">if</span> dette_er_sant:
+    <span class="hljs-function"><span class="hljs-title">gjor_dette</span><span class="hljs-params">()</span></span>
 elif noe_annet_er_sant:
-    <span class="hljs-function">gjor_noe_annet</span>()
-else:
-    <span class="hljs-function">ingen_av_if_setningene_er_sann</span>()</span></span></code></pre>
-<p>Her er noen eksempler på hva som kan stå bak <code class="lang-java"><span class="hljs-keyword">if</span></code> og <code class="lang-python"><span class="hljs-keyword">elif</span></code>.</p>
-<p><code>tall &lt; 4</code>: Sant hvis <code>tall</code> er mindre enn 4.</p>
-<p><code>tall &gt; 4</code>: Sant hvis <code>tall</code> er større enn 4.</p>
-<p><code>tall == 4</code>: Sant hvis <code>tall</code> er lik 4.</p>
-<p><code class="lang-java">tekst == <span class="hljs-string">'Hei'</span></code>: Sant hvis <code>tekst</code> er lik <code class="lang-java"><span class="hljs-string">'Hei'</span></code>.</p>
-<p><code class="lang-python"><span class="hljs-string">'nei'</span> <span class="hljs-keyword">in</span> tekst</code>: Sant hvis ordet <em>nei</em> er inni <code>tekst</code>.</p>
-<p><strong>Eksempel:</strong> Prøv det ut og se hva som skjer.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">tekst = <span class="hljs-string">'Heisann'</span>
-<span class="hljs-keyword">if</span> tekst == <span class="hljs-string">'Hei'</span>:
-    print(<span class="hljs-string">'Teksten er lik Hei'</span>)
-<span class="hljs-keyword">elif</span> tekst == <span class="hljs-string">'Hoho'</span>:
-    print(<span class="hljs-string">'Teksten er lik Hoho'</span>)
-<span class="hljs-keyword">elif</span> <span class="hljs-string">'Hei'</span> <span class="hljs-keyword">in</span> tekst:
-    print(<span class="hljs-string">'Hei er inni teksten'</span>)
+    <span class="hljs-function"><span class="hljs-title">gjor_noe_annet</span><span class="hljs-params">()</span></span>
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">'Teksten er ikke Hei eller Hoho og Hei er ikke inni teksten'</span>)</code></pre>
+    <span class="hljs-function"><span class="hljs-title">ingen_av_if_setningene_er_sann</span><span class="hljs-params">()</span></span></code></pre>
+<p>Her er noen eksempler på hva som kan stå bak <code class="lang-actionscript"><span class="hljs-keyword">if</span></code> og <code class="lang-bash"><span class="hljs-keyword">elif</span></code>.</p>
+<p><code class="lang-cpp">tall &lt; <span class="hljs-number">4</span></code>: Sant hvis <code>tall</code> er mindre enn 4.</p>
+<p><code class="lang-cpp">tall &gt; <span class="hljs-number">4</span></code>: Sant hvis <code>tall</code> er større enn 4.</p>
+<p><code class="lang-cpp">tall == <span class="hljs-number">4</span></code>: Sant hvis <code>tall</code> er lik 4.</p>
+<p><code class="lang-ini"><span class="hljs-setting">tekst =<span class="hljs-value">= <span class="hljs-string">'Hei'</span></span></span></code>: Sant hvis <code>tekst</code> er lik <code class="lang-actionscript"><span class="hljs-string">'Hei'</span></code>.</p>
+<p><code class="lang-actionscript"><span class="hljs-string">'nei'</span> <span class="hljs-keyword">in</span> tekst</code>: Sant hvis ordet <em>nei</em> er inni <code>tekst</code>.</p>
+<p><strong>Eksempel:</strong> Prøv det ut og se hva som skjer.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">tekst = <span class="hljs-string">'Heisann'</span>
+<span class="hljs-keyword">if</span> tekst == <span class="hljs-string">'Hei'</span>:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Teksten er lik Hei'</span>)</span></span>
+elif tekst == <span class="hljs-string">'Hoho'</span>:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Teksten er lik Hoho'</span>)</span></span>
+elif <span class="hljs-string">'Hei'</span> <span class="hljs-keyword">in</span> tekst:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hei er inni teksten'</span>)</span></span>
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Teksten er ikke Hei eller Hoho og Hei er ikke inni teksten'</span>)</span></span></code></pre>
 <section id="gjøre-selv-3" class="level2 check">
 <h2>Gjøre selv</h2>
 <p><strong>Fortsett med koden fra del 3.</strong></p>
 <ul>
-<li><p>Lag en ny variabel som tar inn tekst som innputt. Teksten som kommer opp når programmet spør om innputt skal være <code>Stemmer det at du er så gammel?</code></p></li>
-<li><p>Skriv en <em>if-setning</em> som sjekker om teksten i variabelen er <code>ja</code>.</p></li>
-<li><p>Hvis teksten er <code>ja</code>, skriv ut teksten: <code>Der ser du, jeg er kjempeflink i matematikk!</code></p></li>
-<li><p>Hvis teksten ikke er <code>ja</code>, mink aldervariabelen med 1 og skriv ut den riktige alderen i lag med en forklarende tekst.</p></li>
+<li><p>Lag en ny variabel som tar inn tekst som innputt. Teksten som kommer opp når programmet spør om innputt skal være <code class="lang-applescript">Stemmer det <span class="hljs-keyword">at</span> du er så gammel?</code></p></li>
+<li><p>Skriv en <em>if-setning</em> som sjekker om teksten i variabelen er <code class="lang-x86asm"><span class="hljs-keyword">ja</span></code>.</p></li>
+<li><p>Hvis teksten er <code class="lang-x86asm"><span class="hljs-keyword">ja</span></code>, skriv ut teksten: <code class="lang-stylus">Der ser du, jeg er kjempeflink <span class="hljs-tag">i</span> matematikk!</code></p></li>
+<li><p>Hvis teksten ikke er <code class="lang-x86asm"><span class="hljs-keyword">ja</span></code>, mink aldervariabelen med 1 og skriv ut den riktige alderen i lag med en forklarende tekst.</p></li>
 </ul>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Sindre O. Rasmussen, Kodeklubben Trondheim</p>
-</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

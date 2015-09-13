@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Kuprat | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Kuprat<a href="/python/kuprat/kuprat.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Kuprat | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Kuprat</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Novice</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/kuprat/kuprat.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>I dette kurset skal vi introdusere programmeringsspråket Python. Dette er et veldig populært programmeringsspråk som kan brukes til det meste. Python brukes av mange av de største og mest kjente selskapene i verden som for eksempel Google, NASA, CERN og andre.</p>
 <p>Vi begynner ganske enkelt med å se på hvordan vi kan lage små programmer i Python som kan lese og vise tekst. Spesielt vil vi lage vår egen versjon av et historisk program som heter <code>Cowsay</code> (<a href="http://www.cowsays.com/">http://www.cowsays.com/</a>) hvor en smart ku sprer sin visdom.</p>
@@ -16,13 +24,13 @@
 <p><strong>Windows</strong>: Åpne IDLE fra startmenyen.</p>
 <p><strong>Mac</strong>: Åpne terminal.app, skriv <code>idle</code> og trykk enter.</p>
 <p><strong>Linux</strong>: Åpne en terminal, skriv <code>idle</code> og trykk enter.</p>
-<p>Dette vil åpne et vindu som heter <code>Python Shell</code>. Hvis du ikke finner IDLE, eller vinduet ikke åpner seg kan det være fordi Python ikke er installert. I såfall kan du laste ned siste versjon fra <a href="http://www.python.org/">http://www.python.org/</a>. Spør gjerne om hjelp til dette om nødvendig.</p></li>
-<li><p>Vinduet <code>Python Shell</code> som åpnet seg er der du vil se resultatet av programmet ditt. For å skrive et nytt program må vi åpne et programmeringsvindu i tillegg. I menyen, velg <code>File &gt; New Window</code> eller <code>File &gt; New File</code>. Pass på at begge vinduene er synlige.</p></li>
+<p>Dette vil åpne et vindu som heter <code class="lang-nginx"><span class="hljs-title">Python</span> Shell</code>. Hvis du ikke finner IDLE, eller vinduet ikke åpner seg kan det være fordi Python ikke er installert. I såfall kan du laste ned siste versjon fra <a href="http://www.python.org/">http://www.python.org/</a>. Spør gjerne om hjelp til dette om nødvendig.</p></li>
+<li><p>Vinduet <code class="lang-nginx"><span class="hljs-title">Python</span> Shell</code> som åpnet seg er der du vil se resultatet av programmet ditt. For å skrive et nytt program må vi åpne et programmeringsvindu i tillegg. I menyen, velg <code class="lang-gradle"><span class="hljs-keyword">File</span> &gt; <span class="hljs-keyword">New</span> <span class="hljs-keyword">File</span></code>. Pass på at begge vinduene er synlige.</p></li>
 <li><p>I dette nye vinduet skal vi nå skrive vårt første Python-program. Skriv følgende:</p>
 <figure>
 <img src="hei_program.png">
 </figure></li>
-<li><p>Vi skal nå lagre og kjøre dette programmet. Velg først <code>File &gt;   Save</code>, og gi programmet ditt navnet <code>hei.py</code>. Deretter kan du kjøre programmet ved å klikke <code>Run &gt; Run Module</code>. Du skal nå se at Python skriver en liten hilsen i det første vinduet.</p>
+<li><p>Vi skal nå lagre og kjøre dette programmet. Velg først <code class="lang-fortran"><span class="hljs-keyword">File</span> &gt;   <span class="hljs-keyword">Save</span></code>, og gi programmet ditt navnet <code class="lang-css"><span class="hljs-tag">hei</span><span class="hljs-class">.py</span></code>. Deretter kan du kjøre programmet ved å klikke <code class="lang-mathematica"><span class="hljs-keyword">Run</span> &gt; <span class="hljs-keyword">Run</span> <span class="hljs-keyword">Module</span></code>. Du skal nå se at Python skriver en liten hilsen i det første vinduet.</p>
 <figure>
 <img src="hei_kjor.png">
 </figure>
@@ -30,43 +38,43 @@
 </ul>
 <section id="feilmeldinger" class="level3 protip">
 <h3>Feilmeldinger</h3>
-<p>Python krever at du er veldig nøyaktig når du programmerer, og hvis du skriver noe Python ikke forstår vil den skrive en feilmelding til deg når du velger <code>Run &gt; Run Module</code>. Du har kanskje allerede opplevd dette! Hvis ikke kan du prøve å bytte ut <code class="lang-python"><span class="hljs-keyword">print</span></code> med <code>pint</code> i koden din, og prøve å kjøre programmet en gang til.</p>
+<p>Python krever at du er veldig nøyaktig når du programmerer, og hvis du skriver noe Python ikke forstår vil den skrive en feilmelding til deg når du velger <code class="lang-mathematica"><span class="hljs-keyword">Run</span> &gt; <span class="hljs-keyword">Run</span> <span class="hljs-keyword">Module</span></code>. Du har kanskje allerede opplevd dette! Hvis ikke kan du prøve å bytte ut <code class="lang-bash"><span class="hljs-built_in">print</span></code> med <code>pint</code> i koden din, og prøve å kjøre programmet en gang til.</p>
 <p>Når du får en feilmelding må du gå tilbake til koden, og sjekke ekstra nøye at du har skrevet alt riktig. Dette vil bli enklere etterhvert som du får mer trening i å programmere.</p>
 </section>
 </section>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vårt første program bestod av bare en kommando, nemlig funksjonen <code class="lang-python"><span class="hljs-keyword">print</span></code> som brukes for å fortelle Python at vi vil skrive noe ut på skjermen. Det vi vil skrive til skjermen putter vi inn i paranteser. I dette tilfellet ville vi at Python skulle skrive teksten <code>Hei på deg!</code>. For å fortelle Python at <code>Hei på deg!</code> skal tolkes som ren tekst og ikke som en Python-kommando må vi skrive teksten mellom fnutter, <code>'</code>.</p></li>
+<li><p>Vårt første program bestod av bare en kommando, nemlig funksjonen <code class="lang-bash"><span class="hljs-built_in">print</span></code> som brukes for å fortelle Python at vi vil skrive noe ut på skjermen. Det vi vil skrive til skjermen putter vi inn i paranteser. I dette tilfellet ville vi at Python skulle skrive teksten <code class="lang-erlang-repl"><span class="hljs-variable">Hei</span> <span class="hljs-function_or_atom">p</span>å <span class="hljs-function_or_atom">deg</span><span class="hljs-exclamation_mark">!</span></code>. For å fortelle Python at <code class="lang-erlang-repl"><span class="hljs-variable">Hei</span> <span class="hljs-function_or_atom">p</span>å <span class="hljs-function_or_atom">deg</span><span class="hljs-exclamation_mark">!</span></code> skal tolkes som ren tekst og ikke som en Python-kommando må vi skrive teksten mellom fnutter, <code class="lang-vbnet"><span class="hljs-comment">'</span></code>.</p></li>
 <li><p>Vi kan enkelt endre på hva Python skriver til skjermen. Prøv å endre programmet ditt til det følgende:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(<span class="hljs-string">'Hei alle sammen!'</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hei alle sammen!'</span>)</span></span></code></pre>
 <p>Lagre filen på nytt, og kjør programmet.</p></li>
 <li><p>Prøv å endre teksten til noe du finner på selv, og kjør programmet igjen!</p></li>
 </ul>
 <section id="python-filer" class="level3 protip">
 <h3>Python-filer</h3>
-<p>Vi har nettopp lagd et Python-program som heter <code>hei</code> og som vi har lagret i en vanlig tekstfil som heter <code>hei.py</code>. Python kaller en slik tekstfil for en <code class="lang-lua"><span class="hljs-built_in">module</span></code>. Du kan selv bestemme hva du vil kalle Python-programmene dine, men filene hvor du lagrer programmene må ha etternavnet <code>.py</code> for at Python skal kjenne dem igjen.</p>
-<p>Det er også en god ide å unngå å bruke norske tegn som <code>æ</code>, <code>ø</code> og <code>å</code>, samt mellomrom i programnavnet. I stedet for mellomrom kan du bruke understrek, <code>_</code>, for eksempel <code>mitt_program.py</code>.</p>
+<p>Vi har nettopp lagd et Python-program som heter <code>hei</code> og som vi har lagret i en vanlig tekstfil som heter <code class="lang-css"><span class="hljs-tag">hei</span><span class="hljs-class">.py</span></code>. Python kaller en slik tekstfil for en <code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">module</span></span></code>. Du kan selv bestemme hva du vil kalle Python-programmene dine, men filene hvor du lagrer programmene må ha etternavnet <code class="lang-asciidoc"><span class="hljs-title">.py</span></code> for at Python skal kjenne dem igjen.</p>
+<p>Det er også en god ide å unngå å bruke norske tegn som <code>æ</code>, <code>ø</code> og <code>å</code>, samt mellomrom i programnavnet. I stedet for mellomrom kan du bruke understrek, <code>_</code>, for eksempel <code class="lang-css"><span class="hljs-tag">mitt_program</span><span class="hljs-class">.py</span></code>.</p>
 </section>
 </section>
 </section>
 <section id="steg-2-hva-heter-du" class="level1 activity">
 <h1>Steg 2: Hva heter du?</h1>
-<p>Vi skal nå se hvordan vi kan få Python til å stille oss spørsmål. For å gjøre dette bruker vi en ny funksjon som heter <code>input</code>.</p>
+<p>Vi skal nå se hvordan vi kan få Python til å stille oss spørsmål. For å gjøre dette bruker vi en ny funksjon som heter <code class="lang-stata"><span class="hljs-keyword">input</span></code>.</p>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre programmet ditt slik at det nå ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">navn = input(<span class="hljs-string">'Hva heter du? '</span>)
-print(<span class="hljs-string">'Hei '</span> + navn)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">'Hva heter du? '</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'Hei '</span> + navn)</span></span></code></pre>
 <p>Lagre og kjør programmet. Hilser Python deg med navn?</p></li>
-<li><p>For at teksten skal se bra ut må du passe på at du bruker mellomrom. Det ser best ut med et mellomrom mellom <code>?</code> og <code>'</code> i input-funksjonen, og også et mellomrom mellom <code>Hei</code> og <code>'</code> i print-funksjonen.</p></li>
-<li><p>Legg merke til at i programmet bruker vi en variabel <code>navn</code> som husker navnet du skriver inn. Slike variabler bruker vi hele tiden når vi programmerer. Variabler lages automatisk når vi bruker <code>=</code>. Du kan selv bestemme hva variablene skal hete, og det er lurt å velge navn som beskriver det variabelen skal huske for deg.</p></li>
+<li><p>For at teksten skal se bra ut må du passe på at du bruker mellomrom. Det ser best ut med et mellomrom mellom <code>?</code> og <code class="lang-vbnet"><span class="hljs-comment">'</span></code> i input-funksjonen, og også et mellomrom mellom <code>Hei</code> og <code class="lang-vbnet"><span class="hljs-comment">'</span></code> i print-funksjonen.</p></li>
+<li><p>Legg merke til at i programmet bruker vi en variabel <code>navn</code> som husker navnet du skriver inn. Slike variabler bruker vi hele tiden når vi programmerer. Variabler lages automatisk når vi bruker <code class="lang-haml">=<span class="ruby"></span></code>. Du kan selv bestemme hva variablene skal hete, og det er lurt å velge navn som beskriver det variabelen skal huske for deg.</p></li>
 <li><p>Prøv å legg inn flere linjer i programmet ditt. Kanskje Python kan spørre deg hvor du bor, hvem som er bestevennen din eller kanskje hva som er favorittfargen din? Bruk variabler for å huske disse tingene slik at Python kan skrive dem tilbake på skjermen etterpå.</p></li>
 </ul>
 <section id="hurtigtaster" class="level3 protip">
 <h3>Hurtigtaster</h3>
-<p>Når vi programmerer kan det være greit å slippe å lete inne i menyen for å lagre og kjøre programmene. I stedet kan vi bruke hurtigtaster. Hvis du ser etter vil du se i menyen at til høyre for kommandoene står hurtigtastene listet opp. For eksempel kan du trykke <code>Ctrl</code> og <code>S</code> for å lagre (<code>Cmd</code> og <code>S</code> på Mac) eller <code>F5</code> for å kjøre programmet (<code>Fn</code> og <code>F5</code> på Mac).</p>
+<p>Når vi programmerer kan det være greit å slippe å lete inne i menyen for å lagre og kjøre programmene. I stedet kan vi bruke hurtigtaster. Hvis du ser etter vil du se i menyen at til høyre for kommandoene står hurtigtastene listet opp. For eksempel kan du trykke <code>Ctrl</code> og <code class="lang-stata"><span class="hljs-literal">S</span></code> for å lagre (<code class="lang-dockerfile"><span class="hljs-built_ins">Cmd</span></code> og <code class="lang-stata"><span class="hljs-literal">S</span></code> på Mac) eller <code>F5</code> for å kjøre programmet (<code class="lang-rust"><span class="hljs-built_in">Fn</span></code> og <code>F5</code> på Mac).</p>
 </section>
 </section>
 </section>
@@ -76,59 +84,59 @@ print(<span class="hljs-string">'Hei '</span> + navn)</code></pre>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi begynner med å tegne kua. Start et nytt IDLE-vindu ved å velge <code>File &gt; New Window</code> eller <code>File &gt; New File</code>. Skriv inn følgende program:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(<span class="hljs-string">'^__^'</span>)
-print(<span class="hljs-string">'(oo)\_______'</span>)
-print(<span class="hljs-string">'(__)\       )'</span>)
-print(<span class="hljs-string">'    ||----W |'</span>)
-print(<span class="hljs-string">'    ||     ||'</span>)</code></pre>
-<p>Lagre programmet som <code>kuprat.py</code> og kjør det. En ganske stilig ku!</p></li>
+<li><p>Vi begynner med å tegne kua. Start et nytt IDLE-vindu ved å velge <code class="lang-gradle"><span class="hljs-keyword">File</span> &gt; <span class="hljs-keyword">New</span> <span class="hljs-keyword">File</span></code>. Skriv inn følgende program:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'^__^'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'(oo)\_______'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'(__)\       )'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'    ||----W |'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'    ||     ||'</span>)</span></span></code></pre>
+<p>Lagre programmet som <code class="lang-css"><span class="hljs-tag">kuprat</span><span class="hljs-class">.py</span></code> og kjør det. En ganske stilig ku!</p></li>
 <li><p>Men nå må vi få kua til å si noe. Legg til og endre kodelinjene dine slik at dette ser bra ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(<span class="hljs-string">' ____________________'</span>)
-print(<span class="hljs-string">'&lt; Python er morsomt! &gt;'</span>)
-print(<span class="hljs-string">' --------------------'</span>)
-print(<span class="hljs-string">'     \   ^__^'</span>)
-print(<span class="hljs-string">'      \  (oo)\_______'</span>)
-print(<span class="hljs-string">'         (__)\       )'</span>)
-print(<span class="hljs-string">'             ||----W |'</span>)
-print(<span class="hljs-string">'             ||     ||'</span>)</code></pre></li>
-<li><p>Nå kan vi bruke det vi har lært tidligere for å enkelt endre på meldingene som kua sier. Ved hjelp av <code>input</code> kan vi spørre om hva kua skal si. Endre programmet slik at det ser ut som følger:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">melding = input(<span class="hljs-string">'Hva skal kua si? '</span>)
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">' ____________________'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'&lt; Python er morsomt! &gt;'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">' --------------------'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'     \   ^__^'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'      \  (oo)\_______'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'         (__)\       )'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'             ||----W |'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'             ||     ||'</span>)</span></span></code></pre></li>
+<li><p>Nå kan vi bruke det vi har lært tidligere for å enkelt endre på meldingene som kua sier. Ved hjelp av <code class="lang-stata"><span class="hljs-keyword">input</span></code> kan vi spørre om hva kua skal si. Endre programmet slik at det ser ut som følger:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">melding = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">'Hva skal kua si? '</span>)</span></span>
 
-print(<span class="hljs-string">' ____________________'</span>)
-print(<span class="hljs-string">'&lt; '</span> + melding + <span class="hljs-string">' &gt;'</span>)
-print(<span class="hljs-string">' --------------------'</span>)
-print(<span class="hljs-string">'     \   ^__^'</span>)
-print(<span class="hljs-string">'      \  (oo)\_______'</span>)
-print(<span class="hljs-string">'         (__)\       )'</span>)
-print(<span class="hljs-string">'             ||----W |'</span>)
-print(<span class="hljs-string">'             ||     ||'</span>)</code></pre></li>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">' ____________________'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'&lt; '</span> + melding + <span class="hljs-string">' &gt;'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">' --------------------'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'     \   ^__^'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'      \  (oo)\_______'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'         (__)\       )'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'             ||----W |'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'             ||     ||'</span>)</span></span></code></pre></li>
 <li><p>Hvordan virker programmet når du kjører det nå? Prøv med forskjellige tekster. Ser du et problem?</p></li>
-<li><p>Snakkeboblen til kua er ikke tilpasset lengden av meldingen, slik at av og til blir snakkeboblen for stor og av og til blir den for liten. For å fikse dette skal vi bruke en ny funksjon som heter <code>len</code> (<code>len</code> er en forkortelse for <em>length</em> som betyr lengde). Denne kan finne lengden til en tekst. For å teste denne funksjonen, prøv å legge inn denne linjen rett etter <code>input</code>-linjen i programmet ditt:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">print(len(melding))</code></pre>
+<li><p>Snakkeboblen til kua er ikke tilpasset lengden av meldingen, slik at av og til blir snakkeboblen for stor og av og til blir den for liten. For å fikse dette skal vi bruke en ny funksjon som heter <code class="lang-gcode"><span class="hljs-keyword">le</span><span class="hljs-label">n</span></code> (<code class="lang-gcode"><span class="hljs-keyword">le</span><span class="hljs-label">n</span></code> er en forkortelse for <em>length</em> som betyr lengde). Denne kan finne lengden til en tekst. For å teste denne funksjonen, prøv å legge inn denne linjen rett etter <code class="lang-stata"><span class="hljs-keyword">input</span></code>-linjen i programmet ditt:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-lisp">print<span class="hljs-list">(<span class="hljs-keyword">len</span><span class="hljs-list">(<span class="hljs-keyword">melding</span>)</span>)</span></code></pre>
 <p>Dette vil skrive ut lengden av meldingen før kua skrives ut.</p></li>
 <li><p>Vi kan bruke denne lengden av meldingen til å regne ut hvor lang snakkeboblen må være. Siden vi har mellomrom på begge sider av meldingen bør snakkeboblen være 2 tegn lengre enn meldingen.</p>
-<pre class="sourceCode python"><code class="sourceCode python">boblelengde = len(melding) + 2</code></pre></li>
-<li><p>For å tegne snakkeboblen kan vi bruke et Pythontriks som kan repetere tekst. Vi har allerede sett at vi kan sette sammen tekst ved å bruke <code>+</code>, for eksempel <code class="lang-java"><span class="hljs-string">'Hei '</span> + navn</code>. For å repetere tekst kan vi gange den med et tall. For eksempel vil <code class="lang-java"><span class="hljs-string">'hei'</span> * <span class="hljs-number">3</span></code> bli til <code class="lang-java"><span class="hljs-string">'heiheihei'</span></code>. Vi kan derfor gange <code class="lang-java"><span class="hljs-string">'-'</span></code> med snakkeboblelengden for å tegne snakkeboblen i riktig størrelse.</p></li>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">boblelengde = <span class="hljs-function"><span class="hljs-title">len</span><span class="hljs-params">(melding)</span></span> + <span class="hljs-number">2</span></code></pre></li>
+<li><p>For å tegne snakkeboblen kan vi bruke et Pythontriks som kan repetere tekst. Vi har allerede sett at vi kan sette sammen tekst ved å bruke <code class="lang-diff"><span class="hljs-addition">+</span></code>, for eksempel <code class="lang-actionscript"><span class="hljs-string">'Hei '</span> + navn</code>. For å repetere tekst kan vi gange den med et tall. For eksempel vil <code class="lang-actionscript"><span class="hljs-string">'hei'</span> * <span class="hljs-number">3</span></code> bli til <code class="lang-actionscript"><span class="hljs-string">'heiheihei'</span></code>. Vi kan derfor gange <code class="lang-actionscript"><span class="hljs-string">'-'</span></code> med snakkeboblelengden for å tegne snakkeboblen i riktig størrelse.</p></li>
 <li><p>Endre programmet ditt slik at det blir seende ut som følger:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">melding = input(<span class="hljs-string">'Hva skal kua si? '</span>)
-boblelengde = len(melding) + <span class="hljs-number">2</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">melding = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">'Hva skal kua si? '</span>)</span></span>
+boblelengde = <span class="hljs-function"><span class="hljs-title">len</span><span class="hljs-params">(melding)</span></span> + <span class="hljs-number">2</span>
 
-print(<span class="hljs-string">' '</span> + <span class="hljs-string">'_'</span> * boblelengde)
-print(<span class="hljs-string">'&lt; '</span> + melding + <span class="hljs-string">' &gt;'</span>)
-print(<span class="hljs-string">' '</span> + <span class="hljs-string">'-'</span> * boblelengde)
-print(<span class="hljs-string">'     \   ^__^'</span>)
-print(<span class="hljs-string">'      \  (oo)\_______'</span>)
-print(<span class="hljs-string">'         (__)\       )'</span>)
-print(<span class="hljs-string">'             ||----W |'</span>)
-print(<span class="hljs-string">'             ||     ||'</span>)</code></pre>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">' '</span> + <span class="hljs-string">'_'</span> * boblelengde)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'&lt; '</span> + melding + <span class="hljs-string">' &gt;'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">' '</span> + <span class="hljs-string">'-'</span> * boblelengde)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'     \   ^__^'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'      \  (oo)\_______'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'         (__)\       )'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'             ||----W |'</span>)</span></span>
+<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'             ||     ||'</span>)</span></span></code></pre>
 <p>Lagre og kjør programmet. Blir snakkeboblen riktig størrelse?</p></li>
 </ul>
 <section id="prøv-selv" class="level3 try">
 <h3>Prøv selv</h3>
-<p>Kan du tegne andre dyr eller figurer som også kan snakke? Prøv eventuelt å gjøre små endringer på utseendet til kua, for eksempel kan du forandre øynene (med <code class="lang-lua"><span class="hljs-comment">--</span></code> vil det se ut som om den sover) eller kanskje legge til en tunge?</p>
+<p>Kan du tegne andre dyr eller figurer som også kan snakke? Prøv eventuelt å gjøre små endringer på utseendet til kua, for eksempel kan du forandre øynene (med <code class="lang-applescript"><span class="hljs-comment">--</span></code> vil det se ut som om den sover) eller kanskje legge til en tunge?</p>
 <p>Du kan også legge til flere forskjellige figurer i samme program, slik at det virker som om de snakker sammen. Prøv deg fram!</p>
 </section>
 </section>
 </section>
-</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

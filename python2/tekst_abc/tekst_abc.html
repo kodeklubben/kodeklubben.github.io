@@ -1,0 +1,146 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Tekst ABC | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Tekst ABC</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Novice</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/tekst_abc/tekst_abc.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>I denne oppgaven skal vi gjøre enkle operasjoner på tekst, som å endre størrelsen på bokstavene og telle ord.</p>
+<p>I Python lagrer vi tekst til en <strong>variabel</strong> slik som dette:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-armasm"><span class="hljs-keyword">streng </span>= <span class="hljs-string">"teksten er her"</span></code></pre>
+<p>Variabelen kalles da <strong>tekststreng</strong> eller bare <strong>streng</strong>, som er typen til variabelen.</p>
+</section>
+<section id="store-og-små-bokstaver" class="level1 activity">
+<h1>Store og små bokstaver</h1>
+<section id="section" class="level2 protip">
+<h2></h2>
+<p>En måte å endre tekst på er ved hjelp av funksjoner. Innebygget i Python finnes flere slike funksjoner. Gitt at vi har tekst i en variabel kalt <code class="lang-stata"><span class="hljs-literal">s</span></code>, så kan vi bruke disse funksjonene: <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">lower</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">upper</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">title</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">swapcase</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">capitalize</span><span class="hljs-params">()</span></span></code>.</p>
+<p>Legg merke til at funksjonen kalles <strong>på</strong> strengen - <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">lower</span><span class="hljs-params">()</span></span></code> - istedenfor å <strong>gi</strong> strengen til funksjonen - <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">lower</span><span class="hljs-params">(s)</span></span></code>.</p>
+<p>Her er noen eksempler på hvordan funksjonene brukes (legg merke til hvilke bokstaver som er store og små i utskriften):</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; s = <span class="hljs-string">"Per og Ada"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.upper()        <span class="hljs-comment"># store bokstaver</span>
+<span class="hljs-string">'PER OG ADA'</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.lower()        <span class="hljs-comment"># små bokstaver</span>
+<span class="hljs-string">'per og ada'</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.capitalize()   <span class="hljs-comment"># første bokstav er stor</span>
+<span class="hljs-string">'Per og ada'</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.title()        <span class="hljs-comment"># første bokstav i hvert ord er stor</span>
+<span class="hljs-string">'Per Og Ada'</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.swapcase()     <span class="hljs-comment"># bytter stor og små</span>
+<span class="hljs-string">'pER oG aDA'</span></code></pre>
+<p>Her er noen eksempler på hva funksjonene kan brukes til:</p>
+<ul>
+<li><p><code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">capitalize</span><span class="hljs-params">()</span></span></code> brukes når vi ønsker stor forbokstav kun i begynnelsen av teksten:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; sentence = <span class="hljs-string">"dENne sETNinGeN har IKKE riKTige bokSTAVstØrReLSER."</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; sentence.capitalize()
+<span class="hljs-string">'Denne setningen har ikke riktige bokstavstørrelser.'</span></code></pre></li>
+<li><p><code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">title</span><span class="hljs-params">()</span></span></code> kan brukes når vi skal skrive filmtitler:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; movie_title = <span class="hljs-string">"star wars: a new hope"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; movie_title.title()
+<span class="hljs-string">'Star Wars: A New Hope'</span></code></pre></li>
+<li><p><code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">upper</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">lower</span><span class="hljs-params">()</span></span></code> kan brukes når vi ønsker å sammenlikne tekst uten å ta hensyn størrelsen på bokstavene:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; answer = <span class="hljs-string">"JA"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; answer == <span class="hljs-string">"ja"</span>  <span class="hljs-comment"># JA og ja er ikke lik</span>
+<span class="hljs-constant">False</span></code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; answer = <span class="hljs-string">"JA"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; answer.lower() == <span class="hljs-string">"ja"</span>  <span class="hljs-comment"># konverter JA til ja for testen</span>
+<span class="hljs-constant">True</span></code></pre></li>
+</ul>
+<p>Du må huske på at disse funksjonene <strong>ikke</strong> endrer på variabelen. Derfor må du lagre resultatet i en ny variabel om du vil beholde endringen din:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; s = <span class="hljs-string">"tekst"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.upper()  <span class="hljs-comment"># Vi endrer ikke på variabelen!!</span>
+<span class="hljs-string">'TEKST'</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s  <span class="hljs-comment"># Fremdeles små bokstaver</span>
+<span class="hljs-string">'tekst'</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s = s.upper()  <span class="hljs-comment"># Nå endrer vi på variabelen</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s  <span class="hljs-comment"># Denne gangen er det store bokstaver</span>
+<span class="hljs-string">'TEKST'</span></code></pre>
+<!--Workaround-->
+</section>
+</section>
+<section id="section-1" class="level1 check">
+<h1></h1>
+<p>Lag et program som skriver ut filmtitler med store bokstaver først i hvert ord.</p>
+<p>Programmet skal se slik ut:</p>
+<pre>&gt;&gt;&gt;
+Skriv inn en filmtittel: <font color="green">alice in wonderland</font>
+Alice In Wonderland
+</pre>
+
+<p>Dette må du gjøre:</p>
+<ul>
+<li>Be om at brukeren skriver inn en filmtittel.</li>
+<li>Lagre filmtittelen i en variabel.</li>
+<li>Manipuler strengen slik at resultatet blir som beskrevet over.</li>
+<li>Skriv ut den nye strengen.</li>
+</ul>
+</section>
+<section id="telling-av-tekst" class="level1 activity">
+<h1>Telling av tekst</h1>
+</section>
+<section id="section-2" class="level1 protip">
+<h1></h1>
+<p>Ved hjelp av <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">count</span><span class="hljs-params">()</span></span></code> kan vi finne ut om en streng inneholder en bestemt tekst og hvor mange ganger den finnes i strengen. For eksempel så inneholder strengen <code class="lang-1c"><span class="hljs-string">"Hei verden!"</span></code> teksten <code class="lang-1c"><span class="hljs-string">"verden"</span></code> en gang.</p>
+<p>Tenk deg at du ønsker å finne ut hvor mange kommaer som er i <code class="lang-smalltalk"><span class="hljs-comment">"A, B, C, D, E, F, G, H, I, J, K, L"</span></code>. Det er enkelt å telle for hånd, men ikke like gøy som å la datamaskinen gjøre det:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; s = <span class="hljs-string">"A, B, C, D, E, F, G, H, I, J, K, L"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.count(<span class="hljs-string">","</span>)
+<span class="hljs-number">11</span></code></pre>
+<p>Vi kan også telle tekst som er lengre, for eksempel <code class="lang-1c"><span class="hljs-string">"Per"</span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; s = <span class="hljs-string">"Per, Ada, Kim, Per, Kim, Per"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.count(<span class="hljs-string">"Per"</span>)
+<span class="hljs-number">3</span></code></pre>
+<!--Workaround-->
+</section>
+<section id="section-3" class="level1 check">
+<h1></h1>
+<p>Lag et program som teller hvor mange ord det er i det brukeren skriver inn. Antall ord kan regnes ut ved å telle antall mellomrom, og deretter legge til 1. Forstår du hvorfor man må legge til 1?</p>
+<p>Slik skal programmet se ut:</p>
+<pre>&gt;&gt;&gt;
+Skriv inn en streng: <font color="green">Hei på deg</font>
+Du skrev inn 3 ord.
+</pre>
+
+<p>Dette må du gjøre:</p>
+<ul>
+<li>Be brukeren om tekst.</li>
+<li>Lagre teksten til en variabel.</li>
+<li>Regn ut hvor mange ord som er i teksten.</li>
+<li><p>Skriv ut hvor mange ord teksten inneholder.</p>
+<p><strong>Hint:</strong> husk å konvertere fra tall til tekst med <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">str</span><span class="hljs-params">()</span></span></code>-funksjonen.</p></li>
+</ul>
+</section>
+<section id="erstatte-tekst" class="level1 activity">
+<h1>Erstatte tekst</h1>
+</section>
+<section id="section-4" class="level1 protip">
+<h1></h1>
+<p>Vi kan bruke <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">replace</span><span class="hljs-params">()</span></span></code> for å bytte ut tekst i en streng med en annen tekst. Hva om vi vil bytte ut alle kommaer med semikolon?</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stata">&gt;&gt;&gt; s = <span class="hljs-string">"A, B, C, D, E, F, G, H, I, J, K, L"</span>
+&gt;&gt;&gt; s.<span class="hljs-keyword">replace</span>(<span class="hljs-string">","</span>, <span class="hljs-string">";"</span>)
+'A; B; C; <span class="hljs-keyword">D</span>; <span class="hljs-keyword">E</span>; F; <span class="hljs-keyword">G</span>; <span class="hljs-keyword">H</span>; I; J; K; <span class="hljs-keyword">L</span>'</code></pre>
+<p>Her får <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">replace</span><span class="hljs-params">()</span></span></code> to argumenter - først teksten vi skal erstatte i strengen <code class="lang-stata"><span class="hljs-literal">s</span></code>, og så teksten vi skal erstatte med. Vi kan også bruke <code class="lang-stylus">s.<span class="hljs-function"><span class="hljs-title">replace</span><span class="hljs-params">()</span></span></code> for å fjerne tekst. Vi kan for eksempel fjerne alle mellomrom:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; s = <span class="hljs-string">"1 2 3 4 5"</span>
+<span class="hljs-prompt">&gt;&gt;</span>&gt; s.replace(<span class="hljs-string">" "</span>, <span class="hljs-string">""</span>)
+<span class="hljs-string">'12345'</span></code></pre>
+<!--Workaround-->
+</section>
+<section id="section-5" class="level1 check">
+<h1></h1>
+<p>Noen operativsystemer og programmer oppfører seg rart dersom man lager filnavn med mellomrom i. Du vil derfor lage et program som bytter ut alle mellomrom med en understrek. I tillegg skal du sørge for at det bare blir brukt små bokstaver i filnavnet. Det skal fungere som i programmet under:</p>
+<pre>&gt;&gt;&gt;
+Skriv inn et filnavn: <font color="green">Min HemMelige FIL.txt</font>
+min_hemmelige_fil.txt
+</pre>
+
+<p>Dette må du gjøre:</p>
+<ul>
+<li>Spør brukeren om et filnavn</li>
+<li>Endre filnavnet slik som beskrevet ovenfor</li>
+<li>Skrive ut det nye filnavnet</li>
+</ul>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Ole Kristian Pedersen, Kodeklubben Trondheim</p>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

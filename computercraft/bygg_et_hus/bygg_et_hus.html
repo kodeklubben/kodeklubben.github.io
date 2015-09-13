@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bygg et Hus | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Bygg et Hus<a href="/computercraft/bygg_et_hus/bygg_et_hus.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bygg et Hus | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Bygg et Hus</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>ComputerCraft</span></div><div class="pdf"><a href="/computercraft/bygg_et_hus/bygg_et_hus.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>I denne leksjonen vil vi se litt på hvordan vi kan få en robot til å bygge et hus for oss. Underveis vil vi lære hvordan vi kan bruke løkker og funksjoner for å gjenta ting som gjøres flere ganger.</p>
 <figure>
@@ -9,17 +17,17 @@
 <h1>Steg 1: Prøv selv først</h1>
 <p>Vi har tidligere lært om hvordan roboter behøver fuel for å kjøre og byggemateriell for å bygge. Pass på at roboten din har nok fuel mens du gjør oppgavene under.</p>
 <p>Tidligere har vi sett hvordan vi bruker <code>turtle</code>-biblioteket for å få roboter til å gjøre forskjellige ting. Spesielt bruker vi kommandoene</p>
-<p><code>turtle.forward()</code>, <code>turtle.back()</code>, <code>turtle.turnLeft()</code>, <code>turtle.turnRight()</code>, <code>turtle.up()</code>, <code>turtle.down()</code></p>
-<p>for å flytte roboten. Videre kan vi bruke <code>turtle.place()</code> eller <code>turtle.placeDown()</code> for å plassere ut en kloss, og vi har sett at vi kan bruke <code class="lang-java"><span class="hljs-keyword">for</span></code>-løkker for å gjenta ting.</p>
+<p><code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">back</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">turnLeft</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">turnRight</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">up</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">down</span><span class="hljs-params">()</span></span></code></p>
+<p>for å flytte roboten. Videre kan vi bruke <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">place</span><span class="hljs-params">()</span></span></code> eller <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">placeDown</span><span class="hljs-params">()</span></span></code> for å plassere ut en kloss, og vi har sett at vi kan bruke <code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkker for å gjenta ting.</p>
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag en robot, gi den fuel og legg en del byggemateriell i robotens inventory.</p></li>
-<li><p>Lag et nytt program, <code>edit byggmitthus</code>, og skriv den følgende koden:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
+<li><p>Lag et nytt program, <code class="lang-axapta"><span class="hljs-keyword">edit</span> byggmitthus</code>, og skriv den følgende koden:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
     turtle.back()
     turtle.place()
-<span class="hljs-keyword">end</span></code></pre>
+end</code></pre>
 <p>Kjør programmet. Bygger roboten en liten vegg av klosser?</p></li>
 </ul>
 <section id="prøv-selv" class="level3 try">
@@ -28,8 +36,8 @@
 <p>Et par små tips:</p>
 <ul>
 <li><p>Det er nok å bruke kommandoene vi har nevnt så langt.</p></li>
-<li><p>Du vil helst bruke flere for-løkker. For at dette skal virke må du bruke forskjellige variabler, det vil si at du må bytte ut <code>i</code> men andre bokstaver eller variabelnavn i de andre løkkene du lager.</p></li>
-<li><p>For å lage dør eller vinduer i huset ditt vil det enkleste være å bruke <code class="lang-java"><span class="hljs-keyword">if</span></code>-tester for å sjekke hvor på huset roboten bygger.</p></li>
+<li><p>Du vil helst bruke flere for-løkker. For at dette skal virke må du bruke forskjellige variabler, det vil si at du må bytte ut <code class="lang-matlab"><span class="hljs-built_in">i</span></code> men andre bokstaver eller variabelnavn i de andre løkkene du lager.</p></li>
+<li><p>For å lage dør eller vinduer i huset ditt vil det enkleste være å bruke <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-tester for å sjekke hvor på huset roboten bygger.</p></li>
 </ul>
 </section>
 </section>
@@ -49,25 +57,25 @@
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Skriv programmet <code>grunnmur</code> med koden</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cpp"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
         turtle.back()
         turtle.place()
-    <span class="hljs-keyword">end</span>
+    end
     turtle.turnLeft()
-<span class="hljs-keyword">end</span></code></pre>
+end</code></pre>
 <p>Lagre og kjør programmet? Ser du problemet?</p></li>
-<li><p>På slutten av byggingen av grunnmuren krasjer roboten inn i muren vi allerede har bygd, slik at den ikke får bygd den siste klossen. En smart måte å unngå dette problemet på er å la roboten fly over bakken, mens den plasserer klosser under seg med <code>turtle.placeDown()</code>. Dette har den ekstra fordelen at vi kan la roboten gå fremover i stedet for bakover, som jo er mer logisk.</p>
+<li><p>På slutten av byggingen av grunnmuren krasjer roboten inn i muren vi allerede har bygd, slik at den ikke får bygd den siste klossen. En smart måte å unngå dette problemet på er å la roboten fly over bakken, mens den plasserer klosser under seg med <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">placeDown</span><span class="hljs-params">()</span></span></code>. Dette har den ekstra fordelen at vi kan la roboten gå fremover i stedet for bakover, som jo er mer logisk.</p>
 <p>Endre programmet som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua">turtle.up()                                   <span class="hljs-comment">-- ny linje</span>
-<span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
-    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver">turtle.up()                                   <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-built_in">do</span>
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-built_in">do</span>
         turtle.forward()                      <span class="hljs-comment">-- endret linje</span>
         turtle.placeDown()                    <span class="hljs-comment">-- endret linje</span>
-    <span class="hljs-keyword">end</span>
-    turtle.turnLeft()
+    <span class="hljs-function"><span class="hljs-keyword">end</span>
+    <span class="hljs-title">turtle</span>.<span class="hljs-title">turnLeft</span>()</span>
 <span class="hljs-keyword">end</span></code></pre>
-<p>Når du kjører programmet nå klarer roboten å bygge hele firkanten uten å krasje! Vi vil bruke <code>turtle.placeDown()</code> i resten av denne leksjonen.</p></li>
+<p>Når du kjører programmet nå klarer roboten å bygge hele firkanten uten å krasje! Vi vil bruke <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">placeDown</span><span class="hljs-params">()</span></span></code> i resten av denne leksjonen.</p></li>
 </ul>
 </section>
 </section>
@@ -79,24 +87,24 @@
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag et nytt program <code>bygghus</code>. Vi begynner med en enkel stripe:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua">turtle.up()
-<span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
-    turtle.placeDown()
-    turtle.forward()
+<pre class="sourceCode lua"><code class="sourceCode lua lang-sml">turtle.up<span class="hljs-literal">()</span>
+for i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
+    turtle.placeDown<span class="hljs-literal">()</span>
+    turtle.forward<span class="hljs-literal">()</span>
 <span class="hljs-keyword">end</span></code></pre></li>
-<li><p>For å bygge en vegg vil vi bygge flere slike striper på toppen av hverandre. En enkel måte å gjøre dette på er å la roboten rygge tilbake med <code>turtle.back()</code> for å bygge neste stripe.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">3</span> <span class="hljs-keyword">do</span>                               <span class="hljs-comment">-- ny linje</span>
+<li><p>For å bygge en vegg vil vi bygge flere slike striper på toppen av hverandre. En enkel måte å gjøre dette på er å la roboten rygge tilbake med <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">back</span><span class="hljs-params">()</span></span></code> for å bygge neste stripe.</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-sql">for j = 1, 3 <span class="hljs-operator"><span class="hljs-keyword">do</span>                               <span class="hljs-comment">-- ny linje</span>
     turtle.up()
-    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">for</span> <span class="hljs-keyword">i</span> = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
         turtle.placeDown()
         turtle.forward()
     <span class="hljs-keyword">end</span>
 
-    <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>                           <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">for</span> <span class="hljs-keyword">i</span> = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>                           <span class="hljs-comment">-- ny linje</span>
         turtle.back()                         <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
-<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre></li>
-<li><p>Før vi fortsetter med programmet vårt vil vi også introdusere et par variabler som kan forklare hva tallene <code>3</code> og <code>5</code> betyr. Dette vil også gjøre det enklere for oss å endre størrelsen på veggen senere.</p>
+<span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></span></code></pre></li>
+<li><p>Før vi fortsetter med programmet vårt vil vi også introdusere et par variabler som kan forklare hva tallene <code class="lang-cpp"><span class="hljs-number">3</span></code> og <code class="lang-cpp"><span class="hljs-number">5</span></code> betyr. Dette vil også gjøre det enklere for oss å endre størrelsen på veggen senere.</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> hoyde = <span class="hljs-number">3</span>                               <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">local</span> lengde = <span class="hljs-number">5</span>                              <span class="hljs-comment">-- ny linje</span>
 
@@ -115,17 +123,17 @@
 </ul>
 <section id="prøv-selv-1" class="level3 try">
 <h3>Prøv selv</h3>
-<p>Prøv å endre verdiene av variablene <code>hoyde</code> og <code>lengde</code>. Gjør roboten som du ber den om?</p>
+<p>Prøv å endre verdiene av variablene <code>hoyde</code> og <code class="lang-gcode"><span class="hljs-keyword">le</span><span class="hljs-label">ngde</span></code>. Gjør roboten som du ber den om?</p>
 </section>
 </section>
 </section>
 <section id="steg-4-funksjoner" class="level1 activity">
 <h1>Steg 4: Funksjoner</h1>
-<p>Vi har nå lært roboten hvordan den lager en vegg. For at vi enkelt skal kunne bruke dette senere vil vi definere som en funksjon. I praksis betyr det at vi lærer roboten en ny kommando, som vi senere kan bruke på samme måte som de innebygde kommandoene (som for eksempel <code>turtle.forward()</code>).</p>
+<p>Vi har nå lært roboten hvordan den lager en vegg. For at vi enkelt skal kunne bruke dette senere vil vi definere som en funksjon. I praksis betyr det at vi lærer roboten en ny kommando, som vi senere kan bruke på samme måte som de innebygde kommandoene (som for eksempel <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">()</span></span></code>).</p>
 <section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi definerer en funksjon ved hjelp av den innebygde kommandoen <code class="lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span></span></code>.</p>
+<li><p>Vi definerer en funksjon ved hjelp av den innebygde kommandoen <code class="lang-fortran"><span class="hljs-function"><span class="hljs-keyword">function</span></span></code>.</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span>                           <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">local</span> hoyde = <span class="hljs-number">3</span>
     <span class="hljs-keyword">local</span> lengde = <span class="hljs-number">5</span>
@@ -143,9 +151,9 @@
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre></li>
 <li><p>Om du kjører programmet slik det er nå vil du se at roboten ikke gjør noenting. Det er fordi vi bare har <em>definert</em> funksjonen, det vil si vi har fortalt roboten hvordan den kan bygge en vegg. Vi har ikke sagt til roboten at den faktisk skal bygge veggen. Legg til den følgende linjen helt nederst i programmet ditt.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua">byggVegg()</code></pre>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus"><span class="hljs-function"><span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span></code></pre>
 <p>Nå sier vi at roboten også skal bygge veggen.</p></li>
-<li><p>En veldig nyttig ting med funksjoner er at vi kan la variablene være noe som heter parametre. I praksis betyr det at vi bestemmer verdien på variablene utenfor selve funksjonen. Endre programmet ditt slik at det ser ut som dette, pass på at du sletter de to linjene som pleide å gi verdi til <code>hoyde</code> og <code>lengde</code>.</p>
+<li><p>En veldig nyttig ting med funksjoner er at vi kan la variablene være noe som heter parametre. I praksis betyr det at vi bestemmer verdien på variablene utenfor selve funksjonen. Endre programmet ditt slik at det ser ut som dette, pass på at du sletter de to linjene som pleide å gi verdi til <code>hoyde</code> og <code class="lang-gcode"><span class="hljs-keyword">le</span><span class="hljs-label">ngde</span></code>.</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>              <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -164,7 +172,7 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 </ul>
 <section id="prøv-selv-2" class="level3 try">
 <h3>Prøv selv</h3>
-<p>Endre tallene <code>3</code> og <code>5</code> i den siste linjen. Bygger roboten vegger av forskjellig størrelse?</p>
+<p>Endre tallene <code class="lang-cpp"><span class="hljs-number">3</span></code> og <code class="lang-cpp"><span class="hljs-number">5</span></code> i den siste linjen. Bygger roboten vegger av forskjellig størrelse?</p>
 </section>
 </section>
 </section>
@@ -174,8 +182,8 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 <section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi begynner enkelt. La oss prøve å bygge en vegg, snu roboten, bygge en ny vegg og så videre. Bytt ut den siste linjen <code>byggVegg(3, 5)</code> i programmet ditt med den følgende løkken:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
+<li><p>Vi begynner enkelt. La oss prøve å bygge en vegg, snu roboten, bygge en ny vegg og så videre. Bytt ut den siste linjen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggVegg</span><span class="hljs-params">(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)</span></span></code> i programmet ditt med den følgende løkken:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-cal"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
     byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
     turtle.turnLeft()
 <span class="hljs-keyword">end</span></code></pre>
@@ -184,7 +192,7 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 <img src="firevegger.png">
 </figure></li>
 <li><p>Hmm … det ble jo litt stilig, men et hus er det definitivt ikke. Problemet er at vi ikke har tenkt gjennom hvor roboten er etter at den er ferdig med å bygge en vegg.</p>
-<p>Vi burde legge til litt kode i <code>byggVegg()</code> slik at roboten er klar til å bygge neste vegg. Dette kan vi gjøre ved å gå nedover i stedet for bakover etter at vi har bygd ferdig veggen. Endre funksjonen <code>byggVegg</code> slik at den ser slik ut:</p>
+<p>Vi burde legge til litt kode i <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span></code> slik at roboten er klar til å bygge neste vegg. Dette kan vi gjøre ved å gå nedover i stedet for bakover etter at vi har bygd ferdig veggen. Endre funksjonen <code>byggVegg</code> slik at den ser slik ut:</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -233,11 +241,11 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 </section>
 <section id="steg-6-mer-byggemateriale" class="level1 activity">
 <h1>Steg 6: Mer byggemateriale</h1>
-<p>Et problem du helt sikkert har oppdaget nå, er at roboten stadig går tom for byggemateriale. Selv om roboten har 16 slots for materiale, vil den bare bruke en av dem. Ved hjelp av funksjonene <code>getItemCount()</code>, <code>getSelectedSlot()</code> og <code class="lang-lua"><span class="hljs-built_in">select</span>()</code> i <code>turtle</code>-biblioteket kan vi gjøre noe med dette.</p>
+<p>Et problem du helt sikkert har oppdaget nå, er at roboten stadig går tom for byggemateriale. Selv om roboten har 16 slots for materiale, vil den bare bruke en av dem. Ved hjelp av funksjonene <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">getSelectedSlot</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">select</span><span class="hljs-params">()</span></span></code> i <code>turtle</code>-biblioteket kan vi gjøre noe med dette.</p>
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi vil nå lage en ny funksjon som sjekker at det er materiale tilgjengelig før den plasserer det ut. Nedenfor har vi byttet ut <code>turtle.placeDown()</code> med et kall på vår egen funksjon <code>plasser()</code>:</p>
+<li><p>Vi vil nå lage en ny funksjon som sjekker at det er materiale tilgjengelig før den plasserer det ut. Nedenfor har vi byttet ut <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">placeDown</span><span class="hljs-params">()</span></span></code> med et kall på vår egen funksjon <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">plasser</span><span class="hljs-params">()</span></span></code>:</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -278,8 +286,8 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
     byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
     turtle.turnLeft()
 <span class="hljs-keyword">end</span></code></pre>
-<p>Les nøye gjennom den nye funksjonen <code>plasser()</code>. Skjønner du hva den gjør?</p>
-<p>Det siste funksjonen gjør er å plassere ut en kloss med <code>turtle.placeDown()</code>. Men før den plasserer ut klossen bruker vi <code>turtle.getItemCount()</code> til å sjekke om det finnes tilgjengelig byggemateriale. Hvis det er 0 klosser i sloten roboten bruker, går vi inn i <code class="lang-java"><span class="hljs-keyword">while</span></code>-løkken hvor vi velger en annen slot. Vi sjekker først hvilken slot roboten bruker med <code>turtle.getSelectedSlot()</code>. Hvis dette ikke er den siste sloten (slot 16), bruker vi <code class="lang-lua">turtle.<span class="hljs-built_in">select</span>()</code> til å velge den neste sloten. Hvis vi allerede er på den siste sloten velger vi heller den første.</p></li>
+<p>Les nøye gjennom den nye funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">plasser</span><span class="hljs-params">()</span></span></code>. Skjønner du hva den gjør?</p>
+<p>Det siste funksjonen gjør er å plassere ut en kloss med <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">placeDown</span><span class="hljs-params">()</span></span></code>. Men før den plasserer ut klossen bruker vi <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span></code> til å sjekke om det finnes tilgjengelig byggemateriale. Hvis det er 0 klosser i sloten roboten bruker, går vi inn i <code class="lang-actionscript"><span class="hljs-keyword">while</span></code>-løkken hvor vi velger en annen slot. Vi sjekker først hvilken slot roboten bruker med <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">getSelectedSlot</span><span class="hljs-params">()</span></span></code>. Hvis dette ikke er den siste sloten (slot 16), bruker vi <code class="lang-stylus">turtle.<span class="hljs-function"><span class="hljs-title">select</span><span class="hljs-params">()</span></span></code> til å velge den neste sloten. Hvis vi allerede er på den siste sloten velger vi heller den første.</p></li>
 <li><p>Kjør programmet. Hva skjer når roboten går helt tom for byggemateriale? Den blir da bare stående å vente på at du skal fylle den opp med nytt materiale.</p>
 <figure>
 <img src="flerefarger.png">
@@ -297,8 +305,8 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 <section id="sjekkliste-7" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Før vi begynner å bygge taket vil vi flytte koden som bygger huset til en egen funksjon, på samme måte som vi gjorde med <code>byggVegg()</code> tidligere. Bytt den nederste løkken i koden din (den som faktisk bygger veggene dine) med den følgende koden:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span>
+<li><p>Før vi begynner å bygge taket vil vi flytte koden som bygger huset til en egen funksjon, på samme måte som vi gjorde med <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span></code> tidligere. Bytt den nederste løkken i koden din (den som faktisk bygger veggene dine) med den følgende koden:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-delphi"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span>
     <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, bredde - 1)</span>
     <span class="hljs-title">turtle</span>.<span class="hljs-title">turnLeft</span><span class="hljs-params">()</span>
     <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, dybde - 1)</span>
@@ -310,24 +318,24 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 <span class="hljs-title">end</span>
 
 <span class="hljs-title">byggHus</span><span class="hljs-params">(3, 5, 4)</span></span></code></pre>
-<p>Ser du hvorfor vi bruker <code>bredde - 1</code> i stedet for <code>bredde</code>? Sjekk at huset ditt får riktig størrelse med denne koden!</p></li>
-<li><p>Nå kan vi lage en ny funksjon <code>byggTak()</code>. Legg først til denne linjen nederst i <code>byggHus()</code>-funksjonen din:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua">byggTak(bredde, dybde)</code></pre></li>
+<p>Ser du hvorfor vi bruker <code class="lang-armasm"><span class="hljs-keyword">bredde </span>- <span class="hljs-number">1</span></code> i stedet for <code>bredde</code>? Sjekk at huset ditt får riktig størrelse med denne koden!</p></li>
+<li><p>Nå kan vi lage en ny funksjon <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggTak</span><span class="hljs-params">()</span></span></code>. Legg først til denne linjen nederst i <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggHus</span><span class="hljs-params">()</span></span></code>-funksjonen din:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus"><span class="hljs-function"><span class="hljs-title">byggTak</span><span class="hljs-params">(bredde, dybde)</span></span></code></pre></li>
 <li><p>Selve funksjonen for å bygge taket kan være ganske lik funksjonen for å bygge en vegg. Forskjellen er at der veggen står oppover, vil taket ligge flatt. Legg til funksjonen <code>byggTak</code> i koden din:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggTak</span><span class="hljs-params">(bredde, dybde)</span></span>
-    turtle.up()
-    <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, dybde <span class="hljs-keyword">do</span>
-        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, bredde <span class="hljs-keyword">do</span>
-            plasser()
-            turtle.forward()
+<pre class="sourceCode lua"><code class="sourceCode lua lang-sml">function byggTak(bredde, dybde)
+    turtle.up<span class="hljs-literal">()</span>
+    for j = <span class="hljs-number">1</span>, dybde <span class="hljs-keyword">do</span>
+        for i = <span class="hljs-number">1</span>, bredde <span class="hljs-keyword">do</span>
+            plasser<span class="hljs-literal">()</span>
+            turtle.forward<span class="hljs-literal">()</span>
         <span class="hljs-keyword">end</span>
 
-        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, bredde <span class="hljs-keyword">do</span>
-            turtle.back()
+        for i = <span class="hljs-number">1</span>, bredde <span class="hljs-keyword">do</span>
+            turtle.back<span class="hljs-literal">()</span>
         <span class="hljs-keyword">end</span>
-        turtle.turnLeft()
-        turtle.forward()
-        turtle.turnRight()
+        turtle.turnLeft<span class="hljs-literal">()</span>
+        turtle.forward<span class="hljs-literal">()</span>
+        turtle.turnRight<span class="hljs-literal">()</span>
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></code></pre></li>
 </ul>
@@ -339,22 +347,22 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 <section id="sjekkliste-8" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi velger en relativt enkel løsning denne gangen, og lar roboten rett og slett lage hull der dørene og vinduene skal være. Siden vi ikke vil ha dører på alle veggene, og vil ha litt mulighet til å velge hvor vinduene skal være, lager vi to nye parametre til <code>byggVegg()</code>-funksjonen vår. Endre denne funksjonen som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde, dor, vindu)</span></span>    <span class="hljs-comment">-- endret linje</span>
-    <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
+<li><p>Vi velger en relativt enkel løsning denne gangen, og lar roboten rett og slett lage hull der dørene og vinduene skal være. Siden vi ikke vil ha dører på alle veggene, og vil ha litt mulighet til å velge hvor vinduene skal være, lager vi to nye parametre til <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span></code>-funksjonen vår. Endre denne funksjonen som følger:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-sql">function byggVegg(hoyde, lengde, dor, vindu)    <span class="hljs-comment">-- endret linje</span>
+    for j = 1, hoyde <span class="hljs-operator"><span class="hljs-keyword">do</span>
         turtle.up()
-        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, lengde <span class="hljs-keyword">do</span>
-            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> (j &lt;= <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> i == dor <span class="hljs-keyword">or</span>      <span class="hljs-comment">-- ny linje</span>
-                    j == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> i == vindu) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- ny linje</span>
+        <span class="hljs-keyword">for</span> <span class="hljs-keyword">i</span> = <span class="hljs-number">1</span>, lengde <span class="hljs-keyword">do</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> (j &lt;= <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">i</span> == dor <span class="hljs-keyword">or</span>      <span class="hljs-comment">-- ny linje</span>
+                    j == <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">i</span> == vindu) <span class="hljs-keyword">then</span> <span class="hljs-comment">-- ny linje</span>
                 plasser()
             <span class="hljs-keyword">end</span>                                 <span class="hljs-comment">-- ny linje</span>
-            <span class="hljs-keyword">if</span> i &lt; lengde <span class="hljs-keyword">then</span>
+            <span class="hljs-keyword">if</span> <span class="hljs-keyword">i</span> &lt; lengde <span class="hljs-keyword">then</span>
                 turtle.forward()
             <span class="hljs-keyword">end</span>
         <span class="hljs-keyword">end</span>
 
         <span class="hljs-keyword">if</span> j &lt; hoyde <span class="hljs-keyword">then</span>
-            <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, lengde - <span class="hljs-number">1</span> <span class="hljs-keyword">do</span>
+            <span class="hljs-keyword">for</span> <span class="hljs-keyword">i</span> = <span class="hljs-number">1</span>, lengde - <span class="hljs-number">1</span> <span class="hljs-keyword">do</span>
                 turtle.back()
             <span class="hljs-keyword">end</span>
         <span class="hljs-keyword">end</span>
@@ -364,33 +372,33 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
         <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
             turtle.down()
     <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span></code></pre>
-<p>Med den nye <code class="lang-java"><span class="hljs-keyword">if</span></code>-testen lager vi en dør ved å ikke bygge de to nederste klossene, mens vinduene lages i høyde 2.</p></li>
-<li><p>Vi må til slutt også endre koden i <code>byggHus()</code> som kaller <code>byggVegg()</code>:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span></span>
-    byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-keyword">nil</span>)
-    turtle.turnLeft()
-    byggVegg(hoyde, dybde - <span class="hljs-number">1</span>, <span class="hljs-keyword">nil</span>, <span class="hljs-built_in">math</span>.floor(dybde / <span class="hljs-number">2</span>))
-    turtle.turnLeft()
-    byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-keyword">nil</span>, bredde - <span class="hljs-number">2</span>)
-    turtle.turnLeft()
-    byggVegg(hoyde, dybde - <span class="hljs-number">1</span>, <span class="hljs-keyword">nil</span>, <span class="hljs-number">2</span>)
-    turtle.turnLeft()
+<span class="hljs-keyword">end</span></span></code></pre>
+<p>Med den nye <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-testen lager vi en dør ved å ikke bygge de to nederste klossene, mens vinduene lages i høyde 2.</p></li>
+<li><p>Vi må til slutt også endre koden i <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggHus</span><span class="hljs-params">()</span></span></code> som kaller <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode lua"><code class="sourceCode lua lang-delphi"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span>
+    <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, bredde - 1, 2, <span class="hljs-keyword">nil</span>)</span>
+    <span class="hljs-title">turtle</span>.<span class="hljs-title">turnLeft</span><span class="hljs-params">()</span>
+    <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, dybde - 1, <span class="hljs-keyword">nil</span>, math.floor(dybde / 2)</span>)
+    <span class="hljs-title">turtle</span>.<span class="hljs-title">turnLeft</span><span class="hljs-params">()</span>
+    <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, bredde - 1, <span class="hljs-keyword">nil</span>, bredde - 2)</span>
+    <span class="hljs-title">turtle</span>.<span class="hljs-title">turnLeft</span><span class="hljs-params">()</span>
+    <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, dybde - 1, <span class="hljs-keyword">nil</span>, 2)</span>
+    <span class="hljs-title">turtle</span>.<span class="hljs-title">turnLeft</span><span class="hljs-params">()</span>
 
-    byggTak(bredde, dybde)
-<span class="hljs-keyword">end</span></code></pre>
-<p>Legg merke til at vi bruker det spesielle ordet <code class="lang-lua"><span class="hljs-keyword">nil</span></code> hvis vi ikke skal lage en dør eller et vindu på en gitt vegg. Skjønner du hvor vinduene på de forskjellige veggene plasseres?</p></li>
+    <span class="hljs-title">byggTak</span><span class="hljs-params">(bredde, dybde)</span>
+<span class="hljs-title">end</span></span></code></pre>
+<p>Legg merke til at vi bruker det spesielle ordet <code class="lang-clojure"><span class="hljs-literal">nil</span></code> hvis vi ikke skal lage en dør eller et vindu på en gitt vegg. Skjønner du hvor vinduene på de forskjellige veggene plasseres?</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-9-forskjellige-hus" class="level1 activity">
 <h1>Steg 9: Forskjellige hus</h1>
 <p>Vi har nå laget et program som gjør at roboten vår er en husbyggerobot! Vi skal bare gjøre en ørliten forbedring før vi sier oss helt ferdige!</p>
-<p>Nå har vi kodet hvor stort huset skal være inn i den siste linjen i programmet vårt, <code>byggHus(3, 5, 4)</code>. Det betyr at om vi vil bygge et større eller mindre hus, må vi forandre på programmet. Dette er tungvint. Det vil være bedre om vi kan fortelle hvor stort huset skal være når vi starter programmet.</p>
+<p>Nå har vi kodet hvor stort huset skal være inn i den siste linjen i programmet vårt, <code class="lang-cpp">byggHus(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>)</code>. Det betyr at om vi vil bygge et større eller mindre hus, må vi forandre på programmet. Dette er tungvint. Det vil være bedre om vi kan fortelle hvor stort huset skal være når vi starter programmet.</p>
 <section id="sjekkliste-9" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Bytt ut linjen <code>byggHus(3, 5, 4)</code> med det følgende:</p>
+<li><p>Bytt ut linjen <code class="lang-cpp">byggHus(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>)</code> med det følgende:</p>
 <pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-keyword">local</span> tArgs = { ... }
 <span class="hljs-keyword">if</span> #tArgs ~= <span class="hljs-number">3</span> <span class="hljs-keyword">then</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Skriv: bygghus &lt;høyde&gt; &lt;bredde&gt; &lt;dybde&gt;'</span>)
@@ -401,9 +409,9 @@ byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
 byggHus(<span class="hljs-built_in">tonumber</span>(tArgs[<span class="hljs-number">1</span>]), <span class="hljs-built_in">tonumber</span>(tArgs[<span class="hljs-number">2</span>]),
         <span class="hljs-built_in">tonumber</span>(tArgs[<span class="hljs-number">3</span>]))</code></pre>
 <p>Dette kan virke litt mystisk, og vi skal ikke forklare alt som skjer her nå. Vi vil komme tilbake til dette i senere leksjoner.</p></li>
-<li><p>Om du prøver å kjøre programmet ditt ved å bare skrive <code>bygghus</code> nå vil du få en melding om at du også må oppgi høyde, bredde og dybde. Prøv for eksempel å skrive <code>bygghus 3 5 4</code> for å starte husbyggeroboten.</p></li>
+<li><p>Om du prøver å kjøre programmet ditt ved å bare skrive <code>bygghus</code> nå vil du få en melding om at du også må oppgi høyde, bredde og dybde. Prøv for eksempel å skrive <code class="lang-cpp">bygghus <span class="hljs-number">3</span> <span class="hljs-number">5</span> <span class="hljs-number">4</span></code> for å starte husbyggeroboten.</p></li>
 </ul>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
-</div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

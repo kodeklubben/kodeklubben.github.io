@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Skilpaddefraktaler | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddefraktaler<a href="/python/skilpaddefraktaler/skilpaddefraktaler.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Skilpaddefraktaler | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddefraktaler</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Journeyman</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/skilpaddefraktaler/skilpaddefraktaler.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
 <p>Vi vil nå jobbe videre med skilpaddekunsten fra tidligere. Denne gangen skal vi tegne forskjellige figurer som kalles fraktaler. Fraktaler er figurer som bygges opp av små kopier av seg selv. I løpet av leksjonen vil vi også jobbe mer med funksjoner og rekursjon.</p>
 <figure>
@@ -8,19 +16,19 @@
 <section id="steg-1-husker-du-skilpadden" class="level1 activity">
 <h1>Steg 1: Husker du skilpadden?</h1>
 <p>Vi har brukt skilpaddebiblioteket <code>turtle</code> tidligere. Du husker kanskje kode som lignet på den under?</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre class="sourceCode python"><code class="sourceCode python lang-lisp">from turtle import *
 
-shape(<span class="hljs-string">'turtle'</span>)
-shapesize(<span class="hljs-number">2</span>)
-bgcolor(<span class="hljs-string">'darkblue'</span>)
-color(<span class="hljs-string">'yellow'</span>)
-speed(<span class="hljs-number">3</span>)
+shape<span class="hljs-list">(<span class="hljs-quoted">'turtle</span>')</span>
+shapesize<span class="hljs-list">(<span class="hljs-number">2</span>)</span>
+bgcolor<span class="hljs-list">(<span class="hljs-quoted">'darkblue</span>')</span>
+color<span class="hljs-list">(<span class="hljs-quoted">'yellow</span>')</span>
+speed<span class="hljs-list">(<span class="hljs-number">3</span>)</span>
 
-forward(<span class="hljs-number">270</span>)</code></pre>
+forward<span class="hljs-list">(<span class="hljs-number">270</span>)</span></code></pre>
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Skriv inn programmet over. Lagre det med navnet <code>snoflak.py</code> og kjør det. En rett strek skal tegnes på skjermen.</p></li>
+<li><p>Skriv inn programmet over. Lagre det med navnet <code class="lang-css"><span class="hljs-tag">snoflak</span><span class="hljs-class">.py</span></code> og kjør det. En rett strek skal tegnes på skjermen.</p></li>
 <li><p>Endre litt på tallene og fargene i koden slik at du husker hva de forskjellige kommandoene gjør. Finner du en fargekombinasjon du liker?</p></li>
 </ul>
 </section>
@@ -58,89 +66,89 @@ speed(<span class="hljs-number">3</span>)
 
 en()</code></pre>
 <p>Husk at vi må kalle funksjonen for at den skal bli gjort.</p></li>
-<li><p>La oss nå legge til en funksjon <code>to()</code> som tegner den andre figuren, det enkle fjellet. Skriv denne funksjonen i den samme filen.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to</span><span class="hljs-params">()</span>:</span>
-    forward(<span class="hljs-number">90</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">90</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">90</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">90</span>)
+<li><p>La oss nå legge til en funksjon <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">()</span></span></code> som tegner den andre figuren, det enkle fjellet. Skriv denne funksjonen i den samme filen.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">()</span></span>:
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span>
 
-to()</code></pre>
+<span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">()</span></span></code></pre>
 <p>Ser du sammenhengen mellom figuren og koden?</p></li>
-<li><p>Kjør programmet ditt. Husk at du kan styre hvilke figurer som tegnes med hvilke funksjoner du kaller. Selv om både <code>en</code> og <code>to</code> er definert trenger du ikke kalle begge funksjonene.</p></li>
-<li><p>I <code>to</code> har vi brukt <code>forward(90)</code>, mens i <code>en</code> brukte vi <code>forward(270)</code>. Det betyr at vi har tegnet den rette streken tre ganger mindre. Men vi har brukt vinkler slik at de fire strekene i <code>to</code> tilsammen blir like lang som den ene streken i <code>en</code>.</p>
-<p>La oss endre litt i funksjonene slik at vi bruker <code>en</code> i stedet for <code>forward</code> når vi definerer <code>to</code>.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">en</span><span class="hljs-params">(lengde)</span>:</span>
-    forward(lengde)
+<li><p>Kjør programmet ditt. Husk at du kan styre hvilke figurer som tegnes med hvilke funksjoner du kaller. Selv om både <code class="lang-stata"><span class="hljs-keyword">en</span></code> og <code class="lang-applescript"><span class="hljs-keyword">to</span></code> er definert trenger du ikke kalle begge funksjonene.</p></li>
+<li><p>I <code class="lang-applescript"><span class="hljs-keyword">to</span></code> har vi brukt <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span></code>, mens i <code class="lang-stata"><span class="hljs-keyword">en</span></code> brukte vi <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">270</span>)</span></span></code>. Det betyr at vi har tegnet den rette streken tre ganger mindre. Men vi har brukt vinkler slik at de fire strekene i <code class="lang-applescript"><span class="hljs-keyword">to</span></code> tilsammen blir like lang som den ene streken i <code class="lang-stata"><span class="hljs-keyword">en</span></code>.</p>
+<p>La oss endre litt i funksjonene slik at vi bruker <code class="lang-stata"><span class="hljs-keyword">en</span></code> i stedet for <code class="lang-oxygene"><span class="hljs-keyword">forward</span></code> når vi definerer <code class="lang-applescript"><span class="hljs-keyword">to</span></code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">en</span><span class="hljs-params">(lengde)</span></span>:
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(lengde)</span></span>
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to</span><span class="hljs-params">(lengde)</span>:</span>
-    en(lengde / <span class="hljs-number">3</span>)
-    left(<span class="hljs-number">60</span>)
-    en(lengde / <span class="hljs-number">3</span>)
-    right(<span class="hljs-number">120</span>)
-    en(lengde / <span class="hljs-number">3</span>)
-    left(<span class="hljs-number">60</span>)
-    en(lengde / <span class="hljs-number">3</span>)
+def <span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(lengde)</span></span>:
+    <span class="hljs-function"><span class="hljs-title">en</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">en</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">en</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">en</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
 
-to(<span class="hljs-number">270</span>)</code></pre></li>
+<span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(<span class="hljs-number">270</span>)</span></span></code></pre></li>
 <li><p>Kjør programmet igjen. Tegnes fortsatt de samme figurene?</p></li>
-<li><p>Vi vil nå tegne den tredje figuren. En måte å gjøre dette på kan være å kombinere <code>forward</code>, <code>left</code> og <code>right</code> slik vi opprinnelig gjorde for <code>to</code>. Du trenger ikke skrive inn denne koden, men se på den og sammenlign med figuren. Ser du at det stemmer?</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tre</span><span class="hljs-params">()</span>:</span>
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)</code></pre></li>
+<li><p>Vi vil nå tegne den tredje figuren. En måte å gjøre dette på kan være å kombinere <code class="lang-oxygene"><span class="hljs-keyword">forward</span></code>, <code class="lang-scss"><span class="hljs-attribute">left</span></code> og <code class="lang-livecodeserver"><span class="hljs-constant">right</span></code> slik vi opprinnelig gjorde for <code class="lang-applescript"><span class="hljs-keyword">to</span></code>. Du trenger ikke skrive inn denne koden, men se på den og sammenlign med figuren. Ser du at det stemmer?</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">tre</span><span class="hljs-params">()</span></span>:
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span></code></pre></li>
 <li><p>Dette er en kjedelig måte å programmere på: Vi må skrive kjempemye kode, det er veldig lett å gjøre feil og det tar tid å gjøre endringer i koden.</p>
 <p>Hvis du ser litt nærmere på koden vil du se at linjene</p>
-<pre class="sourceCode python"><code class="sourceCode python">    forward(30)
-    left(60)
-    forward(30)
-    right(120)
-    forward(30)
-    left(60)
-    forward(30)</code></pre>
-<p>går igjen flere ganger. Sammenlign disse linjene med funksjonen <code>to</code> fra tidligere. Ser du en måte vi kan forenkle koden vår?</p></li>
-<li><p>Vi har sett at koden til <code>tre</code> består av flere kopier av koden til <code>to</code>, bare krympet. Da kan vi jo gjøre samme trikset som tidligere, vi bare kaller <code>to</code>. Skriv inn følgende kode i den samme filen som <code>en</code> og <code>to</code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tre</span><span class="hljs-params">(lengde)</span>:</span>
-    to(lengde / <span class="hljs-number">3</span>)
-    left(<span class="hljs-number">60</span>)
-    to(lengde / <span class="hljs-number">3</span>)
-    right(<span class="hljs-number">120</span>)
-    to(lengde / <span class="hljs-number">3</span>)
-    left(<span class="hljs-number">60</span>)
-    to(lengde / <span class="hljs-number">3</span>)
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span></code></pre>
+<p>går igjen flere ganger. Sammenlign disse linjene med funksjonen <code class="lang-applescript"><span class="hljs-keyword">to</span></code> fra tidligere. Ser du en måte vi kan forenkle koden vår?</p></li>
+<li><p>Vi har sett at koden til <code>tre</code> består av flere kopier av koden til <code class="lang-applescript"><span class="hljs-keyword">to</span></code>, bare krympet. Da kan vi jo gjøre samme trikset som tidligere, vi bare kaller <code class="lang-applescript"><span class="hljs-keyword">to</span></code>. Skriv inn følgende kode i den samme filen som <code class="lang-stata"><span class="hljs-keyword">en</span></code> og <code class="lang-applescript"><span class="hljs-keyword">to</span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">tre</span><span class="hljs-params">(lengde)</span></span>:
+    <span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>)</span></span>
 
-tre()</code></pre></li>
+<span class="hljs-function"><span class="hljs-title">tre</span><span class="hljs-params">()</span></span></code></pre></li>
 <li><p>Klarer du å tegne alle tre figurene nå?</p></li>
 </ul>
 </section>
@@ -152,37 +160,37 @@ tre()</code></pre></li>
 <h2>Sjekkliste</h2>
 <p>Nå kommer det morsomste. Før vi kaster bort tid på å lage flere funksjoner <code>fire</code>, <code>fem</code> og kanskje <code>seks</code>, skal vi se at vi kan lage en funksjon som kan lage alle disse for oss!</p>
 <ul>
-<li>Sammenlign funksjonene <code>to</code> og <code>tre</code>. Ser du at de er nesten helt like?</li>
+<li>Sammenlign funksjonene <code class="lang-applescript"><span class="hljs-keyword">to</span></code> og <code>tre</code>. Ser du at de er nesten helt like?</li>
 </ul>
-<p>Vi skal nå bruke noe som kalles rekursjon for å lage en funksjon som gjør jobben til både <code>en</code>, <code>to</code> og <code>tre</code>. Rekursjon husker du kanskje fra tidligere. Det betyr at vi lager en funksjon som kaller seg selv, men for å gjøre noe som er litt enklere.</p>
-<p>Med rekursjon ser man gjerne på det enkle tilfellet og det generelle tilfellet. For disse figurene er <code>en</code> det enkle tilfellet hvor vi bare trenger å tegne en rett strek.</p>
+<p>Vi skal nå bruke noe som kalles rekursjon for å lage en funksjon som gjør jobben til både <code class="lang-stata"><span class="hljs-keyword">en</span></code>, <code class="lang-applescript"><span class="hljs-keyword">to</span></code> og <code>tre</code>. Rekursjon husker du kanskje fra tidligere. Det betyr at vi lager en funksjon som kaller seg selv, men for å gjøre noe som er litt enklere.</p>
+<p>Med rekursjon ser man gjerne på det enkle tilfellet og det generelle tilfellet. For disse figurene er <code class="lang-stata"><span class="hljs-keyword">en</span></code> det enkle tilfellet hvor vi bare trenger å tegne en rett strek.</p>
 <ul>
 <li><p>Legg til denne funksjonen. Dette er det enkle tilfellet:</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fjell</span><span class="hljs-params">(lengde, dybde)</span>:</span>
     <span class="hljs-keyword">if</span> dybde == <span class="hljs-number">1</span>:
         forward(lengde)
         <span class="hljs-keyword">return</span></code></pre>
-<p>Her bruker vi <code class="lang-java"><span class="hljs-keyword">return</span></code> for å si at vi ikke vil gjøre mer for det enkle tilfellet.</p></li>
-<li><p>Det generelle tilfellet er det vi har sett tidligere i <code>to</code> og <code>tre</code>. Med den nye variabelen <code>dybde</code> kan vi lage både <code>to</code> og <code>tre</code> med samme kode. Utvid funksjonen <code>fjell</code> slik at den ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fjell</span><span class="hljs-params">(lengde, dybde)</span>:</span>
+<p>Her bruker vi <code class="lang-actionscript"><span class="hljs-keyword">return</span></code> for å si at vi ikke vil gjøre mer for det enkle tilfellet.</p></li>
+<li><p>Det generelle tilfellet er det vi har sett tidligere i <code class="lang-applescript"><span class="hljs-keyword">to</span></code> og <code>tre</code>. Med den nye variabelen <code>dybde</code> kan vi lage både <code class="lang-applescript"><span class="hljs-keyword">to</span></code> og <code>tre</code> med samme kode. Utvid funksjonen <code>fjell</code> slik at den ser slik ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(lengde, dybde)</span></span>:
     <span class="hljs-keyword">if</span> dybde == <span class="hljs-number">1</span>:
-        forward(lengde)
-        <span class="hljs-keyword">return</span>
+        <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(lengde)</span></span>
+        return
 
-    fjell(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)
-    left(<span class="hljs-number">60</span>)
-    fjell(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)
-    right(<span class="hljs-number">120</span>)
-    fjell(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)
-    left(<span class="hljs-number">60</span>)
-    fjell(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)</code></pre>
+    <span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(lengde / <span class="hljs-number">3</span>, dybde - <span class="hljs-number">1</span>)</span></span></code></pre>
 <p>Kjenner du igjen koden fra tidligere?</p></li>
 <li><p>Prøv å tegn</p>
-<pre class="sourceCode python"><code class="sourceCode python">fjell(270, 2)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(<span class="hljs-number">270</span>, <span class="hljs-number">2</span>)</span></span></code></pre>
 <p>og</p>
-<pre class="sourceCode python"><code class="sourceCode python">fjell(270, 3)</code></pre>
-<p>Gir dette samme resultat som <code>to(270)</code> og <code>tre(270)</code>?</p></li>
-<li><p>Den nye funksjonen gjør enda mer enn <code>to</code> og <code>tre</code>. Vi kan bruke enda større dybde. Prøv for eksempel <code>fjell(270, 6)</code>. Denne vil bruke litt tid. Bruk <code>speed(11)</code> for at skilpadden skal bevege seg så raskt som mulig.</p></li>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(<span class="hljs-number">270</span>, <span class="hljs-number">3</span>)</span></span></code></pre>
+<p>Gir dette samme resultat som <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">to</span><span class="hljs-params">(<span class="hljs-number">270</span>)</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">tre</span><span class="hljs-params">(<span class="hljs-number">270</span>)</span></span></code>?</p></li>
+<li><p>Den nye funksjonen gjør enda mer enn <code class="lang-applescript"><span class="hljs-keyword">to</span></code> og <code>tre</code>. Vi kan bruke enda større dybde. Prøv for eksempel <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(<span class="hljs-number">270</span>, <span class="hljs-number">6</span>)</span></span></code>. Denne vil bruke litt tid. Bruk <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">speed</span><span class="hljs-params">(<span class="hljs-number">11</span>)</span></span></code> for at skilpadden skal bevege seg så raskt som mulig.</p></li>
 </ul>
 </section>
 </section>
@@ -194,10 +202,10 @@ tre()</code></pre></li>
 <ul>
 <li><p>Til sist skal vi kombinere flere kall til <code>fjell</code>-funksjonen vår for å tegne det fine snøflaket du så helt først i oppgaven. Ser du hvordan snøflaket består av tre fjell?</p>
 <p>Legg til denne funksjonen:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">snoflak</span><span class="hljs-params">(lengde, dybde)</span>:</span>
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
-        fjell(lengde, dybde)
-        right(<span class="hljs-number">120</span>)</code></pre></li>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">snoflak</span><span class="hljs-params">(lengde, dybde)</span></span>:
+    <span class="hljs-keyword">for</span> <span class="hljs-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-function"><span class="hljs-title">range</span><span class="hljs-params">(<span class="hljs-number">3</span>)</span></span>:
+        <span class="hljs-function"><span class="hljs-title">fjell</span><span class="hljs-params">(lengde, dybde)</span></span>
+        <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span></code></pre></li>
 <li><p>Prøv å kall denne <code>snoflak</code>-funksjonen med forskjellige lengder og dybder.</p></li>
 </ul>
 <p>Dette snøflaket er en av de mest kjente fraktalene. Det har fått navnet Kochs snøflak fordi en av de første som studerte denne figuren het Helge von Koch.</p>
@@ -213,7 +221,7 @@ tre()</code></pre></li>
 <img src="firkantfjell_forstesteg.png">
 </figure>
 <ul>
-<li><p>Lag en ny fil som du kaller <code>firkantfjell.py</code>.</p></li>
+<li><p>Lag en ny fil som du kaller <code class="lang-css"><span class="hljs-tag">firkantfjell</span><span class="hljs-class">.py</span></code>.</p></li>
 <li><p>Som tidligere så kan vi prøve å tegne dette nye fjellet med funksjoner for hvert steg. For eksempel</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
@@ -239,7 +247,7 @@ speed(<span class="hljs-number">3</span>)
 
 to(<span class="hljs-number">270</span>)</code></pre></li>
 <li><p>Men vi har jo lært at det er mye bedre å bruke rekursjon. Vi vil lage en funksjon som kan tegne mange forskjellige firkantfjell ved at den kaller seg selv.</p>
-<p>Prøv selv om du kan skrive denne. Se på hvordan vi laget <code>fjell</code> tidligere, og på hvordan vi laget <code>en</code> og <code>to</code> nå sist.</p>
+<p>Prøv selv om du kan skrive denne. Se på hvordan vi laget <code>fjell</code> tidligere, og på hvordan vi laget <code class="lang-stata"><span class="hljs-keyword">en</span></code> og <code class="lang-applescript"><span class="hljs-keyword">to</span></code> nå sist.</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">firkantfjell</span><span class="hljs-params">(lengde, dybde)</span>:</span>
     <span class="hljs-keyword">if</span> dybde == <span class="hljs-number">1</span>:
         <span class="hljs-comment"># Her må du programmere det enkle tilfellet</span>
@@ -264,27 +272,27 @@ to(<span class="hljs-number">270</span>)</code></pre></li>
 </figure>
 <p>Her ser vi at vi har en trekant som byttes ut med tre mindre trekanter.</p>
 <ul>
-<li><p>Lag en ny fil <code>trekant.py</code> og legg til de vanlige kommandoene på toppen av filen.</p></li>
+<li><p>Lag en ny fil <code class="lang-css"><span class="hljs-tag">trekant</span><span class="hljs-class">.py</span></code> og legg til de vanlige kommandoene på toppen av filen.</p></li>
 <li><p>I det enkle tilfellet vil vi nå tegne en trekant. Det kan vi gjøre på denne måten:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trekant</span><span class="hljs-params">(lengde, dybde)</span>:</span>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">trekant</span><span class="hljs-params">(lengde, dybde)</span></span>:
     <span class="hljs-keyword">if</span> dybde &lt;= <span class="hljs-number">1</span>:
-        pendown()
-        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
-            forward(lengde)
-            left(<span class="hljs-number">120</span>)
-        penup()
-        <span class="hljs-keyword">return</span></code></pre></li>
+        <span class="hljs-function"><span class="hljs-title">pendown</span><span class="hljs-params">()</span></span>
+        <span class="hljs-keyword">for</span> <span class="hljs-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-function"><span class="hljs-title">range</span><span class="hljs-params">(<span class="hljs-number">3</span>)</span></span>:
+            <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(lengde)</span></span>
+            <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+        <span class="hljs-function"><span class="hljs-title">penup</span><span class="hljs-params">()</span></span>
+        return</code></pre></li>
 <li><p>For det generelle tilfellet må vi stable tre trekanter. Det kan vi gjøre for eksempel med koden under. Sammenlign koden med figuren. Ser du sammenhengen?</p>
-<pre class="sourceCode python"><code class="sourceCode python">    trekant(lengde / 2, dybde - 1)
-    forward(lengde / 2)
-    trekant(lengde / 2, dybde - 1)
-    left(120)
-    forward(lengde / 2)
-    right(120)
-    trekant(lengde / 2, dybde - 1)
-    right(120)
-    forward(lengde / 2)
-    left(120)</code></pre></li>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">    <span class="hljs-function"><span class="hljs-title">trekant</span><span class="hljs-params">(lengde / <span class="hljs-number">2</span>, dybde - <span class="hljs-number">1</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(lengde / <span class="hljs-number">2</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">trekant</span><span class="hljs-params">(lengde / <span class="hljs-number">2</span>, dybde - <span class="hljs-number">1</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(lengde / <span class="hljs-number">2</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">trekant</span><span class="hljs-params">(lengde / <span class="hljs-number">2</span>, dybde - <span class="hljs-number">1</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(lengde / <span class="hljs-number">2</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span></span></code></pre></li>
 <li><p>Tegn noen trekanter med forskjellig dybde og størrelse. Denne fraktalen er også ganske kjent, og går ofte under navnet Sierpinski-trekanten.</p></li>
 </ul>
 </section>
@@ -292,11 +300,11 @@ to(<span class="hljs-number">270</span>)</code></pre></li>
 <h2>Prøv selv</h2>
 <p>Det finnes mange fraktaler, og du kan lage dine helt egne også!</p>
 <p>Prøv for eksempel å endre litt på vinklene og lengdene i <code>fjell</code>- eller <code>firkantfjell</code>-funksjonene.</p>
-<p>Eller kanskje du kan lage en helt annen figur? Prøv og tegn dine egne <code>en</code>- og <code>to</code>-figurer som du så oversetter til Python.</p>
+<p>Eller kanskje du kan lage en helt annen figur? Prøv og tegn dine egne <code class="lang-stata"><span class="hljs-keyword">en</span></code>- og <code class="lang-applescript"><span class="hljs-keyword">to</span></code>-figurer som du så oversetter til Python.</p>
 <p>Her er et forslag til en figur du kan prøve, men prøv også å lage dine egne!</p>
 <figure>
 <img src="drage_forstesteg.png">
 </figure>
 </section>
 </section>
-</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

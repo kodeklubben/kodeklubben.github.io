@@ -1,4 +1,12 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Endre utseende og stil på tekst | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Endre utseende og stil på tekst<a href="/web/lesson5/lesson5.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a></h1></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level2 intro">
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Endre utseende og stil på tekst | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Endre utseende og stil på tekst</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>Web</span></div><div class="pdf"><a href="/web/lesson5/lesson5.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level2 intro">
 <h2><strong>Introduksjon:</strong></h2>
 <p>I denne oppgaven skal vi se på og lære hvordan vi kan forandre skrifttyper, farge og størrelse. Vi skal også lære hvordan vi kan legge til en bakgrunnsfarge og ramme. Vi vil fortsette å bruke det samme prosjektet som i forrige oppgave. Så vi må være sikre på at vi har åpnet filen index.html fra mappen Felix.</p>
 </section>
@@ -18,7 +26,7 @@
 <li>Verdana</li>
 </ul>
 <p>Ikke alle skrifttyper finnes på alle datamaskiner, så vi trenger å angi en <strong>reserve skrifttype</strong> også. Den som blir oftest bruker er ‘sans serif’ eller ‘serif’.</p>
-<p>La oss prøve å endre skrifttyper på overskriften ved å bruke <code>font-family</code> egenskapene:</p>
+<p>La oss prøve å endre skrifttyper på overskriften ved å bruke <code class="lang-haskell"><span class="hljs-title">font</span>-<span class="hljs-keyword">family</span></code> egenskapene:</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
     <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
@@ -52,7 +60,7 @@
 <section id="lagre-og-se-det-i-nettleseren.-2" class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>Det er også en skriftstil-verdi som heter ‘oblique’. Hvordan ser den ut?</p>
-<p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen font-weight-. Den bruker verdier som <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste skrifttypen og 900 er den tykkeste (feteste skriften). Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle skrifttyper alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke normal- eller fet- skrift. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
+<p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen font-weight-. Den bruker verdier som <code class="lang-livecodeserver"><span class="hljs-keyword">normal</span></code>, <code class="lang-scss"><span class="hljs-value">bold</span></code>, <code class="lang-scss"><span class="hljs-value">bolder</span></code>, <code class="lang-scss"><span class="hljs-value">lighter</span></code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste skrifttypen og 900 er den tykkeste (feteste skriften). Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle skrifttyper alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke normal- eller fet- skrift. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">h2</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value">normal</span></span>;
 }</span></code></pre>
@@ -69,14 +77,14 @@
 }</span></code></pre>
 <section id="lagre-og-se-det-i-nettleseren.-3" class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
-<p>Prøv nå å forandre farge, bredden, og linje-stil til du er fornøyd. Her er noen linje-stiler: <code>dashed</code>, <code>dotted</code>, <code class="lang-java"><span class="hljs-keyword">double</span></code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>.</p>
+<p>Prøv nå å forandre farge, bredden, og linje-stil til du er fornøyd. Her er noen linje-stiler: <code class="lang-scss"><span class="hljs-value">dashed</span></code>, <code class="lang-scss"><span class="hljs-value">dotted</span></code>, <code class="lang-aspectj"><span class="hljs-keyword">double</span></code>, <code class="lang-scss"><span class="hljs-value">groove</span></code>, <code class="lang-scss"><span class="hljs-value">ridge</span></code>, <code class="lang-scss"><span class="hljs-value">inset</span></code>, <code class="lang-scss"><span class="hljs-value">outset</span></code>.</p>
 <p>Du kan sette på kantlinjer på alle slags elementer, vi prøver litt mer.</p>
 </section>
 </section>
 <section id="step-3-ider-og-klasser" class="level1 activity">
 <h1>Step 3: IDer og klasser</h1>
-<p>Vi ønsker å lage et kontaktavsnitt som er <strong>uthevet</strong>. Vi kan ikke bruke <code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span></code> tag fordi det vil endre alle andre paragrafer også. For å gjøre dette må vi legge til en stil for disse egenskapene. For å lage denne stilen må vi lage noe som kalles en ID. Vi trenger da følgende HTML:</p>
-<pre class="sourceCode html"><code class="sourceCode html lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>  <span class="hljs-attribute">id</span> =<span class="hljs-value">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre>
+<p>Vi ønsker å lage et kontaktavsnitt som er <strong>uthevet</strong>. Vi kan ikke bruke <code class="lang-apache"><span class="hljs-tag">&lt;p&gt;</span></code> tag fordi det vil endre alle andre paragrafer også. For å gjøre dette må vi legge til en stil for disse egenskapene. For å lage denne stilen må vi lage noe som kalles en ID. Vi trenger da følgende HTML:</p>
+<pre class="sourceCode html"><code class="sourceCode html lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>  <span class="hljs-attribute">id</span> =<span class="hljs-value">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre>
 <p>Nå kan vi endre stilen til IDen slik:</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-id">#uthevet</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
@@ -84,9 +92,9 @@
 <section id="lagre-og-se-det-i-nettleseren.-4" class="level2 save">
 <h2><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>En ID er unik og kan bare bli brukt en gang per side. Så hva gjør vi hvis du ønsker å lage to paragrafer med større skrift? Dette kan vi løse ved å bruke klasser. Det første vi må gjøre er å gi teksten klassenavnet for den teksten vi ønsker å gjøre større.</p>
-<pre class="sourceCode html"><code class="sourceCode html lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre class="sourceCode html"><code class="sourceCode html lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Takk!<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span></code></pre>
-<p>Deretter setter vi stilen slik (legg merke til at vi bruker <code>.</code> i stedet for <code class="lang-python"><span class="hljs-comment">#</span></code>):</p>
+<p>Deretter setter vi stilen slik (legg merke til at vi bruker <code class="lang-erlang">.</code> i stedet for <code class="lang-vala"><span class="hljs-preprocessor">#</span></code>):</p>
 <pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-class">.stor</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">24px</span></span></span>;
 }</span></code></pre>
@@ -100,4 +108,4 @@
 </ul>
 </section>
 </section>
-</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/script.min.js"></script></body></html>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

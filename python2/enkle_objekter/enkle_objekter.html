@@ -1,0 +1,143 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Enkle objekter | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span> Hjem</a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Enkle objekter</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/enkle_objekter/enkle_objekter.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>I denne oppgaven skal vi gi en enkel innføring til klasser og objekter (ordene forklares senere i teksten).</p>
+</section>
+<section id="ordbøker" class="level1 activity">
+<h1>Ordbøker</h1>
+</section>
+<section id="section" class="level1 protip">
+<h1></h1>
+<p>Tenk deg at du skal lage en sirkel, og ønsker å lagre variabler som beskriver radius og farge. Ved hjelp av ordbøker kan dette gjøres slik:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">circle = {
+    <span class="hljs-string">"radius"</span> : <span class="hljs-number">3</span>,
+    <span class="hljs-string">"color"</span> : <span class="hljs-string">"red"</span>
+}</code></pre>
+<p>Vi kan også hente ut og endre variablene:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp"><span class="hljs-preprocessor"># endrer radiusen til <span class="hljs-number">5</span></span>
+circle[<span class="hljs-string">"radius"</span>] = <span class="hljs-number">5</span>
+
+<span class="hljs-preprocessor"># skriver ut fargen på sirkelen</span>
+print(circle[<span class="hljs-string">"color"</span>])</code></pre>
+<p>Hva om vi ønsker å lage en variabel som regner ut arealet til sirkelen? Vi kan for eksempel lage en funksjon <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">circle_area</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">import</span> math
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">circle_area</span><span class="hljs-params">(circle)</span>:</span>
+    radius = circle[<span class="hljs-string">"radius"</span>]
+    <span class="hljs-comment"># formula: A = pi * r * r</span>
+    area = math.pi * radius * radius
+    <span class="hljs-keyword">return</span> area</code></pre>
+<p>Så kaller vi funksjonen:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-lisp">print<span class="hljs-list">(<span class="hljs-keyword">circle_area</span><span class="hljs-list">(<span class="hljs-keyword">circle</span>)</span>)</span></code></pre>
+</section>
+<section id="klasser-og-objekter" class="level1 activity">
+<h1>Klasser og objekter</h1>
+</section>
+<section id="section-1" class="level1 protip">
+<h1></h1>
+<p>Vi ønsker å bruke <strong>objekter</strong> i stedet for ordbøker i de neste spillene våre. Vi kan la et <code class="lang-mathematica"><span class="hljs-keyword">Circle</span></code>-objekt ha to variable <code>radius</code> og <code class="lang-dos"><span class="hljs-built_in">color</span></code>. En <strong>klasse</strong> er en slags ‘mal’ for et objekt. Klassen forteller oss hva slags verdier objektet kan ha. Vi kan lage en <code class="lang-mathematica"><span class="hljs-keyword">Circle</span></code>-klasse, også lage et objekt av typen <code class="lang-mathematica"><span class="hljs-keyword">Circle</span></code> som vi kaller <code class="lang-mel"><span class="hljs-keyword">circle</span></code> basert på klassen.</p>
+<p>Dette er enklere å forstå med ett eksempel:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp"><span class="hljs-preprocessor"># Vi lager Circle-klassen:</span>
+<span class="hljs-keyword">class</span> Circle:
+    radius = <span class="hljs-number">3</span>
+    color = <span class="hljs-string">"red"</span>
+
+<span class="hljs-preprocessor"># Så lager vi circle-objektet</span>
+circle = Circle()</code></pre>
+<p>Vi lager først <code class="lang-mathematica"><span class="hljs-keyword">Circle</span></code>-klassen, før vi så lager et <code class="lang-mathematica"><span class="hljs-keyword">Circle</span></code>-objekt som vi kaller for <code class="lang-mel"><span class="hljs-keyword">circle</span></code>. <code class="lang-coffeescript"><span class="hljs-class"><span class="hljs-keyword">class</span></span></code>-nøkkelordet forteller datamaskinen at nå lager vi en klasse, du kan sammenlikne det med f.eks. <code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span></span></code> som forteller datamaskinen at nå kommer en funksjon.</p>
+<p>Vi kan hente ut og endre variablene til objektet:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-mel"># Endrer på radiusen
+<span class="hljs-keyword">circle</span>.radius = <span class="hljs-number">5</span>
+
+# Skriver ut fargen
+<span class="hljs-keyword">print</span>(<span class="hljs-keyword">circle</span>.<span class="hljs-keyword">color</span>)</code></pre>
+<p>Nå ønsker vi å lage en funksjon som kan regne ut arealet til sirkelen. Vi kan lage denne funksjonen som en del av klassen:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">import</span> math
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>:</span>
+    radius = <span class="hljs-number">3</span>
+    color = <span class="hljs-string">"red"</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(self)</span>:</span>
+        area = math.pi * self.radius * self.radius
+        <span class="hljs-keyword">return</span> area</code></pre>
+<p><strong>Legg merke til innrykket av <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">area</span><span class="hljs-params">()</span></span></code> i eksempelet over!</strong></p>
+<p>Så kaller vi funksjonen:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-lisp">print<span class="hljs-list">(<span class="hljs-keyword">circle</span>.area<span class="hljs-list">()</span>)</span></code></pre>
+<p>Du lurer kanskje på hvorfor vi brukte <code class="lang-crystal"><span class="hljs-keyword">self</span>.radius</code> i funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">area</span><span class="hljs-params">()</span></span></code>? Dette er fordi vi sier at vi vil bruke <code>radius</code>-variabelen som er en del av klassen. Du må alltid bruke <code class="lang-crystal"><span class="hljs-keyword">self</span></code> når du skal bruke funksjoner eller variabler du har lagd i klassen.</p>
+<p>Som vi ser så er det ikke så stor forskjell mellom bruk av funksjoner og klasser:</p>
+<div class="col-sm-6">
+<p><strong>Ordbøker</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">import</span> math
+
+circle = {
+    <span class="hljs-string">"radius"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">"color"</span>: <span class="hljs-string">"red"</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">circle_area</span><span class="hljs-params">(circle)</span>:</span>
+    area = math.pi * circle[<span class="hljs-string">"radius"</span>] ** <span class="hljs-number">2</span>
+    <span class="hljs-keyword">return</span> area
+
+
+
+
+circle[<span class="hljs-string">"radius"</span>] = <span class="hljs-number">5</span>
+print(circle[<span class="hljs-string">"color"</span>])
+print(circle_area(circle))</code></pre>
+</div>
+<div class="col-sm-6">
+<p><strong>Klasser</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">import</span> math
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>:</span>
+    radius = <span class="hljs-number">3</span>
+    color = <span class="hljs-string">"red"</span>
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(self)</span>:</span>
+        area = math.pi * self.radius ** <span class="hljs-number">2</span>
+        <span class="hljs-keyword">return</span> area
+
+
+circle = Circle()
+
+circle.radius = <span class="hljs-number">5</span>
+print(circle.color)
+print(circle.area())</code></pre>
+</div>
+<p>Vi kommer dermed til å bruke klasser i de neste oppgavene - det er minst like enkelt som ordbøker, og man kan gjøre mer avanaserte ting med klasser.</p>
+</section>
+<section id="section-2" class="level1 check">
+<h1></h1>
+<p>Nå kommer det et program som er skrevet ved bruk av ordbøker. Du skal prøve å “oversette” dette til et program som bruker klasser.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python">rectangle = {
+    <span class="hljs-string">"width"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-string">"length"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">"color"</span>: <span class="hljs-string">"blue"</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rectangle_area</span><span class="hljs-params">(rectangle)</span>:</span>
+    area = rectangle[<span class="hljs-string">"width"</span>] * rectangle[<span class="hljs-string">"length"</span>]
+    <span class="hljs-keyword">return</span> area
+
+rectangle[<span class="hljs-string">"width"</span>] = <span class="hljs-number">10</span>
+print(rectangle[<span class="hljs-string">"color"</span>])
+print(rectangle_area(rectangle))</code></pre>
+</section>
+<section id="test-programmet-ditt" class="level1 flag">
+<h1>Test programmet ditt</h1>
+<p>Programmet over skriver ut det følgende:</p>
+<pre><code class="lang-armasm"><span class="hljs-keyword">blue
+</span><span class="hljs-number">50</span></code></pre>
+<p>Pass på at din “oversettelse” gjør det samme.</p>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Ole Kristian Pedersen, Kodeklubben Trondheim</p>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>
