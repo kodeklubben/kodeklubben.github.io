@@ -1,0 +1,205 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Astrokatt | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default"><span class="hidden-xs">Lær Kidsa Koding</span><span class="visible-xs">LKK</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Astrokatt</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Novice</span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/astrokatt/astrokatt.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>Katten vår har så lyst å være en astronaut, la oss se om vi kan hjelpe ham? Underveis vil vi lære hvordan vi flytter figurer rundt på skjermen, og hvordan katter blir påvirket av gravitasjonskreftene fra jorden.</p>
+<figure>
+<img src="astrokatt.png" />
+</figure>
+</section>
+<section id="steg-1-en-flyvende-katt" class="level1 activity">
+<h1>Steg 1: En flyvende katt</h1>
+<p>Vi begynner prosjektet vårt med å få katten til å fly!</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start et nytt prosjekt. Du vil se en katt som venter på å bli programmert!</p></li>
+<li><p>Prøv å klikk på de blå klossene midt på skjermen. For eksempel, om du klikker på</p>
+<pre class="blocks"><code>    gå (10) steg</code></pre>
+<p>skal du se at katten flytter litt på seg, og om du klikker på</p>
+<pre class="blocks"><code>    vend høyre (15) grader</code></pre>
+<p>vil den snu seg! Disse klossene er kommandoer vi kan gi til katten!</p></li>
+<li><p>Legg merke til at at over de blå klossene er det flere kategorier av kommandoer i forskjellige farger, for eksempel <code class="blocklooks">Utseende</code> og <code class="blocksound">Lyd</code>. Klikk på disse kategoriene og prøv noen av klossene du finner!</p></li>
+<li><p>For å sette sammen flere kommandoer til et skript kan du dra klosser til det store tomme området til høyre på skjermen.</p>
+<p>Prøv å pusle sammen disse klossene (bruk fargene for å finne riktig kategori):</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        gå (10) steg
+        vend høyre (15) grader
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p>Legg merke til at den første klossen sier at noe skal skje når vi klikker et grønt flagg. Over vinduet med katten til venstre er det et grønt flagg. <strong>Klikk på det!</strong></p>
+<ul>
+<li><p>Du skal se at katten flytter seg rundt i en sirkel. Les koden du laget en gang til. Skjønner du hvorfor katten går i sirkel?</p></li>
+<li><p>Prøv å endre tallene i koden din. Kan du få katten til å gå saktere? I større sirkler?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Nå skal vi endre litt på koden slik at vi kan kontrollere hvordan katten beveger seg. I kategorien <code class="blocksensing">Sansning</code> finnes en kloss som reagerer når en tast er trykket. Den kan vi bruke til å styre katten med piltastene.</p>
+<p>Bytt ut klossene i koden din slik at den blir seende slik ut:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        hvis (tast [pil høyre v] trykket?)
+            vend høyre (5) grader
+        slutt
+        hvis (tast [pil venstre v] trykket?)
+            vend venstre (5) grader
+        slutt
+        hvis (tast [pil opp v] trykket?)
+            gå (5) steg
+        slutt
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-1" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Kan du styre katten rundt ved å bruke piltastene?</p></li>
+<li><p>Forstår du hvordan katten kontrolleres?</p></li>
+<li><p>Kan du få katten til å fly raskere eller saktere ved å endre i koden?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-ut-i-verdensrommet" class="level1 activity">
+<h1>Steg 2: Ut i verdensrommet!</h1>
+<p>Nå skal vi sende den flyvende katten ut i verdensrommet.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Klikk på <img src="../bilder/velg-bakgrunn.png" alt="Velg ny bakgrunn" /> nederst til venstre på skjermen for å hente inn en ny bakgrunn. Velg bakgrunnen <code>stars</code> som du finner i kategorien <code>Romfart</code>.</p></li>
+<li><p>Vi skal også gi katten en liten oksygentank, siden den flyr rundt ute i rommet. Klikk på katten i figurvinduet og deretter på fanen <code>Drakter</code> øverst på skjermen.</p></li>
+<li><p>Velg først en litt lys farge. Klikk deretter på Ellipse-verktøyet til høyre på skjermen, og tegn en ellipse rundt hodet på katten.</p>
+<figure>
+<img src="katt_oksygentank.png" />
+</figure></li>
+</ul>
+<p>Til slutt lager vi også en jordklode, som katten kan fly rundt.</p>
+<ul>
+<li>Klikk på fanen <code>Skript</code> og deretter på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" />. Velg jordklodefiguren <code>Romfart/Earth</code>. Plasser denne litt på siden av skjermen.</li>
+</ul>
+</section>
+<section id="test-prosjektet-2" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li>Flyr katten rundt omkring i verdensrommet?</li>
+</ul>
+</section>
+</section>
+<section id="steg-3-litt-mer-ekte" class="level1 activity">
+<h1>Steg 3: Litt mer ekte …</h1>
+<p>Vi skal nå legge på noen effekter som gjør at spillet virker litt mer realistisk.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Først kan vi få jordkloden til å rotere. Dette er enkelt, vi har jo allerede gjort det for katten! Pass på at jordkloden er merket i figurlisten, og lag deretter dette skriptet:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        vend høyre (1) grader
+    slutt</code></pre></li>
+<li><p>Videre skal vi gjøre det slik at det ser ut som om katten flyr mot jorda. Det gjør vi ved å endre størrelsen slik at katten blir mindre jo nærmere den kommer jordkloden.</p>
+<p>Klikk på katten i figurlisten. Legg <code class="blocklooks">sett størrelse til</code> nederst i <code class="blockcontrol">for alltid</code>-løkka, slik at størrelsen på katten er avhengig av avstanden til jordkloden:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    for alltid
+        hvis (tast [pil høyre v] trykket?)
+            vend høyre (5) grader
+        slutt
+        hvis (tast [pil venstre v] trykket?)
+            vend venstre (5) grader
+        slutt
+        hvis (tast [pil opp v] trykket?)
+            gå (5) steg
+        slutt
+        sett størrelse til (avstand til [Earth v])%
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-3" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Blir katten mindre når den nærmer seg jorda?</p></li>
+<li><p>Ser det ut som om den flyr ned mot jorda, og kommer tilbake til oss?</p></li>
+</ul>
+</section>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>For å gjøre det enda mer realistisk vil vi forandre hvor langt katten flytter seg med. Når den er langt unna oss flytter den seg ikke like mange steg. Bytt ut</p>
+<pre class="blocks"><code>    gå (5) steg</code></pre>
+<p>med</p>
+<pre class="blocks"><code>    gå ((avstand til [Earth v]) / (50)) steg</code></pre>
+<p>Denne klossen er litt komplisert fordi den er satt sammen av tre forskjellige klosser. Se på fargene så finner du de riktige klossene.</p></li>
+<li><p>Av og til vil katten fly bak jordkloden. For å slippe det kan du legge klossen <code class="blocklooks">legg øverst</code> først i katten sitt skript.</p></li>
+</ul>
+</section>
+<section id="test-prosjektet-4" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Flyr katten rundt omkring i verdensrommet? Kan du få den til å lande på jorda?</p></li>
+<li><p>Prøv også å flytte jordkloden til andre steder på skjermen. Blir det annerledes å fly med katten nå?</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-gravitasjon" class="level1 activity">
+<h1>Steg 4: Gravitasjon</h1>
+<p>Gravitasjon er kraften som jorda trekker på alle katter og mennesker med. Vi kan la astrokatten vår bli påvirket av gravitasjonen også.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag et nytt skript på katten. Du kan bare legge klossene ved siden av det skriptet du allerede har laget. Skriptet skal se slik ut:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    gå til x: (-200) y: (150)
+    for alltid
+        pek mot [Earth v]
+        gå (1) steg
+    slutt</code></pre></li>
+<li><p>Når du tester programmet ditt ved å klikke på det grønne flagget, vil du se at katten svever mot jordkloden. Gravitasjonen trekker på den!</p></li>
+<li><p>MEN, vi har et problem: Vi kan ikke lengre styre katten! Hva har skjedd?</p>
+<p>I det nye skriptet sier vi at katten <code class="blockcontrol">for alltid</code> skal <code class="blockmotion">peke mot</code> jordkloden. Da hjelper det jo ikke at vi i det andre skriptet sier at katten skal snu seg.</p></li>
+<li><p>Det er ingen kommando i Scratch for å flytte en figur mot en annen. Derfor må vi peke katten mot jordkloden og deretter flytte den. Men vi kan få programmet til å virke igjen, hvis vi bare husker hvilken retning katten pekte før vi snudde den.</p>
+<p>For at programmer skal huske ting bruker vi variabler. Lag en variabel ved å klikke på <code class="blockdata">Data</code>-kategorien og deretter på <code>Lag en variabel</code>. Kall variabelen <code>katteretning</code>.</p></li>
+<li><p>Vi kan nå bruke denne variabelen til å huske hvilken retning katten pekte. Endre skriptet ditt ved å legge til to nye klosser:</p>
+<pre class="blocks"><code>    når grønt flagg klikkes
+    gå til x: (-200) y: (150)
+    for alltid
+        sett [katteretning v] til (retning)
+        pek mot [Earth v]
+        gå (1) steg
+        pek i retning (katteretning)
+    slutt</code></pre></li>
+</ul>
+</section>
+<section id="test-prosjektet-5" class="level2 flag">
+<h2>Test prosjektet</h2>
+<p><strong>Klikk på det grønne flagget.</strong></p>
+<ul>
+<li><p>Kan du styre katten igjen?</p></li>
+<li><p>Hvis du ikke trykker på noen taster, vil katten da falle ned mot jorden?</p></li>
+<li><p>Legg merke til at hvis katten har kommet veldig nært jorden klarer den ikke å fly tilbake til oss. Det er fordi gravitasjonen er kraftigere jo nærmere jorda man er. Og når katten kommer nært jorda har den ikke nok hastighet til å unnslippe jordas gravitasjon.</p>
+<p>Hvordan kan du endre på jordas gravitasjon og kattens hastighet?</p></li>
+</ul>
+</section>
+<section id="lagre-spillet" class="level2 save">
+<h2>Lagre spillet</h2>
+<p>Da har vi en katt som kan fly rundt i verdensrommet. Eksperimenter gjerne med å utvide spillet ditt. Når du er ferdig kan du klikke på <code>Legg ut</code>-knappen. Da vil spillet bli lagt ut på Scratch-hjemmesiden din slik at andre kan spille det.</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse("pre.blocks");
+});</script></body></html>
