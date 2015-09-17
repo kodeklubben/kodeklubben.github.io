@@ -10,58 +10,24 @@ function relative(url) {
 <h1>Introduksjon:</h1>
 <p>I denne modulen skal vi lære et programmeringsspråk som heter Python. Personen som laget det kalte det opp etter sitt favorittprogrammet på TV: Monthy Pythons Flyvende Cirkus. Python brukes av mange forskjellige programmerere til mange forskjellige ting. Python brukes av YouTube, NASA, CERN og andre. Hvis din Kodeklubb har en Raspperry Pi kan du bruke Python til å programmere den. Mange elsker Python fordi de synes det er lett å lese (i motsetning til språk de synes er vanskeligere å lese). Her er meningene mange, når du lærer flere språk får du sikkert også sterke meninger om dem. Å være i stand til å lese kode er viktig for en programmerer, kanskje like viktig som å kunne skrive den.</p>
 </section>
-<section id="steg-0-åpne-python-editoren" class="level1 activity">
-<h1>Steg 0: Åpne Python-editoren</h1>
-<p>Hvis Python allerede er installert på maskinen din er det bare å begynne.</p>
-<ul>
-<li>På Windows, finn IDLE i start-menyen</li>
-<li>På Mac OS X, åpne Terminal.app og skriv <code>idle</code> og trykk enter.</li>
-<li>På Linux, åpne opp en Terminal, skrive <code>idle</code> og trykk enter.</li>
-</ul>
-<p>Hvis du ikke har Python installert fra før - ikke få panikk! Du kan laste ned siste versjon av Python fra <a href="http://www.python.org/getit/">http://www.python.org/</a>. Nøyaktig hvilken versjon det er spiller liten rolle, men vi bruker Python 3, så versjonsnummeret bør begynne med 3 (og ikke 2).</p>
-<p>Når IDLE starter ser du et Output-vindu som heter <code class="lang-nginx"><span class="hljs-title">Python</span> Shell</code>. Vi må åpne et nytt vindu for å skrive kode i. Trykk <code class="lang-gradle"><span class="hljs-keyword">File</span> -&gt; <span class="hljs-keyword">New</span> <span class="hljs-keyword">File</span></code> så er du klar for steg 1. Pass på at du har begge vinduene synlige.</p>
-</section>
-<section id="steg-1-hello-world" class="level1 activity">
-<h1>Steg 1: Hello, World!</h1>
-<p><code class="lang-erlang-repl"><span class="hljs-variable">Hello</span>, <span class="hljs-variable">World</span><span class="hljs-exclamation_mark">!</span></code> betyr <code class="lang-erlang-repl"><span class="hljs-variable">Hei</span>, <span class="hljs-variable">Verden</span><span class="hljs-exclamation_mark">!</span></code> og brukes ofte for å vise frem et nytt programmeringsspråk. Alt man skal få til er å få datamaskinen til å skrive akkurat disse ordene på skjermen.</p>
+<section id="steg-1-hei-skilpadde" class="level1 activity">
+<h1>Steg 1: Hei, Skilpadde!</h1>
+<p>Nå skal vi ha det litt gøy med skilpadder. En skilpadde er en liten robot som tegner seg selv på skjermen din, vi kan få den til å bevege seg rundt med Python-kommandoer.</p>
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Åpne IDLE, editoren som følger med Python. Vi kommer til å skrive all koden vår i denne editoren. Når du åpner den ser du et Output-vindu. I dette vinduet kommer feilmeldinger og resultater til å dukke opp.</p></li>
-<li><p>Hvis du ikke har gjort det ennå, velg <code class="lang-gradle"><span class="hljs-keyword">File</span> -&gt; <span class="hljs-keyword">New</span> <span class="hljs-keyword">File</span></code>. Et tomt vindu dukker opp, med ‘<em>Untitled</em>’ i tittelfeltet. Du skal ha to vinduer åpne nå, et for å skrive programmet ditt i, og et annet for å vise resultater i. Pass på at du skriver i det riktige!</p></li>
-<li><p>Skrive følgende kode inn i det nye vinduet:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hello, World!"</span>)</span></span></code></pre></li>
-<li><p>Dobbeltsjekk at du ikke er i Output-vinduet og lagre koden din.</p></li>
-</ul>
-<p>Du kan lagre ved å velge <code class="lang-fortran"><span class="hljs-keyword">File</span> -&gt; <span class="hljs-keyword">Save</span></code>. Når du blir bedt om å skrive inn et filnavn, skriv hello.py, og lagre filen på skrivebordet ditt. Så kan du velge <code class="lang-mathematica"><span class="hljs-keyword">Run</span> -&gt; <span class="hljs-keyword">Run</span> <span class="hljs-keyword">Module</span></code>.</p>
-<p>Gratulerer med ditt første Python-program :D (PS! Du kan be det skrive hva du vil, kanskje kan du prøve å få det til å si hei til deg selv?)</p>
-<section id="tips" class="level3 protip">
-<h3>Tips</h3>
-<ul>
-<li>På <strong>Windows</strong> og <strong>Ubuntu</strong>, bruk Ctrl-N for å lage nye shell-vinduer, bruk Ctrl-S for å lagre og bruk F5 for å kjøre programmet ditt. På noen maskiner må du kanskje trykke fn-knappen også.</li>
-<li>På <strong>Mac OS X</strong>, cmd-N for å lage nye shell vinduer, Command-S for å lagre, og hold nede fn-knappen og trykk F5 for å kjøre programmet ditt.</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="steg-2-hei-skilpadde" class="level1 activity">
-<h1>Steg 2: Hei, Skilpadde!</h1>
-<p>Nå skal vi ha det litt gøy med skilpadder. En skilpadde er en liten robot som tegner seg selv på skjermen din, vi kan få den til å bevege seg rundt med Python-kommandoer.</p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
-<ul>
-<li><p>Åpne et nytt kodevindu (Fra <code class="lang-delphi"><span class="hljs-keyword">File</span></code> menyen) og skriv dette:</p>
+<li><p>Åpne et nytt kodevindu og skriv dette:</p>
 <pre class="sourceCode python"><code class="sourceCode python lang-capnproto"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 forward(<span class="hljs-number">100</span>)</code></pre></li>
 <li><p>Lagre programmet ditt som myturtle.py og velg <code class="lang-mathematica"><span class="hljs-keyword">Run</span> -&gt; <span class="hljs-keyword">Run</span> <span class="hljs-keyword">Module</span></code>. Ser du hvordan skilpadden beveget seg 100 punkter fremover på skjermen? Skilpadden har en penn festet til seg, så den tegner linjer når den beveger seg rundt.</p></li>
 </ul>
-<section id="tips-1" class="level3 protip">
+<section id="tips" class="level3 protip">
 <h3>Tips</h3>
 <p>Python-filer skal alltid ha filnavn som slutter med <code class="lang-asciidoc"><span class="hljs-title">.py</span></code>.</p>
 </section>
 </section>
-<section id="sjekkliste-2" class="level2 check">
+<section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>La oss få skilpadden til å bevege seg rundt på skjermen! Forsøk å bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">backward</span><span class="hljs-params">(distance)</span></span></code> i tillegg til å snu den ved å bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(angle)</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">(angle)</span></span></code>. Instruksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">backward</span><span class="hljs-params">(<span class="hljs-number">20</span>)</span></span></code> forteller for eksempel skilpadden at den skal bevege seg bakover 20 pixler, og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span></code> forteller den at den skal snu seg 90 grader til høyre. Du kan gi den mer enn en instruksjon om gangen, de blir utført i rekkefølge.</p>
@@ -114,10 +80,10 @@ Vest      <span class="hljs-string">|      Øst</span>
 </section>
 </section>
 </section>
-<section id="steg-3-tegne-figurer" class="level1 activity">
-<h1>Steg 3: Tegne figurer!</h1>
+<section id="steg-2-tegne-figurer" class="level1 activity">
+<h1>Steg 2: Tegne figurer!</h1>
 <p>La oss lage et kvadrat ved å fortelle skilpadden hvordan den skal bevege seg rundt.</p>
-<section id="sjekkliste-3" class="level2 check">
+<section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne en ny fil i IDLE og skriv inn følgende kode:</p>
@@ -155,7 +121,7 @@ Vest      <span class="hljs-string">|      Øst</span>
 <p>Hva er yndlingsfargen din? Du kan endre fargen på linjene ved å bruke funksjonen <code>pencolor</code> (Python staver på amerikansk, og amerikanerne staver colour uten u.). Du kan også endre størrelsen på pennen ved å bruke <code>pensize</code>:</p>
 </section>
 </section>
-<section id="sjekkliste-4" class="level2 check">
+<section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre koden fra eksemplet over til å se ut som det neste eksemplet, ved å legge til disse nye kommandoene:</p>
@@ -179,10 +145,10 @@ Vest      <span class="hljs-string">|      Øst</span>
 </ul>
 </section>
 </section>
-<section id="steg-4-gjenta-deg-selv-med-en-for-løkke" class="level1 activity">
-<h1>Steg 4: Gjenta deg selv (med en for-løkke)</h1>
+<section id="steg-3-gjenta-deg-selv-med-en-for-løkke" class="level1 activity">
+<h1>Steg 3: Gjenta deg selv (med en for-løkke)</h1>
 <p>Det siste programmet var de samme kommandoene igjen og igjen. Istedenfor å skrive dem ned, la oss be maskinen om å gjenta dem for oss. Du har vært borti <em>iterasjon</em> i Scratch ved å bruke <code class="lang-monkey"><span class="hljs-keyword">Forever</span></code> og <code class="lang-cal"><span class="hljs-keyword">Repeat</span></code>/<code class="lang-cal"><span class="hljs-keyword">Repeat</span> <span class="hljs-keyword">until</span></code> blokker. I Python brukes <strong>for-løkker</strong> når du har kode som du vil gjenta n ganger. I dette eksemplet vil vi gjenta koden (den som er skjøvet inn) 4 ganger fordi en firkant har 4 sider.</p>
-<section id="sjekkliste-5" class="level2 check">
+<section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne en ny fil og skriv inn følgende:</p>
@@ -236,10 +202,10 @@ angle = <span class="hljs-number">90</span>
 <p>Hvis du snur seks ganger, hvor mange ganger må du snu for at det skal bli 360 grader? Prøv med forskjellige tall og se hva som skjer.</p>
 </section>
 </section>
-<section id="steg-5-snu-snu-snu" class="level1 activity">
-<h1>Steg 5: Snu, snu, snu</h1>
+<section id="steg-4-snu-snu-snu" class="level1 activity">
+<h1>Steg 4: Snu, snu, snu</h1>
 <p>Istedenfor å regne ut vinklene, kan vi ikke heller få datamaskinen til å gjøre det for oss? Python lar deg plusse, trekke fra, gange og dele. Vi kan skrive <code class="lang-cpp">sides = <span class="hljs-number">4</span> + <span class="hljs-number">1</span></code> istedenfor 5, eller <code class="lang-cpp">sides = <span class="hljs-number">4</span> - <span class="hljs-number">1</span></code> istedenfor 3. For multiplikasjon bruker Python <code class="lang-gherkin"><span class="hljs-keyword">*</span></code>, og for divisjon skriver vi <code>/</code>. Hvis vi må snu 360 grader tilsammen, kan vi regne ut vinkelen vi trenger. For en firkant er <code class="lang-cpp"><span class="hljs-number">360</span> / <span class="hljs-number">4</span></code> lik 90, for trekanten er <code class="lang-cpp"><span class="hljs-number">360</span> / <span class="hljs-number">3</span></code> lik 120.</p>
-<section id="sjekkliste-6" class="level2 check">
+<section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Endre programmet ditt til å regne ut vinkelen.</p>
@@ -259,9 +225,9 @@ angle = <span class="hljs-number">360</span>/sides
 </ul>
 </section>
 </section>
-<section id="steg-6-fylte-figurer" class="level1 activity">
-<h1>Steg 6: Fylte figurer</h1>
-<section id="sjekkliste-7" class="level2 check">
+<section id="steg-5-fylte-figurer" class="level1 activity">
+<h1>Steg 5: Fylte figurer</h1>
+<section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi kan be skilpadden om å fylle figurene med en farge ved å bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">begin_fill</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">end_fill</span><span class="hljs-params">()</span></span></code>. Endre koden din til å bruke disse kommandoene:</p>
@@ -288,10 +254,10 @@ end_fill()</code></pre>
 </ul>
 </section>
 </section>
-<section id="steg-7-pennen-går-opp-pennen-går-ned" class="level1 activity">
-<h1>Steg 7: Pennen går opp, pennen går ned</h1>
+<section id="steg-6-pennen-går-opp-pennen-går-ned" class="level1 activity">
+<h1>Steg 6: Pennen går opp, pennen går ned</h1>
 <p>Hvis du vil flytte skilpadden uten at den skal sette spor etter seg, kan du bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">penup</span><span class="hljs-params">()</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">pendown</span><span class="hljs-params">()</span></span></code> for å slå av og på at skilpadden skal tegne.</p>
-<section id="sjekkliste-8" class="level2 check">
+<section id="sjekkliste-7" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Forsøk dette i en ny fil:</p>
@@ -315,8 +281,8 @@ pencolor(<span class="hljs-string">'red'</span>)
 </section>
 </section>
 </section>
-<section id="steg-8-gjør-hva-du-vil" class="level1 activity">
-<h1>Steg 8: Gjør hva du vil!</h1>
+<section id="steg-7-gjør-hva-du-vil" class="level1 activity">
+<h1>Steg 7: Gjør hva du vil!</h1>
 <p>Du kan <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">backward</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">left</span><span class="hljs-params">()</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">right</span><span class="hljs-params">()</span></span></code>, du kan gjenta ting med <code class="lang-stylus"><span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> <span class="hljs-function"><span class="hljs-title">range</span><span class="hljs-params">(<span class="hljs-number">4</span>)</span></span></code>, endre farger, endre fart og til og med fylle figurer!</p>
 <p>Kan du tegne et hus, en fugl? En slange? En katt? En hund? En løve? Du kan kombinere figurer og se hva du kan lage. Kan du tegne en robot?</p>
 </section>
