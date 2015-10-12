@@ -1,0 +1,331 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Sprettende ball | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default"><span class="hidden-xs">Lær Kidsa Koding</span><span class="visible-xs">LKK</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Sprettende ball</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Novice</span></div><div class="course"><img src="../logo-white.png"/><span>Processing</span></div><div class="pdf"><a href="/processing/sprettende_ball/sprettende_ball.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon:</h1>
+<p>I denne modulen skal vi lære et programmeringsspråk som heter Processing. Det ble laget for å gjøre programmering lett for designere og andre som ikke har programmert før. Processing egner seg til å lage multimedieprogrammer, spill og liknende. Mange liker Processing fordi det er raskt å lage programmer som vanligvis krever mye arbeid.</p>
+<figure>
+<img src="sprettende_ball.gif" title="ball som spretter opp og ned">
+</figure>
+</section>
+<section id="steg-1-vindu" class="level1 activity">
+<h1>Steg 1: Vindu</h1>
+<p>Nå skal vi begynne helt enkelt med å lage et vindu og fylle det med en bakgrunnsfarge. Dette vil bli grunnlaget for nesten alle programmer som du lager med Processing, så det er et fint sted å starte.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Start Processing og skriv dette:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  size(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  background(<span class="hljs-number">0</span>);
+}</code></pre></li>
+<li>Kjør programmet ved å trykke på pilen <img src="../play.png" title="spill av pil">.</li>
+<li><p>Lagre programmet som Ball ved å velge <strong>File –&gt; Save</strong> i menyen.</p></li>
+</ul>
+<section id="tips-hvordan-skrive-krøllparenteser" class="level3 protip">
+<h3>Tips: Hvordan skrive krøllparenteser { }</h3>
+<p>Her er en oversikt over hvordan man skriver tegn som ofte brukes i Processing og andre programmeringsspråk.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Tegn</th>
+<th style="text-align: left;">Windows/Linux</th>
+<th style="text-align: left;">Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">;</td>
+<td style="text-align: left;">Shift + ,</td>
+<td style="text-align: left;">Shift + ,</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">"</td>
+<td style="text-align: left;">Shift + 2</td>
+<td style="text-align: left;">Shift + 2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">'</td>
+<td style="text-align: left;">' (til høyre for Æ)</td>
+<td style="text-align: left;">' (til venstre for 1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">|</td>
+<td style="text-align: left;">| (til venstre for 1)</td>
+<td style="text-align: left;">Alt + 7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: left;">Shift + 6</td>
+<td style="text-align: left;">Shift + 6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">+</td>
+<td style="text-align: left;">+ (til høyre for 0)</td>
+<td style="text-align: left;">+ (til høyre for 0)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">-</td>
+<td style="text-align: left;">- (til høyre for .)</td>
+<td style="text-align: left;">- (til høyre for .)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">*</td>
+<td style="text-align: left;">Shift + ’</td>
+<td style="text-align: left;">Shift + @ (til høyre for Æ)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">/</td>
+<td style="text-align: left;">Shift + 7</td>
+<td style="text-align: left;">Shift + 7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">[</td>
+<td style="text-align: left;">Alt Gr + 8</td>
+<td style="text-align: left;">Alt + 8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">]</td>
+<td style="text-align: left;">Alt Gr + 9</td>
+<td style="text-align: left;">Alt + 9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">{</td>
+<td style="text-align: left;">Alt Gr + 7</td>
+<td style="text-align: left;">Shift + Alt + 8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">}</td>
+<td style="text-align: left;">Alt Gr + 0</td>
+<td style="text-align: left;">Shift + Alt + 9</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="utforsking" class="level2 try">
+<h2>Utforsking</h2>
+<p>Hva skjer hvis du:</p>
+<ul>
+<li>Endrer <code class="lang-cpp"><span class="hljs-number">640</span></code> i <code class="lang-cpp">size(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>);</code>?</li>
+<li>Endrer <code class="lang-cpp"><span class="hljs-number">480</span></code>?</li>
+<li>Hva om du endrer <code class="lang-cpp"><span class="hljs-number">0</span></code> i <code class="lang-cpp">background(<span class="hljs-number">0</span>);</code>?</li>
+<li>Hva skjer hvis tallet er høyere enn <code class="lang-cpp"><span class="hljs-number">255</span></code>?</li>
+<li>Hva skjer hvis tallet er negativt?</li>
+<li>Før du går videre, fjern endringene du gjorde i utforskingen.</li>
+</ul>
+</section>
+<section id="forklaring-av-koden" class="level2 protip">
+<h2>Forklaring av koden</h2>
+<p>Selv om du har utforsket <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">size</span><span class="hljs-params">(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>)</span></span></code> og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">background</span><span class="hljs-params">(<span class="hljs-number">0</span>)</span></span></code>, lurer du kanskje på hva resten av koden gjør? Her er en forklaring:</p>
+<ul>
+<li><p><code class="lang-aspectj"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{</code> lager en <em>funksjon</em> som heter setup. Når <code class="lang-processing"><span class="hljs-title">setup</span></code> blir kalt kjøres koden mellom krøllparentesene <code class="lang-clojure"><span class="hljs-collection">{ }</span></code>. Du lurer kanskje på hva en funksjon er og hva det betyr å kalle den? En funksjon er <em>en navngitt del med kode</em>. Den navngitte koden kan kjøres når man trenger det, ved <em>å kalle den</em> slik som dette: <code class="lang-dns">setup()<span class="hljs-comment">;</span></code>. <code class="lang-processing"><span class="hljs-title">setup</span></code> er en spesiell funksjon som alltid kjøres av Processing når du trykker på <img src="../play.png">.</p>
+<p>Noen funksjoner gir tilbake en verdi som resultat når de er ferdige. Typen verdi som returneres står foran navnet på funksjonen. Vi finner <code class="lang-actionscript"><span class="hljs-keyword">void</span></code> foran <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">setup</span><span class="hljs-params">()</span></span></code> som betyr at funksjonene ikke gir noe tilbake. Hvis man eksempelvis ønsket å gi tilbake et heltall, ville man skrevet <code class="lang-aspectj"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">navnetPaMinFunksjon</span><span class="hljs-params">()</span> </span>{</code>. <code class="lang-aspectj"><span class="hljs-keyword">int</span></code> står for <em>integer</em>, som er heltall på engelsk, altså 0, 1, 2, 3, -1, -2, -3, osv.</p></li>
+<li><p><code class="lang-cpp">size(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>);</code> er et kall på funksjonen <code class="lang-fortran"><span class="hljs-built_in">size</span></code> som åpner et vindu med bredde 640 <a href="https://no.wikipedia.org/wiki/Piksel">piksler</a> og høyde 480 piksler. Legg merke til at du sender verdier inn til size med å legge verdiene mellom <code class="lang-clojure"><span class="hljs-list">( )</span></code>. <code class="lang-dns"><span class="hljs-comment">;</span></code> forteller at setningen er ferdig. Dette gjør det mulig å ha flere setninger på samme linje (<code class="lang-cpp">size(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>); background(<span class="hljs-number">3</span>);</code>) eller fordele en lang setning utover flere linjer.</p></li>
+<li><p><code>}</code> på linje tre betyr at funksjonen <code class="lang-processing"><span class="hljs-title">setup</span></code> er ferdig.</p></li>
+<li><p><code class="lang-aspectj"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{</code> på linje 5 betyr at vi lager en funksjon som heter <code class="lang-processing"><span class="hljs-title">draw</span></code>. <code class="lang-processing"><span class="hljs-title">draw</span></code> er spesiell, den blir kjørt om og om igjen så lenge programmet ditt kjører.</p></li>
+<li><p><code class="lang-cpp">background(<span class="hljs-number">0</span>);</code> setter bakgrunnsfargen i vinduet. Tallet <code class="lang-cpp"><span class="hljs-number">0</span></code> betyr at bakgrunnen skal være svart. Hvit har verdien <code class="lang-cpp"><span class="hljs-number">255</span></code>. Tallene mellom 0-255 gir forskjellige gråtoner. Senere skal vi se hvordan vi tegner farger.</p></li>
+<li><p><code>}</code> på siste linje betyr at funksjonen <code class="lang-processing"><span class="hljs-title">draw</span></code> er ferdig.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-sirkel" class="level1 activity">
+<h1>Steg 2: Sirkel</h1>
+<p>Siden denne oppgaven skal handle om en sprettende ball, er det på tide at vi begynner å tegne. La oss tegne en sirkel midt i vinduet.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Endre <code class="lang-processing"><span class="hljs-title">draw</span></code> til følgende uten å endre <code class="lang-processing"><span class="hljs-title">setup</span></code>:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  background(<span class="hljs-number">0</span>);
+  ellipse(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+}</code></pre></li>
+<li><p>Lagre med <strong>Ctrl+S</strong> og kjør programmet med <strong>Ctrl+R</strong>. Du skal nå se en hvit sirkel midt i vinduet som i bildet under.</p></li>
+</ul>
+<figure>
+<img src="sirkel1.png" title="En hvit sirkel på svart bakgrunn midt i et vindu">
+</figure>
+<ul>
+<li><p>Legg til en sirkel til og kjør programmet igjen:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  background(<span class="hljs-number">0</span>);
+  ellipse(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+  ellipse(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
+}</code></pre></li>
+<li><p>La oss legge til en siste sirkel og kjøre programmet enda en gang:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  background(<span class="hljs-number">0</span>);
+  ellipse(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+  ellipse(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
+  ellipse(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+}</code></pre></li>
+</ul>
+<figure>
+<img src="sirkel2.png" title="Tre hvite sirkler på svart bakgrunn: en stor øverst til venstre, en middels stor midt i vinduet og en liten nederst til høyre">
+</figure>
+</section>
+<section id="forklaring-av-koden-1" class="level2 protip">
+<h2>Forklaring av koden</h2>
+<p>Klarer du knekke koden for hvordan <code class="lang-processing"><span class="hljs-built_in">ellipse</span></code> fungerer?</p>
+<ul>
+<li>Det første tallet bestemmer hvor langt til høyre i vinduet sirkelen skal tegnes opp.</li>
+<li>Det andre tallet bestemmer hvor langt ned i vinduet den skal tegnes opp.</li>
+<li>Det tredje tallet bestemmer hvor bred sirkelen skal være.</li>
+<li>Det siste tallet bestemmer hvor høy sirkelen er.</li>
+</ul>
+<p>Det siste hørtes kanskje rart ut? En sirkel er jo like bred som den er høy! En ellipse som er like høy som den er bred, er en sirkel, men ellipser kan også være bredere enn de er høye, eller høyere enn de er brede. Derfor heter funksjonen <code class="lang-processing"><span class="hljs-built_in">ellipse</span></code> og ikke <code class="lang-mel"><span class="hljs-keyword">circle</span></code>.</p>
+<figure>
+<img src="sirkel3.png" title="Tre hvite sirkler på svart bakgrunn med piler som viser X- og Y-aksen.">
+</figure>
+<p>I bildet ovenfor vises også området utenfor bilderammen og to piler <strong>X</strong> og <strong>Y</strong>.</p>
+<ul>
+<li>Det første tallet i <code class="lang-processing"><span class="hljs-built_in">ellipse</span></code> angir posisjon langs X-aksen, vist med X-pilen.</li>
+<li>Det andre tallet i <code class="lang-processing"><span class="hljs-built_in">ellipse</span></code> angir posisjon lans Y-aksen, vist med Y-pilen.</li>
+</ul>
+<p>Der pilene krysser hverandre har både X og Y verdien <code class="lang-cpp"><span class="hljs-number">0</span></code>. Pilene strekker seg til kanten av vinduet med verdiene <code class="lang-cpp"><span class="hljs-number">640</span></code> for X og <code class="lang-cpp"><span class="hljs-number">480</span></code> for Y. Dette ble bestemt av <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">size</span><span class="hljs-params">(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>)</span></span></code>.</p>
+<p><strong>Tips:</strong> Man kan tegne opp ting utenfor bildet med negative tall eller tall som er større enn de som ble brukt i <code class="lang-fortran"><span class="hljs-built_in">size</span></code>.</p>
+</section>
+</section>
+<section id="steg-3-variabler" class="level1 activity">
+<h1>Steg 3: Variabler</h1>
+<p>Til nå har vi brukt faste tall overalt. Dette fungerer ikke alltid bra. For eksempel, hva skjer hvis vi endrer størrelsen på vinduet? Vil den første sirkelen være i midten? Og hvordan kan vi få sirklene skal bevege på seg?</p>
+<p>Dette løser vi ved hjelp av noe som heter <em>variabler</em>. En variabel er en verdi som har blitt gitt et navn. Vi kan endre på verdien til variabelen, og det er derfor det heter variabel: <em>verdien kan variere</em>.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>La oss begynne med å endre størrelsen på vinduet i <code class="lang-processing"><span class="hljs-title">setup</span></code>:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  size(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
+}</code></pre>
+<p>Legg merke til at to av sirkelene har “flyttet” på seg. De er ikke i midten og høyre bunn av vinduet.</p>
+<figure>
+<img src="variabler1.png" title="De tre hvite sirklene er nå vist på en svart bilderamme som er større enn før.">
+</figure></li>
+<li><p>Vi skal nå ta i bruk to variabler som heter <code class="lang-processing"><span class="hljs-variable">width</span></code> og <code class="lang-processing"><span class="hljs-variable">height</span></code>, altså bredde og høyde. Disse variablene får verdien til størrelsen på vinduet når <code class="lang-fortran"><span class="hljs-built_in">size</span></code> kalles. Endre <code class="lang-processing"><span class="hljs-title">draw</span></code> til å bruke <code class="lang-processing"><span class="hljs-variable">width</span></code> og <code class="lang-processing"><span class="hljs-variable">height</span></code>:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  background(<span class="hljs-number">0</span>);
+  ellipse(width / <span class="hljs-number">2</span>, height / <span class="hljs-number">2</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+  ellipse(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
+  ellipse(width, height, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+}</code></pre>
+<p>Her har vi brukt regnestykkene <code class="lang-cpp">width / <span class="hljs-number">2</span></code> og <code class="lang-cpp">height / <span class="hljs-number">2</span></code> for å tegne opp den første sirkelen. Skråstreken <code>/</code> betyr delt på, altså gir <code class="lang-cpp">width / <span class="hljs-number">2</span></code> halvparten av bredden. Hva gir <code class="lang-cpp">height / <span class="hljs-number">2</span></code>?</p>
+<p><strong>Tips:</strong> Vi kunne også brukt <code class="lang-cpp">width * <span class="hljs-number">0.5</span></code> for å oppnå det samme, bredden ganget med en halv. Noen ganger er det enklere med deling og andre ganger ganging.</p></li>
+<li><p>Lagre og kjør programmet, om du ikke har gjort det allerede.</p></li>
+<li><p>La oss lage våre egne variabler, slik at vi kan få formene til å bevege på seg:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-keyword">float</span> x;
+<span class="hljs-keyword">float</span> y;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  size(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
+  x = width / <span class="hljs-number">2</span>;
+  y = height / <span class="hljs-number">2</span>;
+}</code></pre>
+<p><code class="lang-aspectj"><span class="hljs-keyword">float</span> x;</code> og <code class="lang-aspectj"><span class="hljs-keyword">float</span> y;</code> lager to variabler med navn <code>x</code> og <code class="lang-stata"><span class="hljs-literal">y</span></code>. Typen av variablene er <code class="lang-aspectj"><span class="hljs-keyword">float</span></code>, altså desimal eller flyttall. Inne i <code class="lang-processing"><span class="hljs-title">setup</span></code> gir vi variablene verdier, som er de samme regnestykkene som vi brukte tidligere.</p></li>
+<li><p>Det er ikke nok å bare ha variabler, vi må bruke dem også. Endre <code class="lang-processing"><span class="hljs-title">draw</span></code> til å bruke <code>x</code> og <code class="lang-stata"><span class="hljs-literal">y</span></code>:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  x = x + <span class="hljs-number">1</span>;
+
+  background(<span class="hljs-number">0</span>);
+  ellipse(x, y, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+  ellipse(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
+  ellipse(width, height, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+}</code></pre>
+<p>Den første sirkelen bruker nå <code>x</code> og <code class="lang-stata"><span class="hljs-literal">y</span></code> som posisjon. I tillegg la vi til linjen <code class="lang-cpp">x = x + <span class="hljs-number">1</span>;</code> som sier at <code>x</code> skal øke med <code class="lang-cpp"><span class="hljs-number">1</span></code> for hver gang <code class="lang-processing"><span class="hljs-title">draw</span></code> kjøres. Hva vil skje med den ene sirkelen når programmes kjøres?</p></li>
+<li><p>Lagre og kjør programmet, om du ikke har gjort det allerede.</p></li>
+</ul>
+<section id="tips-lagre-som" class="level3 protip">
+<h3>Tips: Lagre som</h3>
+<p>Hvis du ikke vil miste de forskjellige stegene i denne oppgaven kan du bruke <em>Save as</em> (<em>Lagre som</em>) istedenfor <em>Save</em> (<em>Lagre</em>). Du finner dette under <strong>File -&gt; Save as</strong> ved å trykke <strong>Ctrl + Shift + S</strong>. Lagre programmet med et annet navn slik at du beholder de forskjellige variantene.</p>
+</section>
+</section>
+<section id="utforsking-1" class="level2 try">
+<h2>Utforsking</h2>
+<p>Kan du endre <code>x</code> og <code class="lang-stata"><span class="hljs-literal">y</span></code> inni <code class="lang-processing"><span class="hljs-title">draw</span></code> slik at sirkelen beveger seg:</p>
+<ul>
+<li>Mot venstre istedenfor høyre?</li>
+<li>Opp istedenfor sidelengs?</li>
+<li>Ned istedenfor for opp?</li>
+<li>På skrå?</li>
+</ul>
+</section>
+</section>
+<section id="steg-4-sprette-i-veggen" class="level1 activity">
+<h1>Steg 4: Sprette i veggen</h1>
+<p>Det er kjedelig når sirkelen forsvinner ut av vinduet hele tiden. Vi skal nå få sirkelen til å snu når den treffer kanten av vinduet, slik en ball spretter tilbake hvis den kastes i en vegg.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Vi trenger et par nye variabler for å styre retningen til sirkelen. Legg til variablene <code>xFart</code> og <code>yFart</code> før <code class="lang-processing"><span class="hljs-title">setup</span></code>:</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-keyword">float</span> xFart = <span class="hljs-number">1.5</span>;
+<span class="hljs-keyword">float</span> yFart = <span class="hljs-number">2</span>;</code></pre>
+<p>Variablene har type <code class="lang-aspectj"><span class="hljs-keyword">float</span></code>, altså flyttall eller desimaltall. Eksempelvis <code class="lang-cpp"><span class="hljs-number">1.1</span></code>, <code class="lang-cpp"><span class="hljs-number">3.14</span></code>, <code class="lang-cpp">-<span class="hljs-number">2.01</span></code>, osv. Variablene skal styre farten og retningen til sirkelen. I Processing, og i de fleste programmeringsspråk, bruker vi punktum istedenfor komma på desimaltall. Dette er fordi punktum er det som brukes i engelsk.</p>
+<p><strong>Notis:</strong> La du merke til at variablene ble gitt verdier med en gang, mens vi tidligere ga dem verdier inni <code class="lang-processing"><span class="hljs-title">setup</span></code>? Grunnen til dette er at <code class="lang-processing"><span class="hljs-variable">width</span></code> og <code class="lang-processing"><span class="hljs-variable">height</span></code> kan ikke brukes før <code class="lang-fortran"><span class="hljs-built_in">size</span></code> er kjørt, så vi kunne ikke gi <code>x</code> og <code class="lang-stata"><span class="hljs-literal">y</span></code> verdier med en gang.</p></li>
+<li><p>Legg til koden under i <code class="lang-processing"><span class="hljs-title">draw</span></code> for å få ballen til å snu. Merk at vi endrer setningen hvor vi øker <code>x</code> og fjerner to av sirklene.</p>
+<pre class="processing"><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span> </span>{
+  x = x + xFart;
+  y = y + yFart;
+
+  <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">50</span>) {
+    xFart = -xFart;
+  }
+
+  <span class="hljs-keyword">if</span> (x &gt; width - <span class="hljs-number">50</span>) {
+    xFart = -xFart;
+  }
+
+  <span class="hljs-keyword">if</span> (y &lt; <span class="hljs-number">50</span>) {
+    yFart = -yFart;
+  }
+
+  <span class="hljs-keyword">if</span> (y &gt; height - <span class="hljs-number">50</span>) {
+    yFart = -yFart;
+  }
+
+  background(<span class="hljs-number">0</span>);
+  ellipse(x, y, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+}</code></pre></li>
+<li><p>Lagre og kjør programmet.</p></li>
+</ul>
+<section id="forklaring" class="level3 protip">
+<h3>Forklaring</h3>
+<p>I <code class="lang-processing"><span class="hljs-title">draw</span></code> ser vi en del nytt som du ikke har sett før.</p>
+<ul>
+<li><p><code class="lang-cpp"><span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">50</span>)</code>, <em>hvis x er under 50</em>, lar oss kjøre <code class="lang-dns">xFart = -xFart<span class="hljs-comment">;</span></code> kun dersom x er under 50. Hva betyr de andre <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setningene?</p></li>
+<li><p><code class="lang-dns">xFart = -xFart<span class="hljs-comment">;</span></code> endrer fortegnet på farten. Dersom farten er positiv (+), vil den endres til å bli negativ (+ - = -). Dersom farten er negativ får vi to minus, som er positiv (- - = +).</p></li>
+</ul>
+</section>
+</section>
+<section id="utfordringer" class="level2 try">
+<h2>Utfordringer</h2>
+<ul>
+<li>Kan du kombinere to og to av <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setningene ved å bruke <code class="lang-1c"><span class="hljs-string">||</span></code>? <code class="lang-1c"><span class="hljs-string">||</span></code> betyr eller. Her er et eksempel: <code class="lang-cpp"><span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">1</span> || x &gt; <span class="hljs-number">10</span>)</code>, hvis x er under 1 <em>eller</em> x er over 10.</li>
+<li><p>Kan du få ballen til å sprette sideleng som dette?</p>
+<figure>
+<img src="sidelengs_ball.gif" title="ball som spretter sidelengs">
+</figure></li>
+<li><p>Kan du få ballen til å endre form samtidig?</p>
+<figure>
+<img src="rar_ball.gif" title="ball som endrer form etter posisjon">
+</figure></li>
+<li><p>Kan du få ballen til å endre fart avhengig av posisjonen?</p>
+<figure>
+<img src="sprettende_ball.gif" title="ball som har større fart på bunn">
+</figure></li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Sigmund Hansen</p>
+</div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
