@@ -36,11 +36,12 @@ function relative(url) {
 <ul>
 <li><p>Søk også opp figurer for fly og King Kong.</p>
 <p>Her er noen eksempler, men bruk gjerne bilder du finner selv:</p>
-<p>Skyskraper: <a href="http://www.iconarchive.com/show/home-sweet-home-icons-by-iconka/Home-Skyscraper-icon.html"><img src="skyskraper.png" title="skyskraper" /></a></p>
-<p>Fly: <a href="http://hellraz3r.deviantart.com/art/Plane-Pixel-Art-193480982"><img src="fly.png" title="fly" /></a></p>
-<p>King Kong: <a href="http://www.flaticon.com/free-icon/small-monkey-with-long-tail_28726"><img src="kong.png" title="king kong" /></a></p></li>
+<figure>
+<img src="eksempel.png" />
+</figure>
+<p>Skyskraper fra <a href="http://www.iconarchive.com/show/home-sweet-home-icons-by-iconka/Home-Skyscraper-icon.html">www.iconka.com</a>, fly fra <a href="http://hellraz3r.deviantart.com/art/Plane-Pixel-Art-193480982">hellraz3r.deviantart.com</a> og King Kong fra <a href="http://www.flaticon.com/free-icon/small-monkey-with-long-tail_28726">www.freepik.com</a>.</p></li>
 <li><p>Etter at du har lastet ned bildene fra nettet er det på tide å ta dem inn som nye figurer i Scratch. Gå tilbake til Scratch. Klikk på <img src="../bilder/hent-fra-fil.png" alt="Last opp figur fra fil" /> ved siden av <strong>Ny figur</strong> og velg et av bildene du har lastet ned. Gjør det samme med de andre bildene, slik at du har tre figurer, en skyskraper, et fly og en King Kong-figur.</p></li>
-<li><p>Figurene får navn fra bildefilene. Endre gjerne navnet på figurene under <code>Drakter</code> til <code>skyskraper</code>, <code>fly</code> og <code>kong</code> slik at det blir enklere å holde oversikten.</p></li>
+<li><p>Figurene får navn fra bildefilene. Endre gjerne navnet på figurene i figurlisten til <code>skyskraper</code>, <code>fly</code> og <code>kong</code> slik at det blir enklere å holde oversikten.</p></li>
 </ul>
 <section id="hvilke-bilder-kan-du-bruke" class="level3 protip">
 <h3>Hvilke bilder kan du bruke?</h3>
@@ -135,10 +136,10 @@ for alltid
 slutt</code></pre></li>
 <li><p>Om du kjører spillet ditt skjer det ikke noe spennende enda, fordi vi ikke har sagt hva alle flyklonene skal gjøre. La oss begynne med å la dem fly skrått over skjermen:</p>
 <pre class="blocks"><code>når jeg starter som klon
-vis
 pek i retning (45 v)
 gå til x: (-280) y: (-140)
-gjenta til ((y-posisjon) &gt; (200))
+vis
+gjenta til ((y-posisjon) &gt; (190))
     gå (10) steg
 slutt
 slett denne klonen</code></pre></li>
@@ -156,6 +157,7 @@ ellers
     pek i retning (-45 v)
     gå til x: (280) y: (-140)
 slutt
+vis
 gjenta til ((y-posisjon) &gt; (190))
     gå (10) steg
 slutt
