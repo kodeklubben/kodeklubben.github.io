@@ -1,0 +1,210 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Løpende strekmann | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default"><span class="hidden-xs">Lær Kidsa Koding</span><span class="visible-xs">LKK</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Løpende strekmann</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Journeyman</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/lopende_strekmann/lopende_strekmann.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p>I denne oppgaven skal du lage et spill der du styrer en strekmann som hopper over hindringer.</p>
+<figure>
+<img src="animasjon_spill.gif" title="Slik ser spillet ut">
+</figure>
+</section>
+<section id="steg-1-ny-fil" class="level1 activity">
+<h1>Steg 1: Ny fil</h1>
+<p>Begynn med å lage en fil som kan kjøres med Pygame Zero.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en ny fil <code class="lang-css"><span class="hljs-tag">run_stickman</span><span class="hljs-class">.py</span></code>.</p></li>
+<li><p>Du starter med å bestemme hvor stort vindu vi skal bruke:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">WIDTH = <span class="hljs-number">550</span>
+HEIGHT = <span class="hljs-number">250</span></code></pre></li>
+<li><p>Lagre og kjør programmet med <code class="lang-css"><span class="hljs-tag">pgzrun</span> <span class="hljs-tag">run_stickman</span><span class="hljs-class">.py</span></code>. Se til at du får opp et vindu.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-2-hindringer" class="level1 activity">
+<h1>Steg 2: Hindringer</h1>
+<p>Du skal nå lage boksene som strekmannen løper mot. Dette skal gjøres ved hjelp av en klasse.</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Klassen skal hete Box og skal ha egenskapene: <code class="lang-processing"><span class="hljs-variable">height</span></code>, <code class="lang-processing"><span class="hljs-variable">width</span></code>, <code class="lang-dos"><span class="hljs-built_in">color</span></code>, <code>x</code>, <code class="lang-stata"><span class="hljs-literal">y</span></code> og en funkson som heter <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>:</span>
+    <span class="hljs-comment"># Skriv egenskaper her</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># Skriv koden som tegner boksen her</span></code></pre>
+<p><strong>Tips:</strong> Bruk kommandoen <code class="lang-stylus">screen<span class="hljs-class">.draw</span><span class="hljs-class">.filled_rect</span>()</code> for å tegne rektangler. En rød boks som er 50 piksler bred og høy tegnes i venstre topp med:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">screen.draw.filled_rect( Rect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>) , (<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>) )</code></pre>
+<p>En blå boks i høyre bunn blir:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-cpp">screen.draw.filled_rect( Rect(WIDTH-<span class="hljs-number">50</span>, HEIGHT-<span class="hljs-number">50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>) , (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>) )</code></pre></li>
+<li><p>Opprett en boks ved å legge til denne linjen i koden:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">box = <span class="hljs-function"><span class="hljs-title">Box</span><span class="hljs-params">()</span></span></code></pre></li>
+<li><p>Lagre og kjør programmet for å sjekke at du ikke får noen feilmeldinger.</p></li>
+<li><p>Hvis du vil se boksen i vinduet må du tegne den med:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span>:</span>
+    box.draw()</code></pre></li>
+</ul>
+</section>
+</section>
+<section id="steg-3-strekmann" class="level1 activity">
+<h1>Steg 3: Strekmann</h1>
+<p>Du skal nå lage en strekmann som vi skal kalle <code>stick_man</code>.</p>
+<section id="sjekkliste-2" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en strekmann (<code>stick_man</code>) fra klassen <a href="https://pygame-zero.readthedocs.org/en/latest/builtins.html?highlight=actor#actor"><code>Actor</code></a> som bruker bildet <code>running_man</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">stick_man = <span class="hljs-function"><span class="hljs-title">Actor</span><span class="hljs-params">(<span class="hljs-string">'running_man'</span>)</span></span></code></pre></li>
+<li><p>Sett posisjonen til strekmannens venstre bunn til å være <code class="lang-cpp"><span class="hljs-number">50</span>, HEIGHT</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">stick_man<span class="hljs-class">.bottomleft</span> = <span class="hljs-number">50</span>, HEIGHT</code></pre></li>
+<li><p>For at koden skal kjøre må du lagre bildet av strekmannen under som <code class="lang-css"><span class="hljs-tag">running_man</span><span class="hljs-class">.png</span></code> i mappen <code>images</code> der du har lagret <code class="lang-css"><span class="hljs-tag">run_stickman</span><span class="hljs-class">.py</span></code>.</p>
+<figure>
+<img src="running_man.png" title="Strekmann">
+</figure></li>
+<li><p>Mappen din skal nå se ut som dette:</p>
+<figure>
+<img src="mappestruktur.png" title="Mappestruktur">
+</figure></li>
+</ul>
+</section>
+</section>
+<section id="steg-4-funksjonene-draw-og-update" class="level1 activity">
+<h1>Steg 4: Funksjonene draw() og update()</h1>
+<p>De fleste spill i <a href="https://pygame-zero.readthedocs.org/">Pygame Zero</a> har funksjonene <a href="https://pygame-zero.readthedocs.org/en/latest/hooks.html?highlight=draw#draw"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span></code></a> og <a href="https://pygame-zero.readthedocs.org/en/latest/hooks.html?highlight=update#update"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">update</span><span class="hljs-params">()</span></span></code></a>. Draw-funksjonen sørger for at spillvinduet blir tegnet og update-funksjonen gjør endringer i spillet før de tegnes med <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span></code>.</p>
+<section id="sjekkliste-3" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span></code> med koden i blokken under. Forstår du hva koden gjør?</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">def <span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span>:
+        screen.<span class="hljs-function"><span class="hljs-title">clear</span><span class="hljs-params">()</span></span>
+        screen.<span class="hljs-function"><span class="hljs-title">fill</span><span class="hljs-params">((<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>)</span></span>)
+        stick_man.<span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span>
+        box.<span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span></code></pre></li>
+<li>Du må nå lage <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">update</span><span class="hljs-params">()</span></span></code>. Du trenger følgende:
+<ul>
+<li>Få boksen til å flytte seg mot venstre.</li>
+<li>Hvis boksen er ute av bildet på venstre side, flytt den til høyre side av vinduet.</li>
+<li>Hvis strekmannen er truffet, skriv “Du ble truffet!” til terminalen.</li>
+</ul>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Flytt boksen mot venstre</span>
+
+    <span class="hljs-keyword">if</span> <span class="hljs-string">"boksen er ute av bildet"</span>:
+        <span class="hljs-comment"># Flytt boksen til høyre side av bildet</span>
+
+    <span class="hljs-keyword">if</span> <span class="hljs-string">"strekmannen er truffet"</span>:
+        print(<span class="hljs-string">"Du ble truffet!"</span>)</code></pre></li>
+</ul>
+</section>
+<section id="tips" class="level2 protip">
+<h2>Tips</h2>
+<p><strong>Flytt boksen</strong></p>
+<p>For å få boksen til å flytte seg kan du endre x-posisjonen til boksen.</p>
+<p><strong>Sjekk om strekmannen blir truffet</strong></p>
+<p>Legg merke til at y-aksen til spillvinduet er positiv nedover, motsatt av det som er vanlig i matematikk. Boksens x- og y-posisjon er hvor boksens øverste venstre hjørne er plassert, som er merket i bildet som <strong>(x, y)</strong>.</p>
+<figure>
+<img src="koord_data2.png" title="Koordinatsystem med figurer">
+</figure>
+<p>Den røde firkanten illustrerer hvor stort bildet til strekmannen er. I tilfellet merket <strong>1</strong> ser du at boksens øverste venstre hjørne er inni bildet til strekmannen. Dette må du sjekke i if-setningen.</p>
+<p>I tilfelle <strong>2</strong> er boksens øvre høyre hjørne inne den røde firkanten, dette må du også sjekke i if-setningen.</p>
+<p><strong>Hvordan finne posisjonen til strekmannen?</strong></p>
+<ul>
+<li><p><code class="lang-css"><span class="hljs-tag">stick_man</span><span class="hljs-class">.bottom</span></code> gir posisjonen til bunnen av <code>stick_man</code>.</p></li>
+<li><p><code class="lang-css"><span class="hljs-tag">stick_man</span><span class="hljs-class">.left</span></code> gir posisjonen til venstre side av <code>stick_man</code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="steg-5-animasjoner" class="level1 activity">
+<h1>Steg 5: Animasjoner</h1>
+<p>Du skal nå gjøre det mulig for strekmannen å hoppe med “space” tasten.</p>
+<section id="sjekkliste-4" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">on_key_down</span><span class="hljs-params">(key)</span></span></code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_down</span><span class="hljs-params">(key)</span>:</span>
+    <span class="hljs-comment">#(Din kode)</span></code></pre>
+<p><a href="https://pygame-zero.readthedocs.org/en/latest/hooks.html?highlight=on_key_down#on_key_down"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">on_key_down</span><span class="hljs-params">()</span></span></code></a> kjøres hver gang spilleren trykker på en tast. Hvilken tast som trykkes sendes til funksjonen som <code class="lang-processing"><span class="hljs-variable">key</span></code>.</p></li>
+<li><p>Lag en <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning som sjekker at det er tasten “space” (<code class="lang-livecodeserver"><span class="hljs-built_in">keys</span>.<span class="hljs-constant">SPACE</span></code>) som trykkes.</p></li>
+<li><p>Sjekk i samme <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning om strekmannen er på bakken, det skal kun være lov å hoppe da.</p></li>
+<li><p>For å få strekmannen til å hoppe, bruk <a href="https://pygame-zero.readthedocs.org/en/latest/builtins.html?highlight=rect#animations"><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">animate</span><span class="hljs-params">()</span></span></code></a>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-lisp">jump_up = animate<span class="hljs-list">(<span class="hljs-keyword">stick_man</span>, <span class="hljs-quoted">'decelerate</span>', duration=0.<span class="hljs-number">4</span>, bottom=<span class="hljs-list">(<span class="hljs-keyword">HEIGHT</span> - box.height*1.<span class="hljs-number">5</span>)</span>)</span></code></pre>
+<p>Koden forteller at:</p>
+<ul>
+<li>Vi skal lage en animasjon med <code>stick_man</code>.</li>
+<li>Bevegelsen skal være av type <code>decelerate</code>, som er høy hastighet i begynnelsen, deretter saktere og saktere.</li>
+<li>Animasjonen skal vare i 0.4 sekunder.</li>
+<li><code class="lang-scss"><span class="hljs-attribute">bottom</span></code> av <code>stick_man</code> skal flyttes til <code class="lang-css"><span class="hljs-tag">HEIGHT</span> <span class="hljs-tag">-</span> <span class="hljs-tag">box</span><span class="hljs-class">.height</span>*1<span class="hljs-class">.5</span></code>, altså 1,5 gang av høyden til boksen.</li>
+<li>Animasjonen gis navnet <code>jump_up</code>.</li>
+</ul></li>
+<li><p>Prøv programmet. Hopper strekmannen?</p></li>
+<li><p>Vi trenger nå en animasjon som gjør at strekmannen kommer ned til bakken igjen. Lag funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">back_down</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">back_down</span><span class="hljs-params">()</span>:</span>
+    animate(stick_man, <span class="hljs-string">'accelerate'</span>, duration=<span class="hljs-number">0.4</span>, bottom=HEIGHT)</code></pre>
+<p>Forstår du hva koden skal animere?</p></li>
+<li><p>Sett verdien <code class="lang-css"><span class="hljs-tag">jump_up</span><span class="hljs-class">.on_finished</span></code> til <code>back_down</code>. <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">back_down</span><span class="hljs-params">()</span></span></code> vil da kjøres når opp-animasjonen er ferdig:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">jump_up<span class="hljs-class">.on_finished</span> = back_down</code></pre></li>
+</ul>
+</section>
+<section id="tips-1" class="level2 protip">
+<h2>Tips</h2>
+<p>Dette er en skisse på hvordan koden din skal se ut:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_up</span><span class="hljs-params">(key)</span>:</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">"key er space"</span> <span class="hljs-keyword">and</span>
+        <span class="hljs-string">"strekmannen er på bakken"</span>):
+        <span class="hljs-comment"># Animasjon oppover</span>
+        <span class="hljs-comment"># Når animasjon oppover er ferdig, animer ned</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">back_down</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Animasjon ned</span></code></pre>
+</section>
+</section>
+<section id="steg-6-poeng" class="level1 activity">
+<h1>Steg 6: Poeng</h1>
+<p>Vi skal nå gi poeng ettersom hvor mange bokser vi klarer å hoppe over. Vi trenger to variabler, en for poeng og en for å huske om strekmannen har blitt truffet av boksen.</p>
+<section id="sjekkliste-5" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Lag en variabel som heter <code class="lang-stata"><span class="hljs-keyword">SCORE</span></code> og gi den verdien <code class="lang-cpp"><span class="hljs-number">0</span></code>.</p></li>
+<li><p>Lag variabelen <code class="lang-css"><span class="hljs-tag">stick_man</span><span class="hljs-class">.hit</span></code> og gi den verdien <code class="lang-autohotkey"><span class="hljs-literal">False</span></code>.</p></li>
+<li><p>Inne i <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">update</span><span class="hljs-params">()</span></span></code>, bestem at av du skal bruke den globale variablen <code class="lang-stata"><span class="hljs-keyword">SCORE</span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">global</span> SCORE
+    <span class="hljs-comment"># resten av din kode</span></code></pre></li>
+<li><p>Hvis strekmannen blir truffet, sett <code class="lang-cpp">SCORE = <span class="hljs-number">0</span></code> og <code class="lang-stylus">stick_man<span class="hljs-class">.hit</span> = True</code>.</p></li>
+<li><p>Øk poengsummen med 10 poeng hvis boksen er ute av bildet og strekmannen ikke er truffet.</p></li>
+<li><p>Før boksen flyttes til høyre side, nullstill <code class="lang-css"><span class="hljs-tag">stick_man</span><span class="hljs-class">.hit</span></code> til <code class="lang-autohotkey"><span class="hljs-literal">False</span></code>.</p></li>
+<li><p>Tegn poengsummen på skjermen inni <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">draw</span><span class="hljs-params">()</span></span></code>:</p>
+<pre class="sourceCode python"><code class="sourceCode python lang-stylus">screen<span class="hljs-class">.draw</span><span class="hljs-class">.text</span>(<span class="hljs-string">"Poeng: "</span> + <span class="hljs-function"><span class="hljs-title">str</span><span class="hljs-params">(SCORE)</span></span>, (<span class="hljs-number">400</span>, <span class="hljs-number">30</span>), <span class="hljs-attribute">color</span> = (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))</code></pre></li>
+</ul>
+</section>
+<section id="test-spillet-ditt" class="level2 flag">
+<h2>Test spillet ditt</h2>
+</section>
+<section id="utfordringer" class="level2 challenge">
+<h2>Utfordringer:</h2>
+<ul>
+<li><p>Endre hastigheten på boksen.</p></li>
+<li><p>Endre høyden på hoppet.</p></li>
+<li><p>Endre hvor lang tid et hopp tar.</p></li>
+<li><p>Finn en kombinasjon av boksens hastighet og strekmannens hopp slik at spillet er akkurat passe vanskelig.</p></li>
+<li><p>Øk hastigheten på boksen når man har fått 100 poeng.</p></li>
+<li><p>Øk poengsummen med 20 når man har fått 100 poeng.</p></li>
+<li><p>Gi boksen forskjellig høyde for hver gang.</p></li>
+<li><p>Gi boksen forskjellig bredde for hver gang.</p></li>
+<li><p>Send flere bokser inn på skjermen samtidig.</p></li>
+<li><p>Send flere bokser med ulik hastighet inn på skjermen samtidig.</p></li>
+<li><p>Dine egne ideer?</p></li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

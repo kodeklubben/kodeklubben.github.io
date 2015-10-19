@@ -94,7 +94,7 @@ function relative(url) {
 <pre class="blocks"><code>    gå til x: ((10) * (tilfeldig tall fra (-23) til (23))) y: ((10) * (tilfeldig tall fra (-16) til (16)))</code></pre>
 <p>Husk at skjermen har koordinater fra <code>-240</code> til <code>240</code> i x-retning, og <code>-180</code> til <code>180</code> i y-retning. Pass på at eplene dine lander godt innenfor skjermen slik at slangen kan spise dem.</p></li>
 <li><p>Nå trenger vi et skript som sender ut slike <code>Lag eple</code>-meldinger. Lag et skript som starter når det mottar <code>Nytt spill</code>. Dette skriptet skal <code class="blocklooks">skjule</code> eplet og deretter sende en <code>Lag   eple</code>-melding.</p></li>
-<li><p>Til slutt lager vi oppførselen for et slikt kloneeple. Lag et nytt skript som starter med <code class="blockcontrol">når jeg starter som klon</code>. Dette skriptet må <code class="blocklooks">vise</code> eplet, <code class="blockcontrol">vente   til</code> det <code class="blocksensing">berører slangen</code>, <code class="blockevents">sende</code> en <code>Lag eple</code>-melding og til slutt <code class="blockcontrol">slette   denne klonen</code>.</p></li>
+<li><p>Til slutt lager vi oppførselen for et slikt kloneeple. Lag et nytt skript som starter med <code class="blockcontrol">når jeg starter som klon</code>. Dette skriptet må <code class="blocklooks">vise</code> eplet, <code class="blockcontrol">vente   til</code> det <code class="blocksensing">berører slangen</code>, øke <code class="blockdata">lengden</code> på slangen, deretter <code class="blockevents">sende</code> en <code>Lag eple</code>-melding og til slutt <code class="blockcontrol">slette denne   klonen</code>.</p></li>
 <li><p>Legg på noen enkle lydeffekter! For eksempel passer lyden <code>chomp</code> ganske bra når et eple blir spist. Hvilken lyd passer når slangen krasjer?</p></li>
 </ul>
 </section>
@@ -116,7 +116,7 @@ function relative(url) {
 </ul>
 </section>
 </section>
-</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle og Martin Lie</p>
 </div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
   scratchblocks2.load_language(scratchblocks2._translations['nb']);
   scratchblocks2.parse("pre.blocks");
