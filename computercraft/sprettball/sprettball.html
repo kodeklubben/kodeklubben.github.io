@@ -10,7 +10,7 @@ function relative(url) {
 <h1>Introduksjon</h1>
 <p>Nå skal vi lære hvordan vi kan koble en skjerm til datamaskinen. Med en ekstra skjerm kan vi bruke datamaskinen til å kommunisere med verden rundt oss. Kanskje Minecraft-verden blir fyllt med store reklamebannere?</p>
 <figure>
-<img src="sprettball.png">
+<img src="sprettball.png" />
 </figure>
 </section>
 <section id="steg-1-koble-en-skjerm-til-datamaskinen" class="level1 activity">
@@ -22,32 +22,35 @@ function relative(url) {
 <li><p>Bygg en <strong>Computer</strong>. Du kan også bruke en <strong>Advanced Computer</strong> om du foretrekker det.</p></li>
 <li><p>Bygg så en <strong>Monitor</strong> inntil datamaskinen du nettopp bygget, omtrent som på bildet.</p>
 <figure>
-<img src="enkelskjerm.png">
+<img src="enkelskjerm.png" />
 </figure></li>
-<li><p>Start datamaskinen. Den enkleste måten å skrive noe til skjermen er ved hjelp av programmet <code class="lang-x86asm"><span class="hljs-keyword">monitor</span></code>. Om du skriver <code class="lang-bash"><span class="hljs-built_in">help</span> monitor</code> vil du kunne lese at <code class="lang-x86asm"><span class="hljs-keyword">monitor</span></code> kan kjøre andre programmer på en tilkoblet skjerm.</p>
+<li><p>Start datamaskinen. Den enkleste måten å skrive noe til skjermen er ved hjelp av programmet <code>monitor</code>. Om du skriver <code>help monitor</code> vil du kunne lese at <code>monitor</code> kan kjøre andre programmer på en tilkoblet skjerm.</p>
 <p>La oss for eksempel prøve programmet <code>hello</code>. Dette er et enkelt program som vi såvidt har sett litt på tidligere. Det skriver bare teksten <em>Hello World!</em>. Kjør først programmet på datamaskinen:</p>
-<pre><code class="lang-markdown"><span class="hljs-blockquote">&gt; hello</span>
-Hello World!</code></pre>
+<pre><code class="hljs"><span class="hljs-blockquote">&gt; hello</span>
+<span class="hljs-code">    Hello World!</span></code></pre>
+
 <p>Nå kan vi prøve å få dette til å kjøre på skjermen. Med skjermen koblet til på høyre (<em>right</em>) side av datamaskinen (som på bildet over) skriver vi bare</p>
-<pre><code class="lang-smali">&gt;<span class="hljs-instruction"> monitor </span>right hello</code></pre>
+<pre><code class="hljs"><span class="hljs-blockquote">&gt; monitor right hello</span></code></pre>
+
 <p>Du kan nå trykke <code>Esc</code> for å gå ut av datamaskinen og se på skjermen. Står det <em>Hello World!</em>?</p>
 <figure>
-<img src="helloworld_liten.png">
+<img src="helloworld_liten.png" />
 </figure></li>
 <li><p>Kult! Da er vi igang med skjermene! Men - det ble jo veldig dårlig plass på den skjermen! Det er det heldigvis lett å gjøre noe med. Om du setter en <strong>Monitor</strong> ved siden av den du allerede har vil de to skjermene smelte sammen til en større skjerm. På denne måten kan du lage en stor skjerm! Prøv å kjør <code>hello</code>-programmet på den store skjermen.</p>
 <figure>
-<img src="helloworld_stor.png">
+<img src="helloworld_stor.png" />
 </figure></li>
-<li><p>Trikset med <code class="lang-x86asm"><span class="hljs-keyword">monitor</span></code> fungerer selvsagt også med programmer vi skriver selv. La oss lage et enkelt program som vi kaller <code>ku</code>:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"^__^"</span>)</span></span>
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"(oo)_______"</span>)</span></span>
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"(__)       )"</span>)</span></span>
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"   ||----W |"</span>)</span></span>
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"   ||     ||"</span>)</span></span></code></pre>
+<li><p>Trikset med <code>monitor</code> fungerer selvsagt også med programmer vi skriver selv. La oss lage et enkelt program som vi kaller <code>ku</code>:</p>
+<pre><code class="hljs lua"><span class="hljs-built_in">print</span>(<span class="hljs-string">"^__^"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"(oo)_______"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"(__)       )"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"   ||----W |"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"   ||     ||"</span>)</code></pre>
+
 <p>Det er ikke så farlig om din ku ikke ser ut akkurat som her. Du kan også gjerne tegne noe helt annet. Vi vil bare teste at også vårt eget program kan skrives på skjemen.</p></li>
-<li><p>Nå kan vi kjøre programmet: <code class="lang-livecodeserver">monitor <span class="hljs-constant">right</span> ku</code>.</p>
+<li><p>Nå kan vi kjøre programmet: <code>monitor right ku</code>.</p>
 <figure>
-<img src="ku.png">
+<img src="ku.png" />
 </figure></li>
 </ul>
 </section>
@@ -58,27 +61,30 @@ Hello World!</code></pre>
 </section>
 <section id="steg-2-en-annen-metode" class="level1 activity">
 <h1>Steg 2: En annen metode</h1>
-<p>I stedet for at vi bruker <code class="lang-x86asm"><span class="hljs-keyword">monitor</span></code>-programmet for å skrive til skjermen kan vi skrive direkte til skjermen i programmer vi selv lager. Dette er ganske enkelt med et bibliotek som heter <code>peripheral</code> (<em>peripheral</em> betyr i denne sammenhengen <em>tillegg</em>, altså skjermen er et tillegg til datamaskinen).</p>
+<p>I stedet for at vi bruker <code>monitor</code>-programmet for å skrive til skjermen kan vi skrive direkte til skjermen i programmer vi selv lager. Dette er ganske enkelt med et bibliotek som heter <code>peripheral</code> (<em>peripheral</em> betyr i denne sammenhengen <em>tillegg</em>, altså skjermen er et tillegg til datamaskinen).</p>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag et enkelt program som heter <code>skjerm</code> og ser slik ut:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus">skjerm = peripheral.<span class="hljs-function"><span class="hljs-title">wrap</span><span class="hljs-params">(<span class="hljs-string">"right"</span>)</span></span>
-skjerm.<span class="hljs-function"><span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-string">"Heisann!"</span>)</span></span></code></pre>
+<pre><code class="hljs lua">skjerm = peripheral.wrap(<span class="hljs-string">"right"</span>)
+skjerm.write(<span class="hljs-string">"Heisann!"</span>)</code></pre>
+
 <p>Som vanlig kan du bytte ut <em>right</em> med for eksempel <em>left</em> eller <em>top</em> om du har plassert skjermen annerledes.</p></li>
-<li><p>Kjør programmet ditt ved å skrive <code>skjerm</code>. Selv uten <code class="lang-x86asm"><span class="hljs-keyword">monitor</span></code> skal programmet skrive til skjermen ved siden av datamaskinen.</p></li>
-<li><p>I stedet for <code class="lang-css"><span class="hljs-tag">peripheral</span><span class="hljs-class">.wrap</span></code> kan vi bruke <code class="lang-css"><span class="hljs-tag">peripheral</span><span class="hljs-class">.find</span></code>. Da trenger vi ikke å spesifisere hvilken side av datamaskinen skjermen er på. Endre programmet ditt som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus">local skjerm = peripheral.<span class="hljs-function"><span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-string">"monitor"</span>)</span></span>     -- endret linje
-skjerm.<span class="hljs-function"><span class="hljs-title">write</span><span class="hljs-params">(<span class="hljs-string">"Heisann!"</span>)</span></span></code></pre></li>
+<li><p>Kjør programmet ditt ved å skrive <code>skjerm</code>. Selv uten <code>monitor</code> skal programmet skrive til skjermen ved siden av datamaskinen.</p></li>
+<li><p>I stedet for <code>peripheral.wrap</code> kan vi bruke <code>peripheral.find</code>. Da trenger vi ikke å spesifisere hvilken side av datamaskinen skjermen er på. Endre programmet ditt som følger:</p>
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)     <span class="hljs-comment">-- endret linje</span>
+skjerm.write(<span class="hljs-string">"Heisann!"</span>)</code></pre>
+</li>
 <li><p>Vi kan også sjekke om det er noen skjerm koblet til. Dette gjør vi enkelt i en <em>if</em>-test:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-applescript"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>                                <span class="hljs-comment">-- ny linje</span>
-    skjerm.<span class="hljs-command">write</span>(<span class="hljs-string">"Heisann!"</span>)
+    skjerm.write(<span class="hljs-string">"Heisann!"</span>)
 <span class="hljs-keyword">else</span>                                          <span class="hljs-comment">-- ny linje</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)       <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)       <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span></code></pre>
-<p>Prøv å kjør dette nye programmet. Det kan hende du vil gjøre <code class="lang-livecodeserver">monitor <span class="hljs-constant">right</span> <span class="hljs-built_in">clear</span></code> innimellom for å tømme skjermen. Prøv også å koble fra (ødelegge) skjermen. Får du melding om at ingen skjerm er koblet til når du prøver å kjøre programmet ditt?</p></li>
+
+<p>Prøv å kjør dette nye programmet. Det kan hende du vil gjøre <code>monitor right clear</code> innimellom for å tømme skjermen. Prøv også å koble fra (ødelegge) skjermen. Får du melding om at ingen skjerm er koblet til når du prøver å kjøre programmet ditt?</p></li>
 </ul>
 </section>
 </section>
@@ -88,32 +94,34 @@ skjerm.<span class="hljs-function"><span class="hljs-title">write</span><span cl
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Lag et nytt program som heter <code>sprettball</code>. Det begynner ganske likt programmet vi jobbet med tidligere, så om du vil kan du kopiere det ved å skrive <code class="lang-dockerfile"><span class="hljs-built_in">copy</span> <span class="bash">skjerm sprettball</span></code>. Programmet <code>sprettball</code> skal se ut som følger:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<li><p>Lag et nytt program som heter <code>sprettball</code>. Det begynner ganske likt programmet vi jobbet med tidligere, så om du vil kan du kopiere det ved å skrive <code>copy skjerm sprettball</code>. Programmet <code>sprettball</code> skal se ut som følger:</p>
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
-    skjerm.<span class="hljs-built_in">clear</span>()
-    skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
+    skjerm.clear()
+    skjerm.write(<span class="hljs-string">"O"</span>)
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
+
 <p>Dette skal tegne en ball øverst på skjermen.</p></li>
 <li><p>Vi kan nå bruke en enkel <em>for</em>-løkke til å animere ballen. Endre koden din:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
-    <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, <span class="hljs-number">10</span> <span class="hljs-built_in">do</span>                        <span class="hljs-comment">-- ny linje</span>
-        skjerm.<span class="hljs-built_in">clear</span>()
+    <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, <span class="hljs-number">10</span> <span class="hljs-keyword">do</span>                        <span class="hljs-comment">-- ny linje</span>
+        skjerm.clear()
         skjerm.setCursorPos(<span class="hljs-number">3</span>, rad)           <span class="hljs-comment">-- ny linje</span>
-        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
+        skjerm.write(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)                              <span class="hljs-comment">-- ny linje</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span>                                       -- <span class="hljs-title">ny</span> <span class="hljs-title">linje</span></span>
+    <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
-<p>For at vi skal rekke å se at ballen flytter seg har vi lagt inn en <code class="lang-autoit"><span class="hljs-built_in">sleep</span></code>-kommando som bare venter litt (1-tallet betyr 1 sekund) mellom hver gang ballen flyttes.</p></li>
-<li><p>Dette er ikke så spennende enda, men før vi lager noe mer avansert vil vi gjøre en liten omstrukturering av koden, som gjør det enklere for oss å holde oversikten senere. Vi flytter alt som har med animering av ballen inn i en egen funksjon <code class="lang-pf">tegnB<span class="hljs-literal">all</span></code>. Flytt kodelinjene rundt slik at de blir som dette:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>                     <span class="hljs-comment">-- ny linje</span>
+
+<p>For at vi skal rekke å se at ballen flytter seg har vi lagt inn en <code>sleep</code>-kommando som bare venter litt (1-tallet betyr 1 sekund) mellom hver gang ballen flyttes.</p></li>
+<li><p>Dette er ikke så spennende enda, men før vi lager noe mer avansert vil vi gjøre en liten omstrukturering av koden, som gjør det enklere for oss å holde oversikten senere. Vi flytter alt som har med animering av ballen inn i en egen funksjon <code>tegnBall</code>. Flytt kodelinjene rundt slik at de blir som dette:</p>
+<pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>                     <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, <span class="hljs-number">10</span> <span class="hljs-keyword">do</span>                        <span class="hljs-comment">-- flyttet linje</span>
         skjerm.clear()                        <span class="hljs-comment">-- flyttet linje</span>
         skjerm.setCursorPos(<span class="hljs-number">3</span>, rad)           <span class="hljs-comment">-- flyttet linje</span>
@@ -128,7 +136,8 @@ skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
     tegnBall(skjerm)                          <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
-<span class="hljs-keyword">end</span></code></pre></li>
+<span class="hljs-keyword">end</span></code></pre>
+</li>
 </ul>
 </section>
 </section>
@@ -138,16 +147,17 @@ skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Funksjonen <code>getSize</code> forteller oss hvor bred og hvor høy skjermen er. Endre funksjonen <code class="lang-pf">tegnB<span class="hljs-literal">all</span></code> slik at ballen faller over hele skjermen:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span>(<span class="hljs-title">skjerm</span>)</span>
-    <span class="hljs-built_in">local</span> bredde, hoyde = skjerm.getSize()    <span class="hljs-comment">-- ny linje</span>
-    <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, hoyde <span class="hljs-built_in">do</span>                     <span class="hljs-comment">-- endret linje</span>
-        skjerm.<span class="hljs-built_in">clear</span>()
+<li><p>Funksjonen <code>getSize</code> forteller oss hvor bred og hvor høy skjermen er. Endre funksjonen <code>tegnBall</code> slik at ballen faller over hele skjermen:</p>
+<pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()    <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>                     <span class="hljs-comment">-- endret linje</span>
+        skjerm.clear()
         skjerm.setCursorPos(<span class="hljs-number">3</span>, rad)
-        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
+        skjerm.write(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
-    <span class="hljs-function"><span class="hljs-keyword">end</span>
-<span class="hljs-title">end</span></span></code></pre></li>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre>
+</li>
 <li><p>Prøv å lag skjermen høyere eller lavere. Faller ballen hele veien ned når du kjører programmet ditt?</p></li>
 <li><p>Klarer du å sentrere ballen, slik at den faller nedover midt på skjermen uansett hvor stor skjermen er? Prøv selv!</p></li>
 </ul>
@@ -155,53 +165,55 @@ skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 </section>
 <section id="steg-5-sprettball" class="level1 activity">
 <h1>Steg 5: Sprettball</h1>
-<p>Nå vil vi få ballen til å oppføre seg mer som en sprettball. For å få til dette vil vi innføre noen nye variabler. Vi vil la <code class="lang-tp"><span class="hljs-keyword">X</span></code> og <code class="lang-stata"><span class="hljs-literal">Y</span></code> betegne hvor ballen er, mens <code>fartX</code> og <code>fartY</code> forteller hvor fort ballen flytter på seg.</p>
+<p>Nå vil vi få ballen til å oppføre seg mer som en sprettball. For å få til dette vil vi innføre noen nye variabler. Vi vil la <code>X</code> og <code>Y</code> betegne hvor ballen er, mens <code>fartX</code> og <code>fartY</code> forteller hvor fort ballen flytter på seg.</p>
 <section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>I tillegg til de nye variablene bytter vi ut <em>for</em>-løkken med en <em>while</em>-løkke. Denne gjør at ballen skal sprette for alltid. Husk at du bruker <code class="lang-r">Ctrl-<span class="hljs-literal">T</span></code> for å avslutte programmet.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span>(<span class="hljs-title">skjerm</span>)</span>
-    <span class="hljs-built_in">local</span> bredde, hoyde = skjerm.getSize()
-    <span class="hljs-built_in">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>                         <span class="hljs-comment">-- ny linje</span>
-    <span class="hljs-built_in">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>                 <span class="hljs-comment">-- ny linje</span>
+<li><p>I tillegg til de nye variablene bytter vi ut <em>for</em>-løkken med en <em>while</em>-løkke. Denne gjør at ballen skal sprette for alltid. Husk at du bruker <code>Ctrl-T</code> for å avslutte programmet.</p>
+<pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
+    <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>                         <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>                 <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">while</span> <span class="hljs-constant">true</span> <span class="hljs-built_in">do</span>                             <span class="hljs-comment">-- endret linje</span>
-        skjerm.<span class="hljs-built_in">clear</span>()
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>                             <span class="hljs-comment">-- endret linje</span>
+        skjerm.clear()
         skjerm.setCursorPos(X, Y)             <span class="hljs-comment">-- endret linje</span>
-        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
+        skjerm.write(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
 
         X = X + fartX                         <span class="hljs-comment">-- ny linje</span>
         Y = Y + fartY                         <span class="hljs-comment">-- ny linje</span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span>
-<span class="hljs-title">end</span></span></code></pre>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre>
+
 <p>Ballen vil nå bevege seg på skrå over skjermen. Ser du hvorfor?</p></li>
 <li><p>Vi vil nå la ballen sprette når den treffer kanten. Dette gjør vi ved å “snu farten” når vi beveger oss ut av skjermen. Legg til et par tester nederst i funksjonen din:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span>(<span class="hljs-title">skjerm</span>)</span>
-    <span class="hljs-built_in">local</span> bredde, hoyde = skjerm.getSize()
-    <span class="hljs-built_in">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
-    <span class="hljs-built_in">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>
+<pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
+    <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
+    <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>
 
-    <span class="hljs-keyword">while</span> <span class="hljs-constant">true</span> <span class="hljs-built_in">do</span>
-        skjerm.<span class="hljs-built_in">clear</span>()
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+        skjerm.clear()
         skjerm.setCursorPos(X, Y)
-        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
+        skjerm.write(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
 
         X = X + fartX
         Y = Y + fartY
 
-        <span class="hljs-keyword">if</span> X &lt;= <span class="hljs-number">1</span> <span class="hljs-operator">or</span> X &gt;= bredde <span class="hljs-keyword">then</span>         <span class="hljs-comment">-- ny linje</span>
+        <span class="hljs-keyword">if</span> X &lt;= <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> X &gt;= bredde <span class="hljs-keyword">then</span>         <span class="hljs-comment">-- ny linje</span>
             fartX = -fartX                    <span class="hljs-comment">-- ny linje</span>
-        <span class="hljs-function"><span class="hljs-keyword">end</span>                                   -- <span class="hljs-title">ny</span> <span class="hljs-title">linje</span></span>
-        <span class="hljs-keyword">if</span> Y &lt;= <span class="hljs-number">1</span> <span class="hljs-operator">or</span> Y &gt;= hoyde <span class="hljs-keyword">then</span>          <span class="hljs-comment">-- ny linje</span>
+        <span class="hljs-keyword">end</span>                                   <span class="hljs-comment">-- ny linje</span>
+        <span class="hljs-keyword">if</span> Y &lt;= <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> Y &gt;= hoyde <span class="hljs-keyword">then</span>          <span class="hljs-comment">-- ny linje</span>
             fartY = -fartY                    <span class="hljs-comment">-- ny linje</span>
-        <span class="hljs-function"><span class="hljs-keyword">end</span>                                   -- <span class="hljs-title">ny</span> <span class="hljs-title">linje</span></span>
-    <span class="hljs-function"><span class="hljs-keyword">end</span>
-<span class="hljs-title">end</span></span></code></pre>
-<p>Spretter ballen tilbake når den treffer kanten av skjermen? Lag gjerne en ganske stor skjerm. Du kan også endre pausen mellom hver gang ballen flytter seg. For eksempel bytt ut <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">sleep</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span></code> med <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">sleep</span><span class="hljs-params">(<span class="hljs-number">0.1</span>)</span></span></code>.</p></li>
+        <span class="hljs-keyword">end</span>                                   <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre>
+
+<p>Spretter ballen tilbake når den treffer kanten av skjermen? Lag gjerne en ganske stor skjerm. Du kan også endre pausen mellom hver gang ballen flytter seg. For eksempel bytt ut <code>sleep(1)</code> med <code>sleep(0.1)</code>.</p></li>
 <li><p>Tilslutt kan vi lage en mer naturlig sprettball-bevegelse ved å ta med en variabel for gravitasjon. Vi kan tenke at gravitasjonen gjør at ballen faller stadig raskere ned mot bakken, altså den øker <code>fartY</code>.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
+<pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
     <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
     <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">0</span>                 <span class="hljs-comment">-- endret linje</span>
@@ -225,7 +237,8 @@ skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
         <span class="hljs-keyword">end</span>
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></code></pre>
-<p>Vi endret også litt i sjekken om <code class="lang-stata"><span class="hljs-literal">Y</span></code> er slik at ballen skal sprette, siden gravitasjonen gjør at vi ikke trenger å sprette i taket lengre.</p></li>
+
+<p>Vi endret også litt i sjekken om <code>Y</code> er slik at ballen skal sprette, siden gravitasjonen gjør at vi ikke trenger å sprette i taket lengre.</p></li>
 </ul>
 </section>
 </section>
@@ -236,62 +249,66 @@ skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag et nytt program som du kaller <code>reklame</code>. Vi begynner helt enkelt med kommandoer du allerede kjenner:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
-    skjerm.<span class="hljs-built_in">clear</span>()
+    skjerm.clear()
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"ComputerCraft"</span>)
+    skjerm.write(<span class="hljs-string">"ComputerCraft"</span>)
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
+
 <p>Kjør programmet. Skriver det til skjermen som det skal?</p></li>
 <li><p>Et problem hvis dette skal være et reklamebanner er at teksten er alt for liten! Du må jo nesten gå helt fram til skjermen for å kunne lese den.</p>
-<p>For skjermer kan vi bruke <code class="lang-bash"><span class="hljs-built_in">set</span>TextScale</code> for å endre tekststørrelsen. Legg til linjen</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-stylus">skjerm.<span class="hljs-function"><span class="hljs-title">setTextScale</span><span class="hljs-params">(<span class="hljs-number">3</span>)</span></span></code></pre>
-<p>rett før linjen <code class="lang-stylus">skjerm.<span class="hljs-function"><span class="hljs-title">clear</span><span class="hljs-params">()</span></span></code>, og kjør programmet ditt på nytt. Ble teksten større?</p>
+<p>For skjermer kan vi bruke <code>setTextScale</code> for å endre tekststørrelsen. Legg til linjen</p>
+<pre><code class="hljs lua">skjerm.setTextScale(<span class="hljs-number">3</span>)</code></pre>
+
+<p>rett før linjen <code>skjerm.clear()</code>, og kjør programmet ditt på nytt. Ble teksten større?</p>
 <figure>
-<img src="reklame.png">
+<img src="reklame.png" />
 </figure>
-<p>Tallet <code class="lang-cpp"><span class="hljs-number">3</span></code> i <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">setTextScale</span><span class="hljs-params">(<span class="hljs-number">3</span>)</span></span></code> indikererer størrelsen på teksten. Her kan vi bruke tall mellom 0.5 og 5, hvor 5 gir oss den største mulige teksten. Etter at vi har brukt <code class="lang-bash"><span class="hljs-built_in">set</span>TextScale</code> må vi bruke <code class="lang-livecodeserver"><span class="hljs-built_in">clear</span></code> før tekststørrelsen blir oppdatert.</p></li>
-<li><p>Prøv å endre verdien i <code class="lang-bash"><span class="hljs-built_in">set</span>TextScale</code>. Forandrer størrelsen på teksten seg? Hva skjer hvis du bruker et tall større enn 5? Eller mindre enn 0.5?</p></li>
+<p>Tallet <code>3</code> i <code>setTextScale(3)</code> indikererer størrelsen på teksten. Her kan vi bruke tall mellom 0.5 og 5, hvor 5 gir oss den største mulige teksten. Etter at vi har brukt <code>setTextScale</code> må vi bruke <code>clear</code> før tekststørrelsen blir oppdatert.</p></li>
+<li><p>Prøv å endre verdien i <code>setTextScale</code>. Forandrer størrelsen på teksten seg? Hva skjer hvis du bruker et tall større enn 5? Eller mindre enn 0.5?</p></li>
 <li><p>Vi vil nå la programmet selv bestemme tekststørrelsen. Siden vi vil at dette skal være en reklameplakat ønsker vi at teksten skal være så stor som mulig.</p>
 <p>En måte å gjøre dette på er å lage en løkke hvor vi tester alle tekststørrelsene fra størst til minst, helt til vi finner en størrelse hvor all teksten får plass på skjermen.</p>
-<p>Legg inn denne funksjonen øverst i <code>reklame</code>-koden:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">brukStorTekst</span>(<span class="hljs-title">skjerm</span>, <span class="hljs-title">tekst</span>)</span>
-    <span class="hljs-built_in">local</span> lengde = <span class="hljs-comment">#tekst</span>
+Legg inn denne funksjonen øverst i <code>reklame</code>-koden:
+<pre><code class="hljs lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">brukStorTekst</span><span class="hljs-params">(skjerm, tekst)</span></span>
+    <span class="hljs-keyword">local</span> lengde = #tekst
 
-    <span class="hljs-keyword">for</span> skala = <span class="hljs-number">5</span>, <span class="hljs-number">0.5</span>, -<span class="hljs-number">0.5</span> <span class="hljs-built_in">do</span>
+    <span class="hljs-keyword">for</span> skala = <span class="hljs-number">5</span>, <span class="hljs-number">0.5</span>, -<span class="hljs-number">0.5</span> <span class="hljs-keyword">do</span>
         skjerm.setTextScale(skala)
-        skjerm.<span class="hljs-built_in">clear</span>()
+        skjerm.clear()
         bredde, hoyde = skjerm.getSize()
         <span class="hljs-keyword">if</span> lengde &lt;= bredde <span class="hljs-keyword">then</span>
-            break
-        <span class="hljs-function"><span class="hljs-keyword">end</span>
-    <span class="hljs-title">end</span></span>
+            <span class="hljs-keyword">break</span>
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></code></pre>
+
 <p>Skjønner du hvordan denne koden fungerer? Vi bruker noen nye triks her som du kanskje ikke har sett før.</p>
-<p>Tegnet <code class="lang-vala"><span class="hljs-preprocessor">#</span></code> brukes for å telle ting. For eksempel betyr <code class="lang-vala"><span class="hljs-preprocessor">#tekst</span></code> rett og slett bare antall tegn i (lengden av) <code>tekst</code>. Dette må vi vite når vi senere skal sjekke om skjermen er stor nok.</p>
+<p>Tegnet <code>#</code> brukes for å telle ting. For eksempel betyr <code>#tekst</code> rett og slett bare antall tegn i (lengden av) <code>tekst</code>. Dette må vi vite når vi senere skal sjekke om skjermen er stor nok.</p>
 <p>I <em>for</em>-løkken bruker vi tre tall i stedet for to som vanlig. Det siste tallet, i dette tilfellet -0.5 bestemmer hvor store steg vi tar i løkken. Siden vi her ville telle ned fra 5 til 0.5 må vi bruke et negativt steg.</p>
-<p>Til slutt, <code class="lang-actionscript"><span class="hljs-keyword">break</span></code> sier at vi vil avslutte <em>for</em>-løkken før den egentlig er ferdig. Dermed avslutter vi letingen etter tekststørrelser når vi finner en som passer. Tidligere har vi brukt <code class="lang-actionscript"><span class="hljs-keyword">break</span></code> for å for eksempel avslutte <code>skattejakt</code> når man fant skatten.</p></li>
+<p>Til slutt, <code>break</code> sier at vi vil avslutte <em>for</em>-løkken før den egentlig er ferdig. Dermed avslutter vi letingen etter tekststørrelser når vi finner en som passer. Tidligere har vi brukt <code>break</code> for å for eksempel avslutte <code>skattejakt</code> når man fant skatten.</p></li>
 <li><p>Nå vil vi bruke denne funksjonen for å sette tekststørrelsen. Prøv selv om du finner ut hvor og hvordan funksjonen bør kalles! Skal noen av de opprinnelige linjene slettes? Sjekk om programmet ditt virker ved å endre størrelsen på skjermen (bygg eller ødelegg noen enkeltskjermer) og kjøre det på nytt.</p></li>
-<li><p>En ting du kanskje ser er at du må skrive teksten som skal stå på skjermen to ganger? Først for at <code>brukStorTekst</code> trenger den for å finne riktig størrelse på skjermen, og deretter for at <code class="lang-applescript">skjerm.<span class="hljs-command">write</span></code> skal skrive den til skjermen. Da er det lurt å i stedet lage en variabel. Med denne variabelen vil koden din (under funksjonen <code>brukStorTekst</code>) se omtrent slik ut:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-applescript"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"ComputerCraft"</span>
+<li><p>En ting du kanskje ser er at du må skrive teksten som skal stå på skjermen to ganger? Først for at <code>brukStorTekst</code> trenger den for å finne riktig størrelse på skjermen, og deretter for at <code>skjerm.write</code> skal skrive den til skjermen. Da er det lurt å i stedet lage en variabel. Med denne variabelen vil koden din (under funksjonen <code>brukStorTekst</code>) se omtrent slik ut:</p>
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"ComputerCraft"</span>
 <span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     brukStorTekst(skjerm, tekst)
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.<span class="hljs-command">write</span>(tekst)
+    skjerm.write(tekst)
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
-<span class="hljs-keyword">end</span></code></pre></li>
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+<span class="hljs-keyword">end</span></code></pre>
+</li>
 </ul>
 <section id="prøv-selv" class="level3 try">
 <h3>Prøv selv</h3>
 <p>Det er flere måter å gjøre <code>reklame</code>-programmet enda bedre på. Her er to forslag:</p>
-<p>Kan du midtstille teksten på skjermen? Du må da endre tallene i <code class="lang-pf"><span class="hljs-built_in">set</span>CursorP<span class="hljs-keyword">os</span></code> ut ifra lengden på teksten og størrelsen på skjermen.</p>
-<p>Om du endrer størrelsen på skjermen blir teksten borte. Vi kan heller få teksten til å bli skrevet i ny og riktig størrelse når skjermen blir endret. Du kan bruke <code class="lang-css"><span class="hljs-tag">os</span><span class="hljs-class">.pullEvent</span></code> til å lytte på hendelser som heter <code>monitor_resize</code> og skrive teksten på nytt når disse skjer.</p>
+<p>Kan du midtstille teksten på skjermen? Du må da endre tallene i <code>setCursorPos</code> ut ifra lengden på teksten og størrelsen på skjermen.</p>
+<p>Om du endrer størrelsen på skjermen blir teksten borte. Vi kan heller få teksten til å bli skrevet i ny og riktig størrelse når skjermen blir endret. Du kan bruke <code>os.pullEvent</code> til å lytte på hendelser som heter <code>monitor_resize</code> og skrive teksten på nytt når disse skjer.</p>
 </section>
 </section>
 </section>
@@ -304,84 +321,88 @@ skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 <h1>Sjekkliste</h1>
 <ul>
 <li><p>Lag et nytt program som heter <code>ticker</code>. Vi begynner programmet på en velkjent måte:</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
-<span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
+<span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     skjerm.setTextScale(<span class="hljs-number">5</span>)
-    skjerm.<span class="hljs-built_in">clear</span>()
+    skjerm.clear()
 
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.<span class="hljs-built_in">write</span>(tekst)
+    skjerm.write(tekst)
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
-<p>Her setter vi bare størrelsen på teksten fast til <code class="lang-cpp"><span class="hljs-number">5</span></code>, siden vi vil bruke så stor tekst som mulig. Hva skjer når du kjører dette programmet?</p></li>
-<li><p>I stedet for å prøve å skrive hele teksten til skjermen vil vi nå bare skrive så mye tekst som faktisk får plass. Da bruker vi igjen <code class="lang-stylus">skjerm.<span class="hljs-function"><span class="hljs-title">getSize</span><span class="hljs-params">()</span></span></code> for å finne ut hvor stor skjermen er. Videre vil vi bruke funksjonen <code class="lang-vbnet"><span class="hljs-built_in">string</span>.<span class="hljs-keyword">sub</span></code> i <code class="lang-applescript"><span class="hljs-type">string</span></code>-biblioteket (<em>sub</em> betyr i denne sammenhengen <em>del</em>, den brukes til å finne deltekster).</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
-<span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+
+<p>Her setter vi bare størrelsen på teksten fast til <code>5</code>, siden vi vil bruke så stor tekst som mulig. Hva skjer når du kjører dette programmet?</p></li>
+<li><p>I stedet for å prøve å skrive hele teksten til skjermen vil vi nå bare skrive så mye tekst som faktisk får plass. Da bruker vi igjen <code>skjerm.getSize()</code> for å finne ut hvor stor skjermen er. Videre vil vi bruke funksjonen <code>string.sub</code> i <code>string</code>-biblioteket (<em>sub</em> betyr i denne sammenhengen <em>del</em>, den brukes til å finne deltekster).</p>
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
+<span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     skjerm.setTextScale(<span class="hljs-number">5</span>)
-    skjerm.<span class="hljs-built_in">clear</span>()
-    <span class="hljs-built_in">local</span> bredde, hoyde = skjerm.getSize()         <span class="hljs-comment">-- ny linje</span>
+    skjerm.clear()
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()         <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-built_in">local</span> deltekst = <span class="hljs-keyword">string</span>.sub(tekst, <span class="hljs-number">1</span>, bredde)  <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">local</span> deltekst = <span class="hljs-built_in">string</span>.sub(tekst, <span class="hljs-number">1</span>, bredde)  <span class="hljs-comment">-- ny linje</span>
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.<span class="hljs-built_in">write</span>(deltekst)                         <span class="hljs-comment">-- endret linje</span>
+    skjerm.write(deltekst)                         <span class="hljs-comment">-- endret linje</span>
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
-<p>I linjen <code class="lang-stylus">string.<span class="hljs-function"><span class="hljs-title">sub</span><span class="hljs-params">(tekst, <span class="hljs-number">1</span>, bredde)</span></span></code> sier vi at vi vil ta ut en deltekst fra <code>tekst</code> fra tegn nummer <code class="lang-cpp"><span class="hljs-number">1</span></code> til tegn nummer <code>bredde</code>. Prøv å endre på disse tallene for å se effekten, slik at du skjønner hvordan denne funksjonen virker.</p></li>
+
+<p>I linjen <code>string.sub(tekst, 1, bredde)</code> sier vi at vi vil ta ut en deltekst fra <code>tekst</code> fra tegn nummer <code>1</code> til tegn nummer <code>bredde</code>. Prøv å endre på disse tallene for å se effekten, slik at du skjønner hvordan denne funksjonen virker.</p></li>
 <li><p>Vi kan nå animere teksten ved hjelp av en <em>for</em>-løkke.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
-<span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
+<span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     skjerm.setTextScale(<span class="hljs-number">5</span>)
-    skjerm.<span class="hljs-built_in">clear</span>()
-    <span class="hljs-built_in">local</span> bredde, hoyde = skjerm.getSize()
-    <span class="hljs-built_in">local</span> lengde = <span class="hljs-comment">#tekst                     -- ny linje</span>
+    skjerm.clear()
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
+    <span class="hljs-keyword">local</span> lengde = #tekst                     <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>, lengde - bredde <span class="hljs-built_in">do</span>             <span class="hljs-comment">-- ny linje</span>
-        <span class="hljs-built_in">local</span> deltekst = <span class="hljs-keyword">string</span>.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
+    <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>, lengde - bredde <span class="hljs-keyword">do</span>             <span class="hljs-comment">-- ny linje</span>
+        <span class="hljs-keyword">local</span> deltekst = <span class="hljs-built_in">string</span>.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
                                   <span class="hljs-comment">-- deltekstlinjen er endret</span>
         skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-        skjerm.<span class="hljs-built_in">clear</span>()                        <span class="hljs-comment">-- ny linje</span>
-        skjerm.<span class="hljs-built_in">write</span>(deltekst)
-    <span class="hljs-function"><span class="hljs-keyword">end</span>                                       -- <span class="hljs-title">ny</span> <span class="hljs-title">linje</span></span>
+        skjerm.clear()                        <span class="hljs-comment">-- ny linje</span>
+        skjerm.write(deltekst)
+    <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
-<p>Skjønner du hvordan tellevariabelen <code class="lang-matlab"><span class="hljs-built_in">i</span></code> virker? Enkelt sagt teller den hvor langt fra det første tegnet i teksten vi har kommet.</p></li>
-<li><p>Kjør programmet. Ser du animasjonen? Hvis du bare ser slutten av teksten på skjermen er det fordi datamaskinen animerer for raskt. Prøv å legg inn en <code class="lang-autoit"><span class="hljs-built_in">sleep</span></code>-kommando nederst i <em>for</em>-løkken. Ble det bedre nå?</p></li>
-<li><p>Hvis dette skal være en ticker som står og går vil vi at teksten skal rullere hele tiden, ikke bare en gang. Prøv også å lag en <code class="lang-actionscript"><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span></code>-løkke rundt <em>for</em>-løkken. Gjentas animasjonen? Husk at du kan bruke <code class="lang-r">Ctrl-<span class="hljs-literal">T</span></code> for å stoppe programmet ditt.</p></li>
+
+<p>Skjønner du hvordan tellevariabelen <code>i</code> virker? Enkelt sagt teller den hvor langt fra det første tegnet i teksten vi har kommet.</p></li>
+<li><p>Kjør programmet. Ser du animasjonen? Hvis du bare ser slutten av teksten på skjermen er det fordi datamaskinen animerer for raskt. Prøv å legg inn en <code>sleep</code>-kommando nederst i <em>for</em>-løkken. Ble det bedre nå?</p></li>
+<li><p>Hvis dette skal være en ticker som står og går vil vi at teksten skal rullere hele tiden, ikke bare en gang. Prøv også å lag en <code>while true do</code>-løkke rundt <em>for</em>-løkken. Gjentas animasjonen? Husk at du kan bruke <code>Ctrl-T</code> for å stoppe programmet ditt.</p></li>
 <li><p>Når animasjonen kommer til slutten av teksten, bare hopper den rett til begynnelsen igjen. Dette ser ikke så bra ut. Vi kan forbedre dette ved å legge på litt luft før og etter teksten.</p>
-<p>Hvor mye luft vi legger på vil ideelt sett avhenge av hvor stor skjermen er. Til dette kan vi bruke <code class="lang-applescript"><span class="hljs-type">string</span>.rep</code> som kan repetere tekststrenger. For eksempel er <code class="lang-stylus">string.<span class="hljs-function"><span class="hljs-title">rep</span><span class="hljs-params">(<span class="hljs-string">"Hei"</span>, <span class="hljs-number">4</span>)</span></span></code> det samme som <code>HeiHeiHeiHei</code>. Vi kan legge på litt luft rundt teksten før vi begynner å animere den.</p>
-<pre class="sourceCode lua"><code class="sourceCode lua lang-livecodeserver"><span class="hljs-built_in">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
-<span class="hljs-built_in">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
+<p>Hvor mye luft vi legger på vil ideelt sett avhenge av hvor stor skjermen er. Til dette kan vi bruke <code>string.rep</code> som kan repetere tekststrenger. For eksempel er <code>string.rep(&quot;Hei&quot;, 4)</code> det samme som <code>HeiHeiHeiHei</code>. Vi kan legge på litt luft rundt teksten før vi begynner å animere den.</p>
+<pre><code class="hljs lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
+<span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     skjerm.setTextScale(<span class="hljs-number">5</span>)
-    skjerm.<span class="hljs-built_in">clear</span>()
-    <span class="hljs-built_in">local</span> bredde, hoyde = skjerm.getSize()
-    <span class="hljs-built_in">local</span> luft = <span class="hljs-keyword">string</span>.rep(<span class="hljs-string">" "</span>, bredde)      <span class="hljs-comment">-- ny linje</span>
+    skjerm.clear()
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
+    <span class="hljs-keyword">local</span> luft = <span class="hljs-built_in">string</span>.rep(<span class="hljs-string">" "</span>, bredde)      <span class="hljs-comment">-- ny linje</span>
     tekst = luft .. tekst .. luft             <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-built_in">local</span> lengde = <span class="hljs-comment">#tekst</span>
-    <span class="hljs-keyword">while</span> <span class="hljs-constant">true</span> <span class="hljs-built_in">do</span>
-        <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>, lengde - bredde <span class="hljs-built_in">do</span>
-            <span class="hljs-built_in">local</span> deltekst = <span class="hljs-keyword">string</span>.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
+    <span class="hljs-keyword">local</span> lengde = #tekst
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>, lengde - bredde <span class="hljs-keyword">do</span>
+            <span class="hljs-keyword">local</span> deltekst = <span class="hljs-built_in">string</span>.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
             skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-            skjerm.<span class="hljs-built_in">clear</span>()
-            skjerm.<span class="hljs-built_in">write</span>(deltekst)
+            skjerm.clear()
+            skjerm.write(deltekst)
             sleep(<span class="hljs-number">0.2</span>)
-        <span class="hljs-function"><span class="hljs-keyword">end</span>
-    <span class="hljs-title">end</span></span>
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">else</span>
-    print(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span></code></pre>
-<p>Pass på at det er et mellomromstegn i <code class="lang-stylus">string.<span class="hljs-function"><span class="hljs-title">rep</span><span class="hljs-params">(<span class="hljs-string">" "</span>, bredde)</span></span></code>.</p></li>
+
+<p>Pass på at det er et mellomromstegn i <code>string.rep(&quot; &quot;, bredde)</code>.</p></li>
 </ul>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>

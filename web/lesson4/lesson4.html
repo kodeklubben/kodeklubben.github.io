@@ -18,16 +18,17 @@ function relative(url) {
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne index.html fra foldern Felix som vi lagte i forrige leksjon.</p></li>
-<li><p>I seksjonen “head” trenger vi en <strong>style tag</strong>.</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-xml"> <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
- </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span></code></pre>
+<li>I seksjonen “head” trenger vi en <strong>style tag</strong>.
+<pre><code class="hljs css">&lt;style&gt;
+ &lt;/style&gt;</code></pre>
 <p>Alle stiler skal legges mellom disse elementene. Generelt ser css-kode slik ut:</p></li>
 </ul>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">selector</span> <span class="hljs-rules">{
+<pre><code class="hljs css"><span class="hljs-tag">selector</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">property</span>:<span class="hljs-value"> value</span></span>;
-}</span></code></pre>
+<span class="hljs-rule">}</span></span></code></pre>
+
 <ul>
-<li>Kan du finne knappene for ‘{‘ og ‘}’ på ditt tastatur? Hva med ‘:’ og ‘;’ ? Selektorer kan være html-element som <code>h1</code>, <code>p</code>, <code>img</code>, <code class="lang-autohotkey"><span class="hljs-literal">a</span></code>. Men de kan også være andre ting som vi vil lære om senere.</li>
+<li>Kan du finne knappene for ‘{‘ og ‘}’ på ditt tastatur? Hva med ‘:’ og ‘;’ ? Selektorer kan være html-element som <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code>. Men de kan også være andre ting som vi vil lære om senere.</li>
 </ul>
 </section>
 </section>
@@ -35,18 +36,19 @@ function relative(url) {
 <h1>Steg 2: Legg til farge</h1>
 <p>La oss legge til farge med hjelp av attributtet color! CSS er faktisk oppfunnet av en norsk gutt!</p>
 <p>La oss endre <code>h1</code> til å være rød istedenfor svart.</p>
-<pre class="sourceCode html"><code class="sourceCode html lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
     <span class="hljs-tag">h1</span> <span class="hljs-rules">{
         <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-    }</span>
+    <span class="hljs-rule">}</span></span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span></code></pre>
+
 <section id="lagre-filen-og-vise-den-i-nettleseren-din" class="level2 save">
 <h2><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
 <p>Teksten skal nå være rød! Det finnes forskjellige måter å representere en farge på. Det er 16 grunnleggende fargenavn, som er aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, og yellow.</p>
 <ul>
 <li><p>Prøv og endre fargen til noe annet! De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfabetisk rekkefølge kan dere finne på <a href="http://www.w3.org/TR/css3-color/#svg-color">http://www.w3.org/TR/css3-color/#svg-color</a> Er din yndlingsfarge i listen?</p></li>
 <li><p>Men vi kan bruke enda flere farger gjennom å bruke den heksadesimale koden istedenfor navnet. En heksadesimal kode er en # fulgt av 6 tegn der tegnen kan være sifferne 0-9 eller bokstavene A, B, C, D, E, F. Gjennom å bruke heksadesimale koder kan vi representere mer enn 16 millioner farger.</p></li>
-<li><p>Kodeklubben sin favorittfarge er <code class="lang-stylus"><span class="hljs-hexcolor">#58AB57</span></code>. Kan du gjette hvilken farge det er? Prøv å endre noen tekst til den fargen og se hvordan det ser ut i en nettleser.</p></li>
+<li><p>Kodeklubben sin favorittfarge er <code>#58AB57</code>. Kan du gjette hvilken farge det er? Prøv å endre noen tekst til den fargen og se hvordan det ser ut i en nettleser.</p></li>
 </ul>
 </section>
 <section id="lagre-filen-og-vise-den-i-nettleseren-din-1" class="level2 save">
@@ -56,12 +58,13 @@ function relative(url) {
 <section id="steg-3-gi-farge-til-spesifikke-elementer" class="level1 activity">
 <h1>Steg 3: Gi farge til spesifikke elementer</h1>
 <p>Hva om vi vil gjøre sånn at ordet oransje i settningen ´Pelsen hans er oransje´ får oransje farge? Ikke hele seksjonen, men akkurat det ordet.</p>
-<p>En måte å gjøre dette på er å putte taggen <span> rundt ordet, på denne måten:</span></p>
-<p><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></code></p>
+<p>En måte å gjøre dette på er å putte taggen <span> rundt ordet, på denne måten:</p>
+<p><code>&lt;span&gt;oransje&lt;/span&gt;</code></p>
 <p>Vi kan da i seksjonen <code>head</code> lage en stil for <code>span</code></p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">span</span> <span class="hljs-rules">{
+<pre><code class="hljs css"><span class="hljs-tag">span</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
-}</span></code></pre>
+<span class="hljs-rule">}</span></span></code></pre>
+
 <section id="lagre-filen-og-vise-den-i-nettleseren-din-2" class="level2 save">
 <h2><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
 </section>
@@ -69,49 +72,45 @@ function relative(url) {
 <section id="steg-4-bakgrunn" class="level1 activity">
 <h1>Steg 4: Bakgrunn</h1>
 <p>Vi kan legge til farge på bakgrunnen også, ikke bare på tekst. For eksempel:</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
+<pre><code class="hljs css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#D2FAFC</span></span></span>;
-}</span></code></pre>
+<span class="hljs-rule">}</span></span></code></pre>
+
 <p>Dette vil gjøre at hele bakgrunnen blir blå. Du kan velge hvilken farge du ønsker fra en liste på <a href="http://www.colourpicker.com">www.colourpicker.com</a> som da genererer det nummer du trenger og så kan du klippe og lime det inn i din kode.</p>
 <p>Prøve nå:</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
+<pre><code class="hljs css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
-}</span></code></pre>
+<span class="hljs-rule">}</span></span></code></pre>
+
 <p>Siden vi allerede hadde en <code>h1</code> deklarert i filen kan vi bare putte inn attributtet background-color sammen med color, vi trenger ikke å skrive alt om igjen.</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
+<pre><code class="hljs css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
     <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
     <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
-}</span></code></pre>
-<p>``` ## Nå skal du <strong>LAGRE</strong> filen og se hvordan det ser ut. { .save}</p>
-<section id="morro-med-tekst" class="level2">
-<h2>Morro med tekst</h2>
-<p>Kanskje skulle tittelen være <strong>større</strong> og med store bokstaver. Vi kan spesifisere størrelsen på teksten gjennom å bruke <code class="lang-fortran">font-<span class="hljs-built_in">size</span></code>. Verdiene kan være forskjellige, men de mest brukte er 12, 14, 16, 32, 48 og 72 piksler. La oss prøve ut 72px for nå. (px betyr piksel)</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">72px</span></span></span>;
-}</span></code></pre>
-<p>Nå skal du forsøke å endre tittelen til å være kun i store bokstaver bare gjennom å bruke <code class="lang-css"><span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value">uppercase</span></span>;</code> Vi kan også gjøre den understreket gjennom å bruke <code class="lang-css"><span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value">underline</span></span>;</code></p>
-</section>
-<section id="nå-skal-du-lagre-filen-og-se-hvordan-den-ser-ut." class="level2 save">
-<h2>Nå skal du <strong>LAGRE</strong> filen og se hvordan den ser ut.</h2>
-<p>Er det ikke mye større forskjell nå?</p>
-<section id="for-de-som-bruker-firefox-eller-chrome-som-nettleser." class="level3">
-<h3>For de som bruker Firefox eller Chrome som nettleser.</h3>
-<p>Det finnes faktisk også en annen verdi for “text-decoration” som er “blink”. Jeg kommer ikke til å fortelle deg hva det gjør. Du må teste det. <code class="lang-css"><span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value">blink</span></span>;</code> (det blir litt masete etterhvert, men det er lov å gå tilbake til “underline” hvis du vil).</p>
-</section>
-</section>
-</section>
-<section id="steg-6.-sentrere-tekst-og-bilder-horisontalt" class="level1 activity">
-<h1>Steg 6. Sentrere tekst (og bilder) horisontalt</h1>
-<p>All vår tekst vises helt borte til venstre. Vi kan endre det gjennom å bruke <code class="lang-mel"><span class="hljs-keyword">text</span>-<span class="hljs-keyword">align</span>:center</code> (man kan også bruke ´right´(høyre), ´left´(venstre) er standard). 1. For denne nettsiden vil vi at all vår tekst skal være sentrert, og da kan vi skrive: (Merk deg at den engelske måten å stave senter på er center.)</p>
-<pre class="sourceCode css"><code class="sourceCode css lang-css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#F8FAF4</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
-}</span></code></pre>
-<p>La du merke til at alt på nettsiden ble sentrert når vi har lagt til ‘text-align:center’ i seksjonen “body”? Det er fordi alt innenfor elementet “body” arver stilen. Dette skjer når et element er innenfor et annet, som dette her:</p>
-<pre class="sourceCode html"><code class="sourceCode html lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Vennligst<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> kontakt eieren hans<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code></pre>
-<p>Teksten “Vennligst” vil ha stilen fra elementet <code class="lang-apache"><span class="hljs-tag">&lt;p&gt;</span></code> med stilen fra elementet <code class="lang-apache"><span class="hljs-tag">&lt;em&gt;</span></code> lagt på. Dette er grunnen til at man kaller det <strong>cascading</strong> - stilene blir videreført fra et element til alle ene som er innenfor dem. Men vær forsiktig, det finnes noen stiler som ikke blir videreført.</p>
+<span class="hljs-rule">}</span></span></code></pre>
+
+<pre><code class="hljs"><span class="hljs-preprocessor">## Nå skal du __LAGRE__ filen og se hvordan det ser ut. { .save}</span>
+
+<span class="hljs-preprocessor">## Morro med tekst</span>
+Kanskje skulle tittelen være __større__ og med store bokstaver. Vi kan spesifisere størrelsen på teksten gjennom å bruke `font-size`. Verdiene kan være forskjellige, men de mest brukte er <span class="hljs-number">12</span>, <span class="hljs-number">14</span>, <span class="hljs-number">16</span>, <span class="hljs-number">32</span>, <span class="hljs-number">48</span> og <span class="hljs-number">72</span> piksler.
+La oss prøve ut <span class="hljs-number">72</span>px <span class="hljs-keyword">for</span> nå. (px betyr piksel)</code></pre>
+css h1 { color:red; background-color:black; font-size:72px; }
+<pre><code class="hljs">Nå skal du forsøke å endre tittelen til å være kun i store bokstaver bare gjennom å bruke `<span class="hljs-keyword">text</span>-transform:uppercase;` Vi kan også gjøre den understreket gjennom å bruke `<span class="hljs-keyword">text</span>-decoration:underline;`
+
+<span class="hljs-comment">## Nå skal du __LAGRE__ filen og se hvordan den ser ut. { .save}</span>
+
+Er det ikke mye større forskjell nå?
+
+<span class="hljs-comment">### For de som bruker Firefox eller Chrome som nettleser.</span>
+Det finnes faktisk også en annen verdi <span class="hljs-keyword">for</span> “<span class="hljs-keyword">text</span>-decoration” som er “blink”. Jeg kommer ikke til å fortelle deg hva det gjør. Du må teste det. `<span class="hljs-keyword">text</span>-decoration:blink;` (det blir litt masete etterhvert, men det er lov å gå tilbake til “underline” hvis du vil).
+
+<span class="hljs-comment"># Steg 6. Sentrere tekst (og bilder) horisontalt { .activity}</span>
+
+All vår tekst vises helt borte til venstre. Vi kan endre det gjennom å bruke `<span class="hljs-keyword">text</span>-align:center` (man kan også bruke ´<span class="hljs-constant">right</span>´(høyre), ´left´(venstre) er standard).
+<span class="hljs-number">1.</span> For denne nettsiden vil vi <span class="hljs-keyword">at</span> all vår tekst skal være sentrert, og da kan vi skrive: (Merk deg <span class="hljs-keyword">at</span> den engelske må<span class="hljs-constant">ten</span> å stave senter på er center.)</code></pre>
+css body { background-color: #F8FAF4; text-align: center; }
+<pre><code class="hljs">La du merke til at alt på nettsiden ble sentrert når vi har lagt til ‘text-<span class="hljs-keyword">align</span>:center’ i seksjonen “<span class="hljs-keyword">body</span>”? Det er fordi alt innenfor elementet “<span class="hljs-keyword">body</span>” arver stilen. Dette skjer når et element er innenfor et annet, som dette her:</code></pre>
+
+<p>Teksten “Vennligst” vil ha stilen fra elementet <code>&lt;p&gt;</code> med stilen fra elementet <code>&lt;em&gt;</code> lagt på. Dette er grunnen til at man kaller det <strong>cascading</strong> - stilene blir videreført fra et element til alle ene som er innenfor dem. Men vær forsiktig, det finnes noen stiler som ikke blir videreført.</p>
 <section id="nå-skal-du-lagre-filen-og-åpne-den-i-en-nettleser" class="level2 save">
 <h2>Nå skal du <strong>LAGRE</strong> filen og åpne den i en nettleser</h2>
 </section>

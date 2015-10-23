@@ -16,31 +16,32 @@ function relative(url) {
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi begynner med å bruke det du allerede kan om tegning med skilpadden. Kjør dette programmet:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-scss">from turtle import *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-# Denne koden tegner en liten grå stjerne <span class="hljs-tag">p</span>å en mørkeblå bakgrunn
-<span class="hljs-function">color</span>("WhiteSmoke")
-<span class="hljs-function">bgcolor</span>("MidnightBlue")
+<span class="hljs-comment"># Denne koden tegner en liten grå stjerne på en mørkeblå bakgrunn</span>
+color(<span class="hljs-string">"WhiteSmoke"</span>)
+bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
-<span class="hljs-function">pendown</span>()
-<span class="hljs-function">begin_fill</span>()
+pendown()
+begin_fill()
 
-# Tegn stjernen
-for side in <span class="hljs-function">range</span>(5)<span class="hljs-value">:
-    <span class="hljs-function">left</span>(<span class="hljs-number">144</span>)
-    <span class="hljs-function">forward</span>(<span class="hljs-number">50</span>)
+<span class="hljs-comment"># Tegn stjernen</span>
+<span class="hljs-keyword">for</span> side <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
+    left(<span class="hljs-number">144</span>)
+    forward(<span class="hljs-number">50</span>)
 
-<span class="hljs-function">end_fill</span>()
-<span class="hljs-function">penup</span>()
+end_fill()
+penup()
 
-<span class="hljs-function">forward</span>(<span class="hljs-number">100</span>)
-<span class="hljs-function">done</span>()</span></code></pre>
+forward(<span class="hljs-number">100</span>)
+done()</code></pre>
+
 <figure>
-<img src="sky-star.png" title="Sky med en stjerne og skilpadde">
+<img src="sky-star.png" title="Sky med en stjerne og skilpadde" />
 </figure></li>
-<li><p>Kan du alle komandoene? <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">bgcolor</span><span class="hljs-params">(color)</span></span></code> setter fargen på bakgrunnen. Sørg for å forstå alle før du går videre.</p></li>
-<li><p>Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">()</span></span></code> og kaller denne tre ganger for å tegne tre stjerner.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li><p>Kan du alle komandoene? <code>bgcolor(color)</code> setter fargen på bakgrunnen. Sørg for å forstå alle før du går videre.</p></li>
+<li><p>Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code>drawStar()</code> og kaller denne tre ganger for å tegne tre stjerner.</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne stjerner</span>
 <span class="hljs-comment"># 'def' er kort for 'define' på engelsk</span>
@@ -67,23 +68,24 @@ drawStar()
 
 hideturtle()
 done()</code></pre>
+
 <figure>
-<img src="sky-function.png" title="Sky med tre stjerner">
+<img src="sky-function.png" title="Sky med tre stjerner" />
 </figure>
-<p><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">hideturtle</span><span class="hljs-params">()</span></span></code> gjemmer skilpadden.</p>
-<p>Du har sett og brukt funksjoner før. For eksempel, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">penup</span><span class="hljs-params">()</span></span></code>og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">pendown</span><span class="hljs-params">()</span></span></code> er funksjoner. Din nye <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">()</span></span></code>funksjon virker på samme måte. Nå som du har en funksjon for å tegne en stjerne trenger du ikke tenke på hvilke komandoer du må skrive for å tegne dem, du kan bare kalle funksjonen og den vil tegne stjernen for deg!</p></li>
+<p><code>hideturtle()</code> gjemmer skilpadden.</p>
+<p>Du har sett og brukt funksjoner før. For eksempel, <code>penup()</code>og <code>pendown()</code> er funksjoner. Din nye <code>drawStar()</code>funksjon virker på samme måte. Nå som du har en funksjon for å tegne en stjerne trenger du ikke tenke på hvilke komandoer du må skrive for å tegne dem, du kan bare kalle funksjonen og den vil tegne stjernen for deg!</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-2-sende-verdier-inn-i-funksjoner" class="level1 activity">
 <h1>Steg 2: Sende verdier inn i funksjoner</h1>
-<p>Funksjonen du lagde i forrige steg tegner en like stor stjerne hver gang. Hva om du vil tegne stjerner med forskjellige størrelser? En måte du kan gjøre det på er å lage forskjellige funksjoner som <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawBigStar</span><span class="hljs-params">()</span></span></code> , <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawMediumStar</span><span class="hljs-params">()</span></span></code> eller <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawSmallStar</span><span class="hljs-params">()</span></span></code></p>
-<p>En bedre måte å gjøre det på er å sende inn verdier til funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">()</span></span></code> for å fortelle hvilken størrelse du vil ha. Du har allerede brukt flere funksjoner som mottar verdier på denne måten. For eksempel: <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">100</span>)</span></span></code> Her sender du 100 inn funksjonen og det gjør at skilpadden går 100 piksler frem.</p>
+<p>Funksjonen du lagde i forrige steg tegner en like stor stjerne hver gang. Hva om du vil tegne stjerner med forskjellige størrelser? En måte du kan gjøre det på er å lage forskjellige funksjoner som <code>drawBigStar()</code> , <code>drawMediumStar()</code> eller <code>drawSmallStar()</code></p>
+<p>En bedre måte å gjøre det på er å sende inn verdier til funksjonen <code>drawStar()</code> for å fortelle hvilken størrelse du vil ha. Du har allerede brukt flere funksjoner som mottar verdier på denne måten. For eksempel: <code>forward(100)</code> Her sender du 100 inn funksjonen og det gjør at skilpadden går 100 piksler frem.</p>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Her er et program med en “stjernetegne-funksjon” som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funksjonen.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">(starSize)</span>:</span>
@@ -109,15 +111,16 @@ drawStar(<span class="hljs-number">70</span>)
 
 hideturtle()
 done()</code></pre>
+
 <figure>
-<img src="sky-function.png" title="Sky med tre stjerner">
+<img src="sky-function.png" title="Sky med tre stjerner" />
 </figure></li>
-<li><p>Når programmet ditt kjører <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">(<span class="hljs-number">50</span>)</span></span></code> er altså verdien til starSize lik 50. Dette gjør at kommandoen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(starSize)</span></span></code> inne i løkken tegner en linje som er 50 piksler lang.</p>
+<li><p>Når programmet ditt kjører <code>drawStar(50)</code> er altså verdien til starSize lik 50. Dette gjør at kommandoen <code>forward(starSize)</code> inne i løkken tegner en linje som er 50 piksler lang.</p>
 <figure>
-<img src="sky-parameter-passing.png">
+<img src="sky-parameter-passing.png" />
 </figure></li>
 <li><p>Det er mulig å sende inn flere verdier inn i funksjonen. For eksempel kan vi sende inn hvilken farge vi vil at stjernen skal ha.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">(starSize, starColour)</span>:</span>
@@ -143,25 +146,26 @@ drawStar(<span class="hljs-number">70</span>, <span class="hljs-string">"Green"<
 
 hideturtle()
 done()</code></pre>
+
 <p>Ser du hvilke endringer som er gjort i koden?</p>
 <figure>
-<img src="sky-colours.png" title="Tre stjerner med forskjellige farger">
+<img src="sky-colours.png" title="Tre stjerner med forskjellige farger" />
 </figure></li>
 </ul>
 </section>
 <section id="utfordring" class="level2 challenge">
 <h2>Utfordring</h2>
-<p>Lag en funksjon for å tegne planeter og kall den <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawPlanet</span><span class="hljs-params">()</span></span></code> Send verdier inn i funksjonen slik at du kan bestemme hvor stor og hvilken farge den skal ha.</p>
+<p>Lag en funksjon for å tegne planeter og kall den <code>drawPlanet()</code> Send verdier inn i funksjonen slik at du kan bestemme hvor stor og hvilken farge den skal ha.</p>
 </section>
 </section>
 <section id="steg-3-tilfeldige-stjerner" class="level1 activity">
 <h1>Steg 3: Tilfeldige stjerner</h1>
-<p>Vi skal nå bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">()</span></span></code> til å tegne stjerner på tilfeldige steder rundt på skjermen.</p>
+<p>Vi skal nå bruke <code>drawStar()</code> til å tegne stjerner på tilfeldige steder rundt på skjermen.</p>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tegner en hvit stjerne der.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">(starSize, starColour)</span>:</span>
@@ -186,12 +190,12 @@ drawStar(<span class="hljs-number">50</span>, <span class="hljs-string">"White"<
 
 hideturtle()
 done()</code></pre></li>
-<li><p>Vi bruker funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">setpos</span><span class="hljs-params">(x, y)</span></span></code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">setpos</span><span class="hljs-params">(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>)</span></span></code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
+<li><p>Vi bruker funksjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
 <figure>
-<img src="sky-xy.png">
+<img src="sky-xy.png" />
 </figure></li>
-<li><p>Vi skal nå flytte til en tilfeldig posisjon. Vi lager en ny funksjon som heter <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">moveToRandomLocation</span><span class="hljs-params">()</span></span></code>, denne flytter altså skilpadden til en tilfeldig posisjon.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li><p>Vi skal nå flytte til en tilfeldig posisjon. Vi lager en ny funksjon som heter <code>moveToRandomLocation()</code>, denne flytter altså skilpadden til en tilfeldig posisjon.</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># Flytter skilpadden til tilfeldig posisjon</span>
@@ -221,11 +225,12 @@ bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
 hideturtle()
 done()</code></pre>
+
 <figure>
-<img src="sky-random.png" title="Stjernehimmel">
+<img src="sky-random.png" title="Stjernehimmel" />
 </figure>
 <p>Kjør koden flere ganger. Ser du at den tegner stjernene forskjellige plasser hver gang? Prøv å tegne flere stjerner i flere forskjellige størrelser og farger.</p>
-<p><code class="lang-capnproto"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *</code> gjør at vi får tilgang på funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">(a,b)</span></span></code> . Hvis vi skriver <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">(<span class="hljs-number">5</span>, <span class="hljs-number">25</span>)</span></span></code> gir denne funksjonen oss et tilfeldig tall som er større eller lik 5 og mindre enn eller lik 25.</p></li>
+<p><code>from random import *</code> gjør at vi får tilgang på funksjonen <code>randint(a,b)</code> . Hvis vi skriver <code>randint(5, 25)</code> gir denne funksjonen oss et tilfeldig tall som er større eller lik 5 og mindre enn eller lik 25.</p></li>
 </ul>
 </section>
 </section>
@@ -235,8 +240,8 @@ done()</code></pre>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Det ville vært kult hvis vi kunne lage en galakse med små flerfargede stjerner i tegningen vår. Vi lager defor en funksjon som heter <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawGalaxy</span><span class="hljs-params">()</span></span></code> som bruker funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">()</span></span></code> som vi laget tidligere.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li><p>Det ville vært kult hvis vi kunne lage en galakse med små flerfargede stjerner i tegningen vår. Vi lager defor en funksjon som heter <code>drawGalaxy()</code> som bruker funksjonen <code>drawStar()</code> som vi laget tidligere.</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># a function for moving the turtle to a random location</span>
@@ -285,12 +290,13 @@ bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
 hideturtle()
 done()</code></pre>
+
 <figure>
-<img src="sky-galaxies.png" title="Stjernehimmel med galakser">
+<img src="sky-galaxies.png" title="Stjernehimmel med galakser" />
 </figure>
-<p>Ved å kjøre <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawGalaxy</span><span class="hljs-params">(<span class="hljs-number">40</span>)</span></span></code> 3 ganger for vi 3 nye galakser som hver inneholder 40 stjerner. For hver galakse kjøres <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">drawStar</span><span class="hljs-params">()</span></span></code> 40 ganger, mellom hver gang flyttes posisjonen til den neste stjernen litt. Ser du hvor i koden dette skjer?</p></li>
+<p>Ved å kjøre <code>drawGalaxy(40)</code> 3 ganger for vi 3 nye galakser som hver inneholder 40 stjerner. For hver galakse kjøres <code>drawStar()</code> 40 ganger, mellom hver gang flyttes posisjonen til den neste stjernen litt. Ser du hvor i koden dette skjer?</p></li>
 <li><p>Du kan også tegne stjernebilder satt sammen av stjerner. Dette er ikke så vanskelig siden vi allerede har mange av funksjonene vi trenger.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># a function for moving the turtle to a random location</span>
@@ -356,8 +362,9 @@ bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
 
 hideturtle()
 done()</code></pre>
+
 <figure>
-<img src="sky-constellations.png" title="Stjernehimmel med stjernekonstellasjoner">
+<img src="sky-constellations.png" title="Stjernehimmel med stjernekonstellasjoner" />
 </figure></li>
 </ul>
 </section>
@@ -369,10 +376,10 @@ done()</code></pre>
 <section id="eksempler" class="level1 activity">
 <h1>Eksempler</h1>
 <figure>
-<img src="sky-flowers.png" title="Blomstereng">
+<img src="sky-flowers.png" title="Blomstereng" />
 </figure>
 <figure>
-<img src="sky-birds.png" title="Himmel med fugler og skyer">
+<img src="sky-birds.png" title="Himmel med fugler og skyer" />
 </figure>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>

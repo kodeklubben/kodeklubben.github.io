@@ -15,15 +15,15 @@ function relative(url) {
 <li>Brukeren gjetter et tall mellom 1 og 100.</li>
 <li>Programmet skriver ut:
 <ul>
-<li><code class="lang-erlang-repl"><span class="hljs-variable">Higher</span><span class="hljs-exclamation_mark">!</span></code> hvis tallet var for lavt.</li>
-<li><code class="lang-erlang-repl"><span class="hljs-variable">Lower</span><span class="hljs-exclamation_mark">!</span></code> hvis tallet var for høyt.</li>
-<li>Hvis brukeren gjetter riktig tall skal programmet skrive ut <code class="lang-erlang-repl"><span class="hljs-variable">Correct</span><span class="hljs-exclamation_mark">!</span></code> og avslutte.</li>
+<li><code>Higher!</code> hvis tallet var for lavt.</li>
+<li><code>Lower!</code> hvis tallet var for høyt.</li>
+<li>Hvis brukeren gjetter riktig tall skal programmet skrive ut <code>Correct!</code> og avslutte.</li>
 </ul></li>
 <li>Så lenge brukeren ikke har gjettet tallet, så må programmet spørre om et nytt tall (brukeren har uendelig mange forsøk).</li>
 </ol>
 <p>Slik ser det ut når programmet kjører:</p>
 <figure>
-<img src="python_guessing_game.png">
+<img src="python_guessing_game.png" />
 </figure>
 </section>
 <section id="klar-ferdig-programmer" class="level1 activity">
@@ -31,54 +31,60 @@ function relative(url) {
 <p>Nå er det bare å sette i gang! Pass på at du forstår hvordan spillet fungerer før du begynner å programmere! Her er noen hint for å hjelpe deg på vei:</p>
 <section id="randint" class="level2 protip">
 <h2>randint()</h2>
-<p>For å generere tilfelige tall kan det være lurt å bruke funksjonen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">()</span></span></code>. For å bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">()</span></span></code>, må vi importere funksjonen:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-capnproto"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint</code></pre>
+<p>For å generere tilfelige tall kan det være lurt å bruke funksjonen <code>randint()</code>. For å bruke <code>randint()</code>, må vi importere funksjonen:</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint</code></pre>
+
 <p>Hva gjør disse funksjonskallene?</p>
 <ul>
-<li><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">100</span>)</span></span></code></li>
-<li><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">(<span class="hljs-number">1000</span>, <span class="hljs-number">1000000</span>)</span></span></code></li>
-<li><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">(<span class="hljs-number">101</span>, <span class="hljs-number">102</span>)</span></span></code></li>
+<li><code>randint(1, 100)</code></li>
+<li><code>randint(1000, 1000000)</code></li>
+<li><code>randint(101, 102)</code></li>
 </ul>
 </section>
 <section id="int" class="level2 protip">
 <h2>int()</h2>
-<p>Når man får input fra brukeren får man en <em>tekststreng</em>, selv om brukeren skrev et tall, da kan det være greit å kunne konvertere teksten til et tall, ved hjelp av <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">int</span><span class="hljs-params">()</span></span></code>.</p>
-<p>Hva er forskjellen på disse kodesnuttene? (Kjør koden og test selv!)</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus">tall = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Skriv et tall: "</span>)</span></span>
+<p>Når man får input fra brukeren får man en <em>tekststreng</em>, selv om brukeren skrev et tall, da kan det være greit å kunne konvertere teksten til et tall, ved hjelp av <code>int()</code>.</p>
+Hva er forskjellen på disse kodesnuttene? (Kjør koden og test selv!)
+<pre><code class="hljs python">tall = input(<span class="hljs-string">"Skriv et tall: "</span>)
+svar = <span class="hljs-number">3</span> + tall
+print(svar)</code></pre>
+
+<pre><code>tall = <span class="hljs-function"><span class="hljs-title">int</span><span class="hljs-params">(input(<span class="hljs-string">"Skriv et tall: "</span>)</span></span>)
 svar = <span class="hljs-number">3</span> + tall
 <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(svar)</span></span></code></pre>
-<pre class="python3"><code class="lang-stylus">tall = <span class="hljs-function"><span class="hljs-title">int</span><span class="hljs-params">(input(<span class="hljs-string">"Skriv et tall: "</span>)</span></span>)
-svar = <span class="hljs-number">3</span> + tall
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(svar)</span></span></code></pre>
+
 </section>
 <section id="kontrollstrukturer" class="level2 protip">
 <h2>Kontrollstrukturer</h2>
 <p>Hva slags kontrollstrukturer trenger du?</p>
-<p>Eksempel på kontrollstrukturer er <code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkker, <code class="lang-actionscript"><span class="hljs-keyword">while</span></code>-løkker og <code class="lang-fsharp"><span class="hljs-keyword">if</span>-<span class="hljs-keyword">elif</span>-<span class="hljs-keyword">else</span></code>-uttrykk.</p>
+<p>Eksempel på kontrollstrukturer er <code>for</code>-løkker, <code>while</code>-løkker og <code>if-elif-else</code>-uttrykk.</p>
 <ul>
-<li><p><code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkker bruker vi når vi vil gjøre noe mange ganger.</p>
-<p><strong>Eksempel:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-vbnet"><span class="hljs-preprocessor"># skriv ut ti tall</span>
+<li><p><code>for</code>-løkker bruker vi når vi vil gjøre noe mange ganger.</p>
+<strong>Eksempel:</strong>
+<pre><code class="hljs python"><span class="hljs-comment"># skriv ut ti tall</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
-    print(<span class="hljs-comment">'variabelen i er: ' + str(i))</span></code></pre></li>
-<li><p><code class="lang-actionscript"><span class="hljs-keyword">while</span></code>-løkker brukes når vi vil gjøre noe mange ganger inntil en variabel endrer seg.</p>
-<p><strong>Eksempel:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-autohotkey"> <span class="hljs-literal">a</span> = <span class="hljs-number">0</span>
- # så lenge variablen <span class="hljs-escape">`a</span><span class="hljs-escape">` </span>ikke er lik <span class="hljs-escape">`1</span>0<span class="hljs-escape">`
-</span><span class="hljs-label"> while a != 10:</span>
-     print(<span class="hljs-literal">a</span>)
-     <span class="hljs-literal">a</span> = <span class="hljs-literal">a</span> + <span class="hljs-number">1</span></code></pre>
-<p>Prøv å se hva som skjer dersom du ikke tar med linjen <code class="lang-stylus"><span class="hljs-tag">a</span> = <span class="hljs-tag">a</span> + <span class="hljs-number">1</span></code>.</p></li>
-<li><p><code class="lang-fsharp"><span class="hljs-keyword">if</span>-<span class="hljs-keyword">elif</span>-<span class="hljs-keyword">else</span></code>-uttrykk kan bestemme om vi skal kjøre en spesiell kode.</p>
-<p><strong>Eksempel:</strong></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-tag">a</span> = <span class="hljs-number">1</span>
-<span class="hljs-keyword">if</span> <span class="hljs-tag">a</span> == <span class="hljs-number">2</span>:
-  <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'a er 2'</span>)</span></span>
-elif <span class="hljs-tag">a</span> == <span class="hljs-number">3</span>:
-  <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'a er 3'</span>)</span></span>
+    print(<span class="hljs-string">'variabelen i er: '</span> + str(i))</code></pre>
+</li>
+<li><p><code>while</code>-løkker brukes når vi vil gjøre noe mange ganger inntil en variabel endrer seg.</p>
+<strong>Eksempel:</strong>
+<pre><code class="hljs python">a = <span class="hljs-number">0</span>
+ <span class="hljs-comment"># så lenge variablen `a` ikke er lik `10`</span>
+ <span class="hljs-keyword">while</span> a != <span class="hljs-number">10</span>:
+     print(a)
+     a = a + <span class="hljs-number">1</span></code></pre>
+
+<p>Prøv å se hva som skjer dersom du ikke tar med linjen <code>a = a + 1</code>.</p></li>
+<li><p><code>if-elif-else</code>-uttrykk kan bestemme om vi skal kjøre en spesiell kode.</p>
+<strong>Eksempel:</strong>
+<pre><code class="hljs python">a = <span class="hljs-number">1</span>
+<span class="hljs-keyword">if</span> a == <span class="hljs-number">2</span>:
+  print(<span class="hljs-string">'a er 2'</span>)
+<span class="hljs-keyword">elif</span> a == <span class="hljs-number">3</span>:
+  print(<span class="hljs-string">'a er 3'</span>)
 <span class="hljs-keyword">else</span>:
-  <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">'a er ikke 2 og ikke 3'</span>)</span></span></code></pre>
-<p>Prøv å endre verdien <code class="lang-autohotkey"><span class="hljs-literal">a</span></code> på toppen til <code class="lang-cpp"><span class="hljs-number">2</span></code> eller <code class="lang-cpp"><span class="hljs-number">3</span></code> og se hva som skjer.</p></li>
+  print(<span class="hljs-string">'a er ikke 2 og ikke 3'</span>)</code></pre>
+
+<p>Prøv å endre verdien <code>a</code> på toppen til <code>2</code> eller <code>3</code> og se hva som skjer.</p></li>
 </ul>
 </section>
 </section>

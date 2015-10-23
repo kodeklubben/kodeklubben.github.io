@@ -16,18 +16,18 @@ function relative(url) {
 <p>Vigenere er litt smartere enn krypteringen i <a href="../hemmelige_koder/hemmelige_koder.html">Hemmelige koder</a>, men den er ikke så annerledes. I stegene under skal du prøve å forstå vigenere-koden. Det er viktig at du forstår denne koden, ettersom du skal lage nesten lik kode selv.</p>
 <section id="python-2" class="level2 protip">
 <h2>Python 2</h2>
-<p>Denne koden fungerer best med python 3. Dersom du har python 2, må du legge en <code class="lang-stata"><span class="hljs-keyword">u</span></code> foran alle strenger. Altså <code class="lang-actionscript"><span class="hljs-string">'asdf'</span></code> må skrives slik som dette: <code class="lang-python"><span class="hljs-string">u'asdf'</span></code>.</p>
+<p>Denne koden fungerer best med python 3. Dersom du har python 2, må du legge en <code>u</code> foran alle strenger. Altså <code>'asdf'</code> må skrives slik som dette: <code>u'asdf'</code>.</p>
 </section>
 <section id="lag-kommentarer-med-forklaring" class="level2 check">
 <h2>Lag kommentarer med forklaring</h2>
 <ul>
 <li>Les koden under.</li>
 <li>Hva er forskjellig fra <a href="../hemmelige_koder/hemmelige_koder.html">Hemmelige koder</a>?</li>
-<li>Hva gjør <code class="lang-css"><span class="hljs-tag">alphabet</span><span class="hljs-class">.find</span></code>?</li>
-<li>Hva betyr det at <code class="lang-css"><span class="hljs-tag">alphabet</span><span class="hljs-class">.find</span></code> gir <code class="lang-cpp">-<span class="hljs-number">1</span></code> som svar?</li>
-<li>Legg til kommentarer med <code class="lang-vala"><span class="hljs-preprocessor">#</span></code> over/bak hver linjene med din forklaring.</li>
+<li>Hva gjør <code>alphabet.find</code>?</li>
+<li>Hva betyr det at <code>alphabet.find</code> gir <code>-1</code> som svar?</li>
+<li>Legg til kommentarer med <code>#</code> over/bak hver linjene med din forklaring.</li>
 </ul>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-string">"""Vigenere encoding, by Arve Seljebu(arve@seljebu.no), MIT License, 2014"""</span>
+<pre><code class="hljs python"><span class="hljs-string">"""Vigenere encoding, by Arve Seljebu(arve@seljebu.no), MIT License, 2014"""</span>
 
 alphabet = <span class="hljs-string">'ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå .,?-_;:+1234567890"'</span>
 
@@ -56,14 +56,15 @@ keyword = <span class="hljs-string">'source'</span>
 
 encrypted = vigenere_encode(message, keyword)
 print(encrypted)</code></pre>
+
 </section>
 <section id="hint" class="level2 protip">
 <h2>Hint</h2>
-<p>Du kan bruke kommandoen <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">help</span><span class="hljs-params">(<span class="hljs-string">'funksjonsnavn'</span>)</span></span></code> i python-terminalen for lese manualen. Prøv disse:</p>
+<p>Du kan bruke kommandoen <code>help('funksjonsnavn')</code> i python-terminalen for lese manualen. Prøv disse:</p>
 <ul>
-<li><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">help</span><span class="hljs-params">(<span class="hljs-string">'def'</span>)</span></span></code></li>
-<li><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">help</span><span class="hljs-params">(<span class="hljs-string">'len'</span>)</span></span></code></li>
-<li><code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">help</span><span class="hljs-params">(<span class="hljs-string">'vigenere_encode'</span>)</span></span></code></li>
+<li><code>help('def')</code></li>
+<li><code>help('len')</code></li>
+<li><code>help('vigenere_encode')</code></li>
 </ul>
 </section>
 </section>
@@ -84,7 +85,7 @@ print(encrypted)</code></pre>
 <section id="cracking" class="level2 check">
 <h2>Cracking</h2>
 <p>Du skal nå prøve å knekke en kodet streng. Dette er vanskelig, så du må lage en plan først. Strengen er:</p>
-<p><code class="lang-1c">q0Ø:;AI<span class="hljs-string">"E47FRBQNBG4WNB8B4LQN8ERKC88U8GEN?T6LaNBG4GØ<span class="hljs-dquote">""</span>N6K086HB"</span>Ø<span class="hljs-number">8</span>CRHW<span class="hljs-string">"+LS79Ø<span class="hljs-dquote">""</span>N29QCLN5WNEBS8GENBG4FØ47a</span></code></p>
+<p><code>q0Ø:;AI&quot;E47FRBQNBG4WNB8B4LQN8ERKC88U8GEN?T6LaNBG4GØ&quot;&quot;N6K086HB&quot;Ø8CRHW&quot;+LS79Ø&quot;&quot;N29QCLN5WNEBS8GENBG4FØ47a</code></p>
 </section>
 <section id="hint-1" class="level2 protip">
 <h2>Hint</h2>
@@ -92,15 +93,15 @@ print(encrypted)</code></pre>
 <li>Nøkkelen er seks små bokstaver.</li>
 <li>Språket i setningen er engelsk.</li>
 <li>Finn en metode å sjekke om den dekrypterte strengen er korrekt. For eksempel kan du tenke på hvor mange mellomrom den burde inneholde?</li>
-<li>For å generere mulige nøkler kan du bruke <code class="lang-stylus">itertools.<span class="hljs-function"><span class="hljs-title">product</span><span class="hljs-params">()</span></span></code>, prøv for eksempel å se hva du får om du looper over <code class="lang-stylus">itertools.<span class="hljs-function"><span class="hljs-title">product</span><span class="hljs-params">(<span class="hljs-string">'abcd'</span>, repeat=<span class="hljs-number">2</span>)</span></span></code>.</li>
+<li>For å generere mulige nøkler kan du bruke <code>itertools.product()</code>, prøv for eksempel å se hva du får om du looper over <code>itertools.product('abcd', repeat=2)</code>.</li>
 </ul>
 </section>
 <section id="bruk-en-ordbok" class="level2 check">
 <h2>Bruk en ordbok</h2>
 <p>Sålenge vi har brukt engelske ord som nøkler er det mye raskere å knekke krypteringen med en ordbok. En ordbok finner du på alle Linux/Mac/Unix-maskiner under <strong>/usr/share/dict</strong>. Bruker du Windows, kan du laste ned en slik fil fra internett. Søk på <em>large english vocabulary word lists</em>.</p>
 <p>Disse filene inneholder alle ord som finnes i en engelsk ordbok, separert med linjeskift. Finn ut hvordan du kan laste inn ordene fra filen (pass på at du fjerner linjeskiftene) og bruk dem til å dekryptere en ny streng:</p>
-<p><code class="lang-css"><span class="hljs-rule"><span class="hljs-attribute">t-JO</span>:<span class="hljs-value">BK0aM,:CQ+ÆAGW?FJGB0KVCGMQ6SQN<span class="hljs-string">"GAIDL-PÅ7954E:7Jr,IÆoCF0M"</span>CQdØVlHD53CÅ</span></span>;<span class="hljs-tag">IA2DMG5</span>Ø<span class="hljs-tag">HD</span>Ø<span class="hljs-tag">V</span>å<span class="hljs-rule"><span class="hljs-attribute">L</span>:<span class="hljs-value">JQØ<span class="hljs-number">439</span>LRBBVEMTBÆ<span class="hljs-number">6</span>CF0M<span class="hljs-string">"CQNAG8G1V6LÅ8FF4Z</span></span></span></code></p>
-<p>Bruk metodene du laget i oppgaven over for å detektere om vi har funnet riktig nøkkel. Dersom du kjører scriptet ditt med kommandoen <code class="lang-stylus"><span class="hljs-tag">time</span> python3 vigenere.py</code> kan du se hvor lang tid den bruker.</p>
+<p><code>t-JO:BK0aM,:CQ+ÆAGW?FJGB0KVCGMQ6SQN&quot;GAIDL-PÅ7954E:7Jr,IÆoCF0M&quot;CQdØVlHD53CÅ;IA2DMG5ØHDØVåL:JQØ439LRBBVEMTBÆ6CF0M&quot;CQNAG8G1V6LÅ8FF4Z</code></p>
+<p>Bruk metodene du laget i oppgaven over for å detektere om vi har funnet riktig nøkkel. Dersom du kjører scriptet ditt med kommandoen <code>time python3 vigenere.py</code> kan du se hvor lang tid den bruker.</p>
 </section>
 <section id="premie" class="level2 flag">
 <h2>Premie</h2>

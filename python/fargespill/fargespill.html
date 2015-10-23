@@ -10,7 +10,7 @@ function relative(url) {
 <h1>Introduksjon</h1>
 <p>Hjernen vår lar seg lett lure, og det kan av og til være vanskelig for den å tolke forskjellig inntrykk samtidig. I det spillet vi nå skal lage vil du både få testet hjernen og skrivehastigheten. Vi skal lage et fargespill!</p>
 <figure>
-<img src="fargespill.png">
+<img src="fargespill.png" />
 </figure>
 </section>
 <section id="steg-1-klargjør-og-importerer-bilioteker" class="level1 activity">
@@ -20,20 +20,21 @@ function relative(url) {
 <h2>Sjekkliste</h2>
 <ul>
 <li>Åpne IDLE, og lag en ny fil.</li>
-<li><p>La oss importere bibliotekene. Skriv inn følgende kode:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-monkey"><span class="hljs-preprocessor"><span class="hljs-keyword">import</span> tkinter</span>
-from random <span class="hljs-preprocessor"><span class="hljs-keyword">import</span> randint</span></code></pre></li>
+<li>La oss importere bibliotekene. Skriv inn følgende kode:
+<pre><code class="hljs python"><span class="hljs-keyword">import</span> tkinter
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint</code></pre></li>
 <li><p>Vi vil etterhvert bruke boxtaver som <em>æøå</em>. For å gjøre dette må vi legge til noe øverst i koden vår. Gjør om koden din slik at den ser slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-d"><span class="hljs-shebang">#!/usr/bin/python</span>
-# -*- coding: UTF-<span class="hljs-number">8</span> -*-
+<pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/python</span>
+<span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
 <span class="hljs-keyword">import</span> tkinter
-from random <span class="hljs-keyword">import</span> randint</code></pre></li>
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint</code></pre>
+</li>
 </ul>
 </section>
 <section id="kommentering-av-kode" class="level2 protip">
 <h2>Kommentering av kode</h2>
-<p>For å gjøre koden lettere å forstå kan vi legge inn kommentarer som ikke påvirker programmet. Dette gjør vi ved å skrive inn tegnet <code class="lang-vala"><span class="hljs-preprocessor">#</span></code>. All tekst som kommer på samme linje etter dette tegnet vil bli ignorert av datamaskinen, men er veldig fint for å hjelpe oss mennesker. Heretter bruker jeg dette for å forklare hva som skjer, du trenger ikke å skrive inn kommentarene hvis du ikke vil!</p>
+<p>For å gjøre koden lettere å forstå kan vi legge inn kommentarer som ikke påvirker programmet. Dette gjør vi ved å skrive inn tegnet <code>#</code>. All tekst som kommer på samme linje etter dette tegnet vil bli ignorert av datamaskinen, men er veldig fint for å hjelpe oss mennesker. Heretter bruker jeg dette for å forklare hva som skjer, du trenger ikke å skrive inn kommentarene hvis du ikke vil!</p>
 </section>
 </section>
 <section id="steg-2-lage-grafisk-brukergrensesnitt" class="level1 activity">
@@ -42,19 +43,19 @@ from random <span class="hljs-keyword">import</span> randint</code></pre></li>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi skal begynne med å lage hovedvinduet. Dette kaller vi <code>root</code> Vi tilkaller funksjoner fra <code>tkinter</code> biblioteket for å hjelpe oss med dette. Legg til dette nederst i koden:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus">root = tkinter.<span class="hljs-function"><span class="hljs-title">Tk</span><span class="hljs-params">()</span></span>
+<li>Vi skal begynne med å lage hovedvinduet. Dette kaller vi <code>root</code> Vi tilkaller funksjoner fra <code>tkinter</code> biblioteket for å hjelpe oss med dette. Legg til dette nederst i koden:
+<pre><code class="hljs python">root = tkinter.Tk()
 
-root.<span class="hljs-function"><span class="hljs-title">title</span><span class="hljs-params">(<span class="hljs-string">"Fargespill"</span>)</span></span>
-root.<span class="hljs-function"><span class="hljs-title">geometry</span><span class="hljs-params">(<span class="hljs-string">"475x300"</span>)</span></span>
+root.title(<span class="hljs-string">"Fargespill"</span>)
+root.geometry(<span class="hljs-string">"475x300"</span>)
 
-root.<span class="hljs-function"><span class="hljs-title">mainloop</span><span class="hljs-params">()</span></span></code></pre></li>
+root.mainloop()</code></pre></li>
 <li><p>Nå har vi laget hovedvinduet. La oss legge til noen felter med tekst. Vi kommer tilbake til hva disse skal fylles med etterhvert, nå skal vi bare definere områdene. Gjør om koden din slik at den ser ut som dette:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-livecodeserver"><span class="hljs-comment">#!/usr/bin/python</span>
+<pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
-import tkinter
-<span class="hljs-built_in">from</span> <span class="hljs-built_in">random</span> import randint
+<span class="hljs-keyword">import</span> tkinter
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint
 
 root = tkinter.Tk()
 
@@ -63,12 +64,12 @@ root.geometry(<span class="hljs-string">"475x300"</span>)
 
 <span class="hljs-comment"># Lager en label kalt instructions  med tekst:</span>
 instructions = tkinter.Label(root,
-                             <span class="hljs-keyword">text</span>=<span class="hljs-string">"Skriv inn fargen PÅ ordet, ikke selve ordet!"</span>,
+                             text=<span class="hljs-string">"Skriv inn fargen PÅ ordet, ikke selve ordet!"</span>,
                              font=(<span class="hljs-string">'Helvetica'</span>, <span class="hljs-number">15</span>))
 instructions.pack() 
 
 points_label = tkinter.Label(root,
-                             <span class="hljs-keyword">text</span>=<span class="hljs-string">"Trykk enter for å starte."</span>,
+                             text=<span class="hljs-string">"Trykk enter for å starte."</span>,
                              font=(<span class="hljs-string">'Helvetica'</span>, <span class="hljs-number">30</span>))
 points_label.pack()
 
@@ -77,12 +78,13 @@ label.pack()
 
 box = tkinter.Entry(root)
 
-root.mainloop()</code></pre></li>
+root.mainloop()</code></pre>
+</li>
 </ul>
 </section>
 <section id="i-koden-over-skjer-det-mye-la-oss-se-på-noen-deler" class="level2 protip">
 <h2>I koden over skjer det mye, la oss se på noen deler</h2>
-<p><code class="lang-css"><span class="hljs-tag">tkinter</span><span class="hljs-class">.Label</span></code> lager et felt i vinduet vårt. I disse feltene kan vi putte blant annet tekst eller tall. <code class="lang-asciidoc"><span class="hljs-title">.pack</span></code> forteller programmet vårt at den skal “tegne” disse feltene slik at de synes for oss, og hvor den skal tegne de. <code class="lang-stylus">tkinter.<span class="hljs-function"><span class="hljs-title">Entry</span><span class="hljs-params">(root)</span></span></code> lager et tekstfelt som spilleren kan skrive i.</p>
+<p><code>tkinter.Label</code> lager et felt i vinduet vårt. I disse feltene kan vi putte blant annet tekst eller tall. <code>.pack</code> forteller programmet vårt at den skal “tegne” disse feltene slik at de synes for oss, og hvor den skal tegne de. <code>tkinter.Entry(root)</code> lager et tekstfelt som spilleren kan skrive i.</p>
 </section>
 <section id="test-prosjektet" class="level2 flag">
 <h2>Test prosjektet</h2>
@@ -98,8 +100,8 @@ root.mainloop()</code></pre></li>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi skal nå få programmet vårt til å telle 30 sekunder. Vi lager en funksjon <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">countdown</span><span class="hljs-params">()</span></span></code> som tar seg av dette. Legg til dette i programmet ditt:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">countdown</span><span class="hljs-params">()</span>:</span>
+<li><p>Vi skal nå få programmet vårt til å telle 30 sekunder. Vi lager en funksjon <code>countdown()</code> som tar seg av dette. Legg til dette i programmet ditt:</p>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">countdown</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">global</span> time_left
 
     <span class="hljs-keyword">if</span> time_left &gt; <span class="hljs-number">0</span>:
@@ -114,7 +116,7 @@ root.mainloop()</code></pre></li>
         label.pack_forget()
         box.pack_forget()</code></pre></li>
 <li><p>Denne funksjonen jobber på en global variabel <code>time_left</code>, vi må lage den. Programmet ditt skal nå se slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-comment">#!/usr/bin/python</span>
+<pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
 <span class="hljs-keyword">import</span> tkinter
@@ -156,7 +158,8 @@ label.pack()
 
 box = tkinter.Entry(root)
 
-root.mainloop()</code></pre></li>
+root.mainloop()</code></pre>
+</li>
 </ul>
 </section>
 </section>
@@ -166,39 +169,41 @@ root.mainloop()</code></pre></li>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Fargene legger vi til som en liste. Legg til denne koden under <code class="lang-capnproto"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint</code></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-nginx"><span class="hljs-title">colours_eng</span> = [<span class="hljs-string">'Red'</span>, <span class="hljs-string">'Blue'</span>, <span class="hljs-string">'Green'</span>, <span class="hljs-string">'Pink'</span>, <span class="hljs-string">'Black'</span>,
+<li>Fargene legger vi til som en liste. Legg til denne koden under <code>from random import randint</code>
+<pre><code class="hljs python">colours_eng = [<span class="hljs-string">'Red'</span>, <span class="hljs-string">'Blue'</span>, <span class="hljs-string">'Green'</span>, <span class="hljs-string">'Pink'</span>, <span class="hljs-string">'Black'</span>,
                <span class="hljs-string">'Yellow'</span>, <span class="hljs-string">'Orange'</span>, <span class="hljs-string">'Purple'</span>, <span class="hljs-string">'Brown'</span>]</code></pre></li>
-<li><p>Siden vi vil at programmet vårt skal skrive ut de norske ordene, lager vi en liste til, med de norske navnene. Legg til dette rett under den andre listen.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-nginx"><span class="hljs-title">colours</span> = [<span class="hljs-string">'Rød'</span>, <span class="hljs-string">'Blå'</span>, <span class="hljs-string">'Grønn'</span>, <span class="hljs-string">'Rosa'</span>, <span class="hljs-string">'Svart'</span>,
+<li>Siden vi vil at programmet vårt skal skrive ut de norske ordene, lager vi en liste til, med de norske navnene. Legg til dette rett under den andre listen.
+<pre><code class="hljs python">colours = [<span class="hljs-string">'Rød'</span>, <span class="hljs-string">'Blå'</span>, <span class="hljs-string">'Grønn'</span>, <span class="hljs-string">'Rosa'</span>, <span class="hljs-string">'Svart'</span>,
            <span class="hljs-string">'Gul'</span>, <span class="hljs-string">'Oransje'</span>, <span class="hljs-string">'Lilla'</span>, <span class="hljs-string">'Brun'</span>]</code></pre></li>
-<li><p>Vi må også lage en variabel for å holde orden på hvor mange poeng spilleren har. Samt en variabel for å holde nummeret på fargene som skal vises. Disse settes til tilfeldig tall etterpå. Legg til disse over <code>time_left</code>-variabelen.</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-cpp"><span class="hljs-preprocessor"># Brukes til å velge tilfeldig farge</span>
+<li>Vi må også lage en variabel for å holde orden på hvor mange poeng spilleren har. Samt en variabel for å holde nummeret på fargene som skal vises. Disse settes til tilfeldig tall etterpå. Legg til disse over <code>time_left</code>-variabelen.
+<pre><code class="hljs python"><span class="hljs-comment"># Brukes til å velge tilfeldig farge</span>
 colour = <span class="hljs-number">0</span>
 points = <span class="hljs-number">0</span></code></pre></li>
-<li><p>Nå må vi lage funksjonen som genererer en tilfeldig farge og viser denne til spilleren. Her er det mye som skjer, så vi skal ta det stegvis. Først definerer vi funksjonen og legger til variablene. Legg denne funksjonen over <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">countdown</span><span class="hljs-params">()</span></span></code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
+<li><p>Nå må vi lage funksjonen som genererer en tilfeldig farge og viser denne til spilleren. Her er det mye som skjer, så vi skal ta det stegvis. Først definerer vi funksjonen og legger til variablene. Legg denne funksjonen over <code>countdown()</code>:</p>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-comment"># Henter inn globale variabler:</span>
     <span class="hljs-keyword">global</span> points
-    <span class="hljs-keyword">global</span> colour</code></pre></li>
-<li><p>Så skal vi sette tekstboxen brukeren kan skrive i aktiv hvis det er tid igjen på klokka. Legg til denne inne i <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">next_color</span><span class="hljs-params">()</span></span></code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus"><span class="hljs-keyword">if</span> time_left &gt; <span class="hljs-number">0</span>:
-    box.<span class="hljs-function"><span class="hljs-title">focus_set</span><span class="hljs-params">()</span></span></code></pre></li>
-<li><p>Så vil vi sammenligne det brukeren skriver inn i boxen med den norske fargelisten vår. <code class="lang-stylus">.<span class="hljs-function"><span class="hljs-title">lower</span><span class="hljs-params">()</span></span></code> gjør om alt til små bokstaver, slik at man ikke får feil om man skriver “Rød” i steden for “rød”. Legg til dette under:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-livecodeserver"><span class="hljs-comment"># Hvis det spilleren skrev er riktig farge.</span>
-<span class="hljs-keyword">if</span> box.<span class="hljs-built_in">get</span>().<span class="hljs-built_in">lower</span>() == colours[colour].<span class="hljs-built_in">lower</span>():
+    <span class="hljs-keyword">global</span> colour</code></pre>
+</li>
+<li><p>Så skal vi sette tekstboxen brukeren kan skrive i aktiv hvis det er tid igjen på klokka. Legg til denne inne i <code>next_color()</code>:</p>
+<pre><code class="hljs python"><span class="hljs-keyword">if</span> time_left &gt; <span class="hljs-number">0</span>:
+    box.focus_set()</code></pre>
+</li>
+<li><p>Så vil vi sammenligne det brukeren skriver inn i boxen med den norske fargelisten vår. <code>.lower()</code> gjør om alt til små bokstaver, slik at man ikke får feil om man skriver “Rød” i steden for “rød”. Legg til dette under:</p>
+<pre><code class="hljs python"><span class="hljs-comment"># Hvis det spilleren skrev er riktig farge.</span>
+<span class="hljs-keyword">if</span> box.get().lower() == colours[colour].lower():
     <span class="hljs-comment"># Pluss på ett points</span>
     points = points + <span class="hljs-number">1</span></code></pre></li>
-<li><p>Nå vil vi slette det som brukeren skrev inn. Slik at alt er klart for neste runde. Legg til dette under <code class="lang-cpp">points = points + <span class="hljs-number">1</span></code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus">box.<span class="hljs-function"><span class="hljs-title">delete</span><span class="hljs-params">(<span class="hljs-number">0</span>, tkinter.END)</span></span></code></pre></li>
-<li><p>Nå skal vi få tkinter til å displaye farge og tekst. Til dette bruker vi <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">randint</span><span class="hljs-params">()</span></span></code> funksjonen. Den lager et tilfeldig tall mellom to ytterpunkter. Lag denne under <code class="lang-stylus">box.<span class="hljs-function"><span class="hljs-title">delete</span><span class="hljs-params">(<span class="hljs-number">0</span>, tkinter.END)</span></span></code></p>
-<pre class="sourceCode python"><code class="sourceCode python lang-cpp"><span class="hljs-preprocessor"># Lager tilfeldig tall mellom <span class="hljs-number">0</span> og <span class="hljs-number">8</span></span>
+<li>Nå vil vi slette det som brukeren skrev inn. Slik at alt er klart for neste runde. Legg til dette under <code>points = points + 1</code>:
+<pre><code class="hljs python">box.delete(<span class="hljs-number">0</span>, tkinter.END)</code></pre></li>
+<li><p>Nå skal vi få tkinter til å displaye farge og tekst. Til dette bruker vi <code>randint()</code> funksjonen. Den lager et tilfeldig tall mellom to ytterpunkter. Lag denne under <code>box.delete(0, tkinter.END)</code></p>
+<pre><code class="hljs python"><span class="hljs-comment"># Lager tilfeldig tall mellom 0 og 8</span>
 colour = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
 
-<span class="hljs-preprocessor"># Lager tilfeldig tall til teksten.</span>
+<span class="hljs-comment"># Lager tilfeldig tall til teksten.</span>
 text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)</code></pre></li>
 <li><p>Nå gjenstår det bare å vise teksten og fargen i vinduet. Vi oppdaterer feltene, og legger til en poenglabel. Funksjonen skal nå se slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">global</span> points
     <span class="hljs-keyword">global</span> colour
 
@@ -215,7 +220,8 @@ text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hlj
 
     <span class="hljs-comment"># Oppdaterer labels</span>
     label.config(fg=str(colours_eng[colour]), text=str(colours[text]))
-    points_label.config(text=<span class="hljs-string">"Poeng: "</span> + str(points))</code></pre></li>
+    points_label.config(text=<span class="hljs-string">"Poeng: "</span> + str(points))</code></pre>
+</li>
 </ul>
 </section>
 <section id="test-prosjektet-1" class="level2 flag">
@@ -233,17 +239,17 @@ text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hlj
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi lager en funksjon som starter spillet. Legg til denne funksjonen i programmet:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_game</span><span class="hljs-params">(event)</span>:</span>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_game</span><span class="hljs-params">(event)</span>:</span>
     <span class="hljs-keyword">if</span> time_left == <span class="hljs-number">30</span>:
         countdown()
     next_color()</code></pre></li>
-<li><p>Siste steg er å kjøre denne funksjonen når spilleren trykker <em>enter</em>. Legg til dette rett over <code class="lang-css"><span class="hljs-tag">root</span><span class="hljs-class">.mainloop</span></code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-less"># <span class="hljs-tag">Kj</span>ø<span class="hljs-tag">rer</span> <span class="hljs-tag">funksjonen</span> <span class="hljs-tag">start_game</span>() <span class="hljs-tag">n</span>å<span class="hljs-tag">r</span> <span class="hljs-tag">enter</span> <span class="hljs-tag">trykkes</span>
-<span class="hljs-tag">root</span><span class="hljs-class">.bind</span>(<span class="hljs-string">'&lt;Return&gt;'</span>, start_game)
-<span class="hljs-tag">box</span><span class="hljs-class">.pack</span>()
-<span class="hljs-tag">box</span><span class="hljs-class">.focus_set</span>()</code></pre></li>
+<li><p>Siste steg er å kjøre denne funksjonen når spilleren trykker <em>enter</em>. Legg til dette rett over <code>root.mainloop</code>:</p>
+<pre><code class="hljs python"><span class="hljs-comment"># Kjører funksjonen start_game() når enter trykkes</span>
+root.bind(<span class="hljs-string">'&lt;Return&gt;'</span>, start_game)
+box.pack()
+box.focus_set()</code></pre></li>
 <li><p>Programmet ditt skal nå se slik ut:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-comment">#!/usr/bin/python</span>
+<pre><code class="hljs python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
 <span class="hljs-keyword">import</span> tkinter
@@ -328,7 +334,8 @@ root.bind(<span class="hljs-string">'&lt;Return&gt;'</span>, start_game)
 box.pack()
 box.focus_set()
 
-root.mainloop()</code></pre></li>
+root.mainloop()</code></pre>
+</li>
 </ul>
 </section>
 <section id="test-prosjektet-2" class="level2 flag">

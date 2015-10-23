@@ -15,23 +15,25 @@ function relative(url) {
 <p>Å legge til enn video fra YouTube er veldig lett.</p>
 <ul>
 <li>Gå til videoen sin side på YouTube</li>
-<li>Under videospilleren finner du en <code class="lang-dos"><span class="hljs-winutils">Del</span></code>/<code class="lang-mathematica"><span class="hljs-keyword">Share</span></code> knapp. Trykk på den.</li>
+<li>Under videospilleren finner du en <code>Del</code>/<code>Share</code> knapp. Trykk på den.</li>
 <li>For å få kode du kan bruke på nettsiden din, trykk <code>Embed</code>.</li>
 </ul>
-<p>Koden vil ligne på dette:</p>
-<pre><code class="lang-stylus">&lt;<span class="hljs-tag">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-string">"560"</span> <span class="hljs-attribute">height</span>=<span class="hljs-string">"315"</span> src=<span class="hljs-string">"//www.youtube.com/embed/FjgQbPwkljQ"</span> frameborder=<span class="hljs-string">"0"</span> allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
-<p>Denne kodesnutten vil legge til en kodeklubbvideo på siden din. Kopier koden og lim din der du vil at videoen skal vises. Legg merke til <code class="lang-processing"><span class="hljs-variable">width</span></code>(bredde) og <code class="lang-processing"><span class="hljs-variable">height</span></code>(høyde) attributtene. De gjør at du kan bestemme hvor stort videoen skal vises på nettsiden. Forsøk gjerne å forandre på de.</p>
+Koden vil ligne på dette:
+<pre><code class="hljs">&lt;iframe <span class="hljs-variable">width=</span><span class="hljs-string">"560"</span> <span class="hljs-variable">height=</span><span class="hljs-string">"315"</span> <span class="hljs-variable">src=</span><span class="hljs-string">"//www.youtube.com/embed/FjgQbPwkljQ"</span> <span class="hljs-variable">frameborder=</span><span class="hljs-string">"0"</span> allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+
+<p>Denne kodesnutten vil legge til en kodeklubbvideo på siden din. Kopier koden og lim din der du vil at videoen skal vises. Legg merke til <code>width</code>(bredde) og <code>height</code>(høyde) attributtene. De gjør at du kan bestemme hvor stort videoen skal vises på nettsiden. Forsøk gjerne å forandre på de.</p>
 </section>
 <section id="legg-til-en-video-fra-vimeo." class="level1 activity">
 <h1>Legg til en video fra Vimeo.</h1>
 <ul>
 <li>Gå på videosiden på Vimeo.</li>
-<li>Klikk på <code class="lang-dos"><span class="hljs-winutils">Del</span></code>/<code class="lang-mathematica"><span class="hljs-keyword">Share</span></code> knappen i videospilleren.</li>
+<li>Klikk på <code>Del</code>/<code>Share</code> knappen i videospilleren.</li>
 <li>Nederst vises det en boks med <em>Embed</em>. Klikk på den og kopiere koden. Koden vil ligne på dette:</li>
 </ul>
-<pre><code class="lang-stylus">&lt;<span class="hljs-tag">iframe</span> src=<span class="hljs-string">"http://player.vimeo.com/video/44738167?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0"</span> <span class="hljs-attribute">width</span>=<span class="hljs-string">"600"</span> <span class="hljs-attribute">height</span>=<span class="hljs-string">"338"</span> frameborder=<span class="hljs-string">"0"</span> webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</code></pre>
+<pre><code class="hljs">&lt;iframe <span class="hljs-variable">src=</span><span class="hljs-string">"http://player.vimeo.com/video/44738167?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0"</span> <span class="hljs-variable">width=</span><span class="hljs-string">"600"</span> <span class="hljs-variable">height=</span><span class="hljs-string">"338"</span> <span class="hljs-variable">frameborder=</span><span class="hljs-string">"0"</span> webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</code></pre>
+
 <ul>
-<li>Lim inn koden der du vil at videoen skal vises på siden. Legg merke til <code class="lang-processing"><span class="hljs-variable">width</span></code>(bredde) og <code class="lang-processing"><span class="hljs-variable">height</span></code>(høyde) attributtene. De gjør at du kan bestemme hvor stort videoen skal vises på nettsiden. Forsøk gjerne å forandre på de.</li>
+<li>Lim inn koden der du vil at videoen skal vises på siden. Legg merke til <code>width</code>(bredde) og <code>height</code>(høyde) attributtene. De gjør at du kan bestemme hvor stort videoen skal vises på nettsiden. Forsøk gjerne å forandre på de.</li>
 </ul>
 </section>
 <section id="legge-til-en-video-fra-datamaskinen-din" class="level1 activity">
@@ -40,42 +42,48 @@ function relative(url) {
 <ul>
 <li>For å legge til en video på siden din må du legge til en <code>video</code> tag. Akkurat som <code>img</code> taggen har også video en <code>src</code> attributt som peker på filen:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span>&gt;</span>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span></code></pre>
-<p>Det som er kjedelig når man legger til video er at ikke aller nettleserene klarer å spille av alle videoformatene. <code class="lang-asciidoc"><span class="hljs-title">.mp4</span></code> og <code class="lang-asciidoc"><span class="hljs-title">.ogv</span></code> fungere i de fleste nettleserene, så det kan lønne seg å lagre videoen din i et av de formatene.</p>
+
+<p>Det som er kjedelig når man legger til video er at ikke aller nettleserene klarer å spille av alle videoformatene. <code>.mp4</code> og <code>.ogv</code> fungere i de fleste nettleserene, så det kan lønne seg å lagre videoen din i et av de formatene.</p>
 <p>For å la nettleseren vite at vi har flere formater tilgjengelig, kan vi skrive følgende kode:</p>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">video</span>&gt;</span>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">video</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.ogv"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/ogg"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/mp4"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span></code></pre>
+
 <ul>
 <li>For å legge til et bilde som vises før videoen spilles av, kan du bruke ‘poster’ attributtet på videotaggen:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">poster</span>=<span class="hljs-value">"romskip_landing.jpg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.ogv"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/ogg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/mp4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span></code></pre>
+<pre><code class="hljs">&lt;video <span class="hljs-variable">poster=</span><span class="hljs-string">"romskip_landing.jpg"</span>&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/ogg"</span>&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/mp4"</span>&gt;
+    &lt;/video&gt;</code></pre>
+
 <ul>
 <li>Hvis du vil at videoen automatisk skal start å spilles av kan du legge til <code>autoplay</code> attributtet. Det gjøres på denne måten:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">poster</span>=<span class="hljs-value">"romskip_landing.jpg"</span> <span class="hljs-attribute">autoplay</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.ogv"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/ogg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/mp4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span></code></pre>
+<pre><code class="hljs">&lt;video <span class="hljs-variable">poster=</span><span class="hljs-string">"romskip_landing.jpg"</span> autoplay&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/ogg"</span>&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/mp4"</span>&gt;
+    &lt;/video&gt;</code></pre>
+
 <ul>
 <li>For å vise knapper til å styre videoen med, sånn som spill av, pause, volum og så videre kan du legge til <code>controls</code> attributtet:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">poster</span>=<span class="hljs-value">"romskip_landing.jpg"</span> <span class="hljs-attribute">controls</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.ogv"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/ogg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/mp4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span></code></pre>
+<pre><code class="hljs">&lt;video <span class="hljs-variable">poster=</span><span class="hljs-string">"romskip_landing.jpg"</span> controls&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/ogg"</span>&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/mp4"</span>&gt;
+    &lt;/video&gt;</code></pre>
+
 <ul>
-<li>Du kan også styre størrelsen på videoen med <code class="lang-processing"><span class="hljs-variable">width</span></code>(bredde) og <code class="lang-processing"><span class="hljs-variable">height</span></code>(høyde) attributtene på følgende måte:</li>
+<li>Du kan også styre størrelsen på videoen med <code>width</code>(bredde) og <code>height</code>(høyde) attributtene på følgende måte:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">video</span> <span class="hljs-attribute">poster</span>=<span class="hljs-value">"romskip_landing.jpg"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"600"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"400"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.ogv"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/ogg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip_landing.mp4"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"video/mp4"</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">video</span>&gt;</span></code></pre>
+<pre><code class="hljs">&lt;video <span class="hljs-variable">poster=</span><span class="hljs-string">"romskip_landing.jpg"</span> <span class="hljs-variable">width=</span><span class="hljs-string">"600"</span> <span class="hljs-variable">height=</span><span class="hljs-string">"400"</span>&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/ogg"</span>&gt;
+        &lt;source <span class="hljs-variable">src=</span><span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-variable">type=</span><span class="hljs-string">"video/mp4"</span>&gt;
+    &lt;/video&gt;</code></pre>
+
 </section>
 <section id="legg-til-en-lydfil-fra-datamaskinen-din" class="level1 activity">
 <h1>Legg til en lydfil fra datamaskinen din</h1>
@@ -83,28 +91,32 @@ function relative(url) {
 <ul>
 <li>For å legge til en lydfil kan du skrive dette:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">audio</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.mp3"</span>&gt;</span>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">audio</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.mp3"</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">audio</span>&gt;</span></code></pre>
+
 <p>Legg merke til <code>src</code> attributtet som peker på filen.</p>
-<p>Akkurat som med video er det ikke alle nettlesere som kan spille alle type lydfiler. For å sørge for at flest mulig kan høre på filen bør du legge den til i flere formater. <code class="lang-asciidoc"><span class="hljs-title">.mp3</span></code> og <code class="lang-asciidoc"><span class="hljs-title">.oga</span></code> er formatene som flest nettlesere klarer å spille av.</p>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">audio</span>&gt;</span>
+<p>Akkurat som med video er det ikke alle nettlesere som kan spille alle type lydfiler. For å sørge for at flest mulig kan høre på filen bør du legge den til i flere formater. <code>.mp3</code> og <code>.oga</code> er formatene som flest nettlesere klarer å spille av.</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">audio</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.mp3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'audio/mp3'</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.ogg"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'audio/ogg; codecs=vorbis'</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">audio</span>&gt;</span></code></pre>
+
 <ul>
 <li>For å legge til knapper for å styre lydavspillingen må du legge til <code>controls</code> attributtet:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">audio</span> <span class="hljs-attribute">controls</span>&gt;</span>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">audio</span> <span class="hljs-attribute">controls</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.mp3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'audio/mp3'</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.ogg"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'audio/ogg; codecs=vorbis'</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">audio</span>&gt;</span></code></pre>
+
 <ul>
 <li>Hvis du ønsker at lyden skal starte å spilles av med en gang man går inn på nettsiden kan du legge til <code>autoplay</code> attributten på denn måten:</li>
 </ul>
-<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-title">audio</span> <span class="hljs-attribute">controls</span> <span class="hljs-attribute">autoplay</span>&gt;</span>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-title">audio</span> <span class="hljs-attribute">controls</span> <span class="hljs-attribute">autoplay</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.mp3"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'audio/mp3'</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">source</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"romskip.ogg"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">'audio/ogg; codecs=vorbis'</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-title">audio</span>&gt;</span></code></pre>
+
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

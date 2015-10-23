@@ -13,7 +13,7 @@ function relative(url) {
 <section id="steg-1-tegn-et-fjell" class="level1 activity">
 <h1>Steg 1: Tegn et fjell</h1>
 <p>Men først, la oss se på de følgende tre figurene: Hvordan kan vi tegne dem i Python?</p>
-<pre><code class="lang-markdown"><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span>
+<pre><code class="hljs"><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span><span class="hljs-strong">_____</span>
 
 <span class="hljs-code">            /\</span>
 <span class="hljs-code">           /  \</span>
@@ -23,21 +23,22 @@ function relative(url) {
 <span class="hljs-code">            /\</span>
 <span class="hljs-code">         __/  \__</span>
 <span class="hljs-code">         \      /</span>
-<span class="hljs-strong">____/\__</span><span class="hljs-emphasis">_/      \_</span><span class="hljs-strong">__/\__</span>_
-</code></pre>
+<span class="hljs-strong">____/\__</span><span class="hljs-emphasis">_/      \_</span><span class="hljs-strong">__/\__</span>_</code></pre>
+
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Å tegne den første er lett. Som alltid er den første linjen <code class="lang-capnproto"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *</code> så Python vet at vi vil tegne. Dette programmet tegner linjen, sjekk at du får det til</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li><p>Å tegne den første er lett. Som alltid er den første linjen <code>from turtle import *</code> så Python vet at vi vil tegne. Dette programmet tegner linjen, sjekk at du får det til</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span><span class="hljs-params">()</span>:</span>
     forward(<span class="hljs-number">30</span>)
 
 first()</code></pre>
+<p>`</p>
 <p>Jeg har puttet det inn i en prosedyre fordi jeg liker prosedyrer. Vi kommer til å lage prosedyrer for alle formene, så la oss legge dem til i filen vi lager.</p></li>
 <li><p>Legg til litt kode så koden din blir slik som denne:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span><span class="hljs-params">()</span>:</span>
     forward(<span class="hljs-number">30</span>)
@@ -51,62 +52,65 @@ first()</code></pre>
     left(<span class="hljs-number">60</span>)
     forward(<span class="hljs-number">30</span>)
 
-second()</code></pre></li>
+second()</code></pre>
+</li>
 <li><p>Kjør koden din og se hva den gjør, tegner den riktig figur? Det skal se slik ut</p>
-<pre><code class="lang-livescript">            /<span class="hljs-string">\</span>
+<pre><code class="hljs">/<span class="hljs-string">\</span>
            /  <span class="hljs-string">\</span>
           /    <span class="hljs-string">\</span>
-_________/      <span class="hljs-string">\________</span></code></pre></li>
+_________/      <span class="hljs-string">\________</span></code></pre>
+</li>
 </ul>
 </section>
 </section>
 <section id="steg-2-et-fjell-av-fjell" class="level1 activity">
 <h1>Steg 2: Et fjell av fjell</h1>
 <p>Hva med den tredje figuren? Selv om den er litt komplisert å programmere om vi må skrive alle stegene vi må ta, er det egentlig bare det første fjellet tegnet fire ganger.</p>
-<pre><code class="lang-tex">            /<span class="hljs-command">\
+<pre><code class="hljs">/<span class="hljs-command">\
 </span>         __/  <span class="hljs-command">\_</span>_
          <span class="hljs-command">\ </span>     /
-____/<span class="hljs-command">\_</span>__/      <span class="hljs-command">\_</span>__/<span class="hljs-command">\_</span>__
-</code></pre>
+____/<span class="hljs-command">\_</span>__/      <span class="hljs-command">\_</span>__/<span class="hljs-command">\_</span>__</code></pre>
+
 <p>Du kan se at vi tegner den andre figuren (det enkle fjellet), deretter snur vi, tegner den igjen, snur, tegner igjen, snur og tegner den en siste gang.</p>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Istedenfor å skrive alle bevegelsene, la oss tegne den tredje figuren ved å kalle <code class="lang-applescript"><span class="hljs-keyword">second</span></code></p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li><p>Istedenfor å skrive alle bevegelsene, la oss tegne den tredje figuren ved å kalle <code>second</code></p>
+<pre><code class="hljs"><span class="hljs-keyword">from</span> turtle import *
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">second</span><span class="hljs-params">()</span>:</span>
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
+<span class="hljs-function">def <span class="hljs-title">second</span><span class="hljs-params">()</span>:
+    <span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
+    <span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span>
+    <span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
+    <span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span>
+    <span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
+    <span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span>
+    <span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">third</span><span class="hljs-params">()</span>:</span>
-    second()
-    left(<span class="hljs-number">60</span>)
-    second()
-    right(<span class="hljs-number">120</span>)
-    second()
-    left(<span class="hljs-number">60</span>)
-    second()
+def <span class="hljs-title">third</span><span class="hljs-params">()</span>:
+    <span class="hljs-title">second</span><span class="hljs-params">()</span>
+    <span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span>
+    <span class="hljs-title">second</span><span class="hljs-params">()</span>
+    <span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">120</span>)</span>
+    <span class="hljs-title">second</span><span class="hljs-params">()</span>
+    <span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">60</span>)</span>
+    <span class="hljs-title">second</span><span class="hljs-params">()</span>
 
-third()</code></pre>
-<p><code class="lang-applescript"><span class="hljs-keyword">third</span></code> ser veldig lik ut som <code class="lang-applescript"><span class="hljs-keyword">second</span></code>, men istedenfor å kalle <code class="lang-oxygene"><span class="hljs-keyword">forward</span></code>, kaller vi <code class="lang-applescript"><span class="hljs-keyword">second</span></code>. Hvis vi ville, kunne vi til og med skrive en fjerde utgave og kalle <code class="lang-applescript"><span class="hljs-keyword">third</span></code> istedenfor. Dette høres fort ut som mye å skrive, det må da være en måte vi kan få datamaskinen til å forstå dette på?</p>
+<span class="hljs-title">third</span><span class="hljs-params">()</span></span></code></pre>
+
+<p><code>third</code> ser veldig lik ut som <code>second</code>, men istedenfor å kalle <code>forward</code>, kaller vi <code>second</code>. Hvis vi ville, kunne vi til og med skrive en fjerde utgave og kalle <code>third</code> istedenfor. Dette høres fort ut som mye å skrive, det må da være en måte vi kan få datamaskinen til å forstå dette på?</p>
 <p>Disse figurene er spesielle på den måten at vi tegner dem ved å sette sammen enklere versjon av figurene om igjen og om igjen: Den tredje er laget av den andre, og den andre er laget av den første. Det vi virkelig har lyst til er å be datamaskinen om å tegne dette igjen og igjen helt til det er ferdig.</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-3-igjen-og-igjen" class="level1 activity">
 <h1>Steg 3: Igjen og igjen</h1>
-<p>Vi får til dette ved å dele problemet i to: Det enkle problemet og spesialtilfellet av problemet. Det enkle problemet er enkelt: Det er bare <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">100</span>)</span></span></code>. Spesialtilfellet er litt vanskeligere, det vil si: Tegn spesialtilfellet, men en mindre enn i sted, helt til du kommer til det enkle tilfellet. Det er kanskje enklere å se på programmet enn å forklare.</p>
+<p>Vi får til dette ved å dele problemet i to: Det enkle problemet og spesialtilfellet av problemet. Det enkle problemet er enkelt: Det er bare <code>forward(100)</code>. Spesialtilfellet er litt vanskeligere, det vil si: Tegn spesialtilfellet, men en mindre enn i sted, helt til du kommer til det enkle tilfellet. Det er kanskje enklere å se på programmet enn å forklare.</p>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag en ny fil med koden under:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mountain</span><span class="hljs-params">(depth)</span>:</span>
     <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
@@ -122,8 +126,9 @@ third()</code></pre>
         mountain(newdepth)
 
 mountain(<span class="hljs-number">3</span>)</code></pre>
-<p>Du kan se at vi har brukt kode som er veldig likt <code class="lang-applescript"><span class="hljs-keyword">first</span></code>, <code class="lang-applescript"><span class="hljs-keyword">second</span></code> og <code class="lang-applescript"><span class="hljs-keyword">third</span></code>. Vi bruker en <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning for å finne ut om vi skal tegne det enkle tilfellet eller spesialtilfellet. I det spesielle tilfellet ber vi om å tegne et fjell, akkurat slik som <code class="lang-applescript"><span class="hljs-keyword">third</span></code> kalte <code class="lang-applescript"><span class="hljs-keyword">second</span></code>, men vi ber den om å tegne en enklere hver gang, med en ny verdi for <code class="lang-rsl"><span class="hljs-built_in">depth</span></code>, en mindre enn det vi startet med.</p></li>
-<li><p>Kjør det og se hva som skjer. Hva skjer om du prøver <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">mountain</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">mountain</span><span class="hljs-params">(<span class="hljs-number">2</span>)</span></span></code>, eller <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">mountain</span><span class="hljs-params">(<span class="hljs-number">4</span>)</span></span></code>?</p></li>
+
+<p>Du kan se at vi har brukt kode som er veldig likt <code>first</code>, <code>second</code> og <code>third</code>. Vi bruker en <code>if</code>-setning for å finne ut om vi skal tegne det enkle tilfellet eller spesialtilfellet. I det spesielle tilfellet ber vi om å tegne et fjell, akkurat slik som <code>third</code> kalte <code>second</code>, men vi ber den om å tegne en enklere hver gang, med en ny verdi for <code>depth</code>, en mindre enn det vi startet med.</p></li>
+<li><p>Kjør det og se hva som skjer. Hva skjer om du prøver <code>mountain(1)</code>, <code>mountain(2)</code>, eller <code>mountain(4)</code>?</p></li>
 </ul>
 </section>
 </section>
@@ -133,8 +138,7 @@ mountain(<span class="hljs-number">3</span>)</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>La oss bare legge til en siste ting til filen fra i sted, så den ser ut som under. Vi legger til en ny prosedyre <code>snowflake</code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python">
-<span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mountain</span><span class="hljs-params">(depth, length)</span>:</span>
     <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
@@ -158,62 +162,61 @@ mountain(<span class="hljs-number">3</span>)</code></pre>
     right(<span class="hljs-number">120</span>)
 
 snowflake(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</code></pre>
+
 <p>Dette bildet heter Kochs snøflak. Hvis du vil kan du forsøke å endre på vinklene og se hva som skjer.</p>
 <p>Dette heter et fraktal, fordi de små bildene er laget av små versjoner av seg selv.</p></li>
-<li><p>Prøv å kjøre <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">snowflake</span><span class="hljs-params">(<span class="hljs-number">1</span>, <span class="hljs-number">50</span>)</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">snowflake</span><span class="hljs-params">(<span class="hljs-number">2</span>, <span class="hljs-number">25</span>)</span></span></code>, <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">snowflake</span><span class="hljs-params">(<span class="hljs-number">3</span>, <span class="hljs-number">20</span>)</span></span></code>. Jo større dybde, jo lenger tar det å tegne, så husk å putte inn <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">speed</span><span class="hljs-params">(<span class="hljs-number">11</span>)</span></span></code> så skilpadden går så fort den kan!</p></li>
+<li><p>Prøv å kjøre <code>snowflake(1, 50)</code>, <code>snowflake(2, 25)</code>, <code>snowflake(3, 20)</code>. Jo større dybde, jo lenger tar det å tegne, så husk å putte inn <code>speed(11)</code> så skilpadden går så fort den kan!</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-5-bokser-flere-bokser-og-enda-flere-bokser" class="level1 activity">
 <h1>Steg 5: Bokser, flere bokser, og enda flere bokser</h1>
 <p>La oss se på en annen figur, en som ligner veldig på snøflaket, men med bokser istedenfor fjell.</p>
-<pre><code class="lang-http">
-
-<span class="gherkin">___________________________
+<pre><code class="hljs">___________________________
 
         ___________
-        |<span class="hljs-string">         </span>|
-        |<span class="hljs-string">         </span>|
-        |<span class="hljs-string">         </span>|
-        |<span class="hljs-string">         </span>|
-________|<span class="hljs-string">         </span>|________
+        <span class="hljs-string">|         |</span>
+        <span class="hljs-string">|         |</span>
+        <span class="hljs-string">|         |</span>
+        <span class="hljs-string">|         |</span>
+________<span class="hljs-string">|         |________</span>
 
              _
-        ____|<span class="hljs-string"> </span>|____
-        |<span class="hljs-string">         </span>|
-       _|<span class="hljs-string">         </span>|_
-      |<span class="hljs-string">_           _</span>|
-    _   |<span class="hljs-string">         </span>|<span class="hljs-string">   _
-___</span>|<span class="hljs-string"> </span>|<span class="hljs-string">__</span>|<span class="hljs-string">         </span>|<span class="hljs-string">__</span>|<span class="hljs-string"> </span>|___
+        ____<span class="hljs-string">| |____</span>
+        <span class="hljs-string">|         |</span>
+       _<span class="hljs-string">|         |_</span>
+      <span class="hljs-string">|_           _|</span>
+    _   <span class="hljs-string">|         |   _</span>
+___<span class="hljs-string">| |__|         |__| |___</span></code></pre>
 
-</span></code></pre>
 <p>Akkurat som med fjellet er det et enkelt tilfelle: en rett linje, og et spesialtilfelle: Tegn en linje med en firkanthump på. Vi ser også at den tredje er akkurat som før, tegn den andre figuren noen ganger.</p>
 </section>
 <section id="sjekkliste-4" class="level1 check">
 <h1>Sjekkliste</h1>
 <ul>
 <li><p>La oss åpne en ny fil og forsøke å tegne det andre bildet, som er det vi skal gjenta:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-cpp"><span class="hljs-function">from turtle import *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-<span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
-<span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span>
-<span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
-<span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span>
-<span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
-<span class="hljs-title">right</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span>
-<span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span>
-<span class="hljs-title">left</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span>
-<span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">30</span>)</span></span></code></pre></li>
+forward(<span class="hljs-number">30</span>)
+left(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)
+right(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)
+left(<span class="hljs-number">90</span>)
+forward(<span class="hljs-number">30</span>)</code></pre>
+</li>
 <li><p>Kjør det og sjekk at du får denne figuren:</p>
-<pre><code class="lang-gherkin">
-        ___________
-        |<span class="hljs-string">         </span>|
-        |<span class="hljs-string">         </span>|
-        |<span class="hljs-string">         </span>|
-        |<span class="hljs-string">         </span>|
-________|<span class="hljs-string">         </span>|________</code></pre></li>
+<pre><code class="hljs">___________
+        <span class="hljs-string">|         |</span>
+        <span class="hljs-string">|         |</span>
+        <span class="hljs-string">|         |</span>
+        <span class="hljs-string">|         |</span>
+________<span class="hljs-string">|         |________</span></code></pre>
+</li>
 </ul>
-<p>Vi har det enkle tilellet <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">forward</span><span class="hljs-params">(<span class="hljs-number">100</span>)</span></span></code>, og vi vet hvordan vi skal tegne linjen med firkanthumpen på seg, så la oss hoppe rett til tegningen!</p>
+<p>Vi har det enkle tilellet <code>forward(100)</code>, og vi vet hvordan vi skal tegne linjen med firkanthumpen på seg, så la oss hoppe rett til tegningen!</p>
 </section>
 <section id="steg-6-klumpete-firkanter" class="level1 activity">
 <h1>Steg 6: Klumpete firkanter</h1>
@@ -221,7 +224,7 @@ ________|<span class="hljs-string">         </span>|________</code></pre></li>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Åpne en ny fil i IDLE og skriv inn følgende:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">box</span><span class="hljs-params">(depth, length)</span>:</span>
     <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
@@ -245,8 +248,9 @@ ________|<span class="hljs-string">         </span>|________</code></pre></li>
     box(depth, length)
     left(<span class="hljs-number">90</span>)
 
-xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</code></pre></li>
-<li><p>Vi har ikke skrevet inn spesialtilfellet, det har vi tenkt å la deg gjøre. Det er ganske likt som å programmere linjen vi hadde før, det burde holde å kalle <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">box</span><span class="hljs-params">(newdepth, length)</span></span></code> for å få det til. Koden burde se veldig lik ut som fjellet og snøflaket.</p></li>
+xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</code></pre>
+</li>
+<li><p>Vi har ikke skrevet inn spesialtilfellet, det har vi tenkt å la deg gjøre. Det er ganske likt som å programmere linjen vi hadde før, det burde holde å kalle <code>box(newdepth, length)</code> for å få det til. Koden burde se veldig lik ut som fjellet og snøflaket.</p></li>
 </ul>
 </section>
 </section>
@@ -254,7 +258,7 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</c
 <h1>Steg 7: Trekanter igjen</h1>
 <p>La oss tegne et siste fraktal, og som før har vi et enkelt tilfelle og et spesialtilfelle.</p>
 <p>De første tre versjonene ser ut som dette. Vi tegner et triangel, og så tegner vi det som tre trekanter sammen.</p>
-<pre><code class="lang-asciidoc"><span class="hljs-code">       /\</span>
+<pre><code class="hljs">/\
 <span class="hljs-code">      /  \</span>
 <span class="hljs-code">     /    \</span>
 <span class="hljs-code">    /      \</span>
@@ -281,48 +285,50 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)</c
 <span class="hljs-code">  ----    ----</span>
 <span class="hljs-header"> /\  /\  /\  /\
 ----------------</span></code></pre>
+
 <section id="sjekkliste-6" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Lag en ny fil og prøv det!</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-aspectj">from turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-def triforce(depth, length):
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">triforce</span><span class="hljs-params">(depth, length)</span>:</span>
 
-    <span class="hljs-keyword">if</span> depth == 0:
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">0</span>:
         pendown()
         forward(length)
-        left(120)
+        left(<span class="hljs-number">120</span>)
         forward(length)
-        left(120)
+        left(<span class="hljs-number">120</span>)
         forward(length)
-        left(120)
+        left(<span class="hljs-number">120</span>)
         penup()
     <span class="hljs-keyword">else</span>:
         penup()
-        newlength = length/2
-        newdepth = depth - 1
+        newlength = length/<span class="hljs-number">2</span>
+        newdepth = depth - <span class="hljs-number">1</span>
 
         triforce(newdepth, newlength)
         forward(newlength)
         triforce(newdepth, newlength)
 
-        left(120)
+        left(<span class="hljs-number">120</span>)
         forward(newlength)
-        right(120)
+        right(<span class="hljs-number">120</span>)
         triforce(newdepth, newlength)
 
-        right(120)
+        right(<span class="hljs-number">120</span>)
         forward(newlength)
-        left(120)
+        left(<span class="hljs-number">120</span>)
 
-speed(11)
+speed(<span class="hljs-number">11</span>)
 penup()
-setpos(-255,-255)
-triforce(7, 512)</code></pre>
-<p>Du har kanskje lagt merke til at vi bruker en ny kommando <code class="lang-vim"><span class="hljs-built_in">setpos</span></code> for å flytte skilpadden til hjørnet av skjermen.</p></li>
+setpos(-<span class="hljs-number">255</span>,-<span class="hljs-number">255</span>)
+triforce(<span class="hljs-number">7</span>, <span class="hljs-number">512</span>)</code></pre>
+
+<p>Du har kanskje lagt merke til at vi bruker en ny kommando <code>setpos</code> for å flytte skilpadden til hjørnet av skjermen.</p></li>
 <li><p>Kjør det og se hva som skjer. Vi kan se at det enkle tilfellet er bare å tegne en trekant, og at spesialtilfellet er å tegne tre små trekanter.</p></li>
-<li><p>Prøv å endre verdiene vi sender til <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">triforce</span><span class="hljs-params">()</span></span></code>, endre den siste linjen til <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">triforce</span><span class="hljs-params">(<span class="hljs-number">5</span>, <span class="hljs-number">300</span>)</span></span></code>, hva gjør den?</p></li>
+<li><p>Prøv å endre verdiene vi sender til <code>triforce()</code>, endre den siste linjen til <code>triforce(5, 300)</code>, hva gjør den?</p></li>
 </ul>
 </section>
 </section>
@@ -332,34 +338,35 @@ triforce(7, 512)</code></pre>
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Hvis du vil kan du tegne med sirkler istedenfor trekanter! Åpne en ny fil og skriv inn følgende kode:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-aspectj">from turtle <span class="hljs-keyword">import</span> *
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-def bubble(depth, length):
-    <span class="hljs-keyword">if</span> depth == 0:
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bubble</span><span class="hljs-params">(depth, length)</span>:</span>
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">0</span>:
         pendown()
-        circle(length/2)
+        circle(length/<span class="hljs-number">2</span>)
         penup()
     <span class="hljs-keyword">else</span>:
         penup()
-        newlength = length/2
-        newdepth = depth - 1
+        newlength = length/<span class="hljs-number">2</span>
+        newdepth = depth - <span class="hljs-number">1</span>
         bubble(newdepth, newlength)
         forward(newlength)
         bubble(newdepth, newlength)
-        left(120)
+        left(<span class="hljs-number">120</span>)
         forward(newlength)
-        right(120)
+        right(<span class="hljs-number">120</span>)
         bubble(newdepth, newlength)
-        right(120)
+        right(<span class="hljs-number">120</span>)
         forward(newlength)
-        left(120)
+        left(<span class="hljs-number">120</span>)
 
-speed(11)
+speed(<span class="hljs-number">11</span>)
 penup()
-setpos(-255,-255)
-bubble(6, 512)</code></pre></li>
-<li><p>Hva skjer? Hva ser det ut som? Vi har brukt <code class="lang-mel"><span class="hljs-keyword">circle</span></code> kommandoen for å tegne en sirkel på skjermen, som tar en radius.</p></li>
-<li><p>Forsøk å endre sirkelens radius, bytt ut <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">circle</span><span class="hljs-params">(length/<span class="hljs-number">2</span>)</span></span></code> med <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">circle</span><span class="hljs-params">(length)</span></span></code>, dette tegner en større sirkel istedenfor.</p></li>
+setpos(-<span class="hljs-number">255</span>,-<span class="hljs-number">255</span>)
+bubble(<span class="hljs-number">6</span>, <span class="hljs-number">512</span>)</code></pre>
+</li>
+<li><p>Hva skjer? Hva ser det ut som? Vi har brukt <code>circle</code> kommandoen for å tegne en sirkel på skjermen, som tar en radius.</p></li>
+<li><p>Forsøk å endre sirkelens radius, bytt ut <code>circle(length/2)</code> med <code>circle(length)</code>, dette tegner en større sirkel istedenfor.</p></li>
 </ul>
 </section>
 </section>

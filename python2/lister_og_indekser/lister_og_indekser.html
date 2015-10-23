@@ -15,44 +15,51 @@ function relative(url) {
 </section>
 <section id="section" class="level1 protip">
 <h1></h1>
-<p>Hver ting i en liste kalles et <em>element</em>. En liste lages ved å skrive elementer inni <code class="lang-json">[]</code>, med <code>,</code> mellom elementene:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; lst = [<span class="hljs-string">'egg'</span>, <span class="hljs-string">'ham'</span>, <span class="hljs-string">'spam'</span>]
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst
+<p>Hver ting i en liste kalles et <em>element</em>. En liste lages ved å skrive elementer inni <code>[]</code>, med <code>,</code> mellom elementene:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = [<span class="hljs-string">'egg'</span>, <span class="hljs-string">'ham'</span>, <span class="hljs-string">'spam'</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst
 [<span class="hljs-string">'egg'</span>, <span class="hljs-string">'ham'</span>, <span class="hljs-string">'spam'</span>]</code></pre>
-<p>Vi har nå ei liste som inneholder ordene <code class="lang-actionscript"><span class="hljs-string">'egg'</span></code>, <code class="lang-actionscript"><span class="hljs-string">'ham'</span></code> og <code class="lang-actionscript"><span class="hljs-string">'spam'</span></code>. Vanskeligere er det ikke! Vi kan også lage tomme lister:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; lst = []
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst
+
+<p>Vi har nå ei liste som inneholder ordene <code>'egg'</code>, <code>'ham'</code> og <code>'spam'</code>. Vanskeligere er det ikke! Vi kan også lage tomme lister:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = []
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst
 []</code></pre>
+
 <p>Ei liste kan inneholde alt mulig - tall, strenger og også andre lister:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; lst = [ <span class="hljs-number">3</span>, <span class="hljs-string">'komma'</span>, [<span class="hljs-number">1</span> , <span class="hljs-number">4</span>] ]
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = [ <span class="hljs-number">3</span>, <span class="hljs-string">'komma'</span>, [<span class="hljs-number">1</span> , <span class="hljs-number">4</span>] ]
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst
 [<span class="hljs-number">3</span>, <span class="hljs-string">'komma'</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">4</span>]]</code></pre>
+
+
 </section>
 <section id="legge-til-og-fjerne-elementer" class="level1 activity">
 <h1>Legge til og fjerne elementer</h1>
 </section>
 <section id="section-1" class="level1 protip">
 <h1></h1>
-<p>Hva om vi ønsker å legge til eller fjerne elementene fra lista vi vår? Da kan vi bruke de to funksjonene <code class="lang-stylus">lst.<span class="hljs-function"><span class="hljs-title">append</span><span class="hljs-params">(elm)</span></span></code> og <code class="lang-stylus">lst.<span class="hljs-function"><span class="hljs-title">remove</span><span class="hljs-params">(elm)</span></span></code>, der <code>lst</code> er lista og <code>elm</code> er elementet vi ønsker å legge til eller fjerne.</p>
-<p><code class="lang-stylus">lst.<span class="hljs-function"><span class="hljs-title">append</span><span class="hljs-params">(elm)</span></span></code> legger til <code>elm</code> på slutten av <code>lst</code>, slik som illustrert i eksempelet:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; lst = []
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst.append(<span class="hljs-string">'Per'</span>)
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst
+<p>Hva om vi ønsker å legge til eller fjerne elementene fra lista vi vår? Da kan vi bruke de to funksjonene <code>lst.append(elm)</code> og <code>lst.remove(elm)</code>, der <code>lst</code> er lista og <code>elm</code> er elementet vi ønsker å legge til eller fjerne.</p>
+<p><code>lst.append(elm)</code> legger til <code>elm</code> på slutten av <code>lst</code>, slik som illustrert i eksempelet:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = []
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst.append(<span class="hljs-string">'Per'</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst
 [<span class="hljs-string">'Per'</span>]
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst.append(<span class="hljs-string">'Ada'</span>)
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst.append(<span class="hljs-string">'Kim'</span>)
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst.append(<span class="hljs-string">'Ada'</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst.append(<span class="hljs-string">'Kim'</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst
 [<span class="hljs-string">'Per'</span>, <span class="hljs-string">'Ada'</span>, <span class="hljs-string">'Kim'</span>]</code></pre>
-<p><code class="lang-stylus">lst.<span class="hljs-function"><span class="hljs-title">remove</span><span class="hljs-params">(elm)</span></span></code> sletter det første elementet <code>elm</code> fra <code>lst</code>. Det vil si at dersom <code>elm</code> ligger flere ganger i <code>lst</code> slettes bare det første elementet lik <code>elm</code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; lst = [<span class="hljs-string">'Per'</span>, <span class="hljs-string">'Ada'</span>, <span class="hljs-string">'Kim'</span>, <span class="hljs-string">'Ada'</span>]
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst.remove(<span class="hljs-string">"Ada"</span>)
-<span class="hljs-prompt">&gt;&gt;</span>&gt; lst
+
+<p><code>lst.remove(elm)</code> sletter det første elementet <code>elm</code> fra <code>lst</code>. Det vil si at dersom <code>elm</code> ligger flere ganger i <code>lst</code> slettes bare det første elementet lik <code>elm</code>:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = [<span class="hljs-string">'Per'</span>, <span class="hljs-string">'Ada'</span>, <span class="hljs-string">'Kim'</span>, <span class="hljs-string">'Ada'</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst.remove(<span class="hljs-string">"Ada"</span>)
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst
 [<span class="hljs-string">'Per'</span>, <span class="hljs-string">'Kim'</span>, <span class="hljs-string">'Ada'</span>]</code></pre>
+
 </section>
 <section id="section-2" class="level1 check">
 <h1></h1>
 <p>Vi skal nå lage et handleliste-program. Programmet skal be brukeren skrive inn matvarer, og deretter skrive ut matvarene når <code>ferdig</code> skrives inn. Programmet skal fungere slik:</p>
-<pre>&gt;&gt;&gt;
+<pre>
+>>>
 Skriv inn en gjenstand: <font color="green">ost</font>
 Skriv inn en gjenstand: <font color="green">melk</font>
 Skriv inn en gjenstand: <font color="green">brød</font>
@@ -77,27 +84,31 @@ brød
 </section>
 <section id="section-3" class="level1 protip">
 <h1></h1>
-<p>Tenk deg at vi har ei liste, og ønsker å hente ut det andre elementet i lista. Hvordan skal vi klare det? Da bruker vi noe kalt <em>indeks</em>. Indeks er plassen til elementet og skrives mellom <code class="lang-json">[]</code> rett etter variabelen: <code class="lang-accesslog">lst<span class="hljs-string">[index]</span></code>. Her er et eksempel på en liste med tall:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-cpp">&gt;&gt;&gt; lst = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-&gt;&gt;&gt; lst[<span class="hljs-number">1</span>]
+<p>Tenk deg at vi har ei liste, og ønsker å hente ut det andre elementet i lista. Hvordan skal vi klare det? Da bruker vi noe kalt <em>indeks</em>. Indeks er plassen til elementet og skrives mellom <code>[]</code> rett etter variabelen: <code>lst[index]</code>. Her er et eksempel på en liste med tall:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span>lst[<span class="hljs-number">1</span>]
 <span class="hljs-number">2</span></code></pre>
-<p>Du la kanskje merke til at vi skrev <code class="lang-cpp"><span class="hljs-number">1</span></code>, men fikk ut det andre elementet i lista? Det er fordi vi begynner å telle fra <code class="lang-cpp"><span class="hljs-number">0</span></code>. Dermed har det første elementet i lista indeks <code class="lang-cpp"><span class="hljs-number">0</span></code>, og det andre har indeks <code class="lang-cpp"><span class="hljs-number">1</span></code>. Datamaskiner begynner å telle på null! Du husker kanskje at det samme skjer når vi bruker <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">range</span><span class="hljs-params">()</span></span></code>?</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-cpp">&gt;&gt;&gt; <span class="hljs-built_in">list</span>(range(<span class="hljs-number">5</span>))
+
+<p>Du la kanskje merke til at vi skrev <code>1</code>, men fikk ut det andre elementet i lista? Det er fordi vi begynner å telle fra <code>0</code>. Dermed har det første elementet i lista indeks <code>0</code>, og det andre har indeks <code>1</code>. Datamaskiner begynner å telle på null! Du husker kanskje at det samme skjer når vi bruker <code>range()</code>?</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">5</span>))
 [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]</code></pre>
-<p>Til nå har vi brukt <code class="lang-livecodeserver"><span class="hljs-keyword">for</span> <span class="hljs-keyword">element</span> <span class="hljs-operator">in</span> lst</code> for å gå igjennom elementene i lista, men noen ganger kan det i tillegg være praktisk å telle hvor langt vi er kommet i lista. Til dette kan vi bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">enumerate</span><span class="hljs-params">()</span></span></code>, som gir oss både verdien og indeksen:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus">&gt;&gt;&gt; lst = [<span class="hljs-string">'Per'</span>, <span class="hljs-string">'Kim'</span>, <span class="hljs-string">'Ada'</span>]
-&gt;&gt;&gt; <span class="hljs-keyword">for</span> <span class="hljs-tag">i</span>, value <span class="hljs-keyword">in</span> <span class="hljs-function"><span class="hljs-title">enumerate</span><span class="hljs-params">(lst)</span></span>:
-        <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(i, value)</span></span>
+
+<p>Til nå har vi brukt <code>for element in lst</code> for å gå igjennom elementene i lista, men noen ganger kan det i tillegg være praktisk å telle hvor langt vi er kommet i lista. Til dette kan vi bruke <code>enumerate()</code>, som gir oss både verdien og indeksen:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>lst = [<span class="hljs-string">'Per'</span>, <span class="hljs-string">'Kim'</span>, <span class="hljs-string">'Ada'</span>]
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> i, value <span class="hljs-keyword">in</span> enumerate(lst):
+        print(i, value)
 
 <span class="hljs-number">0</span> Per
 <span class="hljs-number">1</span> Kim
 <span class="hljs-number">2</span> Ada</code></pre>
-<p>I eksempelet over får <code class="lang-matlab"><span class="hljs-built_in">i</span></code> verdien av indeksen, og <code class="lang-ceylon"><span class="hljs-keyword">value</span></code> får verdien av elementet. Det er nesten som ei vanlig <code class="lang-actionscript"><span class="hljs-keyword">for</span></code>-løkke, men vi får indeksen i tillegg.</p>
+
+<p>I eksempelet over får <code>i</code> verdien av indeksen, og <code>value</code> får verdien av elementet. Det er nesten som ei vanlig <code>for</code>-løkke, men vi får indeksen i tillegg.</p>
 </section>
 <section id="section-4" class="level1 check">
 <h1></h1>
 <p>Modifiser nå programmet fra forrige oppgave til å skrive ut indekser ved siden gjenstandene i handlelista. Slik skal det fungere:</p>
-<pre>&gt;&gt;&gt;
+<pre>
+>>>
 Skriv inn en gjenstand: <font color="green">ost</font>
 Skriv inn en gjenstand: <font color="green">melk</font>
 Skriv inn en gjenstand: <font color="green">brød</font>
@@ -110,13 +121,14 @@ Skriv inn en gjenstand: <font color="green">ferdig</font>
 <p>Dette må du gjøre:</p>
 <ul>
 <li>Bruk programmet fra oppgaven over.</li>
-<li>Bruk <code class="lang-swift"><span class="hljs-built_in">enumerate</span></code> til for å få indeksen til hver element.</li>
+<li>Bruk <code>enumerate</code> til for å få indeksen til hver element.</li>
 <li>Skriv ut indeksen på samme linje som elementet i lista.</li>
 </ul>
 <section id="indekstrening" class="level2 challenge">
 <h2>Indekstrening</h2>
 <p>Vi vil nå la brukeren selv velge hvor mange gjenstander som skal skrives ut. Slik som i eksempelet:</p>
-<pre>&gt;&gt;&gt;
+<pre>
+>>>
 Skriv inn en gjenstand: <font color="green">ost</font>
 Skriv inn en gjenstand: <font color="green">melk</font>
 Skriv inn en gjenstand: <font color="green">brød</font>
@@ -140,14 +152,16 @@ Hvor mange gjenstander vil du skrive ut? <font color="green">2</font>
 <section id="section-5" class="level1 protip">
 <h1></h1>
 <p>Vi kan også bruke indekser på strenger. For eksempel:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; s = <span class="hljs-string">"Ada"</span>
-<span class="hljs-prompt">&gt;&gt;</span>&gt; s[<span class="hljs-number">0</span>]
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>s = <span class="hljs-string">"Ada"</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>s[<span class="hljs-number">0</span>]
 <span class="hljs-string">'A'</span></code></pre>
+
 </section>
 <section id="section-6" class="level1 check">
 <h1></h1>
 <p>Vi skal nå skrive et program som henter input fra brukeren og skriver ut annenhver bokstav. Det skal fungere som dette:</p>
-<pre>&gt;&gt;&gt;
+<pre>
+>>>
 Skriv inn en setning: <font color="green">Hei på deg!</font>
 H
 i
@@ -162,7 +176,7 @@ e
 <li>Hent input fra brukeren.</li>
 <li>Bruk en løkke for å hente ut hver bokstav og dens indeks.</li>
 <li><p>Hvis indeksen er et partall, skriv ut bokstaven.</p>
-<p><strong>Hint:</strong> <code class="lang-apache"><span class="hljs-keyword">tall</span><span class="hljs-number">%2</span></code> er <em>resten</em> av <code>tall</code> delt på <code class="lang-cpp"><span class="hljs-number">2</span></code>, hva gir <code class="lang-apache"><span class="hljs-keyword">tall</span><span class="hljs-number">%2</span></code> når <code>tall</code> er et partall?</p></li>
+<p><strong>Hint:</strong> <code>tall%2</code> er <em>resten</em> av <code>tall</code> delt på <code>2</code>, hva gir <code>tall%2</code> når <code>tall</code> er et partall?</p></li>
 </ul>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Ole Kristian Pedersen, Kodeklubben Trondheim</p>

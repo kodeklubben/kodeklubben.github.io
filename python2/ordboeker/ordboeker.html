@@ -14,31 +14,36 @@ function relative(url) {
 <h1>Nøkler og verdier</h1>
 <section id="section" class="level2 protip">
 <h2></h2>
-<p>En ordbok (<em>dictionary</em> på engelsk) brukes for å lagre <em>nøkkel/verdi</em>-par. Tenk deg at du skal ha en norsk-engelsk ordbok. Da vil <em>nøkkelen</em> være ordet du slår opp på, for eksempel det norske ordet. <em>Verdien</em> vil være det engelske ordet. F.eks. nøkkelen <code class="lang-1c"><span class="hljs-string">"ost"</span></code> og verdien <code class="lang-1c"><span class="hljs-string">"cheese"</span></code>. I Python skrives ordbøker med <code class="lang-clojure"><span class="hljs-collection">{}</span></code> slik som dette:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d = {<span class="hljs-string">'ost'</span><span class="hljs-symbol">:<span class="hljs-string">'cheese'</span></span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:<span class="hljs-string">'bread'</span></span>}
-<span class="hljs-prompt">&gt;&gt;</span>&gt; d
-{<span class="hljs-string">'ost'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'bread'</span>}</code></pre>
-<p>I eksempelet over lagde vi en norsk-engelsk ordbok til variabelen <code class="lang-stata"><span class="hljs-literal">d</span></code>. Nøkkel og verdi har et kolon <code>:</code> mellom seg, og <code class="lang-ocaml"><span class="hljs-symbol">'n</span>økkel':<span class="hljs-symbol">'verdi'</span></code>-parene skilles med <code>,</code>. For å slå opp på en nøkkel, bruker vi <code class="lang-json">[nøkkel]</code>, slik som dette:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d[<span class="hljs-string">'ost'</span>]
+<p>En ordbok (<em>dictionary</em> på engelsk) brukes for å lagre <em>nøkkel/verdi</em>-par. Tenk deg at du skal ha en norsk-engelsk ordbok. Da vil <em>nøkkelen</em> være ordet du slår opp på, for eksempel det norske ordet. <em>Verdien</em> vil være det engelske ordet. F.eks. nøkkelen <code>&quot;ost&quot;</code> og verdien <code>&quot;cheese&quot;</code>. I Python skrives ordbøker med <code>{}</code> slik som dette:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>d = {<span class="hljs-string">'ost'</span>:<span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span>:<span class="hljs-string">'bread'</span>}
+<span class="hljs-prompt">&gt;&gt;&gt; </span>d
+{<span class="hljs-string">'ost'</span>: <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span>: <span class="hljs-string">'bread'</span>}</code></pre>
+
+<p>I eksempelet over lagde vi en norsk-engelsk ordbok til variabelen <code>d</code>. Nøkkel og verdi har et kolon <code>:</code> mellom seg, og <code>'nøkkel':'verdi'</code>-parene skilles med <code>,</code>. For å slå opp på en nøkkel, bruker vi <code>[nøkkel]</code>, slik som dette:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>d[<span class="hljs-string">'ost'</span>]
 <span class="hljs-string">'cheese'</span></code></pre>
+
 <p>Vi kan bruke den samme skrivemåten for å lage nye nøkkel/verdi-par eller endre verdien knyttet til en nøkkel:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d[<span class="hljs-string">'farge'</span>] = <span class="hljs-string">'colour'</span>    <span class="hljs-comment"># legger til en ny verdi</span>
-<span class="hljs-prompt">&gt;&gt;</span>&gt; d
-{<span class="hljs-string">'ost'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'bread'</span>, <span class="hljs-string">'farge'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'colour'</span>}
-<span class="hljs-prompt">&gt;&gt;</span>&gt; d[<span class="hljs-string">'farge'</span>] = <span class="hljs-string">'color'</span>     <span class="hljs-comment"># endrer verdien</span>
-<span class="hljs-prompt">&gt;&gt;</span>&gt; d
-{<span class="hljs-string">'ost'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'bread'</span>, <span class="hljs-string">'farge'</span><span class="hljs-symbol">:</span> <span class="hljs-string">'color'</span>}</code></pre>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>d[<span class="hljs-string">'farge'</span>] = <span class="hljs-string">'colour'</span>    <span class="hljs-comment"># legger til en ny verdi</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>d
+{<span class="hljs-string">'ost'</span>: <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span>: <span class="hljs-string">'bread'</span>, <span class="hljs-string">'farge'</span>: <span class="hljs-string">'colour'</span>}
+<span class="hljs-prompt">&gt;&gt;&gt; </span>d[<span class="hljs-string">'farge'</span>] = <span class="hljs-string">'color'</span>     <span class="hljs-comment"># endrer verdien</span>
+<span class="hljs-prompt">&gt;&gt;&gt; </span>d
+{<span class="hljs-string">'ost'</span>: <span class="hljs-string">'cheese'</span>, <span class="hljs-string">'brød'</span>: <span class="hljs-string">'bread'</span>, <span class="hljs-string">'farge'</span>: <span class="hljs-string">'color'</span>}</code></pre>
+
 <p>En tom ordbok opprettes slik:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-ruby"><span class="hljs-prompt">&gt;&gt;</span>&gt; d = {}
-<span class="hljs-prompt">&gt;&gt;</span>&gt; d
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>d = {}
+<span class="hljs-prompt">&gt;&gt;&gt; </span>d
 {}</code></pre>
+
 <p><strong>Merk:</strong> Bare tekst og tall kan brukes som nøkler, men verdiene kan være hva som helst: strenger, tall, lister, ordbøker, funksjoner, osv.</p>
 </section>
 </section>
 <section id="section-1" class="level1 check">
 <h1></h1>
 <p>Vi skal nå skrive et program som lar en bruker lage en ordbok. Programmet skal ta i mot 3 nøkkel/verdi-par, deretter be om en nøkkel å slå opp på og til slutt vise hvilken verdi som tilhører nøkkelen. Det skal fungere slik:</p>
-<pre>Skriv inn en nøkkel: <font color="green">ost</font>
+<pre>
+Skriv inn en nøkkel: <font color="green">ost</font>
 Skriv inn en verdi: <font color="green">cheese</font>
 Skriv inn en nøkkel: <font color="green">brød</font>
 Skriv inn en verdi: <font color="green">bread</font>
@@ -64,33 +69,37 @@ Tilhørende verdi er bread
 <section id="section-2" class="level2 protip">
 <h2></h2>
 <p>Du kan bruke en løkke til å hente ut nøklene til en ordbok:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stata">&gt;&gt;&gt; <span class="hljs-keyword">d</span> = {'<span class="hljs-keyword">br</span>ø<span class="hljs-keyword">d</span>': 3, 'ost': 1}
-&gt;&gt;&gt; <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> <span class="hljs-keyword">d</span>:
-...     <span class="hljs-keyword">print</span>(<span class="hljs-string">"Nøkkel:"</span>, key)
-...     <span class="hljs-keyword">print</span>(<span class="hljs-string">"Verdi:"</span>, <span class="hljs-keyword">d</span>[key])
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>d = {<span class="hljs-string">'brød'</span>: <span class="hljs-number">3</span>, <span class="hljs-string">'ost'</span>: <span class="hljs-number">1</span>}
+<span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> d:
+<span class="hljs-prompt">... </span>    print(<span class="hljs-string">"Nøkkel:"</span>, key)
+<span class="hljs-prompt">... </span>    print(<span class="hljs-string">"Verdi:"</span>, d[key])
 ...
-<span class="hljs-keyword">N</span>økkel: ost
-Verdi: 1
-<span class="hljs-keyword">N</span>økkel: <span class="hljs-keyword">br</span>ø<span class="hljs-literal">d</span>
-Verdi: 3</code></pre>
-<p>Dersom du bare trenger verdiene kan du bruke <code class="lang-stylus">d.<span class="hljs-function"><span class="hljs-title">values</span><span class="hljs-params">()</span></span></code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus">&gt;&gt;&gt; <span class="hljs-keyword">for</span> val <span class="hljs-keyword">in</span> d.<span class="hljs-function"><span class="hljs-title">values</span><span class="hljs-params">()</span></span>:
-...     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Verdi:"</span>, val)</span></span>
+Nøkkel: ost
+Verdi: <span class="hljs-number">1</span>
+Nøkkel: brød
+Verdi: <span class="hljs-number">3</span></code></pre>
+
+<p>Dersom du bare trenger verdiene kan du bruke <code>d.values()</code>:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> val <span class="hljs-keyword">in</span> d.values():
+<span class="hljs-prompt">... </span>    print(<span class="hljs-string">"Verdi:"</span>, val)
 ...
 Verdi: <span class="hljs-number">1</span>
 Verdi: <span class="hljs-number">3</span></code></pre>
-<p>Dersom du ønsker få tilgang til både nøkkel og verdi kan du bruke <code class="lang-stylus">d.<span class="hljs-function"><span class="hljs-title">items</span><span class="hljs-params">()</span></span></code>:</p>
-<pre class="sourceCode python"><code class="sourceCode python lang-stylus">&gt;&gt;&gt; <span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> d.<span class="hljs-function"><span class="hljs-title">items</span><span class="hljs-params">()</span></span>:
-...     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(key, value)</span></span>
+
+<p>Dersom du ønsker få tilgang til både nøkkel og verdi kan du bruke <code>d.items()</code>:</p>
+<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> d.items():
+<span class="hljs-prompt">... </span>    print(key, value)
 ...
 ost <span class="hljs-number">1</span>
 brød <span class="hljs-number">3</span></code></pre>
+
 </section>
 </section>
 <section id="section-3" class="level1 check">
 <h1></h1>
 <p>Vi skal nå lage et handleliste-program som lar brukeren velge hva og hvor mye som skal være på handlelista. Programmet skal se slik ut:</p>
-<pre>Skriv en gjenstand: <font color="green">brød</font>
+<pre>
+Skriv en gjenstand: <font color="green">brød</font>
 Hvor mange? <font color="green">2</font>
 Skriv en gjenstand: <font color="green">tomat</font>
 Hvor mange? <font color="green">5</font>
@@ -103,7 +112,7 @@ Her er handlelista:
 <p>Dette må du gjøre:</p>
 <ul>
 <li>Ta imot input for gjenstand.</li>
-<li>Så lenge gjenstanden ikke er en tom streng <code class="lang-1c"><span class="hljs-string">""</span></code>:
+<li>Så lenge gjenstanden ikke er en tom streng <code>&quot;&quot;</code>:
 <ul>
 <li>Be om antall.</li>
 <li>Lagre til en ordliste.</li>

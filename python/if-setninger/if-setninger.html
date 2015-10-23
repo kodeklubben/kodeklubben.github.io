@@ -8,45 +8,50 @@ function relative(url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default"><span class="hidden-xs">Lær Kidsa Koding</span><span class="visible-xs">LKK</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">If-setninger</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Apprentice</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/if-setninger/if-setninger.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
 <h1>Introduksjon</h1>
-<p>Vi lærte i <a href="../kuprat/kuprat.html">Kuprat</a> at vi kan bruke <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">()</span></span></code> for å få tekst fra brukeren og <code class="lang-stylus"><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">()</span></span></code> for å skrive ut tekst til brukeren. Det kan for eksempel gjøres slik:</p>
-<pre class="python3"><code class="lang-stylus">navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Hva er navnet ditt? "</span>)</span></span>
+<p>Vi lærte i <a href="../kuprat/kuprat.html">Kuprat</a> at vi kan bruke <code>input()</code> for å få tekst fra brukeren og <code>print()</code> for å skrive ut tekst til brukeren. Det kan for eksempel gjøres slik:</p>
+<pre><code>navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Hva er navnet ditt? "</span>)</span></span>
 <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hei, "</span> + navn)</span></span></code></pre>
-<p>I denne oppgaven skal vi lære hvordan vi kan bruke <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setninger for å la programmet bestemme hva det skal gjøre, helt avhengig av hva brukeren skriver inn.</p>
+
+<p>I denne oppgaven skal vi lære hvordan vi kan bruke <code>if</code>-setninger for å la programmet bestemme hva det skal gjøre, helt avhengig av hva brukeren skriver inn.</p>
 </section>
 <section id="steg-1-en-enkel-if-setning" class="level1 activity">
 <h1>Steg 1: En enkel if-setning</h1>
-<p>En <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning fungerer slik:</p>
-<pre class="python3"><code class="lang-stylus">age = <span class="hljs-number">22</span>
+<p>En <code>if</code>-setning fungerer slik:</p>
+<pre><code>age = <span class="hljs-number">22</span>
 <span class="hljs-keyword">if</span> age &gt; <span class="hljs-number">18</span>:
     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Du er voksen!"</span>)</span></span></code></pre>
-<p><code class="lang-cpp"><span class="hljs-keyword">if</span> age &gt; <span class="hljs-number">18</span>:</code> kan deles opp i tre deler.</p>
+
+<p><code>if age &gt; 18:</code> kan deles opp i tre deler.</p>
 <ul>
-<li><code class="lang-actionscript"><span class="hljs-keyword">if</span></code> forteller datamaskinen at nå kommer det en <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setning</li>
-<li><code class="lang-cpp">age &gt; <span class="hljs-number">18</span></code> tester om <code>age</code>-variabelen er større enn 18</li>
+<li><code>if</code> forteller datamaskinen at nå kommer det en <code>if</code>-setning</li>
+<li><code>age &gt; 18</code> tester om <code>age</code>-variabelen er større enn 18</li>
 <li><code>:</code> betyr at vi er ferdig med testen vår, og nå kommer koden som skal kjøres hvis testen er sann.</li>
 </ul>
-<p>Legg merke til at det er et “innrykk” før <code class="lang-bash"><span class="hljs-built_in">print</span></code>. Dette innrykket sørger for at datamaskinen vet nøyaktig hvilken kode som skal kjøres hvis <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setningen er sann. Dersom du glemmer dette kan det være at datamaskinen gjør noe annet enn det du hadde tenkt, eller ikke vil kjøre programmet ditt i det hele tatt!</p>
+<p>Legg merke til at det er et “innrykk” før <code>print</code>. Dette innrykket sørger for at datamaskinen vet nøyaktig hvilken kode som skal kjøres hvis <code>if</code>-setningen er sann. Dersom du glemmer dette kan det være at datamaskinen gjør noe annet enn det du hadde tenkt, eller ikke vil kjøre programmet ditt i det hele tatt!</p>
 <section id="test-prosjektet" class="level2 flag">
 <h2>Test prosjektet</h2>
-<p>Skriv koden selv, kjør den og se hva som skjer. Prøv å endre <code>age</code>-variabelen, du kan for eksempel endre til <code class="lang-cpp">age = <span class="hljs-number">13</span></code> eller <code class="lang-cpp">age = <span class="hljs-number">67</span></code>.</p>
-<p>Hva skjer om du endrer retningen på ulikhetstegnet, til <code class="lang-cpp">age &lt; <span class="hljs-number">18</span></code>?</p>
+<p>Skriv koden selv, kjør den og se hva som skjer. Prøv å endre <code>age</code>-variabelen, du kan for eksempel endre til <code>age = 13</code> eller <code>age = 67</code>.</p>
+<p>Hva skjer om du endrer retningen på ulikhetstegnet, til <code>age &lt; 18</code>?</p>
 </section>
 </section>
 <section id="steg-2-hvis.." class="level1 activity">
 <h1>Steg 2: Hvis..</h1>
-<p>Vi lærte i <a href="#steg-1-en-enkel-if-setning">Steg 1</a> at <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setninger sjekker om en test blir sann, og hvis testen er sann kjøres koden som har innrykk etter <code class="lang-actionscript"><span class="hljs-keyword">if</span></code>-setningen.</p>
+<p>Vi lærte i <a href="#steg-1-en-enkel-if-setning">Steg 1</a> at <code>if</code>-setninger sjekker om en test blir sann, og hvis testen er sann kjøres koden som har innrykk etter <code>if</code>-setningen.</p>
 <p>Hva skjer når vi kjører denne koden?</p>
-<pre class="python3"><code class="lang-cpp"><span class="hljs-keyword">if</span> <span class="hljs-number">3</span> == <span class="hljs-number">2</span>+<span class="hljs-number">1</span>:
-    print(<span class="hljs-string">"3 er lik 2+1"</span>)</code></pre>
-<p>Du skjønte kanskje at <code class="lang-haml">=<span class="ruby">=</span></code> tester om <code class="lang-cpp"><span class="hljs-number">3</span></code> er lik <code class="lang-cpp"><span class="hljs-number">2</span>+<span class="hljs-number">1</span></code>. Det er viktig at vi har <strong>to</strong> likhetstegn, for det er bare da den <strong>tester</strong> om to variabler eller verdier er like.</p>
-<p>Vi kan også sjekke om to verdier er ulike, ved å bruke <code class="lang-diff"><span class="hljs-change">!=</span></code>.</p>
-<pre class="python3"><code class="lang-cpp"><span class="hljs-keyword">if</span> <span class="hljs-number">4</span> != <span class="hljs-number">2</span>+<span class="hljs-number">1</span>:
-    print(<span class="hljs-string">"4 er ikke lik 2+1"</span>)</code></pre>
+<pre><code><span class="hljs-keyword">if</span> <span class="hljs-number">3</span> == <span class="hljs-number">2</span>+<span class="hljs-number">1</span>:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"3 er lik 2+1"</span>)</span></span></code></pre>
+
+<p>Du skjønte kanskje at <code>==</code> tester om <code>3</code> er lik <code>2+1</code>. Det er viktig at vi har <strong>to</strong> likhetstegn, for det er bare da den <strong>tester</strong> om to variabler eller verdier er like.</p>
+<p>Vi kan også sjekke om to verdier er ulike, ved å bruke <code>!=</code>.</p>
+<pre><code><span class="hljs-keyword">if</span> <span class="hljs-number">4</span> != <span class="hljs-number">2</span>+<span class="hljs-number">1</span>:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"4 er ikke lik 2+1"</span>)</span></span></code></pre>
+
 <section id="utfordring" class="level2 challenge">
 <h2>Utfordring</h2>
 <p>Her har en av CodeMasterne gjort en feil. Kan du hjelpe oss å finne feilen?</p>
-<pre class="python3"><code class="lang-cpp"><span class="hljs-keyword">if</span> <span class="hljs-number">7</span> == <span class="hljs-number">2</span>*<span class="hljs-number">4</span>:
-    print(<span class="hljs-string">"7 er ikke lik 2*4"</span>)</code></pre>
+<pre><code><span class="hljs-keyword">if</span> <span class="hljs-number">7</span> == <span class="hljs-number">2</span>*<span class="hljs-number">4</span>:
+    <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"7 er ikke lik 2*4"</span>)</span></span></code></pre>
+
 <p><strong>Hint</strong>: Se på teksten som skal skrives ut!</p>
 </section>
 </section>
@@ -54,16 +59,18 @@ function relative(url) {
 <h1>Steg 3: Litt mer avansert</h1>
 <ul>
 <li><p>Vi har lyst til å skrive et program som hilser på personer som heter “Per”. Dette kan vi gjøre slik:</p>
-<pre class="python3"><code class="lang-stylus">navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Hva heter du? "</span>)</span></span>
+<pre><code>navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Hva heter du? "</span>)</span></span>
 <span class="hljs-keyword">if</span> navn == <span class="hljs-string">"Per"</span>:
     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hei!"</span>)</span></span>
     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hyggelig å hilse på deg,"</span> + navn + <span class="hljs-string">"!"</span>)</span></span></code></pre>
+
 <p>Her har vi to linjer med innrykk! Begge disse kjøres om testen er sann, og kjører ikke om testen er usann.</p></li>
 <li><p>Men hva skjer om den ene linjen ikke har et innrykk, slik som i koden under?</p>
-<pre class="python3"><code class="lang-stylus">navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Hva heter du? "</span>)</span></span>
+<pre><code>navn = <span class="hljs-function"><span class="hljs-title">input</span><span class="hljs-params">(<span class="hljs-string">"Hva heter du? "</span>)</span></span>
 <span class="hljs-keyword">if</span> navn == <span class="hljs-string">"Per"</span>:
     <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hei!"</span>)</span></span>
 <span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-string">"Hyggelig å hilse på deg,"</span> + navn + <span class="hljs-string">"!"</span>)</span></span></code></pre>
+
 <p>Hva blir skrevet ut nå?</p></li>
 <li><p>Prøv deg frem med ulike navn!</p></li>
 </ul>

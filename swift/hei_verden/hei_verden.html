@@ -11,7 +11,7 @@ function relative(url) {
 <p>Swift er et programmeringsspråk laget av Apple og er etterfølgeren til Objective-C. Med Swift kan du lage apper for iOS og OSX. For å gjennomføre dette kurset trenger du en Mac, og helst en iPhone/iPad/iPod å teste ut appen på :)</p>
 <p>I dag skal vi lage vår første app, nemlig en Hei Verden-app! Det er en kjent og kjær tradisjon at det første programmet man skriver i et nytt programmeringsspråk skriver “Hei Verden!” til skjermen.</p>
 <figure>
-<img src="hei_verden.png">
+<img src="hei_verden.png" />
 </figure>
 </section>
 <section id="steg-1-sette-opp-xcode" class="level1 activity">
@@ -24,19 +24,19 @@ function relative(url) {
 <section id="sjekkliste" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Åpne Xcode ved å holde <code class="lang-dockerfile"><span class="hljs-built_in">cmd</span> <span class="bash">+ mellomrom</span></code> og søk etter <strong>Xcode</strong>. Alternativt kan du søke etter Xcode med forstørrelsesglass-ikonet øverst i høyre hjørne.</p></li>
+<li><p>Åpne Xcode ved å holde <code>cmd + mellomrom</code> og søk etter <strong>Xcode</strong>. Alternativt kan du søke etter Xcode med forstørrelsesglass-ikonet øverst i høyre hjørne.</p></li>
 <li><p>Du blir møtt med et vindu som lar deg gjøre en rekke ting. Du kan enten starte et nytt prosjekt, leke deg rundt i <strong>Playground</strong> eller se på og endre et eksisterende prosjekt.</p>
 <figure>
-<img src="intro_skjerm.png">
+<img src="intro_skjerm.png" />
 </figure></li>
 <li><p>Trykk på <strong>Create a New Xcode project</strong>.</p></li>
 <li><p>En ny skjerm skal vises som lar deg velge et rammeverk for appen. Vi skal velge <strong>Single View Application</strong>, som gir oss et bra utgangspunkt for vår egen Hei Verden-app siden denne trenger bare ett skjermbilde.</p>
 <figure>
-<img src="lag_prosjekt.png">
+<img src="lag_prosjekt.png" />
 </figure></li>
 <li><p>Trykker du på <strong>Next</strong> blir du tatt til en skjerm hvor du må fylle inn litt informasjon. I <strong>Product Name</strong> kan du navngi appen din (vi skal kalle vår <em>Hei Verden!</em>). <strong>Organization Name</strong> og <strong>Organization Identifier</strong> er det ikke så viktig med nå, du kan bare la den være som den er :) <strong>Language</strong> skal settes til Swift, mens <strong>Devices</strong> skal settes til iPhone.</p>
 <figure>
-<img src="app_informasjon.png">
+<img src="app_informasjon.png" />
 </figure></li>
 <li><p>Lagre applikasjonen ved å trykke <strong>next</strong>, og deretter <strong>create</strong> (hvor du velger hvor prosjektet lagres).</p></li>
 </ul>
@@ -44,73 +44,74 @@ function relative(url) {
 </section>
 <section id="steg-2-tekst-på-skjermen-ved-bruk-av-en-tekstetikett" class="level1 activity">
 <h1>Steg 2: Tekst på skjermen ved bruk av en tekstetikett</h1>
-<p>Vi skal nå legge til en tekstetikett for å så endre teksten i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.storyboard</span></code>.</p>
+<p>Vi skal nå legge til en tekstetikett for å så endre teksten i <code>Main.storyboard</code>.</p>
 <section id="sjekkliste-1" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Trykk på <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.storyboard</span></code> på venstre side av skjermen.</p></li>
-<li><p>Zoom ut til du ser en firkantet skjerm. Dette representerer skjermen til enheten. Nederst i høyre hjørne av Xcode skal det være en boks, med fire kanpper på øverste rad. Vi skal velge det tredje ikonet, som ligner en hjemknapp. Nede i boksen vil det være et søkefelt. Der skal vi søke etter <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>.</p></li>
-<li><p>Dra en <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> til <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.storyboard</span></code>, og legg den helt øverst i venstre hjørne av det store kvadratet. Du må muligens dobbeltklikke på <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.storyboard</span></code> før du får lov til å dra <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> dit. Dobbeltklikk på <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>, da dette lar oss endre teksten. Som tradisjonsrike skriver vi <em>Hei verden!</em>, men det er helt opp til deg hva du vil skrive! :)</p>
+<li><p>Trykk på <code>Main.storyboard</code> på venstre side av skjermen.</p></li>
+<li><p>Zoom ut til du ser en firkantet skjerm. Dette representerer skjermen til enheten. Nederst i høyre hjørne av Xcode skal det være en boks, med fire kanpper på øverste rad. Vi skal velge det tredje ikonet, som ligner en hjemknapp. Nede i boksen vil det være et søkefelt. Der skal vi søke etter <code>Label</code>.</p></li>
+<li><p>Dra en <code>Label</code> til <code>Main.storyboard</code>, og legg den helt øverst i venstre hjørne av det store kvadratet. Du må muligens dobbeltklikke på <code>Main.storyboard</code> før du får lov til å dra <code>Label</code> dit. Dobbeltklikk på <code>Label</code>, da dette lar oss endre teksten. Som tradisjonsrike skriver vi <em>Hei verden!</em>, men det er helt opp til deg hva du vil skrive! :)</p>
 <figure>
-<img src="drag_label.png">
+<img src="drag_label.png" />
 </figure></li>
-<li><p>Nå skal vi kjøre appen for å teste at alt fungerer. Vi gjør dette ved å trykke på den svarte pilen (playknappen) øverst i venstre hjørne. Alternativt kan du trykke <code class="lang-dockerfile"><span class="hljs-built_in">cmd</span> <span class="bash">+ r</span></code>.</p></li>
+<li><p>Nå skal vi kjøre appen for å teste at alt fungerer. Vi gjør dette ved å trykke på den svarte pilen (playknappen) øverst i venstre hjørne. Alternativt kan du trykke <code>cmd + r</code>.</p></li>
 <li><p>Det skal nå kjøres en simulator, og teksten <em>Hei verden!</em> skal dukke opp.</p></li>
 </ul>
 </section>
 </section>
 <section id="steg-3-få-en-knapp-til-å-skrive-noe-til-skjermen" class="level1 activity">
 <h1>Steg 3: Få en knapp til å skrive noe til skjermen</h1>
-<p>Vi skal nå sørge for at ved å trykke på en knapp, vil <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> endre seg. For å kunne følge med på denne delen av kurset er det anbefalt med noe tidligere kunnskap om grunnleggende programmering.</p>
+<p>Vi skal nå sørge for at ved å trykke på en knapp, vil <code>Label</code> endre seg. For å kunne følge med på denne delen av kurset er det anbefalt med noe tidligere kunnskap om grunnleggende programmering.</p>
 <section id="sjekkliste-2" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Om du vil spare på den første appen du lagde kan du gjerne lage et nytt Xcode-prosjekt før du går videre. Gjenta i såfall stegene 1 og 2 og sjekk at alt fungerer som det skal.</p></li>
-<li><p>I tillegg til å dra inn en <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.Storyboard</span></code>, skal vi legge til en <code class="lang-mathematica"><span class="hljs-keyword">Button</span></code>. En <code class="lang-mathematica"><span class="hljs-keyword">Button</span></code> kan vi trykke på og kjøre kode knyttet til knappen. Du legger til en <code class="lang-mathematica"><span class="hljs-keyword">Button</span></code> på samme måte som du gjorde med <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>.</p></li>
-<li><p>Ha <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.Storyboard</span></code> i Xcode vinduet valgt, og trykk på de to sirklene øverst i høyre hjørne i Xcode. Vinduet som dukker opp til venstre viser koden knyttet til en <code>ViewController</code>, som er den som kontrollerer hvordan app-skjermen oppfører seg. Det er her selve kodingen foregår.</p></li>
-<li><p>Venstreklikk på <code class="lang-mathematica"><span class="hljs-keyword">Button</span></code> i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.Storyboard</span></code>. Hold <strong>ctrl</strong> nede mens du venstreklikker og dra mot høyre. Dra streken til linjen over der det står <code class="lang-swift"><span class="hljs-keyword">override</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">didReceiveMemoryWarning</span><span class="hljs-params">()</span></span></code>. Endre <code>Connection</code> til å være en <code class="lang-fortran"><span class="hljs-keyword">Action</span></code>, og gi den navnet <code>knapp</code>.</p></li>
-<li><p>Venstreklikk på <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.Storyboard</span></code>. Hold <strong>ctrl</strong> nede, venstreklikk og dra streken til mellom <code class="lang-swift"><span class="hljs-keyword">override</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span></code> og <code class="lang-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-typename">UIViewController {</span></span></code>. <code>Connection</code> lar du være <code>Outlet</code>, og sett navn til <code>etikett</code>.</p>
+<li><p>I tillegg til å dra inn en <code>Label</code> i <code>Main.Storyboard</code>, skal vi legge til en <code>Button</code>. En <code>Button</code> kan vi trykke på og kjøre kode knyttet til knappen. Du legger til en <code>Button</code> på samme måte som du gjorde med <code>Label</code>.</p></li>
+<li><p>Ha <code>Main.Storyboard</code> i Xcode vinduet valgt, og trykk på de to sirklene øverst i høyre hjørne i Xcode. Vinduet som dukker opp til venstre viser koden knyttet til en <code>ViewController</code>, som er den som kontrollerer hvordan app-skjermen oppfører seg. Det er her selve kodingen foregår.</p></li>
+<li><p>Venstreklikk på <code>Button</code> i <code>Main.Storyboard</code>. Hold <strong>ctrl</strong> nede mens du venstreklikker og dra mot høyre. Dra streken til linjen over der det står <code>override func didReceiveMemoryWarning()</code>. Endre <code>Connection</code> til å være en <code>Action</code>, og gi den navnet <code>knapp</code>.</p></li>
+<li><p>Venstreklikk på <code>Label</code> i <code>Main.Storyboard</code>. Hold <strong>ctrl</strong> nede, venstreklikk og dra streken til mellom <code>override func viewDidLoad()</code> og <code>class ViewController: UIViewController {</code>. <code>Connection</code> lar du være <code>Outlet</code>, og sett navn til <code>etikett</code>.</p>
 <figure>
-<img src="label_connection.png">
+<img src="label_connection.png" />
 </figure></li>
 </ul>
 </section>
 <section id="slippe-streken-på-riktig-sted-i-koden" class="level2 protip">
 <h2>Slippe streken på riktig sted i koden</h2>
-<p>Det er viktig å slippe strekene eksakt som det står i de to stegene over! Disse kobler elementene i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.storyboard</span></code> til koden din.</p>
+<p>Det er viktig å slippe strekene eksakt som det står i de to stegene over! Disse kobler elementene i <code>Main.storyboard</code> til koden din.</p>
 </section>
 <section id="sjekkliste-3" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Vi skal nå begynne å kode litt! Det er anbefalt med noe tidligere programmeringserfaring her.</p></li>
-<li><p>Vi har nå laget to såkalte <code>Connections</code>. Den ene er <code class="lang-swift"><span class="hljs-preprocessor">@IBOutlet</span> <span class="hljs-keyword">weak</span> <span class="hljs-keyword">var</span> etikett: <span class="hljs-type">UILabel</span>!</code>, som refererer til <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.Storyboard</span></code>. Den andre er <code class="lang-swift"><span class="hljs-preprocessor">@IBAction</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">knapp</span><span class="hljs-params">(sender: AnyObject)</span></span> { }</code></p></li>
-<li><p>Tanken er at et klikk på knappen skal endre teksten til <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>. Variabelen <code>etikett</code> er koblet til <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>. Vi kan derfor få teksten til å endre seg ved å skrive</p>
-<pre><code class="lang-stylus">etikett<span class="hljs-class">.text</span> = <span class="hljs-string">"Knappen sier: Hei!"</span></code></pre>
-<p>mellom <code>{</code> og <code>}</code> der du slapp knappen i koden (<code class="lang-autoit"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">knapp</span></span></code>).</p></li>
-<li><p>Kjør appen som du lærte i Steg 2 ved å enten klikke på den svarte pilen øverst i hjørnet eller trykke <code class="lang-dockerfile"><span class="hljs-built_in">cmd</span> <span class="bash">+ r</span></code>.</p></li>
-<li><p>Klikk på knappen og observer hva som skjer! Endret <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> seg til teksten du skrev i <code class="lang-stylus">etikett<span class="hljs-class">.text</span> = <span class="hljs-string">"Knappen sier: Hei!"</span></code>? Hvis etiketten ikke viser hele <code class="lang-1c">Knappen sier: Hei!<span class="hljs-string">"</span></code>, må du endre størrelsen på <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>. Klarer du å gjøre det selv?</p>
+<li><p>Vi har nå laget to såkalte <code>Connections</code>. Den ene er <code>@IBOutlet weak var etikett: UILabel!</code>, som refererer til <code>Label</code> i <code>Main.Storyboard</code>. Den andre er <code>@IBAction func knapp(sender: AnyObject) { }</code></p></li>
+<li><p>Tanken er at et klikk på knappen skal endre teksten til <code>Label</code>. Variabelen <code>etikett</code> er koblet til <code>Label</code>. Vi kan derfor få teksten til å endre seg ved å skrive</p>
+<pre><code class="hljs">etikett<span class="hljs-class">.text</span> = <span class="hljs-string">"Knappen sier: Hei!"</span></code></pre>
+
+<p>mellom <code>{</code> og <code>}</code> der du slapp knappen i koden (<code>func knapp</code>).</p></li>
+<li><p>Kjør appen som du lærte i Steg 2 ved å enten klikke på den svarte pilen øverst i hjørnet eller trykke <code>cmd + r</code>.</p></li>
+<li><p>Klikk på knappen og observer hva som skjer! Endret <code>Label</code> seg til teksten du skrev i <code>etikett.text = &quot;Knappen sier: Hei!&quot;</code>? Hvis etiketten ikke viser hele <code>Knappen sier: Hei!&quot;</code>, må du endre størrelsen på <code>Label</code>. Klarer du å gjøre det selv?</p>
 <figure>
-<img src="change_label.png">
+<img src="change_label.png" />
 </figure></li>
 </ul>
 </section>
 <section id="utfordring---variabler" class="level2 try">
 <h2>Utfordring - Variabler</h2>
-<p>Prøv å definer en variabel nedenfor <code class="lang-swift"><span class="hljs-preprocessor">@IBOutlet</span> <span class="hljs-keyword">weak</span> <span class="hljs-keyword">var</span> etikett: <span class="hljs-type">UILabel</span>!</code>, og sett den til å være ditt navn. Klarer du å få <code class="lang-delphi"><span class="hljs-keyword">Label</span></code> til å vise verdien av variabelen ved å endre <code class="lang-applescript">etikett.<span class="hljs-type">text</span></code>?</p>
+<p>Prøv å definer en variabel nedenfor <code>@IBOutlet weak var etikett: UILabel!</code>, og sett den til å være ditt navn. Klarer du å få <code>Label</code> til å vise verdien av variabelen ved å endre <code>etikett.text</code>?</p>
 </section>
 </section>
 <section id="steg-4-få-input-fra-tekstfelt" class="level1 activity">
 <h1>Steg 4: Få input fra tekstfelt</h1>
-<p>Nå skal vi legge inn et tekstfelt i appen, så vi kan ta det brukeren skriver i tekstfeltet og vise det i <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>.</p>
+<p>Nå skal vi legge inn et tekstfelt i appen, så vi kan ta det brukeren skriver i tekstfeltet og vise det i <code>Label</code>.</p>
 <section id="sjekkliste-4" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>I dette steget kan du godt fortsette på appen vi jobbet med i Steg 3. Å implementere tekstfeltfunksjonalitet er veldig likt som i steget over.</p></li>
-<li><p>Begynn med å søke etter <code class="lang-armasm"><span class="hljs-label">Text</span> <span class="hljs-preprocessor">Field</span></code> på samme sted hvor du har søkt etter <code class="lang-delphi"><span class="hljs-keyword">Label</span></code>og <code class="lang-mathematica"><span class="hljs-keyword">Button</span></code>. Dra så <code class="lang-armasm"><span class="hljs-label">Text</span> <span class="hljs-preprocessor">Field</span></code> inn i <code class="lang-css"><span class="hljs-tag">Main</span><span class="hljs-class">.Storyboard</span></code>.</p></li>
-<li><p>Lag en <code>Connection</code> som du gjorde i Steg 3 og opprett den på linjen under <code class="lang-swift"><span class="hljs-preprocessor">@IBOutlet</span> <span class="hljs-keyword">weak</span> <span class="hljs-keyword">var</span> etikett: <span class="hljs-type">UILabel</span>!</code>. Det eneste du skal endre er navnet på tekstfeltet. Bruk <code>tekstfelt</code>.</p></li>
-<li><p>I <code class="lang-swift"><span class="hljs-preprocessor">@IBAction</span> <span class="hljs-func"><span class="hljs-keyword">func</span> <span class="hljs-title">knapp</span><span class="hljs-params">(sender: AnyObject)</span></span> { }</code> kan du bytte ut <code class="lang-stylus">etikett<span class="hljs-class">.text</span> = <span class="hljs-string">"Knappen sier: Hei!"</span></code> med <code class="lang-applescript">etikett.<span class="hljs-type">text</span> = tekstfelt.<span class="hljs-type">text</span></code>. Det brukeren skriver i inn i tekstfeltet er tilgjengelig i <code class="lang-applescript"><span class="hljs-type">text</span></code>-egenskapen til tekstfeltet, og vi henter ut denne informasjonen når vi trykker på knappen.</p>
+<li><p>Begynn med å søke etter <code>Text Field</code> på samme sted hvor du har søkt etter <code>Label</code>og <code>Button</code>. Dra så <code>Text Field</code> inn i <code>Main.Storyboard</code>.</p></li>
+<li><p>Lag en <code>Connection</code> som du gjorde i Steg 3 og opprett den på linjen under <code>@IBOutlet weak var etikett: UILabel!</code>. Det eneste du skal endre er navnet på tekstfeltet. Bruk <code>tekstfelt</code>.</p></li>
+<li><p>I <code>@IBAction func knapp(sender: AnyObject) { }</code> kan du bytte ut <code>etikett.text = &quot;Knappen sier: Hei!&quot;</code> med <code>etikett.text = tekstfelt.text</code>. Det brukeren skriver i inn i tekstfeltet er tilgjengelig i <code>text</code>-egenskapen til tekstfeltet, og vi henter ut denne informasjonen når vi trykker på knappen.</p>
 <figure>
-<img src="textfield_input.png">
+<img src="textfield_input.png" />
 </figure></li>
 </ul>
 </section>
