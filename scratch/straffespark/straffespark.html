@@ -22,7 +22,7 @@ function relative(url) {
 <li><p>Start et nytt prosjekt, for eksempel ved å klikke <code>Programmering</code> i menyen. Hvis du allerede har startet et prosjekt kan du begynne på et nytt ved å velge <code>Fil</code> og deretter <code>Ny</code>.</p></li>
 <li><p>Klikk på <code class="blockmotion">i</code> i hjørnet av kattefiguren, og gi katten navnet <code>Leo</code>.</p></li>
 <li><p>Klikk på <img src="../bilder/velg-bakgrunn.png" alt="Velg ny bakgrunn" /> nederst til venstre på skjermen for å hente inn en ny bakgrunn. Velg bakgrunnen <code>Utendørs/goal1</code> eller <code>Utendørs/goal2</code>.</p></li>
-<li><p>Vi skal nå skrive et lite program som flytter katten <code>Leo</code> når vi klikker på ham. Merk <code>Leo</code> i figurvinduet. Pusle deretter sammen de følgende klossene i skriptvinduet til høyre:</p>
+<li><p>Vi skal nå skrive et lite program som flytter katten <code>Leo</code> når vi klikker på ham. Merk <code>Leo</code> i figurvinduet nederst på skjermen, og klikk <code>Skript</code>-fanen slik at du ser de forskjellige kommandoklossene igjen. Pusle deretter sammen de følgende klossene i skriptvinduet til høyre:</p>
 <pre class="blocks"><code>    når denne figuren klikkes
     gå (10) steg</code></pre></li>
 </ul>
@@ -39,7 +39,7 @@ function relative(url) {
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>Du kan flytte <code>Leo</code> tilbake på skjermen ved å trykke på ham og dra ham dit du vil.</p></li>
-<li><p>Vi vil likevel programmere en enklere måte å få <code>Leo</code> tilbake på banen på. Lag et nytt skript, ved siden av det du allerede har laget, som ser slik ut:</p>
+<li><p>Vi vil likevel programmere en enklere måte å få <code>Leo</code> tilbake på banen på. Lag et <strong>nytt</strong> skript, <strong>ved siden av</strong> det du allerede har laget, som ser slik ut:</p>
 <pre class="blocks"><code>    når grønt flagg klikkes
     gå til x: (-180) y: (-30)</code></pre></li>
 <li><p>Nå vil <code>Leo</code> komme tilbake på banen hver gang du klikker det grønne flagget rett over scenen.</p></li>
@@ -78,6 +78,7 @@ function relative(url) {
 <ul>
 <li><p>Sparker <code>Leo</code> ballen når du klikker på ham?</p></li>
 <li><p>Kan <code>Leo</code> sparke ballen en gang til dersom du trykker det grønne flagget igjen?</p></li>
+<li><p>Hvis <code>Leo</code> sparker ballen før du klikker på ham (med en gang du trykker det grønne flagget), så må du endre litt på tallene i <code class="blockmotion">gå til   x: y:</code>-klossen slik at ballen ligger i ro foran <code>Leo</code>.</p></li>
 </ul>
 </section>
 </section>
@@ -116,17 +117,8 @@ function relative(url) {
 <h2>Sjekkliste</h2>
 <ul>
 <li><p>En ting som ser litt rart ut er at <code>Keeper</code> ikke ser på ballen. Vi fikser dette ved å legge til en <code class="blockmotion">begrens rotasjon vend   sideveis</code>-kloss helt i begynnelsen av skriptet vårt.</p></li>
-<li><p>Du synes kanskje at keeperen er litt stor? Vi har tidligere sett hvordan vi kan bruke <img src="../bilder/krymp.png" alt="krymp" /> for å gjøre figurer mindre. En annen måte å endre størrelsen på er ved å bruke klosser fra <code class="blocklooks">Utseendet</code>-kategorien. Endre skriptet ditt slik at det ser ut som dette:</p>
-<pre class="blocks"><code>    når grønt flagg klikkes
-    begrens rotasjon [vend sideveis v]
-    sett størrelse til (50) %
-    gå til x: (100) y: (-50)
-    pek i retning (0 v)
-    for alltid
-        gå (15) steg
-        sprett tilbake ved kanten
-    slutt</code></pre>
-<p>Om du har brukt en annen figur enn blekkspruten som <code>Keeper</code> vil du kanskje bruke et annet tall enn <code>50</code> når du setter størrelsen. Prøv deg frem!</p></li>
+<li><p>Du synes kanskje at keeperen er litt stor? Vi har tidligere sett hvordan vi kan bruke <img src="../bilder/krymp.png" alt="krymp" /> for å gjøre figurer mindre. En annen måte å endre størrelsen på er ved å bruke klosser fra <code class="blocklooks">Utseendet</code>-kategorien.</p>
+<p>Legg klossen <code class="blocklooks">sett størrelse til 100%</code> inn i <code class="blockcontrol">for alltid</code>-løkka. Du kan nå eksperimentere med å endre <code>100%</code> til et annet tall til du finner en passende størrelse på keeperen. Om du har brukt blekkspruten som <code>Keeper</code> passer <code>50%</code> ganske bra. Prøv deg frem!</p></li>
 </ul>
 </section>
 <section id="test-prosjektet-3" class="level2 flag">
@@ -145,7 +137,7 @@ function relative(url) {
 <section id="sjekkliste-5" class="level2 check">
 <h2>Sjekkliste</h2>
 <ul>
-<li><p>Vi begynner med å finne ut når keeperen redder ballen. Klikk på <code>Ball</code>. Endre deretter skriptet slik:</p>
+<li><p>Vi begynner med å finne ut når keeperen redder ballen. Klikk på <code>Ball</code>. Legg til en <code class="blockcontrol">hvis ellers</code>-kloss i skriptet slik:</p>
 <pre class="blocks"><code>    når grønt flagg klikkes
     gå til x: (-125) y: (-60)
     vent til (berører [Leo v]?)
@@ -162,7 +154,8 @@ function relative(url) {
 <ul>
 <li><p>Vi vil nå at både ballen og keeperen skal slutte å bevege seg ved en redning. Legg til dette som et nytt skript på både <code>Ball</code> og <code>Keeper</code>:</p>
 <pre class="blocks"><code>    når jeg mottar [Redning v]
-    stopp [andre skript i figuren v] :: control</code></pre></li>
+    stopp [andre skript i figuren v] :: control</code></pre>
+<p>Et triks er å først skrive denne koden for <code>Ball</code>. Deretter kan du kopiere den til <code>Keeper</code> ved å dra koden til <code>Keeper</code>-figuren i figurvinduet nederst på skjermen.</p></li>
 </ul>
 </section>
 <section id="test-prosjektet-4" class="level2 flag">
@@ -199,7 +192,7 @@ function relative(url) {
 <li><p>Vi kan også la <code>Leo</code> juble litt når han scorer mål. Klikk på kattefiguren og gi ham følgende skript:</p>
 <pre class="blocks"><code>    når jeg mottar [Mål v]
     si [Ja, det ble mål!!] i (2) sekunder</code></pre></li>
-<li><p>Lag et tilsvarende skript der <code>Leo</code> depper litt, om det blir en <code>Redning</code>. Prøv dette på egen hånd!</p></li>
+<li><p>Lag et tilsvarende skript der <code>Leo</code> sier noe om at han er lei seg om det blir en <code>Redning</code>. Prøv dette på egen hånd!</p></li>
 </ul>
 </section>
 <section id="test-prosjektet-5" class="level2 flag">
