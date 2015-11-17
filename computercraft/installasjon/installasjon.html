@@ -1,0 +1,67 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Installering av ComputerCraft | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Installering av ComputerCraft</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>ComputerCraft</span></div><div class="pdf"><a href="/computercraft/installasjon/installasjon.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
+<h1>Introduksjon</h1>
+<p><a href="http://www.computercraft.info/">ComputerCraft</a> er en mod til <a href="https://minecraft.net/">Minecraft</a>, som gir deg muligheten til å bygge og programmere <strong>datamaskiner</strong> og <strong>roboter</strong> inne i Minecraft-verdenen.</p>
+<figure>
+<img src="../introduksjon_til_computercraft/introduksjon_til_computercraft.png" />
+</figure>
+</section>
+<section id="installering-av-computercraft" class="level1 activity">
+<h1>Installering av ComputerCraft</h1>
+<p>ComputerCraft er en mod til Minecraft, og krever derfor at Minecraft allerede er installert på datamaskinen. Vi antar at du er kjent med og har installert Minecraft.</p>
+<p>ComputerCraft er typisk ikke tilgjengelig for siste versjon av Minecraft. Legg derfor merke til hvilken versjon av Minecraft som kreves (i eksemplene nedenfor kreves versjon 1.7.10, men dette kan endre seg), og pass på at du installerer riktig versjon av Forge.</p>
+<section id="sjekkliste" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Gå til <a href="http://www.computercraft.info/download/">computercraft.info/download</a>. Bla nedover på siden til du finner et avsnitt som heter <strong>Download and installing</strong>. Last ned ComputerCraft til datamaskinen din, og noter deg hvilken versjon av Minecraft denne er kompatibel med (for eksempel versjon 1.7.10). <em>Ikke</em> prøv å kjør filen, vi skal kopiere den til riktig sted litt senere.</p>
+<p><a href="http://www.computercraft.info/download/"><img src="last_ned_computercraft.png" /></a></p></li>
+<li><p>Start <strong>Minecraft Launcher</strong>. Sjekk om du har den riktige versjonen av Minecraft tilgjengelig. Hvis ikke kan du velge <code>New Profile</code> og i nedtrekksmenyen <code>Use Version</code> velger du riktig versjon. Gi profilen et navn (for eksempel versjonsnummeret) og klikk <code>Save   Profile</code>. Klikk <code>Play</code> slik at denne versjonen blir lastet ned og startet opp. Avslutt spillet.</p>
+<p><img src="minecraft_versjon.png" /> <!-- Venstrejuster bildet --></p></li>
+<li><p>Før vi kan legge inn ComputerCraft må vi installere <strong>Minecraft Forge</strong>, som gir oss tilgang til å legge inn Mods. Gå til <a href="http://files.minecraftforge.net/">files.minecraftforge.net</a> og velg den riktige Minecraft-versjonen i menyen som heter <strong>Minecraft Versions</strong> midt på skjermen. Pass på at riktig versjonsnummer vises under tittelen på toppen av skjermen.</p>
+<p>I boksen <strong>Download Recommended</strong> velger du <code>Installer</code>. Du kommer nå til en reklameside. <strong>Vent</strong> til nedtellingen øverst til høyre er ferdig. Klikk <strong>deretter</strong> på <code>Skip</code> og nedlastingen av en fil starter.</p>
+<p><a href="http://files.minecraftforge.net/"><img src="last_ned_forge.png" /></a></p></li>
+<li><p>Kjør filen som ble lastet ned ved å dobbelklikke på den (om du blir spurt hvordan den skal kjøres kan du velge Java eller JDK). Velg <code>Install client</code> og klikk <code>OK</code>.</p>
+<p><img src="installer_forge.png" /> <!-- Venstrejuster bildet --></p></li>
+<li><p>Start <strong>Minecraft Launcher</strong>. Det har nå dukket opp en ny profil som heter <code>Forge</code>. Velg denne og start spillet. Dette vil lage en <code>mods</code>-katalog i <code>Minecraft</code>-katalogen din. Du vil også se at det har dukket opp et nytt valg i hovedmenyen: <code>Mods</code>. Avslutt spillet igjen.</p>
+<p><img src="start_forge.png" /> <!-- Venstrejuster bildet --></p></li>
+<li><p>Finn <code>Minecraft</code>-katalogen din ved å starte <strong>Minecraft Launcher</strong>. Velg deretter <code>Edit Profile</code> og klikk knappen <code>Open Game   Dir</code>. Dette åpner en filutforsker. Velg katalogen <code>mods</code>, og kopier <strong>ComputerCraft</strong>-filen vi lastet ned helt først inn i <code>mods</code>-katalogen. Klikk <code>Cancel</code> i <code>Edit Profile</code>-vinduet.</p>
+<p><img src="minecraft_katalog.png" /> <!-- Venstrejuster bildet --></p></li>
+<li><p>Nå er vi ferdige. I <strong>Minecraft Launcher</strong> kan du nå velge profilen <code>Forge</code> og klikke <code>Play</code>. Når du klikker <code>Mods</code> fra hovedmenyen skal du se at <strong>ComputerCraft</strong> er en av de tilgjengelige mods’ene.</p></li>
+</ul>
+</section>
+<section id="minecraftkatalogen" class="level2 tip">
+<h2>Minecraftkatalogen</h2>
+<p>Minecraftkatalogen er nyttig å kjenne til. Som nevnt over kan du finne den ved å klikke <code>Open Game Dir</code> fra <code>Edit Profile</code>-vinduet. Alternativt kan du hente den frem selv som følger:</p>
+<p><strong>Windows</strong>: Under Windows finner du <code>Minecraft</code>-katalogen under <code>%appdata%\.minecraft</code>. Søk etter <code>%appdata%</code> i en utforsker eller i kjør-feltet etter å ha klikket start-knappen.</p>
+<p><strong>Mac OS X</strong>: Under Mac ligger <code>Minecraft</code>-katalogen i <code>Library/Application Support/minecraft/</code> under hjemmekatalogen din. På norsk heter <code>Library</code> <code>Bibliotek</code>.</p>
+<p><strong>Linux</strong>: På Linux finner du <code>Minecraft</code>-katalogen som en skjult katalog <code>.minecraft</code> rett under hjemmekatalogen din.</p>
+</section>
+</section>
+<section id="kom-i-gang" class="level1 activity">
+<h1>Kom i gang</h1>
+<p>Vi er nå klare til å slå oss opp som programmerere i Minecraft-verdenen. Mens vi utforsker datamaskinene er det enklest med et rolig og enkelt spill:</p>
+<section id="sjekkliste-1" class="level2 check">
+<h2>Sjekkliste</h2>
+<ul>
+<li><p>Velg <code>Singleplayer</code>, og klikk <code>Create New World</code>.</p></li>
+<li><p>Gi verdenen din et navn, og sett <code>Game Mode</code> til <code>Creative</code>. Klikk <code>Create New World</code>.</p></li>
+<li><p>Du kan nå lage din første datamaskin. Trykk <code>E</code> for å gå til Inventory-listen. Øverst kan du nå velge å klikke <code>&gt;</code> for å gå til neste side. Trykk deretter på datamaskin-symbolet (en grå kloss/skjerm), og gi deg selv en <strong>Advanced Computer</strong>.</p></li>
+<li><p>Sett ut en <strong>Advanced Computer</strong> ved å høyre-klikke. Høyre-klikk så en gang til på datamaskinen du nettopp satte ut. En svart skjerm skal dukke opp, med teksten <code>CraftOS</code> og et versjonsnummer i øverste linje. Skriv <code>help</code> og trykk <strong>enter</strong> for å komme igang.</p></li>
+</ul>
+<p>Gratulerer! Du har startet en datamaskin inne i Minecraft-verdenen. På <a href="http://kodeklubben.github.io/computercraft/">kodeklubben.github.io</a> finner du oppgaver som viser deg hvordan du kan programmere den og andre datamaskiner og roboter i ComputerCraft. Lykke til!</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
