@@ -6,33 +6,39 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddeskolen</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/skilpaddeskolen/skilpaddeskolen.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="steg-1-flere-firkanter" class="level1 activity">
-<h1>Steg 1: Flere firkanter</h1>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddeskolen</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/skilpaddeskolen/skilpaddeskolen.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="activity" id="steg-1-flere-firkanter">
+<h1 class="activity" id="steg-1-flere-firkanter">Steg 1: Flere firkanter</h1>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Åpne IDLE-editoren, og åpne en ny fil ved å trykke <code>File &gt; New File</code>, og la oss begynne.</p>
-<p>Husk at du skal ha to vinduer åpne. Det ene er ‘Python Shell’ og det andre er for å skrive kode i.</p>
+<li>
+<p>Åpne IDLE-editoren, og åpne en ny fil ved å trykke <code>File &gt; New File</code>,
+og la oss begynne.</p>
+<p>Husk at du skal ha to vinduer åpne. Det ene er 'Python Shell' og det andre er for å skrive kode i.</p>
 <p>Som sist vil den første linjen alltid være <code>from turtle import *</code> for å fortelle Python at vi vil tegne ved hjelp av skilpadde-biblioteket!</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
     forward(<span class="hljs-number">100</span>)
-    right(<span class="hljs-number">90</span>)</code></pre>
+    right(<span class="hljs-number">90</span>)
+</code></pre>
 </li>
-<li><p>Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</p>
-<p>Husk at <code>for n in range(4)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk <em>tab</em> (knappen rett over <em>caps lock</em>) for å flytte kode.</p></li>
+<li>
+<p>Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</p>
+<p>Husk at <code>for n in range(4)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk <em>tab</em> (knappen rett over <em>caps lock</em>) for å flytte kode.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-2-forskjellige-firkanter" class="level1 activity">
-<h1>Steg 2: Forskjellige firkanter</h1>
+<section class="activity" id="steg-2-forskjellige-firkanter">
+<h1 class="activity" id="steg-2-forskjellige-firkanter">Steg 2: Forskjellige firkanter</h1>
 <p>La oss bruke variabler for å gjøre programmet vårt lettere å lese og lettere å endre, akkurat som vi gjorde i forrige modul.</p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Endre programmet så det ser slik ut:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Endre programmet så det ser slik ut:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 sides = <span class="hljs-number">4</span>
 length = <span class="hljs-number">100</span>
@@ -40,20 +46,24 @@ angle = <span class="hljs-number">360</span>/sides
 
 <span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(sides):
     forward(length)
-    right(angle)</code></pre>
+    right(angle)
+</code></pre>
 </li>
-<li><p>Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</p></li>
+<li>
+<p>Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</p>
+</li>
 </ul>
 <p>Dette er et litt langt program, men nå kan vi endre det til å tegne hvilken figur vi vil. Problemet er bare at vi er nødt til å klippe og lime programmet for å få det til. Som tidligere kan vi skrive kode for å slippe å gjenta oss selv (programmerere anstrenger seg gjerne litt slik at de kan være late etterpå!). Denne gangen skal vi lage en <em>funksjon</em>. En funksjon er en enkel måte for å gjenbruke en kodeblokk (eller oppskrift om du vil) mange ganger. Funksjonen får et navn, og dette navnet kan vi senere bruke.</p>
 </section>
 </section>
-<section id="steg-3-vi-lager-en-funksjon" class="level1 activity">
-<h1>Steg 3: Vi lager en funksjon</h1>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-3-vi-lager-en-funksjon">
+<h1 class="activity" id="steg-3-vi-lager-en-funksjon">Steg 3: Vi lager en funksjon</h1>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Vi endrer koden og legger til <code>def poly():</code>. <code>def</code> betyr definer, altså å lage. Pass på at koden har riktig innrykk og bruk den nye funksjonen. For å få innrykk på flere linjer kan man merke linjene og deretter trykke <em>tab</em> (knappen rett over <em>caps lock</em>). Dersom du vil ha mindre innrykk, bruk <em>shift + tab</em>.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Vi endrer koden og legger til <code>def poly():</code>. <code>def</code> betyr definer, altså å lage. Pass på at koden har riktig innrykk og bruk den nye funksjonen. For å få innrykk på flere linjer kan man merke linjene og deretter trykke <em>tab</em> (knappen rett over <em>caps lock</em>). Dersom du vil ha mindre innrykk, bruk <em>shift + tab</em>.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment"># vi lager funksjonen</span>
     sides = <span class="hljs-number">4</span>
@@ -67,21 +77,25 @@ angle = <span class="hljs-number">360</span>/sides
 pencolor(<span class="hljs-string">'red'</span>)
 poly() <span class="hljs-comment"># vi kaller på funksjonen</span>
 right(<span class="hljs-number">180</span>)
-poly()</code></pre>
+poly()
+</code></pre>
 </li>
-<li><p>Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</p></li>
+<li>
+<p>Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</p>
+</li>
 </ul>
 <p>Vi sparte litt tid ved å lage en ny funksjon i Python, og nå kan vi tegne en rød firkant to ganger, uten å skrive hele greia to ganger. Den nye funksjonen <code>poly()</code> er fin for å slippe å skrive så mye.</p>
 </section>
 </section>
-<section id="steg-4-hvorfor-stoppe-med-firkanter" class="level1 activity">
-<h1>Steg 4: Hvorfor stoppe med firkanter?</h1>
+<section class="activity" id="steg-4-hvorfor-stoppe-med-firkanter">
+<h1 class="activity" id="steg-4-hvorfor-stoppe-med-firkanter">Steg 4: Hvorfor stoppe med firkanter?</h1>
 <p>Vi er ikke ferdige ennå - hva med å endre funksjonen så den kan tegne hvilken som helst form? Som med <code>forward</code> og <code>right</code>, kan vi sende verdier inn i funksjonen istedenfor å endre koden hver gang.</p>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
-<li><p>Endre koden så den ser slik ut:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Endre koden så den ser slik ut:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">(sides, length)</span>:</span>
     angle = <span class="hljs-number">360</span>/sides
@@ -94,46 +108,54 @@ pencolor(<span class="hljs-string">'red'</span>)
 poly(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
 right(<span class="hljs-number">180</span>)
 pencolor(<span class="hljs-string">'blue'</span>)
-poly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre>
+poly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
+</code></pre>
 </li>
-<li><p>Kjør den og se hva som skjer.</p>
+<li>
+<p>Kjør den og se hva som skjer.</p>
 <p>La oss ta dette litt sakte, for dette er ganske kule greier. Istedenfor å bestemme variablene i funksjonen, sier vi at funksjonen tar noen verdier som har navn, og så bruker vi verdiene der vi trenger dem.</p>
-<p>Vi flyttet noen verdier ut av funksjonen, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste funksjon, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p></li>
+<p>Vi flyttet noen verdier ut av funksjonen, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste funksjon, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p>
+</li>
 </ul>
 <p>Å være i stand til å lage nye funksjoner som kan oppføre seg forskjellig basert på verdiene vi gir inn er et av de kraftigste verktøyene i programmering.</p>
-<section id="tips" class="level3 protip">
-<h3>Tips</h3>
+<section class="protip" id="tips">
+<h3 class="protip" id="tips">Tips</h3>
 <p>I python finnes det funksjoner, mens i andre programmeringsspråk finnes det også noe som blir kalt prosedyrer. Disse begrepene går litt inn i hverandre, så det er ikke så farlig om dere ikke ser forskjellen. En funksjon skal gjerne returnere noe, og den skal helst ikke gjøre noe annet enn å regne ut returverdien. I tillegg burde funksjonen alltid returnere det samme når den får samme innputt. Prosedyrer ligner veldig på funksjoner, men de får lov til å returnere forskjellige ting avhenging av andre ting enn innputt. I tillegg er det lov for en prosedyre å gjøre noe annet enn å returnere noe. For eksempel kan en prosedyre tegne på skjermen. I python er det ingen forskjell på funksjoner og prosedyrer, så det er vanlig å bare kalle begge deler for funksjoner.</p>
 </section>
 </section>
 </section>
-<section id="steg-5-skilpaddestreker" class="level1 activity">
-<h1>Steg 5: Skilpaddestreker</h1>
-<section id="sjekkliste-4" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-5-skilpaddestreker">
+<h1 class="activity" id="steg-5-skilpaddestreker">Steg 5: Skilpaddestreker</h1>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
-<li><p>Selv om skilpadden er en liten robot som kan tegne, kan den også flytte seg uten å tegne. Husk at vi kan bruke <code>penup()</code> og <code>pendown()</code> for å slå av og på at skilpadden setter spor. Åpne en ny Python-fil, og skriv inn koden under:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Selv om skilpadden er en liten robot som kan tegne, kan den også flytte seg uten å tegne. Husk at vi kan bruke <code>penup()</code> og <code>pendown()</code> for å slå av og på at skilpadden setter spor. Åpne en ny Python-fil, og skriv inn koden under:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 length = <span class="hljs-number">200</span>
 <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
     forward(length/<span class="hljs-number">16</span>)
     penup()
     forward(length/<span class="hljs-number">16</span>)
-    pendown()</code></pre>
+    pendown()
+</code></pre>
 </li>
-<li><p>Dette programmet tegner en stiplet linje over skjermen. Kjør det og sjekk!</p></li>
+<li>
+<p>Dette programmet tegner en stiplet linje over skjermen. Kjør det og sjekk!</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-6-tegne-figurer" class="level1 activity">
-<h1>Steg 6: Tegne figurer</h1>
+<section class="activity" id="steg-6-tegne-figurer">
+<h1 class="activity" id="steg-6-tegne-figurer">Steg 6: Tegne figurer</h1>
 <p>Vi kan koble figur-programmet og stiplet-linje-programmet sammen ved å bytte ut funksjonen <code>forward</code> med koden vi har for stiplete linjer. Vi bruker koden for å tegne figurer ytterst, og inni der bruker vi koden for å lage stiplete linjer istedenfor hele streker.</p>
-<section id="sjekkliste-5" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul>
-<li><p>Endre koden så den ser ut som følgende:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Endre koden så den ser ut som følgende:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 speed(<span class="hljs-number">11</span>)
 shape(<span class="hljs-string">"turtle"</span>)
 
@@ -152,20 +174,25 @@ pencolor(<span class="hljs-string">'red'</span>)
 dashpoly(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
 right(<span class="hljs-number">180</span>)
 pencolor(<span class="hljs-string">'blue'</span>)
-dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre></li>
-<li><p>Kjør koden og se hva den gjør.</p>
+dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
+</code></pre>
+</li>
+<li>
+<p>Kjør koden og se hva den gjør.</p>
 <p>Vi har to for-løkker inni hverandre, en ytre og en indre. Den ytre løkken <code>for n in range(sides)</code> tegner hver kant av figuren, og hver gang kjører den indre løkken <code>for num in range(8)</code> som tegner stiplete linjer.</p>
-<p>Den ytre løkken bruker variabelen <code>n</code> for å holde styr på hvor mange ganger den har gjentatt seg selv, og den indre løkken bruker variabelen <code>num</code> på tilsvarende måte. Du må bruke forskjellige variabelnavn inni løkken, ellers roter du det bare til.</p></li>
+<p>Den ytre løkken bruker variabelen <code>n</code> for å holde styr på hvor mange ganger den har gjentatt seg selv, og den indre løkken bruker variabelen <code>num</code> på tilsvarende måte. Du må bruke forskjellige variabelnavn inni løkken, ellers roter du det bare til.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-7-byggeklosser-for-figurer" class="level1 activity">
-<h1>Steg 7: Byggeklosser for figurer</h1>
-<section id="sjekkliste-6" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-7-byggeklosser-for-figurer">
+<h1 class="activity" id="steg-7-byggeklosser-for-figurer">Steg 7: Byggeklosser for figurer</h1>
+<section class="check" id="sjekkliste-7">
+<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
 <ul>
-<li><p>La oss bruke funksjoner igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>La oss bruke funksjoner igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 speed(<span class="hljs-number">11</span>)
 shape(<span class="hljs-string">"turtle"</span>)
 
@@ -187,24 +214,28 @@ pencolor(<span class="hljs-string">'red'</span>)
 dashpoly(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
 right(<span class="hljs-number">180</span>)
 pencolor(<span class="hljs-string">'blue'</span>)
-dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)</code></pre>
+dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
+</code></pre>
 </li>
-<li><p>Kjør koden og se at den gjør akkurat det samme som før.</p></li>
+<li>
+<p>Kjør koden og se at den gjør akkurat det samme som før.</p>
+</li>
 </ul>
-<section id="tips-1" class="level3 protip">
-<h3>Tips</h3>
+<section class="protip" id="tips-2">
+<h3 class="protip" id="tips-2">Tips</h3>
 <p>Trikset er at istedenfor å bygge programmer ved å klippe og lime, kan vi lage nye funksjoner og gjenbruke dem. Da blir koden kortere og litt lettere å forstå.</p>
 </section>
 </section>
 </section>
-<section id="steg-8-litt-tilfeldigheter" class="level1 activity">
-<h1>Steg 8: Litt tilfeldigheter</h1>
-<p>Hva om vi gjør litt tilfeldige sprell rett før vi er ferdige? Vi kan be datamaskinen velge et tall for oss, eller velge en farge for oss, litt som om vi kaster terning. Scratch kan dette også, da brukte vi <code>pick</code>.</p>
-<section id="sjekkliste-7" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-8-litt-tilfeldigheter">
+<h1 class="activity" id="steg-8-litt-tilfeldigheter">Steg 8: Litt tilfeldigheter</h1>
+<p>Hva om vi gjør litt tilfeldige sprell rett før vi er ferdige?  Vi kan be datamaskinen velge et tall for oss, eller velge en farge for oss, litt som om vi kaster terning. Scratch kan dette også, da brukte vi <code>pick</code>.</p>
+<section class="check" id="sjekkliste-8">
+<h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
 <ul>
-<li><p>I en ny fil, skriv inn følgende:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>I en ny fil, skriv inn følgende:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange, choice
 colors = [<span class="hljs-string">'red'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'green'</span>]
 
@@ -219,17 +250,20 @@ colors = [<span class="hljs-string">'red'</span>, <span class="hljs-string">'blu
 <span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
     pencolor(choice(colors))
     right(randrange(<span class="hljs-number">0</span>,<span class="hljs-number">360</span>))
-    poly(randrange(<span class="hljs-number">3</span>,<span class="hljs-number">9</span>), randrange(<span class="hljs-number">10</span>,<span class="hljs-number">30</span>))</code></pre>
+    poly(randrange(<span class="hljs-number">3</span>,<span class="hljs-number">9</span>), randrange(<span class="hljs-number">10</span>,<span class="hljs-number">30</span>))
+</code></pre>
 </li>
-<li><p>Lagre og kjør koden</p>
-<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen <code>from random import randrange, random</code> henter inn funksjonene <code>randrange()</code> og <code>choice()</code>.</p>
+<li>
+<p>Lagre og kjør koden</p>
+<p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen  <code>from random import randrange, random</code> henter inn funksjonene <code>randrange()</code> og <code>choice()</code>.</p>
 <p><code>randrange()</code> plukker ut et tall mellom det laveste og det høyeste tallet vi gir inn, så <code>randrange(1, 10)</code> velger et tall mellom 1 og 9 (Python begynner med 1, og stopper rett før 10).</p>
 <p><code>choice()</code> velger en ting fra listen vi gir inn. En liste er en samling av verdier, for eksempel <code>[1, 2, 3]</code>. I koden ovenfor bruker vi listen <code>colors</code>, som har verdiene <code>'red'</code>, <code>'blue'</code>, and <code>'green'</code>.</p>
-<p>Ved å bruke <code>choice()</code> og <code>randrange()</code> kan vi be datamaskinen om å velge farge, størrelse og form for oss, og det kommer til å bli forskjellig resultat nesten hver eneste gang du kjører programmet.</p></li>
+<p>Ved å bruke <code>choice()</code> og <code>randrange()</code> kan vi be datamaskinen om å velge farge, størrelse og form for oss, og det kommer til å bli forskjellig resultat nesten hver eneste gang du kjører programmet.</p>
+</li>
 </ul>
 </section>
-<section id="flere-ting-å-prøve" class="level2 try">
-<h2>Flere ting å prøve</h2>
+<section class="try" id="flere-ting-a-prove">
+<h2 class="try" id="flere-ting-a-prove">Flere ting å prøve</h2>
 <p>Hva med å prøve flere farger, eller å endre tallene? Hva skjer?</p>
 </section>
 </section>

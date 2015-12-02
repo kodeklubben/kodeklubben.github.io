@@ -6,18 +6,16 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Kalkulator</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/kalkulator/kalkulator.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="kalkulator" class="level1 intro">
-<h1>Kalkulator</h1>
-<p>I denne oppgaven skal du lage en kalkulator helt på egenhånd. Det er meningen at du i denne oppgaven skal skrive all koden selv, ved hjelp av noen hint.</p>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Kalkulator</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/kalkulator/kalkulator.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="kalkulator">
+<h1 class="intro" id="kalkulator">Kalkulator</h1>
+<p>I denne oppgaven skal du lage en kalkulator helt på egenhånd. Det er meningen at du  i denne oppgaven skal skrive all koden selv, ved hjelp av noen hint.</p>
 <p>Vi ønsker at kalkulatoren skal kunne addere (<code>+</code>), subtrahere (<code>-</code>), multiplisere (<code>*</code>) og dividere (<code>/</code>). Vi kaller <code>+</code>, <code>-</code>, <code>*</code> og <code>/</code> for <em>operatorer</em>, og i denne oppgaven skal du lage <u>en funksjon for hver operator</u> (disse kan du for eksempel kalle <code>add</code>, <code>subtract</code>, <code>multiply</code> og <code>divide</code>). Hver funksjon skal ha to tall som parametre og skal utføre regneoperasjonen, samt skrive ut svaret.</p>
 <p>Brukeren skal selv skrive inn hva slags regneoperasjon som skal utføres.</p>
 <p>Eksempel på bruk av programmet:</p>
-<figure>
-<img src="python_calculator.png" />
-</figure>
+<p><figure><img src="python_calculator.png" alt=""></figure></p>
 </section>
-<section id="klar-ferdig-programmer" class="level1 activity">
-<h1>Klar, ferdig, programmer!</h1>
+<section class="activity" id="klar-ferdig-programmer">
+<h1 class="activity" id="klar-ferdig-programmer">Klar, ferdig, programmer!</h1>
 <p>Da er det bare å sette i gang!</p>
 <p>Her er noen ting å tenke på:</p>
 <ul>
@@ -25,60 +23,56 @@ function relative(url) {
 <li>Har rekkefølgen på tallene noen betydning? (Er <code>4-2</code> lik <code>2-4</code>?)</li>
 <li>Hvis du sitter fast kan det være lurt å lese tipsene i de gule boksene.</li>
 </ul>
-<section id="int" class="level2 protip">
-<h2>int()</h2>
+<section class="protip" id="int">
+<h2 class="protip" id="int">int()</h2>
 <p>Når man får input fra brukeren får man en <em>tekststreng</em>, selv om brukeren skrev et tall, da kan det være greit å kunne konvertere teksten til et tall, ved hjelp av <code>int()</code>.</p>
-Hva er forskjellen på disse kodesnuttene? (Kjør koden og test selv!)
-<pre><code class="hljs python">tall = input(<span class="hljs-string">"Skriv et tall: "</span>)
+<p>Hva er forskjellen på disse kodesnuttene? (Kjør koden og test selv!)</p>
+<pre><code class="python">tall = input(<span class="hljs-string">"Skriv et tall: "</span>)
 svar = <span class="hljs-number">3</span> + tall
-print(svar)</code></pre>
-
-<pre><code>tall = <span class="hljs-function"><span class="hljs-title">int</span><span class="hljs-params">(input(<span class="hljs-string">"Skriv et tall: "</span>)</span></span>)
-svar = <span class="hljs-number">3</span> + tall
-<span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(svar)</span></span></code></pre>
-
+print(svar)
+</code></pre>
+<pre><code class="python3">tall = int(input(&quot;Skriv et tall: &quot;))
+svar = 3 + tall
+print(svar)
+</code></pre>
 </section>
-<section id="funksjoner-med-parametre" class="level2 protip">
-<h2>Funksjoner med parametre</h2>
+<section class="protip" id="funksjoner-med-parametre">
+<h2 class="protip" id="funksjoner-med-parametre">Funksjoner med parametre</h2>
 <p>En funksjon deklareres ved hjelp av <code>def</code>-nøkkelordet. Den kan brukes ved å skrive funksjonsnavnet med parenteser bak.</p>
-<strong>Eksempel:</strong>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hello_word</span><span class="hljs-params">()</span>:</span>
-    print(<span class="hljs-string">"Hello World!"</span>)
+<p><strong>Eksempel:</strong></p>
+<pre><code class="python3">def hello_word():
+    print(&quot;Hello World!&quot;)
 
-hello_world()</code></pre>
-
+hello_world()
+</code></pre>
 <p>En funksjon som har <em>parametre</em> deklareres med parametre på innsiden av parentesene i funksjonsdefinisjonen.</p>
-<strong>Eksempel:</strong>
-<pre><code><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span><span class="hljs-params">(firstName, lastName)</span>:</span>
-    print(<span class="hljs-string">"Hello, "</span> + firstName + <span class="hljs-string">" "</span> + lastName)</code></pre>
-
+<p><strong>Eksempel:</strong></p>
+<pre><code class="python3">def greet(firstName, lastName):
+    print(&quot;Hello, &quot; + firstName + &quot; &quot; + lastName)
+</code></pre>
 <p>Når vi senere kaller funksjonen, så gir vi den <em>argumenter</em>.</p>
-<strong>Eksempel:</strong>
-<pre><code><span class="hljs-function"><span class="hljs-title">greet</span><span class="hljs-params">(<span class="hljs-string">"Ola"</span>, <span class="hljs-string">"Nordmann"</span>)</span></span></code></pre>
-
+<p><strong>Eksempel:</strong></p>
+<pre><code class="python3">greet(&quot;Ola&quot;, &quot;Nordmann&quot;)
+</code></pre>
 <p>Du la kanskje merke til at vi skiller mellom <em>parametre</em> og <em>argumenter</em>. Et parameter er det navnet vi gir til variabelen i funksjonendefinisjonen, slik som <code>firstName</code> og <code>lastName</code>. Argumenter er de verdiene vi gir til funksjonen når vi kaller den, slik som <code>&quot;Ola&quot;</code> og <code>&quot;Nordmann&quot;</code>.</p>
 </section>
 </section>
-<section id="test-programmet" class="level1 activity">
-<h1>Test programmet</h1>
+<section class="activity" id="test-programmet">
+<h1 class="activity" id="test-programmet">Test programmet</h1>
 <p>Fungerer programmet som det skal? Hvis ikke må du rette på det.</p>
-<section id="delt-på-null" class="level2 challenge">
-<h2>Delt på null</h2>
+<section class="challenge" id="delt-pa-null">
+<h2 class="challenge" id="delt-pa-null">Delt på null</h2>
 <p>Hva skjer når du deler på null? Prøv for eksempel <code>4 / 0</code>.</p>
 <p>Hvis programmet ditt feiler nå, så har du trolig fått en delt-på-null-feil. Man kan nemlig ikke dele på null. Fiks programmet ditt slik at programmet skriver ut <code>&quot;Division by zero is not allowed!&quot;</code> hvis brukeren forsøker å dele på null. Slik:</p>
-<figure>
-<img src="python_calculator_zero_division.png" />
-</figure>
+<p><figure><img src="python_calculator_zero_division.png" alt=""></figure></p>
 </section>
-<section id="flere-utregninger" class="level2 challenge">
-<h2>Flere utregninger</h2>
+<section class="challenge" id="flere-utregninger">
+<h2 class="challenge" id="flere-utregninger">Flere utregninger</h2>
 <p>Endre programmet ditt slik at brukeren kan skrive inn hvor mange utregninger kalkulatoren skal utføre. Programmet vil da fungere slik:</p>
-<figure>
-<img src="python_calculator_multiple_calculations.png" />
-</figure>
+<p><figure><img src="python_calculator_multiple_calculations.png" alt=""></figure></p>
 </section>
-<section id="flere-operasjoner" class="level2 challenge">
-<h2>Flere operasjoner</h2>
+<section class="challenge" id="flere-operasjoner">
+<h2 class="challenge" id="flere-operasjoner">Flere operasjoner</h2>
 <p>Prøv å legge til flere operatorer. Du kan for eksempel legge til <code>**</code>-operatoren. <code>**</code>-operatoren opphøyer et tall i et annet. F.eks. er <code>2**3</code> lik <code>8</code> fordi <code>2*2*2</code> er lik <code>8</code>.</p>
 <p>Kommer du på andre operatorer som kan legges til i kalkulatoren din?</p>
 </section>

@@ -6,34 +6,39 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddetekst</h1><div class="lesson-icons"><div class="level"><img title="Level 4" src="../../assets/img/level4.png"/><span>Ekspert</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/skilpaddetekst/skilpaddetekst.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Skilpaddetekst</h1><div class="lesson-icons"><div class="level"><img title="Level 4" src="../../assets/img/level4.png"/><span>Ekspert</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/skilpaddetekst/skilpaddetekst.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>I denne oppgaven skal vi skrive kode, slik at vi kan skrive stor tekst ved hjelp av <code>turtle</code> slik som på bildet under.</p>
-<figure>
-<img src="turtle_python.png" />
-</figure>
+<p><figure><img src="turtle_python.png" alt=""></figure></p>
 </section>
-<section id="steg-1-tekst-på-flere-linjer" class="level1 activity">
-<h1>Steg 1: Tekst på flere linjer</h1>
-Vi har allerede lært at tekststrenger skrives slik:
-<pre><code class="hljs python">tekst = <span class="hljs-string">"Hei, verden!"</span></code></pre>
-Men hva hvis vi ønsker tekst på flere linjer? Da kan vi bruke tre <code>&quot;</code>-tegn, på denne måten:
-<pre><code class="hljs">tekst = <span class="hljs-string">"""
+<section class="activity" id="steg-1-tekst-pa-flere-linjer">
+<h1 class="activity" id="steg-1-tekst-pa-flere-linjer">Steg 1: Tekst på flere linjer</h1>
+<p>Vi har allerede lært at tekststrenger skrives slik:</p>
+<pre><code class="python">tekst = <span class="hljs-string">"Hei, verden!"</span>
+</code></pre>
+<p>Men hva hvis vi ønsker tekst på flere linjer? Da kan vi bruke tre <code>&quot;</code>-tegn, på denne måten:</p>
+<pre><code><span class="hljs-setting">tekst = <span class="hljs-value"><span class="hljs-string">"""
 Dette er en
 tekst
 over
 mange linjer.
-"""</span></code></pre>
-
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+"""</span></span></span>
+</code></pre>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Skriv inn programmet over, og kjør det. Kommer teksten på flere linjer?</p></li>
-<li><p>Lagre det følgende programmet som skilpaddetekst.py, og se hva som skjer.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Skriv inn programmet over, og kjør det. Kommer teksten på flere linjer?</p>
+</li>
+<li>
+<p>Lagre det følgende programmet som skilpaddetekst.py, og se hva som skjer.</p>
+</li>
+</ul>
+<pre><code>```python
+from turtle import *
 
 
-TEXT = <span class="hljs-string">"""
+TEXT = &quot;&quot;&quot;
 ______      _   _
 | ___ \    | | | |
 | |_/ /   _| |_| |__   ___  _ __
@@ -42,34 +47,43 @@ ______      _   _
 \_|   \__, |\__|_| |_|\___/|_| |_|
        __/ |
       |___/
-"""</span>
+&quot;&quot;&quot;
 
-print(TEXT)</code></pre>
+print(TEXT)
+```
 
-<p>Du skal nå se teksten printet ut i IDLE, men kan vi ikke få skilpadden til å skrive den for oss?</p></li>
-<li><p>Når vi skal skrive teksten med skilpadden, er det lettest å gjøre dette linje for linje, og det er derfor lettere om vi deler opp <code>TEXT</code> i en liste med enkeltlinjer. Til dette bruker vi <code>TEXT.split('\n')</code> som deler opp <code>TEXT</code> i flere linjer, og lagre denne i variabelen <code>LINES</code>.</p>
-<pre><code class="hljs python">LINES = TEXT.split(<span class="hljs-string">'\n'</span>)
+Du skal nå se teksten printet ut i IDLE, men kan vi ikke få skilpadden til å skrive den for oss?
+</code></pre>
+<ul>
+<li>
+<p>Når vi skal skrive teksten med skilpadden, er det lettest å gjøre dette linje for linje, og det er derfor lettere om vi deler opp <code>TEXT</code> i en liste med enkeltlinjer. Til dette bruker vi <code>TEXT.split('\n')</code> som deler opp <code>TEXT</code> i flere linjer, og lagre denne i variabelen <code>LINES</code>.</p>
+<pre><code class="python">LINES = TEXT.split(<span class="hljs-string">'\n'</span>)
 
-print(LINES)</code></pre>
+print(LINES)
+</code></pre>
 </li>
 </ul>
 </section>
 </section>
-<section id="steg-2-tegn-med-skilpadden" class="level1 activity">
-<h1>Steg 2: Tegn med skilpadden</h1>
+<section class="activity" id="steg-2-tegn-med-skilpadden">
+<h1 class="activity" id="steg-2-tegn-med-skilpadden">Steg 2: Tegn med skilpadden</h1>
 <p>Vi ser at teksten over består av tegnene <code>\ | / _</code>. Det å lage disse hver for seg burde være en smal sak.</p>
 <p>Hvis vi tenker oss at vi tegner hvert tegn i en tenkt, kvadratisk boks, med flere bokser ved siden av hverandre på hver linje, så bør det være mulig å tegne teksten tegn for tegn. For å holde kontroll på skilpadden bestemmer vi at hver gang skilpadden går inn i en ny boks, så må den peke mot høyre (øst), og være i hjørnet øverst til venstre. Når den er ferdig å tegne går den opp til hjørnet øverst til høyre, og peker til høyre. Den vil da stå klar til å tegne neste boks.</p>
-<p>Tenk deg at boksene er i svart, og vi lager rød skrift. Da vil det se slik ut: <img src="turtle_box_gif.gif" /></p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<p>Tenk deg at boksene er i svart, og vi lager rød skrift. Da vil det se slik ut:
+<img src="turtle_box_gif.gif" alt=""></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Vi begynner med å legge til størrelsen på tegnene, slik:</p>
+<li>
+<p>Vi begynner med å legge til størrelsen på tegnene, slik:</p>
 <p>(Pass på at denne koden ligger i samme fil som <code>TEXT</code>-variabelen.)</p>
-<pre><code class="hljs python">SIZE  = <span class="hljs-number">15</span></code></pre>
-
-<p><code>SIZE</code> er nå en variabel som inneholder størrelsen på boksen vår.</p></li>
-<li><p>Vi lager en funksjon <code>underline</code> for å lage en understrek:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">underline</span><span class="hljs-params">()</span>:</span>
+<pre><code class="python">SIZE  = <span class="hljs-number">15</span>
+</code></pre>
+<p><code>SIZE</code> er nå en variabel som inneholder størrelsen på boksen vår.</p>
+</li>
+<li>
+<p>Vi lager en funksjon <code>underline</code> for å lage en understrek:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">underline</span><span class="hljs-params">()</span>:</span>
     penup()
 
     <span class="hljs-comment"># Beveg skilpadden ned til bunnen av boksen</span>
@@ -85,28 +99,37 @@ print(LINES)</code></pre>
     <span class="hljs-comment"># beveg skilpadden opp til hjørnet øverst til høyre</span>
     left(<span class="hljs-number">90</span>)
     forward(SIZE)
-    right(<span class="hljs-number">90</span>)</code></pre>
+    right(<span class="hljs-number">90</span>)
+</code></pre>
 </li>
-<li><p>Kjør koden, og se hva som skjer:</p>
-<pre><code class="hljs python">underline()</code></pre>
+<li>
+<p>Kjør koden, og se hva som skjer:</p>
+<pre><code class="python">underline()
+</code></pre>
 </li>
-<li><p>Hva om vi ønsker å lage 10 understreker?</p>
-<pre><code class="hljs python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
-    underline()</code></pre>
-
-<p>Det skal se slik ut, hvis du du ikke har feil i koden: <img src="turtle_underline.png" /></p></li>
-<li><p>Hva skjer hvis du endrer størrelsen på “boksen”? Prøv å endre på <code>SIZE</code> variabelen, og se hva som skjer. (Prøv for eksempel 5 og 50)</p></li>
+<li>
+<p>Hva om vi ønsker å lage 10 understreker?</p>
+<pre><code class="python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
+    underline()
+</code></pre>
+<p>Det skal se slik ut, hvis du du ikke har feil i koden:
+<img src="turtle_underline.png" alt=""></p>
+</li>
+<li>
+<p>Hva skjer hvis du endrer størrelsen på &quot;boksen&quot;? Prøv å endre på <code>SIZE</code> variabelen, og se hva som skjer. (Prøv for eksempel 5 og 50)</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-3-enda-et-tegn" class="level1 activity">
-<h1>Steg 3: Enda et tegn</h1>
-<p>La oss prøve å lage tegnet <code>|</code>. Dette er rett og slett bare en rett strek som skal tegnes lodrett, midt i “boksen”.</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-3-enda-et-tegn">
+<h1 class="activity" id="steg-3-enda-et-tegn">Steg 3: Enda et tegn</h1>
+<p>La oss prøve å lage tegnet <code>|</code>. Dette er rett og slett bare en rett strek som skal tegnes lodrett, midt i &quot;boksen&quot;.</p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Vi lager funksjonen <code>bar</code> for å tegne <code>|</code>.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span>:</span>
+<li>
+<p>Vi lager funksjonen <code>bar</code> for å tegne <code>|</code>.</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span>:</span>
     penup()
 
     <span class="hljs-comment"># flytt til midten av boksen</span>
@@ -122,28 +145,33 @@ print(LINES)</code></pre>
     left(<span class="hljs-number">180</span>)
     forward(SIZE)
     right(<span class="hljs-number">90</span>)
-    forward(SIZE/<span class="hljs-number">2</span>)</code></pre>
+    forward(SIZE/<span class="hljs-number">2</span>)
+</code></pre>
 </li>
-<li><p>Endre <code>for</code>-løkka vi lagde tidligere til å inneholde dette</p>
-<pre><code class="hljs python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
-    bar()</code></pre>
+<li>
+<p>Endre <code>for</code>-løkka vi lagde tidligere til å inneholde dette</p>
+<pre><code class="python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
+    bar()
+</code></pre>
 </li>
-<li><p>Tegner skilpadden nå strekene på samme linje, slik som på bildet?</p>
-<figure>
-<img src="turtle_bars.png" />
-</figure></li>
+<li>
+<p>Tegner skilpadden nå strekene på samme linje, slik som på bildet?</p>
+<p><figure><img src="turtle_bars.png" alt=""></figure></p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-4-skilpaddetegn-på-flere-linjer" class="level1 activity">
-<h1>Steg 4: Skilpaddetegn på flere linjer</h1>
-<p>Det er jo litt kjedelig om alle tegnene bare skal være på en linje, så hva med å lage en ny funksjon som lager en ny linje for oss?</p>
-<p>For å kunne lage en ny linje må funksjonen vite hvor mange tegn den skal gå tilbake, vi må derfor deklarere funksjonen, med et parameter - en variabel som vi kan gi til funksjonen når vi skal kjøre den.</p>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-4-skilpaddetegn-pa-flere-linjer">
+<h1 class="activity" id="steg-4-skilpaddetegn-pa-flere-linjer">Steg 4: Skilpaddetegn på flere linjer</h1>
+<p>Det er jo litt kjedelig om alle tegnene bare skal være på en linje, så hva med å lage en
+ny funksjon som lager en ny linje for oss?</p>
+<p>For å kunne lage en ny linje  må funksjonen vite hvor mange tegn den skal gå tilbake, vi må derfor deklarere funksjonen, med et parameter - en variabel som vi kan gi til funksjonen når vi skal kjøre den.</p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
-<li><p>Skriv inn koden under:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newline</span><span class="hljs-params">(lineLength)</span>:</span>
+<li>
+<p>Skriv inn koden under:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newline</span><span class="hljs-params">(lineLength)</span>:</span>
     penup()
 
     right(<span class="hljs-number">90</span>)
@@ -152,31 +180,35 @@ print(LINES)</code></pre>
 
     forward(SIZE*lineLength)
 
-    right(<span class="hljs-number">180</span>)</code></pre>
-
-<p>Denne koden går først ned til linjen under, så går den tilbake begynnelsen av linjen. Legg merke til at vi kaller <code>forward</code> med <code>SIZE*lineLength</code> som argumenter. <code>lineLength</code> er hvor mange tegn som er på linjen vi kom fra, og <code>SIZE</code> er hvor stort hvert tegn er - dermed må skilpadden flytte seg <code>SIZE*lineLength</code> piksler tilbake.</p></li>
-<li><p>For å teste koden vår erstatter vi de tidligere <code>for</code>-løkkene med denne koden (pass på at dette blir plassert nederst i filen):</p>
-<pre><code class="hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
+    right(<span class="hljs-number">180</span>)
+</code></pre>
+<p>Denne koden går først ned til linjen under, så går den tilbake begynnelsen av linjen. Legg merke til at vi kaller <code>forward</code> med <code>SIZE*lineLength</code> som argumenter. <code>lineLength</code> er hvor mange tegn som er på linjen vi kom fra, og <code>SIZE</code> er hvor stort hvert tegn er - dermed må skilpadden flytte seg <code>SIZE*lineLength</code> piksler tilbake.</p>
+</li>
+<li>
+<p>For å teste koden vår erstatter vi de tidligere <code>for</code>-løkkene med denne koden (pass på at dette blir plassert nederst i filen):</p>
+<pre><code class="python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
     underline()
 newline(<span class="hljs-number">10</span>)
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">15</span>):
-    bar()</code></pre>
-
+    bar()
+</code></pre>
 <p>Legg merke til at <code>newline</code> blir fortalt hvor mange tegn som ble skrevet på linjen over, ikke hvor mange som skal bli skrevet på linjen under!</p>
-<p>Dette skal se omtrent slik ut: <img src="turtle_newline.png" /></p></li>
+<p>Dette skal se omtrent slik ut: <img src="turtle_newline.png" alt=""></p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-5-skilpadder-på-skråplanet" class="level1 activity">
-<h1>Steg 5: Skilpadder på skråplanet</h1>
+<section class="activity" id="steg-5-skilpadder-pa-skraplanet">
+<h1 class="activity" id="steg-5-skilpadder-pa-skraplanet">Steg 5: Skilpadder på skråplanet</h1>
 <p>Nå har vi bare to tegn igjen å lage! Nemlig <code>/</code> og <code>\</code>. Disse tegnene må tegnes på skrå. Vi kan dermed ikke lenger tegne streker av lengde <code>SIZE</code>, vi er nødt til å regne litt.</p>
 <p>Hvis du går på ungdomsskolen har du kanskje lært at sammenhengen mellom katetene og hypotenusen i et rettvinklet trekant er slik <code>a² + b² = c²</code>, det er dermed mulig å regne ut diagonalen til firkanten.</p>
-<p>Her skal du bare få svaret og slippe å regne det ut selv. Diagonalen i boksene våre vil være lik <code>(2 * SIZE**2)**0.5</code>. <code>**</code>-operatoren betyr “opphøyd i” slik at <code>3**2</code> blir <code>9</code>. Når du opphøyer noe i <code>0.5</code>, er det det samme som å ta kvadratrota av tallet. Dermed vil <code>9**0.5</code> bli <code>3.0</code> Dersom du lurer på hvordan dette fungerer kan du spørre en CodeMaster/veileder, eller mattelæreren din.</p>
-<section id="sjekkliste-4" class="level2 check">
-<h2>Sjekkliste</h2>
+<p>Her skal du bare få svaret og slippe å regne det ut selv. Diagonalen i boksene våre vil være lik <code>(2 * SIZE**2)**0.5</code>. <code>**</code>-operatoren betyr &quot;opphøyd i&quot; slik at <code>3**2</code> blir <code>9</code>. Når du opphøyer noe i <code>0.5</code>, er det det samme som å ta kvadratrota av tallet. Dermed vil <code>9**0.5</code> bli <code>3.0</code> Dersom du lurer på hvordan dette fungerer kan du spørre en CodeMaster/veileder, eller mattelæreren din.</p>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
-<li><p>Koden for en ‘slash’ - <code>/</code> blir slik:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">slash</span><span class="hljs-params">()</span>:</span>
+<li>
+<p>Koden for en 'slash' - <code>/</code> blir slik:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">slash</span><span class="hljs-params">()</span>:</span>
     penup()
     right(<span class="hljs-number">90</span>)
     forward(SIZE)
@@ -186,10 +218,12 @@ newline(<span class="hljs-number">10</span>)
     forward((<span class="hljs-number">2</span>*SIZE**<span class="hljs-number">2</span>)**<span class="hljs-number">0.5</span>)
     penup()
 
-    right(<span class="hljs-number">45</span>)</code></pre>
+    right(<span class="hljs-number">45</span>)
+</code></pre>
 </li>
-<li><p>Koden for en ‘backslash’ - <code>\</code> blir slik:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">backslash</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment"># \</span>
+<li>
+<p>Koden for en 'backslash' - <code>\</code> blir slik:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">backslash</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment"># \</span>
     penup()
     right(<span class="hljs-number">45</span>)
 
@@ -199,34 +233,40 @@ newline(<span class="hljs-number">10</span>)
 
     left(<span class="hljs-number">135</span>)
     forward(SIZE)
-    right(<span class="hljs-number">90</span>)</code></pre>
+    right(<span class="hljs-number">90</span>)
+</code></pre>
 </li>
-<li><p>La oss endre på <code>for</code>-løkkene våre, og teste at koden blir korrekt (pass på at denne koden fremdeles ligger nederst).</p>
-<pre><code class="hljs python">length = <span class="hljs-number">10</span>
+<li>
+<p>La oss endre på <code>for</code>-løkkene våre, og teste at koden blir korrekt (pass på at denne koden fremdeles ligger nederst).</p>
+<pre><code class="python">length = <span class="hljs-number">10</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(length):
     backslash()
 newline(length)
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(length):
-    slash()</code></pre>
-
-<p>Denne gangen skal mønsteret bli slik: <img src="turtle_slashes.png" /></p>
-<p>Nå er vi nesten ferdige! Bare litt igjen nå…</p></li>
+    slash()
+</code></pre>
+<p>Denne gangen skal mønsteret bli slik: <img src="turtle_slashes.png" alt=""></p>
+<p>Nå er vi nesten ferdige! Bare litt igjen nå...</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-6-skilpaddetekst" class="level1 activity">
-<h1>Steg 6: Skilpaddetekst</h1>
-<p>Vi trenger en funksjon for å skrive blanke tegn, og vi trenger å oversette fra teksttegn til funksjoner. La oss begynne med det enkleste.</p>
-<section id="sjekkliste-5" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-6-skilpaddetekst">
+<h1 class="activity" id="steg-6-skilpaddetekst">Steg 6: Skilpaddetekst</h1>
+<p>Vi trenger en funksjon for å skrive blanke tegn, og  vi trenger å oversette fra teksttegn til funksjoner. La oss begynne med det enkleste.</p>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul>
-<li><p>For å skrive blanke tegn, så må vi, enkelt og greit, bare bevege oss til neste boks. Det gjør vi slik:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">blank</span><span class="hljs-params">()</span>:</span>
-    forward(SIZE)</code></pre>
+<li>
+<p>For å skrive blanke tegn, så må vi, enkelt og greit, bare bevege oss til neste boks. Det gjør vi slik:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">blank</span><span class="hljs-params">()</span>:</span>
+    forward(SIZE)
+</code></pre>
 </li>
-<li><p>For å oversette fra teksttegn til funksjoner kommer vi til å bruke en dictionary. Dictionary betyr ordbok, og det er akkurat slik den fungerer. Vi “slår opp” noe i ordboka, og får noe tilbake. I vårt tilfelle skal vi slå opp på tegn, og få en funksjon tilbake igjen.</p>
+<li>
+<p>For å oversette fra teksttegn til funksjoner kommer vi til å bruke en dictionary. Dictionary betyr ordbok, og det er akkurat slik den fungerer. Vi &quot;slår opp&quot; noe i ordboka, og får noe tilbake. I vårt tilfelle skal vi slå opp på tegn, og få en funksjon tilbake igjen.</p>
 <p>Først lager vi ordboka:</p>
-<pre><code class="hljs python">MOVES = {
+<pre><code class="python">MOVES = {
     <span class="hljs-string">" "</span> : blank,
     <span class="hljs-string">"_"</span> : underline,
     <span class="hljs-string">"/"</span> : slash,
@@ -237,21 +277,24 @@ newline(length)
     <span class="hljs-string">")"</span> : bar,
     <span class="hljs-string">"'"</span> : blank,
     <span class="hljs-string">","</span> : blank
-}</code></pre>
+}
+</code></pre>
 <p>Nå kan vi slå opp på tegnet <code>-</code> og få funksjonen <code>underline</code> tilbake. Det kan vi for eksempel gjøre slik:</p>
-<pre><code class="hljs python">function = MOVES[<span class="hljs-string">"_"</span>]</code></pre>
-
-Når vi så kaller <code>function</code>, vil den gjøre det samme som <code>underline</code>
-<pre><code class="hljs python">function = MOVES[<span class="hljs-string">"_"</span>]
-function()</code></pre>
-
-Dersom vi ønsker å sjekke om et tegn er i ordboka, så kan vi sjekke det slik:
-<pre><code class="hljs python"><span class="hljs-keyword">if</span> <span class="hljs-string">"_"</span> <span class="hljs-keyword">in</span> MOVES:
-    function = MOVES[<span class="hljs-string">"_"</span>]</code></pre>
+<pre><code class="python">function = MOVES[<span class="hljs-string">"_"</span>]
+</code></pre>
+<p>Når vi så kaller <code>function</code>, vil den gjøre det samme som <code>underline</code></p>
+<pre><code class="python">function = MOVES[<span class="hljs-string">"_"</span>]
+function()
+</code></pre>
+<p>Dersom vi ønsker å sjekke om et tegn er i ordboka, så kan vi sjekke det slik:</p>
+<pre><code class="python"><span class="hljs-keyword">if</span> <span class="hljs-string">"_"</span> <span class="hljs-keyword">in</span> MOVES:
+    function = MOVES[<span class="hljs-string">"_"</span>]
+</code></pre>
 </li>
-<li><p>Nå kan vi lage en ny funksjon, <code>create_text</code> som lager teksten vår.</p>
+<li>
+<p>Nå kan vi lage en ny funksjon, <code>create_text</code> som lager teksten vår.</p>
 <p>For å passe på at vi får plass til all teksten vår, ønsker vi å begynne øverst til venstre i vinduet vårt. Dette kan vi fikse ved hjelp av <code>setx</code> og <code>sety</code> som lar oss flytte skilpadden til den posisjonen vi ønsker.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_text</span><span class="hljs-params">()</span>:</span>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_text</span><span class="hljs-params">()</span>:</span>
     penup()
     setx(-window_width()/<span class="hljs-number">2</span>)
     sety(window_height()/<span class="hljs-number">2</span>)
@@ -263,26 +306,31 @@ Dersom vi ønsker å sjekke om et tegn er i ordboka, så kan vi sjekke det slik:
             <span class="hljs-keyword">else</span>:
                 move = blank
             move()
-        newline(len(line))</code></pre>
-
-<p>Som du kanskje ser, så har vi en <code>for</code>-løkke inni en annen <code>for</code>-løkke. Den ytterste (første) <code>for</code>-løkka går igjennom alle linjene i <code>LINES</code>, mens den innerste går igjennom alle tegnene i hver linje. Inni den innerste <code>for</code>-løkka sjekker vi om vi har en funksjon for tegnet, og hvis vi ikke har det så hopper vi bare over det ved å skrive et blankt tegn i stedenfor.</p></li>
-<li><p>For å kjøre funksjonen vår, lager vi en <code>main</code>-funksjon som sørger for å sette riktig fart og riktig linjebredde.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+        newline(len(line))
+</code></pre>
+<p>Som du kanskje ser, så har vi en <code>for</code>-løkke inni en annen <code>for</code>-løkke. Den ytterste (første) <code>for</code>-løkka går igjennom alle linjene i <code>LINES</code>, mens den innerste går igjennom alle tegnene i hver linje. Inni den innerste <code>for</code>-løkka sjekker vi om vi har en funksjon for tegnet, og hvis vi ikke har det så hopper vi bare over det ved å skrive et blankt tegn i stedenfor.</p>
+</li>
+<li>
+<p>For å kjøre funksjonen vår, lager vi en <code>main</code>-funksjon som sørger for å sette riktig fart og riktig linjebredde.</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
     shape(<span class="hljs-string">"turtle"</span>)
 
     speed(<span class="hljs-number">11</span>)
     width(<span class="hljs-number">5</span>)
     create_text()
 
-main()</code></pre>
+main()
+</code></pre>
 </li>
-<li><p>Kjør koden og se resultatet ditt!</p></li>
+<li>
+<p>Kjør koden og se resultatet ditt!</p>
+</li>
 </ul>
 </section>
-<section id="kjøre-koden-uendelig-mange-ganger" class="level2 try">
-<h2>Kjøre koden uendelig mange ganger</h2>
+<section class="try" id="kjore-koden-uendelig-mange-ganger">
+<h2 class="try" id="kjore-koden-uendelig-mange-ganger">Kjøre koden uendelig mange ganger</h2>
 <p>Dersom du ønsker å kjøre koden uendelig mange ganger, kan du endre <code>main</code>-funksjonen til:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
     shape(<span class="hljs-string">"turtle"</span>)
 
     <span class="hljs-keyword">while</span> true:
@@ -290,17 +338,17 @@ main()</code></pre>
         width(<span class="hljs-number">5</span>)
         create_text()
         sleep(<span class="hljs-number">5</span>)
-        reset()</code></pre>
-
+        reset()
+</code></pre>
 <p>For at dette skal fungere må vi importere <code>sleep</code>-funksjonen. Dette gjør vi helt på toppen:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
-<span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep</code></pre>
-
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep
+</code></pre>
 <p>Skilpadden vil nå lage teksten, vente i fem sekunder (<code>sleep(5)</code>), og nullstille vinduet ved hjelp av <code>reset()</code> før den starter på nytt.</p>
 </section>
-<section id="utfordringer" class="level2 challenge">
-<h2>Utfordringer</h2>
-<p>Dersom du går tilbake til ordboka vi deklarerte i MOVES-konstanten vil du se at vi “jukset” ved å tegne paranteser - <code>(</code> og <code>)</code> som <code>|</code>. Vi “jukset” også ved å bare tegne et blankt tegn istedenfor komma og apostrof - <code>,</code> og <code>'</code>.</p>
+<section class="challenge" id="utfordringer">
+<h2 class="challenge" id="utfordringer">Utfordringer</h2>
+<p>Dersom du går tilbake til ordboka vi deklarerte i MOVES-konstanten vil du se at vi &quot;jukset&quot; ved å tegne paranteser - <code>(</code> og <code>)</code> som <code>|</code>. Vi &quot;jukset&quot; også ved å bare tegne et blankt tegn istedenfor komma og apostrof - <code>,</code> og <code>'</code>.</p>
 <p>Prøv å lage disse på egenhånd! <code>,</code> og <code>'</code> er lettest, for disse kan tegnes som rette streker. For å kunne lage <code>(</code> og <code>)</code>, må du bruke det du har lært om sirkler!</p>
 <p>Lag kode for hvert tegn i en egen funksjon, og husk og oppdatere <code>MOVES</code>. For eksempel, hvis du lagde en komma-funksjon så må du endre</p>
 <p><code>&quot;,&quot;: blank</code></p>

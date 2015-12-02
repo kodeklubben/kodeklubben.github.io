@@ -6,38 +6,49 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hangman</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/hangman/hangman.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
-<p>La oss lage et spill: Hangman! Datamaskinen vil velge et ord og du kan gjette det bokstav for bokstav. Dersom du gjetter feil for mange ganger taper du.</p>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hangman</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/hangman/hangman.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>La oss lage et spill: Hangman! Datamaskinen vil velge et ord og du kan
+gjette det bokstav for bokstav. Dersom du gjetter feil for mange
+ganger taper du.</p>
 </section>
-<section id="steg-1-velg-et-ord" class="level1 activity">
-<h1>Steg 1: Velg et ord</h1>
+<section class="activity" id="steg-1-velg-et-ord">
+<h1 class="activity" id="steg-1-velg-et-ord">Steg 1: Velg et ord</h1>
 <p>Først må vi få datamaskinen til å velge et tilfeldig ord, så la oss begynne.</p>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Åpne IDLE, og åpne et nytt vindu</p></li>
-<li><p>Skriv inn følgende kode:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
+<li>
+<p>Åpne IDLE, og åpne et nytt vindu</p>
+</li>
+<li>
+<p>Skriv inn følgende kode:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
-print(word)</code></pre>
+print(word)
+</code></pre>
 </li>
-<li><p>Lagre programmet ditt og kjør det. Hvilket ord skrives ut?</p></li>
-<li><p>Kjør programmet en gang til. Skriver det ut et annet ord?</p></li>
+<li>
+<p>Lagre programmet ditt og kjør det. Hvilket ord skrives ut?</p>
+</li>
+<li>
+<p>Kjør programmet en gang til. Skriver det ut et annet ord?</p>
+</li>
 </ul>
 <p>Hver gang du kjører dette programmet vil det velge et tilfeldig ord fra listen <code>[&quot;kode&quot;, &quot;kurs&quot;]</code> ved hjelp av <code>choice</code>-funksjonen.</p>
 </section>
 </section>
-<section id="steg-2-gjett-en-bokstav" class="level1 activity">
-<h1>Steg 2: Gjett en bokstav</h1>
+<section class="activity" id="steg-2-gjett-en-bokstav">
+<h1 class="activity" id="steg-2-gjett-en-bokstav">Steg 2: Gjett en bokstav</h1>
 <p>Nå har vi valgt et ord, la oss finne ut hvordan vi gjetter en bokstav.</p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>I den samme filen, endre koden så den ser ut som følger</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
+<li>
+<p>I den samme filen, endre koden så den ser ut som følger</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
@@ -46,13 +57,19 @@ out = <span class="hljs-string">""</span>
 <span class="hljs-keyword">for</span> letter <span class="hljs-keyword">in</span> word:
     out = out + <span class="hljs-string">"_"</span>
 
-print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)</code></pre>
+print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)
+</code></pre>
 </li>
-<li><p>Lagre og kjør programmet.</p></li>
-<li><p>Du burde se <code>Gjett en bokstav i ordet: ____</code>, i output-vinduet (det andre vinduet, ikke vinduet du har skrevet programmet ditt i).</p>
-<p>Vi bruker en <code>for</code>-løkke for å bygge en tekst hvor hver bokstav i ordet er byttet med en understrek <code>_</code>. Ordet <code>kode</code> vil da for eksempel skrives som <code>____</code> til skjermen.</p></li>
-<li><p>La oss gjette på en bokstav! Endre koden så den ser ut som dette</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
+<li>
+<p>Lagre og kjør programmet.</p>
+</li>
+<li>
+<p>Du burde se <code>Gjett en bokstav i ordet: ____</code>, i output-vinduet (det andre vinduet, ikke vinduet du har skrevet programmet ditt i).</p>
+<p>Vi bruker en <code>for</code>-løkke for å bygge en tekst hvor hver bokstav i ordet er byttet med en understrek <code>_</code>. Ordet <code>kode</code> vil da for eksempel skrives som <code>____</code> til skjermen.</p>
+</li>
+<li>
+<p>La oss gjette på en bokstav! Endre koden så den ser ut som dette</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
@@ -68,25 +85,28 @@ guess = input()
 <span class="hljs-keyword">if</span> guess <span class="hljs-keyword">in</span> word:
     print(<span class="hljs-string">"Yay"</span>)
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">"Nope"</span>)</code></pre>
-
-<p>Vi bruker en ny prosedyre <code>input()</code> for å finne ut hvilken bokstav spilleren skriver. Vi bruker <code>if</code> for å sjekke om bokstaven er i ordet.</p></li>
+    print(<span class="hljs-string">"Nope"</span>)
+</code></pre>
+<p>Vi bruker en ny prosedyre <code>input()</code> for å finne ut hvilken bokstav spilleren skriver. Vi bruker <code>if</code> for å sjekke om bokstaven er i ordet.</p>
+</li>
 </ul>
 <p>Da har vi gjort det viktigste, la oss fortsette videre.</p>
 </section>
-<section id="python-2-tips" class="level2 protip">
-<h2>Python 2 tips:</h2>
-<p>Bruk <code>raw_input</code> i stedet for <code>input</code> dersom du bruker en gammel version av python.</p>
+<section class="protip" id="python-2-tips">
+<h2 class="protip" id="python-2-tips">Python 2 tips:</h2>
+<p>Bruk <code>raw_input</code> i stedet for <code>input</code> dersom du bruker en gammel
+version av python.</p>
 </section>
 </section>
-<section id="steg-3-husk-bokstavene-som-er-gjettet" class="level1 activity">
-<h1>Steg 3: Husk bokstavene som er gjettet</h1>
+<section class="activity" id="steg-3-husk-bokstavene-som-er-gjettet">
+<h1 class="activity" id="steg-3-husk-bokstavene-som-er-gjettet">Steg 3: Husk bokstavene som er gjettet</h1>
 <p>Nå skal vi bruke to nye komponenter i python, lister og <code>while</code>-løkker.</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>I den samme filen, endre koden så den ser slik ut:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
+<li>
+<p>I den samme filen, endre koden så den ser slik ut:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
@@ -116,22 +136,27 @@ guessed = []
     <span class="hljs-keyword">else</span>:
         print(<span class="hljs-string">"Nope"</span>)
 
-    print()</code></pre>
+    print()
+</code></pre>
 </li>
-<li><p>Kjør koden og prøv å gjette bokstavene.</p>
+<li>
+<p>Kjør koden og prøv å gjette bokstavene.</p>
 <p>Vi har laget en <code>while True</code>-løkke, tilsvarende <code>for alltid</code> i scratch. Denne vil i utgangspunktet fortsette å spørre spilleren om å gjette bokstaver for alltid. For å komme ut av løkken bruker vi kommandoen <code>break</code> når ordet har blitt gjettet.</p>
-<p>Vi bruker også en liste, <code>guessed</code>, hvor vi legger til bokstavene som er riktige for å huske dem senere.</p></li>
+<p>Vi bruker også en liste, <code>guessed</code>, hvor vi legger til bokstavene som er riktige for å huske dem senere.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-4-tell-feilene" class="level1 activity">
-<h1>Steg 4: Tell feilene</h1>
-<p>For at Hangman skal holde oversikt over alle bokstavene som er gjettet på må vi også huske på når spilleren gjetter feil.</p>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste </h2>
+<section class="activity" id="steg-4-tell-feilene">
+<h1 class="activity" id="steg-4-tell-feilene">Steg 4: Tell feilene</h1>
+<p>For at Hangman skal holde oversikt over alle bokstavene som er gjettet
+på må vi også huske på når spilleren gjetter feil.</p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste </h2>
 <ul>
-<li><p>Endre filen du jobber med slik at den blir seende ut som dette:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
+<li>
+<p>Endre filen du jobber med slik at den blir seende ut som dette:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
@@ -163,19 +188,23 @@ wrong = []
         print(<span class="hljs-string">"Nope"</span>)
         wrong.append(guess)
 
-    print()</code></pre>
-<p>Vi bruker en ny liste <code>wrong</code> som tar vare på alle bokstavene vi har gjettet som er feil.</p></li>
+    print()
+</code></pre>
+<p>Vi bruker en ny liste <code>wrong</code> som tar vare på alle bokstavene vi har gjettet som er feil.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-5-bare-noen-få-forsøk" class="level1 activity">
-<h1>Steg 5: Bare noen få forsøk</h1>
-<p>Bare en ting gjenstår før spillet er ferdig, vi vil begrense hvor mange forsøk man har til å gjette.</p>
-<section id="sjekkliste-4" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-5-bare-noen-fa-forsok">
+<h1 class="activity" id="steg-5-bare-noen-fa-forsok">Steg 5: Bare noen få forsøk</h1>
+<p>Bare en ting gjenstår før spillet er ferdig, vi vil begrense hvor
+mange forsøk man har til å gjette.</p>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
-<li><p>Endre filen for å legge til en ny variabel, <code>tries</code>:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
+<li>
+<p>Endre filen for å legge til en ny variabel, <code>tries</code>:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 
@@ -215,25 +244,32 @@ tries = <span class="hljs-number">7</span>
 <span class="hljs-keyword">if</span> tries:
     print(<span class="hljs-string">"Du gjettet"</span>, word)
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">"Du klarte ikke å gjette"</span>, word)</code></pre>
+    print(<span class="hljs-string">"Du klarte ikke å gjette"</span>, word)
+</code></pre>
 </li>
-<li><p>Kjør programmet, og se hva som skjer når du gjetter feil bokstaver.</p>
-<p>Legg merke til at vi endret <code>while</code>-løkken ved å legge inn en forutsetning, <code>while tries &gt; 0</code>. Dette betyr at løkken bare kjøres så lenge variabelen <code>tries</code> er større enn 0. Kikker du litt rundt i koden ser du at <code>tries</code> starter med verdien 7, også blir den 1 mindre for hver feil bokstav som gjettes. Altså vil spilleren kunne gjette opp til 7 bokstaver feil før spillet er slutt.</p></li>
+<li>
+<p>Kjør programmet, og se hva som skjer når du gjetter feil bokstaver.</p>
+<p>Legg merke til at vi endret <code>while</code>-løkken ved å legge inn en forutsetning, <code>while tries &gt; 0</code>. Dette betyr at løkken bare kjøres så lenge variabelen <code>tries</code> er større enn 0. Kikker du litt rundt i koden ser du at <code>tries</code> starter med verdien 7, også blir den 1 mindre for hver feil bokstav som gjettes. Altså vil spilleren kunne gjette opp til 7 bokstaver feil før spillet er slutt.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-6-legg-til-nye-ord" class="level1 activity">
-<h1>Steg 6: Legg til nye ord</h1>
-<section id="sjekkliste-5" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-6-legg-til-nye-ord">
+<h1 class="activity" id="steg-6-legg-til-nye-ord">Steg 6: Legg til nye ord</h1>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul>
-<li><p>Finn linjen i programkoden som sier:</p>
-<pre><code class="hljs python">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])</code></pre>
+<li>
+<p>Finn linjen i programkoden som sier:</p>
+<pre><code class="python">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
+</code></pre>
 </li>
-<li><p>Vi kan endre denne linjen for å legge til flere ord i spillet. Prøv for eksempel</p>
-<pre><code class="hljs python">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>, <span class="hljs-string">"robot"</span>, <span class="hljs-string">"klubb"</span>])</code></pre>
-
-<p>Husk at ordene må stå i anførselstegn og at det må være komma mellom ordene for å lage en liste. Legg til flere ord som du finner på selv.</p></li>
+<li>
+<p>Vi kan endre denne linjen for å legge til flere ord i spillet. Prøv for eksempel</p>
+<pre><code class="python">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>, <span class="hljs-string">"robot"</span>, <span class="hljs-string">"klubb"</span>])
+</code></pre>
+<p>Husk at ordene må stå i anførselstegn og at det må være komma mellom ordene for å lage en liste. Legg til flere ord som du finner på selv.</p>
+</li>
 </ul>
 </section>
 </section>

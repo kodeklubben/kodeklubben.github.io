@@ -6,59 +6,74 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Forskyving</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/forskyvning/forskyvning.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="læringsmål" class="level2 tips">
-<h2>Læringsmål</h2>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Forskyving</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/forskyvning/forskyvning.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="tips" id="laeringsmal">
+<h2 class="tips" id="laeringsmal">Læringsmål</h2>
 <ul>
 <li>beskrive og gjennomføre spegling, rotasjon og parallellforskyving</li>
 <li>beskrive plassering og flytting i rutenett, på kart og i koordinatsystem, med og utan digitale hjelpemiddel, og bruke koordinatar til å berekne avstandar parallelt med aksane i eit koordinatsystem</li>
 </ul>
 </section>
-<section id="introduksjon" class="level2 intro">
-<h2>Introduksjon</h2>
+<section class="intro" id="introduksjon">
+<h2 class="intro" id="introduksjon">Introduksjon</h2>
 <p>Denne oppgaven forutsetter at du har fullført oppgave 1 i denne oppgaveserien.</p>
 <p>Vi skal nå se på hvordan vi kan flytte en figur rundt på skjermen uten at den endrer form, størrelse eller retning. Det kalles en forskyvning!</p>
-<p>Aller først henter vi frem <code>Hattulf</code> fra forrige oppgave. Trykk på “mine ting” og velg å “se inni” den forrige oppgaven din.</p>
-<p>Vi skal la rotasjonen ligge en liten stund, så vi kobler ganske enkelt “Når grønt flagg klikkes”-boksen fra resten av koden. Ikke slett koden, vi skal bruke den igjen senere!</p>
+<p>Aller først henter vi frem <code>Hattulf</code> fra forrige oppgave. Trykk på &quot;mine ting&quot; og velg å &quot;se inni&quot; den forrige oppgaven din.</p>
+<p>Vi skal la rotasjonen ligge en liten stund, så vi kobler ganske enkelt &quot;Når grønt flagg klikkes&quot;-boksen fra resten av koden.
+Ikke slett koden, vi skal bruke den igjen senere!</p>
 </section>
-<section id="steg-1-vi-forskyver-hattulf" class="level1 activity">
-<h1>Steg 1: Vi forskyver Hattulf</h1>
-<p>Vi må huske at for en datamaskin foregår all bevegelse på skjermen i et koordinatsystem. Koordinatene for bevegelse i lengderetning, altså fra høyre til venstre, kaller vi x-koordinater. Vil du bevege deg i høyden må vi endre på y-koordinatene.</p>
+<section class="activity" id="steg-1-vi-forskyver-hattulf">
+<h1 class="activity" id="steg-1-vi-forskyver-hattulf">Steg 1: Vi forskyver Hattulf</h1>
+<p>Vi må huske at for en datamaskin foregår all bevegelse på skjermen i et koordinatsystem. Koordinatene for bevegelse i lengderetning, altså fra høyre til venstre, kaller vi x-koordinater.
+Vil du bevege deg i høyden må vi endre på y-koordinatene.</p>
 <p>Vi begynner med å endre på X-koordinatene</p>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li>Vi henter en <code>endre x med</code>-{.blockmotion} fra <code class="blockmotion">Bevegelse</code> og kobler den til <code class="blockcontrol">Når grønt flagg klikkes</code></li>
-<li><p>Du kan endre verdien med så mye som du selv ønsker.</p>
-<pre class="blocks"><code>når grønt flagg klikkes
-endre x med ()</code></pre></li>
-<li><p>Det blir litt slitsomt å holde kontroll på hvor hatten er hele tiden. Derfor legger vi til en tastekommando som får hatten tilbake til utgangspunktet, koordinatet (0,0):</p>
-<pre class="blocks"><code>    når [o] trykkes
-    gå til x: (0) y: (0)</code></pre></li>
+<li>
+<p>Vi henter en <code>endre x med</code>-{.blockmotion} fra <code class="blockmotion">Bevegelse</code> og kobler den til <code class="blockcontrol">Når grønt flagg klikkes</code></p>
+</li>
+<li>
+<p>Du kan endre verdien med så mye som du selv ønsker.</p>
+<pre><code class="blocks">når grønt flagg klikkes
+endre x med ()
+</code></pre>
+</li>
+<li>
+<p>Det blir litt slitsomt å holde kontroll på hvor hatten er hele tiden. Derfor legger vi til en tastekommando som får hatten tilbake til utgangspunktet, koordinatet (0,0):</p>
+<pre><code class="blocks">	når [o] trykkes
+	gå til x: (0) y: (0)
+</code></pre>
+</li>
 </ul>
 </section>
-<section id="test-prosjektet" class="level2 flag">
-<h2>Test prosjektet</h2>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
 <ul>
 <li>Hva skjer?</li>
-<li>Husk å trykke “o” om <code>Hattulf</code> forsvinner ut av bildekanten</li>
+<li>Husk å trykke &quot;o&quot; om <code>Hattulf</code> forsvinner ut av bildekanten</li>
 <li>Utfordring: Ved å bruke det du kan om bevegelser på ei tallinje, kan du få <code>Hattulf</code> til å gå til venstre på skjermen ved å endre på verdien til tallet du endrer x med. Får du det til?</li>
 </ul>
 </section>
 </section>
-<section id="steg-2-flytte-hattulf-langs-y-aksen." class="level1 activity">
-<h1>Steg 2: Flytte <code>Hattulf</code> langs y-aksen.</h1>
+<section class="activity" id="steg-2-flytte-hattulf-langs-y-aksen">
+<h1 class="activity" id="steg-2-flytte-hattulf-langs-y-aksen">Steg 2: Flytte <code>Hattulf</code> langs y-aksen.</h1>
 <p>Du blir kanskje ikke veldig overrasket over at vi nå skal benytte oss av <code class="blockmotion">endre y med ()</code>.</p>
 <ul>
-<li><p>Nå skal kodeblokken din se slik ut:</p>
-<pre class="blocks"><code>når grønt flagg klikkes
-endre y med ()</code></pre></li>
+<li>
+<p>Nå skal kodeblokken din se slik ut:</p>
+<pre><code class="blocks">når grønt flagg klikkes
+endre y med ()
+</code></pre>
+</li>
 </ul>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Carl A. Myrland</p>
 </div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
   scratchblocks2.load_language(scratchblocks2._translations['nb']);
-  scratchblocks2.parse("pre.blocks");
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
 });</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

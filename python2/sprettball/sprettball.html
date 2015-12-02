@@ -6,23 +6,31 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Sprettball</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/sprettball/sprettball.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
-<p>I denne oppgaven skal du lage en ballanimasjon, ved hjelp av det du har lært i <a href="../enkle_objekter/enkle_objekter.html">oppgaven om enkle objekter</a>, samt Pygame og Pygame Zero. Dersom du ikke husker objekter, kan du <a href="../enkle_objekter/enkle_objekter.html">gå tilbake</a> og raskt repetere.</p>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Sprettball</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/sprettball/sprettball.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I denne oppgaven skal du lage en ballanimasjon, ved hjelp av det du har lært i
+<a href="../enkle_objekter/enkle_objekter.html">oppgaven om enkle objekter</a>, samt Pygame og Pygame
+Zero. Dersom du ikke husker objekter, kan du <a href="../enkle_objekter/enkle_objekter.html">gå
+tilbake</a> og raskt repetere.</p>
 </section>
-<section id="steg-1-høyde-og-bredde" class="level1 activity">
-<h1>Steg 1: Høyde og bredde</h1>
+<section class="activity" id="steg-1-hoyde-og-bredde">
+<h1 class="activity" id="steg-1-hoyde-og-bredde">Steg 1: Høyde og bredde</h1>
 <p>Lag et nytt python-program med følgende kode:</p>
-<pre><code class="hljs python">HEIGHT = <span class="hljs-number">400</span>
-WIDTH = <span class="hljs-number">600</span></code></pre>
-
-<p>Kjør programmet, og se hva som skjer. Du skal nå se et svart vindu som er 400 piksler høyt, og 600 piksler bredt.</p>
-<p>En <strong>piksel</strong> er et lyspunkt på skjermen og nøyaktig hvor stort dette lyspunktet er avhenger av hvilken skjerm du har - dermed kan det være at vinduet får ulik størrelse på andre datamaskiner enn din egen.</p>
+<pre><code class="python">HEIGHT = <span class="hljs-number">400</span>
+WIDTH = <span class="hljs-number">600</span>
+</code></pre>
+<p>Kjør programmet, og se hva som skjer. Du skal nå se et svart vindu som er 400
+piksler høyt, og 600 piksler bredt.</p>
+<p>En <strong>piksel</strong> er et lyspunkt på skjermen og nøyaktig hvor stort dette
+lyspunktet er avhenger av hvilken skjerm du har - dermed kan det være at
+vinduet får ulik størrelse på andre datamaskiner enn din egen.</p>
 </section>
-<section id="steg-2-lag-en-ball" class="level1 activity">
-<h1>Steg 2: Lag en ball!</h1>
-<p>Vi skal nå lage en ball som vi kan vise på skjermen. Vi begynner med å lage en <code>Ball</code>-klasse, som har variablene <code>radius</code> og <code>color</code>, samt en posisjon bestående av <code>x</code> og <code>y</code>.</p>
-<pre><code class="hljs python">COLORS = {
+<section class="activity" id="steg-2-lag-en-ball">
+<h1 class="activity" id="steg-2-lag-en-ball">Steg 2: Lag en ball!</h1>
+<p>Vi skal nå lage en ball som vi kan vise på skjermen. Vi begynner med å lage en
+<code>Ball</code>-klasse, som har variablene <code>radius</code> og <code>color</code>, samt en posisjon
+bestående av <code>x</code> og <code>y</code>.</p>
+<pre><code class="python">COLORS = {
     <span class="hljs-string">'red'</span>: (<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
     <span class="hljs-string">'green'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>),
     <span class="hljs-string">'blue'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>),
@@ -34,67 +42,88 @@ WIDTH = <span class="hljs-number">600</span></code></pre>
     radius =  <span class="hljs-number">20</span>
     color = COLORS[<span class="hljs-string">'red'</span>]
     x = WIDTH // <span class="hljs-number">2</span>
-    y = HEIGHT // <span class="hljs-number">2</span></code></pre>
-
-<p>Vi har her valgt å ha en rød ball, men du kan velge en annen farge fra <code>COLORS</code>-ordboka om du vil det. Husk at <code>//</code> betyr ‘heltallsdivisjon’, dvs at svaret rundes av nedover, slik at vi får et helt tall som svar.</p>
-<p>Vi må i tillegg ha en funksjon som kan tegne ballen vår. Denne skal vi kalle for <code>draw()</code>. Husk på at funksjonene som skal være en del av klassen må ha et innrykk. Vi må dermed endre på klassen, slik at den ser slik ut:</p>
-<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
+    y = HEIGHT // <span class="hljs-number">2</span>
+</code></pre>
+<p>Vi har her valgt å ha en rød ball, men du kan velge en annen farge fra
+<code>COLORS</code>-ordboka om du vil det. Husk at <code>//</code> betyr 'heltallsdivisjon', dvs at
+svaret rundes av nedover, slik at vi får et helt tall som svar.</p>
+<p>Vi må i tillegg ha en funksjon som kan tegne ballen vår. Denne skal vi kalle
+for <code>draw()</code>. Husk på at funksjonene som skal være en del av klassen må ha et
+innrykk. Vi må dermed endre på klassen, slik at den ser slik ut:</p>
+<pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     radius = <span class="hljs-number">20</span>
     color = COLORS[<span class="hljs-string">'red'</span>]
     x = WIDTH // <span class="hljs-number">2</span>
     y = HEIGHT // <span class="hljs-number">2</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">(self)</span>:</span>
-        screen.draw.filled_circle((self.x, self.y), self.radius, self.color)</code></pre>
+        screen.draw.filled_circle((self.x, self.y), self.radius, self.color)
 
-<p>Nå må er du nesten ferdig. Vi må lage et <code>Ball</code>-objekt, <code>ball1</code> og en global <code>draw</code>-funksjon. Dette vil se slik ut:</p>
-<pre><code class="hljs python">ball1 = Ball()
+</code></pre>
+<p>Nå må er du nesten ferdig. Vi må lage et <code>Ball</code>-objekt, <code>ball1</code> og en global
+<code>draw</code>-funksjon. Dette vil se slik ut:</p>
+<pre><code class="python">ball1 = Ball()
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span>:</span>
     screen.clear()
-    ball1.draw()</code></pre>
-
-<p><code>screen.clear()</code> sørger for at vi tegner på en blank skjerm, og må alltid komme først i den globale funksjonen <code>draw()</code>.</p>
-<section id="test-programmet-ditt" class="level2 flag">
-<h2>Test programmet ditt</h2>
-<p>Du kan nå teste programmet ditt. Du skal få opp en ensfarget sirkel midt i vinduet.</p>
+    ball1.draw()
+</code></pre>
+<p><code>screen.clear()</code> sørger for at vi tegner på en blank skjerm, og må alltid komme
+først i den globale funksjonen <code>draw()</code>.</p>
+<section class="flag" id="test-programmet-ditt">
+<h2 class="flag" id="test-programmet-ditt">Test programmet ditt</h2>
+<p>Du kan nå teste programmet ditt. Du skal få opp en ensfarget sirkel midt i
+vinduet.</p>
 </section>
 </section>
-<section id="steg-3-bevegelse" class="level1 activity">
-<h1>Steg 3: Bevegelse</h1>
-<p>Vi vil at ballen vår skal bevege seg. Hvordan skal vi få til dette? Vi lager funksjonen <code>update()</code>.</p>
-<p>Først må vi legge til et par variabler som bestemmer farten på ballen. Vi skal her ha en variabel for farten i y-retning, og en variabel for farten i x-retning.</p>
-<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
+<section class="activity" id="steg-3-bevegelse">
+<h1 class="activity" id="steg-3-bevegelse">Steg 3: Bevegelse</h1>
+<p>Vi vil at ballen vår skal bevege seg. Hvordan skal vi få til dette? Vi lager
+funksjonen <code>update()</code>.</p>
+<p>Først må vi legge til et par variabler som bestemmer farten på ballen. Vi skal
+her ha en variabel for farten i y-retning, og en variabel for farten i
+x-retning.</p>
+<pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     radius =  <span class="hljs-number">20</span>
     color = COLORS[<span class="hljs-string">'red'</span>]
     x = WIDTH // <span class="hljs-number">2</span>
     y = HEIGHT // <span class="hljs-number">2</span>
     speed_x = <span class="hljs-number">3</span>
-    speed_y = <span class="hljs-number">3</span></code></pre>
-
-<p>Så må vi lage en en funksjon <code>update()</code> som er en del av <code>Ball</code>. Denne sørger for at ballen beveger seg <code>speed_x</code> piksler i x-retningen, og <code>speed_y</code> i y-retningen.</p>
-<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
+    speed_y = <span class="hljs-number">3</span>
+</code></pre>
+<p>Så må vi lage en en funksjon <code>update()</code> som er en del av <code>Ball</code>. Denne sørger
+for at ballen beveger seg <code>speed_x</code> piksler i x-retningen, og <code>speed_y</code> i
+y-retningen.</p>
+<pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     <span class="hljs-comment"># ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">(self)</span>:</span>
         self.x += self.speed_x
-        self.y += self.speed_y</code></pre>
-
+        self.y += self.speed_y
+</code></pre>
 <p>I tillegg må vi ha en global funksjon <code>update()</code> som kaller <code>ball1.update()</code>:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">()</span>:</span>
-    ball1.update()</code></pre>
-
-<section id="test-programmet-ditt-1" class="level2 flag">
-<h2>Test programmet ditt</h2>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">()</span>:</span>
+    ball1.update()
+</code></pre>
+<section class="flag" id="test-programmet-ditt-2">
+<h2 class="flag" id="test-programmet-ditt-2">Test programmet ditt</h2>
 <p>Du kan nå teste programmet ditt igjen. Ballen skal nå bevege seg, dersom alt er gjort riktig.</p>
-<p>Hva skjer når den kommer til kanten? I neste steg skal vi sørge for at ballen ikke forsvinner ut av vinduet.</p>
+<p>Hva skjer når den kommer til kanten? I neste steg skal vi sørge for at ballen
+ikke forsvinner ut av vinduet.</p>
 </section>
 </section>
-<section id="steg-4-veggkollisjoner" class="level1 activity">
-<h1>Steg 4: Veggkollisjoner</h1>
-<p>Vi ønsker å la ballen sprette tilbake når den treffer en vegg. Her er det et par ting vi må tenke på - hvordan oppdager vi at ballen treffer veggen, og hvordan kan vi endre variablene slik at den spretter vekk fra veggen? Ballens posisjon bestemmes av <code>x</code> og <code>y</code> men den har også <code>radius</code> som vi må ta hensyn til når vi skal oppdage om ballen treffer veggen. Når ballen treffer den øverste eller den nederste veggen ønsker vi at farten reverseres i y-retning, det samme gjelder for farten i x-retning når vi treffer høyre eller venstre vegg.</p>
+<section class="activity" id="steg-4-veggkollisjoner">
+<h1 class="activity" id="steg-4-veggkollisjoner">Steg 4: Veggkollisjoner</h1>
+<p>Vi ønsker å la ballen sprette tilbake når den treffer en vegg. Her er det et
+par ting vi må tenke på - hvordan oppdager vi at ballen treffer veggen, og
+hvordan kan vi endre variablene slik at den spretter vekk fra veggen? Ballens
+posisjon bestemmes av <code>x</code> og <code>y</code> men den har også <code>radius</code> som vi må ta hensyn
+til når vi skal oppdage om ballen treffer veggen. Når ballen treffer den
+øverste eller den nederste veggen ønsker vi at farten reverseres i y-retning,
+det samme gjelder for farten i x-retning når vi treffer høyre eller venstre
+vegg.</p>
 <p>Vi må endre <code>update()</code>-funksjonen i <code>Ball</code>-klassen:</p>
-<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
+<pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     <span class="hljs-comment"># ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">(self)</span>:</span>
@@ -107,18 +136,23 @@ WIDTH = <span class="hljs-number">600</span></code></pre>
 
         <span class="hljs-comment"># sjekker for kollisjon i y-retning</span>
         <span class="hljs-keyword">if</span> self.y + self.radius &gt;= HEIGHT <span class="hljs-keyword">or</span> self.y - self.radius &lt;= <span class="hljs-number">0</span>:
-            self.speed_y = -self.speed_y</code></pre>
-
-<section id="test-programmet-ditt-2" class="level2 flag">
-<h2>Test programmet ditt</h2>
-<p>Kjør programmet ditt, og pass på at ballen spretter tilbake når den treffer en av veggene.</p>
+            self.speed_y = -self.speed_y
+</code></pre>
+<section class="flag" id="test-programmet-ditt-3">
+<h2 class="flag" id="test-programmet-ditt-3">Test programmet ditt</h2>
+<p>Kjør programmet ditt, og pass på at ballen spretter tilbake når den treffer en
+av veggene.</p>
 </section>
 </section>
-<section id="steg-5-styre-farta-til-ballen" class="level1 activity">
-<h1>Steg 5: Styre farta til ballen</h1>
-<p>Vi skal la brukeren styre farta til ballen ved hjelp av piltastene. Når brukeren trykker på ‘Pil opp’ skal ballen gå raskere oppover (evt. mindre fort nedover), det motsatte skal skje om brukeren trykker ‘Pil ned’. Det samme skal skje om brukeren trykker på ‘Pil høyre’ eller ‘Pil venstre’, men da skal fartsendringa skje i x-retning.</p>
+<section class="activity" id="steg-5-styre-farta-til-ballen">
+<h1 class="activity" id="steg-5-styre-farta-til-ballen">Steg 5: Styre farta til ballen</h1>
+<p>Vi skal la brukeren styre farta til ballen ved hjelp av piltastene. Når
+brukeren trykker på 'Pil opp' skal ballen gå raskere oppover (evt. mindre fort
+nedover), det motsatte skal skje om brukeren trykker 'Pil ned'. Det samme skal
+skje om brukeren trykker på 'Pil høyre' eller 'Pil venstre', men da skal
+fartsendringa skje i x-retning.</p>
 <p>For å få til dette skal vi lage en <code>on_key_down()</code>-funksjon i <code>Ball</code>-klassen:</p>
-<pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
+<pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     <span class="hljs-comment"># ...</span>
 
     <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_down</span><span class="hljs-params">(self, key)</span>:</span>
@@ -129,21 +163,27 @@ WIDTH = <span class="hljs-number">600</span></code></pre>
         <span class="hljs-keyword">elif</span> key == keys.UP:
             self.speed_y -= <span class="hljs-number">1</span>
         <span class="hljs-keyword">elif</span> key == keys.DOWN:
-            self.speed_y += <span class="hljs-number">1</span></code></pre>
-
-<p>Legg merke til at funksjonen har et parameter, <code>key</code>, som brukes til å avgjøre hvilken tast brukeren trykket på.</p>
-<p>Vi trenger også en global <code>on_key_down()</code>-funksjon. Denne har også en <code>key</code>-parameter, som sendes videre til <code>ball1.on_key_down()</code>.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_down</span><span class="hljs-params">(key)</span>:</span>
-    ball1.on_key_down(key)</code></pre>
-
-<section id="test-programmet-ditt-3" class="level2 flag">
-<h2>Test programmet ditt</h2>
-<p>Du skal nå ha en ball som spretter mellom vinduskantene, og du skal kunne styre farten ved hjelp av piltastene.</p>
+            self.speed_y += <span class="hljs-number">1</span>
+</code></pre>
+<p>Legg merke til at funksjonen har et parameter, <code>key</code>, som brukes til å avgjøre
+hvilken tast brukeren trykket på.</p>
+<p>Vi trenger også en global <code>on_key_down()</code>-funksjon. Denne har også en
+<code>key</code>-parameter, som sendes videre til <code>ball1.on_key_down()</code>.</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_down</span><span class="hljs-params">(key)</span>:</span>
+    ball1.on_key_down(key)
+</code></pre>
+<section class="flag" id="test-programmet-ditt-4">
+<h2 class="flag" id="test-programmet-ditt-4">Test programmet ditt</h2>
+<p>Du skal nå ha en ball som spretter mellom vinduskantene, og du skal kunne styre
+farten ved hjelp av piltastene.</p>
 </section>
-<section id="utfordring-stopp-ballen" class="level2 challenge">
-<h2>Utfordring: Stopp ballen</h2>
-<p>Vi ønsker å bruke mellomromstasten for å stoppe ballen. Dvs. sette <code>speed_x</code> og <code>speed_y</code> til <code>0</code>. Prøv å endre funksjonen <code>on_key_down(key)</code> i <code>Ball</code>-klassen for å sjekke om brukeren har trykket på mellomromstasten.</p>
-<p><strong>Hint:</strong> <code>key == keys.SPACE</code> vil være sant dersom brukeren trykker på mellomromstasten.</p>
+<section class="challenge" id="utfordring-stopp-ballen">
+<h2 class="challenge" id="utfordring-stopp-ballen">Utfordring: Stopp ballen</h2>
+<p>Vi ønsker å bruke mellomromstasten for å stoppe ballen. Dvs. sette <code>speed_x</code> og
+<code>speed_y</code> til <code>0</code>. Prøv å endre funksjonen <code>on_key_down(key)</code> i <code>Ball</code>-klassen
+for å sjekke om brukeren har trykket på mellomromstasten.</p>
+<p><strong>Hint:</strong> <code>key == keys.SPACE</code> vil være sant dersom brukeren trykker på
+mellomromstasten.</p>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

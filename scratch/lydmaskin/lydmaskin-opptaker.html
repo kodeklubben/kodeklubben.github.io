@@ -6,18 +6,28 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Lydmaskin - Opptaker</h1><div class="lesson-icons"><div class="level"><img title="Level undefined" src="../../assets/img/levelundefined.png"/><span></span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/lydmaskin/lydmaskin-opptaker.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Lydmaskin - Opptaker</h1><div class="lesson-icons"><div class="level"><img title="Level undefined" src="../../assets/img/levelundefined.png"/><span></span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/lydmaskin/lydmaskin-opptaker.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Lag to nye lister (for alle figurer). Kall en av dem <code class="blocklist">instrument</code> og den andre <code class="blocklist">timing</code>.</p></li>
-<li><p>Lag en ny variabel (for alle figurer) som heter <code class="blockdata">opptak</code></p></li>
-<li><p>For hvert av instrumentene (tromme, piano, lyder etc.), må du legge til følgende i <code class="blockevents">når jeg mottar</code> klossen.</p>
-<pre class="blocks"><code>    hvis &lt;(opptak) = (1)&gt;
+<li>
+<p>Lag to nye lister (for alle figurer). Kall en av dem
+<code class="blocklist">instrument</code> og den andre <code class="blocklist">timing</code>.</p>
+</li>
+<li>
+<p>Lag en ny variabel (for alle figurer) som heter <code class="blockdata">opptak</code></p>
+</li>
+<li>
+<p>For hvert av instrumentene (tromme, piano, lyder etc.), må du legge
+til følgende i <code class="blockevents">når jeg mottar</code> klossen.</p>
+<pre><code class="blocks">    hvis &lt;(opptak) = (1)&gt;
         legg (tid) til [timing v]
         legg (katt) til [instrument v]
-    slutt</code></pre>
-<p>Endre ordet <code>katt</code> i <code class="blocklist">legg katt til instrument</code> slik at det stemmer med navnet til meldingen som brukes for å spille denne lyden.</p>
-<pre class="blocks"><code>    når jeg mottar [drum v]
+    slutt
+</code></pre>
+<p>Endre ordet <code>katt</code> i <code class="blocklist">legg katt til instrument</code> slik
+at det stemmer med navnet til meldingen som brukes for å spille
+denne lyden.</p>
+<pre><code class="blocks">    når jeg mottar [drum v]
     trommeslag (48 v) som varer (0.2) takter
     hvis &lt;(opptak) = (1)&gt;
         legg (tid) til [timing v]
@@ -25,28 +35,40 @@ function relative(url) {
     slutt
     sett størrelse til (110) %
     vent (0.1) sekunder
-    sett størrelse til (100) %</code></pre></li>
-<li><p>Tegn en ny figur og gi den en rød sirkeldrakt. Gi denne figuren navnet <code>Opptak</code>.</p>
-<figure>
-<img src="record-costume.png" />
-</figure></li>
-<li><p>Lag et skript som setter <code class="blockdata">opptak</code> til 1 og sletter alle <code class="blocklist">instrument</code> og <code class="blocklist">timing</code> når man trykker på det.</p></li>
+    sett størrelse til (100) %
+</code></pre>
+</li>
+<li>
+<p>Tegn en ny figur og gi den en rød sirkeldrakt. Gi denne figuren
+navnet <code>Opptak</code>.</p>
+<p><figure><img src="record-costume.png" alt=""></figure></p>
+</li>
+<li>
+<p>Lag et skript som setter <code class="blockdata">opptak</code> til 1 og sletter alle
+<code class="blocklist">instrument</code> og <code class="blocklist">timing</code> når man trykker på
+det.</p>
+</li>
 </ul>
 </section>
-<section id="test-prosjektet" class="level2 flag">
-<h2>Test prosjektet</h2>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p>Trykk på opptaksknappen. Hva skjer når du spiller på instrumentene?</p>
 </section>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Lag en ny figur og lag en drakt som ser ut som en grønn pil. Kall denne <code>Spill av</code>.</p>
-<figure>
-<img src="play-costume.png" />
-</figure></li>
-<li><p>Lag en ny variabel som du kaller <code class="blockdata">index</code>.</p></li>
-<li><p>Nå må vi få avspillingen til å gjøre noe. Legg dette skriptet til <code>Spill av</code>.</p>
-<pre class="blocks"><code>    når denne figuren klikkes
+<li>
+<p>Lag en ny figur og lag en drakt som ser ut som en grønn pil.  Kall
+denne <code>Spill av</code>.</p>
+<p><figure><img src="play-costume.png" alt=""></figure></p>
+</li>
+<li>
+<p>Lag en ny variabel som du kaller <code class="blockdata">index</code>.</p>
+</li>
+<li>
+<p>Nå må vi få avspillingen til å gjøre noe. Legg dette skriptet til
+<code>Spill av</code>.</p>
+<pre><code class="blocks">    når denne figuren klikkes
     sett [recording v] til (0)
     sett [index v] til (1)
     nullstill klokka
@@ -58,23 +80,35 @@ function relative(url) {
                 stopp [dette skriptet] :: control
             slutt
         slutt
-    slutt</code></pre></li>
+    slutt
+</code></pre>
+</li>
 </ul>
 </section>
-<section id="test-prosjektet-1" class="level2 flag">
-<h2>Test prosjektet</h2>
+<section class="flag" id="test-prosjektet-2">
+<h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <ul>
-<li><p>Trykk på den grønne play knappen. Hva skjer?</p></li>
-<li><p>Trykk på den røde knappen og spill på noen intrumenter. Etter at du er ferdig, trykk på den grønne play knappen igjen. Hva skjer?</p></li>
-<li><p>Spill på flere instrumenter uten å trykke på record. Trykk så på den grønne play knappen igjen. Hva skjer?</p></li>
+<li>
+<p>Trykk på den grønne play knappen. Hva skjer?</p>
+</li>
+<li>
+<p>Trykk på den røde knappen og spill på noen intrumenter. Etter at du
+er ferdig, trykk på den grønne play knappen igjen. Hva skjer?</p>
+</li>
+<li>
+<p>Spill på flere instrumenter uten å trykke på record. Trykk så på den
+grønne play knappen igjen. Hva skjer?</p>
+</li>
 </ul>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
 </div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
 </div><div class="translator"><p><strong>Oversetter:</strong></p><p>Lars-Erik Wollan</p>
 </div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
   scratchblocks2.load_language(scratchblocks2._translations['nb']);
-  scratchblocks2.parse("pre.blocks");
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
 });</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

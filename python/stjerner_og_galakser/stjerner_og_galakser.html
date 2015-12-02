@@ -6,17 +6,18 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Stjerner og galakser</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/stjerner_og_galakser/stjerner_og_galakser.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Stjerner og galakser</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/stjerner_og_galakser/stjerner_og_galakser.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>I denne oppgaven skal vi bruke funksjoner for å gjøre programmene vi skriver enklere og mer oversiktlige.</p>
 </section>
-<section id="steg-1-tegne-stjerner" class="level1 activity">
-<h1>Steg 1: Tegne stjerner</h1>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-1-tegne-stjerner">
+<h1 class="activity" id="steg-1-tegne-stjerner">Steg 1: Tegne stjerner</h1>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Vi begynner med å bruke det du allerede kan om tegning med skilpadden. Kjør dette programmet:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Vi begynner med å bruke det du allerede kan om tegning med skilpadden. Kjør dette programmet:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># Denne koden tegner en liten grå stjerne på en mørkeblå bakgrunn</span>
 color(<span class="hljs-string">"WhiteSmoke"</span>)
@@ -34,14 +35,19 @@ end_fill()
 penup()
 
 forward(<span class="hljs-number">100</span>)
-done()</code></pre>
-
-<figure>
-<img src="sky-star.png" title="Sky med en stjerne og skilpadde" />
-</figure></li>
-<li><p>Kan du alle komandoene? <code>bgcolor(color)</code> setter fargen på bakgrunnen. Sørg for å forstå alle før du går videre.</p></li>
-<li><p>Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code>drawStar()</code> og kaller denne tre ganger for å tegne tre stjerner.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+done()
+</code></pre>
+<p><figure><img src="sky-star.png" alt="" title="Sky med en stjerne og skilpadde"></figure></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Kan du alle komandoene? <code>bgcolor(color)</code> setter fargen på bakgrunnen.
+Sørg for å forstå alle før du går videre.</p>
+</li>
+<li>
+<p>Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code>drawStar()</code> og kaller denne tre ganger for å tegne tre stjerner.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne stjerner</span>
 <span class="hljs-comment"># 'def' er kort for 'define' på engelsk</span>
@@ -67,25 +73,25 @@ forward(<span class="hljs-number">150</span>)
 drawStar()
 
 hideturtle()
-done()</code></pre>
-
-<figure>
-<img src="sky-function.png" title="Sky med tre stjerner" />
-</figure>
+done()
+</code></pre>
+<p><figure><img src="sky-function.png" alt="" title="Sky med tre stjerner"></figure></p>
 <p><code>hideturtle()</code> gjemmer skilpadden.</p>
-<p>Du har sett og brukt funksjoner før. For eksempel, <code>penup()</code>og <code>pendown()</code> er funksjoner. Din nye <code>drawStar()</code>funksjon virker på samme måte. Nå som du har en funksjon for å tegne en stjerne trenger du ikke tenke på hvilke komandoer du må skrive for å tegne dem, du kan bare kalle funksjonen og den vil tegne stjernen for deg!</p></li>
+<p>Du har sett og brukt funksjoner før. For eksempel, <code>penup()</code>og <code>pendown()</code> er funksjoner. Din nye <code>drawStar()</code>funksjon virker på samme måte. Nå som du har en funksjon for å tegne en stjerne trenger du ikke tenke på hvilke komandoer du må skrive for å tegne dem, du kan bare kalle funksjonen og den vil tegne stjernen for deg!</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-2-sende-verdier-inn-i-funksjoner" class="level1 activity">
-<h1>Steg 2: Sende verdier inn i funksjoner</h1>
+<section class="activity" id="steg-2-sende-verdier-inn-i-funksjoner">
+<h1 class="activity" id="steg-2-sende-verdier-inn-i-funksjoner">Steg 2: Sende verdier inn i funksjoner</h1>
 <p>Funksjonen du lagde i forrige steg tegner en like stor stjerne hver gang. Hva om du vil tegne stjerner med forskjellige størrelser? En måte du kan gjøre det på er å lage forskjellige funksjoner som <code>drawBigStar()</code> , <code>drawMediumStar()</code> eller <code>drawSmallStar()</code></p>
 <p>En bedre måte å gjøre det på er å sende inn verdier til funksjonen <code>drawStar()</code> for å fortelle hvilken størrelse du vil ha. Du har allerede brukt flere funksjoner som mottar verdier på denne måten. For eksempel: <code>forward(100)</code> Her sender du 100 inn funksjonen og det gjør at skilpadden går 100 piksler frem.</p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Her er et program med en “stjernetegne-funksjon” som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funksjonen.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Her er et program med en &quot;stjernetegne-funksjon&quot; som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funksjonen.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">(starSize)</span>:</span>
@@ -110,17 +116,17 @@ forward(<span class="hljs-number">150</span>)
 drawStar(<span class="hljs-number">70</span>)
 
 hideturtle()
-done()</code></pre>
-
-<figure>
-<img src="sky-function.png" title="Sky med tre stjerner" />
-</figure></li>
-<li><p>Når programmet ditt kjører <code>drawStar(50)</code> er altså verdien til starSize lik 50. Dette gjør at kommandoen <code>forward(starSize)</code> inne i løkken tegner en linje som er 50 piksler lang.</p>
-<figure>
-<img src="sky-parameter-passing.png" />
-</figure></li>
-<li><p>Det er mulig å sende inn flere verdier inn i funksjonen. For eksempel kan vi sende inn hvilken farge vi vil at stjernen skal ha.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+done()
+</code></pre>
+<p><figure><img src="sky-function.png" alt="" title="Sky med tre stjerner"></figure></p>
+</li>
+<li>
+<p>Når programmet ditt kjører <code>drawStar(50)</code> er altså verdien til starSize lik 50. Dette gjør at kommandoen <code>forward(starSize)</code> inne i løkken tegner en linje som er 50 piksler lang.</p>
+<p><figure><img src="sky-parameter-passing.png" alt=""></figure></p>
+</li>
+<li>
+<p>Det er mulig å sende inn flere verdier inn i funksjonen. For eksempel kan vi sende inn hvilken farge vi vil at stjernen skal ha.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">(starSize, starColour)</span>:</span>
@@ -145,27 +151,27 @@ forward(<span class="hljs-number">150</span>)
 drawStar(<span class="hljs-number">70</span>, <span class="hljs-string">"Green"</span>)
 
 hideturtle()
-done()</code></pre>
-
+done()
+</code></pre>
 <p>Ser du hvilke endringer som er gjort i koden?</p>
-<figure>
-<img src="sky-colours.png" title="Tre stjerner med forskjellige farger" />
-</figure></li>
+<p><figure><img src="sky-colours.png" alt="" title="Tre stjerner med forskjellige farger"></figure></p>
+</li>
 </ul>
 </section>
-<section id="utfordring" class="level2 challenge">
-<h2>Utfordring</h2>
+<section class="challenge" id="utfordring">
+<h2 class="challenge" id="utfordring">Utfordring</h2>
 <p>Lag en funksjon for å tegne planeter og kall den <code>drawPlanet()</code> Send verdier inn i funksjonen slik at du kan bestemme hvor stor og hvilken farge den skal ha.</p>
 </section>
 </section>
-<section id="steg-3-tilfeldige-stjerner" class="level1 activity">
-<h1>Steg 3: Tilfeldige stjerner</h1>
+<section class="activity" id="steg-3-tilfeldige-stjerner">
+<h1 class="activity" id="steg-3-tilfeldige-stjerner">Steg 3: Tilfeldige stjerner</h1>
 <p>Vi skal nå bruke <code>drawStar()</code> til å tegne stjerner på tilfeldige steder rundt på skjermen.</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tegner en hvit stjerne der.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tegner en hvit stjerne der.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drawStar</span><span class="hljs-params">(starSize, starColour)</span>:</span>
@@ -189,13 +195,17 @@ pendown()
 drawStar(<span class="hljs-number">50</span>, <span class="hljs-string">"White"</span>)
 
 hideturtle()
-done()</code></pre></li>
-<li><p>Vi bruker funksjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
-<figure>
-<img src="sky-xy.png" />
-</figure></li>
-<li><p>Vi skal nå flytte til en tilfeldig posisjon. Vi lager en ny funksjon som heter <code>moveToRandomLocation()</code>, denne flytter altså skilpadden til en tilfeldig posisjon.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+done()
+
+</code></pre>
+</li>
+<li>
+<p>Vi bruker funksjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
+<p><figure><img src="sky-xy.png" alt=""></figure></p>
+</li>
+<li>
+<p>Vi skal nå flytte til en tilfeldig posisjon. Vi lager en ny funksjon som heter <code>moveToRandomLocation()</code>, denne flytter altså skilpadden til en tilfeldig posisjon.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># Flytter skilpadden til tilfeldig posisjon</span>
@@ -224,24 +234,25 @@ bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
     drawStar(randint(<span class="hljs-number">5</span>, <span class="hljs-number">25</span>) , <span class="hljs-string">"White"</span>)
 
 hideturtle()
-done()</code></pre>
-
-<figure>
-<img src="sky-random.png" title="Stjernehimmel" />
-</figure>
-<p>Kjør koden flere ganger. Ser du at den tegner stjernene forskjellige plasser hver gang? Prøv å tegne flere stjerner i flere forskjellige størrelser og farger.</p>
-<p><code>from random import *</code> gjør at vi får tilgang på funksjonen <code>randint(a,b)</code> . Hvis vi skriver <code>randint(5, 25)</code> gir denne funksjonen oss et tilfeldig tall som er større eller lik 5 og mindre enn eller lik 25.</p></li>
+done()
+</code></pre>
+<p><figure><img src="sky-random.png" alt="" title="Stjernehimmel"></figure></p>
+<p>Kjør koden flere ganger. Ser du at den tegner stjernene forskjellige plasser hver gang?
+Prøv å tegne flere stjerner i flere forskjellige størrelser og farger.</p>
+<p><code>from random import *</code> gjør at vi får tilgang på funksjonen <code>randint(a,b)</code> . Hvis vi skriver <code>randint(5, 25)</code> gir denne funksjonen oss et tilfeldig tall som er større eller lik 5 og mindre enn eller lik 25.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-4-funksjoner-inne-i-funksjoner" class="level1 activity">
-<h1>Steg 4: Funksjoner inne i funksjoner</h1>
+<section class="activity" id="steg-4-funksjoner-inne-i-funksjoner">
+<h1 class="activity" id="steg-4-funksjoner-inne-i-funksjoner">Steg 4: Funksjoner inne i funksjoner</h1>
 <p>Du kan skrive funksjoner som kjører andre funksjoner. Dette gjør det lettere å ha oversikt når man lager store programmer.</p>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
-<li><p>Det ville vært kult hvis vi kunne lage en galakse med små flerfargede stjerner i tegningen vår. Vi lager defor en funksjon som heter <code>drawGalaxy()</code> som bruker funksjonen <code>drawStar()</code> som vi laget tidligere.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<li>
+<p>Det ville vært kult hvis vi kunne lage en galakse med små flerfargede stjerner i tegningen vår. Vi lager defor en funksjon som heter <code>drawGalaxy()</code> som bruker funksjonen <code>drawStar()</code> som vi laget tidligere.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># a function for moving the turtle to a random location</span>
@@ -289,14 +300,14 @@ bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
     drawGalaxy(<span class="hljs-number">40</span>)
 
 hideturtle()
-done()</code></pre>
-
-<figure>
-<img src="sky-galaxies.png" title="Stjernehimmel med galakser" />
-</figure>
-<p>Ved å kjøre <code>drawGalaxy(40)</code> 3 ganger for vi 3 nye galakser som hver inneholder 40 stjerner. For hver galakse kjøres <code>drawStar()</code> 40 ganger, mellom hver gang flyttes posisjonen til den neste stjernen litt. Ser du hvor i koden dette skjer?</p></li>
-<li><p>Du kan også tegne stjernebilder satt sammen av stjerner. Dette er ikke så vanskelig siden vi allerede har mange av funksjonene vi trenger.</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+done()
+</code></pre>
+<p><figure><img src="sky-galaxies.png" alt="" title="Stjernehimmel med galakser"></figure></p>
+<p>Ved å kjøre <code>drawGalaxy(40)</code> 3 ganger for vi 3 nye galakser som hver inneholder 40 stjerner. For hver galakse kjøres <code>drawStar()</code> 40 ganger, mellom hver gang flyttes posisjonen til den neste stjernen litt. Ser du hvor i koden dette skjer?</p>
+</li>
+<li>
+<p>Du kan også tegne stjernebilder satt sammen av stjerner. Dette er ikke så vanskelig siden vi allerede har mange av funksjonene vi trenger.</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># a function for moving the turtle to a random location</span>
@@ -361,26 +372,21 @@ bgcolor(<span class="hljs-string">"MidnightBlue"</span>)
     drawConstellation(randint(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>))
 
 hideturtle()
-done()</code></pre>
-
-<figure>
-<img src="sky-constellations.png" title="Stjernehimmel med stjernekonstellasjoner" />
-</figure></li>
+done()
+</code></pre>
+<p><figure><img src="sky-constellations.png" alt="" title="Stjernehimmel med stjernekonstellasjoner"></figure></p>
+</li>
 </ul>
 </section>
-<section id="utfordring-1" class="level2 challenge">
-<h2>Utfordring</h2>
+<section class="challenge" id="utfordring-2">
+<h2 class="challenge" id="utfordring-2">Utfordring</h2>
 <p>Programmér skilpadden til å tegne ditt eget bilde. Bruk funksjoner der du kan, spesielt til ting du skal gjøre flere ganger. Prøv også å bruke funksjoner som du kan sende inn verdier i.</p>
 </section>
 </section>
-<section id="eksempler" class="level1 activity">
-<h1>Eksempler</h1>
-<figure>
-<img src="sky-flowers.png" title="Blomstereng" />
-</figure>
-<figure>
-<img src="sky-birds.png" title="Himmel med fugler og skyer" />
-</figure>
+<section class="activity" id="eksempler">
+<h1 class="activity" id="eksempler">Eksempler</h1>
+<p><figure><img src="sky-flowers.png" alt="" title="Blomstereng"></figure></p>
+<p><figure><img src="sky-birds.png" alt="" title="Himmel med fugler og skyer"></figure></p>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
 </div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>

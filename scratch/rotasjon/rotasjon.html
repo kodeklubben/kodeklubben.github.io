@@ -6,46 +6,61 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Rotasjon rundt egen akse</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/rotasjon/rotasjon.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="læringsmål" class="level1 tips">
-<h1>Læringsmål</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Rotasjon rundt egen akse</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/rotasjon/rotasjon.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="tips" id="laeringsmal">
+<h1 class="tips" id="laeringsmal">Læringsmål</h1>
 <ul>
 <li>beskrive og gjennomføre spegling, rotasjon og parallellforskyving</li>
 <li>beskrive plassering og flytting i rutenett, på kart og i koordinatsystem, med og utan digitale hjelpemiddel, og bruke koordinatar til å berekne avstandar parallelt med aksane i eit koordinatsystem</li>
 </ul>
 </section>
-<section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
+<section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>I denne oppgaven skal vi importere en geometrisk figur og deretter <code class="blockmotion">rotere</code> den.</p>
-<figure>
-<img src="Geometri.png" />
-</figure>
+<p><figure><img src="Geometri.png" alt=""></figure></p>
 </section>
-<section id="steg-1-vi-roterer-en-likebeint-trekant" class="level1 activity">
-<h1>Steg 1: Vi roterer en likebeint trekant</h1>
-<p><em>For å gjøre det enkelt å komme i gang, henter vi inn en ferdig figur fra biblioteket til Scratch. Denne figuren er tilnærmet lik en likebeint trekant</em></p>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-1-vi-roterer-en-likebeint-trekant">
+<h1 class="activity" id="steg-1-vi-roterer-en-likebeint-trekant">Steg 1: Vi roterer en likebeint trekant</h1>
+<p><em>For å gjøre det enkelt å komme i gang, henter vi inn en ferdig figur fra biblioteket til Scratch.
+Denne figuren er tilnærmet lik en likebeint trekant</em></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li>Start et nytt prosjekt.</li>
-<li>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</li>
-<li>Legg til en ny figur. Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket" />-knappen og velg trollmannshatten. Vi har brukt <code>Ting/Wizard Hat</code>-figuren.</li>
-<li>Gi den nye figuren navnet <code>Hattulf</code> ved å klikke på <code>i</code>.</li>
-<li><p>Før vi begynner med selve oppgaven, skal vi legge inn en liten hjelpefunksjon om noe uventet skulle skje:</p>
-<pre class="blocks"><code>når [n v] trykkes
+<li>
+<p>Start et nytt prosjekt.</p>
+</li>
+<li>
+<p>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</p>
+</li>
+<li>
+<p>Legg til en ny figur. Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen og velg trollmannshatten. Vi har brukt <code>Ting/Wizard Hat</code>-figuren.</p>
+</li>
+<li>
+<p>Gi den nye figuren navnet <code>Hattulf</code> ved å klikke på <code>i</code>.</p>
+</li>
+<li>
+<p>Før vi begynner med selve oppgaven, skal vi legge inn en liten hjelpefunksjon om noe uventet skulle skje:</p>
+<pre><code class="blocks">når [n v] trykkes
 vis
 pek i retning [90 v]
-gå til x: (0) y: (0)</code></pre></li>
-<li><p>Skulle noe uventet skje nå, trenger du bare å trykke på tasten N på tastaturet, så vil Hattulf gå tilbake til utgangspunktet, slik at du kan prøve på nytt.</p></li>
+gå til x: (0) y: (0)
+</code></pre>
+</li>
+<li>
+<p>Skulle noe uventet skje nå, trenger du bare å trykke på tasten N på tastaturet, så vil Hattulf gå tilbake til utgangspunktet, slik at du kan prøve på nytt.</p>
+</li>
 </ul>
 <p>Vi skal nå gi Scratch beskjed om å <code class="blockmotion">rotere</code> hatten 90 grader.</p>
 <ul>
-<li><p>Legg til følgende skript på <code>Hattulf</code>-figuren din.</p>
-<pre class="blocks"><code>    når grønt flagg klikkes
-    vend høyre (90) grader</code></pre></li>
+<li>
+<p>Legg til følgende skript på <code>Hattulf</code>-figuren din.</p>
+<pre><code class="blocks">    når grønt flagg klikkes
+	vend høyre (90) grader
+</code></pre>
+</li>
 </ul>
 </section>
-<section id="test-prosjektet" class="level2 flag">
-<h2>Test prosjektet</h2>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
 <ul>
 <li>Hva skjer når du trykker på det grønne flagget?</li>
@@ -54,17 +69,20 @@ gå til x: (0) y: (0)</code></pre></li>
 <li>Hvor mange ganger må du be hatten om å rotere før den er tilbake til utgangspunktet?</li>
 </ul>
 </section>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <p>Rotasjon er jo gøy! Men at ting roterer med 90 grader av gangen er jo litt kjedelig, og litt unaturlig.</p>
 <ul>
-<li><p>Halver antall grader hatten skal rotere per gang:</p>
-<pre class="blocks"><code>    når grønt flagg klikkes
-    vend høyre (45) grader</code></pre></li>
+<li>
+<p>Halver antall grader hatten skal rotere per gang:</p>
+<pre><code class="blocks">    når grønt flagg klikkes
+	vend høyre (45) grader
+</code></pre>
+</li>
 </ul>
 </section>
-<section id="test-prosjektet-1" class="level2 flag">
-<h2>Test prosjektet</h2>
+<section class="flag" id="test-prosjektet-2">
+<h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
 <ul>
 <li>Hvor mange ganger må du trykke på hatten for at den skal rotere hele veien rundt nå?</li>
@@ -73,47 +91,58 @@ gå til x: (0) y: (0)</code></pre></li>
 <p>Du oppdager kanskje at det begynner å bli veldig mange klikk etterhvert?</p>
 </section>
 </section>
-<section id="steg-2-a-little-more-action-please" class="level1 activity">
-<h1>Steg 2: A little more action, please!</h1>
+<section class="activity" id="steg-2-a-little-more-action-please">
+<h1 class="activity" id="steg-2-a-little-more-action-please">Steg 2: A little more action, please!</h1>
 <p>Heldigvis kan vi ved hjelp av litt programmeringsmagi få datamaskinen til å gjøre jobben for oss!</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Vi legger til en <code class="blockcontrol">styring</code>-kloss som ber hatten om å rotere et bestemt antall ganger:</p>
-<pre class="blocks"><code>    når grønt flagg klikkes
-    gjenta (8) ganger
-    vend høyre (45) grader</code></pre></li>
-<li><p>Tips: For hver gang du halverer vinkelen, må du doble antall repetisjoner for at hatten skal snurre like langt.</p></li>
+<li>
+<p>Vi legger til en <code class="blockcontrol">styring</code>-kloss som ber hatten om å rotere et bestemt antall ganger:</p>
+<pre><code class="blocks">    når grønt flagg klikkes
+	gjenta (8) ganger
+	vend høyre (45) grader
+</code></pre>
+</li>
+<li>
+<p>Tips: For hver gang du halverer vinkelen, må du doble antall repetisjoner for at hatten skal snurre like langt.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-3-the-final-countdown" class="level1 activity">
-<h1>Steg 3: The final countdown</h1>
+<section class="activity" id="steg-3-the-final-countdown">
+<h1 class="activity" id="steg-3-the-final-countdown">Steg 3: The final countdown</h1>
 <ul>
-<li><p>Du vet kanskje at vi vanligvis omtaler en sirkel som 360 grader. Hvis du fortsetter å halvere antall grader forbi 1,40625, vil du oppdage at gradene blir mindre enn 1, og vi må gjenta roteringen 512 ganger. Selv om dette selvfølgelig er mulig, og absolutt nødvendig i enkelte sammenhenger, er det ikke nøvendig for oss nå. Vi tar derfor en snarvei her, og røper at Hattulf skal rotere 1 grad 360 ganger.</p>
-<pre class="blocks"><code>når grønt flagg klikkes
+<li>
+<p>Du vet kanskje at vi vanligvis omtaler en sirkel som 360 grader. Hvis du fortsetter å halvere antall grader forbi 1,40625, vil du oppdage at gradene blir mindre enn 1, og vi må gjenta roteringen 512 ganger. Selv om dette selvfølgelig er mulig, og absolutt nødvendig i enkelte sammenhenger, er det ikke nøvendig for oss nå.
+Vi tar derfor en snarvei her, og røper at Hattulf skal rotere 1 grad 360 ganger.</p>
+<pre><code class="blocks">når grønt flagg klikkes
 gjenta (360) ganger
-vend høyre (1) grader</code></pre></li>
+vend høyre (1) grader
+</code></pre>
+</li>
 </ul>
-<section id="test-prosjektet-2" class="level2 flag">
-<h2>Test prosjektet</h2>
+<section class="flag" id="test-prosjektet-3">
+<h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønnet flagget.</strong></p>
 <ul>
 <li>Roterer hatten hele veien rundt seg selv når du trykker på grønt flagg?</li>
 <li>Ved å sette antall grader du roterer pr gang til 1, hvor mange ganger må du rotere <code>Hattulf</code> for at han skal gjøre to fulle roteringer? Hva med tre og en halv rotasjon? Ser disse tallene kjent ut?</li>
 </ul>
 </section>
-<section id="avslutning" class="level2">
-<h2>Avslutning</h2>
+<section>
+<h2 id="avslutning">Avslutning</h2>
 <ul>
-<li>Lagre prosjektet ved å gi det et navn, for eksempel “Geometri 1”</li>
+<li>Lagre prosjektet ved å gi det et navn, for eksempel &quot;Geometri 1&quot;</li>
 </ul>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Carl A. Myrland</p>
 </div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
   scratchblocks2.load_language(scratchblocks2._translations['nb']);
-  scratchblocks2.parse("pre.blocks");
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
 });</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

@@ -6,18 +6,26 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Tre på rad mot datamaskinen</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/tre_pa_rad_mot_datamaskinen/tre_pa_rad_mot_datamaskinen.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
-<p>I dag skal vi prøve å skrive kode slik at datamaskinen kan spille tre på rad mot oss. Datamaskinen vil ikke spille så bra i begynnelsen, men etterhvert som den lærer noen triks vil den kanskje klare å vinne mot deg!</p>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Tre på rad mot datamaskinen</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/tre_pa_rad_mot_datamaskinen/tre_pa_rad_mot_datamaskinen.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I dag skal vi prøve å skrive kode slik at datamaskinen kan spille tre
+på rad mot oss. Datamaskinen vil ikke spille så bra i begynnelsen, men
+etterhvert som den lærer noen triks vil den kanskje klare å vinne mot
+deg!</p>
 </section>
-<section id="steg-1-vi-fortsetter-fra-forrige-gang" class="level1 activity">
-<h1>Steg 1: Vi fortsetter fra forrige gang</h1>
-<p>I leksjon 6 skrev vi et tre-på-rad spill for to spillere. Vi brukte <em>Tk lerretet</em> fra <code>tkinter</code>-biblioteket for å tegne på skjermen. La oss se på hva vi allerede har før vi begynner å skrive ny kode.</p>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-1-vi-fortsetter-fra-forrige-gang">
+<h1 class="activity" id="steg-1-vi-fortsetter-fra-forrige-gang">Steg 1: Vi fortsetter fra forrige gang</h1>
+<p>I leksjon 6 skrev vi et tre-på-rad spill for to spillere. Vi brukte
+<em>Tk lerretet</em> fra <code>tkinter</code>-biblioteket for å tegne på skjermen. La
+oss se på hva vi allerede har før vi begynner å skrive ny kode.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Åpne IDLE. Åpne filen fra forrige leksjon og lagre den med et nytt navn. Eller om du ikke kan finne den filen kan du kopiere inn følgende:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
+<li>
+<p>Åpne IDLE. Åpne filen fra forrige leksjon og lagre den med et nytt
+navn. Eller om du ikke kan finne den filen kan du kopiere inn
+følgende:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
 
 main = Tk()
 
@@ -87,12 +95,16 @@ grid = [
 
 c.bind(<span class="hljs-string">"&lt;Button-1&gt;"</span>, click)
 
-mainloop()</code></pre>
+mainloop()
+</code></pre>
 </li>
-<li><p>Lagre, og kjør programmet, slik at du er sikker på at det virker!</p>
-<p>Du skal kunne klikke i rutene for å plassere sirkler og kryss inntil noen får tre på rad.</p></li>
-<li><p>Før vi begynner med dagens kode vil vi gjøre en liten opprydning i koden for at vi enklere skal kunne lese hva som skjer i prosedyren <code>click</code>. Vi flytter koden som tegner sirkler og kryss til en egen prosedyre. Bytt prosedyren <code>click</code> ut med disse to prosedyrene:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click</span><span class="hljs-params">(event)</span>:</span>
+<li>
+<p>Lagre, og kjør programmet, slik at du er sikker på at det virker!</p>
+<p>Du skal kunne klikke i rutene for å plassere sirkler og kryss inntil noen får tre på rad.</p>
+</li>
+<li>
+<p>Før vi begynner med dagens kode vil vi gjøre en liten opprydning i koden for at vi enklere skal kunne lese hva som skjer i prosedyren <code>click</code>. Vi flytter koden som tegner sirkler og kryss til en egen prosedyre. Bytt prosedyren <code>click</code> ut med disse to prosedyrene:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click</span><span class="hljs-params">(event)</span>:</span>
     shape = choose_shape()
     across = int(c.canvasx(event.x) / <span class="hljs-number">200</span>)
     down = int(c.canvasy(event.y) / <span class="hljs-number">200</span>)
@@ -115,35 +127,42 @@ mainloop()</code></pre>
         c.create_line(across * <span class="hljs-number">200</span>, down * <span class="hljs-number">200</span>,
             (across+<span class="hljs-number">1</span>) * <span class="hljs-number">200</span>, (down+<span class="hljs-number">1</span>) * <span class="hljs-number">200</span>)
         c.create_line(across * <span class="hljs-number">200</span>, (down+<span class="hljs-number">1</span>) * <span class="hljs-number">200</span>,
-            (across+<span class="hljs-number">1</span>) * <span class="hljs-number">200</span>, down * <span class="hljs-number">200</span>)</code></pre>
-<p>Kjør koden og test at den fortsatt fungerer på samme måte som tidligere. Dette er et eksempel på noe som kalles refaktorering. Vi har endret på selve koden, men ikke endret hvordan programmet fungerer.</p></li>
+            (across+<span class="hljs-number">1</span>) * <span class="hljs-number">200</span>, down * <span class="hljs-number">200</span>)
+</code></pre>
+<p>Kjør koden og test at den fortsatt fungerer på samme måte som tidligere. Dette er et eksempel på noe som kalles refaktorering. Vi har endret på selve koden, men ikke endret hvordan programmet fungerer.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-2-spill-tilfeldig" class="level1 activity">
-<h1>Steg 2: Spill tilfeldig</h1>
+<section class="activity" id="steg-2-spill-tilfeldig">
+<h1 class="activity" id="steg-2-spill-tilfeldig">Steg 2: Spill tilfeldig</h1>
 <p>Før vi kan lære datamaskinen hvordan den gjør gode trekk vil vi lære den hvordan den gjør trekk i det hele tatt. Vi begynner med å la datamaskinen finne en tilfeldig ledig rute, og deretter spille der.</p>
 <p>Husk at vi har en variabel som heter <code>grid</code> som kan fortelle oss hvordan brettet ser ut. Det er en liste som starter som <code>[&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, ... ]</code>, hvor vi putter inn <code>&quot;X&quot;</code> og <code>&quot;O&quot;</code> etterhvert som vi spiller. Vi begynner med å finne ledige ruter i denne listen for deretter å spille en slik rute.</p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Vi vil først lage en ny prosedyre, <code>free_squares</code>, som kan finne ledige ruter. Legg til denne koden nedenfor prosedyren <code>winner</code>, men over linjen <code>c.bind(...)</code>:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">free_squares</span><span class="hljs-params">()</span>:</span>
+<li>
+<p>Vi vil først lage en ny prosedyre, <code>free_squares</code>, som kan finne ledige ruter. Legg til denne koden nedenfor prosedyren <code>winner</code>, men over linjen <code>c.bind(...)</code>:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">free_squares</span><span class="hljs-params">()</span>:</span>
     output = []
     <span class="hljs-keyword">for</span> position, square <span class="hljs-keyword">in</span> enumerate(grid):
         <span class="hljs-keyword">if</span> square != <span class="hljs-string">"X"</span> <span class="hljs-keyword">and</span> square != <span class="hljs-string">"O"</span>:
             output.append(position)
-    <span class="hljs-keyword">return</span> output</code></pre>
-
+    <span class="hljs-keyword">return</span> output
+</code></pre>
 <p>Denne prosedyren lager en tom liste. Deretter går den gjennom hele rutenettet og sjekker hver rute om den er tom.</p>
-<p>Kommandoen <code>enumerate</code> kan fortelle oss posisjonen til hvert element i <code>grid</code>-listen. For eksempel vil <code>enumerate</code> gjøre om en liste <code>['A','B','C']</code> til parene <code>(0, 'A'), (1,'B'), (2, 'C')</code> slik at vi ikke trenger å telle elementene selv.</p></li>
-<li><p>På toppen av filen vil vi importere <code>random</code>-biblioteket, som vi vil bruke for å tilfeldig velge et trekk</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
-<span class="hljs-keyword">import</span> random</code></pre>
-
-<p>Du husker kanskje at vi brukte <code>random.choice</code> i en tidligere leksjon om Hangman.</p></li>
-<li><p>Nå skriver vi en prosedyre <code>play_move()</code> som kan spille i en tilfeldig tom rute. Legg til denne prosedyren etter <code>free_squares</code> men før linjnen <code>c.bind(...)</code></p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">play_move</span><span class="hljs-params">()</span>:</span>
+<p>Kommandoen <code>enumerate</code> kan fortelle oss posisjonen til hvert element i <code>grid</code>-listen. For eksempel vil <code>enumerate</code> gjøre om en liste <code>['A','B','C']</code> til parene <code>(0, 'A'), (1,'B'), (2, 'C')</code> slik at vi ikke trenger å telle elementene selv.</p>
+</li>
+<li>
+<p>På toppen av filen vil vi importere <code>random</code>-biblioteket, som vi vil bruke for å tilfeldig velge et trekk</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">import</span> random
+</code></pre>
+<p>Du husker kanskje at vi brukte <code>random.choice</code> i en tidligere leksjon om Hangman.</p>
+</li>
+<li>
+<p>Nå skriver vi en prosedyre <code>play_move()</code> som kan spille i en tilfeldig tom rute. Legg til denne prosedyren etter <code>free_squares</code> men før linjnen <code>c.bind(...)</code></p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">play_move</span><span class="hljs-params">()</span>:</span>
     moves = free_squares()
     square = random.choice(moves)
 
@@ -151,26 +170,30 @@ mainloop()</code></pre>
     down = square // <span class="hljs-number">3</span>
 
     grid[square] = <span class="hljs-string">"X"</span>
-    draw_shape(<span class="hljs-string">"X"</span>, across, down)</code></pre>
-
+    draw_shape(<span class="hljs-string">"X"</span>, across, down)
+</code></pre>
 <p>Først bruker vi <code>free_squares</code> til å lage en liste over de tomme rutene. Deretter velger vi en tilfeldig av disse rutene. Vi vil nå oversette dette rutenummeret til rad- og kolonne-nummer. Dette gjør vi ved å bruke <code>%</code> og <code>//</code> operatorene. La oss se litt nærmere på hvordan dette virker:</p>
-<pre><code class="hljs"><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+<pre><code>     <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
      -----
- <span class="hljs-number">0</span> <span class="hljs-string">| 0 1 2</span>
- <span class="hljs-number">1</span> <span class="hljs-string">| 3 4 5</span>
- <span class="hljs-number">2</span> <span class="hljs-string">| 6 7 8</span></code></pre>
-
+ <span class="hljs-number">0</span> | <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+ <span class="hljs-number">1</span> | <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+ <span class="hljs-number">2</span> | <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span>
+</code></pre>
 <p>For eksempel er rute nummer 5 i rad 1 og kolonne 2. Hvis vi deler 5 på 3 får vi 1 med 2 i rest.</p>
 <p><code>5 // 3</code> er 1, <code>6 // 3</code> er 2, og så videre. Operatoren <code>//</code> forteller oss hvor mange ganger et tall deler et annet, men ser bort i fra resten. Siden vi har 3 kolonner forteller <code>5 // 3</code> oss i hvilken rad rute 5 er.</p>
 <p><code>5 % 3</code> er 2, <code>6 % 3</code> er 0. Operatoren <code>%</code> forteller oss hva resten er når vi deler et tall med et annet. Dette gir oss kolonnenummeret.</p>
-Legg merke til at de to linjene
-<pre><code class="hljs python">across = square % <span class="hljs-number">3</span>
-down = square // <span class="hljs-number">3</span></code></pre>
-gjør den motsatte utregningen av
-<pre><code class="hljs python">square = across + (down * <span class="hljs-number">3</span>)</code></pre>
-<p>som vi allerede har brukt i <code>click</code>.</p></li>
-<li><p>Til slutt endrer vi <code>click</code>-prosedyren slik at den kaller <code>play_move</code>. På denne måten vil først spilleren gjøre sitt trekk, og deretter gjør datamaskinen sitt trekk.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click</span><span class="hljs-params">(event)</span>:</span>
+<p>Legg merke til at de to linjene</p>
+<pre><code class="python">across = square % <span class="hljs-number">3</span>
+down = square // <span class="hljs-number">3</span>
+</code></pre>
+<p>gjør den motsatte utregningen av</p>
+<pre><code class="python">square = across + (down * <span class="hljs-number">3</span>)
+</code></pre>
+<p>som vi allerede har brukt i <code>click</code>.</p>
+</li>
+<li>
+<p>Til slutt endrer vi <code>click</code>-prosedyren slik at den kaller <code>play_move</code>. På denne måten vil først spilleren gjøre sitt trekk, og deretter gjør datamaskinen sitt trekk.</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click</span><span class="hljs-params">(event)</span>:</span>
     across = int(c.canvasx(event.x) / <span class="hljs-number">200</span>)
     down = int(c.canvasy(event.y) / <span class="hljs-number">200</span>)
     square = across + (down * <span class="hljs-number">3</span>)
@@ -187,21 +210,25 @@ gjør den motsatte utregningen av
     <span class="hljs-keyword">if</span> winner():
         <span class="hljs-keyword">return</span>
 
-    play_move()</code></pre>
-
-<p>Vi sjekker først om spilleren har vunnet, og hvis ikke lar vi datamaskinen gjøre sitt trekk.</p></li>
-<li><p>Lagre programmet og kjør det. Datamaskinen vil nå trekke etter deg. Den vil ikke spille spesielt bra siden den bare gjør tilfeldige trekk.</p></li>
+    play_move()
+</code></pre>
+<p>Vi sjekker først om spilleren har vunnet, og hvis ikke lar vi datamaskinen gjøre sitt trekk.</p>
+</li>
+<li>
+<p>Lagre programmet og kjør det. Datamaskinen vil nå trekke etter deg. Den vil ikke spille spesielt bra siden den bare gjør tilfeldige trekk.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-3-velg-et-trekk-som-vinner" class="level1 activity">
-<h1>Steg 3: Velg et trekk som vinner</h1>
+<section class="activity" id="steg-3-velg-et-trekk-som-vinner">
+<h1 class="activity" id="steg-3-velg-et-trekk-som-vinner">Steg 3: Velg et trekk som vinner</h1>
 <p>Datamaskinen spiller nå tre på rad, men den er ikke spesielt flink. La oss hjelpe den litt. I stedet for å bare velge trekk helt tilfeldig, la datamaskinen velge trekk som gjør at den vinner om de finnes. Ideen er at vi kan sjekke alle de mulige trekkene til datamaskinen, og om ett av disse vil vinne spillet lar vi datamaskinen spille det.</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Endre prosedyren <code>winner</code> slik at den tar et argument <code>grid</code>:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">winner</span><span class="hljs-params">(grid)</span>:</span>
+<li>
+<p>Endre prosedyren <code>winner</code> slik at den tar et argument <code>grid</code>:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">winner</span><span class="hljs-params">(grid)</span>:</span>
     <span class="hljs-keyword">for</span> across <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
         row = across * <span class="hljs-number">3</span>
         line = grid[row] + grid[row+<span class="hljs-number">1</span>] + grid[row+<span class="hljs-number">2</span>]
@@ -219,10 +246,13 @@ gjør den motsatte utregningen av
 
     line = grid[<span class="hljs-number">2</span>] + grid[<span class="hljs-number">4</span>] + grid[<span class="hljs-number">6</span>]
     <span class="hljs-keyword">if</span> line == <span class="hljs-string">"XXX"</span> <span class="hljs-keyword">or</span> line == <span class="hljs-string">"OOO"</span>:
-            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span></code></pre>
-<p>Du trenger bare å endre den første linjen i prosedyren. Dette betyr at <code>winner</code> vil bruke en liste vi sender til den, i stedet for <code>grid</code> som husker hvordan dette spillet ser ut. Dermed kan <code>winner</code> også undersøke trekk som ikke er blitt spilt enda.</p></li>
-<li><p>Nå må vi forandre <code>click</code> så den sender inn riktig liste.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click</span><span class="hljs-params">(event)</span>:</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+</code></pre>
+<p>Du trenger bare å endre den første linjen i prosedyren. Dette betyr at <code>winner</code> vil bruke en liste vi sender til den, i stedet for <code>grid</code> som husker hvordan dette spillet ser ut. Dermed kan <code>winner</code> også undersøke trekk som ikke er blitt spilt enda.</p>
+</li>
+<li>
+<p>Nå må vi forandre <code>click</code> så den sender inn riktig liste.</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click</span><span class="hljs-params">(event)</span>:</span>
      across = int(c.canvasx(event.x) / <span class="hljs-number">200</span>)
     down = int(c.canvasy(event.y) / <span class="hljs-number">200</span>)
     square = across + (down * <span class="hljs-number">3</span>)
@@ -239,11 +269,16 @@ gjør den motsatte utregningen av
     <span class="hljs-keyword">if</span> winner(grid):
         <span class="hljs-keyword">return</span>
 
-    play_move()</code></pre>
-<p>Alle steder vi har <code>winner()</code> i koden bytter vi det ut med <code>winner(grid)</code>.</p></li>
-<li><p>Kjør koden, den skal fortsatt virke akkurat som før for vi har enda ikke endret hvordan datamaskinen spiller.</p></li>
-<li><p>La oss hjelpe datamaskinen ved å legge til noen linjer i <code>play_move</code> som kan lete etter vinnende trekk!</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">play_move</span><span class="hljs-params">()</span>:</span>
+    play_move()
+</code></pre>
+<p>Alle steder vi har <code>winner()</code> i koden bytter vi det ut med <code>winner(grid)</code>.</p>
+</li>
+<li>
+<p>Kjør koden, den skal fortsatt virke akkurat som før for vi har enda ikke endret hvordan datamaskinen spiller.</p>
+</li>
+<li>
+<p>La oss hjelpe datamaskinen ved å legge til noen linjer i <code>play_move</code> som kan lete etter vinnende trekk!</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">play_move</span><span class="hljs-params">()</span>:</span>
     moves = free_squares()
     square = random.choice(moves)
 
@@ -259,20 +294,25 @@ gjør den motsatte utregningen av
     down = square // <span class="hljs-number">3</span>
 
     grid[square] = <span class="hljs-string">"X"</span>
-    draw_shape(<span class="hljs-string">"X"</span>, across, down)</code></pre>
-<p>For hver ledige rute lager vi en kopi av <code>grid</code>-listen med kommandoen <code>list(grid)</code>. Deretter plasserer vi en X i denne ledige ruten og bruker <code>winner</code> for å undersøke om dette vil være et vinnende trekk!</p></li>
-<li><p>Kjør programmet ditt og test det flere ganger. Datamaskinen skal ha blitt litt flinkere til å spille nå.</p></li>
+    draw_shape(<span class="hljs-string">"X"</span>, across, down)
+</code></pre>
+<p>For hver ledige rute lager vi en kopi av <code>grid</code>-listen med kommandoen <code>list(grid)</code>. Deretter plasserer vi en X i denne ledige ruten og bruker <code>winner</code> for å undersøke om dette vil være et vinnende trekk!</p>
+</li>
+</ul>
+<ul>
+<li>Kjør programmet ditt og test det flere ganger. Datamaskinen skal ha blitt litt flinkere til å spille nå.</li>
 </ul>
 </section>
 </section>
-<section id="steg-4-velg-et-trekk-som-blokkerer" class="level1 activity">
-<h1>Steg 4: Velg et trekk som blokkerer</h1>
+<section class="activity" id="steg-4-velg-et-trekk-som-blokkerer">
+<h1 class="activity" id="steg-4-velg-et-trekk-som-blokkerer">Steg 4: Velg et trekk som blokkerer</h1>
 <p>Den andre strategien vi vil lære datamaskinen er å blokkere trekk som gjør at vi vil vinne. Dette gjør vi på nesten samme måte, men nå ser vi hva som skjer om vi plasserer ut O i de ledige rutene.</p>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
-<li><p>Legg til litt mer kode i <code>play_move</code> som blokkerer trekk som gjør at spilleren kan vinne.</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">play_move</span><span class="hljs-params">()</span>:</span>
+<li>
+<p>Legg til litt mer kode i <code>play_move</code> som blokkerer trekk som gjør at spilleren kan vinne.</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">play_move</span><span class="hljs-params">()</span>:</span>
     moves = free_squares()
     square = random.choice(moves)
 
@@ -296,16 +336,20 @@ gjør den motsatte utregningen av
     down = square // <span class="hljs-number">3</span>
 
     grid[square] = <span class="hljs-string">"X"</span>
-    draw_shape(<span class="hljs-string">"X"</span>, across, down)</code></pre>
-<p>Legg merke til at datamaskinen først plukker en tilfeldig ledig rute. Deretter sjekker den om den kan blokkere, og hvis den kan det så ombestemmer den seg. Til slutt sjekker den om den kan vinne, og dersom den kan det så ombestemmer den seg en gang til!</p></li>
-<li><p>Kjør koden og se om du klarer å vinne mot datamaskinen! Det har nå blitt mye vanskeligere.</p></li>
+    draw_shape(<span class="hljs-string">"X"</span>, across, down)
+</code></pre>
+<p>Legg merke til at datamaskinen først plukker en tilfeldig ledig rute. Deretter sjekker den om den kan blokkere, og hvis den kan det så ombestemmer den seg. Til slutt sjekker den om den kan vinne, og dersom den kan det så ombestemmer den seg en gang til!</p>
+</li>
+<li>
+<p>Kjør koden og se om du klarer å vinne mot datamaskinen! Det har nå blitt mye vanskeligere.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="hele-programmet" class="level1 activity">
-<h1>Hele programmet</h1>
+<section class="activity" id="hele-programmet">
+<h1 class="activity" id="hele-programmet">Hele programmet</h1>
 <p>Det ferdige programmet ditt vil nå se omtrent ut som dette!</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
+<pre><code class="python"><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">import</span> random
 
 main = Tk()
@@ -409,11 +453,13 @@ grid = [
 
 c.bind(<span class="hljs-string">"&lt;Button-1&gt;"</span>, click)
 
-mainloop()</code></pre>
-
-<section id="utfordring" class="level2 challenge">
-<h2>Utfordring</h2>
-<p>Det er fortsatt mulig å vinne mot datamaskinen. Kan du gjøre endringer som gjør at den spiller enda bedre? Kanskje du kan lære datamaskinen å spille perfekt?</p>
+mainloop()
+</code></pre>
+<section class="challenge" id="utfordring">
+<h2 class="challenge" id="utfordring">Utfordring</h2>
+<p>Det er fortsatt mulig å vinne mot datamaskinen. Kan du gjøre endringer
+som gjør at den spiller enda bedre? Kanskje du kan lære datamaskinen å
+spille perfekt?</p>
 </section>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>

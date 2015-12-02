@@ -1,0 +1,436 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Kanter, kanter, mange mangekanter | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Kanter, kanter, mange mangekanter</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Processing</span></div><div class="pdf"><a href="/processing/mangekanter/mangekanter.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon:</h1>
+<p>Her skal vi se på litt mer avansert opptegning og bevegelse. Vi skal
+ta utgangspunkt i oppgaven om
+<a href="../sprettende_ball/sprettende_ball.html">den sprettende ballen</a>, men
+bytte ut ballen med trekanter, firkanter og mangekanter. Det anbefales
+derfor at du har gjort den oppgaven før, eller at du har en forståelse
+av <code>if</code>-setninger og koordinatsystemet fra før. Altså skal du lære å
+tegne former med kanter, mange kanter.</p>
+</section>
+<section class="activity" id="steg-1-enkle-firkanter">
+<h1 class="activity" id="steg-1-enkle-firkanter">Steg 1: Enkle firkanter</h1>
+<p>Vi begynner med rektangler: de firkantene som det er enklest å tegne
+på datamaskinen.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Start Processing og skriv dette:</p>
+<pre><code class="processing"><span class="hljs-built_in">float</span> x;
+<span class="hljs-built_in">float</span> y;
+<span class="hljs-built_in">float</span> xFart = <span class="hljs-number">1.5</span>;
+<span class="hljs-built_in">float</span> yFart = <span class="hljs-number">2</span>;
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>);
+  x = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
+  y = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
+  x += xFart;
+  y += yFart;
+  
+  <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
+    xFart = -xFart;
+  }
+  
+  <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-variable">width</span> - <span class="hljs-number">100</span>) {
+    xFart = -xFart;
+  }
+  
+  <span class="hljs-keyword">if</span> (y &lt; <span class="hljs-number">0</span>) {
+    yFart = -yFart;
+  }
+  
+  <span class="hljs-keyword">if</span> (y &gt; <span class="hljs-variable">height</span> - <span class="hljs-number">100</span>) {
+    yFart = -yFart;
+  }
+
+  <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-built_in">rect</span>(x, y, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+}
+</code></pre>
+<p>Dette programmet er ganske likt det som ble lagd i siste oppgave
+om den sprettende ballen, men det er noen små forskjeller:</p>
+<ul>
+<li>
+<p>Vi har endret tallene brukt i <code>if</code>-setningene. Hvorfor tror du
+dette er gjort? Hva skjer om du også tegner opp en sirkel med
+samme posisjon og størrelse som firkanten?</p>
+</li>
+<li>
+<p>Vi har også tatt i bruk <code>+=</code>. <code>x += 1;</code> gjør det samme som <code>x = x + 1;</code> Dette er bare en forkortelse for det siste. Altså øk <code>x</code>
+med det som står på høyresiden av <code>+=</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Kjør programmet ved å trykke på <strong>Ctrl + R</strong> eller knappen
+<img src="../play.png" alt="" title="Play - En knapp i verktøylinjen merket med pil"></p>
+</li>
+</ul>
+<p><figure><img src="SprettendeFirkant.gif" alt="" title="En hvit firkant spretter rundt på en svart bakgrunn."></figure></p>
+<ul>
+<li>Lagre programmet som Firkant ved å trykke på <strong>Ctrl+S</strong> eller
+velg <strong>File --&gt; Save</strong> i menyen.</li>
+</ul>
+</section>
+<section class="try" id="utfordringer">
+<h2 class="try" id="utfordringer">Utfordringer</h2>
+<ul>
+<li>Kan du lage et rektangel som ikke er kvadratisk, altså hvor bredden
+og høyden er forskjellig? Husk at vi vil at den skal sprette idet
+den treffer kanten av vinduet.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="enkle-trekanter">
+<h1 class="activity" id="enkle-trekanter">Enkle trekanter</h1>
+<p>Å tegne rektangler var omtrent helt likt som å tegne sirkler, men nå
+skal du lære å tegne trekanter. Om en trekant ble tegnet opp med en
+posisjon og en bredde og høyde, hadde man ikke hatt så veldig god
+kontroll over hvordan trekanten så ut. Derfor må vi si for hvert
+hjørne befinner seg.</p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Vi skal nå bytte ut firkanten med en enkel trekant. Endre <code>draw</code> som
+vist under:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
+  x += xFart;
+  y += yFart;
+  
+  <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
+    xFart = -xFart;
+  }
+  
+  <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-variable">width</span> - <span class="hljs-number">100</span>) {
+    xFart = -xFart;
+  }
+  
+  <span class="hljs-keyword">if</span> (y &lt; <span class="hljs-number">0</span>) {
+    yFart = -yFart;
+  }
+  
+  <span class="hljs-keyword">if</span> (y &gt; <span class="hljs-variable">height</span> - <span class="hljs-number">100</span>) {
+    yFart = -yFart;
+  }
+
+  <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-built_in">triangle</span>(x, y, x + <span class="hljs-number">100</span>, y, x + <span class="hljs-number">50</span>, y + <span class="hljs-number">100</span>);
+}
+</code></pre>
+<p>Her har vi tatt i bruk <code>triangle</code> istedenfor <code>rect</code>. Denne tar
+imot seks argumenter, to for hvert hjørne i trekanten. <code>x, y</code> er
+posisjonen til det første hjørnet øverst til venstre, <code>x + 100, y</code>
+er posisjonen til det øverste høyre hjørnet og <code>x + 50, y + 100</code>
+er det siste hjørnet nederst i midten.</p>
+</li>
+<li>
+<p>Lagre programmet som <em>Trekant</em> ved å velge <strong>File -&gt; Save as</strong> eller
+trykke <strong>Shift + Ctrl + S</strong>.</p>
+</li>
+<li>
+<p>Kjør programmet.</p>
+</li>
+</ul>
+<p><figure><img src="SprettendeTrekant1.gif" alt="" title="En hvit trekant som peker nedover, spretter rundt på en svart bakgrunn."></figure></p>
+</section>
+<section class="protip" id="forbedre-leseligheten">
+<h2 class="protip" id="forbedre-leseligheten">Forbedre leseligheten</h2>
+<p>Noen ganger kan det være vanskelig å lese kode med kall på funksjoner
+som tar mange argumenter. I Processing tar de fleste funksjoner bare
+imot noen få argumenter, men <code>triangle</code> tar seks. Da kan det være
+nyttig å dele opp kallet over flere linjer. For eksempel kunne
+setningen ovenfor vært skrevet slik at hvert hjørne var på hver sin
+linje:</p>
+<pre><code class="processing"><span class="hljs-built_in">triangle</span>(x, y,
+  x + <span class="hljs-number">100</span>, y,
+  x + <span class="hljs-number">50</span>, y + <span class="hljs-number">100</span>);
+</code></pre>
+<p>Hvis man fortsatt synes det er vanskelig å lese eller rotete, kan man
+legge til noen ekstra mellomrom for å få ting på linje. Merk at om man
+bruker automatisk formatering av koden i Processing, vil den fjerne
+mellomrom den mener er overflødig.</p>
+</section>
+<section class="try" id="utfordringer-2">
+<h2 class="try" id="utfordringer-2">Utfordringer</h2>
+<ul>
+<li>Kan du tegne trekanten motsatt vei, sånn at den ser ut som en
+pil som peker oppover istedenfor nedover?</li>
+</ul>
+<p><figure><img src="SprettendeTrekant2.gif" alt="" title="En hvit trekant som peker oppover, spretter rundt på en svart bakgrunn."></figure></p>
+<ul>
+<li>Kan du tegne to trekanter istedenfor en og lage en sekskantet
+stjerne?</li>
+</ul>
+<p><figure><img src="SprettendeSekskantetStjerne.gif" alt="" title="En hvit sekskantet stjerne spretter rundt på en svart bakgrunn."></figure></p>
+<ul>
+<li><strong>Vanskelig</strong>: Trekanten i programmet er nesten likesidet, men den
+er litt for høy, så to av sidene er rundt 12 piksler for lange. Kan
+du endre regnestykket <code>y + 100</code> sånn at trekanten blir likesidet? Du
+kan bruke Pytagoras' læresetning, eller sinus-funksjonen,
+<a href="https://processing.org/reference/sin_.html"><code>sin</code></a> i Processing,
+for å finne den riktige høyden. Funksjonen
+<a href="https://processing.org/reference/radians_.html"><code>radians</code></a> kan være
+til hjelp for å gjøre om grader til radianer hvis du vil bruke
+sinus-funksjonen.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="trekanter">
+<h1 class="activity" id="trekanter">Trekanter</h1>
+<p>Nå skal vi se hvordan vi kan lage trekanter hvor hvert hjørne beveger
+seg for seg selv. Da trenger vi variabler for posisjon og fart for
+hvert hjørne. Til sammen blir dette fire variabler for hvert hjørne i
+trekanten. En for x-posisjon, en for y-posisjon, en for x-fart og en
+for y-fart. Ettersom trekanten har tre hjørner, blir dette totalt <code>3 hjørner * 4 variabler = 12 variabler</code>.</p>
+<p>Vi kunne kalt dem f.eks. <code>x1</code>, <code>x2</code>, <code>x3</code> og tilsvarende lagt tall til
+<code>y</code>, <code>xFart</code> og <code>yFart</code>. Isteden skal vi bruke noe som kalles en
+<em>array</em>. Det er vanlig å bruke det engelske ordet også på norsk, men
+det oversettes noen ganger til liste, vektor, rekke, tabell eller
+matrise.</p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Vi begynner med å endre variablene til <em>arrays</em>:</p>
+<pre><code class="processing"><span class="hljs-built_in">float</span>[] x = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
+<span class="hljs-built_in">float</span>[] y = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
+<span class="hljs-built_in">float</span>[] xFart = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
+<span class="hljs-built_in">float</span>[] yFart = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
+</code></pre>
+<p>Nå har vi endret typen av variablene fra <code>float</code> til
+<code>float[]</code>. Når vi putter firkantklammer etter en type, er det en
+<em>array</em> som inneholder verdier av typen foran klammene. Bak
+likhetstegnet ser vi også noe nytt <code>new float[3]</code> betyr at vi skal
+lage en ny <code>float</code>-<em>array</em> med tre tall i.</p>
+</li>
+<li>
+<p>Nå må vi endre startverdiene til disse tallene, ellers vil de bare
+være <code>0</code> alle sammen:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
+  
+  x[<span class="hljs-number">0</span>] = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
+  x[<span class="hljs-number">1</span>] = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
+  x[<span class="hljs-number">2</span>] = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
+  
+  y[<span class="hljs-number">0</span>] = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+  y[<span class="hljs-number">1</span>] = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+  y[<span class="hljs-number">2</span>] = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+  
+  xFart[<span class="hljs-number">0</span>] = <span class="hljs-number">1.5</span>;
+  xFart[<span class="hljs-number">1</span>] = <span class="hljs-number">2.5</span>;
+  xFart[<span class="hljs-number">2</span>] = <span class="hljs-number">3.5</span>;
+  
+  yFart[<span class="hljs-number">0</span>] = -<span class="hljs-number">5</span>;
+  yFart[<span class="hljs-number">1</span>] = <span class="hljs-number">2.5</span>;
+  yFart[<span class="hljs-number">2</span>] = -<span class="hljs-number">1.5</span>;
+}
+</code></pre>
+<p>Her ser vi hvordan vi jobber med verdiene i en <em>array</em>. Vi bruker
+firkantklammer med et tall i for å si hvilken verdi vi skal jobbe
+med. Den første verdien finnes på plass <code>0</code>, og den siste verdien
+er på plass <code>2</code> som er én lavere enn størrelsen. Tallet for
+plasseringen kalles <em>indeks</em>. Indeksen er alltid én lavere enn om
+vi skulle telle vanlig fordi vi begynner på <code>0</code>. Derfor er den
+siste indeksen én lavere enn størrelsen.</p>
+</li>
+<li>
+<p>Og til slutt må vi flytte rundt på hjørnene og tegne opp trekanten
+vår:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
+  <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; x.length; i++) {
+    x[i] += xFart[i];
+    y[i] += yFart[i];
+    
+    <span class="hljs-keyword">if</span> (x[i] &lt; <span class="hljs-number">0</span>) {
+      xFart[i] = -xFart[i];
+    }
+    
+    <span class="hljs-keyword">if</span> (x[i] &gt; <span class="hljs-variable">width</span>) {
+      xFart[i] = -xFart[i];
+    }
+    
+    <span class="hljs-keyword">if</span> (y[i] &lt; <span class="hljs-number">0</span>) {
+      yFart[i] = -yFart[i];
+    }
+    
+    <span class="hljs-keyword">if</span> (y[i] &gt; <span class="hljs-variable">height</span>) {
+      yFart[i] = -yFart[i];
+    }
+  }
+
+  <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-built_in">triangle</span>(x[<span class="hljs-number">0</span>], y[<span class="hljs-number">0</span>], x[<span class="hljs-number">1</span>], y[<span class="hljs-number">1</span>], x[<span class="hljs-number">2</span>], y[<span class="hljs-number">2</span>]);
+}
+</code></pre>
+<p>Her ser du en helt ny konstruksjon som vi skal se nærmere på i
+forklaringen nedenfor, men først kan du lagre og kjøre programmet.</p>
+</li>
+</ul>
+<p><figure><img src="SprettendeTrekantHjorner.gif" alt="" title="En hvit trekant dannes av hjørner som spretter rundt på en svart bakgrunn."></figure></p>
+</section>
+<section class="protip" id="forklaring">
+<h2 class="protip" id="forklaring">Forklaring</h2>
+<p>I begynnelsen av <code>draw</code> har vi nå lagt inn noe som kalles en løkke,
+<em>loop</em> på engelsk. En løkke er en del med kode som utføres flere
+ganger. Det finnes andre slags løkker, og denne kalles en
+<em>for-løkke</em>. Inne i parentesene etter <code>for</code> har vi tre setninger. Den
+første, <code>int i = 0</code>, blir utført før løkken. Den neste, <code>i &lt; x.length</code>, bestemmer om koden i løkken skal utføres eller om løkken er
+ferdig. Den siste, <code>i++</code>, utføres etter koden mellom krøllparentesene,
+altså innholdet i løkken. <code>i</code> bruker vi inne i løkken som indeks når
+vi jobber med arrayene istedenfor å skrive faste tall.</p>
+<p>Så om vi går gjennom koden steg for steg, ser vi at først lages en
+variabel <code>i</code> av typen <code>int</code> som starter med verdien <code>0</code>. <code>int</code> er
+typen som brukes for tall uten desimaler, altså <em>heltall</em> eller
+<em>integer</em> på engelsk. Så sjekker vi om <code>i</code> er mindre enn størrelsen
+til arrayen <code>x</code>. Hvis den er det, og det er den, for størrelsen til
+<code>x</code> er <code>3</code> og <code>i</code> er bare <code>0</code>, kjøres koden mellom
+krøllparentesene. Når all koden mellom krøllparentesene er kjørt, så
+kjøres <code>i++</code> som også er nytt for oss. <code>i++</code> gjør det samme som <code>i = i + 1</code>, altså det øker <code>i</code> med <code>1</code>. Nå sjekker vi igjen om <code>i</code> er
+mindre enn størrelsen til <code>x</code>. Og sånn fortsetter det helt til <code>i</code>
+blir like stor eller større enn størrelsen til <code>x</code>.</p>
+<p>Løkker som ser slik ut, med et heltall som økes med én og sjekkes mot
+størrelsen på en array, er veldig vanlig og brukes til å jobbe med
+arrayer. Du kommer til å se mange slike i fremtidige oppgaver. Løkker
+kan kreve litt øving før man blir god på det, men etter hvert blir man
+veldig glad for at man slipper å skrive den samme koden mange ganger.</p>
+</section>
+<section class="try" id="utfordringer-3">
+<h2 class="try" id="utfordringer-3">Utfordringer</h2>
+<ul>
+<li>Det går også an å lage firkanter hvor man plasserer hvert hjørne for
+seg. Da bruker man funksjonen <code>quad</code> istedenfor <code>rect</code>. Prøv å endre
+programmet til å lage en firkant med hjørner som spretter rundt på
+skjermen. Hvor mange flere variabler trenger du enn for trekanten?
+Hvor mange parametere tar <code>quad</code>?</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="mangekanter">
+<h1 class="activity" id="mangekanter">Mangekanter</h1>
+<p>Nå skal vi se på hvordan vi kan lage mangekanter. Mangekanter er bare
+et generelt navn for en form med flere kanter, som trekanter,
+firkanter, femkanter, osv.</p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul>
+<li>
+<p>Vi begynner med å endre på størrelsen på <em>arrayene</em> i forrige
+oppgave:</p>
+<pre><code class="processing"><span class="hljs-built_in">int</span> KANTER = <span class="hljs-number">5</span>;
+<span class="hljs-built_in">float</span>[] x = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[KANTER];
+<span class="hljs-built_in">float</span>[] y = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[KANTER];
+<span class="hljs-built_in">float</span>[] xFart = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[KANTER];
+<span class="hljs-built_in">float</span>[] yFart = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[KANTER];
+</code></pre>
+<p>Nå bruker vi en variabel for å sette størrelsen isteden. Dette
+hjelper leseligheten og gjør det enklere å endre antall kanter
+fordi vi bare trenger å endre tallet ett sted istedenfor fire
+steder.</p>
+</li>
+<li>
+<p>Posisjonene og hastighetene til hjørnene ble satt til faste verdier,
+men hvis vi ikke vet nøyaktig hvor mange kanter det er fungerer ikke
+det så bra. Så vi endrer på <code>setup</code> til å bruke en løkke for å sette
+startverdiene:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
+  
+  <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
+    x[i] = <span class="hljs-built_in">random</span>(<span class="hljs-variable">width</span>);
+    y[i] = <span class="hljs-built_in">random</span>(<span class="hljs-variable">height</span>);
+    xFart[i] = <span class="hljs-built_in">random</span>(-<span class="hljs-number">5</span>, <span class="hljs-number">5</span>);
+    yFart[i] = <span class="hljs-built_in">random</span>(-<span class="hljs-number">5</span>, <span class="hljs-number">5</span>);
+  }
+}
+</code></pre>
+<p>Denne løkken likner en del på den vi har i <code>draw</code> fra før. Vi har
+derimot introdusert en funksjon som heter <code>random</code>. Denne gir oss
+tilfeldige tall. Hvis vi kaller den uten noen verdier, <code>random()</code>,
+får vi et tall mellom <code>0</code> og <code>1</code>. Hvis vi kaller den med én verdi,
+<code>random(width)</code>, får vi et tall mellom <code>0</code> og verdien. Hvis vi
+bruker to verdier, <code>random(-5, 5)</code>, får vi et tall mellom de to
+verdiene.</p>
+</li>
+<li>
+<p>Nå skal vi tegne opp mangekanten vår. Vi trenger ikke å endre på den
+første løkken i <code>draw</code>, men jeg synes vi skal bytte testen så den
+likner den over. Vi skal bytte ut kallet på <code>triangle</code> med en løkke
+som tegner hver kant:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
+  <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
+    x[i] += xFart[i];
+    y[i] += yFart[i];
+    
+    <span class="hljs-keyword">if</span> (x[i] &lt; <span class="hljs-number">0</span>) {
+      xFart[i] = -xFart[i];
+    }
+    
+    <span class="hljs-keyword">if</span> (x[i] &gt; <span class="hljs-variable">width</span>) {
+      xFart[i] = -xFart[i];
+    }
+    
+    <span class="hljs-keyword">if</span> (y[i] &lt; <span class="hljs-number">0</span>) {
+      yFart[i] = -yFart[i];
+    }
+    
+    <span class="hljs-keyword">if</span> (y[i] &gt; <span class="hljs-variable">height</span>) {
+      yFart[i] = -yFart[i];
+    }
+  }
+  
+  <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
+  
+  <span class="hljs-built_in">beginShape</span>();
+  <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
+    <span class="hljs-built_in">vertex</span>(x[i], y[i]);
+  }
+  <span class="hljs-built_in">endShape</span>(CLOSE);
+}
+</code></pre>
+<p>Her ser vi tre nye funksjoner: <code>beginShape</code>, <code>vertex</code> og
+<code>endShape</code>. <code>beginShape</code> angir at vi skal tegne en form. <code>vertex</code>
+betyr at vi skal legge til et hjørne i formen, den tar inn to
+verdier for posisjonen til hjørnet. <code>endShape</code> sier at formen er
+ferdig og klar til å tegnes på skjermen. Hvis vi kaller <code>endShape</code>
+uten <code>CLOSE</code>, blir ikke formen lukket og fylt.</p>
+</li>
+</ul>
+<p><figure><img src="SprettendePolygon.gif" alt="" title="En hvit mangekant spretter rundt på en svart bakgrunn."></figure></p>
+</section>
+<section class="try" id="utfordringer-4">
+<h2 class="try" id="utfordringer-4">Utfordringer</h2>
+<ul>
+<li>
+<p>Kan du bruke <code>random</code> til å få hjørnene til å endre hastighet når de
+treffer kanten av vinduet?</p>
+<p>Pass på, om farten blir lavere enn den var, kan hjørnet bli
+sittende fast i kanten av vinduet. Det er fordi vi egentlig lar
+den bevege seg litt utenfor vinduet for så å snu. Sett <code>x</code> eller
+<code>y</code> til å være lik posisjonen til vinduskanten inne i
+<code>if</code>-setningene for å unngå det.</p>
+</li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Sigmund Hansen</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

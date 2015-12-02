@@ -6,121 +6,155 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hei verden</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Swift</span></div><div class="pdf"><a href="/swift/hei_verden/hei_verden.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Hei verden</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Swift</span></div><div class="pdf"><a href="/swift/hei_verden/hei_verden.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Swift er et programmeringsspråk laget av Apple og er etterfølgeren til Objective-C. Med Swift kan du lage apper for iOS og OSX. For å gjennomføre dette kurset trenger du en Mac, og helst en iPhone/iPad/iPod å teste ut appen på :)</p>
-<p>I dag skal vi lage vår første app, nemlig en Hei Verden-app! Det er en kjent og kjær tradisjon at det første programmet man skriver i et nytt programmeringsspråk skriver “Hei Verden!” til skjermen.</p>
-<figure>
-<img src="hei_verden.png" />
-</figure>
+<p>I dag skal vi lage vår første app, nemlig en Hei Verden-app! Det er en kjent og kjær tradisjon at det første programmet man skriver i et nytt programmeringsspråk skriver &quot;Hei Verden!&quot; til skjermen.</p>
+<p><figure><img src="hei_verden.png" alt=""></figure></p>
 </section>
-<section id="steg-1-sette-opp-xcode" class="level1 activity">
-<h1>Steg 1: Sette opp Xcode</h1>
+<section class="activity" id="steg-1-sette-opp-xcode">
+<h1 class="activity" id="steg-1-sette-opp-xcode">Steg 1: Sette opp Xcode</h1>
 <p>Xcode er Apples utviklingsverktøy, og vi skal bruke det til å skrive appen. Last ned nyeste versjon Xcode fra Mac App Store, og sørg for at du har en Apple-ID (merk. dette programmet er gratis). Vi skal starte med å sette opp et nytt prosjekt.</p>
-<section id="xcode-7-beta-vs-xcode-6" class="level2 protip">
-<h2>Xcode 7 Beta vs Xcode 6</h2>
+<section class="protip" id="xcode-7-beta-vs-xcode-6">
+<h2 class="protip" id="xcode-7-beta-vs-xcode-6">Xcode 7 Beta vs Xcode 6</h2>
 <p>I denne øvelsen er skjermbildene og instruksjonene for Xcode 7 beta, men det skal fungere helt likt på Xcode 6.</p>
 </section>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Åpne Xcode ved å holde <code>cmd + mellomrom</code> og søk etter <strong>Xcode</strong>. Alternativt kan du søke etter Xcode med forstørrelsesglass-ikonet øverst i høyre hjørne.</p></li>
-<li><p>Du blir møtt med et vindu som lar deg gjøre en rekke ting. Du kan enten starte et nytt prosjekt, leke deg rundt i <strong>Playground</strong> eller se på og endre et eksisterende prosjekt.</p>
-<figure>
-<img src="intro_skjerm.png" />
-</figure></li>
-<li><p>Trykk på <strong>Create a New Xcode project</strong>.</p></li>
-<li><p>En ny skjerm skal vises som lar deg velge et rammeverk for appen. Vi skal velge <strong>Single View Application</strong>, som gir oss et bra utgangspunkt for vår egen Hei Verden-app siden denne trenger bare ett skjermbilde.</p>
-<figure>
-<img src="lag_prosjekt.png" />
-</figure></li>
-<li><p>Trykker du på <strong>Next</strong> blir du tatt til en skjerm hvor du må fylle inn litt informasjon. I <strong>Product Name</strong> kan du navngi appen din (vi skal kalle vår <em>Hei Verden!</em>). <strong>Organization Name</strong> og <strong>Organization Identifier</strong> er det ikke så viktig med nå, du kan bare la den være som den er :) <strong>Language</strong> skal settes til Swift, mens <strong>Devices</strong> skal settes til iPhone.</p>
-<figure>
-<img src="app_informasjon.png" />
-</figure></li>
-<li><p>Lagre applikasjonen ved å trykke <strong>next</strong>, og deretter <strong>create</strong> (hvor du velger hvor prosjektet lagres).</p></li>
+<li>
+<p>Åpne Xcode ved å holde <code>cmd + mellomrom</code> og søk etter <strong>Xcode</strong>. Alternativt kan du søke etter Xcode med forstørrelsesglass-ikonet øverst i høyre hjørne.</p>
+</li>
+<li>
+<p>Du blir møtt med et vindu som lar deg gjøre en rekke ting. Du kan enten starte et nytt prosjekt, leke deg rundt i <strong>Playground</strong> eller se på og endre et eksisterende prosjekt.</p>
+<p><figure><img src="intro_skjerm.png" alt=""></figure></p>
+</li>
+<li>
+<p>Trykk på <strong>Create a New Xcode project</strong>.</p>
+</li>
+<li>
+<p>En ny skjerm skal vises som lar deg velge et rammeverk for appen. Vi skal velge <strong>Single View Application</strong>, som gir oss et bra utgangspunkt for vår egen Hei Verden-app siden denne trenger bare ett skjermbilde.</p>
+<p><figure><img src="lag_prosjekt.png" alt=""></figure></p>
+</li>
+<li>
+<p>Trykker du på <strong>Next</strong> blir du tatt til en skjerm hvor du må fylle inn litt informasjon. I <strong>Product Name</strong> kan du navngi appen din (vi skal kalle vår <em>Hei Verden!</em>). <strong>Organization Name</strong> og <strong>Organization Identifier</strong> er det ikke så viktig med nå, du kan bare la den være som den er :) <strong>Language</strong> skal settes til Swift, mens <strong>Devices</strong> skal settes til iPhone.</p>
+<p><figure><img src="app_informasjon.png" alt=""></figure></p>
+</li>
+<li>
+<p>Lagre applikasjonen ved å trykke <strong>next</strong>, og deretter <strong>create</strong> (hvor du velger hvor prosjektet lagres).</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-2-tekst-på-skjermen-ved-bruk-av-en-tekstetikett" class="level1 activity">
-<h1>Steg 2: Tekst på skjermen ved bruk av en tekstetikett</h1>
+<section class="activity" id="steg-2-tekst-pa-skjermen-ved-bruk-av-en-tekstetikett">
+<h1 class="activity" id="steg-2-tekst-pa-skjermen-ved-bruk-av-en-tekstetikett">Steg 2: Tekst på skjermen ved bruk av en tekstetikett</h1>
 <p>Vi skal nå legge til en tekstetikett for å så endre teksten i <code>Main.storyboard</code>.</p>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Trykk på <code>Main.storyboard</code> på venstre side av skjermen.</p></li>
-<li><p>Zoom ut til du ser en firkantet skjerm. Dette representerer skjermen til enheten. Nederst i høyre hjørne av Xcode skal det være en boks, med fire kanpper på øverste rad. Vi skal velge det tredje ikonet, som ligner en hjemknapp. Nede i boksen vil det være et søkefelt. Der skal vi søke etter <code>Label</code>.</p></li>
-<li><p>Dra en <code>Label</code> til <code>Main.storyboard</code>, og legg den helt øverst i venstre hjørne av det store kvadratet. Du må muligens dobbeltklikke på <code>Main.storyboard</code> før du får lov til å dra <code>Label</code> dit. Dobbeltklikk på <code>Label</code>, da dette lar oss endre teksten. Som tradisjonsrike skriver vi <em>Hei verden!</em>, men det er helt opp til deg hva du vil skrive! :)</p>
-<figure>
-<img src="drag_label.png" />
-</figure></li>
-<li><p>Nå skal vi kjøre appen for å teste at alt fungerer. Vi gjør dette ved å trykke på den svarte pilen (playknappen) øverst i venstre hjørne. Alternativt kan du trykke <code>cmd + r</code>.</p></li>
-<li><p>Det skal nå kjøres en simulator, og teksten <em>Hei verden!</em> skal dukke opp.</p></li>
+<li>
+<p>Trykk på <code>Main.storyboard</code> på venstre side av skjermen.</p>
+</li>
+<li>
+<p>Zoom ut til du ser en firkantet skjerm. Dette representerer skjermen til enheten. Nederst i høyre hjørne av Xcode skal det være en boks, med fire kanpper på øverste rad. Vi skal velge det tredje ikonet, som ligner en hjemknapp. Nede i boksen vil det være et søkefelt. Der skal vi søke etter <code>Label</code>.</p>
+</li>
+<li>
+<p>Dra en <code>Label</code> til <code>Main.storyboard</code>, og legg den helt øverst i venstre hjørne av det store kvadratet. Du må muligens dobbeltklikke på <code>Main.storyboard</code> før du får lov til å dra <code>Label</code> dit. Dobbeltklikk på <code>Label</code>, da dette lar oss endre teksten. Som tradisjonsrike skriver vi <em>Hei verden!</em>, men det er helt opp til deg hva du vil skrive! :)</p>
+<p><figure><img src="drag_label.png" alt=""></figure></p>
+</li>
+<li>
+<p>Nå skal vi kjøre appen for å teste at alt fungerer. Vi gjør dette ved å trykke på den svarte pilen (playknappen) øverst i venstre hjørne. Alternativt kan du trykke <code>cmd + r</code>.</p>
+</li>
+<li>
+<p>Det skal nå kjøres en simulator, og teksten <em>Hei verden!</em> skal dukke opp.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-3-få-en-knapp-til-å-skrive-noe-til-skjermen" class="level1 activity">
-<h1>Steg 3: Få en knapp til å skrive noe til skjermen</h1>
+<section class="activity" id="steg-3-fa-en-knapp-til-a-skrive-noe-til-skjermen">
+<h1 class="activity" id="steg-3-fa-en-knapp-til-a-skrive-noe-til-skjermen">Steg 3: Få en knapp til å skrive noe til skjermen</h1>
 <p>Vi skal nå sørge for at ved å trykke på en knapp, vil <code>Label</code> endre seg. For å kunne følge med på denne delen av kurset er det anbefalt med noe tidligere kunnskap om grunnleggende programmering.</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Om du vil spare på den første appen du lagde kan du gjerne lage et nytt Xcode-prosjekt før du går videre. Gjenta i såfall stegene 1 og 2 og sjekk at alt fungerer som det skal.</p></li>
-<li><p>I tillegg til å dra inn en <code>Label</code> i <code>Main.Storyboard</code>, skal vi legge til en <code>Button</code>. En <code>Button</code> kan vi trykke på og kjøre kode knyttet til knappen. Du legger til en <code>Button</code> på samme måte som du gjorde med <code>Label</code>.</p></li>
-<li><p>Ha <code>Main.Storyboard</code> i Xcode vinduet valgt, og trykk på de to sirklene øverst i høyre hjørne i Xcode. Vinduet som dukker opp til venstre viser koden knyttet til en <code>ViewController</code>, som er den som kontrollerer hvordan app-skjermen oppfører seg. Det er her selve kodingen foregår.</p></li>
-<li><p>Venstreklikk på <code>Button</code> i <code>Main.Storyboard</code>. Hold <strong>ctrl</strong> nede mens du venstreklikker og dra mot høyre. Dra streken til linjen over der det står <code>override func didReceiveMemoryWarning()</code>. Endre <code>Connection</code> til å være en <code>Action</code>, og gi den navnet <code>knapp</code>.</p></li>
-<li><p>Venstreklikk på <code>Label</code> i <code>Main.Storyboard</code>. Hold <strong>ctrl</strong> nede, venstreklikk og dra streken til mellom <code>override func viewDidLoad()</code> og <code>class ViewController: UIViewController {</code>. <code>Connection</code> lar du være <code>Outlet</code>, og sett navn til <code>etikett</code>.</p>
-<figure>
-<img src="label_connection.png" />
-</figure></li>
+<li>
+<p>Om du vil spare på den første appen du lagde kan du gjerne lage et nytt Xcode-prosjekt før du går videre. Gjenta i såfall stegene 1 og 2 og sjekk at alt fungerer som det skal.</p>
+</li>
+<li>
+<p>I tillegg til å dra inn en <code>Label</code> i <code>Main.Storyboard</code>, skal vi legge til en <code>Button</code>. En <code>Button</code> kan vi trykke på og kjøre kode knyttet til knappen. Du legger til en <code>Button</code> på samme måte som du gjorde med <code>Label</code>.</p>
+</li>
+<li>
+<p>Ha <code>Main.Storyboard</code> i Xcode vinduet valgt, og trykk på de to sirklene øverst i høyre hjørne i Xcode. Vinduet som dukker opp til venstre viser koden knyttet til en <code>ViewController</code>, som er den som kontrollerer hvordan app-skjermen oppfører seg. Det er her selve kodingen foregår.</p>
+</li>
+<li>
+<p>Venstreklikk på <code>Button</code> i <code>Main.Storyboard</code>. Hold <strong>ctrl</strong> nede mens du venstreklikker og dra mot høyre. Dra streken til linjen over der det står <code>override func didReceiveMemoryWarning()</code>. Endre <code>Connection</code> til å være en <code>Action</code>, og gi den navnet <code>knapp</code>.</p>
+</li>
+<li>
+<p>Venstreklikk på <code>Label</code> i <code>Main.Storyboard</code>. Hold <strong>ctrl</strong> nede, venstreklikk og dra streken til mellom <code>override func viewDidLoad()</code> og <code>class ViewController: UIViewController {</code>. <code>Connection</code> lar du være <code>Outlet</code>, og sett navn til <code>etikett</code>.</p>
+<p><figure><img src="label_connection.png" alt=""></figure></p>
+</li>
 </ul>
 </section>
-<section id="slippe-streken-på-riktig-sted-i-koden" class="level2 protip">
-<h2>Slippe streken på riktig sted i koden</h2>
+<section class="protip" id="slippe-streken-pa-riktig-sted-i-koden">
+<h2 class="protip" id="slippe-streken-pa-riktig-sted-i-koden">Slippe streken på riktig sted i koden</h2>
 <p>Det er viktig å slippe strekene eksakt som det står i de to stegene over! Disse kobler elementene i <code>Main.storyboard</code> til koden din.</p>
 </section>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
-<li><p>Vi skal nå begynne å kode litt! Det er anbefalt med noe tidligere programmeringserfaring her.</p></li>
-<li><p>Vi har nå laget to såkalte <code>Connections</code>. Den ene er <code>@IBOutlet weak var etikett: UILabel!</code>, som refererer til <code>Label</code> i <code>Main.Storyboard</code>. Den andre er <code>@IBAction func knapp(sender: AnyObject) { }</code></p></li>
-<li><p>Tanken er at et klikk på knappen skal endre teksten til <code>Label</code>. Variabelen <code>etikett</code> er koblet til <code>Label</code>. Vi kan derfor få teksten til å endre seg ved å skrive</p>
-<pre><code class="hljs">etikett<span class="hljs-class">.text</span> = <span class="hljs-string">"Knappen sier: Hei!"</span></code></pre>
-
-<p>mellom <code>{</code> og <code>}</code> der du slapp knappen i koden (<code>func knapp</code>).</p></li>
-<li><p>Kjør appen som du lærte i Steg 2 ved å enten klikke på den svarte pilen øverst i hjørnet eller trykke <code>cmd + r</code>.</p></li>
-<li><p>Klikk på knappen og observer hva som skjer! Endret <code>Label</code> seg til teksten du skrev i <code>etikett.text = &quot;Knappen sier: Hei!&quot;</code>? Hvis etiketten ikke viser hele <code>Knappen sier: Hei!&quot;</code>, må du endre størrelsen på <code>Label</code>. Klarer du å gjøre det selv?</p>
-<figure>
-<img src="change_label.png" />
-</figure></li>
+<li>
+<p>Vi skal nå begynne å kode litt! Det er anbefalt med noe tidligere programmeringserfaring her.</p>
+</li>
+<li>
+<p>Vi har nå laget to såkalte <code>Connections</code>. Den ene er <code>@IBOutlet weak var etikett: UILabel!</code>, som refererer til <code>Label</code> i <code>Main.Storyboard</code>. Den andre er <code>@IBAction func knapp(sender: AnyObject) { }</code></p>
+</li>
+<li>
+<p>Tanken er at et klikk på knappen skal endre teksten til <code>Label</code>. Variabelen <code>etikett</code> er koblet til <code>Label</code>. Vi kan derfor få teksten til å endre seg ved å skrive</p>
+<pre><code>etikett<span class="hljs-class">.text</span> = <span class="hljs-string">"Knappen sier: Hei!"</span>
+</code></pre>
+<p>mellom <code>{</code> og <code>}</code> der du slapp knappen i koden (<code>func knapp</code>).</p>
+</li>
+<li>
+<p>Kjør appen som du lærte i Steg 2 ved å enten klikke på den svarte pilen øverst i hjørnet eller trykke <code>cmd + r</code>.</p>
+</li>
+<li>
+<p>Klikk på knappen og observer hva som skjer! Endret <code>Label</code> seg til teksten du skrev i <code>etikett.text = &quot;Knappen sier: Hei!&quot;</code>? Hvis etiketten ikke viser hele <code>Knappen sier: Hei!&quot;</code>, må du endre størrelsen på <code>Label</code>. Klarer du å gjøre det selv?</p>
+<p><figure><img src="change_label.png" alt=""></figure></p>
+</li>
 </ul>
 </section>
-<section id="utfordring---variabler" class="level2 try">
-<h2>Utfordring - Variabler</h2>
+<section class="try" id="utfordring-variabler">
+<h2 class="try" id="utfordring-variabler">Utfordring - Variabler</h2>
 <p>Prøv å definer en variabel nedenfor <code>@IBOutlet weak var etikett: UILabel!</code>, og sett den til å være ditt navn. Klarer du å få <code>Label</code> til å vise verdien av variabelen ved å endre <code>etikett.text</code>?</p>
 </section>
 </section>
-<section id="steg-4-få-input-fra-tekstfelt" class="level1 activity">
-<h1>Steg 4: Få input fra tekstfelt</h1>
+<section class="activity" id="steg-4-fa-input-fra-tekstfelt">
+<h1 class="activity" id="steg-4-fa-input-fra-tekstfelt">Steg 4: Få input fra tekstfelt</h1>
 <p>Nå skal vi legge inn et tekstfelt i appen, så vi kan ta det brukeren skriver i tekstfeltet og vise det i <code>Label</code>.</p>
-<section id="sjekkliste-4" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
-<li><p>I dette steget kan du godt fortsette på appen vi jobbet med i Steg 3. Å implementere tekstfeltfunksjonalitet er veldig likt som i steget over.</p></li>
-<li><p>Begynn med å søke etter <code>Text Field</code> på samme sted hvor du har søkt etter <code>Label</code>og <code>Button</code>. Dra så <code>Text Field</code> inn i <code>Main.Storyboard</code>.</p></li>
-<li><p>Lag en <code>Connection</code> som du gjorde i Steg 3 og opprett den på linjen under <code>@IBOutlet weak var etikett: UILabel!</code>. Det eneste du skal endre er navnet på tekstfeltet. Bruk <code>tekstfelt</code>.</p></li>
-<li><p>I <code>@IBAction func knapp(sender: AnyObject) { }</code> kan du bytte ut <code>etikett.text = &quot;Knappen sier: Hei!&quot;</code> med <code>etikett.text = tekstfelt.text</code>. Det brukeren skriver i inn i tekstfeltet er tilgjengelig i <code>text</code>-egenskapen til tekstfeltet, og vi henter ut denne informasjonen når vi trykker på knappen.</p>
-<figure>
-<img src="textfield_input.png" />
-</figure></li>
+<li>
+<p>I dette steget kan du godt fortsette på appen vi jobbet med i Steg 3. Å implementere tekstfeltfunksjonalitet er veldig likt som i steget over.</p>
+</li>
+<li>
+<p>Begynn med å søke etter <code>Text Field</code> på samme sted hvor du har søkt etter <code>Label</code>og <code>Button</code>. Dra så <code>Text Field</code> inn i <code>Main.Storyboard</code>.</p>
+</li>
+<li>
+<p>Lag en <code>Connection</code> som du gjorde i Steg 3 og opprett den på linjen under <code>@IBOutlet weak var etikett: UILabel!</code>. Det eneste du skal endre er navnet på tekstfeltet. Bruk <code>tekstfelt</code>.</p>
+</li>
+<li>
+<p>I <code>@IBAction func knapp(sender: AnyObject) { }</code> kan du bytte ut <code>etikett.text = &quot;Knappen sier: Hei!&quot;</code> med <code>etikett.text = tekstfelt.text</code>. Det brukeren skriver i inn i tekstfeltet er tilgjengelig i <code>text</code>-egenskapen til tekstfeltet, og vi henter ut denne informasjonen når vi trykker på knappen.</p>
+<p><figure><img src="textfield_input.png" alt=""></figure></p>
+</li>
 </ul>
 </section>
-<section id="utfordring---kan-du-lage-din-egen-versjon" class="level2 try">
-<h2>Utfordring - Kan du lage din egen versjon?</h2>
+<section class="try" id="utfordring-kan-du-lage-din-egen-versjon">
+<h2 class="try" id="utfordring-kan-du-lage-din-egen-versjon">Utfordring - Kan du lage din egen versjon?</h2>
 <p>Nå som du har lært det grunnleggende, hvorfor ikke lage en app som har flere knapper og tekstfelt? Kanskje du kan få den til å fortelle en morsom historie basert på ord brukeren skriver inn? Vis gjerne appen til bekjente og be om tilbakemeldinger!</p>
 </section>
-<section id="noen-spørsmål" class="level2 protip">
-<h2>Noen spørsmål?</h2>
+<section class="protip" id="noen-sporsmal">
+<h2 class="protip" id="noen-sporsmal">Noen spørsmål?</h2>
 <p>Har du noen spørsmål angående Xcode, Swift eller ris/ros for dette kurset, send meg gjerne en mail til andreas.amundsen123@gmail.com!</p>
 <p>Jeg tar gjerne i mot tips til ideer til fremtidige kurs!</p>
 </section>

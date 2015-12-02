@@ -6,114 +6,113 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Logo med FXML</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>JavaFX</span></div><div class="pdf"><a href="/javafx/fxmllogo/fxmllogo.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Logo med FXML</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>JavaFX</span></div><div class="pdf"><a href="/javafx/fxmllogo/fxmllogo.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>En viktig del av det å lage app-er er å utforme skjerminnholdet, dvs. alt app-en inneholder av grafikk, knapper, lister, osv. Formålet til denne leksjonen er å lære hvordan du kan bruke <strong>FXML</strong> for å lage skjerminnhold, og <strong>to måter</strong> å lage slikt innhold. I tillegg skal du lære hvordan du får app-en til å last inn og vise frem innholdet i FXML-filer. App-en er ikke så komplisert, den skal bare vise frem logoene til Kodeklubben og NTNU (eller andre logoer, hvis du ønsker det):</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Kodeklubben</th>
-<th style="text-align: center;">NTNU</th>
+<tr>
+<th style="text-align:center">Kodeklubben</th>
+<th style="text-align:center">NTNU</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><img src="../../assets/img/ccno_logo.png" style="margin:20px; height:168px;" /></td>
-<td style="text-align: center;"><img src="logo2_ntnu_u-slagord.gif" style="margin:20px; height:168px;" /></td>
+<tr>
+<td style="text-align:center"><img src="../../assets/img/ccno_logo.png" style="margin:20px; height:168px;" /></td>
+<td style="text-align:center"><img src="logo2_ntnu_u-slagord.gif" style="margin:20px; height:168px;" /></td>
 </tr>
 </tbody>
 </table>
 <p>I leksjonen <a href="../helloworld/helloworld.html">Hello world</a> lærte du om hvordan du kan lage en app som viste et vindu med et tekst-objekt (av type <strong>Text</strong>). Da skrev du Java-kode som <em>laget</em> tekst-objektet, <em>satte grafiske egenskaper</em> for tekst-objektet og <em>la det til</em> app-vinduet. Slik kode kan fort bli lang og uoversiktlig, og det kan være vanskelig å skrive kode som har ønsket effekt og se for seg hvordan skjerminnholdet vil bli seende ut.</p>
 <p>For å gjøre arbeidet med skjerminnhold enklere, så finnes det en egen kode-type kalt <strong>FXML</strong> for å lage skjerminnhold. FXML ligner på HTML ved at det bruker XML-elementer, f.eks. <code>&lt;Text ...&gt; ... &lt;/Text&gt;</code> og attributter, f.eks. <code>fill=&quot;blue&quot;</code> for å beskrive innholdet. Når en skal lage FXML-filer, kan en enten redigere FXML som tekst i en egen FXML-editor eller bruke en egen tegne-app som leser og skriver FXML-filer. Vi skal se på begge disse teknikkene i denne leksjonen.</p>
 </section>
-<section id="steg-1-opprette-app-pakke-app-klasse-og-fxml-fil" class="level1 activity">
-<h1>Steg 1: Opprette app-pakke, app-klasse og FXML-fil</h1>
+<section class="activity" id="steg-1-opprette-app-pakke-app-klasse-og-fxml-fil">
+<h1 class="activity" id="steg-1-opprette-app-pakke-app-klasse-og-fxml-fil">Steg 1: Opprette app-pakke, app-klasse og FXML-fil</h1>
 <ul>
-<li><p>Lag først en ny app-pakke og app-klasse som forklart i <a href="../helloworld/helloworld.html">Hello world-leksjonen</a>. Bruk <strong>fxmllogo</strong> som navn på pakken og <strong>FxmlLogoApp</strong> som navn på app-klassen.</p></li>
-<li><p>Høyreklikk på <strong>fxmllogo</strong>-pakken og velg <code>New &gt; Other...</code> så du får opp en liste med såkalte <em>veivisere</em> (eng: <em>wizards</em>). Vi skal bruke den som heter <strong>New FXML Document</strong>. Det enkleste er å skrive inn ‘fx’ i søkefeltet, for å snevre inn utvalget:</p>
-<figure>
-<img src="new-fxml-document.png" title="New FXML document" />
-</figure>
+<li>
+<p>Lag først en ny app-pakke og app-klasse som forklart i <a href="../helloworld/helloworld.html">Hello world-leksjonen</a>. Bruk <strong>fxmllogo</strong> som navn på pakken og <strong>FxmlLogoApp</strong> som navn på app-klassen.</p>
+</li>
+<li>
+<p>Høyreklikk på <strong>fxmllogo</strong>-pakken og velg <code>New &gt; Other...</code> så du får opp en liste med såkalte <em>veivisere</em> (eng: <em>wizards</em>). Vi skal bruke den som heter <strong>New FXML Document</strong>. Det enkleste er å skrive inn 'fx' i søkefeltet, for å snevre inn utvalget:</p>
+<p><figure><img src="new-fxml-document.png" alt="" title="New FXML document"></figure></p>
 <p>Trykk <code>Next</code> for å velge veiviseren. Du vil da få opp følgende skjema:</p>
-<figure>
-<img src="new-fxml-file-wizard.png" title="New FXML file" />
-</figure>
+<p><figure><img src="new-fxml-file-wizard.png" alt="" title="New FXML file"></figure></p>
 <p>Fyll inn <code>FxmlLogoApp</code> og trykk <code>Finish</code>. Du vil da få opp en FXML-editor med den nye FXML-fila:</p>
-<figure>
-<img src="initial-FxmlLogoApp.fxml.png" title="Initial FxmlLogoApp.fxml" />
-</figure></li>
-<li><p>Denne FXML-en gir bare et tomt panel (av typen <strong>AnchorPane</strong>), så for å få noe å jobbe med, så trenger vi Rediger teksten slik at den blir som følger:</p>
-<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">AnchorPane</span> <span class="hljs-attribute">xmlns:fx</span>=<span class="hljs-value">"http://javafx.com/fxml/1"</span> <span class="hljs-attribute">prefWidth</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">prefHeight</span>=<span class="hljs-value">"400"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">Rectangle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"100"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"20"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"80"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"80"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"black"</span>
-    <span class="hljs-attribute">arcWidth</span>=<span class="hljs-value">"25"</span> <span class="hljs-attribute">arcHeight</span>=<span class="hljs-value">"25"</span>
-/&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">Text</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"140"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"60"</span> <span class="hljs-attribute">text</span>=<span class="hljs-value">"k"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"white"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">font</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Font</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"Courier"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"72"</span>/&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">font</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Text</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">Text</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"10"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"120"</span> <span class="hljs-attribute">text</span>=<span class="hljs-value">"NTNU"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">font</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">Font</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"Arial"</span> <span class="hljs-attribute">size</span>=<span class="hljs-value">"36"</span>/&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">font</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Text</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">AnchorPane</span>&gt;</span></code></pre>
-
-<p>FXML-editoren har samme type kode-komplettering som Java-editoren. Når du f.eks. har skrevet inn <code>&lt;Rect</code>, kan du trykk ctrl-mellomrom og editoren vil både fylle ut resten av <strong>Rectangle</strong>-navnet og legge til en import-setning øverst i fila (tilsvarende import-setningen i Java):</p>
-<p><code>&lt;?import javafx.scene.shape.Rectangle?&gt;</code></p>
-<p>(Hvis du ikke bruker kode-kompletteringsfunksjonen, så må du skrive inn import-setningen selv.) Tilsvarende kan du bruke kode-komplettering på attributt-navnene <strong>layoutX</strong>, <strong>layoutY</strong>, <strong>width</strong>, <strong>height</strong>, <strong>fill</strong> osv.</p></li>
-<li><p>Mens du redigerer FXML-koden, så kan det være kjekt å se hvordan innholdet vil bli seende ut, når det lastes inn og vises frem. Eclipse har et eget panel kalt <strong>JavaFX preview</strong> som hele tiden laster inn FXML-koden du redigerer og viser frem innholdet. Dette åpnes ved å velge <code>Window &gt; Show View...</code> og så finne panelet i lista. Bruk søkefeltet for å filtrere lista (skriv ‘pre’, så panelet blir enklere å finne.</p>
-<figure>
-<img src="fxml-editor-with-preview-pane.png" title="FXML-editor med preview-panel" />
-</figure>
-<p>Som du ser så inneholder FXML-fila allerede mange av de grafiske elementene som trengs for å lage begge logoene, men ikke alle. Din jobb blir å justere på FXML-koden, så logoene blir omtrent som vist øverst i denne leksjonen.</p></li>
+<p><figure><img src="initial-FxmlLogoApp.fxml.png" alt="" title="Initial FxmlLogoApp.fxml"></figure></p>
+</li>
+<li>
+<p>Denne FXML-en gir bare et tomt panel (av typen <strong>AnchorPane</strong>), så for å få noe å jobbe med, så trenger vi  Rediger teksten slik at den blir som følger:</p>
+<pre><code class="xml"></code></pre>
+</li>
 </ul>
-<section id="litt-om-fxml" class="level2">
-<h2>Litt om FXML</h2>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="500" prefHeight="400">
+	<Rectangle layoutX="100" layoutY="20" width="80" height="80" fill="black"
+		arcWidth="25" arcHeight="25"
+	/>
+	<Text layoutX="140" layoutY="60" text="k" fill="white">
+		<font>
+			<Font name="Courier" size="72"/>
+		</font>
+	</Text>
+	<Circle layoutX="150" layoutY="150" radius="40" fill="blue"/>
+	<Text layoutX="10" layoutY="120" text="NTNU">
+		<font>
+			<Font name="Arial" size="36"/>
+		</font>
+	</Text>
+</AnchorPane>
+```
+<pre><code>FXML-editoren har samme type kode-komplettering som Java-editoren. Når du f.eks. har skrevet inn `&lt;Rect`, kan du trykk ctrl-mellomrom og editoren vil både fylle ut resten av **Rectangle**-navnet og legge til en import-setning øverst i fila (tilsvarende import-setningen i Java):
+
+`&lt;?import javafx.scene.shape.Rectangle?&gt;`
+
+(Hvis du ikke bruker kode-kompletteringsfunksjonen, så må du skrive inn import-setningen selv.) Tilsvarende kan du bruke kode-komplettering på attributt-navnene **layoutX**, **layoutY**, **width**, **height**, **fill** osv.
+</code></pre>
+<ul>
+<li>
+<p>Mens du redigerer FXML-koden, så kan det være kjekt å se hvordan innholdet vil bli seende ut, når det lastes inn og vises frem. Eclipse har et eget panel kalt <strong>JavaFX preview</strong> som hele tiden laster inn FXML-koden du redigerer og viser frem innholdet. Dette åpnes ved å velge <code>Window &gt; Show View...</code> og så finne panelet i lista. Bruk søkefeltet for å filtrere lista (skriv 'pre', så panelet blir enklere å finne.</p>
+<p><figure><img src="fxml-editor-with-preview-pane.png" alt="" title="FXML-editor med preview-panel"></figure></p>
+<p>Som du ser så inneholder FXML-fila allerede mange av de grafiske elementene som trengs for å lage begge logoene, men ikke alle. Din jobb blir å justere på FXML-koden, så logoene blir omtrent som vist øverst i denne leksjonen.</p>
+</li>
+</ul>
+<section>
+<h2 id="litt-om-fxml">Litt om FXML</h2>
 <p>Du har kanskje kjent igjen mange av ordene i FXML-fila fra Java-koden du skrev i <a href="../helloworld/helloworld.html">Hello world-leksjonen</a>, og det er ikke tilfeldig. Enkelt sagt så tilsvarer elementnavnene i FXML-koden (ordet etter <code>&lt;</code> og <code>&lt;/</code>), f.eks. <strong>Text</strong> og <strong>Rectangle</strong> Java-klasser, og attributtnavnene tilsvarer egenskaper, f.eks. <strong>layoutX</strong>, <strong>width</strong> og <strong>fill</strong>. Det er også noen elementnavn som tilsvarer egenskaper, f.eks. <strong>font</strong>. Når FXML-koden blir lest inn, så vil hvert element som tilsvarer en Java-klasse bli til en instans (et Java-objekt) av den klassen, og hvert attributt bli brukt til å sette en egenskap, som om en brukte tilsvarende <strong>set</strong>-metode. Følgende Java- og FXML-kode betyr omtrent det samme:</p>
-<pre><code class="hljs java">Circle circle = <span class="hljs-keyword">new</span> Circle();
+<pre><code class="java">Circle circle = <span class="hljs-keyword">new</span> Circle();
 circle.setLayoutX(<span class="hljs-number">150</span>);
 circle.setLayoutY(<span class="hljs-number">150</span>);
 circle.setRadius(<span class="hljs-number">40</span>);
-circle.setFill(Color.BLUE);</code></pre>
-
-<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span></code></pre>
-
+circle.setFill(Color.BLUE);
+</code></pre>
+<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
+</code></pre>
 <p>Noen typer objekter, f.eks. paneler (typene <strong>Pane</strong>, <strong>HBox</strong>, <strong>VBox</strong> og <strong>AnchorPane</strong>), <em>inneholder</em> andre objekter. I Java-koden må en legge den ene til <strong>children</strong>-lista til den andre, mens en i FXML legger det ene elementet inni det andre:</p>
-<pre><code class="hljs java">Pane pane = <span class="hljs-keyword">new</span> Pane();
+<pre><code class="java">Pane pane = <span class="hljs-keyword">new</span> Pane();
 Circle circle = <span class="hljs-keyword">new</span> Circle();
 ...
-pane.getChildren().add(circle);</code></pre>
-
-<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pane</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Pane</span>&gt;</span></code></pre>
-
+pane.getChildren().add(circle);
+</code></pre>
+<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pane</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">Pane</span>&gt;</span>
+</code></pre>
 </section>
 </section>
-<section id="steg-2-åpne-og-redigere-fxml-fil-med-scenebuilder" class="level1 activity">
-<h1>Steg 2: Åpne og redigere FXML-fil med SceneBuilder</h1>
+<section class="activity" id="steg-2-apne-og-redigere-fxml-fil-med-scenebuilder">
+<h1 class="activity" id="steg-2-apne-og-redigere-fxml-fil-med-scenebuilder">Steg 2: Åpne og redigere FXML-fil med SceneBuilder</h1>
 <p>Det går greit å bruke FXML-editoren for enkel redigering (eller mer kompliserte ting, når en får erfaring), men det finnes et enklere alternativ, nemlig en grafisk editor kalt <strong>SceneBuilder</strong>. En kan faktisk åpne og redigere FXML-fila direkte i JavaFX Scene Builder (ofte bare kalt SceneBuilder), siden den bruker FXML som lagringsformat.</p>
 <ul>
-<li><p>Høyreklikk på FXML-fila og velg <code>Open with SceneBuilder</code></p>
-<figure>
-<img src="open-with-scenebuilder.png" title="Åpne med SceneBuilder" />
-</figure>
+<li>
+<p>Høyreklikk på FXML-fila og velg <code>Open with SceneBuilder</code></p>
+<p><figure><img src="open-with-scenebuilder.png" alt="" title="Åpne med SceneBuilder"></figure></p>
 <p>Hvis du har installer SceneBuilder riktig, så skal du etter litt venting få opp følgende</p>
-<figure>
-<img src="scene-builder-FxmlLogoApp-1.png" title="FxmlLogoApp.fxml åpnet med SceneBuilder" />
-</figure>
+<p><figure><img src="scene-builder-FxmlLogoApp-1.png" alt="" title="FxmlLogoApp.fxml åpnet med SceneBuilder"></figure></p>
 <p>Som du ser så inneholder panelet i midten de samme grafiske elementene som JavaFX Preview-panelet. Her kan du imidlertid <em>redigere</em> på dem, ved å velge, dra og slippe, som i vanlige tegneprogrammer.</p>
 <p>Nederst til venstre ser du trestrukturen av objekter, med et panel (<strong>AnchorPane</strong>) som inneholder et rektangel (<strong>Rectangle</strong>), en sirkel (<strong>Circle</strong>) og to tekst-objekter (<strong>Text</strong>).</p>
 <p>Øverst til venstre ser du en kategorisert liste med elementer som kan dras og slippes inn i redigeringspanelet i midten. I figuren vises bare såkalte <strong>Containers</strong>, som inneholder andre elementer, men (hvis du scroller) lenger ned finner du bl.a. <strong>Controls</strong> (interaktive elementer) og <strong>Shapes</strong> (grafiske elementer). Prøv å finne <strong>Line</strong>-typen og dra og slipp den litt til høyre for det svarte rektangelet. Hvis du vil endre på hvordan streken ser ut, så kan du redigere ulike <em>egenskaper</em> i panelet til høyre. Prøv f.eks. å gjøre streken tykkere (<strong>Stroke Width</strong> = 10), endre fargen til grønn (<strong>Stroke</strong> = #569900) og enden til avrundet (<strong>Stroke Line Cap</strong> = <strong>ROUND</strong>). Da skal det se omtrent slik ut:</p>
-<figure>
-<img src="scene-builder-FxmlLogoApp-2.png" title="FxmlLogoApp.fxml åpnet med SceneBuilder" />
-</figure>
+<p><figure><img src="scene-builder-FxmlLogoApp-2.png" alt="" title="FxmlLogoApp.fxml åpnet med SceneBuilder"></figure></p>
 <p>Dette er omtrent de grafiske elementen du trenger for å lage Kodeklubben- og NTNU-logoene. Prøv å bruke redigeringsmulighetene til å få tegningen til å bli seende omtrent slik ut:</p>
-<figure>
-<img src="scene-builder-FxmlLogoApp-3.png" title="Logoer redigert med SceneBuilder" />
-</figure>
+<p><figure><img src="scene-builder-FxmlLogoApp-3.png" alt="" title="Logoer redigert med SceneBuilder"></figure></p>
 <p>Her er noen tips om nyttige redigeringsfunksjoner som du kan bruke for å få laget og redigert grafikken:</p>
 <ul>
 <li>Du kan raskt lage en kopi (duplisere) et element med <code>Edit &gt; Duplicate</code></li>
@@ -123,44 +122,44 @@ pane.getChildren().add(circle);</code></pre>
 </ul>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Valg av farge</th>
-<th style="text-align: center;">Valg av font</th>
+<tr>
+<th style="text-align:center">Valg av farge</th>
+<th style="text-align:center">Valg av font</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><img src="color-picker.png" /></td>
-<td style="text-align: center;"><img src="font-picker.png" /></td>
+<tr>
+<td style="text-align:center"><figure><img src="color-picker.png" alt=""></figure></td>
+<td style="text-align:center"><figure><img src="font-picker.png" alt=""></figure></td>
 </tr>
 </tbody>
 </table>
 <p>Spesielt fin-innstillingen av plassering og dimensjoner kan være vanskelig. Nede til høyre i SceneBuilder-vinduet finner du egenskaper med kategorien <strong>Layout</strong>, bl.a. koordinater og størrelse. Akkurat hvilke egenskaper du kan endre avhenger av hvilket grafisk element som er valgt. I figuren under ser du hva som kan endre på et rektangel.</p>
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;">Layout-egenskaper</th>
-<th style="text-align: left;"></th>
+<tr>
+<th style="text-align:center">Layout-egenskaper</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><img src="layout-properties.png" /></td>
-<td style="text-align: left;">Det er egentlig disse egenskapene du endrer, når du velger, drar og slipper de grafiske elementene og de små hjørne-boksene. Ved å redigere tallene, så kan du styre dem helt presist.</td>
+<tr>
+<td style="text-align:center"><figure><img src="layout-properties.png" alt=""></figure></td>
+<td>Det er egentlig disse egenskapene du endrer, når du velger, drar og slipper de grafiske elementene og de små hjørne-boksene. Ved å redigere tallene, så kan du styre dem helt presist.</td>
 </tr>
 </tbody>
-</table></li>
+</table>
+</li>
 </ul>
 </section>
-<section id="steg-3-få-appen-til-å-vise-frem-innholdet-i-fxml-fila" class="level1 activity">
-<h1>Steg 3: Få appen til å vise frem innholdet i FXML-fila</h1>
+<section class="activity" id="steg-3-fa-appen-til-a-vise-frem-innholdet-i-fxml-fila">
+<h1 class="activity" id="steg-3-fa-appen-til-a-vise-frem-innholdet-i-fxml-fila">Steg 3: Få appen til å vise frem innholdet i FXML-fila </h1>
 <p>Det siste trinnet i denne leksjonen er å få app-en til å vise frem det grafiske innholdet i app-vinduet. For å få dette til må du redigere koden i app-klassen din, som du laget i trinn én og heter <strong>FxmlLogoApp</strong>.</p>
 <ul>
 <li>Husk å lagre FXML-fila i SceneBuilder før du går tilbake til Eclipse.</li>
 <li>Klikk i FXML-editoren. Den skal da vise frem det nye innholdet, som er resultatet av all redigeringen du gjorde i SceneBuilder.</li>
 <li>Det er greit å gjøre endringer rett i FXML-koden i editor. Når du går tilbake til SceneBuilder, så sjekk om du ser de samme endringene der. Hvis ikke så må du kanskje lukke den og åpne den igjen med <code>Open with SceneBuilder</code>.</li>
-<li>Velg editoren med <strong>FxmlLogoApp</strong>-klassen i (eller åpne den ved å dobbel-klikke på <strong>FxmlLogoApp.java</strong>) og rediger slik at du får følgende kode:
-<pre><code class="hljs java"><span class="hljs-keyword">package</span> fxmllogoapp;
+<li>Velg editoren med <strong>FxmlLogoApp</strong>-klassen i (eller åpne den ved å dobbel-klikke på <strong>FxmlLogoApp.java</strong>) og rediger slik at du får følgende kode:<pre><code class="java"><span class="hljs-keyword">package</span> fxmllogoapp;
 
 <span class="hljs-keyword">import</span> java.io.IOException;
 
@@ -172,37 +171,38 @@ pane.getChildren().add(circle);</code></pre>
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FxmlLogoApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">(Stage primaryStage)</span> <span class="hljs-keyword">throws</span> IOException </span>{
-        FXMLLoader fxmlLoader = <span class="hljs-keyword">new</span> FXMLLoader(FxmlLogoApp.class.getResource(<span class="hljs-string">"FxmlLogoApp.fxml"</span>));
-        Pane root = fxmlLoader.load();
-        primaryStage.setScene(<span class="hljs-keyword">new</span> Scene(root));
-        primaryStage.show();
-    }
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">(Stage primaryStage)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+		FXMLLoader fxmlLoader = <span class="hljs-keyword">new</span> FXMLLoader(FxmlLogoApp.class.getResource(<span class="hljs-string">"FxmlLogoApp.fxml"</span>));
+		Pane root = fxmlLoader.load();
+    	primaryStage.setScene(<span class="hljs-keyword">new</span> Scene(root));
+    	primaryStage.show();
+	}
 
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-        launch(FxmlLogoApp.class, args);
-    }
-}</code></pre>
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+		launch(FxmlLogoApp.class, args);
+	}
+}
+</code></pre>
+</li>
+</ul>
+<pre><code>
+	Trikset her er å lage et **FXMLLoader**-objekt (første linje i start-metoden, og be denne laste inn FXML-fila med load-metoden (andre linje).
++ Kjør <span class="hljs-keyword">app</span>-<span class="hljs-keyword">en</span> ved å <span class="hljs-keyword">h</span>øyre-klikke på fila eller i editoren og velge `<span class="hljs-keyword">Run</span> <span class="hljs-keyword">as</span> &gt; Java Application`. Da skal det (etter litt venting) dukke opp et vindu som dette:
 
-Trikset her er å lage et <strong>FXMLLoader</strong>-objekt (første linje i start-metoden, og be denne laste inn FXML-fila med load-metoden (andre linje).</li>
-<li><p>Kjør app-en ved å høyre-klikke på fila eller i editoren og velge <code>Run as &gt; Java Application</code>. Da skal det (etter litt venting) dukke opp et vindu som dette:</p>
-<figure>
-<img src="run-FxmlLogoApp-as-java-application.png" />
-</figure></li>
-</ul>
-</section>
-<section id="hva-har-du-lært" class="level1">
-<h1>Hva har du lært?</h1>
-<ul>
-<li>lage en FXML-fil med Eclipse sin veiviser</li>
-<li>redigere FXML i Eclipse sin FXML-editor.</li>
-<li>se forhåndsvisning av FXML-innholdet i JavaFX Preview-panelet</li>
-<li>åpne FXML-fila i JavaFX Scene Builder med <code>Open with SceneBuilder</code></li>
-<li>legge nye elementer til FXML-fila ved å dra og slippe fra SceneBuilder sin paletten</li>
-<li>redigere grafiske egenskaper i SceneBuilder</li>
-<li>skrive app-kode som laster inn og viser frem FXML-fila i et app-vindu</li>
-</ul>
-<p>I leksjonen KalkulatorFX (to be continued) vil du lære hvordan du kan koble FXML-koden til Java-koden og gjøre app-en levende (interaktiv)!</p>
+	![](<span class="hljs-keyword">run</span>-FxmlLogoApp-<span class="hljs-keyword">as</span>-java-application.png)
+
+# Hva har du <span class="hljs-keyword">l</span>ært?
+
++ lage <span class="hljs-keyword">en</span> FXML-fil med Eclipse sin veiviser
++ redigere FXML i Eclipse sin FXML-editor.
++ <span class="hljs-keyword">se</span> forhåndsvisning av FXML-innholdet i JavaFX Preview-panelet
++ åpne FXML-fila i JavaFX Scene Builder med `<span class="hljs-keyword">Open</span> with SceneBuilder`
++ legge nye elementer til FXML-fila ved å dra og slippe fra SceneBuilder sin paletten
++ redigere grafiske egenskaper i SceneBuilder
++ skrive <span class="hljs-keyword">app</span>-kode som laster inn og viser frem FXML-fila i et <span class="hljs-keyword">app</span>-vindu
+
+I leksjonen KalkulatorFX (to be continued) vil du <span class="hljs-keyword">l</span>ære hvordan du kan koble FXML-koden til Java-koden og gjøre <span class="hljs-keyword">app</span>-<span class="hljs-keyword">en</span> levende (interaktiv)!
+</code></pre>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

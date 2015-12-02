@@ -6,17 +6,20 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Frantic Felix - Avspilling</h1><div class="lesson-icons"><div class="level"><img title="Level undefined" src="../../assets/img/levelundefined.png"/><span></span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/frantic_felix/frantic_felix-avspilling.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
-<ol type="1">
-<li><p>Klar!</p>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Frantic Felix - Avspilling</h1><div class="lesson-icons"><div class="level"><img title="Level undefined" src="../../assets/img/levelundefined.png"/><span></span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/frantic_felix/frantic_felix-avspilling.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section ="" class="check" id="sjekkliste">
+<h2 ="" class="check" id="sjekkliste">Sjekkliste</h2>
+<ol>
+<li>
+<p>Klar!</p>
 <p>Trykk Lag en Variabel for å lage en index variabel</p>
-<figure>
-<img src="variabel.png" />
-</figure></li>
-<li><p>Prøv denne koden</p>
+<p><figure><img src="variabel.png" alt=""></figure></p>
+</li>
+</ol>
+<ol start="2">
+<li>
+<p>Prøv denne koden</p>
 <p>Få figuren til å følge stien som ble tatt opp.</p>
-<pre class="scratch"><code>når jeg mottar [replay v]
+<pre><code class="scratch">når jeg mottar [replay v]
     sett [index v] til [1]
     gjenta (length of [xs v]) ganger
         sett x til (element (index) av [xs v])
@@ -24,15 +27,19 @@ function relative(url) {
         endre [index v] med (1)
         vent (0.1) sekunder
    slutt
-</code></pre></li>
+
+</code></pre>
+</li>
 </ol>
 </section>
 </div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
 </div><div class="author"><p><strong>Forfatter:</strong></p><p>Oversatt fra <a href="//codeclub.org.uk">Code Club UK</a></p>
 </div><div class="translator"><p><strong>Oversetter:</strong></p><p>Lars-Erik Wollan</p>
 </div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
   scratchblocks2.load_language(scratchblocks2._translations['nb']);
-  scratchblocks2.parse("pre.blocks");
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
 });</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

@@ -6,65 +6,76 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hemmelige koder</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/hemmelige_koder/hemmelige_koder.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Hemmelige koder</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/hemmelige_koder/hemmelige_koder.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Legg bort skilpaddene dine, i dag skal vi lære hvordan vi kan sende hemmelige beskjeder!</p>
 </section>
-<section id="kodeklubb-koden" class="level1 activity">
-<h1>Kodeklubb-koden</h1>
+<section class="activity" id="kodeklubb-koden">
+<h1 class="activity" id="kodeklubb-koden">Kodeklubb-koden</h1>
 <p>Et chiffer er et system for å gjøre om vanlig tekst til kode som ikke andre skal kunne lese. Vi skal bruke et av de eldste og mest berømte chifferene, Cæsar-chifferet eller Cæsars kode - oppkalt etter Gaius Julius Cæsar som sannsynligvis brukte det til å sende hemmelige beskjeder. Det er neppe den beste måten å hindre andre i å lese beskjedene dine, men det kommer vi tilbake til. Det finnes ferdige moduler til Python du kan bruke hvis du vil lage noe som skal være vanskelig å knekke, men nå skal vi forsøke å lage Cæsar-chifferet selv.</p>
 <p>Start med å tegne alle bokstavene i en sirkel.</p>
-<pre><code class="hljs">Å    A
+<pre><code>                          Å    A
                      Ø              B
-                 Æ                      <span class="hljs-keyword">C</span>
-             Z                               <span class="hljs-keyword">D</span>
+                 Æ                      C
+             Z                               <span class="hljs-literal">D</span>
 
-         Y                                       <span class="hljs-keyword">E</span>
+         Y                                       <span class="hljs-literal">E</span>
 
-      X                                             F
+      X                                             <span class="hljs-literal">F</span>
 
-     W                                               G
+     W                                               <span class="hljs-keyword">G</span>
 
-     V                                               H
+     V                                               <span class="hljs-literal">H</span>
 
-      U                                             <span class="hljs-keyword">I</span>
+      <span class="hljs-keyword">U</span>                                             <span class="hljs-literal">I</span>
 
-         T                                       J
+         T                                       <span class="hljs-literal">J</span>
 
-             S                               <span class="hljs-keyword">K</span>
-                R                        L
-                    Q                M
-                        P    <span class="hljs-keyword">O</span>   <span class="hljs-keyword">N</span></code></pre>
+             S                               K
+                R                        <span class="hljs-keyword">L</span>
+                    Q                <span class="hljs-literal">M</span>
+                        P    O   <span class="hljs-keyword">N</span>
 
+</code></pre>
 <p>For å lage en hemmelig bokstav fra en vanlig bokstav, trenger vi et tall vi kan bruke som hemmelig nøkkel. Jeg liker tallet 3, det er et magisk tall, så vi bruker det.</p>
-<pre><code class="hljs">A + <span class="hljs-number">3</span> = <span class="hljs-keyword">D</span>       T + <span class="hljs-number">3</span> = W       Å + <span class="hljs-number">3</span> = <span class="hljs-keyword">C</span></code></pre>
-
+<pre><code>    A + <span class="hljs-number">3</span> = D       T + <span class="hljs-number">3</span> = W       Å + <span class="hljs-number">3</span> = C
+</code></pre>
 <p>Vi begynner med A og teller fremover 3 bokstaver: B, C, D. Så bokstaven A blir til bokstaven D. For å dekode gjør vi det samme, men baklengs. Vi begynner med D og teller bakover for å få A.</p>
 </section>
-<section id="steg-1-alfabetet" class="level1 activity">
-<h1>Steg 1: Alfabetet</h1>
-<p>Her kan du få trøbbel med norske bokstaver om du ikke har Python 3. Du har Python 2 dersom det står 2.6 eller 2.7 i IDLE. I så fall må du legge en <code>u</code> foran tekst som er inni <code>&quot;&quot;</code>. For eksempel blir alfabetet under <code>u&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</code>. <code>u</code>-en betyr at teksten er av typen <em>Unicode</em> som støtter alle norske bokstaver.</p>
-<section id="sjekkliste" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-1-alfabetet">
+<h1 class="activity" id="steg-1-alfabetet">Steg 1: Alfabetet</h1>
+<p>Her kan du få trøbbel med norske bokstaver om du ikke har Python 3. Du  har
+Python 2 dersom det står 2.6 eller 2.7 i IDLE. I så fall må du legge en <code>u</code>
+foran tekst som er inni <code>&quot;&quot;</code>. For eksempel blir alfabetet under
+<code>u&quot;abcdefghijklmnopqrstuvwxyzæøå&quot;</code>. <code>u</code>-en betyr at teksten er av typen
+<em>Unicode</em> som støtter alle norske bokstaver.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li><p>Først må vi lære python alfabetet. Åpne IDLE og lag en ny fil med koden under:</p>
-<pre><code class="hljs python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<li>
+<p>Først må vi lære python alfabetet. Åpne IDLE og lag en ny fil med koden
+under:</p>
+<pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
-print(len(alphabet))</code></pre>
+print(len(alphabet))
+</code></pre>
 </li>
-<li><p>Når du kjører dette programmet skal det skrive ut 29. Pass på at du har med alle bokstavene, ellers kommer ikke den hemmelige koden din til å virke.</p>
-<p>Hvis du er fornøyd med alfabetet ditt kan vi begynne å kode en bokstav.</p></li>
+<li>
+<p>Når du kjører dette programmet skal det skrive ut 29. Pass på at du har med alle bokstavene, ellers kommer ikke den hemmelige koden din til å virke.</p>
+<p>Hvis du er fornøyd med alfabetet ditt kan vi begynne å kode en bokstav.</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-2-kode-en-bokstav" class="level1 activity">
-<h1>Steg 2: Kode en bokstav</h1>
-<section id="sjekkliste-1" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="activity" id="steg-2-kode-en-bokstav">
+<h1 class="activity" id="steg-2-kode-en-bokstav">Steg 2: Kode en bokstav</h1>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul>
-<li><p>Akkurat som vi gjorde med hjulet ovenfor kan vi finne posisjonen til en bokstav ved å telle forover, og så bruke bokstaven vi ender opp med.</p>
+<li>
+<p>Akkurat som vi gjorde med hjulet ovenfor kan vi finne posisjonen til en bokstav ved å telle forover, og så bruke bokstaven vi ender opp med.</p>
 <p>Skriv inn koden under og kjør den:</p>
-<pre><code class="hljs python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 letter = <span class="hljs-string">"a"</span>
 secret = <span class="hljs-number">3</span>
@@ -78,13 +89,17 @@ newpos = (pos + secret)
 
 secretletter = alphabet[newpos]
 
-print(secretletter)</code></pre>
-
-<p>Vi slår opp hvor “a” er i alfabetet og legger til det hemmelige tallet vårt for å telle fremover. Vi sjekker om vi har gått rundt, hvis vi har det må vi gå en hel runde tilbake igjen ved å trekke fra 29 (dette er litt som med gradene, å trekke fra 360 gjør at vi er akkurat der vi var). Så slår vi opp i alfabetet igjen for å se hvilken hemmelige bokstav vi fikk.</p></li>
-<li><p>Kjør koden og se hva som skjer.</p></li>
-<li><p>La oss ta en titt på koden igjen, men vi tar det sakte.</p>
+print(secretletter)
+</code></pre>
+<p>Vi slår opp hvor &quot;a&quot; er i alfabetet og legger til det hemmelige tallet vårt for å telle fremover. Vi sjekker om vi har gått rundt, hvis vi har det må vi gå en hel runde tilbake igjen ved å trekke fra 29 (dette er litt som med gradene, å trekke fra 360 gjør at vi er akkurat der vi var). Så slår vi opp i alfabetet igjen for å se hvilken hemmelige bokstav vi fikk.</p>
+</li>
+<li>
+<p>Kjør koden og se hva som skjer.</p>
+</li>
+<li>
+<p>La oss ta en titt på koden igjen, men vi tar det sakte.</p>
 <p>Du trenger ikke å skrive dette! Alt som står bak firkant-tegnet bryr python seg vanligvis ikke om, det er bare kommentarer til mennesker som skal lese koden.</p>
-<pre><code class="hljs python"><span class="hljs-comment"># alphabet er navnet på teksten fra a til å</span>
+<pre><code class="python"><span class="hljs-comment"># alphabet er navnet på teksten fra a til å</span>
 alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyz"</span>
 
 <span class="hljs-comment"># Den hemmelige bokstaven (letter) og det hemmelige tallet</span>
@@ -109,21 +124,23 @@ newpos = (pos + secret)
 secretletter = alphabet[newpos]
 
 <span class="hljs-comment"># Skriv denne bokstaven ut på skjermen</span>
-print(secretletter)</code></pre>
-
-<p>Det er mye python-ting som skjer her, men ikke bli skremt om du ikke forstår alt til å begynne med. Mye av dette er akkurat som i scratch. <code>if newpos &gt;= 29</code> er bare en <code>if</code>-setning, en ting som bare kjører koden under hvis det som står etter <code>if</code> er sant. En <code>if</code>-setning bruker en innrykksblokk, akkurat som <code>for</code> og <code>def</code> som vi har sett tidligere.</p></li>
+print(secretletter)
+</code></pre>
+<p>Det er mye python-ting som skjer her, men ikke bli skremt om du ikke forstår alt til å begynne med. Mye av dette er akkurat som i scratch. <code>if newpos &gt;= 29</code> er bare en <code>if</code>-setning, en ting som bare kjører koden under hvis det som står etter <code>if</code> er sant. En <code>if</code>-setning bruker en innrykksblokk, akkurat som <code>for</code> og <code>def</code> som vi har sett tidligere.</p>
+</li>
 </ul>
 <p>Nå som vi kan kode en bokstav, hva med å dekode en?</p>
 </section>
 </section>
-<section id="steg-3-finne-tilbake-bokstavene" class="level1 activity">
-<h1>Steg 3: Finne tilbake bokstavene</h1>
+<section class="activity" id="steg-3-finne-tilbake-bokstavene">
+<h1 class="activity" id="steg-3-finne-tilbake-bokstavene">Steg 3: Finne tilbake bokstavene</h1>
 <p>Akkurat som i koden fra den forrige oppgaven skal vi finne posisjonen til bokstaven, men denne gangen skal vi gå bakover i alfabetet for å dekode.</p>
-<section id="sjekkliste-2" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li><p>Forsøk å skriv inn denne koden og kjør den:</p>
-<pre><code class="hljs python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<li>
+<p>Forsøk å skriv inn denne koden og kjør den:</p>
+<pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 secret = <span class="hljs-number">17</span>
 secretletter = <span class="hljs-string">"r"</span>
@@ -137,20 +154,23 @@ newpos = pos - secret
 
 letter = alphabet[newpos]
 
-print(letter)</code></pre>
+print(letter)
+</code></pre>
 </li>
 </ul>
 </section>
 </section>
-<section id="steg-4-bygge-funksjoner" class="level1 activity">
-<h1>Steg 4: Bygge funksjoner</h1>
-<p>La oss ta koden som lager og leser Cæsar-koder og gjøre den om til to <em>funksjoner</em>. Gi den ene funksjonen navnet <code>encode</code> og den andre funksjonen navnet <code>decode</code>. <strong>Tips:</strong> Dersom du aldri har hørt om funksjoner, kan du lese mer om de i <a href="../skilpaddeskolen/skilpaddeskolen.html">Skilpaddeskolen</a>.</p>
+<section class="activity" id="steg-4-bygge-funksjoner">
+<h1 class="activity" id="steg-4-bygge-funksjoner">Steg 4: Bygge funksjoner</h1>
+<p>La oss ta koden som lager og leser Cæsar-koder og gjøre den om til to
+<em>funksjoner</em>. Gi den ene funksjonen navnet <code>encode</code> og den andre funksjonen navnet <code>decode</code>. <strong>Tips:</strong> Dersom du aldri har hørt om funksjoner, kan du lese mer om de i <a href="../skilpaddeskolen/skilpaddeskolen.html">Skilpaddeskolen</a>.</p>
 <p>For å få en funksjon til å sende tilbake en verdi bruker vi <code>return</code>. Dette gjør at vi kan lagre funksjonens resultat til en variabel og deretter bruke variabelen.</p>
-<section id="sjekkliste-3" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
-<li><p>Lag en fil som ser slik ut:</p>
-<pre><code class="hljs python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
+<li>
+<p>Lag en fil som ser slik ut:</p>
+<pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">encode</span><span class="hljs-params">(letter, secret)</span>:</span>
     pos = alphabet.find(letter)
@@ -174,21 +194,25 @@ print(letter)</code></pre>
     <span class="hljs-keyword">return</span> alphabet[newpos]
 
 print(encode(<span class="hljs-string">"a"</span>, <span class="hljs-number">17</span>))
-print(decode(<span class="hljs-string">"r"</span>, <span class="hljs-number">17</span>))</code></pre>
-
-<p>Husk at du kan bruke ‘Tab’ i IDLE for å få innrykk. Du kan også merke deler av koden og rykke alt inn på en gang.</p></li>
-<li><p>Prøv å kode og dekode noen bokstaver!</p></li>
+print(decode(<span class="hljs-string">"r"</span>, <span class="hljs-number">17</span>))
+</code></pre>
+<p>Husk at du kan bruke 'Tab' i IDLE for å få innrykk. Du kan også merke deler av koden og rykke alt inn på en gang.</p>
+</li>
+<li>
+<p>Prøv å kode og dekode noen bokstaver!</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-5-send-et-hemmelig-ord-eller-to-og-finn-dem-tilbake-igjen" class="level1 activity">
-<h1>Steg 5: Send et hemmelig ord eller to, og finn dem tilbake igjen</h1>
+<section class="activity" id="steg-5-send-et-hemmelig-ord-eller-to-og-finn-dem-tilbake-igjen">
+<h1 class="activity" id="steg-5-send-et-hemmelig-ord-eller-to-og-finn-dem-tilbake-igjen">Steg 5: Send et hemmelig ord eller to, og finn dem tilbake igjen</h1>
 <p>Nå har vi noen funksjoner, la oss bruke dem til å kode ord. Vi kommer til å gå igjennom hver bokstav i ordet og kode det hvis det finnes i alfabetet (vi hopper over tegn som punktum og mellomrom).</p>
-<section id="sjekkliste-4" class="level2 check">
-<h2>Sjekkliste</h2>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
-<li><p>Under de nye funksjonene fra forrige oppgave kan du skrive inn koden under (med andre ord: behold det du gjorde i oppgave 4, og legg til koden under).</p>
-<pre><code class="hljs python">secret = <span class="hljs-number">17</span>
+<li>
+<p>Under de nye funksjonene fra forrige oppgave kan du skrive inn koden under (med andre ord: behold det du gjorde i oppgave 4, og legg til koden under).</p>
+<pre><code class="python">secret = <span class="hljs-number">17</span>
 message = <span class="hljs-string">"hello world"</span>
 
 output = <span class="hljs-string">""</span>
@@ -212,19 +236,26 @@ output = <span class="hljs-string">""</span>
     <span class="hljs-keyword">else</span>:
         output = output + character
 
-print(output)</code></pre>
+print(output)
+</code></pre>
 </li>
-<li><p>Kjør programmet og se hva som skjer.</p>
-<p>Den første delen av koden burde skrive ut “yvååc kcfåu”, som er den hemmelige versjonen av “hello world”. Den andre delen dekoder det igjen og skriver ut “hello world”</p></li>
+<li>
+<p>Kjør programmet og se hva som skjer.</p>
+<p>Den første delen av koden burde skrive ut &quot;yvååc kcfåu&quot;, som er den hemmelige versjonen av &quot;hello world&quot;. Den andre delen dekoder det igjen og skriver ut &quot;hello world&quot;</p>
+</li>
 </ul>
 </section>
 </section>
-<section id="steg-6-dekoding-av-noen-hemmelige-beskjeder" class="level1 activity">
-<h1>Steg 6: Dekoding av noen hemmelige beskjeder</h1>
+<section class="activity" id="steg-6-dekoding-av-noen-hemmelige-beskjeder">
+<h1 class="activity" id="steg-6-dekoding-av-noen-hemmelige-beskjeder">Steg 6: Dekoding av noen hemmelige beskjeder</h1>
 <p>Her er noen hemmelige beskjeder, forsøk å dekode dem!</p>
-<ol type="1">
-<li><p><code>daczj ym cgyzcdmwwzf?</code>, hemmeligheten er 21.</p></li>
-<li><p><code>æxkxånwn næ bnwwnwn mrwn</code>, hemmeligheten er 9.</p></li>
+<ol>
+<li>
+<p><code>daczj ym cgyzcdmwwzf?</code>, hemmeligheten er 21.</p>
+</li>
+<li>
+<p><code>æxkxånwn næ bnwwnwn mrwn</code>, hemmeligheten er 9.</p>
+</li>
 </ol>
 <p>Prøv å sende noen beskjeder til vennene dine! Hva med å lage et Python-program som forsøker seg på alle mulige hemmelige tall og forsøker å knekke koder selv om du ikke kan det hemmelige tallet?</p>
 </section>

@@ -6,92 +6,98 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Huskespill</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/huskespill/huskespill.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="huskespill" class="level1 intro">
-<h1>Huskespill</h1>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Huskespill</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><div class="course"><img src="../logo-white.png"/><span>Python</span></div><div class="pdf"><a href="/python/huskespill/huskespill.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="huskespill">
+<h1 class="intro" id="huskespill">Huskespill</h1>
 <p>I denne oppgaven skal du lage et huskespill hvor spilleren skal huske flest mulig ord i riktig rekkefølge. Spilleren skal få opp en liste med ord, deretter skal listen forsvinne og spilleren skal så skrive inn ordene i riktig rekkefølge. Skrives ordene inn i riktig rekkefølge, vil listen utvides med et nytt ord som må huskes. Programmet holder på slik helt til spilleren gjetter feil. Når spillet er ferdig får spilleren vite hvor mange ord han eller hun klarte å huske etter hverandre.</p>
 <p>Vi vil bygge programmet gradvis steg for steg. I hvert steg vil det gis viktige tips som ligner på slik en bør løse steget.</p>
-<p><strong>Eksempel på hvordan programmet skal fungere: </strong></p>
-<figure>
-<img src="memo.gif" />
-</figure>
+<p>**Eksempel på hvordan programmet skal fungere: **</p>
+<p><figure><img src="memo.gif" alt=""></figure></p>
 </section>
-<section id="steg-1-utvid-en-liste-med-tilfeldige-element" class="level1 activity">
-<h1>Steg 1: Utvid en liste med tilfeldige element</h1>
+<section class="activity" id="steg-1-utvid-en-liste-med-tilfeldige-element">
+<h1 class="activity" id="steg-1-utvid-en-liste-med-tilfeldige-element">Steg 1: Utvid en liste med tilfeldige element</h1>
 <ul>
 <li>Lag en funksjon som tar inn en liste som parameter.</li>
 <li>Funksjonen skal legge til et tilfeldig ord på slutten av lista.</li>
 <li>Funksjonen skal returnere den utvidede lista.</li>
 <li><strong>Før du går videre til steg 2, sjekk at funksjonen din fungerer som den skal.</strong></li>
 </ul>
-<section id="tips-lister" class="level2 protip">
-<h2>Tips: Lister</h2>
+<section class="protip" id="tips-lister">
+<h2 class="protip" id="tips-lister">Tips: Lister</h2>
 <p><strong>Hva:</strong> En liste er en variabel som kan lagre flere verdier på en gang.</p>
-<strong>Hvordan lage lister:</strong>
-<pre><code class="hljs python">liste = [<span class="hljs-string">'sau'</span>, <span class="hljs-string">'gris'</span>, <span class="hljs-string">'menneske'</span>]
+<p><strong>Hvordan lage lister:</strong></p>
+<pre><code class="python">liste = [<span class="hljs-string">'sau'</span>, <span class="hljs-string">'gris'</span>, <span class="hljs-string">'menneske'</span>]
 tom_liste = []
 print(liste)
-print(tom_liste)</code></pre>
-<strong>Hvordan hente ut verdier fra en liste:</strong>
-<pre><code class="hljs python">print(liste[<span class="hljs-number">2</span>])</code></pre>
-<p>Husk at vi begynner å telle på 0, så første posisjon i lista er posisjon 0. Deretter teller vi oppover 0,1,2,3…</p>
-<strong>Hvordan finne lengden til liste:</strong>
-<pre><code class="hljs python">lengde = len(liste)
-print(lengde)</code></pre>
-
-<strong>Hvordan legge til ny verdi på slutten av liste:</strong>
-<pre><code class="hljs python">print(liste)
+print(tom_liste)
+</code></pre>
+<p><strong>Hvordan hente ut verdier fra en liste:</strong></p>
+<pre><code class="python">print(liste[<span class="hljs-number">2</span>])
+</code></pre>
+<p>Husk at vi begynner å telle på 0, så første posisjon i lista er posisjon 0. Deretter teller vi oppover 0,1,2,3...</p>
+<p><strong>Hvordan finne lengden til liste:</strong></p>
+<pre><code class="python">lengde = len(liste)
+print(lengde)
+</code></pre>
+<p><strong>Hvordan legge til ny verdi på slutten av liste:</strong></p>
+<pre><code class="python">print(liste)
 liste.append(<span class="hljs-string">'nils'</span>)
-print(liste)</code></pre>
+print(liste)
+</code></pre>
 <p>Prøv ut eksemplene for å forstå hvordan du kan bruke dem til å løse oppgaven.</p>
 </section>
-<section id="tips-velge-et-tilfeldig-element-i-en-liste" class="level2 protip">
-<h2>Tips: Velge et tilfeldig element i en liste</h2>
-<p>For å hente et tilfeldig element i en liste kan man bruke <a href="https://docs.python.org/3.4/library/random.html#random.choice"><code>choice()</code></a> i random-biblioteket.</p>
-<strong>Eksempel:</strong>
-<pre><code class="hljs python"><span class="hljs-keyword">import</span> random
+<section class="protip" id="tips-velge-et-tilfeldig-element-i-en-liste">
+<h2 class="protip" id="tips-velge-et-tilfeldig-element-i-en-liste">Tips: Velge et tilfeldig element i en liste</h2>
+<p>For å hente et tilfeldig element i en liste kan man bruke
+<a href="https://docs.python.org/3.4/library/random.html#random.choice"><code>choice()</code></a>
+i random-biblioteket.</p>
+<p><strong>Eksempel:</strong></p>
+<pre><code class="python"><span class="hljs-keyword">import</span> random
 liste = [<span class="hljs-string">'asdf'</span>, <span class="hljs-string">'qwerty'</span>, <span class="hljs-string">'nils'</span>]
 
 tilfeldig = random.choice(liste)
-print(tilfeldig)</code></pre>
+print(tilfeldig)
+</code></pre>
 <p>Prøv å kjør denne koden mange ganger!</p>
 </section>
 </section>
-<section id="steg-2-hent-inn-tekst-og-lag-liste-av-den" class="level1 activity">
-<h1>Steg 2: Hent inn tekst og lag liste av den</h1>
+<section class="activity" id="steg-2-hent-inn-tekst-og-lag-liste-av-den">
+<h1 class="activity" id="steg-2-hent-inn-tekst-og-lag-liste-av-den">Steg 2: Hent inn tekst og lag liste av den</h1>
 <ul>
 <li>Lag en funksjon som tar inn tekst og lager en liste av den.</li>
 <li>Teksten som tas inn skal splittes ved <code>-</code>.</li>
 <li>Funksjonen skal returnere listen.</li>
 <li><strong>Før du går videre til steg 3, sjekk at funksjonen din fungerer som den skal.</strong></li>
 </ul>
-<section id="tips-hente-innputt" class="level2 protip">
-<h2>Tips: Hente innputt</h2>
+<section class="protip" id="tips-hente-innputt">
+<h2 class="protip" id="tips-hente-innputt">Tips: Hente innputt</h2>
 <p>For å hente innputt og lagre det til en variabel kan vi bruke <a href="https://docs.python.org/3.4/library/functions.html#input"><code>input()</code></a>.</p>
-<strong>Eksempel:</strong>
-<pre><code class="hljs python">tekst = input(<span class="hljs-string">'Skriv noe'</span>)</code></pre>
+<p><strong>Eksempel:</strong></p>
+<pre><code class="python">tekst = input(<span class="hljs-string">'Skriv noe'</span>)
+</code></pre>
 <p>Det som brukeren skriver inn vil lagres i variabelen <code>tekst</code>.</p>
 </section>
-<section id="tips-splitte-tekst-til-en-liste" class="level2 protip">
-<h2>Tips: Splitte tekst til en liste</h2>
+<section class="protip" id="tips-splitte-tekst-til-en-liste">
+<h2 class="protip" id="tips-splitte-tekst-til-en-liste">Tips: Splitte tekst til en liste</h2>
 <p>Siden spilleren ikke kan skrive inn en liste, men kun tekst, må vi forandre teksten til en liste. Dette kan vi gjøre med <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>split()</code></a>. Hvis vi skiller ordene som skal være i lista med et bestemt tegn, kan <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code>split()</code></a> hente ut alle ordene og legge dem i en liste.</p>
-<strong>Eksempel:</strong>
-<pre><code class="hljs python">tekst = <span class="hljs-string">'giraff-neshorn-bjørn-pelikan'</span>
+<p><strong>Eksempel:</strong></p>
+<pre><code class="python">tekst = <span class="hljs-string">'giraff-neshorn-bjørn-pelikan'</span>
 liste = tekst.split(<span class="hljs-string">'-'</span>)
-print(liste)</code></pre>
+print(liste)
+</code></pre>
 <p>Merk <code>'-'</code> som står i parentesen <code>split('-')</code>. Denne forteller hvilket tegn som skiller ordene fra hverandre.</p>
 <p><strong>Test ut eksempelet for å se hva som skjer.</strong></p>
 </section>
 </section>
-<section id="steg-3-lag-spillet" class="level1 activity">
-<h1>Steg 3: Lag spillet</h1>
+<section class="activity" id="steg-3-lag-spillet">
+<h1 class="activity" id="steg-3-lag-spillet">Steg 3: Lag spillet</h1>
 <ul>
 <li>Bruk funksjonene fra steg 1 og 2 til å lage programmet.</li>
 <li>Programmet skal benytte to lister. En som utvides for hver runde, og en som lages ved hjelp av ordene som brukeren skriver inn.</li>
 <li>Så lenge listene er like skal programmet kjøre.</li>
 <li>Når programmet er ferdig, skriv ut hvor mange ord spilleren klarte å huske.</li>
 </ul>
-<section id="sjekkliste-for-oppgaven" class="level2 check">
-<h2>Sjekkliste for oppgaven</h2>
+<section class="check" id="sjekkliste-for-oppgaven">
+<h2 class="check" id="sjekkliste-for-oppgaven">Sjekkliste for oppgaven</h2>
 <ul>
 <li>Avsluttes spillet når det huskes feil?</li>
 <li>Får spilleren vite hvor mange han eller hun husket riktig?</li>

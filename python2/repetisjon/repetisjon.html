@@ -6,70 +6,78 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Repetisjon</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/repetisjon/repetisjon.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section id="introduksjon" class="level1 intro">
-<h1>Introduksjon</h1>
-<p>I denne oppgaven skal vi repetere litt Python-syntaks. Hele dette kurset er for de som har programmert Python før. Dersom ikke har mye erfaring med Python før bør du starte med <a href="../../python/index.html">introduksjonskurset i Python</a>.</p>
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Repetisjon</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><div class="course"><img src="../logo-white.png"/><span>Videregående Python</span></div><div class="pdf"><a href="/python2/repetisjon/repetisjon.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I denne oppgaven skal vi repetere litt Python-syntaks. Hele dette kurset
+er for de som har programmert Python før. Dersom ikke har mye erfaring med
+Python før bør du starte med <a href="../../python/index.html">introduksjonskurset i Python</a>.</p>
 </section>
-<section id="kodeblokker" class="level1 activity">
-<h1>Kodeblokker</h1>
-<p>I oppgavene er noen eksempler så korte at vi kan skrive de direkte inn i Python. Her er en kodeblokk som illustrerer et kort eksempel:</p>
-<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">2</span>
-<span class="hljs-keyword">False</span></code></pre>
-
-<p>Her betyr <code>&gt;&gt;&gt;</code> at Python er klar til å ta imot kode, <code>1 == 2</code> er koden, mens <code>False</code> er svaret.</p>
+<section class="activity" id="kodeblokker">
+<h1 class="activity" id="kodeblokker">Kodeblokker</h1>
+<p>I oppgavene er noen eksempler så korte at vi kan skrive de direkte inn i
+Python. Her er en kodeblokk som illustrerer et kort eksempel:</p>
+<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">2</span>
+<span class="hljs-keyword">False</span>
+</code></pre>
+<p>Her betyr <code>&gt;&gt;&gt;</code> at Python er klar til å ta imot kode, <code>1 == 2</code> er koden, mens
+<code>False</code> er svaret.</p>
 <p>I andre eksempler er det ikke noe svar, men en utskrift av tekst isteden:</p>
-<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei!"</span>)
-Hei!</code></pre>
-
-<p>Når vi ikke bruker <code>&gt;&gt;&gt;</code> i kodeblokkene, er det fordi koden er flere linjer lang. Da er det bedre å bruke en fil:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
+<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei!"</span>)
+Hei!
+</code></pre>
+<p>Når vi ikke bruker <code>&gt;&gt;&gt;</code> i kodeblokkene, er det fordi koden er flere linjer
+lang. Da er det bedre å bruke en fil:</p>
+<pre><code class="python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
     <span class="hljs-keyword">if</span> i == <span class="hljs-number">3</span>:
         print(i)
     <span class="hljs-keyword">else</span>:
-        print(<span class="hljs-number">2</span>*i)</code></pre>
-
+        print(<span class="hljs-number">2</span>*i)
+</code></pre>
 <p>Og når vi kjører denne filen i IDLE får vi utskriften:</p>
-<pre><code class="hljs python">&gt;&gt;&gt;
+<pre><code class="python">&gt;&gt;&gt;
 <span class="hljs-number">0</span>
 <span class="hljs-number">2</span>
 <span class="hljs-number">4</span>
 <span class="hljs-number">3</span>
-<span class="hljs-number">8</span></code></pre>
-
-<p>Noen ganger har vi eksempler med input fra brukeren. Da vil teksten brukeren skriver være grønn, mens det programmet skriver ut vil være svart:</p>
+<span class="hljs-number">8</span>
+</code></pre>
+<p>Noen ganger har vi eksempler med input fra brukeren. Da vil teksten brukeren
+skriver være grønn, mens det programmet skriver ut vil være svart:</p>
 <pre>
 >>>
 Hva heter du? <font color="green">Ada</font>
 Hei, Ada!
 </pre>
-
 </section>
-<section id="input-og-output" class="level1 activity">
-<h1>Input og output</h1>
-<section id="input-og-print" class="level2 protip">
-<h2>input() og print()</h2>
-<p>Vi kan bruke <code>print()</code> når vi skal skrive ut tekst til brukeren. Koden etter <code>&gt;&gt;&gt;</code> er kode vi skriver inn i f.eks. IDLE, og som kjøres med en gang.</p>
-<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei, verden"</span>)
-Hei, verden</code></pre>
-
+<section class="activity" id="input-og-output">
+<h1 class="activity" id="input-og-output">Input og output</h1>
+<section class="protip" id="input-og-print">
+<h2 class="protip" id="input-og-print">input() og print()</h2>
+<p>Vi kan bruke <code>print()</code> når vi skal skrive ut tekst til brukeren.
+Koden etter <code>&gt;&gt;&gt;</code> er kode vi skriver inn i f.eks. IDLE, og som
+kjøres med en gang.</p>
+<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei, verden"</span>)
+Hei, verden
+</code></pre>
 <p><code>input()</code> brukes når du ønsker å la brukeren gi input til programmet ditt.</p>
-<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>number = input(<span class="hljs-string">"Skriv inn et tall: "</span>)
+<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>number = input(<span class="hljs-string">"Skriv inn et tall: "</span>)
 Skriv inn et tall: <span class="hljs-number">15</span>
 <span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Du skrev inn: "</span> + str(number))
-Du skrev inn: <span class="hljs-number">15</span></code></pre>
+Du skrev inn: <span class="hljs-number">15</span>
+</code></pre>
 <!--A little workaround to avoid checklist being a part of protip-->
 </section>
 </section>
-<section id="section" class="level1 check">
-<h1></h1>
-<p>Skriv et program som spør om brukerens navn, og så skriver ut en hilsen til brukeren. Det kan for eksempel fungere slik:</p>
+<section class="check" id="">
+<h1 class="check" id=""></h1>
+<p>Skriv et program som spør om brukerens navn, og så skriver ut en
+hilsen til brukeren. Det kan for eksempel fungere slik:</p>
 <pre>
 >>>
 Hei! Hva er navnet ditt?
 <font color="green">Per</font>
 Hyggelig å treffe deg, Per!
 </pre>
-
 <p>Dette må du gjøre:</p>
 <ul>
 <li>Spør om brukerens navn.</li>
@@ -77,14 +85,20 @@ Hyggelig å treffe deg, Per!
 <li>Skriv ut en hilsen til brukeren som inneholder navnet brukeren skrev inn.</li>
 </ul>
 </section>
-<section id="if-elif-else" class="level1 activity">
-<h1>if-elif-else</h1>
-<section id="section-1" class="level2 protip">
-<h2></h2>
-<p>Vi bruker <code>if</code>, <code>elif</code> og <code>else</code> for å bestemme hva som skjer i et program. Etter <code>if</code> og <code>elif</code> kommer en test og deretter <code>:</code>, mens etter <code>else</code> kommer alltid <code>:</code> uten noen test. På linjen under <code>:</code> skrives kodeblokken som skal kjøres dersom testen er sann (<code>if</code> eller <code>elif</code>), eller dersom alle testene usanne (<code>else</code>).</p>
-<p>Husk at du alltid må starte med en <code>if</code>-setning, og må ha alle <code>elif</code>-setningene før en <code>else</code>-blokk. Du <em>trenger ikke</em> å bruke verken <code>elif</code>-setninger eller <code>else</code>-blokk dersom du ikke ønsker det.</p>
+<section class="activity" id="if-elif-else">
+<h1 class="activity" id="if-elif-else">if-elif-else</h1>
+<section class="protip" id="-2">
+<h2 class="protip" id="-2"></h2>
+<p>Vi bruker <code>if</code>, <code>elif</code> og <code>else</code> for å bestemme hva som skjer i et program.
+Etter <code>if</code> og <code>elif</code> kommer en test og deretter <code>:</code>, mens etter <code>else</code> kommer
+alltid <code>:</code> uten noen test. På linjen under <code>:</code> skrives kodeblokken som skal
+kjøres dersom testen er sann (<code>if</code> eller <code>elif</code>), eller dersom alle testene
+usanne (<code>else</code>).</p>
+<p>Husk at du alltid må starte med en <code>if</code>-setning, og må ha alle <code>elif</code>-setningene
+før en <code>else</code>-blokk. Du <em>trenger ikke</em> å bruke verken <code>elif</code>-setninger eller
+<code>else</code>-blokk dersom du ikke ønsker det.</p>
 <p>For eksempel slik:</p>
-<pre><code class="hljs python">name = <span class="hljs-string">"Ada"</span>
+<pre><code class="python">name = <span class="hljs-string">"Ada"</span>
 <span class="hljs-keyword">if</span> name == <span class="hljs-string">"Per"</span>:
     print(<span class="hljs-string">"Per er et guttenavn"</span>)
 <span class="hljs-keyword">elif</span> name == <span class="hljs-string">"Ada"</span>:
@@ -92,21 +106,22 @@ Hyggelig å treffe deg, Per!
 <span class="hljs-keyword">elif</span> name == <span class="hljs-string">"Kim"</span>:
     print(<span class="hljs-string">"Kim kan være både guttenavn og jentenavn."</span>)
 <span class="hljs-keyword">else</span>:
-    print(<span class="hljs-string">"Jeg vet ikke om "</span> + navn + <span class="hljs-string">" er en gutt eller ei jente."</span>)</code></pre>
-
+    print(<span class="hljs-string">"Jeg vet ikke om "</span> + navn + <span class="hljs-string">" er en gutt eller ei jente."</span>)
+</code></pre>
 <!--A little workaround to avoid checklist being a part of protip-->
 </section>
 </section>
-<section id="section-2" class="level1 check">
-<h1></h1>
-<p>Du skal nå lage et program som finner ut hvilken aldersgruppe brukeren er i; barn, ungdom, voksen eller pensjonist. Du kan selv bestemme hvor aldersgrensene skal gå. Det kan for eksempel fungere slik:</p>
+<section class="check" id="-3">
+<h1 class="check" id="-3"></h1>
+<p>Du skal nå lage et program som finner ut hvilken aldersgruppe brukeren er i;
+barn, ungdom, voksen eller pensjonist. Du kan selv bestemme hvor aldersgrensene
+skal gå. Det kan for eksempel fungere slik:</p>
 <pre>
 >>>
 Hei! Hva er alderen din?
 <font color="green">77</font>
 Du er visst en pensjonist.
 </pre>
-
 <p>Det du trenger å gjøre er:</p>
 <ul>
 <li>Spør om brukerens alder.</li>
@@ -115,45 +130,46 @@ Du er visst en pensjonist.
 <li>Skriv ut hvilken aldersgruppe brukeren er i.</li>
 </ul>
 </section>
-<section id="løkker" class="level1 activity">
-<h1>Løkker</h1>
-<section id="for-løkker" class="level2 protip">
-<h2>for-løkker</h2>
+<section class="activity" id="lokker">
+<h1 class="activity" id="lokker">Løkker</h1>
+<section class="protip" id="for-lokker">
+<h2 class="protip" id="for-lokker">for-løkker</h2>
 <p><code>for</code>-løkker brukes når vi ønsker å gjøre ting flere ganger.</p>
-<pre><code class="hljs python"><span class="hljs-comment"># print Hello three times</span>
+<pre><code class="python"><span class="hljs-comment"># print Hello three times</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
-    print(<span class="hljs-string">"Hello"</span>)</code></pre>
-
+    print(<span class="hljs-string">"Hello"</span>)
+</code></pre>
 <p>Da får vi ut:</p>
-<pre><code class="hljs"><span class="hljs-prompt">&gt;&gt;&gt;</span>
+<pre><code><span class="hljs-prompt">&gt;&gt;</span>&gt;
 <span class="hljs-constant">Hello</span>
 <span class="hljs-constant">Hello</span>
-<span class="hljs-constant">Hello</span></code></pre>
-
+<span class="hljs-constant">Hello</span>
+</code></pre>
 <p>Vi kan også bruke <code>for</code>-løkker når vi ønsker å gå igjennom ei liste:</p>
-<pre><code class="hljs python"><span class="hljs-comment"># print all elements in the list food_list</span>
+<pre><code class="python"><span class="hljs-comment"># print all elements in the list food_list</span>
 food_list = [<span class="hljs-string">"eggs"</span>, <span class="hljs-string">"ham"</span>, <span class="hljs-string">"spiced ham"</span>, <span class="hljs-string">"jam"</span>]
 <span class="hljs-keyword">for</span> food <span class="hljs-keyword">in</span> food_list:
-    print(food)</code></pre>
-
+    print(food)
+</code></pre>
 <p>Dette programmet vil skrive ut:</p>
-<pre><code class="hljs"><span class="hljs-prompt">&gt;&gt;&gt;</span>
+<pre><code><span class="hljs-prompt">&gt;&gt;</span>&gt;
 eggs
 ham
 spiced ham
-jam</code></pre>
-
+jam
+</code></pre>
 <!--A little workaround to avoid checklist being a part of protip-->
 </section>
 </section>
-<section id="section-3" class="level1 check">
-<h1></h1>
-<p>Du skal nå lage ei liste med navn, og skrive ut alle navnene i lista. Resultatet kan se omtrent slik ut:</p>
-<pre><code class="hljs"><span class="hljs-prompt">&gt;&gt;&gt;</span>
+<section class="check" id="-4">
+<h1 class="check" id="-4"></h1>
+<p>Du skal nå lage ei liste med navn, og skrive ut alle navnene i lista. Resultatet
+kan se omtrent slik ut:</p>
+<pre><code><span class="hljs-prompt">&gt;&gt;</span>&gt;
 <span class="hljs-constant">Per</span>
 <span class="hljs-constant">Ada</span>
-<span class="hljs-constant">Kim</span></code></pre>
-
+<span class="hljs-constant">Kim</span>
+</code></pre>
 <p>Dette du må gjøre:</p>
 <ul>
 <li>Lag ei liste med navn.</li>
@@ -161,51 +177,60 @@ jam</code></pre>
 <li>Skriv ut hvert navn.</li>
 </ul>
 </section>
-<section id="range" class="level1 protip">
-<h1>range()</h1>
-<p><code>range()</code> lager en rekke med tall. Rekken kan brukes til å gjøre noe mange ganger med hjelp av en <code>for</code>- eller <code>while</code>-løkke. <code>range()</code> tar inn tre argumenter <code>start</code>, <code>stop</code>, <code>step</code>:</p>
+<section class="protip" id="range">
+<h1 class="protip" id="range">range()</h1>
+<p><code>range()</code> lager en rekke med tall. Rekken kan brukes til å gjøre noe mange
+ganger med hjelp av en <code>for</code>- eller <code>while</code>-løkke. <code>range()</code> tar inn tre
+argumenter <code>start</code>, <code>stop</code>, <code>step</code>:</p>
 <ul>
 <li><code>start</code> forteller hva vi skal telle fra.</li>
-<li><code>stop</code> forteller hva vi skal telle til, merk at vi <strong>ikke</strong> teller med slutt-tallet.</li>
-<li><code>step</code> forteller hvor store steg vi skal telle med. Vi kan for eksempel telle med steg på <code>2</code> eller steg på <code>100</code>.</li>
+<li><code>stop</code> forteller hva vi skal telle til, merk at vi <strong>ikke</strong> teller
+med slutt-tallet.</li>
+<li><code>step</code> forteller hvor store steg vi skal telle med. Vi kan for eksempel
+telle med steg på <code>2</code> eller steg på <code>100</code>.</li>
 </ul>
-<p>Ettersom rekken lages etterhvert som man teller over den, må man konvertere rekken til en liste dersom vi ønsker å se tallene i rekken. Rekken konverteres til en liste med <code>list()</code>. Her er noen eksempler:</p>
-<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>))
+<p>Ettersom rekken lages etterhvert som man teller over den, må man konvertere
+rekken til en liste dersom vi ønsker å se tallene i rekken. Rekken konverteres
+til en liste med <code>list()</code>. Her er noen eksempler:</p>
+<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>))
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
 <span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">10</span>))
 [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
 <span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">200</span>, <span class="hljs-number">500</span>))
 [<span class="hljs-number">200</span>, <span class="hljs-number">201</span>, <span class="hljs-number">202</span>, ..., <span class="hljs-number">497</span>, <span class="hljs-number">498</span>, <span class="hljs-number">499</span>]
 <span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">5</span>))
-[<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">25</span>, <span class="hljs-number">30</span>, <span class="hljs-number">35</span>, <span class="hljs-number">40</span>, <span class="hljs-number">45</span>]</code></pre>
-
-<p><code>range()</code> kan brukes på mange måter, vi kan for eksempel gå igjennom den og summere alle tallene fra 1 til 100:</p>
-<pre><code class="hljs python">sum = <span class="hljs-number">0</span>
+[<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">25</span>, <span class="hljs-number">30</span>, <span class="hljs-number">35</span>, <span class="hljs-number">40</span>, <span class="hljs-number">45</span>]
+</code></pre>
+<p><code>range()</code> kan brukes på mange måter, vi kan for eksempel gå igjennom den og
+summere alle tallene fra 1 til 100:</p>
+<pre><code class="python">sum = <span class="hljs-number">0</span>
 <span class="hljs-keyword">for</span> number <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">101</span>):
     sum += number
-print(sum)</code></pre>
-
+print(sum)
+</code></pre>
 </section>
-<section id="while-løkker" class="level1 protip">
-<h1>while-løkker</h1>
-<p><code>while</code>-løkker har mange ulike bruksområder. De kan for eksempel brukes når du vil kjøre kode inntil noe inntreffer:</p>
-<pre><code class="hljs python">word = <span class="hljs-string">""</span>
+<section class="protip" id="while-lokker">
+<h1 class="protip" id="while-lokker">while-løkker</h1>
+<p><code>while</code>-løkker har mange ulike bruksområder. De kan for eksempel brukes når
+du vil kjøre kode inntil noe inntreffer:</p>
+<pre><code class="python">word = <span class="hljs-string">""</span>
 <span class="hljs-keyword">while</span> word != <span class="hljs-string">"exit"</span>:
     print(word)
-    word = input(<span class="hljs-string">"Please write a word: "</span>)</code></pre>
-
+    word = input(<span class="hljs-string">"Please write a word: "</span>)
+</code></pre>
 <p>Den samme løkken kan også skrive slik:</p>
-<pre><code class="hljs python"><span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+<pre><code class="python"><span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
     word = input(<span class="hljs-string">"Please write a word: "</span>)
     <span class="hljs-keyword">if</span> word == <span class="hljs-string">"exit"</span>:
         <span class="hljs-keyword">break</span>
-    print(word)</code></pre>
-
+    print(word)
+</code></pre>
 <!--A little workaround to avoid checklist being a part of protip-->
 </section>
-<section id="section-4" class="level1 check">
-<h1></h1>
-<p>Skriv et program som summerer alle tallene fra <code>1</code> til <code>100</code> ved hjelp av ei <code>while</code>-løkke. Pass på at du får <code>5050</code> som svar.</p>
+<section class="check" id="-5">
+<h1 class="check" id="-5"></h1>
+<p>Skriv et program som summerer alle tallene fra <code>1</code> til <code>100</code> ved hjelp av ei
+<code>while</code>-løkke. Pass på at du får <code>5050</code> som svar.</p>
 <p>Dette må du gjøre:</p>
 <ul>
 <li>Lag en variabel som inneholder summen.</li>
@@ -214,36 +239,43 @@ print(sum)</code></pre>
 <ul>
 <li>Oppdater summen.</li>
 <li>Inkrementer tellevariabelen din.</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 </section>
-<section id="funksjoner" class="level1 activity">
-<h1>Funksjoner</h1>
+<section class="activity" id="funksjoner">
+<h1 class="activity" id="funksjoner">Funksjoner</h1>
 </section>
-<section id="section-5" class="level1 protip">
-<h1></h1>
-<p>Funksjoner lar oss gjenbruke kode, og er svært nyttig når vi skal programmere mer enn noen få linjer. En funksjon er på formen:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span><span class="hljs-params">(name)</span>:</span>
+<section class="protip" id="-6">
+<h1 class="protip" id="-6"></h1>
+<p>Funksjoner lar oss gjenbruke kode, og er svært nyttig når vi skal programmere
+mer enn noen få linjer. En funksjon er på formen:</p>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span><span class="hljs-params">(name)</span>:</span>
     print(<span class="hljs-string">"Hei, "</span> + name + <span class="hljs-string">"!"</span>)
 
-greet(<span class="hljs-string">"Per"</span>)</code></pre>
-
-<p>Her har vi en funksjon med navn <code>greet</code>, som skriver ut en hilsen. <code>name</code> er et <strong>parameter</strong>, det vil si at <code>name</code> er en variabel som funksjonen <code>greet</code> tar imot. Når vi <strong>kaller</strong> funksjonen <code>greet</code>, med <code>greet(&quot;Per&quot;)</code> er <code>&quot;Per&quot;</code> et <strong>argument</strong> til funksjonen. Et argument er den variabelen vi gir til funksjonen når vi kaller den.</p>
+greet(<span class="hljs-string">"Per"</span>)
+</code></pre>
+<p>Her har vi en funksjon med navn <code>greet</code>, som skriver ut en hilsen. <code>name</code> er
+et <strong>parameter</strong>, det vil si at <code>name</code> er en variabel som funksjonen <code>greet</code>
+tar imot. Når vi <strong>kaller</strong> funksjonen <code>greet</code>, med <code>greet(&quot;Per&quot;)</code> er <code>&quot;Per&quot;</code> et
+<strong>argument</strong> til funksjonen. Et argument er den variabelen vi gir til funksjonen
+når vi kaller den.</p>
 <p>Vi kan også lage funksjoner som returnerer en verdi. Det vil se slik ut:</p>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiply</span><span class="hljs-params">(x, y)</span>:</span>
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">multiply</span><span class="hljs-params">(x, y)</span>:</span>
     product = x*y
-    <span class="hljs-keyword">return</span> product</code></pre>
-
+    <span class="hljs-keyword">return</span> product
+</code></pre>
 <!--A little workaround to avoid checklist being a part of protip-->
 </section>
-<section id="section-6" class="level1 check">
-<h1></h1>
-<p>Nå skal vi lage en funksjon som adderer to tall. Test at funksjonen din fungerer som dette:</p>
-<pre><code class="hljs python"><span class="hljs-prompt">&gt;&gt;&gt; </span>sum = add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<section class="check" id="-7">
+<h1 class="check" id="-7"></h1>
+<p>Nå skal vi lage en funksjon som adderer to tall. Test at
+funksjonen din fungerer som dette:</p>
+<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>sum = add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
 Fikk inn <span class="hljs-number">3</span> og <span class="hljs-number">4</span>
 <span class="hljs-prompt">&gt;&gt;&gt; </span>print(sum)
-<span class="hljs-number">7</span></code></pre>
-
+<span class="hljs-number">7</span>
+</code></pre>
 <p>Dette må du gjøre:</p>
 <ul>
 <li>Definer en funksjon som tar inn to tall som parametre.</li>
