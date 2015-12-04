@@ -32,13 +32,10 @@ mange linjer.
 </li>
 <li>
 <p>Lagre det følgende programmet som skilpaddetekst.py, og se hva som skjer.</p>
-</li>
-</ul>
-<pre><code>```python
-from turtle import *
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 
-TEXT = &quot;&quot;&quot;
+TEXT = <span class="hljs-string">"""
 ______      _   _
 | ___ \    | | | |
 | |_/ /   _| |_| |__   ___  _ __
@@ -47,14 +44,12 @@ ______      _   _
 \_|   \__, |\__|_| |_|\___/|_| |_|
        __/ |
       |___/
-&quot;&quot;&quot;
+"""</span>
 
 print(TEXT)
-```
-
-Du skal nå se teksten printet ut i IDLE, men kan vi ikke få skilpadden til å skrive den for oss?
 </code></pre>
-<ul>
+<p>Du skal nå se teksten printet ut i IDLE, men kan vi ikke få skilpadden til å skrive den for oss?</p>
+</li>
 <li>
 <p>Når vi skal skrive teksten med skilpadden, er det lettest å gjøre dette linje for linje, og det er derfor lettere om vi deler opp <code>TEXT</code> i en liste med enkeltlinjer. Til dette bruker vi <code>TEXT.split('\n')</code> som deler opp <code>TEXT</code> i flere linjer, og lagre denne i variabelen <code>LINES</code>.</p>
 <pre><code class="python">LINES = TEXT.split(<span class="hljs-string">'\n'</span>)

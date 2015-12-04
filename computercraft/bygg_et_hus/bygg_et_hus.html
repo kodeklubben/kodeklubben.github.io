@@ -243,26 +243,24 @@ noe som heter parametre. I praksis betyr det at vi bestemmer verdien
 på variablene utenfor selve funksjonen. Endre programmet ditt slik
 at det ser ut som dette, pass på at du sletter de to linjene som
 pleide å gi verdi til <code>hoyde</code> og <code>lengde</code>.</p>
-</li>
-</ul>
-<pre><code>```lua
-function byggVegg(hoyde, lengde)              -- endret linje
-    for j = 1, hoyde do
+<pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>              <span class="hljs-comment">-- endret linje</span>
+    <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
-        for i = 1, lengde do
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, lengde <span class="hljs-keyword">do</span>
             turtle.placeDown()
             turtle.forward()
-        end
+        <span class="hljs-keyword">end</span>
 
-        for i = 1, lengde do
+        <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, lengde <span class="hljs-keyword">do</span>
             turtle.back()
-        end
-    end
-end
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 
-byggVegg(3, 5)                                -- endret linje
-```
+byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)                                <span class="hljs-comment">-- endret linje</span>
 </code></pre>
+</li>
+</ul>
 <section class="try" id="prov-selv-3">
 <h3 class="try" id="prov-selv-3">Prøv selv</h3>
 <p>Endre tallene <code>3</code> og <code>5</code> i den siste linjen. Bygger roboten vegger av

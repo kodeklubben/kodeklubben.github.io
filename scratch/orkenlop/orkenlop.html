@@ -240,11 +240,10 @@ over og nullstille spillet, slik at er klart for en ny runde.</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul>
-<li>Klikk på papegøyefiguren og legg til en kloss som sender melding
-<code>Avslutt</code> etter at figuren sier den har vunnet.</li>
-</ul>
-<pre><code>```blocks
-    når [a v] trykkes
+<li>
+<p>Klikk på papegøyefiguren og legg til en kloss som sender melding
+<code>Avslutt</code> etter at figuren sier den har vunnet.</p>
+<pre><code class="blocks">    når [a v] trykkes
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
         hvis (berører [kant v]?)
@@ -254,9 +253,8 @@ over og nullstille spillet, slik at er klart for en ny runde.</em></p>
             send melding [Avslutt v]
         slutt
     slutt
-```
 </code></pre>
-<ul>
+</li>
 <li>
 <p>Vi trenger nå et nytt skript som lytter etter denne
 avslutningsmeldingen og flytter papegøyen tilbake til start.</p>

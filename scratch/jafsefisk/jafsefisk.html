@@ -75,7 +75,7 @@ skriptet:</p>
 <ul>
 <li>
 <p>Du kan stoppe JafseFisks maniske flipping hvis du sørger for at den
-bare flytter seg når den ikke er for nær musepekeren (<code class="blocksensing">avstand til</code>-klossen ligger i
+bare flytter seg når den ikke er for nær musepekeren (<code class="b">avstand til [musepeker v]</code> ligger i
 <code class="blocksensing">Sansning</code>-kategorien).</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     for alltid
@@ -151,11 +151,11 @@ hverandre. Det skal vi gjøre noe med i neste steg.</em></p>
 <h2 class="try" id="ting-a-prove-2">Ting å prøve</h2>
 <ul>
 <li>
-<p>Prøv å forandre tallene for <code class="blockmotion">steg</code> og <code class="blockoperators">tilfeldig tall</code>. Hvordan forandrer det byttedyrets
+<p>Prøv å forandre tallene for <code class="b">gå (2) steg</code> og <code class="b">tilfeldig tall fra (-20) til (20)</code>. Hvordan forandrer det byttedyrets
 bevegelser?</p>
 </li>
 <li>
-<p>Hva gjør <code class="blockmotion">sprett tilbake ved kanten</code>-klossen? Fjern
+<p>Hva gjør <code class="b">sprett tilbake ved kanten</code>? Fjern
 klossen og se hva som skjer.</p>
 </li>
 </ul>
@@ -173,7 +173,7 @@ så å dukke opp igjen en liten stund senere.</p>
 <li>
 <p>Vi starter med å la byttet forsvinne hvis det berører JafseFisk, og
 så komme tilbake etter 3 sekunder. Bruk
-<code class="blocksensing">berører</code>-klossen for å sjekke om byttet kommer borti
+<code class="b">berører [JafseFisk v]?</code> for å sjekke om byttet kommer borti
 JafseFisk. Utvid skriptet på byttedyret slik som dette:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     for alltid
@@ -208,17 +208,17 @@ rettferdig!</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <p><em>Hvordan kan vi sikre at byttet bare forsvinner hvis det berører
-JafseFisks munn? Tja, vi kan bruke <code class="blocksensing">berører farge</code>-klossen og se om den berører det hvite på
-fiskens tenner.</em></p>
+JafseFisks munn? Tja, vi kan bruke <code class="b">(berører fargen [#FFFFFF]?)</code>
+og se om den berører det hvite på fiskens tenner.</em></p>
 <ul>
 <li>
-<p>Legg til en <code class="blocksensing">berører farge</code>-kloss i tillegg til
-<code class="blocksensing">berører</code>-klossen i skriptet ditt. For å velge hvit
+<p>Legg til <code class="b">(berører fargen [#FFFFFF]?)</code> i tillegg til
+<code class="b">(berører [JafseFisk v]?)</code> i skriptet ditt. For å velge hvit
 klikker du på fargen i klossen og deretter på fiskens tenner.</p>
 </li>
 <li>
 <p>Nå kan vi la byttet flytte seg til et tilfeldig punkt på skjermen
-før det dukker opp igjen ved å bruke en <code class="blockmotion">gå til</code>-kloss
+før det dukker opp igjen ved å bruke <code class="b">gå til x: (tilfeldig tall fra (-220) til (220)) y: (tilfeldig tall fra (-170) til (170))</code>
 som vi gir tilfeldige verdier for <code>x</code> og <code>y</code>.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     for alltid
@@ -258,7 +258,9 @@ lyd og bytte drakt.</em></p>
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul>
 <li>
-<p>For at JafseFisk skal vite hva som skjer kan vi la byttet <code class="blockevents">sende melding</code> om at det er spist, før det forsvinner.</p>
+<p>For at JafseFisk skal vite hva som skjer kan vi la byttet
+<code class="b">send melding [Du tok meg! v]</code> om at det er spist, før det
+forsvinner.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     for alltid
         gå (2) steg
@@ -285,8 +287,8 @@ JafseFisk. Kall drakten <code>Lukket munn</code>.</p>
 <li>
 <p>Legg så til et nytt skript til JafseFisk slik at han kan svare på
 meldingen <code>Du tok meg!</code> fra byttedyret. Dette skriptet gjør at
-fisken spiller av boblelyden og <code class="blocklooks">bytter drakt til</code>
-lukket-munn drakten, venter litt og så bytter tilbake.</p>
+fisken spiller av boblelyden og <code class="b">bytt drakt til [Åpen munn v]</code>
+drakten, venter litt og så bytter tilbake.</p>
 <pre><code class="blocks">    når jeg mottar [Du tok meg! v]
     spill lyden [bubbles v]
     gjenta (2) ganger
@@ -318,7 +320,7 @@ fått nok fisk.</li>
 </section>
 <section class="protip" id="noe-a-tenke-pa">
 <h2 class="protip" id="noe-a-tenke-pa">Noe å tenke på</h2>
-<p>Hvorfor bør vi legge til en <code class="blocklooks">vis</code>-kloss i starten av
+<p>Hvorfor bør vi legge til <code class="b">vis</code> i starten av
 byttedyrets skript? Tenk på hva som vil skje om byttet blir spist og
 spillet stoppes før det dukker opp igjen. Og hva vil skje om spillet
 deretter blir startet igjen?</p>
@@ -335,10 +337,10 @@ dem til å bevege seg annerledes?</strong></p>
 <p><strong>Hint:</strong> Ikke bruke for lang tid på denne oppgaven uten å se på de
 andre utfordringene i dette prosjektet.</p>
 <p><strong>Velg deg ut et byttedyr å eksperimentere med.</strong> Hvis de har samme
-drakt, bytt farge med <code class="blocklooks">sett fargeeffekt</code>-klossen. Slik
+drakt, bytt farge med <code class="b">sett [farge v] effekt til (0)</code>. Slik
 kan du se forskjell fra resten av byttedyrene. Prøv nå å få dette
 byttedyret til å bevege seg saktere enn de andre.</p>
-<p><strong>Hint:</strong> Se på klossen <code class="blockmotion">gå 2 steg</code>.</p>
+<p><strong>Hint:</strong> Se på klossen <code class="b">gå (2) steg</code>.</p>
 </section>
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
@@ -355,8 +357,7 @@ de andre.</strong></p>
 <p>Beveger byttedyrene seg på en fornuftig måte?  Gjør disse
 forandringene spillet bedre?</p>
 <p><strong>Hint:</strong> Hvis byttet ditt svømmer rundt i sirkler, sjekk verdiene
-i <code class="blockoperators">tilfeldig tall</code>-klossen inne i
-<code class="blockmotion">vend</code>-klossen.</p>
+i <code class="b">vend @ (tilfeldig tall fra (-20) til (20)) grader</code>.</p>
 </li>
 <li>
 <p>Hva om du lar alle byttedyrene bevege seg forskjellig, ved å bruke
@@ -383,7 +384,7 @@ trenger er i <code class="blockmotion">Bevegelse</code>-kategorien.</p>
 JafseFisk</strong>. La den også virre litt mens den svømmer bort!  Du vil
 kanskje oppdage at byttet setter seg fast i et hjørne? Du vil kanskje
 at byttet bare ønsker å flykte dersom JafseFisk kommer for nære?
-<strong>Hint:</strong> Se tilbake på hvordan vi brukte <code class="blocksensing">avstand til</code>-klossen tidligere i spillet.</p>
+<strong>Hint:</strong> Se tilbake på hvordan vi brukte <code class="b">(avstand til [musepeker v])</code> tidligere i spillet.</p>
 </section>
 <section class="flag" id="test-prosjektet-7">
 <h2 class="flag" id="test-prosjektet-7">Test prosjektet</h2>
@@ -396,7 +397,7 @@ at byttet bare ønsker å flykte dersom JafseFisk kommer for nære?
 <h2 class="challenge" id="utfordring-3-legg-til-poeng">Utfordring 3: Legg til poeng</h2>
 <p>Det er ikke nok bare å spise fisk. Hvordan vet du at du er en bedre
 spiller enn vennene dine? Du må kunne <strong>samle poeng</strong>, så la oss legge
-til <strong>en poengtavle.</strong> Lag en variabel som heter <code class="blockdata">poeng</code>,
+til <strong>en poengtavle.</strong> Lag en variabel som heter <code class="b">(poeng)</code>,
 og endre denne når JafseFisk spiser.  Pass på at poengene går tilbake
 til null ved begynnelsen av spillet. Hvor skal du legge inn disse
 endringene?</p>
@@ -417,10 +418,10 @@ endringene?</p>
 <h2 class="challenge" id="utfordring-4-legg-til-en-nedtelling">Utfordring 4: Legg til en nedtelling</h2>
 <p>Gi deg selv <strong>en tidsfrist</strong>. Hvor mange fisk kan du spise på 30
 sekunder?</p>
-<p>Legg til en ny variabel, <code class="blockdata">tid</code>. Lag et nytt skript som
+<p>Legg til en ny variabel, <code class="b">(tid)</code>. Lag et nytt skript som
 setter variabelen til for eksempel <code>30</code>, for deretter å endre denne
 med <code>-1</code>, vente 1 sekund, og endre igjen, helt til den når null. Til
-slutt kan du bruke en <code class="blockcontrol">stopp</code>-kloss for å slutte
+slutt kan du bruke en <code class="b">stop [alle v]</code>-kloss for å slutte
 spillet.</p>
 </section>
 <section class="flag" id="test-prosjektet-9">

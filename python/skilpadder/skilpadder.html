@@ -293,38 +293,36 @@ med så mange kanter du vil!</p>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
 <ul>
-<li>Vi kan be skilpadden om å fylle figurene med en farge ved å bruke <code>begin_fill()</code> og <code>end_fill()</code>. Endre koden din til å bruke disse kommandoene:</li>
-</ul>
-<pre><code>```python
-from turtle import *
+<li>
+<p>Vi kan be skilpadden om å fylle figurene med en farge ved å bruke <code>begin_fill()</code> og <code>end_fill()</code>. Endre koden din til å bruke disse kommandoene:</p>
+<pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
-speed(11)
-shape(&quot;turtle&quot;)
+speed(<span class="hljs-number">11</span>)
+shape(<span class="hljs-string">"turtle"</span>)
 
-sides = 4
-length = 20
+sides = <span class="hljs-number">4</span>
+length = <span class="hljs-number">20</span>
 
-fillcolor('red')
-pencolor('red')
+fillcolor(<span class="hljs-string">'red'</span>)
+pencolor(<span class="hljs-string">'red'</span>)
 begin_fill()
 
-angle = 360/sides
-for count in range(sides):
+angle = <span class="hljs-number">360</span>/sides
+<span class="hljs-keyword">for</span> count <span class="hljs-keyword">in</span> range(sides):
     forward(length)
     right(angle)
 end_fill()
-```
-
-Akkurat som med `pencolor` velger `fillcolor` fargen skilpadden skal
-bruke for å fylle inn figurene du tegner. Denne koden tegner en rød firkant
-med en rød strek rundt.
-
-Du kan bruke `begin_fill()` for å fortelle skilpadden at den skal
-fargelegge figuren du tegner, og si `end_fill()` for å si at du er
-ferdig.
 </code></pre>
-<ul>
-<li>Forsøk å endre fargene, sidene og lengdene og se hvilke figurer du kan tegne!</li>
+<p>Akkurat som med <code>pencolor</code> velger <code>fillcolor</code> fargen skilpadden skal
+bruke for å fylle inn figurene du tegner. Denne koden tegner en rød firkant
+med en rød strek rundt.</p>
+<p>Du kan bruke <code>begin_fill()</code> for å fortelle skilpadden at den skal
+fargelegge figuren du tegner, og si <code>end_fill()</code> for å si at du er
+ferdig.</p>
+</li>
+<li>
+<p>Forsøk å endre fargene, sidene og lengdene og se hvilke figurer du kan tegne!</p>
+</li>
 </ul>
 </section>
 </section>

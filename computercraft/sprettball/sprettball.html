@@ -308,39 +308,36 @@ gang ballen flytter seg. For eksempel bytt ut <code>sleep(1)</code> med
 med en variabel for gravitasjon. Vi kan tenke at gravitasjonen gjør
 at ballen faller stadig raskere ned mot bakken, altså den øker
 <code>fartY</code>.</p>
-</li>
-</ul>
-<pre><code>```lua
-function tegnBall(skjerm)
-    local bredde, hoyde = skjerm.getSize()
-    local X, Y = 1, 2
-    local fartX, fartY = 1, 0                 -- endret linje
-    local gravitasjon = 0.2                   -- ny linje
+<pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
+    <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
+    <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
+    <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">0</span>                 <span class="hljs-comment">-- endret linje</span>
+    <span class="hljs-keyword">local</span> gravitasjon = <span class="hljs-number">0.2</span>                   <span class="hljs-comment">-- ny linje</span>
 
-    while true do
+    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
         skjerm.clear()
         skjerm.setCursorPos(X, Y)
-        skjerm.write(&quot;O&quot;)
-        sleep(0.1)
+        skjerm.write(<span class="hljs-string">"O"</span>)
+        sleep(<span class="hljs-number">0.1</span>)
 
-        fartY = fartY + gravitasjon           -- ny linje
+        fartY = fartY + gravitasjon           <span class="hljs-comment">-- ny linje</span>
         X = X + fartX
         Y = Y + fartY
 
-        if X &lt;= 1 or X &gt;= bredde then
+        <span class="hljs-keyword">if</span> X &lt;= <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> X &gt;= bredde <span class="hljs-keyword">then</span>
             fartX = -fartX
-        end
-        if Y &gt;= hoyde then                    -- endret linje
-            fartY = -(fartY + gravitasjon)    -- endret linje
-        end
-    end
-end
-```
-
-Vi endret også litt i sjekken om `Y` er slik at ballen skal
-sprette, siden gravitasjonen gjør at vi ikke trenger å sprette i
-taket lengre.
+        <span class="hljs-keyword">end</span>
+        <span class="hljs-keyword">if</span> Y &gt;= hoyde <span class="hljs-keyword">then</span>                    <span class="hljs-comment">-- endret linje</span>
+            fartY = -(fartY + gravitasjon)    <span class="hljs-comment">-- endret linje</span>
+        <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
 </code></pre>
+<p>Vi endret også litt i sjekken om <code>Y</code> er slik at ballen skal
+sprette, siden gravitasjonen gjør at vi ikke trenger å sprette i
+taket lengre.</p>
+</li>
+</ul>
 </section>
 </section>
 <section class="activity" id="steg-6-reklamebanner">

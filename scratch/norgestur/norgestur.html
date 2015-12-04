@@ -702,11 +702,10 @@ vi i stedet kan gjøre er å tilfeldig bestemme om vi skal be spilleren
 reise til et reisemål, eller bare gå videre til neste reisemål uten å
 spørre.</p>
 <ul>
-<li>Nedenfor er noen hint om hvordan dette kan gjøres. Vær oppmerksom på
-at skriptene bruker noen variable du selv må lage.</li>
-</ul>
-<pre><code>```blocks
-    definer sjekk sted
+<li>
+<p>Nedenfor er noen hint om hvordan dette kan gjøres. Vær oppmerksom på
+at skriptene bruker noen variable du selv må lage.</p>
+<pre><code class="blocks">    definer sjekk sted
     hvis (((tilfeldig tall fra (1) til (Antall steder totalt)) &gt; (1)) eller (berører fargen [#ff0000]?))
         sett [bruk sted v] til [nei]
     ellers
@@ -722,13 +721,11 @@ at skriptene bruker noen variable du selv må lage.</li>
         send melding [Fant sted v] og vent
     slutt
     send melding [Sted: Tromsø v]
-```
-
-Klossen `berører fargen`{.blocksensing} brukes for å sjekke om
-vi allerede har besøkt et reisemål. I såfall vil vi jo ha stemplet
-rødfarge på kartet.
 </code></pre>
-<ul>
+<p>Klossen <code class="blocksensing">berører fargen</code> brukes for å sjekke om
+vi allerede har besøkt et reisemål. I såfall vil vi jo ha stemplet
+rødfarge på kartet.</p>
+</li>
 <li>
 <p>Siden dette vil hoppe over reisemål, er det viktig at det siste
 reisemålet sender melding om at vi skal besøke det første reisemålet
