@@ -325,7 +325,7 @@ samlet inn.</p>
 <p>Åpne <code>PlayerController</code> og endre det til å være som følger:</p>
 <p><strong>PlayerController.cs</strong></p>
 <pre><code class="csharp"><span class="hljs-keyword">using</span> UnityEngine;
-<span class="hljs-keyword">using</span> UnityEngine.UI;
+<span class="hljs-keyword">using</span> System.Collections;
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PlayerController</span> : <span class="hljs-title">MonoBehaviour</span> {
 
@@ -385,8 +385,8 @@ velg <strong>top left</strong> mens du holder inne <strong>shift</strong> og <st
 endre det til:</p>
 <p><strong>PlayerController.cs</strong></p>
 <pre><code class="csharp"><span class="hljs-keyword">using</span> UnityEngine;
-<span class="hljs-keyword">using</span> UnityEngine.UI;
-<span class="hljs-keyword">using</span> System.Collections;                               <span class="hljs-comment">// Ny linje</span>
+<span class="hljs-keyword">using</span> UnityEngine.UI;                                   <span class="hljs-comment">// Ny linje</span>
+<span class="hljs-keyword">using</span> System.Collections;                               
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PlayerController</span> : <span class="hljs-title">MonoBehaviour</span> {
 
