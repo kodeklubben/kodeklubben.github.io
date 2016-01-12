@@ -1,0 +1,197 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Ping pong | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span class="hidden-xs"> Forside</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a><div class="links"><a href="http://www.kidsakoder.no" class="btn btn-default hidden-xs"><span>Lær Kidsa Koding</span></a></div></div></div><div class="search"><div class="results"><h1>Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Ping pong</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><div class="course"><img src="../logo-white.png"/><span>Processing</span></div><div class="pdf"><a href="/processing/pingpong/pingpong.pdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introdusjon">
+<h1 class="intro" id="introdusjon">Introdusjon:</h1>
+<p>Her skal vi lage dataspillet Ping pong. Vi skal også lære om å hvordan du kan få programmene dine til å reagere på tastetrykk. Dette er veldig nyttig når du skal lage spill.</p>
+</section>
+<section class="activity" id="steg-1-sprettende-ball">
+<h1 class="activity" id="steg-1-sprettende-ball">Steg 1: Sprettende ball</h1>
+<p>Vår begynnelse kommer til å ligne på det vi gjorde i <a href="../sprettende_ball/sprettende_ball.html">den sprettende ballen</a>.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Start Processing og skriv dette:</p>
+<pre><code class="processing"><span class="hljs-built_in">float</span> ballX;
+<span class="hljs-built_in">float</span> ballY;
+<span class="hljs-built_in">float</span> ballXFart = <span class="hljs-number">2</span>;
+<span class="hljs-built_in">float</span> ballYFart = <span class="hljs-number">2</span>;
+<span class="hljs-built_in">float</span> ballRadius = <span class="hljs-number">9</span>;
+<span class="hljs-built_in">float</span> ballDiameter = ballRadius * <span class="hljs-number">2</span>;
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
+  <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">300</span>);
+
+  ballX = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
+  ballY = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+}
+
+<span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
+  ballX = ballX + ballXFart;
+  ballY = ballY + ballYFart;
+
+  <span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
+	ballXFart = -ballXFart;
+  }
+  <span class="hljs-keyword">if</span> (ballX &gt; <span class="hljs-variable">width</span> - ballRadius) {
+	ballXFart = -ballXFart;
+  }
+  <span class="hljs-keyword">if</span> (ballY &lt; ballRadius) {
+	ballYFart = -ballYFart;
+  }
+  <span class="hljs-keyword">if</span> (ballY &gt; <span class="hljs-variable">height</span> - ballRadius) {
+	ballYFart = -ballYFart;
+  }
+
+  <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
+  <span class="hljs-built_in">ellipse</span>(ballX, ballY, ballDiameter, ballDiameter);
+}
+</code></pre>
+<p>Koden er endret litt fra oppgaven om den sprettende ballen.
+Vi bruker andre navn på variablene våre. Det er også noen helt nye variabler.</p>
+<p>Hvorfor tror du vi har gjort dette?</p>
+</li>
+</ul>
+<ul>
+<li>Kjør programmet ved å trykke på <strong>Ctrl + R</strong> eller knappen
+<img src="../play.png" alt="" title="Play - En knapp i verktøylinjen merket med pil"></li>
+</ul>
+<p><figure><img src="sprettendeBall.gif" alt="" title="En sprettende ball på en svart bakgrunn."></figure></p>
+<ul>
+<li>Lagre programmet som PingPong ved å trykke på <strong>Ctrl+S</strong> eller
+velg <strong>File --&gt; Save</strong> i menyen.</li>
+</ul>
+</section>
+<section class="try" id="utfordringer">
+<h2 class="try" id="utfordringer">Utfordringer</h2>
+<ul>
+<li>Kan du endre størrelsen på ballen?</li>
+<li>Kan du endre farten til ballen?</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-ballen-faller-bak">
+<h1 class="activity" id="steg-2-ballen-faller-bak">Steg 2: Ballen faller bak</h1>
+<p>I Ping pong skal du hindre at ballen faller bak rekkerten. For at det skal være vits å gjøre dette må vi først sørge for at ballen ikke bare spretter tilbake når den treffer venstre vegg. Vi kan begynne med å sørge for at ballen ikke spretter tilbake.</p>
+<ul>
+<li>
+<p>Fjern koden som gjør at ballen spretter tilbake (denne ligger i den øverste ‘if’-en), slik at du går fra dette:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
+  ballXFart = -ballXFart;
+}
+</code></pre>
+<p>Til:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
+  
+}
+</code></pre>
+<p><figure><img src="gjennommaal.gif" alt="" title="En ball går igjennom venstre vegg"></figure></p>
+</li>
+</ul>
+<section class="try" id="utfordringer-2">
+<h2 class="try" id="utfordringer-2">Utfordringer</h2>
+<ul>
+<li>Kan du få ballen til å dukke opp et annet sted etter den har gått igjennom veggen?</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-legg-til-rekkerten">
+<h1 class="activity" id="steg-3-legg-til-rekkerten">Steg 3: Legg til rekkerten</h1>
+<p>Nå som ballen kan falle igjennom den venstre veggen, så må vi få på plass en rekkert, slik at du kan slå ballen tilbake. Det gjør vi ved å ha noen tallvariabler som representerer hvor rekkerten er og hvor stor den er. I tilegg så må vi ha kode som sender ballen tilbake.</p>
+<ul>
+<li>
+<p>Legge inn disse variablene nedenfor de som er der fra før:</p>
+<pre><code class="processing"><span class="hljs-built_in">float</span> rekkertHoyde = <span class="hljs-number">66</span>;
+<span class="hljs-built_in">float</span> rekkertBredde = <span class="hljs-number">5</span>;
+<span class="hljs-built_in">float</span> rekkert1X = <span class="hljs-number">20</span>;
+<span class="hljs-built_in">float</span> rekkert1Y = <span class="hljs-number">100</span>;
+</code></pre>
+<p>Disse variablene skal vi bruke til å holde styr på
+på størrelsen og plasseringen til rekkerten.</p>
+<p>Rett nedenfor background(0), legg til dette:</p>
+<pre><code class="processing"><span class="hljs-built_in">rect</span>(rekkert1X, rekkert1Y, rekkertBredde, rekkertHoyde);
+</code></pre>
+<p><figure><img src="ballGjennomRekkert.gif" alt="" title="En ball går igjennom rekkerten"></figure></p>
+<p>Vi kan nå se rekkerten når vi kjører programmet, men ballen går
+igjennom rekkerten. Det er fordi vi ikke har skrevet kode som
+stopper ballen og sender den tilbake.</p>
+<p>Legg til følgende i draw()-funksjonen:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span> (ballX-ballRadius &lt; rekkert1X + rekkertBredde &amp;&amp; ballX + ballRadius &gt; rekkert1X) {
+  <span class="hljs-keyword">if</span> (ballY &lt; rekkert1Y + rekkertHoyde &amp;&amp; ballY &gt; rekkert1Y) {
+	  ballX = ballX + rekkertBredde;
+	  ballXFart = -ballXFart;
+  }
+}
+</code></pre>
+</li>
+</ul>
+<p><figure><img src="spretterPaRekkert.gif" alt="" title="Ballen spretter på rekkerten"></figure></p>
+<section class="try" id="utfordringer-3">
+<h2 class="try" id="utfordringer-3">Utfordringer</h2>
+<ul>
+<li>Kan du gjøre rekkerten mindre?</li>
+<li>Kan du endre plasseringen til rekkerten?</li>
+</ul>
+</section>
+<section class="protip" id="forklaring">
+<h2 class="protip" id="forklaring">Forklaring</h2>
+<p>Her er et bilde som forklarer hva de forskjellige variablene står for:</p>
+<p><figure><img src="illustrasjon.png" alt="" title="Illustrasjon som viser sammenhengen mellom variablene og hva tingene i spillet"></figure></p>
+</section>
+</section>
+<section>
+<h1 id="steg-4-styre-rekkerten">Steg 4: Styre rekkerten</h1>
+<p>Vi har en rekkert, men den er ikke til mye hjelp så lenge du ikke kan styre den. Derfor må du skrive kode som gjør at du kan styre den.</p>
+<ul>
+<li>
+<p>Skriv inn følgende i draw():</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyPressed</span>) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">keyCode</span> == UP) {
+    rekkert1Y = rekkert1Y - <span class="hljs-number">2</span>;
+  }
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">keyCode</span> == DOWN) {
+    rekkert1Y = rekkert1Y + <span class="hljs-number">2</span>;
+  }
+}
+</code></pre>
+<p>Denne koden sjekker først om en knapp er trykket ned (keyPressed).
+Deretter sjekker den om det er opp- eller ned-knappen
+som blir trykket ned, og beveger rekkerten basert på dette.</p>
+</li>
+</ul>
+<p><figure><img src="bevegeligRekkert.gif" alt="" title="Rekkert som beveger seg"></figure></p>
+<p>Nå har du laget Ping pong!</p>
+<section class="protip" id="bokstavtaster">
+<h2 class="protip" id="bokstavtaster">Bokstavtaster</h2>
+<p>Hvis du vil styre ved å trykke på bokstavtaster istedenfor piltastene, må du endre litt på koden. Mange er vant til å styre opp med <strong>W</strong> og ned med <strong>S</strong>.</p>
+<p>Hvis du endrer:</p>
+<pre><code class="processing">  <span class="hljs-keyword">if</span> (<span class="hljs-variable">keyCode</span> == UP) {
+</code></pre>
+<p>Til:</p>
+<pre><code class="processing">  <span class="hljs-keyword">if</span> (<span class="hljs-variable">key</span> == <span class="hljs-string">'w'</span>) {
+</code></pre>
+<p>kan du styre opp med <strong>W</strong>. Hva tror du at du må gjøre for å kunne styre ned med <strong>S</strong>?</p>
+</section>
+<section class="try" id="utfordringer-4">
+<h2 class="try" id="utfordringer-4">Utfordringer</h2>
+<ul>
+<li>Kan du endre farten rekkerten beveger seg i?</li>
+<li>Kan du legge til en rekkert på den andre siden slik at to spillere kan spille mot hverandre?</li>
+<li>Kan du gjøre det slik at ballens vertikale retning (opp og ned) bestemmes av hvilken del av rekkerten den treffer?</li>
+<li>Kan du gjøre noe som gjør at spillet blir vanskeligere etter hvert? For eksempel at ballen går raskere og raskere etter hvert, eller at rakkerten blir mindre.</li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter:</strong></p><p>Torbjørn Vik Lunde</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
