@@ -1,0 +1,264 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Klask-en-Muldvarp | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home" class="hidden-xs">Forside</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a></div></div><div class="search"><div class="results"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Klask-en-Muldvarp</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><div class="course"><img src="../../logo-white.png"/><span>App Inventor</span></div><div class="pdf"><a href="/appinventor/KlaskEnMuldvarp/klaskenmuldvarp.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I denne oppgaven skal vi lage et veldig enkelt spill med litt animasjon. Det som skal skje er at en muldvarp hopper rundt på spillbrettet mens du prøver å trykke på muldvarpen før den hopper videre. Hvis du klarer å treffe muldvarpen får du poeng og mobilen vil vibrere. Om du trykker på restartknappen, starter spillet på nytt.</p>
+<p>Vi skal nå lære litt om animasjon, hendelser og prosedyrer.</p>
+<p><figure><img src="spillbrettet.png" alt="spillbrettet"></figure></p>
+</section>
+<section class="activity" id="steg-1-gjore-klart-spillbrettet">
+<h1 class="activity" id="steg-1-gjore-klart-spillbrettet">Steg 1: Gjøre klart spillbrettet</h1>
+<p>Det første vi trenger er en <em>Canvas</em>-komponent som tegner selve spillbrettet. Dette vil være området hvor muldvarpen hopper rundt på skjermen.
+En canvas er bare en komponent som inneholder grafikk, den synes ikke selv, men vi kan legge til streker, sirkler, tekst, firkanter og bilder på canvasen.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Logg inn på App Inventor og lag et nytt prosjekt som heter <code>KlaskEnMuldvarp</code>.</p>
+</li>
+<li>
+<p>Last ned gresset vi vil ha i bakgrunnen fra lenken <a href="gress.png">gress.png</a>.</p>
+</li>
+<li>
+<p>Gå til <strong>Palette</strong> og <strong>Drawing and Animation</strong>. Der velger du <img src="canvas.png" alt="canvas">, og drar den over til skjermen i <strong>Viewer</strong>. Under <strong>Components</strong>, trykk på <strong>Rename</strong> og gi den navnet <code>Spillbrettet</code>. Legg merke til at spillbrettet vises på skjermen.</p>
+</li>
+<li>
+<p>Gå til <strong>Properties</strong> og sett høyden og bredden for spillbrettet:</p>
+<p>Trykk på <strong>Height</strong> og skriv inn <code>300</code> ved siden av pixels og trykk <strong>OK</strong>.</p>
+<p>Trykk på <strong>Width</strong> og skriv inn <code>340</code> ved siden av pixels og trykk <strong>OK</strong>.</p>
+</li>
+</ul>
+<ul>
+<li>Gå til <strong>BackgroundImage</strong> og trykk på <strong>None...</strong>. Trykk <strong>Upload File</strong>. Trykk på <strong>Velg Fil</strong> og velg bildet <code>gress.png</code> du nettopp lastet ned. Trykk <strong>OK</strong>. Sjekk at gresset vises i firkanten øverst på skjermen.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-legge-til-poengtelleren-og-restartknappen">
+<h1 class="activity" id="steg-2-legge-til-poengtelleren-og-restartknappen">Steg 2: Legge til poengtelleren og restartknappen</h1>
+<p>For å vite hvor mange poeng spilleren har, må vi legge til en tekst som oppdateres hver gang spilleren treffer muldvarpen. Restartknappen lar spilleren starte spillet på nytt.</p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Gå til <strong>Palette</strong> og <strong>User Interface</strong>. Der velger du <img src="label.png" alt="label">, og drar den over til skjermen i <strong>Viewer</strong>. Under <strong>Components</strong>, trykk på <strong>Rename</strong> og gi den navnet <code>PoengTekst</code>. Pass på at teksten vises under spillbrettet.</p>
+</li>
+<li>
+<p>Gå til <strong>Properties</strong> og forandre verdien under <strong>Text</strong> til <code>Poeng: 0</code>.</p>
+</li>
+<li>
+<p>Trykk på <strong>Width</strong>, velg <strong>Fill parent</strong> og trykk <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Gå til <strong>Palette</strong> og <strong>User Interface</strong>. Der velger du <img src="knapp.png" alt="button">, og drar den over til skjermen i <strong>Viewer</strong>. Under <strong>Components</strong>, trykk på <strong>Rename</strong> og gi den navnet 'RestartKnapp'. Pass på at knappen vises under spillbrettet.</p>
+</li>
+<li>
+<p>Gå til <strong>Properties</strong> og forandre verdien under <strong>Text</strong> til <code>Start på nytt</code>.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-fa-mobilen-til-a-vibrere">
+<h1 class="activity" id="steg-3-fa-mobilen-til-a-vibrere">Steg 3: Få mobilen til å vibrere</h1>
+<p>For å få mobilen til å vibrere når spilleren får poeng, må vi legge til en lyd.</p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>Gå til <strong>Palette</strong> og <strong>Media</strong>. Der velger du <img src="lyd.png" alt="sound">, og drar den over til skjermen i <strong>Viewer</strong>. Under <strong>Components</strong>, trykk på <strong>Rename</strong> og gi den navnet <code>Brrr</code>.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-ta-tiden">
+<h1 class="activity" id="steg-4-ta-tiden">Steg 4: Ta tiden</h1>
+<p>For at muldvarpen skal kunne hoppe rundt på brettet over tid, trenger vi å legge til en klokke. Klokken hjelper oss å jobbe med tid, for eksempel vite hvilken dato det er eller hva klokken er. Her skal vi bruke den til å fortelle spillet at det skal gjøre noe hvert halvsekund.</p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul>
+<li>
+<p>Gå til <strong>Palette</strong> og <strong>Sensors</strong>. Der velger du <img src="klokke.png" alt="clock">, og drar den over til skjermen i <strong>Viewer</strong>. Under <strong>Components</strong>, trykk på <strong>Rename</strong> og gi den navnet <code>Klokken</code>.</p>
+</li>
+<li>
+<p>Gå til <strong>Properties</strong> og forandre verdien under <strong>TimerInterval</strong> til <code>500</code>.</p>
+</li>
+<li>
+<p>Pass på at <img src="timerenabled.png" alt="timerenabled"> er krysset av.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-5-muldvarpen">
+<h1 class="activity" id="steg-5-muldvarpen">Steg 5: Muldvarpen!</h1>
+<p>Den siste komponenten vi mangler nå er selve muldvarpen. For å få en muldvarp som beveger seg, må vi legge til en <strong>ImageSprite</strong>. En sprite er en figur som kan bevege seg på skjermen inne i en canvas. Canvasen vår er spillbrettet som vi la til helt først.</p>
+<p>Hver figur har en fart (<em>Speed</em>), retning (<em>Heading</em>) og intervall (<em>Interval</em>). Disse sier hvor fort den beveger seg, i hvilken retning og hvor ofte. En figur vet også når den blir trykket på. I spillet vårt, er farten satt til 0, så den vil ikke bevege seg selv. Istedet setter vi posisjonen ved hjelp av klokken.</p>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
+<ul>
+<li>
+<p>Gå til <strong>Palette</strong> og <strong>Drawing and Animation</strong>. Der velger du <img src="bilde.png" alt="imagesprite">, og drar den over til skjermen i <strong>Viewer</strong>. Pass på at du drar den oppå spillbrettet (gresset). Under <strong>Components</strong>, trykk på <strong>Rename</strong> og gi den navnet <code>Muldvarpen</code>.</p>
+</li>
+<li>
+<p>Last ned muldvarpbildet fra lenken <a href="http://explore.appinventor.mit.edu/sites/all/files/ai2tutorials/moleMash/mole.png">mole.png</a>.</p>
+</li>
+<li>
+<p>Gå til <strong>Properties</strong> og trykk på <strong>None...</strong> under <strong>Picture</strong>. Trykk <strong>Upload File</strong>. Trykk på <strong>Velg Fil</strong> og velg bildet du nettopp lastet ned. Trykk <strong>OK</strong>. Sjekk at muldvarpen har kommet opp på skjermen.</p>
+</li>
+</ul>
+<p>Skjermbildet ditt burde nå se slik ut:</p>
+<p><figure><img src="komponenteneinne.png" alt="komponenteneinne"></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-6-fa-ting-til-a-skje">
+<h1 class="activity" id="steg-6-fa-ting-til-a-skje">Steg 6: Få ting til å skje!</h1>
+<p>Vi har nå lagt til alle delene i appen vår. Du kan teste den på mobilen din, men du vil se at ingenting skjer. For å få noe til å skje på skjermen må vi legge til logikk, altså kode.</p>
+<p>Koden er den magiske biten som gir applikasjonen din liv. Helt enkelt forteller koden spillet hva det skal gjøre med alle tingene vi har puttet på skjermen.
+I AppInventor skriver vi kode ved hjelp av klosser. Disse klossene er kommandoer som settes sammen og ber applikasjonen å gjøre ting, for eksempel tegne et bilde eller vise en tekst.</p>
+<p>Vi skal nå lage prosedyrer til spillet. Dette er en samling av flere kommandoer som har et navn og er satt sammen før de kalles.
+Hvis du har en samling av klosser som trenger å bli kalt flere ganger i et program, kan du definere det som en prosedyre.
+Da trenger du ikke sette sammen de samme klossene flere ganger. I stedet kan du kalle dem ved å legge inn en enkelt kloss.</p>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
+<ul>
+<li>
+<p>Trykk på Blocks øverst i høyre hjørne.</p>
+</li>
+<li>
+<p>Trykk på den lilla knappen som heter <strong>Procedures</strong>. Vi ser at det er to forskjellige prosedyre-klosser vi kan legge til: <strong>to procedure do</strong> og <strong>to procedure result</strong>. Velg <strong>to procedure do</strong>:</p>
+<p><figure><img src="procedure.png" alt="procedure"></figure></p>
+</li>
+<li>
+<p>Trykk på <code>procedure</code> og gi den navnet <code>FlyttMuldvarp</code>.</p>
+</li>
+</ul>
+<p>Klossen <code>FlyttMuldvarp</code> har et område i midten som sier <code>do</code>. Det er her vi putter inn klossene som sier hva som skal skje når prosedyren kjører.</p>
+<ul>
+<li>
+<p>Vi vil nå plassere muldvarpen et tilfeldig sted på spillbrettet. Det gjør vi ved å sette muldvarpens X- og Y-posisjon til to forskjellige tilfeldige tall:</p>
+<p>Muldvarpens X-posisjon skal være et tilfeldig tall mellom 0 og bredden på spillbrettet. Vi passer på å trekke fra muldvarpens bredde slik at hele muldvarpen får plass på gresset.</p>
+<p>Muldvarpens Y-posisjon skal på samme måte være et tilfeldig tall mellom 0 og høyden på spillbrettet minus høyden på muldvarpen.</p>
+<p>Klossen <code>random fraction</code> gir et tilfeldig tall mellom 0 og 1. Vi kan derfor gange denne med spillbrettets størrelse minus muldvarpens størrelse for å sette posisjonen slik vi vil.</p>
+</li>
+<li>
+<p>Gå til <strong>Blocks</strong> og se hva du får fram når du trykker på de forskjellige fargene.</p>
+</li>
+<li>
+<p>Klossene du trenger vil være under <strong>Math</strong>, og på muldvarpen og spillbrettet.</p>
+</li>
+<li>
+<p>Lag en prosedyre som flytter muldvarpen slik beskrevet.</p>
+<p><figure><img src="flyttmuldvarp.png" alt="flyttmuldvarp"></figure></p>
+</li>
+</ul>
+<p>Se hvordan klossene kobler sammen. Den første delen bruker Muldvarp.X til å sette muldvarpens horisontale posisjon. Verdien den får er resultatet av å gange en tilfeldig verdi mellom 0 og 1 med resultatet av spillbrettets bredde minus muldvarpens bredde.</p>
+<ul>
+<li>
+<p>Lag en variabel som holder styr på hvor mange poeng spilleren har. Denne kan vi kalle <code>Poeng</code>.</p>
+<p><figure><img src="initPoeng.png" alt="initpoeng"></figure></p>
+</li>
+<li>
+<p>Lag en prosedyre som du kaller <code>OppdaterPoeng</code> på samme måte som du lagde <code>FlyttMuldvarp</code>. Velg den lilla <strong>Procedures</strong> og velg en <strong>to procedure do</strong>. Denne prosedyren skal oppdatere tekstfeltet med poengene når poengene endres.</p>
+</li>
+</ul>
+<p>Det vi vil at skal skje er PoengTeksten blir oppdatert med en tekst satt sammen av <code>Poeng:</code> og hvor mange poeng spilleren har.</p>
+<ul>
+<li>
+<p>Legg til en kloss som setter verdien til PoengTekst sin <strong>Text</strong> verdi. Koble denne til <code>do</code> feltet i prosedyren.</p>
+</li>
+<li>
+<p>Gå til rosa <strong>Text</strong> og ta ut en <code>join</code>-kloss som du kobler til den forrige klossen slik at den setter poengteksten. Denne vil gjøre at du legger sammen to tekster.</p>
+</li>
+<li>
+<p>Ta ut en tekstkloss under rosa <strong>Text</strong> og forandre den slik at den sier <code>Poeng:</code> og koble denne øverst i <code>join</code>-klossen slik at denne teksten kommer først. Pass på at du skriver et mellomrom etter kolonet.</p>
+</li>
+<li>
+<p>Under <code>Poeng:</code> legger du til en kloss fra orange <strong>Variables</strong> som heter <code>get</code>, og forandrer den til <code>get global Poeng</code>.</p>
+<p><figure><img src="initOppdaterPoeng.png" alt="initOppdater"></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-7-flytt-muldvarpen-etterhvert-som-tiden-gar">
+<h1 class="activity" id="steg-7-flytt-muldvarpen-etterhvert-som-tiden-gar">Steg 7: Flytt muldvarpen etterhvert som tiden går</h1>
+<p>Neste steg er å få muldvarpen til å flytte seg. Dette er hvor vi skal bruke Klokken.</p>
+<p>Klokken har en timer, denne timeren gir beskjed med jevne mellomrom bestemt av hva vi satte i TimerInterval i klokken.
+Derfor vil den sende en hendelse hvert halvsekund, eller 500 millisekunder. Hendelser er ting som kan skje i appen din som for eksempel et tastetrykk eller at en timer går som her.</p>
+<p>For å få noe til å skje når en hendelse sendes bruker vi en <em>event handler</em>. Denne sier hvilke klosser som skal kjøre når en hendelse sendes. Klokken vår har en kloss som er <em>event handleren</em> for timeren: <strong>when Klokken.Timer do</strong>.</p>
+<section class="check" id="sjekkliste-7">
+<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
+<ul>
+<li>
+<p>Sett timeren til å kalle <code>FlyttMuldvarp</code>:</p>
+<p><figure><img src="timerflytt.png" alt="initOppdater"></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-8-klask-muldvarpen">
+<h1 class="activity" id="steg-8-klask-muldvarpen">Steg 8: Klask muldvarpen!</h1>
+<p>Den viktigste biten er å vite når noen trykker på muldvarpen, slik at vi vet når spilleren skal få poeng. Hvis du husker fra tidligere så sa vi at figurer vet når de blir trykket på.
+Alt vi trenger å gjøre er å fortelle hva som skal skje ved å bruke <em>event handleren</em> for dette på muldvarpen. Denne hendelsen kalles <strong>Touched</strong>.</p>
+<section class="check" id="sjekkliste-8">
+<h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
+<ul>
+<li>
+<p>Legg til <strong>when Muldvarpen.Touched do</strong>.</p>
+<p>Videre vil vi at:</p>
+<ul>
+<li>Poengvariabelen økes med 1 poeng.</li>
+<li>Mobilen vibrerer i 1/10 sekund (100 millisekunder).</li>
+<li><code>OppdaterPoeng</code> blir kalt slik at poengene opdaterer seg på skjermen.</li>
+<li><code>FlyttMuldvarp</code> blir kalt slik at muldvarpen fortsetter spillet.</li>
+</ul>
+<p><figure><img src="event.png" alt="event"></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-9-start-spillet-pa-nytt">
+<h1 class="activity" id="steg-9-start-spillet-pa-nytt">Steg 9: Start spillet på nytt</h1>
+<p>Den siste biten vi trenger å få på plass nå er å kunne starte spillet på nytt når vi trykker på restartknappen.
+Knapper har en hendelse som heter <strong>click</strong> som sendes når knappen trykkes på.</p>
+<section class="check" id="sjekkliste-9">
+<h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
+<ul>
+<li>
+<p>Legg til <em>event handleren</em> <strong>when RestartKnapp.Click do</strong>, som finnes på restartknappen.</p>
+<p>Videre vil vi at når knappen trykkes skal:</p>
+<ul>
+<li>Poengvariabelen gå ned til 0.</li>
+<li>Poengteksten bli oppdatert.</li>
+<li><code>FlyttMuldvarp</code> bli kalt slik at muldvarpen fortsetter spillet.</li>
+</ul>
+<p>Dette kan se slik ut:</p>
+<p><figure><img src="restart.png" alt="restart"></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-appen-pa-mobiltelefonen">
+<h2 class="flag" id="test-appen-pa-mobiltelefonen">Test  appen på mobiltelefonen</h2>
+<p>Installer appen på mobilen din og prøv spillet.</p>
+<p>Virker spillet slik du ville?</p>
+</section>
+<section class="challenge" id="utfordring-dine-egne-tilpasninger">
+<h2 class="challenge" id="utfordring-dine-egne-tilpasninger">Utfordring: Dine egne tilpasninger</h2>
+<p>Hvordan kan du lage spillet enda bedre?</p>
+<p>Kan du gjøre spillet vanskeligere?</p>
+</section>
+<section class="try" id="ting-a-prove">
+<h2 class="try" id="ting-a-prove">Ting å prøve</h2>
+<p>Prøv å sette timeren til en lavere verdi. Hva skjer?</p>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><p><a href="http://creativecommons.org/licenses/by-sa/3.0/">cc-by-sa 3.0</a></p>
+</div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Basert på MITs <a href="http://explore.appinventor.mit.edu/ai2/molemash">&quot;MoleMash for App Inventor 2&quot;-guide</a></p>
+</div><div class="translator"><p><strong data-i18n="html=layout.translator">Oversetter</strong><strong>:</strong></p><p>Hanne Johnsen</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
