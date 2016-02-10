@@ -15,7 +15,7 @@
     },
     lessonIndex: {
       doneLabel: "Fortsett omvisning på oppgave-siden \"Kuprat\"",
-      info: "Hvert programmeringsspråk har en kort introduksjon. Klikk på <span class=\"glyphicon glyphicon-info-sign\"></span> for å vise introduksjonen.",
+      info: "Hvert programmeringsspråk har en kort introduksjon. Klikk på <span class=\"glyphicon glyphicon-plus-sign\"></span> for å vise introduksjonen.",
       playlists: "Oppgavesamlinger inneholder oppgaver som passer godt i lag. Klikk på <span class=\"glyphicon glyphicon-play\"></span> for å vise oppgavene.",
       level1: "Oppgavene er sortert etter vanskelighetsgrad. Her er introduksjonsoppgaver, som er en god start for helt ferske kodere.",
       nextUrl: "kuprat/kuprat.html"

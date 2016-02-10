@@ -15,7 +15,7 @@
     },
     lessonIndex: {
       doneLabel: "Continue tour in Hangman lesson",
-      info: "Every programming language has a short introduction. Click <span class=\"glyphicon glyphicon-info-sign\"></span> to reveal the introduction.",
+      info: "Every programming language has a short introduction. Click <span class=\"glyphicon glyphicon-plus-sign\"></span> to reveal the introduction.",
       playlists: "Playlists contain lessons that fit well together. Click on <span class=\"glyphicon glyphicon-play\"></span> to show the lessons.",
       level1: "Lessons are sorted in degree of difficulty. Here are the introduction lessons, which should be a good start for everyone.",
       nextUrl: "lessons/Hangman/Hangman.html"
