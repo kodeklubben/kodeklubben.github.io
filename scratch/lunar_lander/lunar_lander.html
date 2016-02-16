@@ -1,0 +1,272 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lunar Lander | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><a href="../../index.html" class="btn btn-default"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home" class="hidden-xs">Forside</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"></a></div></div><div class="search"><div class="results"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Lunar Lander</h1><div class="lesson-icons"><div class="level"><img title="Level 4" src="../../assets/img/level4.png"/><span data-i18n="html=layout.levelNames.4">Ekspert</span></div><div class="course"><img src="../logo-white.png"/><span>Scratch</span></div><div class="pdf"><a href="/scratch/lunar_lander/lunar_lander.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF" class="download"><span class="glyphicon glyphicon-save-file"></span></a><span>PDF</span></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Lunar Lander ble opprinnelig utviklet på slutten av 1970-tallet. Målet
+med spillet er å lande et romskip på månen. Selve kontrollen av
+romskipet ble videreført i spillet Asteroids som ble utgitt året
+etter.</p>
+<p><figure><img src="lunar_lander.png" alt=""></figure></p>
+</section>
+<section class="activity" id="oversikt-over-prosjektet">
+<h1 class="activity" id="oversikt-over-prosjektet">Oversikt over prosjektet</h1>
+<p><em>Mesteparten av kodingen av Lunar Lander skal du gjøre selv. I Lunar
+Lander vil vi spesielt bruke litt tid på gjøre den fysiske
+modelleringen av romskipet ganske realistisk.</em></p>
+<section class="check" id="plan">
+<h2 class="check" id="plan">Plan</h2>
+<ul>
+<li>
+<p>Et flyvende romskip</p>
+</li>
+<li>
+<p>Vi ankommer månen</p>
+</li>
+<li>
+<p>Klar for landing</p>
+</li>
+<li>
+<p>Begrenset drivstoff, flere landingsplasser og andre utfordringer</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-1-et-flyvende-romskip">
+<h1 class="activity" id="steg-1-et-flyvende-romskip">Steg 1: Et flyvende romskip</h1>
+<p>Vi skal nå programmere et romskip som flyr rundt på skjermen. For å ha
+kontroll på bevegelsen vil vi bruke to variable, <code class="blockdata">fartX</code>
+og <code class="blockdata">fartY</code>, som beskriver hvor raskt romskipet beveger
+seg henholdsvis sidelengs og opp-og-ned. Ved å bruke begge disse
+samtidig vil romskipet kunne bevege seg i hvilken som helst retning.</p>
+<p>Utfordringen i programmeringen av spillet er at romskipet kan rotere
+uavhengig av hvilken retning det faktisk flyr. Når spilleren trykker
+pil-opp for å bruke motoren vil vi gi romskipet ekstra fart i den
+retningen det peker. Det betyr at vi må fordele farten i romskipets
+retning i hvor mye sidelengs fart det får, og hvor mye av farten som
+går opp eller ned.</p>
+<p>Dette virker umiddelbart kanskje litt vanskelig, men det er akkurat
+dette de matematiske funksjonene <code>sinus</code> og <code>cosinus</code> gjør. I
+funksjonen nedenfor forteller for eksempel <code>cosinus(vinkel)</code> oss hvor
+lang den vannrette streken er i forhold til den skrå streken.</p>
+<p><figure><img src="sinus_cosinus.png" alt=""></figure></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Start et nytt prosjekt. Slett kattefiguren.</p>
+</li>
+<li>
+<p>Legg til en romskip-figur. Du kan gjerne bruke <code>Romfart/Spaceship</code>.</p>
+</li>
+<li>
+<p>Lag romskipet ganske lite. Du kan for eksempel bruke</p>
+<pre><code class="blocks">    sett størrelse til (20) %
+</code></pre>
+<p>rett etter at det grønne flagget er klikket.</p>
+</li>
+<li>
+<p>Lag to nye variable, <code class="blockdata">fartX</code> og <code class="blockdata">fartY</code>
+som gjelder kun for denne romskip-figuren.</p>
+</li>
+<li>
+<p>Vi lager først hovedløkken som lar romskipet falle, kun påvirket av
+tyngdekraften. Skriv denne koden:</p>
+<pre><code class="blocks">    når jeg mottar [Nytt spill v]
+    gå til x: (0) y: (175)
+    pek i retning (90 v)
+    sett [fartX v] til (0)
+    sett [fartY v] til (0)
+    for alltid
+        endre [fartY v] med (-0.01)
+        endre x med (fartX)
+        endre y med (fartY)
+    slutt
+</code></pre>
+<p>Om du prøver spillet ditt nå skal romskipet falle stadig raskere
+nedover skjermen. Prøv å endre litt i klossen</p>
+<pre><code class="blocks">    endre [fartY v] med (-0.01)
+</code></pre>
+<p>Det er denne som modellerer tyngdekraften. Om du forandrer verdien
+her vil romskipet falle raskere eller tregere, eller det kan til
+og med falle oppover om du lar tyngdekraften være positiv.</p>
+</li>
+<li>
+<p>Vi vil nå programmere kontrollen av romskipet. Først og fremst vil
+vi at romskipet vender seg når vi trykker på piltastene mot høyre og
+venstre.</p>
+<p>Legg til to <code class="blockcontrol">hvis</code>-blokker inne i <code class="blockcontrol">for alltid</code>-løkken hvor du <code class="blockmotion">vender</code>
+romskipet for eksempel <code>5</code> grader mot høyre eller venstre avhengig
+av hvilken piltast som trykkes.</p>
+</li>
+<li>
+<p>Når pil opp-tasten trykkes vil vi at romskipet skal få litt ekstra
+fart i den retningen romskipet peker. Som vi snakket om tidligere
+kan vi bruke de matematiske funksjonene sinus og cosinus for å få
+til dette. Legg også til denne blokken inne i
+<code class="blockcontrol">for alltid</code>-løkken din.</p>
+<pre><code class="blocks">    hvis (tast [pil opp v] trykket?)
+        endre [fartX v] med ((0) - ([cos v] av (retning)))
+        endre [fartY v] med ([sin v] av (retning))
+    slutt
+</code></pre>
+<p>Du finner både sinus og cosinus-funksjonene som valg på klossen</p>
+<pre><code class="blocks">    ([kvadratrot v] av (9))
+</code></pre>
+<p>Vi må bruke <code class="b">((0) - ([cos v] av (retning)))</code> i stedet for
+<code class="b">([cos v] av (retning))</code> fordi <code class="blockmotion">retning</code> i
+Scratch måles motsatt vei av hvordan man måler vinkler i
+matematikk.</p>
+</li>
+<li>
+<p>Prøv spillet ditt. Kan du styre romskipet rundt på skjermen? Dersom
+du synes romskipet flyr for raskt eller sakte kan du justere
+<code class="blockdata">endre fart</code>-klossene, for eksempel slik,</p>
+<pre><code class="blocks">    endre [fartX v] med ((0.3) * ((0) - ([cos v] av (retning))))
+    endre [fartY v] med ((0.3) * ([sin v] av (retning)))
+</code></pre>
+<p>Pass på at du justerer begge klossene med det samme tallet.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-vi-ankommer-manen">
+<h1 class="activity" id="steg-2-vi-ankommer-manen">Steg 2: Vi ankommer månen</h1>
+<p><em>Nå skal vi legge til et månelandskap hvor spilleren skal prøve å lande.</em></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Lag en ny bakgrunn, hvor du tegner et passende månelandskap. Gjør
+det så lett eller vanskelig som du selv vil. Tegn også inn en eller
+flere landingsplasser hvor romskipet skal lande. Vi vil bruke
+<code class="blocksensing">berører fargen</code>-klosser for å sjekke landingen
+senere, så det enkleste er å bruke en farge for landskapet og en
+annen for landingsplassen.</p>
+</li>
+<li>
+<p>For at romskipet skal slutte å fly når det treffer bakken kan du
+bytte ut <code class="blockcontrol">for alltid</code>-løkken med en
+<code class="blockcontrol">gjenta til</code>-løkke hvor du tester på om romskipet
+<code class="blocksensing">berører fargen</code> du har brukt på landskapet eller
+på landingsplassen.</p>
+</li>
+<li>
+<p>Legg også til en <code class="b">send melding [Sjekk landing v]</code> rett etter
+<code class="blockcontrol">gjenta til</code>-løkken.</p>
+</li>
+<li>
+<p>Prøv spillet ditt igjen. Du skal nå kunne fly rundt helt til
+romskipet kommer nær bakken.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-klar-for-landing">
+<h1 class="activity" id="steg-3-klar-for-landing">Steg 3: Klar for landing</h1>
+<p><em>Vi vil til slutt sjekke hvor og hvordan romskipet landet.</em></p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Når vi sjekker landingen til romskipet vil vi skille mellom tre
+forskjellige tilfeller:</p>
+<p><strong>1</strong>: Romskipet landet utenfor landingsplassen (kræsjet).</p>
+<p><strong>2</strong>: Romskipet landet på landingsplassen, men landet enten på
+skrå (eller opp-ned) eller for raskt.</p>
+<p><strong>3</strong>: Romskipet landet perfekt på landingsplassen.</p>
+<p>Lag et nytt skript på romskipet som starter når det mottar
+meldingen <code>Sjekk landing</code>. Under denne klossen må du bruke
+<code class="blockcontrol">hvis</code>- og <code class="blockcontrol">hvis ellers</code>-klosser som
+tester for de tre tilfellene. Du kan for eksempel si at landingen
+er perfekt dersom romskipet lander på landingsplassen,
+<code class="blockdata">fartY</code> er større enn <code>-1.5</code> og
+<code class="blockmotion">retning</code> er mellom <code>80</code> og <code>100</code>.</p>
+</li>
+<li>
+<p>Finn en måte å fortelle spilleren hvordan romskipet landet. Det
+enkleste er kanskje å bare bruke en <code class="blocklooks">si</code>-kloss. Men du
+kan også bruke lydeffekter, forskjellige drakter eller kanskje en
+tekstplakat som dukker opp.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-videreutvikling-av-spillet">
+<h1 class="activity" id="steg-4-videreutvikling-av-spillet">Steg 4: Videreutvikling av spillet</h1>
+<p><em>Du har nå laget en enkel variant av Lunar Lander. Men prøv å gjøre
+spillet morsommere ved å videreutvikle det. Du bestemmer selv hvordan
+du vil jobbe videre, men nedenfor er noen ideer som kanskje kan være
+til inspirasjon?</em></p>
+<section class="check" id="ideer-til-videreutvikling">
+<h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
+<ul>
+<li>
+<p>Lag flere landingsplasser. Kanskje noen kan være vanskeligere enn
+andre å lande på (enten på grunn av terrenget eller fordi selve
+landingsplassen er mindre).</p>
+</li>
+<li>
+<p>Lag flere bakgrunner eller brett. Du kan enten la spilleren velge
+seg en bakgrunn å spille på i begynnelsen av spillet, eller gå
+videre fra brett til brett etterhvert som spilleren klarer å lande.</p>
+</li>
+<li>
+<p>Du kan også bruke flere bakgrunner som et brett. Dersom romskipet
+flyr ut av skjermen på høyre side kan du la det dukke opp igjen på
+venstre side av en annen bakgrunn, og motsatt.</p>
+</li>
+<li>
+<p>Prøv å animere bruken av motoren. For eksempel, kan du lage en kopi
+av den flyvende romskip-drakten, og endre den som følger. Klikk
+først på romskipet, og deretter på den nye knappen som dukker opp
+nederst i knapperekka (markert med rødt i figuren til
+venstre). Denne vil dele opp romskip-figuren i mindre deler. Velg en
+passende flammefarge, og bruk malingsspannet til å fargelegge de tre
+finnene på romskipet slik at det ser ut som flammer som kommer fra
+motoren.</p>
+<p><figure><img src="animer_romskip.png" alt=""></figure></p>
+</li>
+<li>
+<p>En av utfordringene i det originale Lunar Lander-spillet var at
+spilleren bare hadde begrenset drivstoff tilgjengelig. Du kan legge
+til dette i ditt spill ved å lage en
+<code class="blockdata">Drivstoff</code>-variabel som du lar bli stadig mindre
+etterhvert som spilleren trykker på piltastene. Dersom romskipet går
+tomt for drivstoff kan du ignorere tastetrykkene fra spilleren og
+bare la romskipet sveve til det til slutt kræsjer.</p>
+</li>
+<li>
+<p>Du kan lage forskjellige bonusting som spilleren kan plukke opp. For
+å gjøre det litt utfordrende kan du la disse ligge på måneoverflaten
+slik at spilleren må manøvrere forsiktig for å få tak i
+dem. Eksempler på slike bonusting kan være ekstra drivstoff,
+bonuspoeng, større landingsplass og så videre.</p>
+</li>
+<li>
+<p>En større endring i spillet kan være at landingsplassen er skjult
+under bakken når spillet begynner, og spilleren må grave denne frem
+ved å slippe bomber fra romskipet. Du kan implementere dette for
+eksempel ved bruk av noen av klossene under
+<code class="blockpen">Penn</code>-kategorien.</p>
+</li>
+</ul>
+</section>
+</section>
+</div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
