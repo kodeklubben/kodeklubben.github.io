@@ -1,0 +1,440 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>undefined | Kodeklubben</title><link href="../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="">ComputerCraft</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title"></h1><div class="lesson-icons"><a href="" class="course"><img src="logo-white.png"/><span>ComputerCraft</span></a><div class="pdf"><a href="/computercraft/README.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="lesson-link"><a href="index.html"><span class="icon"></span><span data-i18n="html=layout.lesson" class="text">Oppgave</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section>
+<h1 id="computercraft">ComputerCraft</h1>
+<p><a href="http://www.computercraft.info/">ComputerCraft</a> er en mod til
+<a href="https://minecraft.net/">Minecraft</a>, som gir deg muligheten til å
+bygge og programmere datamaskiner og roboter inne i
+Minecraft-verdenen.</p>
+<section>
+<h2 id="installering-av-computercraft">Installering av ComputerCraft</h2>
+<p>ComputerCraft er en mod til Minecraft, og krever derfor at Minecraft
+allerede er installert på datamaskinen. Vi antar at du er kjent med
+Minecraft.</p>
+<ol>
+<li>
+<p>Gå til <a href="http://www.computercraft.info/download/">http://www.computercraft.info/download/</a>. Bla nedover på
+siden til du finner et avsnitt som heter <strong>Download and
+installing</strong>. Last ned ComputerCraft til datamaskinen din, og noter
+deg hvilken versjon av Minecraft denne er kompatibel med (for
+eksempel versjon 1.7.10).</p>
+</li>
+<li>
+<p>Start Minecraft Launcher. Sjekk om du har den riktige versjonen av
+Minecraft tilgjengelig. Hvis ikke kan du velge <code>New Profile</code> og i
+nedtrekksmenyen <code>Use Version</code> velger du riktig versjon. Gi profilen
+et navn (for eksempel versjonsnummeret) og klikk <code>Save Profile</code>. Klikk <code>Play</code> slik at denne versjonen blir lastet ned og
+startet opp. Avslutt spillet.</p>
+</li>
+<li>
+<p>Før vi kan legge inn ComputerCraft må vi installere Minecraft
+Forge, som gir oss tilgang til å legge inn Mods. Gå til
+<a href="http://files.minecraftforge.net/">http://files.minecraftforge.net/</a> og velg den riktige
+Minecraft-versjonen i nedtrekksmenyen på toppen av skjermen. Finn
+linjen som sier <code>Latest</code>, og klikk på <code>Installer</code>. Etter litt
+reklame (du kan velge <em>Skip ad</em> etter noen sekunder) starter
+nedlastingen av en fil.</p>
+</li>
+<li>
+<p>Kjør filen som ble lastet ned (om du blir spurt hvordan den skal
+kjøres kan du velge Java eller JDK). Velg <code>Install Client</code> og klikk
+<code>OK</code>.</p>
+</li>
+<li>
+<p>Start Minecraft Launcher igjen. Det har nå dukket opp en ny profil
+som heter <code>Forge</code>. Velg denne og start spillet. Du vil se at det
+har dukket opp et nytt valg i hovedmenyen: <code>Mods</code>. Avslutt spillet
+igjen.</p>
+</li>
+<li>
+<p>Finn <code>Minecraft</code>-katalogen din (se nedenfor) i en filutforsker.
+Velg katalogen <code>mods</code>, og kopier ComputerCraft-filen vi lastet ned
+i steg 1 inn i <code>mods</code>-katalogen.</p>
+<p><strong>Windows</strong>: Under Windows finner du <code>Minecraft</code>-katalogen under
+<code>%appdata%\.minecraft</code>. Søk etter <code>%appdata%</code> i en utforsker eller
+i kjør-feltet etter å ha klikket start-knappen.</p>
+<p><strong>Mac OS X</strong>: Under Mac ligger <code>Minecraft</code>-katalogen i
+<code>Library/Application Support/minecraft/</code> under hjemmekatalogen
+din. På norsk heter <code>Library</code> <code>Bibliotek</code>.</p>
+<p><strong>Linux</strong>: På Linux finner du <code>Minecraft</code>-katalogen som en skjult
+katalog <code>.minecraft</code> rett under hjemmekatalogen din.</p>
+</li>
+<li>
+<p>Nå er vi så godt som ferdige. Start Minecraft Launcher en gang
+til. Velg profilen <code>Forge</code> og klikk <code>Play</code>. Når du klikker <code>Mods</code>
+fra hovedmenyen skal du se at ComputerCraft er en av de
+tilgjengelige mods'ene. Om du vil kan du endre på navnet til
+profilen ved å klikke <code>Edit Profile</code> tilbake i Minecraft
+Launcher. Om du for eksempel kaller profilen <code>ComputerCraft</code> blir
+det enklere å finne den igjen senere.</p>
+</li>
+</ol>
+</section>
+<section>
+<h2 id="kom-i-gang">Kom i gang</h2>
+<p>Vi er nå klare til å slå oss opp som programmerere i
+Minecraft-verdenen. Mens vi utforsker datamaskinene er det enklest med
+et rolig og enkelt spill:</p>
+<ol>
+<li>
+<p>Velg <code>Singleplayer</code>, og klikk <code>Create New World</code>.</p>
+</li>
+<li>
+<p>Gi verdenen din et navn, og sett <code>Game Mode</code> til <code>Creative</code>. Klikk
+<code>Create New World</code>.</p>
+</li>
+<li>
+<p>Du kan nå lage din første datamaskin.  Trykk <code>E</code> for å gå til
+Inventory-listen. Øverst kan du nå velge å klikke <code>&gt;</code> for å gå til
+neste side. Trykk deretter på datamaskin-symbolet (en grå
+kloss/skjerm), og gi deg selv en <strong>Computer</strong>.</p>
+</li>
+<li>
+<p>Sett ut en <strong>Computer</strong> ved å høyre-klikke. Høyre-klikk så en gang
+til på datamaskinen du nettopp satte ut. En svart skjerm skal dukke
+opp, med teksten <code>CraftOS</code> og et versjonsnummer i øverste
+linje.</p>
+</li>
+</ol>
+<p>Gratulerer! Du har startet en datamaskin inne i Minecraft-verdenen.</p>
+</section>
+</section>
+<section>
+<h1 id="oppgaver">Oppgaver</h1>
+<p>Alle compercraft-oppgaver er per nå utviklet av Kodeklubben Norge. Disse
+oppgavene er tilpasset en introduksjon til programmering gjennom bruk
+av Minecraft og utvidelsen ComputerCraft.</p>
+<section>
+<h2 id="leksjoner">Leksjoner</h2>
+<p>Materialet her er i utgangspunktet tilrettelagt for et kurs med rundt
+8 leksjoner på rundt en time. Vi antar lite eller ingen
+programmeringserfaring, men det vil gjøre leksjonene lettere, og ikke
+minst morsommere, om man har litt kjennskap til og interesse for
+Minecraft.</p>
+<p>Leksjonen</p>
+<ul>
+<li><a href="introduksjon_til_computercraft/">Introduksjon til ComputerCraft</a></li>
+</ul>
+<p>er lagt opp til å brukes i et enkeltstående introduksjonskurs (som
+ikke nødvendigvis går videre med de andre leksjonene), og dekker det
+meste materialet fra leksjon 1 og 2 nedenfor. Forskjellen er at man
+har litt mer fokus på å vise frem <em>action</em> på bekostning av en noe
+grundigere innføring i enkelte begreper.</p>
+<p>Anbefalt rekkefølge for leksjonene er</p>
+<ol>
+<li><a href="01-bli_kjent_med_datamaskinen/">Bli Kjent Med Datamaskinen</a></li>
+<li><a href="02-robotinvasjon/">Robotinvasjon</a></li>
+<li>Datamaskin-Guru
+<ul>
+<li>Hvordan bevege seg rundt i filsystemet</li>
+<li>Kopiering av filer</li>
+<li>Hendelser, enkel bruk av os.pullevent</li>
+<li>Et bedre passord-program: auto-startup / kan ikke termineres med ctrl-T</li>
+<li>Hvordan skrive kode i tekstbehandlere utenfor Minecraft</li>
+</ul>
+</li>
+<li>Bygg et Hus
+<ul>
+<li>Bruk en robot til å bygge hus</li>
+<li>Hvordan flytte rundt</li>
+<li>Bruk av funksjoner for enklere kode</li>
+<li>Sikre at vi får nok materiale</li>
+<li>Kommandolinjeargumenter for å bygge forskjellge typer / størrelser hus</li>
+</ul>
+</li>
+<li>Sprettball
+<ul>
+<li>Introduksjon til peripherals</li>
+<li>Koble en skjerm til datamaskinen</li>
+<li>Skrive tekst til skjermen</li>
+<li>En ball faller over skjermen</li>
+<li>Hvor stor er skjermen</li>
+<li>Sprettball</li>
+<li>Kanskje også ticker?</li>
+</ul>
+</li>
+<li>Agricola
+<ul>
+<li>Bruk av bonderoboter, som kan så / høste og essensielt ta vare
+på en åker på egen hånd</li>
+<li>Plukke opp og levere materiale</li>
+</ul>
+</li>
+<li>Kommunikasjon mellom Datamaskiner
+<ul>
+<li>Bruk av disketter for å flytte programmer mellom datamaskiner
+(aside: hva er en diskett? :) )</li>
+<li>Bruk av redstone for kommunikasjon</li>
+<li>Enda bedre passord program: datamaskinen trenger ikke stå ved
+siden av døren</li>
+<li>Trådløst nett mellom datamaskiner</li>
+</ul>
+</li>
+<li>GPS-Roboter
+<ul>
+<li>Hvordan fungerer GPS / triangulering</li>
+<li>Sette ut baseroboter</li>
+<li>Hvordan kan en robot finne ut hvor den er</li>
+<li>Bruke lokasjon til å forbedre f.eks. bonderoboten?</li>
+</ul>
+</li>
+</ol>
+<p>Leksjonene er fortsatt under utarbeidelse (med store muligheter for endringer).</p>
+</section>
+<section>
+<h2 id="laeringsmal">Læringsmål</h2>
+<p>Tabellen under er en oversikt over læringsmål i hver leksjon fra et
+programmeringsperspektiv. Symbolet <code>/</code> brukes for leksjoner som kommer
+innom læringsmålet, mens <code>X</code> brukes der læringsmålet er en sentral del
+av leksjonen.</p>
+<table>
+<thead>
+<tr>
+<th>Mål     \     Leksjon</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kommandolinjen</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Interaktiv lua-tolker</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Editering av programmer</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Filsystemet</td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Variabler</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>If-tester</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>For-løkker</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>While-løkker</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Funksjoner</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hendelser (os.pullEvent)</td>
+<td></td>
+<td></td>
+<td></td>
+<td>/</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Typer (strings, numbers, bools, etc)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Matematiske operasjoner</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Relasjonelle og logiske operatorer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Iteratorer</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Lokal og global scope</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Rekursjon</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Data-strukturer (tables)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Debugging</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Også denne tabellen er for tiden under utarbeidelse. Sannsynligvis vil
+ikke alle disse målene bli dekt i dette introduksjonskurset. Det vil
+også dukke opp andre mål som for øyeblikket er glemt.</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=ComputerCraft: undefined&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../assets/vendor.min.js"></script><script src="../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

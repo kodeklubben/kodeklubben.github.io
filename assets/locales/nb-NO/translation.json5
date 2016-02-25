@@ -23,7 +23,8 @@
     lesson: {
       doneLabel: "Gå tilbake til der du startet",
       lessonIcons: "Nivå og programmeringsspråk vises her. Du kan også laste ned oppgaven som PDF.",
-      pickAWord: "Oppgavene består av steg med instruksjoner og kodeblokker.<br><br> Det var det! Lykke til :-)"
+      pickAWord: "Oppgavene består av steg med instruksjoner og kodeblokker.<br><br> Det var det! Lykke til :-)",
+      steps: '#steg-1-hei-verden'
     }
   },
   layout: {
@@ -49,7 +50,17 @@
       '2': 'Nybegynner',
       '3': 'Erfaren',
       '4': 'Ekspert'
-    }
+    },
+    numberOfLessons: 'Antall oppgaver',
+    teacherNotes: 'Lærerveiledning',
+    lesson: 'Oppgave'
+  },
+  improve: {
+    header: 'Forbedre denne siden',
+    text: 'Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!',
+    createIssue: 'Rapporter et problem',
+    showCode: 'Vis koden og fiks selv',
+    describeIssue: 'Beskriv ditt problem...'
   },
   indexjs: {
     externalResource: 'Ekstern ressurs',

@@ -23,7 +23,8 @@
     lesson: {
       doneLabel: "Go back to where you started",
       lessonIcons: "Level and programming language is shown here. You can also download the lesson as a PDF.",
-      pickAWord: "Lessons consists of steps with instructions and code blocks.<br><br> That's it! Happy coding :-)"
+      pickAWord: "Lessons consists of steps with instructions and code blocks.<br><br> That's it! Happy coding :-)",
+      steps: '#step-1-pick-a-word'
     }
   },
   layout: {
@@ -51,7 +52,17 @@
       '4': 'Expert',
       '5': 'Master',
       '6': 'Champion'
-    }
+    },
+    numberOfLessons: 'Number of lessons',
+    teacherNotes: 'Teacher notes',
+    lesson: 'Lesson'
+  },
+  improve: {
+    header: 'Improve this page',
+    text: 'Found an error? Could something be better? If so, please create an issue or fix the error if you can. We\'re  really grateful for any feedback you can give.',
+    createIssue: 'Create an issue',
+    showCode: 'Show code and fix yourself',
+    describeIssue: 'Describe your issue...'
   },
   indexjs: {
     externalResource: 'External resource',
