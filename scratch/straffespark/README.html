@@ -1,0 +1,206 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lærerveiledning - Straffespark | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><div class="results"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Lærerveiledning - Straffespark</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/straffespark/README.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="lesson-link"><a href="straffespark.html"><span class="icon"></span><span data-i18n="html=layout.lesson" class="text">Oppgave</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="informasjon-til-veiledere">
+<h1 class="intro" id="informasjon-til-veiledere">Informasjon til veiledere</h1>
+<p>Straffespark er et enkelt fotballspill, hvor man skal prøve å score på
+så mange straffespark som mulig. Dette prosjektet passer bra som en
+introduksjon til Scratch.</p>
+<p><figure><img src="straffespark.png" alt=""></figure></p>
+</section>
+<section class="activity" id="forberedelser">
+<h1 class="activity" id="forberedelser">Forberedelser</h1>
+<ul>
+<li>
+<p><strong>Antatt tidbruk</strong>: 1.5 - 2 timer for hele prosjektet.</p>
+</li>
+<li>
+<p><strong>Nødvendige forkunnskaper</strong>: Ingen.</p>
+</li>
+</ul>
+<p>Dersom dette prosjektet brukes som en introduksjon til Scratch
+anbefaler vi at du følger veiledningen
+<a href="../veiledninger/kom_i_gang_med_scratch.html">Kom i gang med Scratch</a>.</p>
+<p>Om elevene allerede er komfortable med Scratch kan du benytte
+anledningen til å snakke om
+<a href="#tema-skript-tilhorer-figuren">hvordan man programmerer ulik oppførsel på forskjellige figurer</a>.</p>
+</section>
+<section class="activity" id="typiske-utfordringer">
+<h1 class="activity" id="typiske-utfordringer">Typiske utfordringer</h1>
+<p>Nedenfor er en liste over utfordringer vi har opplevd at noen elever
+kommer borti.</p>
+<ul>
+<li>
+<p>I Straffespark må man holde styr på tre figurer i tillegg til
+scenen, og passe på at hvert skript kodes på riktig sted. Vær nøye
+med at skriptene ligger på riktig figur som beskrevet i oppgaven.</p>
+</li>
+<li>
+<p>Katten må gå flere steg før den når frem til ballen. Om dette skjer
+kan man enten prøve å plassere <code>Leo</code> og <code>Ball</code> nærmere hverandre ved
+å endre på <code class="b">gå til x: () y: ()</code>-klossene, eller endre på hvor
+langt <code>Leo</code> <code class="blockmotion">går</code> når han klikkes. Dersom elevene
+allerede kan litt om koordinatsystemet er det en fin øvelse å tenke
+på hvilke koordinater man bør endre for å flytte figurene nærmere
+hverandre. Alternativt kan man flytte på figurene ved å klikke og
+dra, og deretter se på koordinatene øverst til høyre i
+skriptvinduet.</p>
+</li>
+<li>
+<p>I steg 4 jobber vi videre med skriptet som ble skrevet på <code>Ball</code> i
+steg 2. Pass på at elevene ikke lager to forskjellige skript. Om de
+lager to forskjellige skript vil effekten stort sett være at ballen
+beveger seg fortere enn normalt fordi begge skriptene flytter
+ballen.</p>
+</li>
+<li>
+<p>I steg 4 og 5 lages det mange små skript som starter på meldingene
+<code>Mål</code> og <code>Redning</code>. Pass på at disse havner på korrekt figur. Det
+vil si at <code>Ball</code> og <code>Keeper</code> har skript med <code class="b">stopp [andre skript i figuren v] :: control</code>, <code>Leo</code> har skript hvor han
+<code class="blocklooks">sier</code> noe, mens Scenen har skript som teller
+<code class="blockdata">Mål</code> og <code class="blockdata">Redninger</code></p>
+<p>Dersom elevene vil at også <code>Ball</code> eller <code>Keeper</code> skal si noe kan det
+være utfordrende på grunn av <code class="blockcontrol">stopp</code>-klossen. En
+mulig løsning er som følger:</p>
+<pre><code class="blocks">    når jeg mottar [Redning v]
+    si [Hurra, jeg reddet!]
+    stopp [andre skript i figuren v] :: control
+</code></pre>
+<p>Det er her viktig å ikke bruke <code class="b">si [ ... ] i (2) sekunder</code> siden
+den klossen vil gjøre at <code>Ball</code> eller <code>Keeper</code> ikke slutter å bevege
+seg før etter 2 sekunder. I stedet bruker man en <code class="b">si []</code>-kloss
+(uten tekst) for at snakkeboblen skal bli borte. Denne kan legges
+øverst i <code class="b">når grønt flagg klikkes</code>- eller <code class="b">når jeg mottar [Nytt spark v]</code>-skriptet.</p>
+</li>
+<li>
+<p>For enkelhets skyld settes aldri retningen på <code>Ball</code> i dette
+prosjektet. Siden ballen aldri forandrer retning - den beveger seg
+alltid horisontalt fra venstre mot høyre - er dette sjelden et
+problem. Men dersom elevene har endret retning på <code>Ball</code> slik at den
+spretter på skrå over skjermen må retningen tilbakestilles. Dette
+gjøres enklest ved å klikke på klossen <code class="b">pek i retning (90 v)</code>
+(eller ved å legge denne klossen øverst i <code>Ball</code> sitt hovedskript).</p>
+</li>
+</ul>
+</section>
+<section class="activity" id="variasjoner">
+<h1 class="activity" id="variasjoner">Variasjoner</h1>
+<p>Dette er et introduksjonsprosjekt, og elevene ledes derfor ganske
+detaljert gjennom hvordan spillet skal programmeres. Det er likevel
+rom for en del kreativitet. Elevene kan gjerne oppfordres til å</p>
+<ul>
+<li>
+<p>velge sine egne figurer og bakgrunner. <code>Leo</code> trenger absolutt ikke å
+være en katt, og det har blitt scoret mange mål med noe annet enn en
+fotball.</p>
+</li>
+<li>
+<p>eksperimentere med hastigheten til <code>Ball</code> og <code>Keeper</code>. Ved å endre
+på tallene i <code class="b">gå () steg</code>-klossene vil figurene flytte seg
+saktere eller raskere. Det er nyttig læring å teste effekten av
+slike endringer, og observere hvordan vanskelighetsgraden i spillet
+forandrer seg (se også boksen <strong>Endre farten</strong> på slutten av steg 4).</p>
+</li>
+<li>
+<p>forandre på tekstene i snakkeboblene til <code>Leo</code>, eller tekstene som
+vises når man vinner eller taper spillet.</p>
+</li>
+<li>
+<p>legge på passende lydeffekter. Dette nevnes i oppgaven mot slutten
+av steg 5, men om elevene har litt erfaring med Scratch fra
+tidligere kan de gjerne gjøre dette underveis i programmeringen
+også.</p>
+</li>
+</ul>
+</section>
+<section class="activity" id="tema-skript-tilhorer-figuren">
+<h1 class="activity" id="tema-skript-tilhorer-figuren">Tema: Skript tilhører figuren</h1>
+<p>Dersom elevene allerede er komfortable med Scratch er dette prosjektet
+en bra anledning for å snakke om hvordan man gir forskjellige figurer
+en unik oppførsel ved å legge ulike skript på dem.</p>
+<p>Et viktig konsept i Scratch er at man koder ved å beskrive egenskapene
+(utseende, posisjon, retning, osv.) og oppførselen (skript) til
+figurer. På fagspråket kalles dette <strong>objektorientert programmering</strong>
+(helt presist er Scratch <em>prototypeorientert programmering</em> men
+forskjellen er ikke relevant her). Dette virker så naturlig at
+elevene sjelden bevisst tenker på dette, og samtidig skaper det
+sjelden problemer.</p>
+<section class="check" id="presentasjon">
+<h2 class="check" id="presentasjon">Presentasjon</h2>
+<ul>
+<li>
+<p>Start et nytt Scratchprosjekt ved å klikke <code>Programmering</code> fra
+hovedsiden, eller <code>Ny</code> i <code>Fil</code>-menyen.</p>
+</li>
+<li>
+<p>Legg til en ekstra figur - for eksempel <code>Bat1</code> - slik at det er to
+figurer i prosjektet. Dra dem rundt på scenen slik figurene er i
+hvert sitt hjørne.</p>
+</li>
+<li>
+<p>Spør elevene hvordan de vil kode at katten beveger seg mot
+flaggermusa (den andre figuren)? Spesielt, pass på at de er bevisst
+hvilken figur som må programmeres (<em>Katten</em>). Spør om det det samme
+kan programmeres ved å legge et skript på den andre figuren (<em>Nei,
+siden Katten beveger seg er det Kattens oppførsel vi må beskrive</em>).</p>
+<pre><code class="blocks">    for alltid
+        pek mot [Bat1 v]
+        gå (10) steg
+    slutt
+</code></pre>
+</li>
+<li>
+<p>Hvordan kan vi programmere at flaggermusa rømmer fra katten når
+katten tar (berører) den? Igjen, hvilken figur må programmeres?
+Kanskje begge? <em>Vi må programmere flaggermusa siden den rømmer
+(oppførsel).</em> Her trenger vi ikke noe nytt program for katten så
+lenge den ikke reagerer på at den berører flaggermusa (<em>ingen ny
+oppførsel å beskrive</em>).</p>
+<p>Det er mange måter å skrive kode for at flaggermusa rømmer. Det
+følgende er et eksempel (husk at koden hører til flaggermusa):</p>
+<pre><code class="blocks">    for alltid
+        vent til (berører [Sprite1 v])
+        gli (0.2) sekunder til x: (tilfeldig tall fra (-240) til (240)) y: (tilfeldig tall fra (-180) til (180))
+    slutt
+</code></pre>
+</li>
+<li>
+<p>Spør elevene om de kan tenke seg noen annen måte å programmere på?
+Hvor man ikke knytter skriptene til figurene?</p>
+<p>Et eksempel på en annen type programmering er <strong>imperativ
+programmering</strong> hvor programmer skrives som en serie kommandoer uten
+at det skilles mellom hvilken figur som kommanderes. I et slikt
+språk ville de to skriptene over skrives som <em>ett</em> skript omtrent
+som dette (ikke alle disse klossene eksisterer i Scratch):</p>
+<pre><code class="blocks">    for alltid
+        flytt [katten v] mot [flaggermusa v] :: motion
+        hvis ([katten v] berører [flaggermusa v] :: sensing)
+            flytt [flaggermusa v] til x: (tilfeldig tall fra (-240) til (240)) y: (tilfeldig tall fra (-180) til (180)) :: motion
+        slutt
+    slutt
+</code></pre>
+<p>Vis gjerne denne koden til elevene. I tillegg til at det bare er ett
+skript, hvilke andre forskjeller ser de? <em>Den andre store
+forskjellen er at man alltid må fortelle hvilken figur som skal
+utføre kommandoene. Dette er underforstått i Scratch</em>.</p>
+</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Lærerveiledning - Straffespark&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/straffespark" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
