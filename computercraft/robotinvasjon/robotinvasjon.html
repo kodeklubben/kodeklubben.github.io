@@ -377,7 +377,7 @@ lager nå en løkke hvor roboten klatrer oppover så lenge den merker at
 tårnet er høyere.</p>
 <pre><code class="lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
     turtle.up()
-done
+<span class="hljs-keyword">end</span>
 </code></pre>
 <p>Lagre og kjør programmet ditt. Klatrer roboten til toppen av det
 lille tårnet?</p>
@@ -391,11 +391,11 @@ den merker om roboten har en kloss under seg i stedet for foran seg.</p>
 <p>Utvid programmet ditt slik:</p>
 <pre><code class="lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
     turtle.up()
-done
+<span class="hljs-keyword">end</span>
 
 <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> turtle.detectDown() <span class="hljs-keyword">do</span>
     turtle.down()
-done
+<span class="hljs-keyword">end</span>
 </code></pre>
 <p>Vi sier at så lenge roboten <em>ikke</em> har en kloss under seg kan den
 ta et steg ned. Kommer roboten ned igjen når du kjører programmet?</p>
@@ -405,13 +405,13 @@ ta et steg ned. Kommer roboten ned igjen når du kjører programmet?</p>
 å ta et steg tilbake i den andre løkken, og plassere ut en kloss.</p>
 <pre><code class="lua"><span class="hljs-keyword">while</span> turtle.detect() <span class="hljs-keyword">do</span>
     turtle.up()
-done
+<span class="hljs-keyword">end</span>
 
 <span class="hljs-keyword">while</span> <span class="hljs-keyword">not</span> turtle.detectDown <span class="hljs-keyword">do</span>
     turtle.down()
     turtle.back()
     turtle.place()
-done
+<span class="hljs-keyword">end</span>
 </code></pre>
 <p>Virker det? Lager roboten en trapp?</p>
 </li>
