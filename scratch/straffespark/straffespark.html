@@ -142,7 +142,7 @@ flagget igjen?</p>
 </li>
 <li>
 <p>Hvis <code>Leo</code> sparker ballen før du klikker på ham (med en gang du
-trykker det grønne flagget), så må du endre litt på tallene i <code class="blockmotion">gå til x: y:</code>-klossen slik at ballen ligger i ro foran <code>Leo</code>.</p>
+trykker det grønne flagget), så må du endre litt på tallene i <code class="b">gå til x: () y: ()</code>-klossen slik at ballen ligger i ro foran <code>Leo</code>.</p>
 </li>
 </ul>
 </section>
@@ -177,8 +177,8 @@ figuren under.</p>
         sprett tilbake ved kanten
     slutt
 </code></pre>
-<p>Det er et par nye klosser i dette skriptet. Les programmet
-nøye. Hva tror du de nye klossene gjør?</p>
+<p>Det er et par nye klosser i dette skriptet. Les programmet nøye. Hva
+tror du de nye klossene gjør?</p>
 </li>
 </ul>
 </section>
@@ -199,14 +199,14 @@ nøye. Hva tror du de nye klossene gjør?</p>
 <ul>
 <li>
 <p>En ting som ser litt rart ut er at <code>Keeper</code> ikke ser på ballen. Vi
-fikser dette ved å legge til en <code class="blockmotion">begrens rotasjon vend sideveis</code>-kloss helt i begynnelsen av skriptet vårt.</p>
+fikser dette ved å legge til en <code class="b">begrens rotasjon [vend sideveis v]</code>-kloss helt i begynnelsen av skriptet vårt.</p>
 </li>
 <li>
 <p>Du synes kanskje at keeperen er litt stor? Vi har tidligere sett
 hvordan vi kan bruke <img src="../bilder/krymp.png" alt="krymp"> for å gjøre
 figurer mindre. En annen måte å endre størrelsen på er ved å bruke
 klosser fra <code class="blocklooks">Utseendet</code>-kategorien.</p>
-<p>Legg klossen <code class="blocklooks">sett størrelse til 100%</code> inn i <code class="blockcontrol">for alltid</code>-løkka. Du kan nå eksperimentere med å endre
+<p>Legg klossen <code class="b">sett størrelse til (100)%</code> inn i <code class="blockcontrol">for alltid</code>-løkka. Du kan nå eksperimentere med å endre
 <code>100%</code> til et annet tall til du finner en passende størrelse på
 keeperen. Om du har brukt blekkspruten som <code>Keeper</code> passer <code>50%</code>
 ganske bra. Prøv deg frem!</p>
@@ -249,7 +249,7 @@ slik:</p>
         slutt
     slutt
 </code></pre>
-<p>I klossen <code class="blockevents">send melding</code> må du velge <code>Ny melding</code> og
+<p>I klossen <code class="b">send melding [message1 v]</code> må du velge <code>Ny melding</code> og
 deretter skrive inn <code>Redning</code> som meldingsnavn.</p>
 </li>
 </ul>
@@ -282,10 +282,10 @@ figurvinduet nederst på skjermen.</p>
 <p>Nå skal vi også sjekke om ballen har gått i mål. Vi gjør dette ved å
 undersøke hvor langt til høyre på skjermen ballen har beveget
 seg. Posisjonen til en figur i Scratch er beskrevet ved hjelp av
-koordinater: <code class="blockmotion">x-posisjon</code> sier hvor en figur er sidelengs
-på skjermen, mens <code class="blockmotion">y-posisjon</code> sier hvor langt opp eller
-ned på skjermen en figur er. Rett under scenen kan du se to tall
-merket <code>x</code> og <code>y</code>. Disse viser koordinatene til musepekeren.</p>
+koordinater: <code class="b">(x-posisjon)</code> sier hvor en figur er sidelengs på
+skjermen, mens <code class="b">(y-posisjon)</code> sier hvor langt opp eller ned på
+skjermen en figur er. Rett under scenen kan du se to tall merket <code>x</code>
+og <code>y</code>. Disse viser koordinatene til musepekeren.</p>
 <p><figure><img src="koordinater.png" alt=""></figure></p>
 <ul>
 <li>
@@ -344,8 +344,8 @@ det blir en <code>Redning</code>. Prøv dette på egen hånd!</p>
 <h2 class="protip" id="endre-farten">Endre farten</h2>
 <p>Du kan gjøre spillet enklere eller vanskeligere ved å endre farten på
 ballen og hvor fort keeperen beveger seg. Begge disse er bestemt av
-tallet som står i <code class="blockmotion">gå _ steg</code>-klossene til henholdsvis
-<code>Ball</code> og <code>Keeper</code>.</p>
+tallet som står i <code class="b">gå () steg</code>-klossene til henholdsvis <code>Ball</code> og
+<code>Keeper</code>.</p>
 <p>Prøv forskjellige tall for både fotballen og keeperen til du finner
 den kombinasjonen du liker best. Pass på at det blir litt vanskelig,
 men ikke umulig.</p>
@@ -365,21 +365,21 @@ scores.</em></p>
 </li>
 <li>
 <p>Klikk på <code class="blockdata">Data</code>-kategorien og lag en ny variabel. Gi
-den nye variabelen navnet <code class="blockdata">Mål</code>. Legg merke til at det
+den nye variabelen navnet <code>Mål</code>. Legg merke til at det
 dukket opp en ny boks på scenen som er merket <code>Mål</code>, og som viser
-tallet <code>0</code>.</p>
+tallet <code class="blockdata">0</code>.</p>
 </li>
 <li>
-<p>Vi vil nå telle målene. Lag et nytt skript som endrer
-<code class="blockdata">Mål</code> hver gang meldingen <code>Mål</code> sendes. Lag dette
-skriptet på Scenen:</p>
+<p>Vi vil nå telle målene. Lag et nytt skript som endrer <code class="b">(Mål)</code>
+hver gang meldingen <code>Mål</code> sendes, ved å lage dette skriptet på
+Scenen:</p>
 <pre><code class="blocks">    når jeg mottar [Mål v]
     endre [Mål v] med (1)
 </code></pre>
 </li>
 <li>
 <p>Vi kan gjøre tilsvarende for å telle antall redninger. Lag en ny
-variabel som heter <code class="blockdata">Redninger</code>.</p>
+variabel som heter <code class="b">(Redninger)</code>.</p>
 </li>
 <li>
 <p>Lag deretter et nytt skript for å telle redningene:</p>

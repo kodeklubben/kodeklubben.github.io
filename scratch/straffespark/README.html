@@ -41,14 +41,14 @@ scenen, og passe på at hvert skript kodes på riktig sted. Vær nøye
 med at skriptene ligger på riktig figur som beskrevet i oppgaven.</p>
 </li>
 <li>
-<p>Katten må gå flere steg før den når frem til ballen. Om dette skjer
-kan man enten prøve å plassere <code>Leo</code> og <code>Ball</code> nærmere hverandre ved
-å endre på <code class="b">gå til x: () y: ()</code>-klossene, eller endre på hvor
-langt <code>Leo</code> <code class="blockmotion">går</code> når han klikkes. Dersom elevene
-allerede kan litt om koordinatsystemet er det en fin øvelse å tenke
-på hvilke koordinater man bør endre for å flytte figurene nærmere
-hverandre. Alternativt kan man flytte på figurene ved å klikke og
-dra, og deretter se på koordinatene øverst til høyre i
+<p>Katten skyter ballen før man klikker på den, eller den må gå flere
+steg før den når frem til ballen. Om dette skjer bør man flytte på
+hvor <code>Leo</code> og <code>Ball</code> plasseres ved å endre på <code class="b">gå til x: () y: ()</code>-klossene. Om problemet er at katten må gå flere steg kan man
+også endre på hvor langt <code>Leo</code> <code class="blockmotion">går</code> når han
+klikkes. Dersom elevene allerede kan litt om koordinatsystemet er
+det en fin øvelse å tenke på hvilke koordinater man bør endre for å
+flytte figurene. Alternativt kan man flytte på figurene ved å klikke
+og dra, og deretter se på koordinatene øverst til høyre i
 skriptvinduet.</p>
 </li>
 <li>
@@ -63,7 +63,7 @@ ballen.</p>
 <code>Mål</code> og <code>Redning</code>. Pass på at disse havner på korrekt figur. Det
 vil si at <code>Ball</code> og <code>Keeper</code> har skript med <code class="b">stopp [andre skript i figuren v] :: control</code>, <code>Leo</code> har skript hvor han
 <code class="blocklooks">sier</code> noe, mens Scenen har skript som teller
-<code class="blockdata">Mål</code> og <code class="blockdata">Redninger</code></p>
+<code class="b">(Mål)</code> og <code class="b">(Redninger)</code></p>
 <p>Dersom elevene vil at også <code>Ball</code> eller <code>Keeper</code> skal si noe kan det
 være utfordrende på grunn av <code class="blockcontrol">stopp</code>-klossen. En
 mulig løsning er som følger:</p>
@@ -71,10 +71,10 @@ mulig løsning er som følger:</p>
     si [Hurra, jeg reddet!]
     stopp [andre skript i figuren v] :: control
 </code></pre>
-<p>Det er her viktig å ikke bruke <code class="b">si [ ... ] i (2) sekunder</code> siden
-den klossen vil gjøre at <code>Ball</code> eller <code>Keeper</code> ikke slutter å bevege
-seg før etter 2 sekunder. I stedet bruker man en <code class="b">si []</code>-kloss
-(uten tekst) for at snakkeboblen skal bli borte. Denne kan legges
+<p>Det er her viktig å <em>ikke</em> bruke <code class="b">si [Hello!] i (2) sekunder</code>
+siden den klossen vil gjøre at <code>Ball</code> eller <code>Keeper</code> ikke slutter å
+bevege seg før etter 2 sekunder. For at snakkeboblen skal bli borte
+kan man bruke en <code class="b">si []</code>-kloss (uten tekst). Denne kan legges
 øverst i <code class="b">når grønt flagg klikkes</code>- eller <code class="b">når jeg mottar [Nytt spark v]</code>-skriptet.</p>
 </li>
 <li>
@@ -126,7 +126,7 @@ en unik oppførsel ved å legge ulike skript på dem.</p>
 <p>Et viktig konsept i Scratch er at man koder ved å beskrive egenskapene
 (utseende, posisjon, retning, osv.) og oppførselen (skript) til
 figurer. På fagspråket kalles dette <strong>objektorientert programmering</strong>
-(helt presist er Scratch <em>prototypeorientert programmering</em> men
+(mer presist er Scratch <em>prototypeorientert programmering</em>, men
 forskjellen er ikke relevant her). Dette virker så naturlig at
 elevene sjelden bevisst tenker på dette, og samtidig skaper det
 sjelden problemer.</p>
@@ -170,8 +170,9 @@ følgende er et eksempel (husk at koden hører til flaggermusa):</p>
 </code></pre>
 </li>
 <li>
-<p>Spør elevene om de kan tenke seg noen annen måte å programmere på?
-Hvor man ikke knytter skriptene til figurene?</p>
+<p>Spør elevene om de kan tenke seg noen annen måte (enn
+objektorientert) å programmere på?  Hvor man ikke knytter skriptene
+til figurene?</p>
 <p>Et eksempel på en annen type programmering er <strong>imperativ
 programmering</strong> hvor programmer skrives som en serie kommandoer uten
 at det skilles mellom hvilken figur som kommanderes. I et slikt
