@@ -31,8 +31,8 @@ function relative(url) {
 svar = <span class="hljs-number">3</span> + tall
 print(svar)
 </code></pre>
-<pre><code class="python3">tall = int(input(&quot;Skriv et tall: &quot;))
-svar = 3 + tall
+<pre><code class="python">tall = int(input(<span class="hljs-string">"Skriv et tall: "</span>))
+svar = <span class="hljs-number">3</span> + tall
 print(svar)
 </code></pre>
 </section>
@@ -40,19 +40,19 @@ print(svar)
 <h2 class="protip" id="funksjoner-med-parametre">Funksjoner med parametre</h2>
 <p>En funksjon deklareres ved hjelp av <code>def</code>-nøkkelordet. Den kan brukes ved å skrive funksjonsnavnet med parenteser bak.</p>
 <p><strong>Eksempel:</strong></p>
-<pre><code class="python3">def hello_word():
-    print(&quot;Hello World!&quot;)
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hello_word</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">"Hello World!"</span>)
 
 hello_world()
 </code></pre>
 <p>En funksjon som har <em>parametre</em> deklareres med parametre på innsiden av parentesene i funksjonsdefinisjonen.</p>
 <p><strong>Eksempel:</strong></p>
-<pre><code class="python3">def greet(firstName, lastName):
-    print(&quot;Hello, &quot; + firstName + &quot; &quot; + lastName)
+<pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span><span class="hljs-params">(firstName, lastName)</span>:</span>
+    print(<span class="hljs-string">"Hello, "</span> + firstName + <span class="hljs-string">" "</span> + lastName)
 </code></pre>
 <p>Når vi senere kaller funksjonen, så gir vi den <em>argumenter</em>.</p>
 <p><strong>Eksempel:</strong></p>
-<pre><code class="python3">greet(&quot;Ola&quot;, &quot;Nordmann&quot;)
+<pre><code class="python">greet(<span class="hljs-string">"Ola"</span>, <span class="hljs-string">"Nordmann"</span>)
 </code></pre>
 <p>Du la kanskje merke til at vi skiller mellom <em>parametre</em> og <em>argumenter</em>. Et parameter er det navnet vi gir til variabelen i funksjonendefinisjonen, slik som <code>firstName</code> og <code>lastName</code>. Argumenter er de verdiene vi gir til funksjonen når vi kaller den, slik som <code>&quot;Ola&quot;</code> og <code>&quot;Nordmann&quot;</code>.</p>
 </section>
