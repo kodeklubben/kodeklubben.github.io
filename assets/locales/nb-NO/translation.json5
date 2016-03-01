@@ -68,5 +68,8 @@
     continueToCourse: 'Forsett til kurset.',
     externalLesson: 'Dette er en ekstern oppgave.',
     continueToLesson: 'Fortsett til oppgaven.'
+  },
+  searchjs: {
+    nothingFound: 'Ingenting funnet.'
   }
 }

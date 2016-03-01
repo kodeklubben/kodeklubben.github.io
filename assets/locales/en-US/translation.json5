@@ -70,5 +70,8 @@
     continueToCourse: 'Continue to course.',
     externalLesson: 'This is an external lessons.',
     continueToLesson: 'Continue to lesson.'
+  },
+  searchjs: {
+    nothingFound: 'Nothing found.'
   }
 }
