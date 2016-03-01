@@ -1,0 +1,75 @@
+{ // Tekster (captions) for nynorsk (nn-NO). Merk: Kommentarer i denne filen blir fjernet ved build.
+  test: { // Keys in "test" are just for testing. Do not put keys used in actual production code here.
+    helloWorld: "Hei verda"
+  },
+  next: "Neste",
+  prev: "Førre",
+  intro: { // Captions for the intro tour.
+    askTour: "Ser ut som du ikkje har vore innom på ei stund, vil du ha ein omvisning?",
+    skipLabel: "Avslutt omvisninga",
+    frontPage: {
+      doneLabel: "Fortsett omvisninga på Python-sida",
+      courses: "Framsida inneheld alle kursa me har.",
+      scratch: "<b>Scratch</b> passar for alle aldrar. I Scratch er koden klossar som vert plassert ved <i>dra-og-slipp</i>, som gjer det <i>meget</i> enkelt å laga <b>spill</b>.",
+      python: "<b>Python</b> er eit tekstbasert språk som har ein <i>enkel skrivemåte</i> med få unødige teikn. Python er eit seriøst programmeringsspråk som vert brukt mykje i <b>bedrifter, vitenskap og automatisering</b>."
+    },
+    lessonIndex: {
+      doneLabel: "Fortsett omvisninga på oppgåve-sida \"Kuprat\"",
+      info: "Kvart programmeringsspråk har ein kort introduksjon. Klikk på <span class=\"glyphicon glyphicon-plus-sign\"></span> for å vise introduksjonen.",
+      playlists: "Oppgåvesamlingar inneheld oppgåver som passar godt i lag. Klikk på <span class=\"glyphicon glyphicon-play\"></span> for å vise oppgåvene.",
+      level1: "Oppgåvene er sortert etter vanskegrad. Her er introduksjonsoppgåver, som er ein god start for heilt ferske koderar.",
+      nextUrl: "kuprat/kuprat.html"
+    },
+    lesson: {
+      doneLabel: "Gå tilbake til der du starta",
+      lessonIcons: "Nivå og programmeringsspråk vert vist her. Du kan også lasta ned oppgåva som PDF.",
+      pickAWord: "Oppgåvene består av steg med instruksjoner og kodeblokker.<br><br> Det var det! Lykke til :-)",
+      steps: '#steg-1-hei-verden'
+    }
+  },
+  layout: {
+    codeClubName: "Kodeklubben",
+    home: "Framside",
+    search: "Søk",
+    takeTour: "Ta ein omvisning på sida",
+    searchResults: "Søkeresultat",
+    license: "Lisens",
+    licenseUrl: "http://creativecommons.org/licenses/by-sa/4.0/deed.no",
+    author: "Forfattar",
+    translator: "Oversetjar",
+    greeting: "Hei der!",
+    askTour: "Ser ut som dette er ditt første besøk, vil du ha ein omvisning?",
+    yes: "Ja!",
+    no: "Nei takk",
+    clickToExpand: "Klikk for å utvide",
+    clickForInfo: "Klikk her for meir info",
+    playlists: "Oppgåvesamlingar",
+    downloadPdf: "Last ned PDF",
+    levelNames: {
+      '1': 'Introduksjon',
+      '2': 'Nybegynnar',
+      '3': 'Erfaren',
+      '4': 'Ekspert'
+    },
+    numberOfLessons: 'Antall oppgåver',
+    teacherNotes: 'Lærarveiledning',
+    lesson: 'Oppgåve'
+  },
+  improve: {
+    header: 'Forbedre denne sida',
+    text: 'Funne ein feil? Kunne noko vore betre? Dersom ja, vennligst gi oss tilbakemelding ved å laga ein sak på Github eller fiks feilen sjølv om du kan. Me er takknemlege for einkvar tilbakemelding!',
+    createIssue: 'Rapporter eit problem',
+    showCode: 'Vis koden og fiks sjølv',
+    describeIssue: 'Beskriv problemet ditt...'
+  },
+  indexjs: {
+    externalResource: 'Ekstern ressurs',
+    externalCourse: 'Dette er eit eksternt kurs.',
+    continueToCourse: 'Fortsett til kurset.',
+    externalLesson: 'Dette er ei ekstern oppgåve.',
+    continueToLesson: 'Fortsett til oppgåva.'
+  },
+  searchjs: {
+    nothingFound: 'Ingenting funnet.'
+  }
+}
