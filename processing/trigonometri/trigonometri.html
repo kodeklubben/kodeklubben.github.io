@@ -39,25 +39,30 @@ seg fra midten av sirkelen til ett av disse punktene.</li>
 <p>Hvis vi sier at sentrum av sirkelen ligger i punktet (0, 0), altså X
 og Y er null i midten av sirkelen, kan vi enkelt regne ut X og Y for
 punktet i omrisset. To av sidene i trekanten ovenfor viser da X og
-Y. Den siste siden er linjen fra sentrum med lengde <code>r</code>. Her har vi
-kalt sidene <code>a</code>, <code>b</code> og <code>c</code>; navnet kan brukes for lengdene til
-sidene også. I dette tilfellet har vi <code>c = r</code> når vi snakker om
-lengden. For vinkler er det vanlig å bruke greske bokstaver, og vi
+Y. Den siste siden er linjen fra sentrum med lengde <code>r</code>. Derfor har vi
+kalt sidene <code>x</code>, <code>y</code> og <code>r</code>; navnet kan brukes for lengdene til
+sidene også. For vinkler er det vanlig å bruke greske bokstaver, og vi
 har her brukt <code>α</code>, alfa.</p>
 </li>
 <li>
-<p>Lengden på de to andre sidene, <code>a</code> og <code>b</code>, er gitt av funksjonene
-sinus og cosinus, vinkelen <code>α</code> og lengden til <code>c</code>, altså radien til
-sirkelen. De korte sidene som sammen lager det rettvinklede hjørnet,
-kalles kateter og den lange siden med lengde <code>r</code> kalles
-hypotenus. Lengden på kateten som er med på hjørnet med vinkelen
-<code>α</code>, har lengden <code>cos(α) * r</code>. Denne kateten kalles gjerne den
-hosliggende kateten, og mange bruker huskeregelen: Hos blir cos, for
-å huske hvilken av de to sidene som bruker cosinus og sinus. Lengden
-på det andre katetet er <code>sin(α) * r</code>.</p>
+<p>Lengden på sidene <code>x</code> og <code>y</code> er gitt av funksjonene sinus og
+cosinus, vinkelen <code>α</code> og <code>r</code>, altså radien til sirkelen. De korte
+sidene som sammen lager det rettvinklede hjørnet, kalles kateter og
+den lange siden med lengde <code>r</code> kalles hypotenus. Lengden på kateten
+som er med på hjørnet med vinkelen <code>α</code>, har lengden <code>cos(α) * r</code>. Denne kateten kalles gjerne den hosliggende kateten, og mange
+bruker huskeregelen: Hos blir cos, for å huske hvilken av de to
+sidene som bruker cosinus og sinus. Lengden på den andre kateten,
+kalt den motstående kateten er <code>sin(α) * r</code>.</p>
 </li>
 </ul>
 <p><figure><img src="TrekantSiderSirkel.png" alt="" title="Den samme rettvinklede trekanten med formler for lengdene til sidene."></figure></p>
+<ul>
+<li>Det virker kanskje litt merkelig når du bare får formlene sånn, men
+sinus og cosinus er definert som forholdene mellom hypotenusen, <code>r</code>,
+og katetene, <code>x</code> og <code>y</code>. <code>sin(α) = y / r</code> og <code>cos(α) = x / r</code>. Vi
+skal ikke se på hvordan man finner disse tallene ut fra vinkelen,
+men det skal vi la datamaskinen gjøre for oss.</li>
+</ul>
 </section>
 </section>
 <section class="activity" id="regulaere-mangekanter">
