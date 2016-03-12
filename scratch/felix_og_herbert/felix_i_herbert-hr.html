@@ -1,0 +1,286 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Felix i Herbert | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Felix i Herbert</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/felix_og_herbert/felix_i_herbert-hr.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><!-- This is a croatian translation of Felix and Herbert, originally
+written by Code Club UK. -->
+<section class="intro" id="uvod">
+<h1 class="intro" id="uvod">Uvod</h1>
+<p>Zajedno ćemo napraviti igru u kojoj mačak Felix ganja miša
+Herberta. Ti češ kontrolirati Herberta sa tvojim kompjuter mišem i
+pokušati da izbjegneš Felixa. Što duže uspiješ da izbjegneš Felixa to
+ćeš više bodova dobiti. Ali pazi, gubiš bodove kad te Felix uhvati.</p>
+<p><figure><img src="felix_i_herbert-hr.png" alt=""></figure></p>
+</section>
+<section class="activity" id="korak-1-felix-ganja-kompjuter-misa">
+<h1 class="activity" id="korak-1-felix-ganja-kompjuter-misa">Korak 1: Felix ganja kompjuter miša</h1>
+<section class="check" id="spisak">
+<h2 class="check" id="spisak">Spisak</h2>
+<ul>
+<li>
+<p>Započni novi projekt.</p>
+</li>
+<li>
+<p>Pritisni na <code class="blockmotion">i</code> u kutu od <img src="sprite1.png" alt="Sprite1"> i
+nazovi figuru <code>Felix</code>.</p>
+</li>
+<li>
+<p>Stavi «stil rotiranja» da bude
+<img src="../bilder/rotasjonsmate-hv.png" alt="Høyre/Venstre">. Felix če se onda
+kretati samo lijevo i desno.</p>
+</li>
+<li>
+<p>Pritisni na pozornicu
+<img src="../bilder/velg-bakgrunn.png" alt="Velg en ferdig bakgrunn"> lijevo od
+Felixa. Izaberi pozadinu i zatim pritisni OK.</p>
+</li>
+<li>
+<p>Pritisni na Felixa, odaberi karticu <code>Skripte</code> i programiraj program
+ispod:</p>
+<pre><code class="blocks">    kada je ⚑ kliknut
+    ponavljaj
+        okreni se k [strelice misa v]
+        idi (10) koraka
+        sljedeći kostim
+        bubnjaj po (3 v) (0.25) puta
+    end
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="probaj-program">
+<h2 class="flag" id="probaj-program">Probaj program</h2>
+<p><strong>Pritisni zelenu zastavu.</strong></p>
+<ul>
+<li>
+<p>Prati li Felix tvog kompjuter miša?</p>
+</li>
+<li>
+<p>Izgledali da Felix hoda kada se kreče?</p>
+</li>
+<li>
+<p>Kreče li se Felix u točnoj brzini?</p>
+</li>
+<li>
+<p>Pritisni crveni stop simbol da zaustaviš program.</p>
+</li>
+</ul>
+</section>
+<section class="save" id="spasi-projekt">
+<h2 class="save" id="spasi-projekt">Spasi projekt</h2>
+<p>Scratch spašava sve tvoje projekte automatski. Ali je ipak mudro da po
+nekad spasiš tvoj projekt.</p>
+<ul>
+<li>Pritisni <code>Datoteka</code> i <code>Spremi</code>.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="korak-2-felix-ganja-herberta">
+<h1 class="activity" id="korak-2-felix-ganja-herberta">Korak 2: Felix ganja Herberta</h1>
+<p><em>Želimo da Felix slijedi Herberta umjesto kompjuter miša.</em></p>
+<section class="check" id="spisak-2">
+<h2 class="check" id="spisak-2">Spisak</h2>
+<ul>
+<li>
+<p>Dodaj novu figuru, pritisni
+<img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">
+iznad Felixa. Izaberi kategoriju <code>Životinje</code> i <code>Mouse1</code>
+(miš). Pritisni OK.</p>
+</li>
+<li>
+<p>Nazovi novu figuru <code>Herbert</code>.</p>
+</li>
+<li>
+<p>Smanji Herberta tako da bude manji od Felixa. Pritisni
+<img src="../bilder/krymp.png" alt="krymp"> na vrhu stranice 6 puta.</p>
+</li>
+<li>
+<p>Pritisni na Herberta, odaberi karticu <code>Skripte</code> i programiraj
+program ispod:</p>
+<pre><code class="blocks">    kada je ⚑ kliknut
+    ponavljaj
+        idi do [strelice misa v]
+        okreni se k [Felix v]
+    end
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="probaj-program-2">
+<h2 class="flag" id="probaj-program-2">Probaj program</h2>
+<p><strong>Pritisni zelenu zastavu.</strong></p>
+<ul>
+<li>
+<p>Kreče li se Herbert zajedno sa kompjuter mišem?</p>
+</li>
+<li>
+<p>Ganja li Felix Herberta?</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="korak-3-felix-nam-treba-javiti-da-je-uhvatio-herberta">
+<h1 class="activity" id="korak-3-felix-nam-treba-javiti-da-je-uhvatio-herberta">Korak 3: Felix nam treba javiti da je uhvatio Herberta</h1>
+<section class="check" id="spisak-3">
+<h2 class="check" id="spisak-3">Spisak</h2>
+<ul>
+<li>
+<p>Promjeni <code>Skripte</code> od Felixa tako da bude isti kao program ispod:</p>
+<pre><code class="blocks">    kada je ⚑ kliknut
+    ponavljaj
+        okreni se k [strelice misa v]
+        idi (10) koraka
+        sljedeći kostim
+        bubnjaj po (3 v) (0.25) puta
+        ako (dodiruje [Herbert v]?) onda
+            govori [Uhvatio sam te!] (1) sekundi
+        end
+    end
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="probaj-program-3">
+<h2 class="flag" id="probaj-program-3">Probaj program</h2>
+<p><strong>Pritisni zelenu zastavu.</strong></p>
+<ul>
+<li>Javi li nam Felix kada uhvati Herberta?</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="korak-4-herbert-se-pretvara-u-duha-kada-ga-felix-uhvati">
+<h1 class="activity" id="korak-4-herbert-se-pretvara-u-duha-kada-ga-felix-uhvati">Korak 4: Herbert se pretvara u duha kada ga Felix uhvati</h1>
+<section class="check" id="spisak-4">
+<h2 class="check" id="spisak-4">Spisak</h2>
+<ul>
+<li>
+<p>Promjeni <code>Skripte</code> od Felixa tako da program pošalje poruku da je
+Herbert uhvačen:</p>
+<pre><code class="blocks">  kada je ⚑ kliknut
+  ponavljaj
+      okreni se k [strelice misa v]
+      idi (10) koraka
+      sljedeći kostim
+      bubnjaj po (3 v) (0.25) puta
+      ako (dodiruje [Herbert v]?) onda
+          pošalji [Uhvatio v]
+          govori [Uhvatio sam te!] (1) sekundi
+          čekaj (1) sekundi
+      end
+  end
+</code></pre>
+</li>
+<li>
+<p>Izaberi Herberta i pritisni <code>Kostimi</code> pored <code>Skripte</code>.</p>
+</li>
+<li>
+<p>Pritisni na <img src="../bilder/hent-fra-bibliotek.png" alt=""> i izaberi
+kategoriju <code>Mašta</code> pa onda kostim <code>ghost2a</code> (duh).</p>
+</li>
+<li>
+<p>Smanji malo veličinu, pritisni 6 puta na <img src="../bilder/krymp.png" alt="">.</p>
+</li>
+<li>
+<p>Promjeni imena Herbertovih kostima. Miš kostim nazovi <code>Živ</code> a duh
+kostim <code>Duh</code>.</p>
+</li>
+<li>
+<p>Pritisni na <code>Skripte</code> i dodaj ovaj program. Zadrži stari program.</p>
+<pre><code class="blocks">    kada primim [Uhvatio v]
+    promijeni kostim u [Duh v]
+    čekaj (5) sekundi
+    promijeni kostim u [Živ v]
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="probaj-program-4">
+<h2 class="flag" id="probaj-program-4">Probaj program</h2>
+<p><strong>Pritisni zelenu zastavu.</strong></p>
+<ul>
+<li>
+<p>Da li se pretvori Herbert u duha kada ga Felix uhvati?</p>
+</li>
+<li>
+<p>Čuješ li zvukove na točnim mjestima?</p>
+</li>
+<li>
+<p>Stoji li Felix dovoljno dugo tako da Herbert uspije da pobjegne?</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="korak-5-bodovi">
+<h1 class="activity" id="korak-5-bodovi">Korak 5: Bodovi</h1>
+<p><em>Želimo da saberemo bodove da bi vidjeli ko najbolje čuva Herberta od
+Felixa. Počinjemo sa 0 bodova i dodajemo bod svake sekunde. Kada
+Felix uhvati Herberta smjanujemo bodove za 10.</em></p>
+<section class="check" id="spisak-5">
+<h2 class="check" id="spisak-5">Spisak</h2>
+<ul>
+<li>
+<p>Pritisni na <code>Skripte</code> i pod <code class="blockdata">Podaci</code> pritisni na
+<code>Napravi varijablu</code>. Nazovi varijablu <code>Bodovi</code> i izaberi da bodovi
+važe za sve likove (figure). Pritisni OK.</p>
+<p><figure><img src="nova_varijabla_bodovi.png" alt=""></figure></p>
+<p>Bodovi če se sada pojaviti gore lijevo na tvojoj igrici.</p>
+</li>
+<li>
+<p>Pritisni na <code>Pozornica</code> lijevo od Felixa. Izaberi <code>Skripte</code> i dodaj
+ova dva programa:</p>
+<pre><code class="blocks">    kada je ⚑ kliknut
+    postavi [Bodovi v] na [0]
+    ponavljaj
+        čekaj (1) sekundi
+        promijeni [Bodovi v] za (1)
+    end
+
+    kada primim [Uhvatio v]
+    promijeni [Bodovi v] za (-10)
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="probaj-program-5">
+<h2 class="flag" id="probaj-program-5">Probaj program</h2>
+<p><strong>Pritisni zelenu zastavu.</strong></p>
+<ul>
+<li>
+<p>Mjenjaju li se bodovi svake sekunde?</p>
+</li>
+<li>
+<p>Smanjuju li se bodovi za 10 kada Felix uhvati Herberta?</p>
+</li>
+<li>
+<p>Što se desi kada Felix uhvati Herberta prije nego što dobiješ 10 bodova?</p>
+</li>
+<li>
+<p>Kada pokreneš igricu na novo, vrate li se bodovi na 0?</p>
+</li>
+</ul>
+</section>
+<section class="save" id="spasi-projekt-2">
+<h2 class="save" id="spasi-projekt-2">Spasi projekt</h2>
+<p><em>To je to! Bravo, sada možeš igrati svoju igricu.</em></p>
+<p>Podjeli igricu sa svojom porodicom i prijateljima. Pritisni na
+<code>Dijeli</code> gore desno na ektranu.</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Felix i Herbert&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/felix_og_herbert" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>
+</div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Prevedeno s <a href="//codeclub.org.uk">Code Club UK</a></p>
+</div><div class="translator"><p><strong data-i18n="html=layout.translator">Oversetter</strong><strong>:</strong></p><p>Goran Stene Solomonovic</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

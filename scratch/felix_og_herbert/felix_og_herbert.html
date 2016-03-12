@@ -8,10 +8,10 @@ function relative(url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Felix og Herbert</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/felix_og_herbert/felix_og_herbert.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>Vi skal lage et spill hvor katten <strong>Felix</strong> skal fange musa
-<strong>Herbert</strong>. Du styrer Herbert med musepekeren og skal prøve å unngå å
-bli tatt av Felix. Jo lenger du unngår ham jo flere poeng får du, men
-blir du tatt, går poengsummen din ned.</p>
+<p>Vi skal lage et spill hvor katten Felix skal fange musa Herbert. Du
+styrer Herbert med musepekeren og skal prøve å unngå å bli tatt av
+Felix. Jo lenger du unngår ham jo flere poeng får du, men blir du
+tatt, går poengsummen din ned.</p>
 <p><figure><img src="felix_og_herbert.png" alt=""></figure></p>
 </section>
 <section class="activity" id="steg-1-felix-folger-musepekeren">
@@ -34,14 +34,14 @@ rotasjonsmåte til
 </li>
 <li>
 <p>Klikk på scenen ved siden av Felix i vinduet for figurer. Velg fanen
-<code class="blocklightgrey">Bakgrunner</code> og trykk på
+<code>Bakgrunner</code> og trykk på
 <img src="../bilder/velg-bakgrunn.png" alt="Velg en ferdig bakgrunn"> for å
 importere en ferdig bakgrunn. Velg den bakgrunnen du vil.</p>
 </li>
 <li>
-<p>Klikk på Felix, velg <code class="blocklightgrey">Skript</code>-fanen og lag dette
+<p>Klikk på Felix, velg <code>Skript</code>-fanen og lag dette
 skriptet:</p>
-<pre><code class="blocks">    Når grønt flagg klikkes
+<pre><code class="blocks">    når grønt flagg klikkes
     for alltid
         pek mot [musepeker v]
         gå (10) steg
@@ -96,12 +96,12 @@ og velg figuren <code>Dyr/Mouse1</code>.</p>
 </li>
 <li>
 <p>Gjør Herbert mindre enn Felix ved å trykke på
-<img src="../bilder/krymp.png" alt="krymp"> (øverst mot midten av
-vinduet). Prøv seks klikk.</p>
+<img src="../bilder/krymp.png" alt="krymp"> (øverst mot midten av vinduet). Prøv
+seks klikk.</p>
 </li>
 <li>
 <p>Gi Herbert dette skriptet:</p>
-<pre><code class="blocks">    Når grønt flagg klikkes
+<pre><code class="blocks">    når grønt flagg klikkes
     for alltid
         gå til [musepeker v]
         pek mot [Felix v]
@@ -132,7 +132,7 @@ til oss.</em></p>
 <ul>
 <li>
 <p>Endre skriptet til Felix til dette:</p>
-<pre><code class="blocks">    Når grønt flagg klikkes
+<pre><code class="blocks">    når grønt flagg klikkes
     for alltid
         pek mot [musepeker v]
         gå (10) steg
@@ -164,14 +164,14 @@ til et spøkelse når han fanges.</em></p>
 <li>
 <p>Endre skriptet til Felix slik at det sender en melding og lager en
 lyd når han fanger Herbert:</p>
-<pre><code class="blocks">    Når grønt flagg klikkes
+<pre><code class="blocks">    når grønt flagg klikkes
     for alltid
         pek mot [musepeker v]
         gå (10) steg
         neste drakt
         trommeslag (3 v) som varer (0.25) takter
         hvis (berører [Herbert v]?)
-            send melding [Fanget!]
+            send melding [Fanget! v]
             trommeslag (1 v) som varer (0.25) takter
             si [Tok deg!] i (1) sekunder
             vent (1) sekunder
@@ -180,7 +180,7 @@ lyd når han fanger Herbert:</p>
 </code></pre>
 </li>
 <li>
-<p>Velg Herbert og gå til <code class="blocklightgrey">Drakter</code>-fanen.</p>
+<p>Velg Herbert og gå til <code>Drakter</code>-fanen.</p>
 </li>
 <li>
 <p>Hent en ny drakt ved å trykke på
@@ -196,7 +196,7 @@ trykke seks ganger på spøkelsesdrakten.</p>
 <code>levende</code> og spøkelsesdrakten heter <code>død</code>.</p>
 </li>
 <li>
-<p>Gå til <code class="blocklightgrey">Skript</code>-fanen, og lag et nytt skript for
+<p>Gå til <code>Skript</code>-fanen, og lag et nytt skript for
 Herbert for å gjøre ham om til et spøkelse. Ikke slett det gamle
 skriptet:</p>
 <pre><code class="blocks">    når jeg mottar [Fanget! v]
@@ -233,20 +233,22 @@ poengsummen med ti.</em></p>
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
 <li>
-<p>På <code class="blocklightgrey">Skript</code>-fanen under kategorien
-<code class="blockdata">Data</code>, lag en ny variabel. Kall variabelen for
-<code class="blockdata">Poeng</code>, og la den gjelde for alle figurer.</p>
+<p>På <code>Skript</code>-fanen under kategorien <code class="blockdata">Data</code>, lag en ny
+variabel. Kall variabelen for <code>Poeng</code>, og la den gjelde for alle
+figurer.</p>
 <p><figure><img src="ny-variabel-poeng.png" alt=""></figure></p>
-<p>Legg merke til at <code class="blockgrey">Poeng</code><code class="blockdata">0</code><code class="blockgrey"></code> dukket opp øverst til venstre i spillet ditt.</p>
+<p>Legg merke til at <code ="">Poeng</code><code class="blockdata">0</code><code></code> dukket opp øverst til
+venstre i spillet ditt.</p>
 </li>
 <li>
 <p>Klikk på <code>Scene</code> til venstre på skjermen, ved siden av
 <code>Figurer</code>. Lag disse to skriptene på scenen:</p>
-<pre><code class="blocks">    Når grønt flagg klikkes
-    sett [Poeng v] til (0)
+<pre><code class="blocks">    når grønt flagg klikkes
+    sett [Poeng v] til [0]
     for alltid
         vent (1) sekunder
         endre [Poeng v] med (1)
+    slutt
 
     når jeg mottar [Fanget! v]
     endre [Poeng v] med (-10)
