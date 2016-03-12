@@ -7,7 +7,10 @@ function relative(url) {
   }
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccuk_logo.png" class="logo hidden-xs"/><h1 class="title">Felix i Herbert</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/felix_og_herbert/felix_i_herbert-hr.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><!-- This is a croatian translation of Felix and Herbert, originally
-written by Code Club UK. -->
+written by Code Club UK. The shape and category directives for the
+blocks code are added so the code is rendered nicely without loading
+the hr-language in scratchblocks. If croatian is supported in
+scratchblocks, the directives can be removed. -->
 <section class="intro" id="uvod">
 <h1 class="intro" id="uvod">Uvod</h1>
 <p>Zajedno ćemo napraviti igru u kojoj mačak Felix ganja miša
@@ -29,7 +32,7 @@ pokušati da izbjegneš Felixa. Što duže uspiješ da izbjegneš Felixa to
 nazovi figuru <code>Felix</code>.</p>
 </li>
 <li>
-<p>Stavi «stil rotiranja» da bude
+<p>Stavi <code>stil rotiranja</code> da bude
 <img src="../bilder/rotasjonsmate-hv.png" alt="Høyre/Venstre">. Felix če se onda
 kretati samo lijevo i desno.</p>
 </li>
@@ -41,12 +44,12 @@ Felixa. Izaberi pozadinu i zatim pritisni OK.</p>
 <li>
 <p>Pritisni na Felixa, odaberi karticu <code>Skripte</code> i programiraj program
 ispod:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut
-    ponavljaj
-        okreni se k [strelice misa v]
-        idi (10) koraka
-        sljedeći kostim
-        bubnjaj po (3 v) (0.25) puta
+<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
+    ponavljaj  :: cstart control
+        okreni se k [strelice misa v]  :: motion
+        idi (10) koraka  :: motion
+        sljedeći kostim  :: looks
+        bubnjaj po (3 v) (0.25) puta  :: sound
     end
 </code></pre>
 </li>
@@ -101,10 +104,10 @@ iznad Felixa. Izaberi kategoriju <code>Životinje</code> i <code>Mouse1</code>
 <li>
 <p>Pritisni na Herberta, odaberi karticu <code>Skripte</code> i programiraj
 program ispod:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut
-    ponavljaj
-        idi do [strelice misa v]
-        okreni se k [Felix v]
+<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
+    ponavljaj  :: cstart control
+        idi do [strelice misa v]  :: motion
+        okreni se k [Felix v]  :: motion
     end
 </code></pre>
 </li>
@@ -130,14 +133,14 @@ program ispod:</p>
 <ul>
 <li>
 <p>Promjeni <code>Skripte</code> od Felixa tako da bude isti kao program ispod:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut
-    ponavljaj
-        okreni se k [strelice misa v]
-        idi (10) koraka
-        sljedeći kostim
-        bubnjaj po (3 v) (0.25) puta
-        ako (dodiruje [Herbert v]?) onda
-            govori [Uhvatio sam te!] (1) sekundi
+<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
+    ponavljaj  :: cstart control
+        okreni se k [strelice misa v]  :: motion
+        idi (10) koraka  :: motion
+        sljedeći kostim  :: looks
+        bubnjaj po (3 v) (0.25) puta  :: sound
+        ako (dodiruje [Herbert v]? :: sensing) onda  :: cstart control
+            govori [Uhvatio sam te!] (1) sekundi  :: looks
         end
     end
 </code></pre>
@@ -160,16 +163,16 @@ program ispod:</p>
 <li>
 <p>Promjeni <code>Skripte</code> od Felixa tako da program pošalje poruku da je
 Herbert uhvačen:</p>
-<pre><code class="blocks">  kada je ⚑ kliknut
-  ponavljaj
-      okreni se k [strelice misa v]
-      idi (10) koraka
-      sljedeći kostim
-      bubnjaj po (3 v) (0.25) puta
-      ako (dodiruje [Herbert v]?) onda
-          pošalji [Uhvatio v]
-          govori [Uhvatio sam te!] (1) sekundi
-          čekaj (1) sekundi
+<pre><code class="blocks">  kada je ⚑ kliknut  :: hat events
+  ponavljaj  :: cstart control
+      okreni se k [strelice misa v]  :: motion
+      idi (10) koraka  :: motion
+      sljedeći kostim  :: looks
+      bubnjaj po (3 v) (0.25) puta  :: sound
+      ako (dodiruje [Herbert v]? :: sensing) onda  :: cstart control
+          pošalji [Uhvatio v]  :: events
+          govori [Uhvatio sam te!] (1) sekundi  :: looks
+          čekaj (1) sekundi  :: control
       end
   end
 </code></pre>
@@ -190,10 +193,10 @@ kostim <code>Duh</code>.</p>
 </li>
 <li>
 <p>Pritisni na <code>Skripte</code> i dodaj ovaj program. Zadrži stari program.</p>
-<pre><code class="blocks">    kada primim [Uhvatio v]
-    promijeni kostim u [Duh v]
-    čekaj (5) sekundi
-    promijeni kostim u [Živ v]
+<pre><code class="blocks">    kada primim [Uhvatio v]  :: hat events
+    promijeni kostim u [Duh v]  :: looks
+    čekaj (0.5) sekundi  :: control
+    promijeni kostim u [Živ v]  :: looks
 </code></pre>
 </li>
 </ul>
@@ -232,15 +235,15 @@ važe za sve likove (figure). Pritisni OK.</p>
 <li>
 <p>Pritisni na <code>Pozornica</code> lijevo od Felixa. Izaberi <code>Skripte</code> i dodaj
 ova dva programa:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut
-    postavi [Bodovi v] na [0]
-    ponavljaj
-        čekaj (1) sekundi
-        promijeni [Bodovi v] za (1)
+<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
+    postavi [Bodovi v] na [0]  :: variables
+    ponavljaj  :: cstart control
+        čekaj (1) sekundi  :: control
+        promijeni [Bodovi v] za (1)  :: variables
     end
 
-    kada primim [Uhvatio v]
-    promijeni [Bodovi v] za (-10)
+    kada primim [Uhvatio v]  :: hat events
+    promijeni [Bodovi v] za (-10)  :: variables
 </code></pre>
 </li>
 </ul>
