@@ -1,0 +1,319 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Donkey Kong | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Donkey Kong</h1><div class="lesson-icons"><div class="level"><img title="Level 4" src="../../assets/img/level4.png"/><span data-i18n="html=layout.levelNames.4">Ekspert</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/donkey_kong/donkey_kong.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Donkey Kong var det første virkelig plattform-spillet da det ble gitt
+ut i 1981. I tillegg til Donkey Kong var det også her vi første gang
+ble kjent med Super Mario (som het Jumpman den gang). I spillet styrer
+vi Super Mario mens han prøver å redde kjæresten sin fra Donkey Kong,
+og må passe seg for tønner og ildkuler mens han hopper mellom
+plattformer.</p>
+<p><figure><img src="donkey_kong.png" alt=""></figure></p>
+</section>
+<section class="activity" id="oversikt-over-prosjektet">
+<h1 class="activity" id="oversikt-over-prosjektet">Oversikt over prosjektet</h1>
+<p><em>Mesteparten av kodingen av Donkey Kong skal du gjøre selv. Underveis
+vil du lære hvordan du lager et enkelt plattform-spill i Scratch.</em></p>
+<section class="check" id="plan">
+<h2 class="check" id="plan">Plan</h2>
+<ul>
+<li>
+<p>Hvordan styre en plattform-helt som kan hoppe?</p>
+</li>
+<li>
+<p>Plattformer og stiger</p>
+</li>
+<li>
+<p>Donkey Kong og rullende ildkuler</p>
+</li>
+<li>
+<p>.. og andre utfordringer</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-1-en-hoppende-helt">
+<h1 class="activity" id="steg-1-en-hoppende-helt">Steg 1: En hoppende helt</h1>
+<p><em>Den viktigste delen av et godt plattform-spill er å ha en helt man
+kan styre rundt og hoppe fra plattform til plattform med.</em></p>
+<p>I denne delen skal vi konsentrere oss om hvordan vi kan styre
+heltefiguren, og spesielt hvordan vi får den til å hoppe og falle på
+en troverdig måte.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Start et nytt prosjekt.</p>
+</li>
+<li>
+<p>For å kunne teste at heltefiguren oppfører seg som vi vil trenger vi
+en enkel plattform (vi skal tegne flere plattformer senere). Tegn en
+ny bakgrunn. Velg å tegne med <code>Vektorgrafikk</code>. Tegn en smal, lang
+boks nederst på skjermen. Fyll den med en farge forskjellig fra
+linjefargen.</p>
+<p><figure><img src="plattform.png" alt=""></figure></p>
+</li>
+<li>
+<p>Velg eller lag deg en figur du ønsker å bruke som den hoppende
+helten du skal styre. Om du ikke bruker Scratch-katten så slett
+denne. Kall figuren <code>Jumpman</code>. Sannsynligvis vil vi gjøre figuren
+mindre slik at vi får plass til flere plattformer på skjermen. Dette
+kan du gjøre med kode som kun kjører i det du starter spillet, for
+eksempel:</p>
+<pre><code class="blocks">    når grønt flagg klikkes
+    sett størrelse til (40) %
+    begrens rotasjon [vend sideveis v]
+</code></pre>
+<p>Vi har også lagt til en kloss som passer på at <code>Jumpman</code> bare snur
+seg mot høyre eller venstre.</p>
+</li>
+<li>
+<p>Vi trenger to variabler som vi skal bruke til å kontrollere
+bevegelsen til <code>Jumpman</code>. Lag to variabler, <code class="b">(fartX)</code> og
+<code class="b">(fartY)</code>. Pass på at begge gjelder kun <em>for denne figuren</em>.</p>
+</li>
+<li>
+<p>I hovedløkken som styrer <code>Jumpman</code> vil vi først endre litt på disse
+<code class="blockdata">fart</code>-variablene, og til slutt flytte selve figuren
+basert på dem.</p>
+<p>Dersom ingenting påvirker figuren vår vil vi at <code class="b">(fartX)</code> skal
+gå mot 0 (farten bremses), mens vi vil at <code class="b">(fartY)</code> skal bli et
+stadig større negativt tall (figuren faller). Men om figuren står på
+plattformen skal <code class="b">(fartY)</code> være 0 (figuren står i ro). Dette kan
+vi kode omtrent som følger:</p>
+<pre><code class="blocks">    når jeg mottar [nytt spill v]
+    gå til x: (-150) y: (-100)
+    for alltid  // hovedløkken
+        sett [fartX v] til ((0.8) * (fartX))  // farten bremses
+        endre [fartY v] med (-0.5)  // gravitasjon, figuren faller
+        hvis (berører fargen [#0000ff])  // figuren står på plattformen
+            sett [fartY v] til [0]
+        slutt
+        endre x med (fartX)  // flytt selve figuren
+        endre y med (fartY)
+    slutt
+</code></pre>
+</li>
+<li>
+<p>Om du prøver spillet ditt så langt (husk å legge til et skript på
+bakgrunnen som sender en <code>nytt spill</code>-melding når det grønne flagget
+klikkes), vil du se at figuren din faller ned til plattformen. Men
+du kan ikke kontrollere den.</p>
+</li>
+<li>
+<p>For å styre <code>Jumpman</code> legger vi flere <code class="blockcontrol">hvis</code>-tester
+inn i hovedløkken. For eksempel kan du få figuren til å bevege seg
+mot venstre ved å legge til dette rett før <code class="b">endre x med (fartX)</code>:</p>
+<pre><code class="blocks">    hvis (tast [pil venstre v] trykket?)
+        pek i retning (-90 v)
+        sett [fartX v] til [-5]
+        neste drakt
+    slutt
+</code></pre>
+<p>Lag også en tilsvarende blokk for å flytte figuren mot høyre.</p>
+</li>
+<li>
+<p>Vi vil også at <code>Jumpman</code> hopper når vi trykker på <code>pil opp</code>-tasten.
+Her må vi være litt forsiktig, siden vi bare vil at figuren kan
+hoppe hvis den står på en plattform (ikke når den allerede
+hopper). En enkel måte å få til dette på er å legge <code>pil opp</code>-testen
+inne i testen for om figuren står på plattformen:</p>
+<pre><code class="blocks">    hvis (berører fargen [#0000ff])  // gammel kode: figuren står på plattformen
+        sett [fartY v] til [0]
+        hvis (tast [pil opp v] trykket?)  // ny kode: figuren hopper
+            sett [fartY v] til [5]
+        slutt
+    slutt
+</code></pre>
+</li>
+</ul>
+<p>Vi har nå et bra utgangspunkt for et plattformspill. Nemlig en figur
+som vi kan styre rundt, og som kan hoppe når vi vil det. Lek litt med
+<code>Jumpman</code> og tallene vi har brukt i <code class="b">sett [fartX v] til []</code>- og
+<code class="b">sett [fartY v] til []</code>-klossene slik at du får en bevegelse du
+synes virker naturlig.</p>
+<ul>
+<li>
+<p>Du har kanskje oppdaget at av og til faller <code>Jumpman</code> delvis
+<em>gjennom</em> plattformen? Hvis ikke, prøv å slipp ham fra toppen av
+skjermen. Den følgende testen fikser dette ganske greit:</p>
+<pre><code class="blocks">    hvis (berører fargen [#009900])
+        endre y med (2)
+    slutt
+</code></pre>
+<p>Dette var også grunnen til at vi fylte plattformen med en annen
+farge enn linjefargen.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-plattformer-og-stiger">
+<h1 class="activity" id="steg-2-plattformer-og-stiger">Steg 2: Plattformer og stiger</h1>
+<p><em>Nå har vi en figur som kan springe og hoppe rundt på skjermen. La oss
+lage flere plattformer den kan leke seg på.</em></p>
+<p>Mens vi tegner flere plattformer er det viktig at vi bruker
+<code>Vektorgrafikk</code> fordi dette gjør det lett å flytte plattformene rundt
+etter at vi har tegnet dem.</p>
+<section class="activity" id="sjekkliste-2">
+<h2 class="activity" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Før vi tegner flere plattformer skal vi lage stiger, som vil gjøre
+det enklere for helten vår å klatre opp eller ned. Som for
+plattformer skal vi kjenne igjen stiger ved hjelp av fargen. For å
+gjøre litt enkel testing, tegn først en strek rett opp fra
+plattformen (vi skal tegne en finere stige senere) i en ny farge:</p>
+<p><figure><img src="stige.png" alt=""></figure></p>
+<p>Bruke <strong>linje</strong>-verktøyet og hold inne <code>shift</code>-knappen mens du
+tegner for å få en helt rett linje.</p>
+</li>
+<li>
+<p>Hvordan skal helten vår klatre i en stige? Først og fremst vil han
+ikke falle nedover (på samme måte som når han står på en
+plattform). I tillegg vil vi kunne klatre opp og ned i stigen. Legg
+til denne testen på <code>Jumpman</code>:</p>
+<pre><code class="blocks">    hvis (berører fargen [#ff0000]?)
+        sett [fartY v] til [0]
+        hvis (tast [pil opp v] trykket?)
+            endre y med (3)
+        slutt
+    slutt
+</code></pre>
+<p>Med denne koden kan vi klatre opp stigen. Hvordan kommer vi oss ned
+igjen? Kan du legge til en <code class="b">hvis (tast [pil ned v] trykket?)</code>-test til slik at vi også kan klatre ned stigen?</p>
+</li>
+<li>
+<p>Tegn flere plattformer og stiger. Test underveis at det er mulig for
+<code>Jumpman</code> å klatre eller hoppe mellom plattformene, men samtidig at
+han ikke klarer å hoppe mellom to plattformer når det ikke er
+meningen at det skal gå an.</p>
+</li>
+<li>
+<p>Når du er fornøyd med hvordan brettet ser ut kan du også tegne
+stigene litt finere. Om du vil kan du også vente med dette til etter
+at du har programmert Donkey Kong i neste steg.</p>
+<p><figure><img src="stige_med_plattform.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-donkey-kong-og-rullende-ildkuler">
+<h1 class="activity" id="steg-3-donkey-kong-og-rullende-ildkuler">Steg 3: Donkey Kong og rullende ildkuler</h1>
+<p><em>På tide med litt utfordringer! Nå skal vi programmere Donkey Kong til
+å kaste rullende ildkuler mot oss.</em></p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Lag en <code>Donkey Kong</code>-figur, og plasser den på en passende
+plattform. Denne vil ikke bevege seg i dette spillet, slik at den
+eneste koden vi egentlig trenger er for å kaste ildkuler. Vi skal
+lage denne koden snart.</p>
+</li>
+<li>
+<p>Lag også en ny <code>Ildkule</code>-figur. Dette kan være en sirkel du farger
+oransje, eller du kan prøve å tegne noe mer avansert. La figuren
+<code class="blocklooks">skjules</code> når det grønne flagget klikkes.</p>
+</li>
+<li>
+<p>Nå skal vi skrive koden på Donkey Kong. Den blir ganske enkel. Etter
+at <code>Donkey Kong</code> mottar <code>nytt spill</code> kan du la han gå inn i en <code class="blockcontrol">for alltid</code>-løkke hvor han <code class="blockcontrol">lager klon av Ildkule</code> og deretter <code class="blockcontrol">venter 3 sekunder</code>.</p>
+</li>
+<li>
+<p>Men nå må vi programmere hvordan ildkulene skal oppføre seg. Vi vil
+holde styr på hvordan de beveger seg ved hjelp av <code class="b">(fartX)</code> og
+<code class="b">(fartY)</code> på samme måte som for <code>Jumpman</code>. Lag derfor disse to
+variablene også på <code>Ildkule</code>. Husk at de skal gjelde kun <em>for denne
+figuren</em>.</p>
+</li>
+<li>
+<p>Først bestemmer vi hvilken fart kula har når <code>Donkey Kong</code> kaster
+den. Dette gjør vi ved å sette <code class="blockdata">fart</code>-variablene, for
+eksempel på denne måten:</p>
+<pre><code class="blocks">    når jeg starter som klon
+    gå til [Donkey Kong v]
+    sett [fartX v] til [3]
+    sett [fartY v] til (tilfeldig tall fra (0) til (5))
+    vis
+</code></pre>
+</li>
+<li>
+<p>Videre bestemmer vi hvordan kulene oppfører seg ved å lage en
+hovedløkke på omtrent samme måte som for <code>Jumpman</code>.</p>
+<p>Legg en <code class="b">gjenta til ((y-posisjon) &lt; (-170))</code>-kloss nederst i
+<code class="b">når jeg starter som klon</code>-skriptet, og fyll denne med kode som
+lar kulen falle, merker at ildkulen ligger på plattformen, og
+flytter selve figuren.</p>
+</li>
+<li>
+<p>Legg også til kode som gjør at ildkulene snur, <code class="b">sett [fartX v] til ((-1) * (fartX))</code>, når de <code class="blocksensing">berører kant</code>, og kode
+som sender en melding, <code>fanget Jumpman</code>, når de <code class="blocksensing">berører Jumpman</code>.</p>
+</li>
+<li>
+<p>Lag kode på <code>Jumpman</code> som mottar <code>fanget Jumpman</code>, og som kanskje
+<code class="blocksound">spiller en lyd</code>.</p>
+</li>
+<li>
+<p>Til slutt, lag en skatt som Jumpman skal redde. Dette blir en ny
+figur som kan stå i ro til den <code>berører Jumpman</code> og deretter sende
+en melding <code>fant skatten</code>. Skriv kode som svarer på denne meldingen
+på passende måte.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-videreutvikling-av-spillet">
+<h1 class="activity" id="steg-4-videreutvikling-av-spillet">Steg 4: Videreutvikling av spillet</h1>
+<p><em>Du har nå laget en enkel variant av Donkey Kong. Men prøv å gjøre
+spillet morsommere ved å videreutvikle det. Du bestemmer selv hvordan
+du vil jobbe videre, men nedenfor er noen ideer som kanskje kan være
+til inspirasjon?</em></p>
+<section class="check" id="ideer-til-videreutvikling">
+<h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
+<ul>
+<li>
+<p>Legg gjerne til flere animasjoner og lyder. For eksempel kan Donkey
+Kong gjøre en kastebevegelse når han kaster ildkuler.</p>
+</li>
+<li>
+<p>Lag en forside og meny. Om du lager en forside som forteller litt om
+hvordan man spiller spillet ditt blir det enklere for andre å spille
+det også!</p>
+</li>
+<li>
+<p>Vi har laget ett brett, men du kan enkelt tegne flere bakgrunner med
+andre plattformer og hindringer. Prøv å lag flere brett hvor man
+kommer videre til neste nivå etter at man har funnet skatten.</p>
+</li>
+<li>
+<p>For å gi spillerene litt mer motivasjon kan det være lurt å telle
+poeng og liv. Til dette trenger du to nye variabler, <code class="b">(poeng)</code>
+og <code class="b">(liv)</code>. For å telle liv kan du bruke <code>fanget Jumpman</code>-meldingen. Før du teller poeng må du tenke på hva du vil at
+spillerene skal få poeng for?</p>
+</li>
+<li>
+<p>Du kan legge til en tidsbegrensning om du vil gjøre spillet mer
+utfordrende. Til dette bruker du en variabel <code class="b">(tid)</code> som du
+<code class="blockdata">endrer</code> og deretter <code class="blockcontrol">venter 1 sekund</code>.</p>
+</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Donkey Kong&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/donkey_kong" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
