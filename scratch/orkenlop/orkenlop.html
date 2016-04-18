@@ -185,7 +185,7 @@ klart for en ny runde.</em></p>
 <pre><code class="blocks">    når [a v] trykkes
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
-        hvis (berører [kant v]?)
+        hvis &lt;berører [kant v]?&gt;
             sett [kappløp v] til (0)
         slutt
     slutt
@@ -206,7 +206,7 @@ fortelle at den vant:</p>
 <pre><code class="blocks">    når [a v] trykkes
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
-        hvis (berører [kant v]?)
+        hvis &lt;berører [kant v]?&gt;
             sett [kappløp v] til (0)
             spill lyden [Polly v]
             si [Polly vinner!] i (3) sekunder
@@ -246,7 +246,7 @@ over og nullstille spillet, slik at er klart for en ny runde.</em></p>
 <pre><code class="blocks">    når [a v] trykkes
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
-        hvis (berører [kant v]?)
+        hvis &lt;berører [kant v]?&gt;
             sett [kappløp v] til (0)
             spill lyden [Polly v]
             si [Polly vinner! v] i (3) sekunder
@@ -323,7 +323,7 @@ legge til noen lyder og variabler på egen hånd.</p>
         sett [rakett_brukt v] til (1)
         gå (30) steg
         spill lyden [motorcycle passing v]
-        hvis (berører [kant v]?)
+        hvis &lt;berører [kant v]?&gt;
             sett [kappløp v] til (0)
             spill lyden [Polly v]
             si [Polly vinner! v] i (3) sekunder
@@ -380,7 +380,7 @@ den på samme måte som andre kodeklosser?</p>
 <p>Slett den andre <code class="blockcontrol">hvis</code><code class="blocksensing">berører kant?</code>-klossen fra skriptet ditt og erstatt også den
 med en <code class="blockmoreblocks">ferdig</code>-kloss.</p>
 <pre><code class="blocks">    definer ferdig
-    hvis (berører [kant v]?)
+    hvis &lt;berører [kant v]?&gt;
         sett [kappløp v] til (0)
         spill lyden [Polly v]
         si [Polly vinner! v] i (3) sekunder

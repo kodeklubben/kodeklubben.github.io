@@ -243,7 +243,7 @@ slik:</p>
     vent til (berører [Leo v]?)
     for alltid
         gå (6) steg
-        hvis (berører [Keeper v]?)
+        hvis &lt;berører [Keeper v]?&gt;
             send melding [Redning v]
         ellers
         slutt
@@ -298,10 +298,10 @@ skriptet på ballen videre slik at det blir seende slik ut:</p>
     vent til (berører [Leo v]?)
     for alltid
         gå (6) steg
-        hvis (berører [Keeper v]?)
+        hvis &lt;berører [Keeper v]?&gt;
             send melding [Redning v]
         ellers
-            hvis ((x-posisjon) &gt; [160])
+            hvis &lt;(x-posisjon) &gt; [160]&gt;
                 send melding [Mål v]
             slutt
         slutt
@@ -455,7 +455,7 @@ at det blir seende slik ut:</p>
 <pre><code class="blocks">    når jeg mottar [Mål v]
     endre [Mål v] med (1)
     vent (2) sekunder
-    hvis ((Mål) &lt; [10])
+    hvis &lt;(Mål) &lt; [10]&gt;
         send melding [Nytt spark v]
     ellers
         bytt bakgrunn til [Seier v]
@@ -468,7 +468,7 @@ at det blir seende slik ut:</p>
 <pre><code class="blocks">    når jeg mottar [Redning v]
     endre [Redninger v] med (1)
     vent (2) sekunder
-    hvis ((Redninger) &lt; [10])
+    hvis &lt;(Redninger) &lt; [10]&gt;
         send melding [Nytt spark v]
     ellers
         bytt bakgrunn til [Tap v]

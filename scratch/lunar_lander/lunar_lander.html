@@ -110,7 +110,7 @@ fart i den retningen romskipet peker. Som vi snakket om tidligere
 kan vi bruke de matematiske funksjonene sinus og cosinus for å få
 til dette. Legg også til denne blokken inne i
 <code class="blockcontrol">for alltid</code>-løkken din.</p>
-<pre><code class="blocks">    hvis (tast [pil opp v] trykket?)
+<pre><code class="blocks">    hvis &lt;tast [pil opp v] trykket?&gt;
         endre [fartX v] med ((0) - ([cos v] av (retning)))
         endre [fartY v] med ([sin v] av (retning))
     slutt

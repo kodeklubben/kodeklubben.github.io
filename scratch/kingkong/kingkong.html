@@ -194,11 +194,11 @@ slik ut gjør jobben:</p>
 gå til x: (-45) y: (30)
 bytt drakt til [venstre v]
 for alltid
-    hvis (tast [pil venstre v] trykket?)
+    hvis &lt;tast [pil venstre v] trykket?&gt;
         gli (0.2) sekunder til x: (-45) y: (30)
         bytt drakt til [venstre v]
     slutt
-    hvis (tast [pil høyre v] trykket?)
+    hvis &lt;tast [pil høyre v] trykket?&gt;
         gli (0.2) sekunder til x: (45) y: (30)
         bytt drakt til [høyre v]
     slutt
@@ -271,7 +271,7 @@ flyr i riktig retning.</p>
 et tilfeldig tall kan vi bestemme om flyet kommer fra høyre eller
 venstre. Endre koden din slik at den blir som følger:</p>
 <pre><code class="blocks">når jeg starter som klon
-hvis ((tilfeldig tall fra (1) til (2)) = (1))
+hvis &lt;(tilfeldig tall fra (1) til (2)) = (1)&gt;
     pek i retning (45 v)
     gå til x: (-280) y: (-140)
 ellers

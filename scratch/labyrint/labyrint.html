@@ -226,7 +226,7 @@ vi allerede har laget som setter <code class="blockdata">hastighet</code>-variab
 <pre><code class="blocks">    når grønt flagg klikkes
     sett [hastighet v] til [10]
     for alltid
-        hvis (berører fargen [#cc0000]?)
+        hvis &lt;berører fargen [#cc0000]?&gt;
             vend @ (180) grader
             gå (hastighet) steg
             vend @ (180) grader
@@ -306,7 +306,7 @@ litt enklere å lage skriptet på <code>Skatt</code>.</p>
 <p>Pass på at figuren <code>Skatt</code> er markert, og skriv følgende kode:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     for alltid
-        hvis (berører [Utforsker v]?)
+        hvis &lt;berører [Utforsker v]?&gt;
             skjul
         slutt
     slutt
@@ -339,7 +339,7 @@ begynnelsen.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     vis
     for alltid
-        hvis (berører [Utforsker v]?)
+        hvis &lt;berører [Utforsker v]?&gt;
             skjul
         slutt
     slutt
@@ -371,7 +371,7 @@ forskjellige):</p>
     sett [hastighet v] til [10]
     gå til x: (-200) y: (0)
     for alltid
-        hvis (berører fargen [#cc0000]?)
+        hvis &lt;berører fargen [#cc0000]?&gt;
             vend @ (180) grader
             gå (hastighet) steg
             vend @ (180) grader
@@ -418,7 +418,7 @@ Dette blir veldig likt hvordan <code>Skatt</code> merket at den ble funnet.</p>
 <p>Legg til følgende kode:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     for alltid
-        hvis (berører [Utforsker v]?)
+        hvis &lt;berører [Utforsker v]?&gt;
             si [Tok deg!] i (1) sekunder
             stopp [alle v] :: control
         slutt
@@ -471,7 +471,7 @@ måte som vi hindrer utforskeren i å gå gjennom veggen.</p>
     sett [hastighet v] til (5)
     for alltid
         gå (hastighet) steg
-        hvis (berører fargen [#cc0000]?)
+        hvis &lt;berører fargen [#cc0000]?&gt;
             vend @ (180) grader
         slutt
     slutt
@@ -489,10 +489,10 @@ av og til endre retning.</p>
     sett [hastighet v] til (5)
     for alltid
         gå (hastighet) steg
-        hvis (berører fargen [#cc0000]?)
+        hvis &lt;berører fargen [#cc0000]?&gt;
             vend @ (180) grader
         slutt
-        hvis ((tilfeldig tall fra (1) til (25)) = (1))
+        hvis &lt;(tilfeldig tall fra (1) til (25)) = (1)&gt;
             vend @ ((tilfeldig tall fra (-1) til (1)) * (90)) grader
         slutt
     slutt

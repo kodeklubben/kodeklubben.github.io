@@ -65,7 +65,7 @@ at dersom helten berører bakken skal han ikke falle.</p>
     gå til x: (210) y: (-120)
     for alltid
         endre [sprett v] med (-1)
-        hvis (berører fargen [#00cc00] ?)
+        hvis &lt;berører fargen [#00cc00] ?&gt;
             neste drakt
             sett [sprett v] til (0)
         slutt
@@ -257,7 +257,7 @@ dette:</p>
 <p>Vi vil nå bygge opp igjen skriptet som kjører når en boks starter
 som klon. Lag først det følgende</p>
 <pre><code class="blocks">    når jeg starter som klon
-    hvis ((er generator) = [ja])
+    hvis &lt;(er generator) = [ja]&gt;
         sett [er generator v] til [nei]
     ellers
     slutt

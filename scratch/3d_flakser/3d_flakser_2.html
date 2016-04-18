@@ -44,7 +44,7 @@ Flakse berører bakken skal spilleren tape. Vi legger til følgende
 <code class="blockcontrol">for alltid</code>-løkke i skriptet til bakken,</p>
 <pre><code class="blocks">    for alltid
         sett y til ((20) - (y))
-        hvis (berører [Flakse v])
+        hvis &lt;berører [Flakse v]&gt;
             si [du tapte!] i (2) sekunder
             stopp [alle v] :: control
         slutt
@@ -55,7 +55,7 @@ Flakse berører bakken skal spilleren tape. Vi legger til følgende
 <p>Til slutt så vil vi helst at bakken skal forsvinne når Flakse flyr
 veldig høyt. Det kan vi gjøre med <code class="blocklooks">skjul</code> og
 <code class="blocklooks">vis</code> kommandoene, slik</p>
-<pre><code class="blocks">    hvis ((y) &lt; (150))
+<pre><code class="blocks">    hvis &lt;(y) &lt; (150)&gt;
         vis
     ellers
         skjul
@@ -84,7 +84,7 @@ kun for flakse-figuren.</p>
 <li>
 <p>Vi må slette testene som sjekker om <code>pil opp</code>eller <code>pil ned</code> tastene
 trykkes og erstatte dem med</p>
-<pre><code class="blocks">    hvis (tast [mellomrom v] trykket?)
+<pre><code class="blocks">    hvis &lt;tast [mellomrom v] trykket?&gt;
         endre [flaks v] med (1)
         vent (0.01) sekunder
     slutt
@@ -105,7 +105,7 @@ starter.</p>
 <li>
 <p>Sett inn disse klossene først i hovedløkken til Flakse:</p>
 <pre><code class="blocks">    endre [y v] med (løft)
-    hvis ((løft) &gt; (-5))
+    hvis &lt;(løft) &gt; (-5)&gt;
         endre [løft v] med (-0.5)
     slutt
 </code></pre>
@@ -116,10 +116,10 @@ starter.</p>
     for alltid
         gjenta til ((flaks) = (0))
             endre [flaks v] med (-1)
-            hvis ((løft) &lt; (5))
+            hvis &lt;(løft) &lt; (5)&gt;
                 endre [løft v] med (2)
             slutt
-            hvis ((løft) &lt; (0))
+            hvis &lt;(løft) &lt; (0)&gt;
                 sett [løft v] til (0)
             slutt
         slutt
@@ -153,10 +153,10 @@ retning?</p>
 <p>Nå vil vi at figuren skal rotere tilbake til vannrett når piltastene
 ikke trykkes lenger. Det kan vi enkelt få til ved å legge til disse
 klossene under testene som sjekker om piltastene trykkes.</p>
-<pre><code class="blocks">    hvis ((retning) &lt; (90))
+<pre><code class="blocks">    hvis &lt;(retning) &lt; (90)&gt;
         vend høyre (1) grader
     slutt 
-    hvis ((retning) &gt; (90))
+    hvis &lt;(retning) &gt; (90)&gt;
         vend venstre (1) grader
     slutt
 </code></pre>
@@ -182,7 +182,7 @@ nærmest. Husk at det er <code class="blockdata">distanse</code> variablen til
 ringen som forteller oss hvor nærme ringen er. Så vi må hele tiden
 sjekke om Flakse berører ringen, <em>og</em> om ringen faktisk er nærme. Du
 må legge til denne klossen et sted i skriptet til ring-klonene.</p>
-<pre><code class="blocks">    hvis ((berører [Flakse v]) og ((distanse) &lt; (1.2)))
+<pre><code class="blocks">    hvis &lt;(berører [Flakse v]) og ((distanse) &lt; (1.2))&gt;
         si [du tapte!] i (1) sekunder
         stopp [alle v] :: control
     slutt
@@ -199,7 +199,7 @@ hvor flakse-figuren er, ikke er altfor langt unna
 <code class="blockdata">ringX</code> og <code class="blockdata">ringY</code>. Vi legger til følgende
 klosser rett under hovedløkken til ringene, slik at det siste
 ringene gjør før de slettes er å sjekke om Flakse er inni.</p>
-<pre><code class="blocks">    hvis ((((x) &lt; ((ringX) + (160))) og ((x) &gt; ((ringX) - (160)))) og (((y) &lt; ((ringY) + (160))) og ((ringY) &gt; ((ringY) - (160))))
+<pre><code class="blocks">    hvis &lt;(((x) &lt; ((ringX) + (160))) og ((x) &gt; ((ringX) - (160)))) og (((y) &lt; ((ringY) + (160))) og ((ringY) &gt; ((ringY) - (160)))&gt;
         endre [poeng v] med (1)
     slutt
 </code></pre>

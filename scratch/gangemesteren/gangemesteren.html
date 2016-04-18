@@ -181,7 +181,7 @@ gangestykkene. <strong>Utvid</strong> det ene skriptet ditt på denne måten:</p
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Nytt spørsmål v] og vent
 spør (spørsmål) og vent
-hvis ((svar) = (riktig svar))
+hvis &lt;(svar) = (riktig svar)&gt;
     si [Ja, så flink du er!] i (2) sekunder
 ellers
     si [Nei, det ble visst feil.] i (2) sekunder
@@ -221,7 +221,7 @@ er feil stiller vi det samme spørsmålet en gang til.</p>
 send melding [Nytt spørsmål v] og vent
 gjenta (10) ganger
     spør (spørsmål) og vent
-    hvis ((svar) = (riktig svar))
+    hvis &lt;(svar) = (riktig svar)&gt;
         si [Ja, så flink du er!] i (2) sekunder
         send melding [Nytt spørsmål v] og vent
     ellers

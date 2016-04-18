@@ -90,7 +90,7 @@ flytter helikopteret oppover:</p>
     sett størrelse til (25) %
     gå til x: (0) y: (0)
     for alltid
-        hvis (tast [pil opp v] trykket?)
+        hvis &lt;tast [pil opp v] trykket?&gt;
             pek i retning (0 v)
             gå (2) steg
         slutt
@@ -130,19 +130,19 @@ det ser ut som følger:</p>
     sett størrelse til (25) %
     gå til x: (0) y: (0)
     for alltid
-        hvis (tast [pil opp v] trykket?)
+        hvis &lt;tast [pil opp v] trykket?&gt;
             pek i retning (0 v)
             gå (2) steg
         slutt
-        hvis (tast [pil høyre v] trykket?)
+        hvis &lt;tast [pil høyre v] trykket?&gt;
             pek i retning (90 v)
             gå (2) steg
         slutt
-        hvis (tast [pil ned v] trykket?)
+        hvis &lt;tast [pil ned v] trykket?&gt;
             pek i retning (180 v)
             gå (2) steg
         slutt
-        hvis (tast [pil venstre v] trykket?)
+        hvis &lt;tast [pil venstre v] trykket?&gt;
             pek i retning (-90 v)
             gå (2) steg
         slutt
@@ -706,7 +706,7 @@ spørre.</p>
 <p>Nedenfor er noen hint om hvordan dette kan gjøres. Vær oppmerksom på
 at skriptene bruker noen variable du selv må lage.</p>
 <pre><code class="blocks">    definer sjekk sted
-    hvis (((tilfeldig tall fra (1) til (Antall steder totalt)) &gt; (1)) eller (berører fargen [#ff0000]?))
+    hvis &lt;((tilfeldig tall fra (1) til (Antall steder totalt)) &gt; (1)) eller (berører fargen [#ff0000]?)&gt;
         sett [bruk sted v] til [nei]
     ellers
         sett [bruk sted v] til [ja]
@@ -715,7 +715,7 @@ at skriptene bruker noen variable du selv må lage.</p>
     når jeg mottar [Sted: Hønefoss v]
     gå til x: (6) y: (-112)
     sjekk sted
-    hvis ((bruk sted) = [ja])
+    hvis &lt;(bruk sted) = [ja]&gt;
         sett [Reis til v] til [Hønefoss]
         vent til (berører [Helikopter v]?)
         send melding [Fant sted v] og vent

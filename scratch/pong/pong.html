@@ -146,7 +146,7 @@ berører en spesiell farge ved å bytte ut</p>
 <pre><code class="blocks">    sprett tilbake ved kanten
 </code></pre>
 <p>med for eksempel</p>
-<pre><code class="blocks">    hvis (berører fargen [#9999FF])
+<pre><code class="blocks">    hvis &lt;berører fargen [#9999FF]&gt;
         pek i retning ((180) - (retning))
         trommeslag (15 v) som varer (0.01) takter
     slutt
@@ -179,7 +179,7 @@ eksempel tastene <code>W</code> og <code>S</code> trykkes.</p>
 <p>Test at du kan flytte racketen. Du vil kanskje også legge inn en
 begrensning slik at ikke racketen kan forsvinne ut av skjermen? Det
 kan du gjøre for eksempel med en test som ser omtrent slik ut:</p>
-<pre><code class="blocks">    hvis ((tast [w v] trykket) og ((y-posisjon) &lt; (150)))
+<pre><code class="blocks">    hvis &lt;(tast [w v] trykket) og ((y-posisjon) &lt; (150))&gt;
     slutt
 </code></pre>
 </li>

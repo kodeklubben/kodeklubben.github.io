@@ -173,19 +173,19 @@ gjelde <em>for alle figurer</em>.</p>
 <p>Gi Flakse følgende skript:</p>
 <pre><code class="blocks">    når jeg mottar [Nytt spill v]
     for alltid
-        hvis (tast [pil høyre v] trykket)
+        hvis &lt;tast [pil høyre v] trykket&gt;
             endre [x v] med (10)
             vent (0.05) sekunder
         slutt
-        hvis (tast [pil venstre v] trykket)
+        hvis &lt;tast [pil venstre v] trykket&gt;
             endre [x v] med (-10)
             vent (0.05) sekunder
         slutt
-        hvis (tast [pil opp v] trykket)
+        hvis &lt;tast [pil opp v] trykket&gt;
             endre [y v] med (10)
             vent (0.05) sekunder
         slutt
-        hvis (tast [pil ned v] trykket)
+        hvis &lt;tast [pil ned v] trykket&gt;
             endre [y v] med (-10)
             vent (0.05) sekunder
         slutt

@@ -105,16 +105,16 @@ Scratch passer på at figurer ikke går helt av skjermen flytter vi
 dem litt innenfor skjermkanten:</p>
 <pre><code class="blocks">    når jeg mottar [Nytt spill v]
     for alltid
-        hvis ((x-posisjon) &lt; (-235))
+        hvis &lt;(x-posisjon) &lt; (-235)&gt;
             endre x med (470)
         slutt
-        hvis ((x-posisjon) &gt; (235))
+        hvis &lt;(x-posisjon) &gt; (235)&gt;
             endre x med (-470)
         slutt
-        hvis ((y-posisjon) &lt; (-175))
+        hvis &lt;(y-posisjon) &lt; (-175)&gt;
             endre y med (350)
         slutt
-        hvis ((y-posisjon) &gt; (175))
+        hvis &lt;(y-posisjon) &gt; (175)&gt;
             endre y med (-350)
         slutt
     slutt
@@ -150,7 +150,7 @@ romskipet. Dette siste kan du gjøre med en kombinasjon av <code class="blockmot
 mellomromtasten trykkes kan vi starte <code class="blockcontrol">hvis</code>-testen
 med å vente til mellomromtasten er sluppet igjen. Dette trikset ser
 omtrent slik ut:</p>
-<pre><code class="blocks">    hvis (tast [mellomrom v] trykket?)
+<pre><code class="blocks">    hvis &lt;tast [mellomrom v] trykket?&gt;
         vent til (ikke (tast [mellomrom v] trykket?))
         ...
     slutt
@@ -235,7 +235,7 @@ asteroidene. Her må vi være litt forsiktig så vi ikke sletter
 skudd-klonene før asteroidene merker at de er truffet. Dette kan vi
 fikse ved å legge inn en ørliten forsinkelse. Du kan for eksempel
 legge inn kode som dette i løkka som flytter skudd-figuren:</p>
-<pre><code class="blocks">    hvis (berører [Asteroide v] ?)
+<pre><code class="blocks">    hvis &lt;berører [Asteroide v] ?&gt;
         vent (0.01) sekunder
         slett denne klonen
     slutt
