@@ -1,0 +1,338 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Mine Robotvenner | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Koding uten datamaskin</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Mine Robotvenner</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../../logo-white.png"/><span>Koding uten datamaskin</span></a><div class="pdf"><a href="/uten_datamaskin/robotvenner/robotvenner.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><p>Denne teksten er en oversettelse av en originaltekst fra
+<a href="http://thinkersmith.org/">ThinkerSmith</a>, og er lisensiert i henhold
+til retningslinjene nederst på siden.</p>
+<section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Mine Robotvenner introduserer elevene for prinsippene bak programmering,
+og illustrerer behovet for funksjoner.</p>
+<p>Ved å bruke et forhåndsdefinert <em>robotordforråd</em> skal elevene styre
+hverandre gjennom forskjellige oppgaver, uten å diskutere dem
+først. Dette lærer elevene sammenhengen mellom symboler og handlinger,
+i tillegg til å gi verdifull innsikt i feilsøking.</p>
+<p>Beregnet gjennomføringstid er 1 time per klasse. Beregnet
+forberedelsestid: 10 minutter.</p>
+<p><figure><img src="robotvenner-i-aksjon.jpg" alt=""></figure></p>
+</section>
+<section class="activity" id="laeringsmal">
+<h1 class="activity" id="laeringsmal">Læringsmål</h1>
+<section class="check" id="elevene-skal">
+<h2 class="check" id="elevene-skal">Elevene skal</h2>
+<ul>
+<li>Lære å omgjøre virkelige handlinger til instruksjoner.</li>
+<li>Få praktisk erfaring i å kode med symboler.</li>
+<li>Oppnå en forståelse for nødvendigheten av presisjon innen koding.</li>
+<li>Erfare hvordan feilsøking gjøres for å finne feil i koden.</li>
+<li>Forstå hvor nyttige funksjoner og parametere er (trinn 7+).</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="materiell-og-forberedelser">
+<h1 class="activity" id="materiell-og-forberedelser">Materiell og forberedelser</h1>
+<section class="check" id="materiell">
+<h2 class="check" id="materiell">Materiell</h2>
+<ul>
+<li>Symbolark (1 per gruppe),
+<a href="robotvenner_symbolark.pdf">last ned her</a>.</li>
+<li>Pakke med koppestablefigurer (1 per gruppe),
+<a href="robotvenner_figurer.pdf">last ned her</a>.</li>
+<li>Engangskopper eller <a href="robotvenner_trapeser.pdf">papirtrapeser</a> (6
+eller flere per gruppe).</li>
+<li>Blanke ark eller notatkort (1 per person).</li>
+<li>Noe å skrive med (1 per person).</li>
+</ul>
+</section>
+<section class="check" id="forberedelser">
+<h2 class="check" id="forberedelser">Forberedelser</h2>
+<ul>
+<li>Skriv ut ett <a href="robotvenner_symbolark.pdf">symbolark</a> til hver gruppe.</li>
+<li>Skriv ut arket med <a href="robotvenner_trapeser.pdf">trapesfigurer</a>, om
+kopper ikke brukes.</li>
+<li>Plassér koppene eller papirtrapesene på et eget bord litt unna der
+gruppene skal være (dette er <em>robotbiblioteket</em>).</li>
+</ul>
+</section>
+<section class="check" id="ordforrad">
+<h2 class="check" id="ordforrad">Ordforråd</h2>
+<ul>
+<li><em>Algoritme</em> – en serie av instruksjoner som beskriver hvordan en kan
+oppnå et mål.</li>
+<li><em>Koding</em> – Omgjøre handlinger til et symbolspråk.</li>
+<li><em>Feilsøking</em> – Finne og rette feil og problemer i koden.</li>
+<li><em>Funksjon</em> – Kode som kan brukes om og om igjen.</li>
+<li><em>Parameter</em> - Ekstra informasjon som kan legges til en funksjon, for
+å tilpasse den.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="gjennomforing">
+<h1 class="activity" id="gjennomforing">Gjennomføring</h1>
+<section>
+<h2 id="introduksjon-2">Introduksjon</h2>
+<p>Begynn med å spørre klassen om noen har hørt om roboter. Om noen har
+sett eller tatt på en robot?  Kan en sånn maskin <em>høre</em> deg snakke?
+<em>Forstår</em> den faktisk det som blir sagt?  Svaret på det siste
+spørsmålet er: <em>Ikke på samme måte som et menneske gjør</em>.</p>
+<p>Roboter trenger en serie med <em>instruksjoner</em>, spesifikke ting de har
+blitt satt til å gjøre. For å kunne gjennomføre en oppgave trenger en
+robot en rekke med instruksjoner (ofte kalt en algoritme) den kan
+utføre. I dag skal vi lære hva som trengs for å få dette til.</p>
+</section>
+<section>
+<h2 id="start">Start</h2>
+<p>Vis frem en kopi av <a href="robotvenner_symbolark.pdf">symbolarket</a> (eller
+skriv symbolene på tavlen). Fortell at det kun er lov å bruke disse
+seks symbolene i denne oppgaven. I denne utfordringen skal elevene
+instruere sin <em>robot</em> (en annen elev) til å bygge en gitt stabel med
+kopper ved å kun bruke disse gitte instruksjonene.</p>
+</section>
+<section class="protip" id="tilpasninger">
+<h2 class="protip" id="tilpasninger">Tilpasninger</h2>
+<section>
+<h3 id="barnehagen-og-smaskolen">Barnehagen og småskolen</h3>
+<ul>
+<li>Gjør oppgaven med alle barna/elevene samlet. La barna/elevene gi
+instruksjoner som læreren skal skrive ned.</li>
+<li>La en (voksen) assistent være roboten. Assistenten forlater rommet
+mens barna/elevene programmerer, for så å komme tilbake og prøve å
+utføre koden.</li>
+<li>Om det er nok tid bytter assistenten og læreren plass. Assistenten
+programmerer sammen med barna/elevene, mens læreren utfører koden i
+etterkant.</li>
+</ul>
+</section>
+<section>
+<h3 id="mellomtrinnet">Mellomtrinnet</h3>
+<ul>
+<li>Del inn i grupper på 3 til 5 tilpasset hvordan klassen samarbeider.</li>
+<li>Forvent at alle har lyst å prøve å være robot, slik at dette vil
+sannsynligvis bruke hele timen.</li>
+</ul>
+</section>
+<section>
+<h3 id="ungdomsskolen-og-videregaende">Ungdomsskolen og videregående</h3>
+<ul>
+<li>Del inn i grupper på maksimalt fire elever, tre i hver gruppe er
+ideelt.</li>
+<li>Elevene får da nok tid til at alle får prøvd seg som robot, og kan
+også prøve seg på ekstraoppgavene om funksjoner som står beskrevet
+lenger ned.</li>
+</ul>
+</section>
+</section>
+<section>
+<h2 id="komme-i-gang">Komme i gang</h2>
+<ul>
+<li>
+<p>Velg en elev til å være <em>robot</em> i hver gruppe.</p>
+</li>
+<li>
+<p>Send roboten til <em>robotbiblioteket</em>, mens resten av gruppen er
+programmererne som koder.</p>
+</li>
+<li>
+<p>Velg en figur fra <a href="robotvenner_figurer.pdf">koppestablefigurene</a> for
+hver gruppe.</p>
+</li>
+<li>
+<p>Gruppene skal lage en algoritme for hvordan roboten skal bygge den
+utvalgte stabelen.</p>
+</li>
+<li>
+<p>De som koder skal oversette algoritmen sin til piler, som beskrevet
+på <a href="robotvenner_symbolark.pdf">symbolarket</a>.</p>
+</li>
+<li>
+<p>Når programmererne er ferdig med koden henter de roboten sin.</p>
+</li>
+<li>
+<p>Roboten leser pilene på arket og prøver å gjennomføre koden med
+bevegelser.</p>
+</li>
+<li>
+<p>Resten av gruppen ser etter feil, samarbeider om å rette feilene i
+koden, og ber deretter roboten om å kjøre programmet på nytt.</p>
+<p><figure><img src="robotvenner-smaa-bilder.jpg" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="regler">Regler</h2>
+<ul>
+<li>Programmererne skal <em>kun</em> benytte de seks pilene på
+<a href="robotvenner_symbolark.pdf">symbolarket</a>.</li>
+<li>Koppene skal være hos roboten og ikke tilgjengelig for
+programmererne under kodingen.</li>
+<li>Når roboten kommer tilbake til gruppen skal de ikke snakke
+sammen. Instruksjonene er skrevet på papiret!</li>
+</ul>
+<p><em>Om elevene spør om regler som ikke er nevnt over kan du enten
+definere dem selv basert på egen erfaring, eller be dem å
+bestemme reglene i gruppa</em>.</p>
+</section>
+</section>
+<section class="activity" id="praktisk-eksempel">
+<h1 class="activity" id="praktisk-eksempel">Praktisk eksempel</h1>
+<p>Det er svært nyttig å gå over et av eksemplene med samlet klasse
+først. Det er en stabel blant
+<a href="robotvenner_figurer.pdf">koppestablefigurene</a> som bare inneholder tre
+kopper. Hold figuren opp for klassen og gå gjennom eksempeløvelsen. En
+mulig løsning vil se ut som følger.</p>
+<p><figure><img src="eksempel_01.jpg" alt=""></figure></p>
+<p>Plasser en stabel med kopper på et bord slik atr alle kan se den. Spør
+klassen om noen kan fortelle hva du skal gjøre først. Gi dem eventuelt
+et hint om å se på de seks mulige instruksjonene på
+<a href="robotvenner_symbolark.pdf">symbolarket</a>. Det riktige svaret er
+<strong>Plukk opp koppen</strong>. Når du plukker en kopp, pass på at den løftes
+slik at den er høyere enn alle de andre koppene på bordet.</p>
+<p>Plukk opp den øverste koppen i stabelen, og mens du holder den i
+luften over stabelen, spør hva som nå skal gjøres med koppen. Koppen
+må nå flyttes <strong>Ett skritt frem</strong> (eller <strong>Ett skritt tilbake</strong>) minst
+to ganger. Legg merke til at <strong>Ett skritt</strong> tilsvarer en halv
+koppelengde, som på figuren under.</p>
+<p><figure><img src="eksempel_02.jpg" alt=""></figure></p>
+<p>Etter at dere har satt den første koppen på plass kan du gå til
+tavlen. Utfordre nå klassen til i fellesskap hjelpe deg med å skrive
+symbolene som behøves for å plassere alle tre koppene. En mulig
+løsning vil være</p>
+<p><figure><img src="eksempel_03.jpg" alt=""></figure></p>
+<p>Etter at hele <em>programmet</em> er skrevet ned kan du få en elev til å
+utføre det, eller du kan kjøre det selv. Si navnet på symbolene høyt
+etterhvert som du eller eleven flytter på koppene. For eksempel vil
+programmet ovenfor uttales:</p>
+<blockquote>
+<p>Plukk opp koppen. Ett skritt frem. Ett skritt frem. Sett ned
+koppen. Ett skritt tilbake. Ett skritt tilbake.</p>
+<p>Plukk opp koppen. Ett skritt frem. Ett skritt frem. Ett skritt
+frem. Ett skritt frem. Sett ned koppen. Ett skritt tilbake. Ett
+skritt tilbake. Ett skritt tilbake. Ett skritt tilbake.</p>
+<p>Plukk opp koppen. Ett skritt frem. Ett skritt frem. Ett skritt
+frem. Sett ned koppen.</p>
+</blockquote>
+</section>
+<section class="activity" id="hovedovelse">
+<h1 class="activity" id="hovedovelse">Hovedøvelse</h1>
+<section>
+<h4 id="del-i-grupper">Del i grupper</h4>
+<p>Del gruppen som tidligere nevnt under <a href="#tilpasninger">Tilpasninger</a>.
+Målet er å ha nok programmerere i gruppen til at gruppen hele tiden
+kommer videre.</p>
+</section>
+<section>
+<h4 id="robot">Robot</h4>
+<p>Velg en <em>robot</em> i hver gruppe, som skal vente i <em>robotbiblioteket</em>.
+Dette bør være et sted langt nok unna gruppene slik at ingen roboter
+får med seg hvilken stabel programmererne jobber med. Robotene kan
+bruke ventetiden på å øve på å stable kopper eller til å se på reglene
+og spørre om noe er uklart.</p>
+</section>
+<section>
+<h4 id="program">Program</h4>
+<p>Hver gruppe bør bare jobbe med en koppestablingsfigur om gangen. De
+kan begynne med å finne algoritmen for denne stabelen. Hvor mange
+kopper trenger de? Hvor mange bevegelser må til for å plassere den
+første koppen? Den neste koppen? Er noen kopper opp ned? Hvordan kan
+de instruere roboten til å snu koppen?</p>
+<p>Når de har funnet ut av disse spørsmålene, skal programmererne skrive
+ned symbolene for å lage koden på arket. Programmererne bør
+dobbeltsjekke koden sin før de henter roboten fra robotbiblioteket.</p>
+</section>
+<section>
+<h4 id="kjor-koden">Kjør koden</h4>
+<p>Når som roboten kommer tilbake skal alle være stille. Gruppene skal
+unngå å vise bevegelser eller bruke ord for å hjelpe roboten. Roboten
+skal bare følge instruksjonene pilene gir. Om gruppen oppdager en
+feil, kan de stoppe programmet. De sender da roboten tilbake til
+robotbiblioteket, retter feilen før de henter roboten som prøver å
+kjøre programmet igjen fra begynnelsen.</p>
+</section>
+<section>
+<h4 id="gjenta">Gjenta</h4>
+<p>Hver gang en gruppe løser en oppgave velge de en ny robot som sendes
+til robotbiblioteket. Gruppen starter også med en ny
+koppestablingsfigur, helst vanskeligere enn den forrige.</p>
+<p>Dette fortsetter til alle i gruppen har vært robot en gang, man går
+tom for tid, eller koppestablingsfigurene er vanskelige nok til å
+snakke om funksjoner (se <a href="#ekstraoppgaver">Ekstraoppgaver</a> nedenfor).</p>
+</section>
+<section class="protip" id="tips">
+<h3 class="protip" id="tips">Tips</h3>
+<p>Om gruppene er i ferd med å gå tom for koppestablingsfigurer kan du
+utfordre dem til å lage sine egne!</p>
+</section>
+</section>
+<section class="activity" id="ekstraoppgaver">
+<h1 class="activity" id="ekstraoppgaver">Ekstraoppgaver</h1>
+<p>Om det er nok tid, så er dette en flott mulighet til å introdusere
+nyttigheten av <em>funksjoner</em>.</p>
+<section>
+<h4 id="introduksjon-3">Introduksjon</h4>
+<p>Samle klassen og fortell dem at du vil vise dem en spesiell
+koppestablingsfigur som de skal kode på rekordtid ... Vis dem så dette
+bildet:</p>
+<p><figure><img src="eksempel_04.jpg" alt=""></figure></p>
+<p>Du vil mest sannsynlig høre surmuling, fnising og til og med at dette
+er umulig. Spør klassen hva problemet er? Hvorfor er denne stabelen så
+problematisk?</p>
+<p>Denne stabelen virker vanskelig, fordi hver ekstra kopp i bredden
+legger til to ekstra piler med <strong>Ett skritt frem</strong> og to ekstra piler
+med <strong>Ett skritt tilbake</strong>. For å skrive kode for denne figuren vil
+etterhvert instruksjonene se slik ut:</p>
+<p><figure><img src="eksempel_05.png" alt=""></figure></p>
+<p>Ofte vil elevene begynne å forkorte instruksjonene, for eksempel ved å
+skrive tall etter pilene:</p>
+<p><figure><img src="eksempel_06.jpg" alt=""></figure></p>
+<p>Under hovedøvelsen anbefales ikke dette. Minn elevene på at de kun
+skal bruke de seks instruksjonene på symbolarket. Til disse mer
+kompliserte oppgavene trenger vi kraftigere instruksjoner. Gi elevene
+ros for at de tenkte selv og oppdaget behovet for funksjoner.</p>
+</section>
+<section>
+<h4 id="forklar">Forklar</h4>
+<p>Vis klassen at en pil etterfulgt av et tall er en smart måte å
+indikere at en instruksjon skal gjentas flere ganger. Ved å tillate
+dette, lager vi egentlig bare et nytt symbol som kan brukes for å
+unngå unødvendig repetisjon. Dette er nettopp ideen bak funksjoner.</p>
+<p>Utfordre klassen til å finne den lengste rekken med repeterende kode
+for hver kopp-plassering. Som instruktør kan du godta alle slags
+grupperinger som gir mening, men de vil nok ligne noe av det vi så
+tidligere:</p>
+<p><figure><img src="eksempel_07.jpg" alt=""></figure></p>
+<p>Dette er en god begynnelse, men det kan forenkles ytterligere. Om vi
+plasserer pillene med klokken (starter på toppen), og setter dem
+sammen i èn får vi noe som ser slik ut:</p>
+<p><figure><img src="eksempel_08.jpg" alt=""></figure></p>
+<p>Her er <strong>x</strong> antall skritt vi først må flytte frem og deretter
+tilbake. Denne <strong>x</strong>'en blir <em>parameteren</em> til vår funksjon.</p>
+</section>
+<section>
+<h4 id="parametere">Parametere</h4>
+<p>Ovenfor har vi et pilsymbol som minner om de tidligere symbolene, men
+vi har også introdusert en måte å inkludere mer informasjon om hvor
+mange ganger vi vil at pilene framover og bakover skal brukes. I
+dataverdenen blir denne ekstra informasjonen kalt <em>parameter</em>. Disse
+parametrene kan brukes for å tilpasse allerede nyttige funksjoner til flere forskjellige situasjoner.</p>
+</section>
+<section>
+<h4 id="omstabling">Omstabling</h4>
+<p>Nå som klassen har dette nye symbolet kan de prøve å løse en av de mer
+krevende koppestablefigurene. Gruppene kan samarbeide om de trenger
+ekstra kopper.</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Koding uten datamaskin: Mine Robotvenner&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/uten_datamaskin/robotvenner" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><p><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.no">CC BY-NC-SA</a></p>
+</div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Oversatt fra <a href="http://thinkersmith.org/">Thinkersmith</a></p>
+</div><div class="translator"><p><strong data-i18n="html=layout.translator">Oversetter</strong><strong>:</strong></p><p>Lær Kidsa Koding</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
