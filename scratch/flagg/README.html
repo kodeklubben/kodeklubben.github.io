@@ -1,0 +1,189 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lærerveiledning - Flagg | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Lærerveiledning - Flagg</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/flagg/README.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="lesson-link"><a href="flagg.html"><span class="icon"></span><span data-i18n="html=layout.lesson" class="text">Oppgave</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="informasjon-til-veiledere">
+<h1 class="intro" id="informasjon-til-veiledere">Informasjon til veiledere</h1>
+<p>Flagg viser hvordan man kan bruke kloner til å animere et flagg. I animasjonen
+bruker <em>sinus</em> og <em>cosinus</em> for enkle sirkelbevegelser. Disse funksjonene blir
+raskt introdusert og elevene får muligheten til å eksperimentere litt med dem.</p>
+<p><figure><img src="flagg.png" alt=""></figure></p>
+</section>
+<section class="activity" id="bakgrunn">
+<h1 class="activity" id="bakgrunn">Bakgrunn</h1>
+<p>Flagg ble opprinnelig skrevet av Sverre Oskar Konestabo som et bidrag til
+programmeringskonkurransen som ble avholdt for barn som deltok på Kodeklubben
+Blindern våren 2016.</p>
+</section>
+<section class="activity" id="forberedelser">
+<h1 class="activity" id="forberedelser">Forberedelser</h1>
+<ul>
+<li>
+<p><strong>Antatt tidbruk</strong>: 1.5 - 2 timer for hele prosjektet.</p>
+</li>
+<li>
+<p><strong>Nødvendige forkunnskaper</strong>: God kjennskap til Scratch. Elevene bør ha gjort
+flere prosjekter på Introduksjon- og Nybegynner-nivå før de starter med Flagg.</p>
+</li>
+</ul>
+<p>Benytt gjerne anledningen til å snakke om
+<a href="#tema-sirkelbevegelser">forskjellige måter å kode sirkelbevegelse i Scratch</a>.</p>
+</section>
+<section class="activity" id="typiske-utfordringer">
+<h1 class="activity" id="typiske-utfordringer">Typiske utfordringer</h1>
+<p>Nedenfor er en liste over utfordringer vi har opplevd at noen elever
+kommer borti.</p>
+<ul>
+<li>
+<p>Det er viktig at variablene, spesielt <code class="b">(sentrumX)</code> og <code class="b">(sentrumY)</code>,
+gjelder kun <em>for denne figuren</em>. Hvis variablene er felles for alle figurer
+vil ikke klonene kunne ha forskjellige sentrum de roterer rundt. I stedet vil
+klonene være mer eller mindre stablet over hverandre.</p>
+</li>
+<li>
+<p>Dimensjonene på flagget er litt feil. I følge
+<a href="https://lovdata.no/dokument/NL/lov/1898-12-10-1">flaggloven</a> skal forholdet
+mellom flaggets bredde og lengde være 16 til 22, mens i oppgaven tegnes
+flagget 14 til 19. Dette er på grunn av en begrensning i Scratch hvor det kun
+er mulig å lage 300 kloner av en figur, mens 16 ganger 22 ville krevd 352
+kloner.</p>
+</li>
+</ul>
+</section>
+<section class="activity" id="variasjoner">
+<h1 class="activity" id="variasjoner">Variasjoner</h1>
+<p>Hovedpoengene i denne oppgaven er å gi elevene litt kjennskap til funksjonene
+<em>sinus</em> og <em>cosinus</em>, samt vise hvordan man kan bruke mange kloner sammen for å
+skape en større animasjon. La gjerne elevene eksperimentere underveis, for
+eksempel ved å</p>
+<ul>
+<li>
+<p>Endre på tallene underveis. Spesielt tallene i de forskjellige <code class="b">vend høyre () grader</code>-klossene kan ha en stor effekt.</p>
+</li>
+<li>
+<p>Tegne sine egne flagg. Slik sirklene legges ut starter man nederst i venstre
+hjørne og går oppover og etterhvert mot høyre når man bruker den lange teksten
+(<code>rrrrrhbbhrrrrrrrrrrhbbhrrrrr...</code>) for å beskrive fargene i flagget.</p>
+</li>
+</ul>
+</section>
+<section class="activity" id="tema-sirkelbevegelser">
+<h1 class="activity" id="tema-sirkelbevegelser">Tema: Sirkelbevegelser</h1>
+<p>Det er flere måter å få figurer til å utføre sirkelbevegelser i Scratch. I denne
+presentasjonen viser vi flere av dem, og ser på begrensninger til de enkleste,
+og viser hvorfor <em>sinus</em> og <em>cosinus</em> gir oss ekstra muligheter.</p>
+<p>I dette prosjektet introduserer vi <em>sinus</em> og <em>cosinus</em> som forholdet mellom
+sider i en trekant, og holder stort sett fokus på at effekten av å bruke disse
+funksjonene er at figurene våre kan gå i sirkel. Andre del av presentasjonen
+nedenfor er ment å illustrere dette visuelt.</p>
+<section class="check" id="presentasjon">
+<h2 class="check" id="presentasjon">Presentasjon</h2>
+<ul>
+<li>Start et nytt Scratchprosjekt ved å klikke <code>Programmering</code> fra
+hovedsiden, eller <code>Ny</code> i <code>Fil</code>-menyen.</li>
+</ul>
+<p>Vi vil først se på enkle sirkelbevegelser som barna sannsynligvis allerede er
+kjent med. Spør gjerne barna hvordan de vil kode en figur som beveger seg i
+sirkel før du viser dem eksemplene under.</p>
+<ul>
+<li>
+<p>Det enkleste er nok å gi en figur denne koden:</p>
+<pre><code class="blocks">for alltid
+    gå (10) steg
+    vend høyre (5) grader
+slutt
+</code></pre>
+<p>Her er det ikke veldig farlig akkurat hva tallene er. Eksperimenter gjerne med
+verdiene for å se hvordan det påvirker sirkelbevegelsen.</p>
+</li>
+<li>
+<p>En annen måte å få en figur til å gå i sirkel på er vist frem i
+<a href="../soloball/soloball.html">Soloball-oppgaven</a>.</p>
+<p>Stopp det forrige skriptet, og dra figuren tilbake omtrent midt på
+skjermen. Klikk på <code>Drakter</code>-fanen, og dra figuren i drakteditoren (vinduet
+til høyre på skjermen) litt vekk fra sentrum. Gå tilbake til <code>Skript</code>-fanen og
+forenkle skriptet:</p>
+<pre><code class="blocks">for alltid
+    vend høyre (5) grader
+slutt
+</code></pre>
+<p>Igjen skal figuren gå i sirkel! Hvordan endrer man størrelsen på sirkelen i
+dette eksempelet? (<em>Flytter figuren i drakteditoren.</em>)</p>
+</li>
+</ul>
+<p>Spør barna om de ser noen begrensninger i denne måten å programmere på?
+Spesielt spør hvordan man kan få figuren til å se i spesielle retninger mens den
+beveger seg i sirkel? <em>Siden vi bruker retningen til figuren i sirkelbevegelsen
+kan vi ikke samtidig få den til å se i en gitt annen retning.</em></p>
+<ul>
+<li>
+<p>Lag en ny figur (fordi den forrige figuren er flyttet vekk fra sentrum).</p>
+</li>
+<li>
+<p>Lag en variabel, <code class="b">(vinkel)</code>. I denne presentasjonen er det ikke viktig om
+den gjelder for alle eller kun denne figuren.</p>
+</li>
+<li>
+<p>Skriv denne koden:</p>
+<pre><code class="blocks">sett [vinkel v] til [45]
+gå til x: (0) y: (0)
+penn på
+sett x til ((150) * ([cos v] av (vinkel))
+sett y til ((150) * ([sin v] av (vinkel))
+gå til x: (0) y: (0)
+penn av
+</code></pre>
+<p>Dette vil tegne en rettvinklet trekant hvor den ene vinkelen er 45 grader.</p>
+</li>
+<li>
+<p>Legg gjerne inn <code class="b">vent (3) sekunder</code>-klosser etter de to <code class="b">sett x til ()</code>- og <code class="b">sett y til ()</code>-klossene for å vise hva henholdsvis <code class="b">[cos v] av (vinkel)</code> og <code class="b">[sin v] av (vinkel)</code> tilsvarer.</p>
+</li>
+<li>
+<p>Tegn trekanter med forskjellige vinkler (ved å endre på tallet i <code class="b">sett [vinkel v] til []</code>-klossen). Vis gjerne hva som skjer om <code class="b">(vinkel)</code> er
+0, 90, større enn 90, eller til og med negativ.</p>
+</li>
+</ul>
+<p>Om du trenger å slette noen av trekantene som har blitt tegnet kan du bruke
+<code class="b">slett</code>-klossen.</p>
+<ul>
+<li>
+<p>Når du har tegnet en del trekanter kan du spørre om noen av barna ser at du
+har begynt å tegne en sirkel? <em>De ytterste hjørnene i trekantene vil
+etterhvert danne en sirkel fordi den skrå streken, hypotenusen, er like lang i
+alle trekantene.</em></p>
+<p><figure><img src="sirkel_trekant.png" alt=""></figure></p>
+</li>
+<li>
+<p>For å vise frem at trekantene virkelig danner en sirkel kan du bruke en
+<code class="blockcontrol">gjenta</code>-løkke på denne måten:</p>
+<pre><code class="blocks">sett [vinkel v] til [0]
+gå til x: (0) y: (0)
+penn på
+gjenta (72) ganger
+    sett x til ((150) * ([cos v] av (vinkel))
+    sett y til ((150) * ([sin v] av (vinkel))
+    gå til x: (0) y: (0)
+    endre [vinkel v] med (5)
+slutt
+penn av
+</code></pre>
+</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Lærerveiledning - Flagg&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/flagg" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks2.load_language(scratchblocks2._translations['nb']);
+  scratchblocks2.parse('code.blocks');
+  scratchblocks2.parse('code.b', {inline: true});
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

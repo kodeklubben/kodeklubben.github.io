@@ -1,0 +1,112 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Send en beskjed | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">ComputerCraft</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Send en beskjed</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span data-i18n="html=layout.levelNames.2">Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>ComputerCraft</span></a><div class="pdf"><a href="/computercraft/nettverk_send_beskjed/nettverk_send_beskjed.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Vi har tidligere kjørt kode på én og én datamaskin i ComputerCraft. Nå skal vi få flere datamaskiner til å snakke sammen.</p>
+</section>
+<section class="activity" id="steg-1-maskinvaren-vi-trenger">
+<h1 class="activity" id="steg-1-maskinvaren-vi-trenger">Steg 1: Maskinvaren vi trenger!</h1>
+<p>Et modem var det vi i gamle dager brukte for å koble oss til internett. I ComputerCraft bruker vi modem for å koble oss til <em>Rednet</em> -- Internett for datamaskiner i Minecraft.</p>
+<p>Siden trådløse datamaskiner er dyre, er det kjekt å bruke en <em>Creative-verden</em>.</p>
+<ul>
+<li>
+<p>Vi bygger en <strong>Advanced Wireless Pocket Computer</strong> og en <strong>Advanced Ender Turtle</strong></p>
+<p><figure><img src="build_advanced_wireless_pocket_computer.png" alt=""></figure></p>
+<p><figure><img src="build_advanced_ender_turtle.png" alt=""></figure></p>
+</li>
+<li>
+<p>Vi kaller tableten for <em>Sendulf</em> med <code>label set Sendulf</code> og roboten for <em>MaxMottak</em> med <code>label set MaxMottak</code>.</p>
+</li>
+</ul>
+<section class="tip" id="server-og-klient">
+<h3 class="tip" id="server-og-klient">Server og klient</h3>
+<p>Vi trenger ofte å sende beskjeder fra en datamaskin til en annen. Vi pleier å
+gi datamaskinene to roller: server og klient.</p>
+<ul>
+<li><strong>Serveren</strong> venter pent på å få beskjed</li>
+<li><strong>Klienten</strong> sender meldinger til serveren når den ønsker</li>
+</ul>
+<p>Vet du om noen eksempler på servere og klienter?</p>
+</section>
+<section class="tip" id="rednet">
+<h3 class="tip" id="rednet">Rednet</h3>
+<p>Vi skal bruke <code>rednet</code> til å la datamaskinene snakke sammen. For en kjapp oversikt over hva <code>rednet</code> kan gjøre, bruk kommandoen <code>help rednet</code>.</p>
+<p>For mer detaljert informasjon, se på wikien til <a href="http://computercraft.info/wiki/Rednet_%28API%29">ComputerCraft</a>.</p>
+</section>
+<section class="check" id="steg-2-klar-til-a-motta-beskjed">
+<h2 class="check" id="steg-2-klar-til-a-motta-beskjed">Steg 2: Klar til å motta beskjed</h2>
+<p>Nå skal vi bruke <em>Sendulf</em> og <em>MaxMottak</em> til å sende beskjeder. Siden kontrolleren aktivt skal sende beskjeder, blir <em>Sendulf</em> klienten vår, mens <em>MaxMottak</em> er serveren.</p>
+<ul>
+<li>
+<p>Sjekk id på <em>MaxMottak</em>. Min <em>MaxMottak</em> svarte følgende:</p>
+<pre><code>&gt; <span class="hljs-property">id</span>
+This <span class="hljs-keyword">is</span> computer <span class="hljs-comment">#5</span>
+This computer <span class="hljs-keyword">is</span> labelled <span class="hljs-string">"MaxMottak"</span>
+</code></pre>
+</li>
+<li>
+<p>Sjekk plassering av modem på <em>MaxMottak</em>. Min svarte:</p>
+<pre><code>&gt; peripherals
+left <span class="hljs-list">(<span class="hljs-keyword">modem</span>)</span>
+</code></pre>
+</li>
+<li>
+<p>Start lua-tolkeren:</p>
+<pre><code>&gt; <span class="hljs-keyword">lua</span>
+Interactive Lua prompt.
+<span class="hljs-built_in">call</span> <span class="hljs-keyword">exit</span>() <span class="hljs-keyword">to</span> <span class="hljs-keyword">exit</span>.
+<span class="hljs-keyword">lua</span>&gt;
+</code></pre>
+</li>
+<li>
+<p>Koble til <code>rednet</code> og vent på beskjed. Husker du hvor modemet var plassert?</p>
+<pre><code class="lua">lua&gt; rednet.open(<span class="hljs-string">"left"</span>)
+lua&gt; rednet.receive(<span class="hljs-number">100</span>)
+</code></pre>
+</li>
+</ul>
+<section class="challenge" id="nott">
+<h3 class="challenge" id="nott">Nøtt</h3>
+<p>Hva er tallet som går inn i <code>receive</code>-funksjonen? Hva skjer når du putter inn 1? 5? 10?</p>
+</section>
+</section>
+<section>
+<h2 id="steg-3-send-beskjed">Steg 3: Send beskjed</h2>
+<ul>
+<li>
+<p>Sjekk hvor modemet var plassert på <em>Sendulf</em></p>
+</li>
+<li>
+<p>Start lua-tolkeren på <em>Sendulf</em>. Hvor var modemet? Må du kalle <code>rednet.open(&quot;left&quot;)</code>, <code>rednet.open(&quot;right&quot;)</code> eller <code>rednet.open(&quot;back&quot;)</code>?</p>
+</li>
+<li>
+<p>Hva var id-en til din <em>MaxMottak</em>? Denne trenger vi når vi skal sende informasjon. Min var 5. Jeg bruker derfor 5 når jeg sender beskjeden min:</p>
+<pre><code class="lua">rednet.send(<span class="hljs-number">5</span>, <span class="hljs-string">"Hello, MaxMottak! Dette er Sendulf! Kan du høre meg?"</span>)
+</code></pre>
+<p><figure><img src="melding_sendulf.png" alt=""></figure></p>
+<p><figure><img src="melding_maxmottak.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-selv">
+<h2 class="flag" id="test-selv">Test selv!</h2>
+<ul>
+<li>Ser du beskjeden du har sendt på <em>MaxMottak</em>?</li>
+<li>Hva må du gjøre for å sende flere beskjeder etter hverandre?</li>
+<li>Worker viser et tall i tillegg til beskjeden du sendte. Hva er tallet?</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=ComputerCraft: Send en beskjed&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft/nettverk_send_beskjed" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Teodor Heggelund</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

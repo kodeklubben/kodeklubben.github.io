@@ -8,9 +8,10 @@ function relative(url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Labyrint</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/labyrint/labyrint.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>I dette spillet vil vi kontrollere en liten <strong>utforsker</strong> mens hun
-leter etter <strong>skatten</strong> gjemt inne i labyrinten. Dessverre er skatten
-beskyttet av den skumle <strong>froskekongen</strong>.</p>
+<p>I dette spillet vil vi kontrollere en liten utforsker mens hun leter
+etter skatten gjemt inne i labyrinten. Dessverre er skatten beskyttet
+av den skumle froskekongen. Vi vil lære hvordan vi kontrollerer
+figurer, og hvordan vi kan programmere figurer til å bevege seg selv.</p>
 <p><figure><img src="labyrint.png" alt=""></figure></p>
 </section>
 <section class="activity" id="steg-1-hvordan-styre-figurer-med-piltastene">
@@ -80,7 +81,7 @@ skript, ett for hver tast.</p>
 <p>Kan du forandre hvor raskt utforskeren flytter seg?</p>
 </li>
 </ul>
-<p>Tallet <code>5</code> i <code class="blockmotion">gå 5 steg</code>-klossene bestemmer hvor raskt
+<p>Tallet <code>5</code> i <code class="b">gå (5) steg</code>-klossene bestemmer hvor raskt
 utforskeren flytter seg rundt. Vi vil gjerne eksperimentere litt for å
 se hvilken fart som passer best i spillet vårt, men for å endre farten
 må vi bytte tallet i fire forskjellige skript. Det blir for mye jobb!</p>
@@ -95,28 +96,27 @@ må vi bytte tallet i fire forskjellige skript. Det blir for mye jobb!</p>
 klikk <code>Lag en Variabel</code>.</p>
 </li>
 <li>
-<p>Kall variabelen <code class="blockdata">hastighet</code>, og velg at den bare skal
-gjelde <code>For denne figuren</code>.</p>
+<p>Kall variabelen <code>hastighet</code>, og velg at den bare skal gjelde <code>For denne figuren</code>.</p>
 </li>
 <li>
 <p>Til slutt, fjern avhukingen ved siden av den nye
-<code class="blockdata">hastighet</code>-klossen for at variabelen ikke skal vises på
+<code class="b">(hastighet)</code>-klossen for at variabelen ikke skal vises på
 scenen.</p>
 </li>
 </ul>
 <p>Nå må vi endre i skriptene våre slik at bruker
-<code class="blockdata">hastighet</code>-variabelen.</p>
+<code class="b">(hastighet)</code>-variabelen.</p>
 <ul>
 <li>
-<p>Lag først et nytt skript som setter verdien av
-<code class="blockdata">hastighet</code> til <code>10</code>.</p>
+<p>Lag først et nytt skript som setter verdien av <code class="b">(hastighet)</code> til
+<code>10</code>.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     sett [hastighet v] til (10)
 </code></pre>
 </li>
 <li>
 <p>Deretter endrer vi de fire skriptene vi allerede har laget slik at
-de bruker <code class="blockdata">hastighet</code>.</p>
+de bruker <code class="b">(hastighet)</code>.</p>
 <pre><code class="blocks">    når [pil opp v] trykkes
     pek i retning (0 v)
     gå (hastighet) steg
@@ -146,7 +146,7 @@ tidligere?</p>
 </li>
 <li>
 <p>Forandrer hastigheten til utforskeren seg hvis du endrer verdien av
-<code class="blockdata">hastighet</code> og klikker på det grønne flagget igjen?</p>
+<code class="b">(hastighet)</code> og klikker på det grønne flagget igjen?</p>
 </li>
 <li>
 <p>Velg en hastighet du synes passer.</p>
@@ -215,31 +215,30 @@ nå</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <p>For å oppdage når <code>Utforsker</code>-figuren vår går gjennom veggen på
-labyrinten vil vi bruke en <code class="blocksensing">berører fargen</code>-kloss.
-Denne klossen kan sanse om en figur kommer borti en spesiell farge.
-Her er det viktig at vi har tegnet alle veggene i labyrinten i samme
+labyrinten vil vi bruke en <code class="b">(berører fargen [#ffffff])</code>-kloss.
+Denne klossen merker om en figur kommer borti en spesiell farge.  Her
+er det viktig at vi har tegnet alle veggene i labyrinten i samme
 farge.</p>
 <ul>
 <li>
-<p>Vi legger <code class="blocksensing">berører fargen</code>-klossen inn i skriptet
-vi allerede har laget som setter <code class="blockdata">hastighet</code>-variabelen.</p>
+<p>Vi legger <code class="b">(berører fargen [#ffffff])</code>-klossen inn i skriptet vi
+allerede har laget som setter <code class="b">(hastighet)</code>-variabelen.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     sett [hastighet v] til [10]
     for alltid
         hvis &lt;berører fargen [#cc0000]?&gt;
-            vend @ (180) grader
+            vend høyre (180) grader
             gå (hastighet) steg
-            vend @ (180) grader
+            vend høyre (180) grader
         slutt
     slutt
 </code></pre>
 </li>
 <li>
-<p>For å få riktig farge i <code class="blocksensing">berører fargen</code>-klossen
-klikker du først på den lille firkanten hvor fargen vises. Deretter
-flytter du musepekeren slik at den peker på en vegg i labyrinten
-din. Da forandres fargen i den lille firkanten. Klikk igjen for å
-velge denne fargen.</p>
+<p>For å få riktig farge i <code class="b">berører fargen [#cc0000]</code>-klossen klikker du
+først på den lille firkanten hvor fargen vises. Deretter flytter du
+musepekeren slik at den peker på en vegg i labyrinten din. Da forandres fargen
+i den lille firkanten. Klikk igjen for å velge denne fargen.</p>
 </li>
 </ul>
 </section>
@@ -260,9 +259,9 @@ veggen?</p>
 <h2 class="protip" id="tips-2">Tips</h2>
 <p>En måte vi kan bruke for å begrense hvor en figur kan gå, er å tvinge
 den til å ta et skritt tilbake når den gjør noe feil. I koden</p>
-<pre><code class="blocks">    vend @ (180) grader
+<pre><code class="blocks">    vend høyre (180) grader
     gå (hastighet) steg
-    vend @ (180) grader
+    vend høyre (180) grader
 </code></pre>
 <p>vil figuren først snu seg helt rundt (180 grader), deretter ta et
 skritt, og til slutt snu seg rundt igjen slik at den peker i samme
@@ -334,8 +333,7 @@ skatten en gang, forblir skatten borte.</p>
 <ul>
 <li>
 <p>Vi må passe på at skatten vises på begynnelsen av spillet. Endre
-skriptet på <code>Skatt</code> ved å legge til <code class="blocklooks">vis</code> helt i
-begynnelsen.</p>
+skriptet på <code>Skatt</code> ved å legge til <code class="b">vis</code> helt i begynnelsen.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     vis
     for alltid
@@ -354,15 +352,14 @@ spennende.</p>
 <p>Klikk på <code>Utforsker</code>-figuren.</p>
 </li>
 <li>
-<p>Legg til en <code class="blockmotion">gå til x: y:</code>-kloss rett etter <code class="blockdata">sett hastighet til 10</code>-klossen.</p>
+<p>Legg til en <code class="b">gå til x: () y: ()</code>-kloss rett etter <code class="b">sett [hastighet v] til (10)</code>-klossen.</p>
 </li>
 <li>
 <p>For å finne ut hvilke tall vi vil bruke for <code>x</code> og <code>y</code> kan vi gjøre
-følgende. Dra utforskeren til et sted det er fint å starte
-fra. Klikk deretter på <code class="blockmotion">i</code> på
-<code>Utforsker</code>-figuren. Under navnet <code>Utforsker</code> står det <code>x</code> og <code>y</code>
-sammen med to tall. Dette er posisjonen til figuren akkurat
-nå. Skriv disse to tallene inn i <code class="blockmotion">gå til x: y:</code>-klossen.</p>
+følgende. Dra utforskeren til et sted det er fint å starte fra. Se
+øverst i høyre hjørne. Sammen med <code>Utforsker</code>-figuren står det <code>x</code>
+og <code>y</code> og to tall. Dette er posisjonen til figuren akkurat nå. Skriv
+disse to tallene inn i <code class="b">gå til x: () y: ()</code>-klossen.</p>
 </li>
 <li>
 <p>Hele skriptet vil nå se slik ut (dine tall for <code>x</code> og <code>y</code> vil være
@@ -372,9 +369,9 @@ forskjellige):</p>
     gå til x: (-200) y: (0)
     for alltid
         hvis &lt;berører fargen [#cc0000]?&gt;
-            vend @ (180) grader
+            vend høyre (180) grader
             gå (hastighet) steg
-            vend @ (180) grader
+            vend høyre (180) grader
         slutt
     slutt
 </code></pre>
@@ -426,9 +423,9 @@ Dette blir veldig likt hvordan <code>Skatt</code> merket at den ble funnet.</p>
 </code></pre>
 </li>
 </ul>
-<p>Linjen <code class="blockcontrol">stopp alle</code> gjør at skriptet på <code>Skatt</code> slutter
-å kjøre. Det betyr at vi klarer ikke å få tak i skatten etter at vi
-har blitt tatt av <code>Froskekonge</code>.</p>
+<p>Linjen <code class="b">stopp [alle v] :: control</code> gjør at skriptet på <code>Skatt</code>
+slutter å kjøre. Det betyr at vi klarer ikke å få tak i skatten etter
+at vi har blitt tatt av <code>Froskekonge</code>.</p>
 </section>
 <section class="flag" id="test-prosjektet-7">
 <h2 class="flag" id="test-prosjektet-7">Test prosjektet</h2>
@@ -457,9 +454,10 @@ tallene for <code>x</code> og <code>y</code> med noe som passer for din labyrint
 </li>
 <li>
 <p>Før vi lar <code>Froskekonge</code> begynne å bevege seg lager vi en
-<code class="blockdata">hastighet</code>-variabel også for ham. Klikk på
+<code class="b">(hastighet)</code>-variabel også for ham. Klikk på
 <code class="blockdata">Data</code>, og deretter <code>Lag en Variabel</code>. Kall variabelen
-<code class="blockdata">hastighet</code> og la den gjelde kun <code>For denne figuren</code>. Tilslutt, fjern avhukingen på variabelen.</p>
+<code>hastighet</code> og la den gjelde kun <code>For denne figuren</code>. Tilslutt,
+fjern avhukingen på variabelen.</p>
 </li>
 <li>
 <p>Vi kan nå utvide skriptet slik at froskekongen går fram og
@@ -472,7 +470,8 @@ måte som vi hindrer utforskeren i å gå gjennom veggen.</p>
     for alltid
         gå (hastighet) steg
         hvis &lt;berører fargen [#cc0000]?&gt;
-            vend @ (180) grader
+            vend høyre (180) grader
+            gå (hastighet) steg
         slutt
     slutt
 </code></pre>
@@ -490,10 +489,11 @@ av og til endre retning.</p>
     for alltid
         gå (hastighet) steg
         hvis &lt;berører fargen [#cc0000]?&gt;
-            vend @ (180) grader
+            vend høyre (180) grader
+            gå (hastighet) steg
         slutt
         hvis &lt;(tilfeldig tall fra (1) til (25)) = (1)&gt;
-            vend @ ((tilfeldig tall fra (-1) til (1)) * (90)) grader
+            vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader
         slutt
     slutt
 </code></pre>
@@ -502,16 +502,25 @@ av og til endre retning.</p>
 <p>Disse to siste klossene ser litt kompliserte ut. La oss se litt nøyere på dem.</p>
 <ul>
 <li>
-<p>Klossen <code class="blockcontrol">hvis</code><code class="blockoperators">tilfeldig tall fra 1 til 25 = 1</code> sier at vi skal gjøre <em>noe</em> cirka èn av 25
-ganger.</p>
+<p>Klossen <code class="b">hvis &lt;(tilfeldig tall fra (1) til (25)) = (1)&gt;</code> sier at
+vi skal gjøre <em>noe</em> cirka èn av 25 ganger.</p>
 </li>
 <li>
-<p>Dette <em>noe</em> er <code class="blockmotion">vend</code><code class="blockoperators">tilfeldig tall fra -1 til 1 * 90</code><code class="blockmotion">grader</code>. Tegnet <code>*</code> betyr gange,
-slik at om vi velger tilfeldig mellom tallene -1, 0 og 1, betyr det
-at froskekongen vil vende -90, 0 eller 90 grader. Det vil si at den
-svinger mot venstre, fortsetter rett frem eller svinger mot høyre.</p>
+<p>Dette <em>noe</em> er <code class="b">vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader</code>. Tegnet <code>*</code> betyr gange, slik at om vi velger
+tilfeldig mellom tallene -1, 0 og 1, betyr det at froskekongen vil
+vende -90, 0 eller 90 grader. Det vil si at den svinger mot venstre,
+fortsetter rett frem eller svinger mot høyre.</p>
 </li>
 </ul>
+</section>
+<section class="protip" id="tips-3">
+<h2 class="protip" id="tips-3">Tips</h2>
+<p>Du kan av og til oppleve at <code>Froskekonge</code> setter seg fast i
+veggen. Dette er fordi <code>Froskekonge</code> fortsatt berører labyrintveggen
+etter at den har snudd seg. Et par ting du kan prøve for å forbedre
+dette er å gjøre <code>Froskekonge</code>-figuren mindre, legge en <code class="b">begrens rotasjon [ikke roter v]</code>-kloss øverst i <code>Froskekonge</code>-skriptet,
+eller velge en figur som er <em>rundere</em> (prøv også å viske bort tunga
+til <code>Froskekonge</code> om du bruker <code>Dyr/Frog</code>-figuren).</p>
 </section>
 <section class="flag" id="test-prosjektet-8">
 <h2 class="flag" id="test-prosjektet-8">Test prosjektet</h2>
