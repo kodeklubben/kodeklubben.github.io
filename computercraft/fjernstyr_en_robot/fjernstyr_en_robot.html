@@ -300,11 +300,12 @@ programmerer eller voksen! Hva gjør programmet nå forskjellig?</p>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment">-- Denne ser ut som før.</span>
+<span class="hljs-comment">-- Denne er endret litt</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">(  )</span></span>
   <span class="hljs-built_in">print</span>(<span class="hljs-string">"Listening for move commands ..."</span>)
   rednet.open(<span class="hljs-string">"back"</span>)
   <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+  <span class="hljs-comment">-- Her skal vi ikke lenger skrive ut, men flytte på roboten</span>
     remoteMove()
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
