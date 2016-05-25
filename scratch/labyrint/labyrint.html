@@ -111,7 +111,7 @@ scenen.</p>
 <p>Lag først et nytt skript som setter verdien av <code class="b">(hastighet)</code> til
 <code>10</code>.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
-    sett [hastighet v] til (10)
+    sett [hastighet v] til [10]
 </code></pre>
 </li>
 <li>
@@ -215,13 +215,13 @@ nå</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <p>For å oppdage når <code>Utforsker</code>-figuren vår går gjennom veggen på
-labyrinten vil vi bruke en <code class="b">(berører fargen [#ffffff])</code>-kloss.
+labyrinten vil vi bruke en <code class="b">&lt;berører fargen [#ffffff]&gt;</code>-kloss.
 Denne klossen merker om en figur kommer borti en spesiell farge.  Her
 er det viktig at vi har tegnet alle veggene i labyrinten i samme
 farge.</p>
 <ul>
 <li>
-<p>Vi legger <code class="b">(berører fargen [#ffffff])</code>-klossen inn i skriptet vi
+<p>Vi legger <code class="b">&lt;berører fargen [#ffffff]&gt;</code>-klossen inn i skriptet vi
 allerede har laget som setter <code class="b">(hastighet)</code>-variabelen.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     sett [hastighet v] til [10]
@@ -466,7 +466,7 @@ måte som vi hindrer utforskeren i å gå gjennom veggen.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     gå til x: (50) y: (100)
     pek i retning (-90 v)
-    sett [hastighet v] til (5)
+    sett [hastighet v] til [5]
     for alltid
         gå (hastighet) steg
         hvis &lt;berører fargen [#cc0000]?&gt;
@@ -485,14 +485,14 @@ av og til endre retning.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     gå til x: (50) y: (100)
     pek i retning (-90 v)
-    sett [hastighet v] til (5)
+    sett [hastighet v] til [5]
     for alltid
         gå (hastighet) steg
         hvis &lt;berører fargen [#cc0000]?&gt;
             vend høyre (180) grader
             gå (hastighet) steg
         slutt
-        hvis &lt;(tilfeldig tall fra (1) til (25)) = (1)&gt;
+        hvis &lt;(tilfeldig tall fra (1) til (25)) = [1]&gt;
             vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader
         slutt
     slutt
@@ -502,7 +502,7 @@ av og til endre retning.</p>
 <p>Disse to siste klossene ser litt kompliserte ut. La oss se litt nøyere på dem.</p>
 <ul>
 <li>
-<p>Klossen <code class="b">hvis &lt;(tilfeldig tall fra (1) til (25)) = (1)&gt;</code> sier at
+<p>Klossen <code class="b">hvis &lt;(tilfeldig tall fra (1) til (25)) = [1]&gt;</code> sier at
 vi skal gjøre <em>noe</em> cirka èn av 25 ganger.</p>
 </li>
 <li>

@@ -84,9 +84,9 @@ synke. Poengvariabelen fungerer dermed som en slags tidteller.</p>
 <p>Endre skriptet slik:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     bytt drakt til (tilfeldig tall fra (1) til (5))
-    sett [poeng v] til (110)
-    gjenta til ((poeng) = (0))
-        endre [poeng v] med [-10]
+    sett [poeng v] til [110]
+    gjenta til &lt;(poeng) = [0]&gt;
+        endre [poeng v] med (-10)
         sett [piksel v] effekt til (poeng)
         sett [farge v] effekt til (poeng)
         vent (1) sekunder
@@ -156,9 +156,9 @@ svar.  Etter at vi har bestemt drakten legger du derfor til klossen
 <pre><code class="blocks">    når grønt flagg klikkes
     bytt drakt til (tilfeldig tall fra (1) til (5))
     sett [riktig v] til (drakt nr.)
-    sett [poeng v] til (110)
-    gjenta til ((poeng) = (0))
-        endre [poeng v] med [-10]
+    sett [poeng v] til [110]
+    gjenta til &lt;(poeng) = [0]&gt;
+        endre [poeng v] med (-10)
         sett [piksel v] effekt til (poeng)
         sett [farge v] effekt til (poeng)
         vent (1) sekunder
@@ -198,7 +198,7 @@ skal ha skript knyttet til seg.</p>
 som skal skje avhenger av om spilleren har klikket riktig eller
 galt. Legg til dette skriptet til <code>Svar1</code>:</p>
 <pre><code class="blocks">    når denne figuren klikkes
-    hvis &lt;(riktig) = (1)&gt;
+    hvis &lt;(riktig) = [1]&gt;
         send melding [Vant v]
     ellers
         skjul
@@ -269,17 +269,17 @@ slik ut:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     bytt drakt til (tilfeldig tall fra (1) til (5))
     sett [riktig v] til (drakt nr.)
-    sett [poeng v] til (110)
-    sett [vant v] til (0)
-    gjenta til (&lt;(poeng) = (0)&gt; eller &lt;(vant) = (1)&gt;)
-        endre [poeng v] med [-10]
+    sett [poeng v] til [110]
+    sett [vant v] til [0]
+    gjenta til &lt;&lt;(poeng) = [0]&gt; eller &lt;(vant) = [1]&gt;&gt;
+        endre [poeng v] med (-10)
         sett [piksel v] effekt til (poeng)
         sett [farge v] effekt til (poeng)
         vent (1) sekunder
     slutt
 
     når jeg mottar [Vant v]
-    sett [vant v] til (1)
+    sett [vant v] til [1]
     ta bort grafiske effekter
     si (sett sammen [Gratulerer! Din poengsum ble] (poeng))
 </code></pre>

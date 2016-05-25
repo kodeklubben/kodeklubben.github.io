@@ -216,8 +216,8 @@ skal gjelde kun for sted-figuren.</p>
 <pre><code class="blocks">    gå til x: (-98) y: (-120)
 </code></pre>
 <p>med kode som setter variablene i stedet:</p>
-<pre><code class="blocks">    sett [stedX v] til (-98)
-    sett [stedY v] til (-120)
+<pre><code class="blocks">    sett [stedX v] til [-98]
+    sett [stedY v] til [-120]
 </code></pre>
 </li>
 <li>
@@ -276,7 +276,7 @@ funksjonen din ser slik ut:</p>
     sett [stedX v] til (x)
     sett [stedY v] til (y)
     sett [Reis til v] til (sted)
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     sett [gjennomsiktig v] effekt til (0)
     si (sett sammen [Fant ] (sted))
     gjenta (5) ganger
@@ -307,7 +307,7 @@ reisemålet, vil det neste reisemålet bli funnet automatisk. Det er
 fordi vi ikke rekker å flytte sirkelen før vi tester om den berører
 helikopteret.</p>
 <p>Den enkleste måten å løse dette på er å legge på klossen</p>
-<pre><code class="blocks">    vent til (ikke (berører [Helikopter v]?))
+<pre><code class="blocks">    vent til &lt;ikke &lt;berører [Helikopter v]?&gt;&gt;
 </code></pre>
 <p>rett før vi venter til helikopteret berøres inne i funksjonen vår.</p>
 </li>

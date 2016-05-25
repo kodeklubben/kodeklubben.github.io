@@ -74,9 +74,9 @@ ikke kan flippes eller roteres.</p>
     for alltid
         gå til [Felix v]
         hvis &lt;farge [rød v] berører [grønn v] ?&gt;
-	        sett [blokkert høyre v] til (1)
+	        sett [blokkert høyre v] til [1]
         ellers
-	        sett [blokkert høyre v] til (0)
+	        sett [blokkert høyre v] til [0]
         slutt
     slutt
 </code></pre>
@@ -310,7 +310,7 @@ på meldingen ved å gjemme seg.</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     gå til x:(220) y:(-125)
     for alltid
-        hvis &lt;(nøkler igjen) = (0)&gt;
+        hvis &lt;(nøkler igjen) = [0]&gt;
 	        endre [farge v] effekt med (25)
             hvis &lt;berører [Felix v]?&gt;
 		        send melding [seier v]
@@ -360,10 +360,10 @@ oss om på hvilken side Felix berører slemmingen.</strong></p>
         hvis &lt;berører [Felix v]?&gt;
 	        send melding [tap v]
         slutt
-        hvis &lt; (x-posisjon) &gt; (-200) &gt;
+        hvis &lt; (x-posisjon) &gt; [-200] &gt;
 	        pek i retning (90)
         slutt
-        hvis &lt; (x-posisjon) &gt; (-50) &gt;
+        hvis &lt; (x-posisjon) &gt; [-50] &gt;
 	        pek i retning (-90)
         slutt
         gå (2) steg
@@ -524,7 +524,7 @@ Felix sitt oppdaterte skript for å vise hva som må gjøres.</p>
             gå (2) steg
         slutt
         hvis &lt;&lt;tast [mellomrom v] trykket?&gt; og &lt;(blokkert bunn)=(1)&gt;
-		    sett [hopphøyde v] til (100)
+		    sett [hopphøyde v] til [100]
         slutt
     slutt
 </code></pre>
@@ -537,13 +537,13 @@ lagrer. Du trenger ikke bruke lister, du kan bruke
 gjør riktig ting basert på dette.</p>
 <p>Og her er redningskapselen, som håndterer all nivå-endringen:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
-    sett [nåværende nivå v] til (1)
+    sett [nåværende nivå v] til [1]
     send melding [start brett v]
 
     når jeg mottar [start brett v]
     gå til x: (element [nåværende nivå v] av [xs v]) y: (element [nåværende nivå v] av [ys v])
     for alltid
-	    hvis &lt;[nøkler å ta v] = (0)&gt;
+	    hvis &lt;[nøkler å ta v] = [0]&gt;
 	        endre [farge v] effekt med (25)
             hvis &lt;berører [Felix v]?&gt;
 			    hvis &lt;[nåværende nivå v] = &lt;lengden av [nøkler per brett v]&gt;

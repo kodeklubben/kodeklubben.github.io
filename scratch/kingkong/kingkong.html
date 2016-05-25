@@ -249,7 +249,7 @@ vi ikke har sagt hva alle flyklonene skal gjøre. La oss begynne med
 pek i retning (45 v)
 gå til x: (-280) y: (-140)
 vis
-gjenta til ((y-posisjon) &gt; (190))
+gjenta til &lt;(y-posisjon) &gt; [190]&gt;
     gå (10) steg
 slutt
 slett denne klonen
@@ -271,7 +271,7 @@ flyr i riktig retning.</p>
 et tilfeldig tall kan vi bestemme om flyet kommer fra høyre eller
 venstre. Endre koden din slik at den blir som følger:</p>
 <pre><code class="blocks">når jeg starter som klon
-hvis &lt;(tilfeldig tall fra (1) til (2)) = (1)&gt;
+hvis &lt;(tilfeldig tall fra (1) til (2)) = [1]&gt;
     pek i retning (45 v)
     gå til x: (-280) y: (-140)
 ellers
@@ -279,7 +279,7 @@ ellers
     gå til x: (280) y: (-140)
 slutt
 vis
-gjenta til ((y-posisjon) &gt; (190))
+gjenta til &lt;(y-posisjon) &gt; [190]&gt;
     gå (10) steg
 slutt
 slett denne klonen
@@ -300,7 +300,7 @@ truffet av flyene.</p>
 nytt skript på ham. Et enkelt utgangspunkt kan være:</p>
 <pre><code class="blocks">når grønt flagg klikkes
 for alltid
-    vent til (berører [fly v] ?)
+    vent til &lt;berører [fly v] ?&gt;
     endre [farge v] effekt med (25)
     vent (0.5) sekunder
     ta bort grafiske effekter

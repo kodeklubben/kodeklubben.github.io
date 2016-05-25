@@ -119,7 +119,7 @@ siden kan brukes igjen inne i <code class="blockcontrol">gjenta til flaks = 0</c
     sett [flaks v] til [0]
     bytt drakt til [Vinger opp v]
     for alltid
-        gjenta til ((flaks) = [0])
+        gjenta til &lt;(flaks) = [0]&gt;
             endre [flaks v] med (-1)
             bytt drakt til [Vinger ned v]
             gjenta (10) ganger
@@ -263,7 +263,7 @@ kræsjer.</em></p>
 <li>
 <p>Legg til dette skriptet på Flakse:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
-    vent til ((berører [kant v]?) eller (berører [Rør v]?))
+    vent til &lt;&lt;berører [kant v]?&gt; eller &lt;berører [Rør v]?&gt;&gt;
     spill lyden [screech v]
     si [Du tapte!]
     send melding [Tap v]
@@ -312,7 +312,7 @@ klikkes. Dette klarer du selv!</p>
 <li>
 <p>Legg så til dette skriptet på <code>Rør</code>:</p>
 <pre><code class="blocks">    når jeg starter som klon
-    vent til ((x-posisjon) &lt; ([x-posisjon v] av [Flakse v]))
+    vent til &lt;(x-posisjon) &lt; ([x-posisjon v] av [Flakse v])&gt;
     endre [poeng v] med (1)
     spill lyden [bird v]
 </code></pre>
@@ -363,7 +363,7 @@ Variablen skal gjelde for <code>For denne figuren</code>.</p>
     sett [flaks v] til [0]
     bytt drakt til [Vinger opp v]
     for alltid
-        gjenta til ((flaks) = [0])
+        gjenta til &lt;(flaks) = [0]&gt;
             endre [flaks v] med (-1)
             bytt drakt til [Vinger ned v]
             endre [løft v] med (4)
@@ -400,7 +400,7 @@ kræsjer i kanten eller i et rør. Slett
     slutt
 
     når jeg mottar [Fall v]
-    gjenta til ((y-posisjon) &lt; [-180])
+    gjenta til &lt;(y-posisjon) &lt; [-180]&gt;
         endre y med (løft)
         endre [løft v] med (-0.2)
     slutt

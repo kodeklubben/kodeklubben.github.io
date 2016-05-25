@@ -140,7 +140,7 @@ ikke vises på scenen.</p>
 <code class="blockevents">når grønt flagg klikkes</code>-skriptet slik:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     vis
-    sett [kappløp v] til (0)
+    sett [kappløp v] til [0]
 </code></pre>
 </li>
 <li>
@@ -186,7 +186,7 @@ klart for en ny runde.</em></p>
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
         hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til (0)
+            sett [kappløp v] til [0]
         slutt
     slutt
 </code></pre>
@@ -207,7 +207,7 @@ fortelle at den vant:</p>
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
         hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til (0)
+            sett [kappløp v] til [0]
             spill lyden [Polly v]
             si [Polly vinner!] i (3) sekunder
         slutt
@@ -247,7 +247,7 @@ over og nullstille spillet, slik at er klart for en ny runde.</em></p>
     hvis &lt;(kappløp) = [1]&gt;
         gå (4) steg
         hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til (0)
+            sett [kappløp v] til [0]
             spill lyden [Polly v]
             si [Polly vinner! v] i (3) sekunder
             send melding [Avslutt v]
@@ -318,13 +318,13 @@ denne aktiveres når raketten avfyres.</p>
 <p>Nedenfor er et forslag til hvordan et rakett-skript kan se ut. Du må
 legge til noen lyder og variabler på egen hånd.</p>
 <pre><code class="blocks">    når [q v] trykkes
-    hvis &lt;((kappløp) = (1)) og ((rakett_brukt) = (0))&gt;
+    hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
         bytt drakt til [parrot-rakett v]
-        sett [rakett_brukt v] til (1)
+        sett [rakett_brukt v] til [1]
         gå (30) steg
         spill lyden [motorcycle passing v]
         hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til (0)
+            sett [kappløp v] til [0]
             spill lyden [Polly v]
             si [Polly vinner! v] i (3) sekunder
             send melding [Avslutt v]
@@ -381,7 +381,7 @@ den på samme måte som andre kodeklosser?</p>
 med en <code class="blockmoreblocks">ferdig</code>-kloss.</p>
 <pre><code class="blocks">    definer ferdig
     hvis &lt;berører [kant v]?&gt;
-        sett [kappløp v] til (0)
+        sett [kappløp v] til [0]
         spill lyden [Polly v]
         si [Polly vinner! v] i (3) sekunder
         send melding [Avslutt v]
@@ -392,9 +392,9 @@ med en <code class="blockmoreblocks">ferdig</code>-kloss.</p>
         ferdig
 
     når [q v] trykkes
-    hvis &lt;((kappløp) = (1)) og ((rakett_brukt) = (0))&gt;
+    hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
         bytt drakt til [parrot-rakett v]
-        sett [rakett_brukt v] til (1)
+        sett [rakett_brukt v] til [1]
         gå (30) steg
         spill lyden [motorcycle passing v]
         ferdig

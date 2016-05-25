@@ -105,16 +105,16 @@ Scratch passer på at figurer ikke går helt av skjermen flytter vi
 dem litt innenfor skjermkanten:</p>
 <pre><code class="blocks">    når jeg mottar [Nytt spill v]
     for alltid
-        hvis &lt;(x-posisjon) &lt; (-235)&gt;
+        hvis &lt;(x-posisjon) &lt; [-235]&gt;
             endre x med (470)
         slutt
-        hvis &lt;(x-posisjon) &gt; (235)&gt;
+        hvis &lt;(x-posisjon) &gt; [235]&gt;
             endre x med (-470)
         slutt
-        hvis &lt;(y-posisjon) &lt; (-175)&gt;
+        hvis &lt;(y-posisjon) &lt; [-175]&gt;
             endre y med (350)
         slutt
-        hvis &lt;(y-posisjon) &gt; (175)&gt;
+        hvis &lt;(y-posisjon) &gt; [175]&gt;
             endre y med (-350)
         slutt
     slutt
@@ -151,7 +151,7 @@ mellomromtasten trykkes kan vi starte <code class="blockcontrol">hvis</code>-tes
 med å vente til mellomromtasten er sluppet igjen. Dette trikset ser
 omtrent slik ut:</p>
 <pre><code class="blocks">    hvis &lt;tast [mellomrom v] trykket?&gt;
-        vent til (ikke (tast [mellomrom v] trykket?))
+        vent til &lt;ikke &lt;tast [mellomrom v] trykket?&gt;&gt;
         ...
     slutt
 </code></pre>

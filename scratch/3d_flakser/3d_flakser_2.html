@@ -55,7 +55,7 @@ Flakse berører bakken skal spilleren tape. Vi legger til følgende
 <p>Til slutt så vil vi helst at bakken skal forsvinne når Flakse flyr
 veldig høyt. Det kan vi gjøre med <code class="blocklooks">skjul</code> og
 <code class="blocklooks">vis</code> kommandoene, slik</p>
-<pre><code class="blocks">    hvis &lt;(y) &lt; (150)&gt;
+<pre><code class="blocks">    hvis &lt;(y) &lt; [150]&gt;
         vis
     ellers
         skjul
@@ -105,7 +105,7 @@ starter.</p>
 <li>
 <p>Sett inn disse klossene først i hovedløkken til Flakse:</p>
 <pre><code class="blocks">    endre [y v] med (løft)
-    hvis &lt;(løft) &gt; (-5)&gt;
+    hvis &lt;(løft) &gt; [-5]&gt;
         endre [løft v] med (-0.5)
     slutt
 </code></pre>
@@ -114,13 +114,13 @@ starter.</p>
 <p>Til slutt lager vi et nytt skript hos Flakse slik:</p>
 <pre><code class="blocks">    når jeg mottar [Nytt spill v]
     for alltid
-        gjenta til ((flaks) = (0))
+        gjenta til &lt;(flaks) = [0]&gt;
             endre [flaks v] med (-1)
-            hvis &lt;(løft) &lt; (5)&gt;
+            hvis &lt;(løft) &lt; [5]&gt;
                 endre [løft v] med (2)
             slutt
-            hvis &lt;(løft) &lt; (0)&gt;
-                sett [løft v] til (0)
+            hvis &lt;(løft) &lt; [0]&gt;
+                sett [løft v] til [0]
             slutt
         slutt
     slutt
@@ -153,10 +153,10 @@ retning?</p>
 <p>Nå vil vi at figuren skal rotere tilbake til vannrett når piltastene
 ikke trykkes lenger. Det kan vi enkelt få til ved å legge til disse
 klossene under testene som sjekker om piltastene trykkes.</p>
-<pre><code class="blocks">    hvis &lt;(retning) &lt; (90)&gt;
+<pre><code class="blocks">    hvis &lt;(retning) &lt; [90]&gt;
         vend høyre (1) grader
-    slutt 
-    hvis &lt;(retning) &gt; (90)&gt;
+    slutt
+    hvis &lt;(retning) &gt; [90]&gt;
         vend venstre (1) grader
     slutt
 </code></pre>
@@ -182,7 +182,7 @@ nærmest. Husk at det er <code class="blockdata">distanse</code> variablen til
 ringen som forteller oss hvor nærme ringen er. Så vi må hele tiden
 sjekke om Flakse berører ringen, <em>og</em> om ringen faktisk er nærme. Du
 må legge til denne klossen et sted i skriptet til ring-klonene.</p>
-<pre><code class="blocks">    hvis &lt;(berører [Flakse v]) og ((distanse) &lt; (1.2))&gt;
+<pre><code class="blocks">    hvis &lt;&lt;berører [Flakse v]&gt; og &lt;(distanse) &lt; [1.2]&gt;&gt;
         si [du tapte!] i (1) sekunder
         stopp [alle v] :: control
     slutt
@@ -199,8 +199,10 @@ hvor flakse-figuren er, ikke er altfor langt unna
 <code class="blockdata">ringX</code> og <code class="blockdata">ringY</code>. Vi legger til følgende
 klosser rett under hovedløkken til ringene, slik at det siste
 ringene gjør før de slettes er å sjekke om Flakse er inni.</p>
-<pre><code class="blocks">    hvis &lt;(((x) &lt; ((ringX) + (160))) og ((x) &gt; ((ringX) - (160)))) og (((y) &lt; ((ringY) + (160))) og ((ringY) &gt; ((ringY) - (160)))&gt;
-        endre [poeng v] med (1)
+<pre><code class="blocks">    hvis &lt; &lt;(x) &lt; ((ringX) + (160))&gt; og &lt;(x) &gt; ((ringX) - (160))&gt; &gt;
+        hvis &lt; &lt;(y) &lt; ((ringY) + (160))&gt; og &lt;(ringY) &gt; ((ringY) - (160))&gt; &gt;
+            endre [poeng v] med (1)
+        slutt
     slutt
 </code></pre>
 <p>Fungerer skriptet som det skal? Hva er det vi egentlig sjekker i

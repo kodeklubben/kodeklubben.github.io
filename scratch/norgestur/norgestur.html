@@ -225,7 +225,7 @@ helikopteret reiser dit.</p>
 
     når jeg mottar [Sted: Hønefoss v]
     gå til x: (6) y: (-112)
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     si [Fant Hønefoss!] i (2) sekunder
 </code></pre>
 <p>Legg merke til at i <code class="blockmotion">gå til</code>-klossen bruker vi samme
@@ -266,13 +266,13 @@ reisemål. Lag deretter et nytt skript for det nye stedet. Dette nye
 skriptet er veldig likt det første, så du bør høyreklikke på <code class="blockevents">når jeg mottar Sted: Hønefoss</code>-klossen og velge <code>lag en kopi</code>.</p>
 <pre><code class="blocks">    når jeg mottar [Sted: Hønefoss v]
     gå til x: (6) y: (-112)
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     si [Fant Hønefoss!] i (2) sekunder
     send melding [Sted: Tromsø v]
 
     når jeg mottar [Sted: Tromsø v]
     gå til x: (103) y: (121)
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     si [Fant Tromsø!] i (2) sekunder
 </code></pre>
 <p>Bruk dine egne koordinater (og navn) også for det andre
@@ -318,7 +318,7 @@ følger:</p>
 <pre><code class="blocks">    når jeg mottar [Sted: Hønefoss v]
     gå til x: (6) y: (-112)
     sett [Reis til v] til [Hønefoss]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     si [Fant Hønefoss!] i (2) sekunder
     send melding [Sted: Tromsø v]
 </code></pre>
@@ -328,7 +328,7 @@ følger:</p>
 <pre><code class="blocks">    når jeg mottar [Sted: Tromsø v]
     gå til x: (103) y: (121)
     sett [Reis til v] til [Tromsø]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     si [Fant Tromsø!] i (2) sekunder
 </code></pre>
 </li>
@@ -422,14 +422,14 @@ kjøre et skript hver gang vi finner et reisemål. Endre
 <pre><code class="blocks">    når jeg mottar [Sted: Hønefoss v]
     gå til x: (6) y: (-112)
     sett [Reis til v] til [Hønefoss]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
     send melding [Sted: Tromsø v]
 
     når jeg mottar [Sted: Tromsø v]
     gå til x: (103) y: (121)
     sett [Reis til v] til [Tromsø]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
 </code></pre>
 </li>
@@ -614,35 +614,35 @@ kan gjerne inneholde andre navn og koordinater.</p>
 <pre><code class="blocks">    når jeg mottar [Sted: Hønefoss v]
     gå til x: (6) y: (-112)
     sett [Reis til v] til [Hønefoss]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
     send melding [Sted: Tromsø v]
 
     når jeg mottar [Sted: Tromsø v]
     gå til x: (103) y: (121)
     sett [Reis til v] til [Tromsø]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
     send melding [Sted: Lillehammer v]
 
     når jeg mottar [Sted: Lillehammer v]
     gå til x: (14) y: (-94)
     sett [Reis til v] til [Lillehammer]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
     send melding [Sted: Bergen v]
 
     når jeg mottar [Sted: Bergen v]
     gå til x: (-52) y: (-107)
     sett [Reis til v] til [Bergen]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
     send melding [Sted: Narvik v]
 
     når jeg mottar [Sted: Narvik v]
     gå til x: (91) y: (90)
     sett [Reis til v] til [Narvik]
-    vent til (berører [Helikopter v]?)
+    vent til &lt;berører [Helikopter v]?&gt;
     send melding [Fant sted v] og vent
     send melding [Avslutt v]
 </code></pre>
@@ -706,7 +706,7 @@ spørre.</p>
 <p>Nedenfor er noen hint om hvordan dette kan gjøres. Vær oppmerksom på
 at skriptene bruker noen variable du selv må lage.</p>
 <pre><code class="blocks">    definer sjekk sted
-    hvis &lt;((tilfeldig tall fra (1) til (Antall steder totalt)) &gt; (1)) eller (berører fargen [#ff0000]?)&gt;
+    hvis &lt;&lt;(tilfeldig tall fra (1) til (Antall steder totalt)) &gt; [1]&gt; eller &lt;berører fargen [#ff0000]?&gt;&gt;
         sett [bruk sted v] til [nei]
     ellers
         sett [bruk sted v] til [ja]
@@ -717,7 +717,7 @@ at skriptene bruker noen variable du selv må lage.</p>
     sjekk sted
     hvis &lt;(bruk sted) = [ja]&gt;
         sett [Reis til v] til [Hønefoss]
-        vent til (berører [Helikopter v]?)
+        vent til &lt;berører [Helikopter v]?&gt;
         send melding [Fant sted v] og vent
     slutt
     send melding [Sted: Tromsø v]

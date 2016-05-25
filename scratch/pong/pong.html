@@ -134,7 +134,7 @@ etterhvert skal vi telle poeng. Dette kan vi gjøre ved å bytte ut</p>
     slutt
 </code></pre>
 <p>med</p>
-<pre><code class="blocks">    gjenta til (berører fargen [#0000FF])
+<pre><code class="blocks">    gjenta til &lt;berører fargen [#0000FF]&gt;
     slutt
     send melding [Poeng v]
 </code></pre>
@@ -179,7 +179,7 @@ eksempel tastene <code>W</code> og <code>S</code> trykkes.</p>
 <p>Test at du kan flytte racketen. Du vil kanskje også legge inn en
 begrensning slik at ikke racketen kan forsvinne ut av skjermen? Det
 kan du gjøre for eksempel med en test som ser omtrent slik ut:</p>
-<pre><code class="blocks">    hvis &lt;(tast [w v] trykket) og ((y-posisjon) &lt; (150))&gt;
+<pre><code class="blocks">    hvis &lt;&lt;tast [w v] trykket&gt; og &lt;(y-posisjon) &lt; [150]&gt;&gt;
     slutt
 </code></pre>
 </li>

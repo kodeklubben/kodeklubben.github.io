@@ -19,7 +19,7 @@ function relative(url) {
 <li>
 <p>For hvert av instrumentene (tromme, piano, lyder etc.), må du legge
 til følgende i <code class="blockevents">når jeg mottar</code> klossen.</p>
-<pre><code class="blocks">    hvis &lt;(opptak) = (1)&gt;
+<pre><code class="blocks">    hvis &lt;(opptak) = [1]&gt;
         legg (tid) til [timing v]
         legg (katt) til [instrument v]
     slutt
@@ -29,7 +29,7 @@ at det stemmer med navnet til meldingen som brukes for å spille
 denne lyden.</p>
 <pre><code class="blocks">    når jeg mottar [drum v]
     trommeslag (48 v) som varer (0.2) takter
-    hvis &lt;(opptak) = (1)&gt;
+    hvis &lt;(opptak) = [1]&gt;
         legg (tid) til [timing v]
         legg (katt) til [instrument v]
     slutt
@@ -69,8 +69,8 @@ denne <code>Spill av</code>.</p>
 <p>Nå må vi få avspillingen til å gjøre noe. Legg dette skriptet til
 <code>Spill av</code>.</p>
 <pre><code class="blocks">    når denne figuren klikkes
-    sett [recording v] til (0)
-    sett [index v] til (1)
+    sett [recording v] til [0]
+    sett [index v] til [1]
     nullstill klokka
     for alltid
         hvis &lt;(element (index) av [timing v]) &lt; (timer)&gt;
