@@ -75,7 +75,7 @@ root.geometry(<span class="hljs-string">"475x300"</span>)
 instructions = tkinter.Label(root,
                              text=<span class="hljs-string">"Skriv inn fargen PÅ ordet, ikke selve ordet!"</span>,
                              font=(<span class="hljs-string">'Helvetica'</span>, <span class="hljs-number">15</span>))
-instructions.pack() 
+instructions.pack()
 
 points_label = tkinter.Label(root,
                              text=<span class="hljs-string">"Trykk enter for å starte."</span>,
@@ -121,7 +121,7 @@ root.mainloop()
         time_label.config(text=<span class="hljs-string">"Tid igjen: "</span> + str(time_left))
 
         <span class="hljs-comment"># Denne kjører automatisk countdown() igjen etter 1 sekund</span>
-        time_label.after(<span class="hljs-number">1000</span>, countdown)       
+        time_label.after(<span class="hljs-number">1000</span>, countdown)
     <span class="hljs-keyword">else</span>:
         time_label.pack_forget()
         label.pack_forget()
@@ -245,7 +245,7 @@ text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hlj
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">global</span> points
     <span class="hljs-keyword">global</span> colour
-    
+
     <span class="hljs-keyword">if</span> time_left &gt; <span class="hljs-number">0</span>:
         box.focus_set()
 

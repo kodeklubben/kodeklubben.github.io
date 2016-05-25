@@ -46,28 +46,25 @@ function relative(url) {
 </li>
 </ul>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefWidth="500" prefHeight="400">
-	<Rectangle layoutX="100" layoutY="20" width="80" height="80" fill="black"
-		arcWidth="25" arcHeight="25"
-	/>
-	<Text layoutX="140" layoutY="60" text="k" fill="white">
-		<font>
-			<Font name="Courier" size="72"/>
-		</font>
-	</Text>
-	<Circle layoutX="150" layoutY="150" radius="40" fill="blue"/>
-	<Text layoutX="10" layoutY="120" text="NTNU">
-		<font>
-			<Font name="Arial" size="36"/>
-		</font>
-	</Text>
+  <Rectangle layoutX="100" layoutY="20" width="80" height="80" fill="black"
+    arcWidth="25" arcHeight="25"
+  />
+  <Text layoutX="140" layoutY="60" text="k" fill="white">
+    <font>
+      <Font name="Courier" size="72"/>
+    </font>
+  </Text>
+  <Circle layoutX="150" layoutY="150" radius="40" fill="blue"/>
+  <Text layoutX="10" layoutY="120" text="NTNU">
+    <font>
+      <Font name="Arial" size="36"/>
+    </font>
+  </Text>
 </AnchorPane>
 ```
-<pre><code>FXML-editoren har samme type kode-komplettering som Java-editoren. Når du f.eks. har skrevet inn `&lt;Rect`, kan du trykk ctrl-mellomrom og editoren vil både fylle ut resten av **Rectangle**-navnet og legge til en import-setning øverst i fila (tilsvarende import-setningen i Java):
-
-`&lt;?import javafx.scene.shape.Rectangle?&gt;`
-
-(Hvis du ikke bruker kode-kompletteringsfunksjonen, så må du skrive inn import-setningen selv.) Tilsvarende kan du bruke kode-komplettering på attributt-navnene **layoutX**, **layoutY**, **width**, **height**, **fill** osv.
-</code></pre>
+<p>FXML-editoren har samme type kode-komplettering som Java-editoren. Når du f.eks. har skrevet inn <code>&lt;Rect</code>, kan du trykk ctrl-mellomrom og editoren vil både fylle ut resten av <strong>Rectangle</strong>-navnet og legge til en import-setning øverst i fila (tilsvarende import-setningen i Java):</p>
+<p><code>&lt;?import javafx.scene.shape.Rectangle?&gt;</code></p>
+<p>(Hvis du ikke bruker kode-kompletteringsfunksjonen, så må du skrive inn import-setningen selv.) Tilsvarende kan du bruke kode-komplettering på attributt-navnene <strong>layoutX</strong>, <strong>layoutY</strong>, <strong>width</strong>, <strong>height</strong>, <strong>fill</strong> osv.</p>
 <ul>
 <li>
 <p>Mens du redigerer FXML-koden, så kan det være kjekt å se hvordan innholdet vil bli seende ut, når det lastes inn og vises frem. Eclipse har et eget panel kalt <strong>JavaFX preview</strong> som hele tiden laster inn FXML-koden du redigerer og viser frem innholdet. Dette åpnes ved å velge <code>Window &gt; Show View...</code> og så finne panelet i lista. Bruk søkefeltet for å filtrere lista (skriv 'pre', så panelet blir enklere å finne.</p>
@@ -93,7 +90,7 @@ Circle circle = <span class="hljs-keyword">new</span> Circle();
 pane.getChildren().add(circle);
 </code></pre>
 <pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pane</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">Pane</span>&gt;</span>
 </code></pre>
 </section>
@@ -171,25 +168,25 @@ pane.getChildren().add(circle);
 
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FxmlLogoApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
 
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">(Stage primaryStage)</span> <span class="hljs-keyword">throws</span> IOException </span>{
-		FXMLLoader fxmlLoader = <span class="hljs-keyword">new</span> FXMLLoader(FxmlLogoApp.class.getResource(<span class="hljs-string">"FxmlLogoApp.fxml"</span>));
-		Pane root = fxmlLoader.load();
-    	primaryStage.setScene(<span class="hljs-keyword">new</span> Scene(root));
-    	primaryStage.show();
-	}
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">(Stage primaryStage)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+    FXMLLoader fxmlLoader = <span class="hljs-keyword">new</span> FXMLLoader(FxmlLogoApp.class.getResource(<span class="hljs-string">"FxmlLogoApp.fxml"</span>));
+    Pane root = fxmlLoader.load();
+        primaryStage.setScene(<span class="hljs-keyword">new</span> Scene(root));
+        primaryStage.show();
+  }
 
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-		launch(FxmlLogoApp.class, args);
-	}
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    launch(FxmlLogoApp.class, args);
+  }
 }
 </code></pre>
 </li>
 </ul>
 <pre><code>
-	Trikset her er å lage et **FXMLLoader**-objekt (første linje i start-metoden, og be denne laste inn FXML-fila med load-metoden (andre linje).
+  Trikset her er å lage et **FXMLLoader**-objekt (første linje i start-metoden, og be denne laste inn FXML-fila med load-metoden (andre linje).
 + Kjør <span class="hljs-keyword">app</span>-<span class="hljs-keyword">en</span> ved å <span class="hljs-keyword">h</span>øyre-klikke på fila eller i editoren og velge `<span class="hljs-keyword">Run</span> <span class="hljs-keyword">as</span> &gt; Java Application`. Da skal det (etter litt venting) dukke opp et vindu som dette:
 
-	![](<span class="hljs-keyword">run</span>-FxmlLogoApp-<span class="hljs-keyword">as</span>-java-application.png)
+  ![](<span class="hljs-keyword">run</span>-FxmlLogoApp-<span class="hljs-keyword">as</span>-java-application.png)
 
 # Hva har du <span class="hljs-keyword">l</span>ært?
 

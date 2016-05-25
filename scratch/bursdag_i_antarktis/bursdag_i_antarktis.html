@@ -118,7 +118,7 @@ bakgrunnen er byttet.</p>
         neste drakt
         vent (0.1) sekunder
     slutt
-	gå til x: (-20) y: (-100)
+gå til x: (-20) y: (-100)
 </code></pre>
 </li>
 </ul>
@@ -161,7 +161,7 @@ synlige for oss som ser på.</p>
         neste drakt
         vent (0.1) sekunder
     slutt
-	send melding [Scene 2 v]
+send melding [Scene 2 v]
 </code></pre>
 </li>
 <li>
@@ -175,8 +175,8 @@ til <code>winter-lights</code>, og heller bruke dette:</p>
 <p>Felix kan også motta meldinger han sender selv. Vi kan bruke dette
 til å flytte ham inn på veien samtidig som vi bytter bakgrunn. Legg
 til følgende som et nytt skript på Felix:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 2 v]
-	gå til x: (-20) y: (-100)
+<pre><code class="blocks">  når jeg mottar [Scene 2 v]
+gå til x: (-20) y: (-100)
 </code></pre>
 </li>
 </ul>
@@ -206,10 +206,10 @@ mennesker.</p>
 <ul>
 <li>
 <p>Start et nytt skript på Felix:</p>
-<pre><code class="blocks">    når jeg mottar [Si hei v]
-	si [Å nei! Hvor er jeg?] i (2) sekunder
-	tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
-	spør [Hvor gammel blir jeg igjen?] og vent
+<pre><code class="blocks">  når jeg mottar [Si hei v]
+si [Å nei! Hvor er jeg?] i (2) sekunder
+tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
+spør [Hvor gammel blir jeg igjen?] og vent
 </code></pre>
 </li>
 <li>
@@ -241,13 +241,13 @@ første skriptet til Felix:</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     gå til x: (-100) y: (-50)
     pek i retning (100 v)
-	send melding [Si hei v]
+send melding [Si hei v]
     gjenta til &lt;(x-posisjon) &gt; [240]&gt;
         gå (10) steg
         neste drakt
         vent (0.1) sekunder
     slutt
-	send melding [Scene 2 v]
+send melding [Scene 2 v]
 </code></pre>
 </li>
 </ul>
@@ -275,13 +275,13 @@ ferdig å snakke (og vi har svart på spørsmålet hans):</p>
 <pre><code class="blocks">    når grønt flagg klikkes
     gå til x: (-100) y: (-50)
     pek i retning (100 v)
-	send melding [Si hei v] og vent
+send melding [Si hei v] og vent
     gjenta til &lt;(x-posisjon) &gt; [240]&gt;
         gå (10) steg
         neste drakt
         vent (0.1) sekunder
     slutt
-	send melding [Scene 2 v]
+send melding [Scene 2 v]
 </code></pre>
 </li>
 </ul>
@@ -316,8 +316,8 @@ mottar meldingen <code>Scene 2</code>. Legg til en liten
 <li>
 <p>Nå skal vi la Felix følge veien oppover. Prøv først med følgende
 skript:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 2 v]
-	gå til x: (-20) y: (-100)
+<pre><code class="blocks">  når jeg mottar [Scene 2 v]
+gå til x: (-20) y: (-100)
     si [Å! Der er det noen hus!] i (2) sekunder
     pek i retning (20 v)
     gjenta (6) ganger
@@ -352,7 +352,7 @@ lager vi også en ny <code class="blockcontrol">gjenta</code>-kloss:</p>
             endre størrelse med (-2)
             vent (0.1) sekunder
         slutt
-		pek i retning ((retning) * (-1))
+  pek i retning ((retning) * (-1))
     slutt
 </code></pre>
 </li>
@@ -403,18 +403,18 @@ ny scene.</p>
 <p>For den scenen trenger vi en ny bakgrunn. Klikk
 <img src="../bilder/velg-bakgrunn.png" alt="velg en ferdig bakgrunn"> og legg
 til bakgrunnen <code>Holiday/gingerbread</code>. Gi scenen dette skriptet:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 3 v]
-	bytt bakgrunn til [gingerbread v]
+<pre><code class="blocks">  når jeg mottar [Scene 3 v]
+bytt bakgrunn til [gingerbread v]
 </code></pre>
 </li>
 <li>
 <p>I det vi skifter til den nye scenen vil vi også at Felix skal få
 tilbake sin vanlige størrelse. Klikk på Felix og start et nytt
 skript:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 3 v]
-	sett størrelse til (100)%
-	gå til x: (-160) y: (-65)
-	vis
+<pre><code class="blocks">  når jeg mottar [Scene 3 v]
+sett størrelse til (100)%
+gå til x: (-160) y: (-65)
+vis
 </code></pre>
 </li>
 </ul>
@@ -464,10 +464,10 @@ når animasjonen starter. Legg til følgende skript på begge figurene:</p>
 <p>Først skal Felix spørre om det er noen hjemme, og så skal han sende
 en melding hvor han ber pingvinene om å komme ut. Endre Felix sitt
 skript ved å legge til to klosser på slutten:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 3 v]
-	sett størrelse til (100)%
-	gå til x: (-160) y: (-65)
-	vis
+<pre><code class="blocks">  når jeg mottar [Scene 3 v]
+sett størrelse til (100)%
+gå til x: (-160) y: (-65)
+vis
     si [Oj, så flott hus! Er det noen hjemme?] i (2) sekunder
     send melding [Kom ut v]
 </code></pre>

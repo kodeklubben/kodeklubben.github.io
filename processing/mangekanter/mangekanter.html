@@ -39,19 +39,19 @@ på datamaskinen.</p>
 <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   x += xFart;
   y += yFart;
-  
+
   <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
     xFart = -xFart;
   }
-  
+
   <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-variable">width</span> - <span class="hljs-number">100</span>) {
     xFart = -xFart;
   }
-  
+
   <span class="hljs-keyword">if</span> (y &lt; <span class="hljs-number">0</span>) {
     yFart = -yFart;
   }
-  
+
   <span class="hljs-keyword">if</span> (y &gt; <span class="hljs-variable">height</span> - <span class="hljs-number">100</span>) {
     yFart = -yFart;
   }
@@ -110,19 +110,19 @@ vist under:</p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   x += xFart;
   y += yFart;
-  
+
   <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
     xFart = -xFart;
   }
-  
+
   <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-variable">width</span> - <span class="hljs-number">100</span>) {
     xFart = -xFart;
   }
-  
+
   <span class="hljs-keyword">if</span> (y &lt; <span class="hljs-number">0</span>) {
     yFart = -yFart;
   }
-  
+
   <span class="hljs-keyword">if</span> (y &gt; <span class="hljs-variable">height</span> - <span class="hljs-number">100</span>) {
     yFart = -yFart;
   }
@@ -222,19 +222,19 @@ lage en ny <code>float</code>-<em>array</em> med tre tall i.</p>
 være <code>0</code> alle sammen:</p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
-  
+
   x[<span class="hljs-number">0</span>] = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
   x[<span class="hljs-number">1</span>] = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
   x[<span class="hljs-number">2</span>] = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
-  
+
   y[<span class="hljs-number">0</span>] = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
   y[<span class="hljs-number">1</span>] = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
   y[<span class="hljs-number">2</span>] = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
-  
+
   xFart[<span class="hljs-number">0</span>] = <span class="hljs-number">1.5</span>;
   xFart[<span class="hljs-number">1</span>] = <span class="hljs-number">2.5</span>;
   xFart[<span class="hljs-number">2</span>] = <span class="hljs-number">3.5</span>;
-  
+
   yFart[<span class="hljs-number">0</span>] = -<span class="hljs-number">5</span>;
   yFart[<span class="hljs-number">1</span>] = <span class="hljs-number">2.5</span>;
   yFart[<span class="hljs-number">2</span>] = -<span class="hljs-number">1.5</span>;
@@ -255,19 +255,19 @@ vår:</p>
   <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; x.length; i++) {
     x[i] += xFart[i];
     y[i] += yFart[i];
-    
+
     <span class="hljs-keyword">if</span> (x[i] &lt; <span class="hljs-number">0</span>) {
       xFart[i] = -xFart[i];
     }
-    
+
     <span class="hljs-keyword">if</span> (x[i] &gt; <span class="hljs-variable">width</span>) {
       xFart[i] = -xFart[i];
     }
-    
+
     <span class="hljs-keyword">if</span> (y[i] &lt; <span class="hljs-number">0</span>) {
       yFart[i] = -yFart[i];
     }
-    
+
     <span class="hljs-keyword">if</span> (y[i] &gt; <span class="hljs-variable">height</span>) {
       yFart[i] = -yFart[i];
     }
@@ -349,7 +349,7 @@ det så bra. Så vi endrer på <code>setup</code> til å bruke en løkke for å 
 startverdiene:</p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
-  
+
   <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
     x[i] = <span class="hljs-built_in">random</span>(<span class="hljs-variable">width</span>);
     y[i] = <span class="hljs-built_in">random</span>(<span class="hljs-variable">height</span>);
@@ -375,26 +375,26 @@ som tegner hver kant:</p>
   <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
     x[i] += xFart[i];
     y[i] += yFart[i];
-    
+
     <span class="hljs-keyword">if</span> (x[i] &lt; <span class="hljs-number">0</span>) {
       xFart[i] = -xFart[i];
     }
-    
+
     <span class="hljs-keyword">if</span> (x[i] &gt; <span class="hljs-variable">width</span>) {
       xFart[i] = -xFart[i];
     }
-    
+
     <span class="hljs-keyword">if</span> (y[i] &lt; <span class="hljs-number">0</span>) {
       yFart[i] = -yFart[i];
     }
-    
+
     <span class="hljs-keyword">if</span> (y[i] &gt; <span class="hljs-variable">height</span>) {
       yFart[i] = -yFart[i];
     }
   }
-  
+
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
-  
+
   <span class="hljs-built_in">beginShape</span>();
   <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
     <span class="hljs-built_in">vertex</span>(x[i], y[i]);

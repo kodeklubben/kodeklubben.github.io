@@ -28,18 +28,18 @@ function relative(url) {
 <p>Ikke alle skrifttyper finnes på alle datamaskiner, så vi trenger å angi en <strong>reserve skrifttype</strong> også. Den som blir oftest bruker er ‘sans serif’ eller ‘serif’.</p>
 <p>La oss prøve å endre skrifttyper på overskriften ved å bruke <code>font-family</code> egenskapene:</p>
 <pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">72px</span></span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> underline</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> blink</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> impact, sans-serif</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">72px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> underline</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> blink</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> impact, sans-serif</span></span>;
 }</span>
 </code></pre>
 <p>Og nå – endre skrifttypen i en paragraf...</p>
 <pre><code class="css"><span class="hljs-tag">p</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> georgia, <span class="hljs-string">'times new roman'</span>, serif</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> georgia, <span class="hljs-string">'times new roman'</span>, serif</span></span>;
 }</span>
 </code></pre>
 <section class="save" id="lagre-og-se-det-i-nettleseren">
@@ -51,7 +51,7 @@ function relative(url) {
 <p>Finn en du liker og prøv om du kan legge den ut på websiden!
 Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge deler ved hjelp av skrifttype-stilegenskaper. La oss forandre epostteksten (husk at den finner vi inne i a-taggen)</p>
 <pre><code class="css"><span class="hljs-tag">a</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
 }</span>
 </code></pre>
 </section>
@@ -59,7 +59,7 @@ Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge de
 <h2 class="save" id="lagre-og-se-det-i-nettleseren-2"><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>Eller vi kan sette teksten til <em>kursiv</em>.</p>
 <pre><code class="css"><span class="hljs-tag">a</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
 }</span>
 </code></pre>
 </section>
@@ -68,7 +68,7 @@ Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge de
 <p>Det er også en skriftstil-verdi som heter ‘oblique’. Hvordan ser den ut?</p>
 <p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen font-weight-. Den bruker verdier som <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste skrifttypen og 900 er den tykkeste (feteste skriften). Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle skrifttyper alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke normal- eller fet- skrift. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
 <pre><code class="css"><span class="hljs-tag">h2</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> normal</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> normal</span></span>;
 }</span>
 </code></pre>
 <p>Prøv det!</p>
@@ -78,9 +78,9 @@ Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge de
 <h1 class="activity" id="step-2-kantlinjer">Step 2: Kantlinjer!</h1>
 <p>LLa oss legge til en kantlinje rundt et bilde.</p>
 <pre><code class="css"><span class="hljs-tag">img</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> green</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-number">5px</span></span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value"> solid</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> green</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-number">5px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value"> solid</span></span>;
 }</span>
 </code></pre>
 <section class="save" id="lagre-og-se-det-i-nettleseren-4">
@@ -96,7 +96,7 @@ Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge de
 </code></pre>
 <p>Nå kan vi endre stilen til IDen slik:</p>
 <pre><code class="css"><span class="hljs-id">#uthevet</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
 }</span>
 </code></pre>
 <section class="save" id="lagre-og-se-det-i-nettleseren-5">
@@ -107,7 +107,7 @@ Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge de
 </code></pre>
 <p>Deretter setter vi stilen slik (legg merke til at vi bruker <code>.</code> i stedet for <code>#</code>):</p>
 <pre><code class="css"><span class="hljs-class">.stor</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">24px</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">24px</span></span></span>;
 }</span>
 </code></pre>
 </section>

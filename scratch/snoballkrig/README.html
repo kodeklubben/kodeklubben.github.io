@@ -33,134 +33,134 @@ utfordrende etterhvert som man spiller.</p>
 </section>
 <section>
 <h1 id="kodelisting-scene">Kodelisting: Scene</h1>
-<pre><code class="blocks">	når grønt flagg klikkes
-	bytt bakgrunn til [Meny v]
+<pre><code class="blocks">  når grønt flagg klikkes
+  bytt bakgrunn til [Meny v]
 
-	når [s v] trykkes
-	send melding [start v]
+  når [s v] trykkes
+  send melding [start v]
 
-	når jeg mottar [start v]
-	sett [Poeng v] til [0]
-	bytt bakgrunn til [Spill v]
-	for alltid
-		sett [Nivå v] til ((1) + ([gulv v] av ([kvadratrot v] av ((Poeng) / (3)))))
-	slutt
+  når jeg mottar [start v]
+  sett [Poeng v] til [0]
+  bytt bakgrunn til [Spill v]
+  for alltid
+    sett [Nivå v] til ((1) + ([gulv v] av ([kvadratrot v] av ((Poeng) / (3)))))
+  slutt
 
-	når jeg mottar [slutt v]
-	stopp [other scripts in stage v]
-	bytt bakgrunn til [Slutt v]
+  når jeg mottar [slutt v]
+  stopp [other scripts in stage v]
+  bytt bakgrunn til [Slutt v]
 </code></pre>
 </section>
 <section>
 <h1 id="kodelisting-helten">Kodelisting: Helten</h1>
-<pre><code class="blocks">	når grønt flagg klikkes
-	skjul
-	sett størrelse til (75) %
-	begrens rotasjon [vend sideveis v]
-	sett [hastighet v] til [5]
+<pre><code class="blocks">  når grønt flagg klikkes
+  skjul
+  sett størrelse til (75) %
+  begrens rotasjon [vend sideveis v]
+  sett [hastighet v] til [5]
 
-	når jeg mottar [start v]
-	gå til x: (0) y: (-75)
-	vis
-	for alltid
-		hvis &lt;tast [pil høyre v] trykket?&gt;
-			pek i retning (90 v)
-			neste drakt
-			gå (hastighet) steg
-		slutt
-		hvis &lt;tast [pil venstre v] trykket?&gt;
-			pek i retning (-90 v)
-			neste drakt
-			gå (hastighet) steg
-		slutt
-		hvis &lt;tast [mellomrom v] trykket?&gt;
-			vent til &lt;ikke &lt;tast [mellomrom v] trykket?&gt;&gt;
-			send melding [kast v]
-		slutt
-	slutt
+  når jeg mottar [start v]
+  gå til x: (0) y: (-75)
+  vis
+  for alltid
+    hvis &lt;tast [pil høyre v] trykket?&gt;
+      pek i retning (90 v)
+      neste drakt
+      gå (hastighet) steg
+    slutt
+    hvis &lt;tast [pil venstre v] trykket?&gt;
+      pek i retning (-90 v)
+      neste drakt
+      gå (hastighet) steg
+    slutt
+    hvis &lt;tast [mellomrom v] trykket?&gt;
+      vent til &lt;ikke &lt;tast [mellomrom v] trykket?&gt;&gt;
+      send melding [kast v]
+    slutt
+  slutt
 
-	når jeg mottar [slutt v]
-	skjul
-	stopp [andre skript i figuren v]
+  når jeg mottar [slutt v]
+  skjul
+  stopp [andre skript i figuren v]
 </code></pre>
 </section>
 <section>
 <h1 id="kodelisting-snoball">Kodelisting: Snøball</h1>
-<pre><code class="blocks">	når grønt flagg klikkes
-	skjul
-	sett størrelse til (40) %
+<pre><code class="blocks">  når grønt flagg klikkes
+  skjul
+  sett størrelse til (40) %
 
-	når jeg mottar [kast v]
-	lag klon av [meg v]
+  når jeg mottar [kast v]
+  lag klon av [meg v]
 
-	når jeg starter som klon
-	gå til [Helten v]
-	pek i retning ([retning v] av [Helten v])
-	endre y med (15)
-	gå (30) steg
-	vis
-	gjenta til &lt;&lt;berører [Skumling v]?&gt; eller &lt;berører [kant v]?&gt;&gt;
-		gå (hastighet) steg
-	slutt
-	hvis &lt;berører [Skumling v]?&gt;
-		vent (0.02) sekunder
-	slutt
-	slett denne klonen
+  når jeg starter som klon
+  gå til [Helten v]
+  pek i retning ([retning v] av [Helten v])
+  endre y med (15)
+  gå (30) steg
+  vis
+  gjenta til &lt;&lt;berører [Skumling v]?&gt; eller &lt;berører [kant v]?&gt;&gt;
+    gå (hastighet) steg
+  slutt
+  hvis &lt;berører [Skumling v]?&gt;
+    vent (0.02) sekunder
+  slutt
+  slett denne klonen
 
-	når jeg mottar [slutt v]
-	slett denne klonen
+  når jeg mottar [slutt v]
+  slett denne klonen
 </code></pre>
 </section>
 <section>
 <h1 id="kodelisting-skumling">Kodelisting: Skumling</h1>
-<pre><code class="blocks">	når grønt flagg klikkes
-	skjul
-	gå til x: (0) y: (-70)
-	begrens rotasjon [vend sideveis v]
-	sett størrelse til (30) %
-	sett [hastighet v] til [3]
+<pre><code class="blocks">  når grønt flagg klikkes
+  skjul
+  gå til x: (0) y: (-70)
+  begrens rotasjon [vend sideveis v]
+  sett størrelse til (30) %
+  sett [hastighet v] til [3]
 
-	når jeg mottar [start v]
-	for alltid
-		hvis &lt;(tilfeldig tall fra (0) til (1)) = [0]&gt;
-			pek i retning (90 v)
-			sett x til (-250)
-		ellers
-			pek i retning (-90 v)
-			sett x til (250)
-		slutt
-		lag klon av [meg v]
-		vent (tilfeldig tall fra (2) til (4)) sekunder
-	slutt
+  når jeg mottar [start v]
+  for alltid
+    hvis &lt;(tilfeldig tall fra (0) til (1)) = [0]&gt;
+      pek i retning (90 v)
+      sett x til (-250)
+    ellers
+      pek i retning (-90 v)
+      sett x til (250)
+    slutt
+    lag klon av [meg v]
+    vent (tilfeldig tall fra (2) til (4)) sekunder
+  slutt
 
-	når jeg starter som klon
-	sett [Slem v] til (tilfeldig tall fra (1) til (Nivå))
-	sett [Liv v] til (Slem)
-	endre [hastighet v] med (Slem)
-	endre [farge v] effekt med ((10) * (Slem))
-	endre størrelse med ((5) * (Slem))
-	vis
-	for alltid
-		gå (hastighet) steg
-		vent (0.1) sekunder
-	slutt
+  når jeg starter som klon
+  sett [Slem v] til (tilfeldig tall fra (1) til (Nivå))
+  sett [Liv v] til (Slem)
+  endre [hastighet v] med (Slem)
+  endre [farge v] effekt med ((10) * (Slem))
+  endre størrelse med ((5) * (Slem))
+  vis
+  for alltid
+    gå (hastighet) steg
+    vent (0.1) sekunder
+  slutt
 
-	når jeg starter som klon
-	for alltid
-		hvis &lt;berører [Helten v]?&gt;
-			send melding [slutt v]
-		slutt
-		hvis &lt;berører [Snøball v]?&gt;
-			endre [Liv v] med (-1)
-			hvis &lt;(Liv) = [0]&gt;
-				endre [Poeng v] med (Slem)
-				slett denne klonen
-			slutt
-		slutt
-	slutt
+  når jeg starter som klon
+  for alltid
+    hvis &lt;berører [Helten v]?&gt;
+      send melding [slutt v]
+    slutt
+    hvis &lt;berører [Snøball v]?&gt;
+      endre [Liv v] med (-1)
+      hvis &lt;(Liv) = [0]&gt;
+        endre [Poeng v] med (Slem)
+        slett denne klonen
+      slutt
+    slutt
+  slutt
 
-	når jeg mottar [slutt v]
-	slett denne klonen
+  når jeg mottar [slutt v]
+  slett denne klonen
 </code></pre>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Lærerveiledning - Snøballkrig&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/snoballkrig" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>$(document).ready(function(){

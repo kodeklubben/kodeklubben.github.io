@@ -183,8 +183,8 @@ bgcolor(<span class="hljs-string">'darkblue'</span>)
 color(<span class="hljs-string">'yellow'</span>)
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
-	forward(<span class="hljs-number">100</span>)
-	right(<span class="hljs-number">90</span>)
+    forward(<span class="hljs-number">100</span>)
+    right(<span class="hljs-number">90</span>)
 </code></pre>
 <p>Endre koden din som over, og kjør programmet.</p>
 </li>
@@ -199,7 +199,7 @@ venstre kan du trykke <code>Shift</code> og <code>Tab</code>.</p>
 <p>Prøv å trekk linjen <code>right(90)</code> til venstre, slik at for-løkken ser
 slik ut:</p>
 <pre><code class="python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
-	forward(<span class="hljs-number">100</span>)
+    forward(<span class="hljs-number">100</span>)
 right(<span class="hljs-number">90</span>)
 </code></pre>
 <p>Hva tror du programmet ditt vil gjøre nå? Forsøk å kjøre
@@ -224,8 +224,8 @@ bgcolor(<span class="hljs-string">'darkblue'</span>)
 color(<span class="hljs-string">'yellow'</span>)
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
-	forward(<span class="hljs-number">100</span>)
-	right(<span class="hljs-number">120</span>)
+    forward(<span class="hljs-number">100</span>)
+    right(<span class="hljs-number">120</span>)
 </code></pre>
 </li>
 <li>
@@ -259,8 +259,8 @@ length = <span class="hljs-number">100</span>
 angle = <span class="hljs-number">90</span>
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
-	forward(length)
-	right(angle)
+    forward(length)
+    right(angle)
 </code></pre>
 <p>Tegner programmet fortsatt en firkant?</p>
 </li>
@@ -299,11 +299,11 @@ bgcolor(<span class="hljs-string">'darkblue'</span>)
 color(<span class="hljs-string">'yellow'</span>)
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">polygon</span><span class="hljs-params">(sides, length)</span>:</span>
-	angle = <span class="hljs-number">360</span> / sides
+    angle = <span class="hljs-number">360</span> / sides
 
-	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
-		forward(length)
-		right(angle)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
+        forward(length)
+        right(angle)
 
 polygon(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
 </code></pre>
@@ -346,9 +346,9 @@ bgcolor(<span class="hljs-string">'darkblue'</span>)
 color(<span class="hljs-string">'yellow'</span>)
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">polylines</span><span class="hljs-params">(sides, length, angle)</span>:</span>
-	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
-		forward(length)
-		right(angle)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
+        forward(length)
+        right(angle)
 
 polylines(<span class="hljs-number">5</span>, <span class="hljs-number">100</span>, <span class="hljs-number">144</span>)
 </code></pre>
@@ -374,15 +374,15 @@ bgcolor(<span class="hljs-string">'darkblue'</span>)
 color(<span class="hljs-string">'yellow'</span>)
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">polylines</span><span class="hljs-params">(sides, length, angle)</span>:</span>
-	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
-		forward(length)
-		right(angle)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
+        forward(length)
+        right(angle)
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spiral</span><span class="hljs-params">(sides, length, angle)</span>:</span>
-	<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
-		forward(length)
-		right(angle)
-		length = length + <span class="hljs-number">5</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(sides):
+        forward(length)
+        right(angle)
+        length = length + <span class="hljs-number">5</span>
 
 spiral(<span class="hljs-number">100</span>, <span class="hljs-number">5</span>, <span class="hljs-number">125</span>)
 </code></pre>

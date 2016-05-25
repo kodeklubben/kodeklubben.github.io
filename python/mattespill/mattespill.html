@@ -80,7 +80,7 @@ slår to terninger 25 ganger:</p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">25</span>):
-	print(randint(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>) + randint(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>))
+    print(randint(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>) + randint(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>))
 </code></pre>
 </li>
 </ul>
@@ -145,9 +145,9 @@ print(<span class="hljs-string">'Hva er '</span> + str(tall1) + <span class="hlj
 svar = input()
 
 <span class="hljs-keyword">if</span> svar == tall1 * tall2:
-	print(<span class="hljs-string">'Ja, svaret er '</span> + svar)
+    print(<span class="hljs-string">'Ja, svaret er '</span> + svar)
 <span class="hljs-keyword">else</span>:
-	print(<span class="hljs-string">'Nei, det riktige svaret er '</span> + str(tall1 * tall2))
+    print(<span class="hljs-string">'Nei, det riktige svaret er '</span> + str(tall1 * tall2))
 </code></pre>
 <p>Pass på at som i <strong>for-løkker</strong> må du skyve koden i <strong>if-testen</strong>
 inn mot høyre.</p>
@@ -215,17 +215,17 @@ ant_stykker = <span class="hljs-number">5</span>
 ant_rett = <span class="hljs-number">0</span>
 
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(ant_stykker):
-	tall1 = randint(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
-	tall2 = randint(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    tall1 = randint(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    tall2 = randint(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
 
-	print(<span class="hljs-string">'Hva er '</span> + str(tall1) + <span class="hljs-string">' ganger '</span> + str(tall2) + <span class="hljs-string">'?'</span>)
-	svar = input()
+    print(<span class="hljs-string">'Hva er '</span> + str(tall1) + <span class="hljs-string">' ganger '</span> + str(tall2) + <span class="hljs-string">'?'</span>)
+    svar = input()
 
-	<span class="hljs-keyword">if</span> int(svar) == tall1 * tall2:
-		print(<span class="hljs-string">'Ja, svaret er '</span> + svar)
-		ant_rett = ant_rett + <span class="hljs-number">1</span>
-	<span class="hljs-keyword">else</span>:
-		print(<span class="hljs-string">'Nei, det riktige svaret er '</span> + str(tall1 * tall2))
+    <span class="hljs-keyword">if</span> int(svar) == tall1 * tall2:
+        print(<span class="hljs-string">'Ja, svaret er '</span> + svar)
+        ant_rett = ant_rett + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">'Nei, det riktige svaret er '</span> + str(tall1 * tall2))
 
 print(<span class="hljs-string">'Du fikk '</span> + str(ant_rett) + <span class="hljs-string">' av '</span> + str(ant_stykker))
 </code></pre>
@@ -261,8 +261,8 @@ fakultet(<span class="hljs-number">1</span>) = <span class="hljs-number">1</span
 <p>La oss se om vi kan skrive et program som jobber på denne måten.
 Lag et nytt program som du kaller <code>fakultet.py</code>:</p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fakultet</span><span class="hljs-params">(tall)</span>:</span>
-	<span class="hljs-keyword">if</span> tall == <span class="hljs-number">1</span>:
-		<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> tall == <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
 
 print(fakultet(<span class="hljs-number">1</span>))
 </code></pre>
@@ -275,9 +275,9 @@ brukes for å lage egne funksjoner. Her lager vi funksjonen
 kommer det stilige. Vi kan regne ut fakultetet av <strong>alle</strong> andre
 tall ved å legge på en enkelt kodelinje:</p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fakultet</span><span class="hljs-params">(tall)</span>:</span>
-	<span class="hljs-keyword">if</span> tall == <span class="hljs-number">1</span>:
-		<span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
-	<span class="hljs-keyword">return</span> tall * fakultet(tall-<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">if</span> tall == <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> tall * fakultet(tall-<span class="hljs-number">1</span>)
 
 print(fakultet(<span class="hljs-number">4</span>))
 </code></pre>

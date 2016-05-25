@@ -84,38 +84,38 @@ function relative(url) {
 <span class="hljs-comment">// det er det som gjør at vår klasse kan fungere som en JavaFX-app</span>
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorldApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
 
-	<span class="hljs-comment">// her er metoden som kalles med app-vinduet</span>
-	<span class="hljs-comment">// den tar inn app-vinduet som argument</span>
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">(Stage primaryStage)</span> </span>{
-		<span class="hljs-comment">// vi lager oss det grafiske tekst-objektet, av typen Text</span>
-		Text helloWorldText = <span class="hljs-keyword">new</span> Text(<span class="hljs-string">"Hello world"</span>);
-		<span class="hljs-comment">// så sier vi hvor i vindet den skal plasseres, x- og y-posisjon</span>
-		helloWorldText.setLayoutX(<span class="hljs-number">10</span>);
-		helloWorldText.setLayoutY(<span class="hljs-number">50</span>);
-		<span class="hljs-comment">// vi lager oss et font-objekt, av typen Font</span>
-		Font font = Font.font(<span class="hljs-string">"Arial"</span>, <span class="hljs-number">36</span>);
-		<span class="hljs-comment">// og setter den som teksten font</span>
-		helloWorldText.setFont(font);
+  <span class="hljs-comment">// her er metoden som kalles med app-vinduet</span>
+  <span class="hljs-comment">// den tar inn app-vinduet som argument</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">start</span><span class="hljs-params">(Stage primaryStage)</span> </span>{
+    <span class="hljs-comment">// vi lager oss det grafiske tekst-objektet, av typen Text</span>
+    Text helloWorldText = <span class="hljs-keyword">new</span> Text(<span class="hljs-string">"Hello world"</span>);
+    <span class="hljs-comment">// så sier vi hvor i vindet den skal plasseres, x- og y-posisjon</span>
+    helloWorldText.setLayoutX(<span class="hljs-number">10</span>);
+    helloWorldText.setLayoutY(<span class="hljs-number">50</span>);
+    <span class="hljs-comment">// vi lager oss et font-objekt, av typen Font</span>
+    Font font = Font.font(<span class="hljs-string">"Arial"</span>, <span class="hljs-number">36</span>);
+    <span class="hljs-comment">// og setter den som teksten font</span>
+    helloWorldText.setFont(font);
 
-		<span class="hljs-comment">// vi mnå også lage et panel, av typen Pane</span>
+    <span class="hljs-comment">// vi mnå også lage et panel, av typen Pane</span>
         Pane root = <span class="hljs-keyword">new</span> Pane();
         <span class="hljs-comment">// vi setter ønsket størrelse, bredde og høyde</span>
         root.setPrefWidth(<span class="hljs-number">300</span>);
         root.setPrefHeight(<span class="hljs-number">200</span>);
-        <span class="hljs-comment">// og putter teksten inni </span>
-		root.getChildren().add(helloWorldText);
-		
-		<span class="hljs-comment">// til slutt legges panelet inn i app-vinduet</span>
+        <span class="hljs-comment">// og putter teksten inni</span>
+    root.getChildren().add(helloWorldText);
+
+    <span class="hljs-comment">// til slutt legges panelet inn i app-vinduet</span>
         primaryStage.setScene(<span class="hljs-keyword">new</span> Scene(root));
         <span class="hljs-comment">// og vises frem</span>
         primaryStage.show();
-	}
+  }
 
-	<span class="hljs-comment">// dette er den egentlig oppstartsmetoden</span>
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
-		<span class="hljs-comment">// kall den innebygde funksjonen launch, med app-klassen vår som argument</span>
-		launch(HelloWorldApp.class, args);
-	}
+  <span class="hljs-comment">// dette er den egentlig oppstartsmetoden</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    <span class="hljs-comment">// kall den innebygde funksjonen launch, med app-klassen vår som argument</span>
+    launch(HelloWorldApp.class, args);
+  }
 }
 </code></pre>
 <section class="check" id="sjekkliste-2">

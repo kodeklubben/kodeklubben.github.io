@@ -37,16 +37,16 @@ function relative(url) {
   ballY = ballY + ballYFart;
 
   <span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
-	ballXFart = -ballXFart;
+  ballXFart = -ballXFart;
   }
   <span class="hljs-keyword">if</span> (ballX &gt; <span class="hljs-variable">width</span> - ballRadius) {
-	ballXFart = -ballXFart;
+  ballXFart = -ballXFart;
   }
   <span class="hljs-keyword">if</span> (ballY &lt; ballRadius) {
-	ballYFart = -ballYFart;
+  ballYFart = -ballYFart;
   }
   <span class="hljs-keyword">if</span> (ballY &gt; <span class="hljs-variable">height</span> - ballRadius) {
-	ballYFart = -ballYFart;
+  ballYFart = -ballYFart;
   }
 
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
@@ -88,7 +88,7 @@ velg <strong>File --&gt; Save</strong> i menyen.</li>
 </code></pre>
 <p>Til:</p>
 <pre><code class="processing"><span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
-  
+
 }
 </code></pre>
 <p><figure><img src="gjennommaal.gif" alt="" title="En ball går igjennom venstre vegg"></figure></p>
@@ -124,8 +124,8 @@ stopper ballen og sender den tilbake.</p>
 <p>Legg til følgende i draw()-funksjonen:</p>
 <pre><code class="processing"><span class="hljs-keyword">if</span> (ballX-ballRadius &lt; rekkert1X + rekkertBredde &amp;&amp; ballX + ballRadius &gt; rekkert1X) {
   <span class="hljs-keyword">if</span> (ballY &lt; rekkert1Y + rekkertHoyde &amp;&amp; ballY &gt; rekkert1Y) {
-	  ballX = ballX + rekkertBredde;
-	  ballXFart = -ballXFart;
+    ballX = ballX + rekkertBredde;
+    ballXFart = -ballXFart;
   }
 }
 </code></pre>

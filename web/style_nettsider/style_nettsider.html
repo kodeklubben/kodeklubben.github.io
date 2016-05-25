@@ -30,7 +30,7 @@ I denne og neste leksjon skal vi lære oss hvordan å endre farge, tekst, størr
 </code></pre>
 <p>Alle stiler skal legges mellom disse elementene. Generelt ser css-kode slik ut:</p>
 <pre><code class="css"><span class="hljs-tag">selector</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">property</span>:<span class="hljs-value"> value</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">property</span>:<span class="hljs-value"> value</span></span>;
 }</span>
 </code></pre>
 <ul>
@@ -44,9 +44,9 @@ Selektorer kan være html-element som <code>h1</code>, <code>p</code>, <code>img
 <p>La oss legge til farge med hjelp av attributtet color! CSS er faktisk oppfunnet av en norsk gutt!</p>
 <p>La oss endre <code>h1</code> til å være rød istedenfor svart.</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-	<span class="hljs-tag">h1</span> <span class="hljs-rules">{
-  		<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-  	}</span>
+  <span class="hljs-tag">h1</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
+    }</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
 </code></pre>
 <section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din">
@@ -77,7 +77,7 @@ De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfab
 <p><code>&lt;span&gt;oransje&lt;/span&gt;</code></p>
 <p>Vi kan da i seksjonen <code>head</code> lage en stil for <code>span</code></p>
 <pre><code class="css"><span class="hljs-tag">span</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
 }</span>
 </code></pre>
 <section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din-3">
@@ -88,19 +88,19 @@ De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfab
 <h1 class="activity" id="steg-4-bakgrunn">Steg 4: Bakgrunn</h1>
 <p>Vi kan legge til farge på bakgrunnen også, ikke bare på tekst. For eksempel:</p>
 <pre><code class="css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#D2FAFC</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#D2FAFC</span></span></span>;
 }</span>
 </code></pre>
 <p>Dette vil gjøre at hele bakgrunnen blir blå. Du kan velge hvilken farge du ønsker fra en liste på <a href="http://www.colourpicker.com">www.colourpicker.com</a> som da genererer det nummer du trenger og så kan du klippe og lime det inn i din kode.</p>
 <p>Prøve nå:</p>
 <pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
 }</span>
 </code></pre>
 <p>Siden vi allerede hadde en <code>h1</code> deklarert i filen kan vi bare putte inn attributtet background-color sammen med color, vi trenger ikke å skrive alt om igjen.</p>
 <pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-	<span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-	<span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
 }</span>
 </code></pre>
 <pre><code><span class="hljs-preprocessor">## Nå skal du __LAGRE__ filen og se hvordan det ser ut. {.save}</span>
