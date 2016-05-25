@@ -15,28 +15,28 @@ function relative(url) {
 <li>
 <p>Vi vil at trommen skal lage lyd når vi klikker på den eller trykker
 på <code>mellomromstasten</code>.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    send melding [tromme v]
+<pre><code class="blocks">når denne figuren klikkes
+send melding [tromme v]
 
-    når [mellomrom v] trykkes
-    send melding [tromme v]
+når [mellomrom v] trykkes
+send melding [tromme v]
 </code></pre>
 </li>
 <li>
 <p>Nå må vi lage lyd når den mottar <code>tromme</code>. Ved å endre tallet, kan
 du endre lyden trommen lager.</p>
-<pre><code class="blocks">    når jeg mottar [tromme v]
-    trommeslag (48 v) som varer (0.2) takter
+<pre><code class="blocks">når jeg mottar [tromme v]
+trommeslag (48 v) som varer (0.2) takter
 </code></pre>
 </li>
 <li>
 <p>Prøv å endre utseende slik at man ser hvilket instrument som
 spiller.</p>
-<pre><code class="blocks">    når jeg mottar [tromme v]
-    trommeslag (48 v) som varer (0.2) takter
-    sett størrelse til (110) %
-    vent (0.1) sekunder
-    sett størrelse til (100) %
+<pre><code class="blocks">når jeg mottar [tromme v]
+trommeslag (48 v) som varer (0.2) takter
+sett størrelse til (110) %
+vent (0.1) sekunder
+sett størrelse til (100) %
 </code></pre>
 </li>
 </ul>

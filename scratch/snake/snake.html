@@ -92,16 +92,16 @@ forskjellig for hver klon.</p>
 <p>Vi skal nå lage hovedløkken i spillet. Først setter vi de nødvendige
 variablene, deretter bruker vi en løkke til å lage stadig nye
 slangebokser.</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    sett [teller v] til [0]
-    sett [lengde v] til [5]
-    gjenta til &lt;berører [kant v]&gt;
-        sett [min id v] til (teller)
-        endre [teller v] med (1)
-        vent (0.1) sekunder
-        lag klon av [meg v]
-        gå (10) steg
-    slutt
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+sett [teller v] til [0]
+sett [lengde v] til [5]
+gjenta til &lt;berører [kant v]&gt;
+    sett [min id v] til (teller)
+    endre [teller v] med (1)
+    vent (0.1) sekunder
+    lag klon av [meg v]
+    gå (10) steg
+slutt
 </code></pre>
 <p>Her må <code>10</code>-tallet i <code class="blockmotion">gå 10 steg</code>-klossen være likt
 med størrelsen på din boks.</p>
@@ -109,9 +109,9 @@ med størrelsen på din boks.</p>
 <li>
 <p>Selve kloneboksene trenger nå bare vente til de skal slette seg
 selv. Det er ganske enkelt.</p>
-<pre><code class="blocks">    når jeg starter som klon
-    vent til &lt;((teller) - (lengde)) &gt; (min id)&gt;
-    slett denne klonen
+<pre><code class="blocks">når jeg starter som klon
+vent til &lt;((teller) - (lengde)) &gt; (min id)&gt;
+slett denne klonen
 </code></pre>
 <p>Sammenlign disse skriptene med figuren og forklaringen
 ovenfor. Skjønner du hvordan de fungerer?</p>
@@ -183,7 +183,7 @@ skriptet skal flytte eplet til et tilfeldig sted på skjermen, og
 deretter lage en klon. Men vi vil være litt nøye med at eplet havner
 i samme &quot;rutenett&quot; som slangen. For eksempel, om slangeboksene dine
 er <code>10 x 10</code> kan du bruke noe som dette:</p>
-<pre><code class="blocks">    gå til x: ((10) * (tilfeldig tall fra (-23) til (23))) y: ((10) * (tilfeldig tall fra (-16) til (16)))
+<pre><code class="blocks">gå til x: ((10) * (tilfeldig tall fra (-23) til (23))) y: ((10) * (tilfeldig tall fra (-16) til (16)))
 </code></pre>
 <p>Husk at skjermen har koordinater fra <code>-240</code> til <code>240</code> i x-retning,
 og <code>-180</code> til <code>180</code> i y-retning. Pass på at eplene dine lander

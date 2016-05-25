@@ -14,31 +14,31 @@ function relative(url) {
 <h1 class="activity" id="kodeklubb-koden">Kodeklubb-koden</h1>
 <p>Et chiffer er et system for å gjøre om vanlig tekst til kode som ikke andre skal kunne lese. Vi skal bruke et av de eldste og mest berømte chifferene, Cæsar-chifferet eller Cæsars kode - oppkalt etter Gaius Julius Cæsar som sannsynligvis brukte det til å sende hemmelige beskjeder. Det er neppe den beste måten å hindre andre i å lese beskjedene dine, men det kommer vi tilbake til. Det finnes ferdige moduler til Python du kan bruke hvis du vil lage noe som skal være vanskelig å knekke, men nå skal vi forsøke å lage Cæsar-chifferet selv.</p>
 <p>Start med å tegne alle bokstavene i en sirkel.</p>
-<pre><code>                          Å    A
-                     Ø              B
-                 Æ                      C
-             Z                               <span class="hljs-literal">D</span>
+<pre><code>                    Å    A
+                Ø              B
+            Æ                      C
+        Z                               <span class="hljs-literal">D</span>
 
-         Y                                       <span class="hljs-literal">E</span>
+    Y                                       <span class="hljs-literal">E</span>
 
-      X                                             <span class="hljs-literal">F</span>
+ X                                             <span class="hljs-literal">F</span>
 
-     W                                               <span class="hljs-keyword">G</span>
+W                                               <span class="hljs-keyword">G</span>
 
-     V                                               <span class="hljs-literal">H</span>
+V                                               <span class="hljs-literal">H</span>
 
-      <span class="hljs-keyword">U</span>                                             <span class="hljs-literal">I</span>
+ <span class="hljs-keyword">U</span>                                             <span class="hljs-literal">I</span>
 
-         T                                       <span class="hljs-literal">J</span>
+    T                                       <span class="hljs-literal">J</span>
 
-             S                               K
-                R                        <span class="hljs-keyword">L</span>
-                    Q                <span class="hljs-literal">M</span>
-                        P    O   <span class="hljs-keyword">N</span>
+        S                               K
+          R                        <span class="hljs-keyword">L</span>
+              Q                <span class="hljs-literal">M</span>
+                  P    O   <span class="hljs-keyword">N</span>
 
 </code></pre>
 <p>For å lage en hemmelig bokstav fra en vanlig bokstav, trenger vi et tall vi kan bruke som hemmelig nøkkel. Jeg liker tallet 3, det er et magisk tall, så vi bruker det.</p>
-<pre><code>    A + <span class="hljs-number">3</span> = D       T + <span class="hljs-number">3</span> = W       Å + <span class="hljs-number">3</span> = C
+<pre><code>A + <span class="hljs-number">3</span> = D       T + <span class="hljs-number">3</span> = W       Å + <span class="hljs-number">3</span> = C
 </code></pre>
 <p>Vi begynner med A og teller fremover 3 bokstaver: B, C, D. Så bokstaven A blir til bokstaven D. For å dekode gjør vi det samme, men baklengs. Vi begynner med D og teller bakover for å få A.</p>
 </section>

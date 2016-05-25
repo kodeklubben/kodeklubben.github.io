@@ -70,15 +70,15 @@ ikke kan flippes eller roteres.</p>
 </li>
 <li>
 <p>Lag dette skriptet for hver av sensorene:</p>
-<pre><code class="blocks">    når grønt flagg klikkes // eksempel for høyre sensor
-    for alltid
-      gå til [Felix v]
-        hvis &lt;farge [rød v] berører [grønn v] ?&gt;
-        sett [blokkert høyre v] til [1]
-        ellers
-        sett [blokkert høyre v] til [0]
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes // eksempel for høyre sensor
+for alltid
+  gå til [Felix v]
+    hvis &lt;farge [rød v] berører [grønn v] ?&gt;
+    sett [blokkert høyre v] til [1]
+    ellers
+    sett [blokkert høyre v] til [0]
     slutt
+slutt
 </code></pre>
 </li>
 <li>
@@ -132,32 +132,32 @@ seg for raskt. Gjør animasjonen i en egen <code class="blockcontrol">for alltid
 <p>Det siste vi må gjøre er å ordne <strong>falling</strong>. Hvis Felix ikke står
 på fast grunn vil vi at han skal falle ned. Det ordner vi med en
 <code class="blockcontrol">for alltid</code>-løkke under en <code class="blockevents">når grønt flagg klikkes</code>-hatt.</p>
-<pre><code class="blocks">    når grønt flagg klikkes // håndter flytting
-    for alltid
-        hvis &lt; &lt;tast [pil venstre v] trykket?&gt; og ((blokkert venstre)=(0))&gt;
-        pek i retning (-90)
-            gå (2) steg
-        slutt
-        hvis &lt; &lt;tast [pil høyre v] trykket?&gt; og ((blokkert høyre)=(0))&gt;
-        pek i retning (90)
-            gå (2) steg
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes // håndter flytting
+for alltid
+    hvis &lt; &lt;tast [pil venstre v] trykket?&gt; og ((blokkert venstre)=(0))&gt;
+    pek i retning (-90)
+        gå (2) steg
     slutt
+    hvis &lt; &lt;tast [pil høyre v] trykket?&gt; og ((blokkert høyre)=(0))&gt;
+    pek i retning (90)
+        gå (2) steg
+    slutt
+slutt
 
-    når grønt flagg klikkes // beveg Felix
-    for alltid
-      hvis &lt; &lt;tast [pil venstre v] trykket?&gt; eller &lt;tast [pil høyre v] trykket?&gt; &gt;
-          neste drakt
-            vent (0.1) sekunder
-        slutt
+når grønt flagg klikkes // beveg Felix
+for alltid
+  hvis &lt; &lt;tast [pil venstre v] trykket?&gt; eller &lt;tast [pil høyre v] trykket?&gt; &gt;
+      neste drakt
+        vent (0.1) sekunder
     slutt
+slutt
 
-    når grønt flagg klikkes // håndter falling
-    for alltid
-        hvis &lt;(blokkert bunn)=(0)&gt;
-            endre y med (-2)
-        slutt
+når grønt flagg klikkes // håndter falling
+for alltid
+    hvis &lt;(blokkert bunn)=(0)&gt;
+        endre y med (-2)
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -246,21 +246,21 @@ hopphøyde med 10.</strong></p>
 </li>
 <li>
 <p>Du ender opp med noe tilsvarende dette:</p>
-<pre><code class="blocks">    når grønt flagg klikkes // håndtere falling
-    for alltid
-      hvis &lt;(hopphøyde)=(0)&gt;
-        hvis &lt;(blokkert topp)=(1)&gt;
-          sett (hopphøyde) til (0)
-            ellers
-          endre y med (10)
-                endre [hopphøyde v] med (-10)
-            slutt
+<pre><code class="blocks">når grønt flagg klikkes // håndtere falling
+for alltid
+  hvis &lt;(hopphøyde)=(0)&gt;
+    hvis &lt;(blokkert topp)=(1)&gt;
+      sett (hopphøyde) til (0)
         ellers
-        hvis &lt;(blokkert bunn)=(0)&gt;
-          endre y med (-2)
-            slutt
+      endre y med (10)
+            endre [hopphøyde v] med (-10)
+        slutt
+    ellers
+    hvis &lt;(blokkert bunn)=(0)&gt;
+      endre y med (-2)
         slutt
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -307,17 +307,17 @@ kan vi bruke en annen <code class="blockcontrol">hvis</code> for å oppdage når
 berører den blinkende redningskapselen. Så snart han gjør det,
 sender kapselen en <code>seier</code>-melding og sier “Du vant!”. Felix svarer
 på meldingen ved å gjemme seg.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x:(220) y:(-125)
-    for alltid
-      hvis &lt;(nøkler igjen) = [0]&gt;
-        endre [farge v] effekt med (25)
-            hvis &lt;berører [Felix v]?&gt;
-          send melding [seier v]
-                si [Du vant!]
-            slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x:(220) y:(-125)
+for alltid
+  hvis &lt;(nøkler igjen) = [0]&gt;
+    endre [farge v] effekt med (25)
+        hvis &lt;berører [Felix v]?&gt;
+      send melding [seier v]
+            si [Du vant!]
         slutt
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -353,21 +353,21 @@ slemmingen to steg. (Ved å bruke <code class="blockmotion">gå</code> isteden f
 raskt slemmingen går.)</p>
 <p><strong>Vi trenger ikke å bruke kollisjonssensor her, da vi ikke bryr
 oss om på hvilken side Felix berører slemmingen.</strong></p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x:(-50) y:(47)
-    pek i retning (-90)
-    for alltid
-      hvis &lt;berører [Felix v]?&gt;
-        send melding [tap v]
-        slutt
-        hvis &lt; (x-posisjon) &gt; [-200] &gt;
-        pek i retning (90)
-        slutt
-        hvis &lt; (x-posisjon) &gt; [-50] &gt;
-        pek i retning (-90)
-        slutt
-        gå (2) steg
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x:(-50) y:(47)
+pek i retning (-90)
+for alltid
+  hvis &lt;berører [Felix v]?&gt;
+    send melding [tap v]
     slutt
+    hvis &lt; (x-posisjon) &gt; [-200] &gt;
+    pek i retning (90)
+    slutt
+    hvis &lt; (x-posisjon) &gt; [-50] &gt;
+    pek i retning (-90)
+    slutt
+    gå (2) steg
+slutt
 </code></pre>
 </li>
 <li>
@@ -389,11 +389,11 @@ Sier kapselen ifra når du har tapt? Kan du forstatt vinne spillet?</p>
 for Felix. Last inn bakgrunnen <strong>frantic-felix/level2</strong>, som har en
 blå rose på det øverste nivået. Legg til enda et skript på Felix,
 under et grønt flagg hatt:</p>
-<pre><code class="blocks">    for alltid
-        hvis &lt;berører fargen [blå v]?&gt;
-            send melding [spill slutt v]
-        slutt
+<pre><code class="blocks">for alltid
+    hvis &lt;berører fargen [blå v]?&gt;
+        send melding [spill slutt v]
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -511,22 +511,22 @@ skript.</p>
 som du allerede har endret, slik at de fortsatt virker som planlagt.</strong></p>
 <p>Vi kommer ikke beskrive alle endringene, men vi skal vise hvordan
 Felix sitt oppdaterte skript for å vise hva som må gjøres.</p>
-<pre><code class="blocks">    når jeg mottar [start brett v]
-        gå til x: (element [nåværende nivå v] av [xs v]) y: (element [nåværende nivå v] av [ys v])
-    pek i retning (element [nåværende nivå v] av [retning v])
-    for alltid
-      hvis &lt;&lt;tast[pil venstre v] trykket?&gt; og &lt;(blokkert venstre)=(0)&gt;
-        pek i retning (-90)
-            gå (2) steg
-        slutt
-        hvis &lt;&lt;tast [pil høyre v] trykket?&gt; og &lt;(blokkert høyre)=(0)&gt;
-            pek i retning (90)
-            gå (2) steg
-        slutt
-        hvis &lt;&lt;tast [mellomrom v] trykket?&gt; og &lt;(blokkert bunn)=(1)&gt;
-        sett [hopphøyde v] til [100]
-        slutt
+<pre><code class="blocks">når jeg mottar [start brett v]
+    gå til x: (element [nåværende nivå v] av [xs v]) y: (element [nåværende nivå v] av [ys v])
+pek i retning (element [nåværende nivå v] av [retning v])
+for alltid
+  hvis &lt;&lt;tast[pil venstre v] trykket?&gt; og &lt;(blokkert venstre)=(0)&gt;
+    pek i retning (-90)
+        gå (2) steg
     slutt
+    hvis &lt;&lt;tast [pil høyre v] trykket?&gt; og &lt;(blokkert høyre)=(0)&gt;
+        pek i retning (90)
+        gå (2) steg
+    slutt
+    hvis &lt;&lt;tast [mellomrom v] trykket?&gt; og &lt;(blokkert bunn)=(1)&gt;
+    sett [hopphøyde v] til [100]
+    slutt
+slutt
 </code></pre>
 <p>Du legger kanskje merke til at start verdiene <strong>x</strong>, <strong>y</strong>, og
 <strong>retning</strong> for Felix settes med lister. Vi laget noen lister for hver
@@ -536,27 +536,27 @@ lagrer. Du trenger ikke bruke lister, du kan bruke
 <code class="blockcontrol">hvis</code>-klosser som sjekker hvilket brett du er på og
 gjør riktig ting basert på dette.</p>
 <p>Og her er redningskapselen, som håndterer all nivå-endringen:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [nåværende nivå v] til [1]
-    send melding [start brett v]
+<pre><code class="blocks">når grønt flagg klikkes
+sett [nåværende nivå v] til [1]
+send melding [start brett v]
 
-    når jeg mottar [start brett v]
-    gå til x: (element [nåværende nivå v] av [xs v]) y: (element [nåværende nivå v] av [ys v])
-    for alltid
-      hvis &lt;[nøkler å ta v] = [0]&gt;
-          endre [farge v] effekt med (25)
-            hvis &lt;berører [Felix v]?&gt;
-          hvis &lt;[nåværende nivå v] = &lt;lengden av [nøkler per brett v]&gt;
-            si [Du vant!!]
-                    send melding [seier v]
-                    stopp [alle v] :: control
-                ellers
-            endre [nåværende nivå v] med (1)
-                    send melding [start brett v]
-                slutt
+når jeg mottar [start brett v]
+gå til x: (element [nåværende nivå v] av [xs v]) y: (element [nåværende nivå v] av [ys v])
+for alltid
+  hvis &lt;[nøkler å ta v] = [0]&gt;
+      endre [farge v] effekt med (25)
+        hvis &lt;berører [Felix v]?&gt;
+      hvis &lt;[nåværende nivå v] = &lt;lengden av [nøkler per brett v]&gt;
+        si [Du vant!!]
+                send melding [seier v]
+                stopp [alle v] :: control
+            ellers
+        endre [nåværende nivå v] med (1)
+                send melding [start brett v]
             slutt
         slutt
     slutt
+slutt
 </code></pre>
 </section>
 </section>

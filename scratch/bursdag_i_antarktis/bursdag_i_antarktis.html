@@ -40,15 +40,15 @@ venstre på skjermen. Velg <code>Holiday/winter</code>.</p>
 <p>Vi begynner med et skript på scenen, som passer på at vi viser
 <code>winter</code>-bakgrunnen når animasjonen starter. Gå til
 <code class="blocklightgrey">Skript</code>-fanen og legg til</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt bakgrunn til [winter v]
+<pre><code class="blocks">når grønt flagg klikkes
+bytt bakgrunn til [winter v]
 </code></pre>
 </li>
 <li>
 <p>Da kan vi få katten til å flytte på seg. Klikk på <code>Felix</code> og gi ham
 dette skriptet:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-100) y: (-50)
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-100) y: (-50)
 </code></pre>
 <p>Her kan du eksperimentere litt med tallene for <code>x</code> og <code>y</code> til du
 finner noe som du synes ser bra ut.</p>
@@ -57,14 +57,14 @@ finner noe som du synes ser bra ut.</p>
 <p>La oss nå få Felix til å bevege seg over skjermen. Vi skifter mellom
 de to draktene hans for at det skal se ut som om han går. Utvid
 skriptet til Felix på denne måten:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-100) y: (-50)
-    pek i retning (100 v)
-    gjenta til &lt;(x-posisjon) &gt; [240]&gt;
-        gå (10) steg
-        neste drakt
-        vent (0.1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-100) y: (-50)
+pek i retning (100 v)
+gjenta til &lt;(x-posisjon) &gt; [240]&gt;
+    gå (10) steg
+    neste drakt
+    vent (0.1) sekunder
+slutt
 </code></pre>
 <p>Tallet 100 i <code class="blockmotion">pek i retning</code>-klossen gjør at Felix går
 litt nedover mens han går over skjermen. Prøv gjerne med noen
@@ -102,22 +102,22 @@ så veldig bra.</p>
 <ul>
 <li>
 <p>Lag et nytt skript på Scenen.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    vent (3) sekunder
-    bytt bakgrunn til [winter-lights v]
+<pre><code class="blocks">når grønt flagg klikkes
+vent (3) sekunder
+bytt bakgrunn til [winter-lights v]
 </code></pre>
 </li>
 <li>
 <p>Legg også til en kloss som flytter Felix inn til veien etter at
 bakgrunnen er byttet.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-100) y: (-50)
-    pek i retning (100 v)
-    gjenta til &lt;(x-posisjon) &gt; [240]&gt;
-        gå (10) steg
-        neste drakt
-        vent (0.1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-100) y: (-50)
+pek i retning (100 v)
+gjenta til &lt;(x-posisjon) &gt; [240]&gt;
+    gå (10) steg
+    neste drakt
+    vent (0.1) sekunder
+slutt
 gå til x: (-20) y: (-100)
 </code></pre>
 </li>
@@ -153,29 +153,29 @@ synlige for oss som ser på.</p>
 <ul>
 <li>
 <p>La katten sende en melding når han når kanten av skjermen.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-100) y: (-50)
-    pek i retning (100 v)
-    gjenta til &lt;(x-posisjon) &gt; [240]&gt;
-        gå (10) steg
-        neste drakt
-        vent (0.1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-100) y: (-50)
+pek i retning (100 v)
+gjenta til &lt;(x-posisjon) &gt; [240]&gt;
+    gå (10) steg
+    neste drakt
+    vent (0.1) sekunder
+slutt
 send melding [Scene 2 v]
 </code></pre>
 </li>
 <li>
 <p>Vi kan nå slette det gamle skriptet på scenen som byttet bakgrunn
 til <code>winter-lights</code>, og heller bruke dette:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 2 v]
-    bytt bakgrunn til [winter-lights v]
+<pre><code class="blocks">når jeg mottar [Scene 2 v]
+bytt bakgrunn til [winter-lights v]
 </code></pre>
 </li>
 <li>
 <p>Felix kan også motta meldinger han sender selv. Vi kan bruke dette
 til å flytte ham inn på veien samtidig som vi bytter bakgrunn. Legg
 til følgende som et nytt skript på Felix:</p>
-<pre><code class="blocks">  når jeg mottar [Scene 2 v]
+<pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
 </code></pre>
 </li>
@@ -206,7 +206,7 @@ mennesker.</p>
 <ul>
 <li>
 <p>Start et nytt skript på Felix:</p>
-<pre><code class="blocks">  når jeg mottar [Si hei v]
+<pre><code class="blocks">når jeg mottar [Si hei v]
 si [Å nei! Hvor er jeg?] i (2) sekunder
 tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
 spør [Hvor gammel blir jeg igjen?] og vent
@@ -227,26 +227,26 @@ vises.</p>
 </li>
 <li>
 <p>Legg til en kloss nederst i skriptet:</p>
-<pre><code class="blocks">    når jeg mottar [Si hei v]
-    si [Å nei! Hvor er jeg?] i (2) sekunder
-    tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
-    spør [Hvor gammel blir jeg igjen?] og vent
-    sett [alder v] til (svar)
+<pre><code class="blocks">når jeg mottar [Si hei v]
+si [Å nei! Hvor er jeg?] i (2) sekunder
+tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
+spør [Hvor gammel blir jeg igjen?] og vent
+sett [alder v] til (svar)
 </code></pre>
 </li>
 <li>
 <p>Nå vil vi at Felix skal si og gjøre alt dette før han vandrer
 gjennom skogen. Legg til en <code class="blockevents">send melding</code>-kloss i det
 første skriptet til Felix:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-100) y: (-50)
-    pek i retning (100 v)
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-100) y: (-50)
+pek i retning (100 v)
 send melding [Si hei v]
-    gjenta til &lt;(x-posisjon) &gt; [240]&gt;
-        gå (10) steg
-        neste drakt
-        vent (0.1) sekunder
-    slutt
+gjenta til &lt;(x-posisjon) &gt; [240]&gt;
+    gå (10) steg
+    neste drakt
+    vent (0.1) sekunder
+slutt
 send melding [Scene 2 v]
 </code></pre>
 </li>
@@ -272,15 +272,15 @@ snakker med oss?</p>
 <p>Vi vil at Felix snakker ferdig før han begynner å gå. Dette er
 heldigvis ganske enkelt. Hvis vi bytter ut <code class="blockevents">send melding</code>-klossen med en <code class="blockevents">send melding og vent</code>-kloss, vil ikke Felix begynne å gå før han er
 ferdig å snakke (og vi har svart på spørsmålet hans):</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-100) y: (-50)
-    pek i retning (100 v)
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-100) y: (-50)
+pek i retning (100 v)
 send melding [Si hei v] og vent
-    gjenta til &lt;(x-posisjon) &gt; [240]&gt;
-        gå (10) steg
-        neste drakt
-        vent (0.1) sekunder
-    slutt
+gjenta til &lt;(x-posisjon) &gt; [240]&gt;
+    gå (10) steg
+    neste drakt
+    vent (0.1) sekunder
+slutt
 send melding [Scene 2 v]
 </code></pre>
 </li>
@@ -308,24 +308,24 @@ mindre mens han går.</p>
 <p>Vi skal nå fortsette på skriptet til Felix som begynner med at han
 mottar meldingen <code>Scene 2</code>. Legg til en liten
 <code class="blocklooks">si</code>-kloss først:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 2 v]
-    gå til x: (-20) y: (-100)
-    si [Å! Der er det noen hus!] i (2) sekunder
+<pre><code class="blocks">når jeg mottar [Scene 2 v]
+gå til x: (-20) y: (-100)
+si [Å! Der er det noen hus!] i (2) sekunder
 </code></pre>
 </li>
 <li>
 <p>Nå skal vi la Felix følge veien oppover. Prøv først med følgende
 skript:</p>
-<pre><code class="blocks">  når jeg mottar [Scene 2 v]
+<pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
-    si [Å! Der er det noen hus!] i (2) sekunder
-    pek i retning (20 v)
-    gjenta (6) ganger
-        gå (9) steg
-        neste drakt
-        endre størrelse med (-2)
-        vent (0.1) sekunder
-    slutt
+si [Å! Der er det noen hus!] i (2) sekunder
+pek i retning (20 v)
+gjenta (6) ganger
+    gå (9) steg
+    neste drakt
+    endre størrelse med (-2)
+    vent (0.1) sekunder
+slutt
 </code></pre>
 </li>
 <li>
@@ -341,19 +341,19 @@ tilbake sin vanlige størrelse.</p>
 veien. Et triks er at vi kan gange retningen hans med -1. Da blir
 det som om han snur seg rundt. Siden vi vil gjøre dette fire ganger
 lager vi også en ny <code class="blockcontrol">gjenta</code>-kloss:</p>
-<pre><code class="blocks">    når jeg mottar [Scene 2 v]
-    gå til x: (-20) y: (-100)
-    si [Å! Der er det noen hus!] i (2) sekunder
-    pek i retning (20 v)
-    gjenta (4) ganger
-        gjenta (6) ganger
-            gå (9) steg
-            neste drakt
-            endre størrelse med (-2)
-            vent (0.1) sekunder
-        slutt
-  pek i retning ((retning) * (-1))
+<pre><code class="blocks">når jeg mottar [Scene 2 v]
+gå til x: (-20) y: (-100)
+si [Å! Der er det noen hus!] i (2) sekunder
+pek i retning (20 v)
+gjenta (4) ganger
+    gjenta (6) ganger
+        gå (9) steg
+        neste drakt
+        endre størrelse med (-2)
+        vent (0.1) sekunder
     slutt
+    pek i retning ((retning) * (-1))
+slutt
 </code></pre>
 </li>
 </ul>
@@ -381,29 +381,29 @@ på Felix og følge med på <code>retning</code> mens skriptet kjører.</p>
 <li>
 <p>Når Felix kommer fram til huset kan vi skjule ham, og skifte til en
 ny scene.</p>
-<pre><code class="blocks">    når jeg mottar [Scene 2 v]
-    gå til x: (-20) y: (-100)
-    si [Å! Der er det noen hus!] i (2) sekunder
-    pek i retning (20 v)
-    gjenta (4) ganger
-        gjenta (6) ganger
-            gå (9) steg
-            neste drakt
-            endre størrelse med (-2)
-            vent (0.1) sekunder
-        slutt
-        pek i retning ((retning) * (-1.5))
+<pre><code class="blocks">når jeg mottar [Scene 2 v]
+gå til x: (-20) y: (-100)
+si [Å! Der er det noen hus!] i (2) sekunder
+pek i retning (20 v)
+gjenta (4) ganger
+    gjenta (6) ganger
+        gå (9) steg
+        neste drakt
+        endre størrelse med (-2)
+        vent (0.1) sekunder
     slutt
-    skjul
-    vent (1) sekunder
-    send melding [Scene 3 v]
+    pek i retning ((retning) * (-1.5))
+slutt
+skjul
+vent (1) sekunder
+send melding [Scene 3 v]
 </code></pre>
 </li>
 <li>
 <p>For den scenen trenger vi en ny bakgrunn. Klikk
 <img src="../bilder/velg-bakgrunn.png" alt="velg en ferdig bakgrunn"> og legg
 til bakgrunnen <code>Holiday/gingerbread</code>. Gi scenen dette skriptet:</p>
-<pre><code class="blocks">  når jeg mottar [Scene 3 v]
+<pre><code class="blocks">når jeg mottar [Scene 3 v]
 bytt bakgrunn til [gingerbread v]
 </code></pre>
 </li>
@@ -411,7 +411,7 @@ bytt bakgrunn til [gingerbread v]
 <p>I det vi skifter til den nye scenen vil vi også at Felix skal få
 tilbake sin vanlige størrelse. Klikk på Felix og start et nytt
 skript:</p>
-<pre><code class="blocks">  når jeg mottar [Scene 3 v]
+<pre><code class="blocks">når jeg mottar [Scene 3 v]
 sett størrelse til (100)%
 gå til x: (-160) y: (-65)
 vis
@@ -456,42 +456,42 @@ har valgt å kalle dem <code>Pingu</code> og <code>Pappa Pingu</code>.</p>
 <li>
 <p>For at pingvinene først skal dukke opp i <code>Scene 3</code>, må vi skjule dem
 når animasjonen starter. Legg til følgende skript på begge figurene:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
 </code></pre>
 </li>
 <li>
 <p>Først skal Felix spørre om det er noen hjemme, og så skal han sende
 en melding hvor han ber pingvinene om å komme ut. Endre Felix sitt
 skript ved å legge til to klosser på slutten:</p>
-<pre><code class="blocks">  når jeg mottar [Scene 3 v]
+<pre><code class="blocks">når jeg mottar [Scene 3 v]
 sett størrelse til (100)%
 gå til x: (-160) y: (-65)
 vis
-    si [Oj, så flott hus! Er det noen hjemme?] i (2) sekunder
-    send melding [Kom ut v]
+si [Oj, så flott hus! Er det noen hjemme?] i (2) sekunder
+send melding [Kom ut v]
 </code></pre>
 </li>
 <li>
 <p>Pingu skal nå komme ut av døra og gå litt til siden. Sjekk med
 musepekeren hva <code>x</code> og <code>y</code>-posisjonen til døren er. Legg til
 følgende skript på Pingu:</p>
-<pre><code class="blocks">    når jeg mottar [Kom ut v]
-    gå til x: (45) y: (-70)
-    vis
-    gli (1) sekunder til x: (150) y: (-100)
+<pre><code class="blocks">når jeg mottar [Kom ut v]
+gå til x: (45) y: (-70)
+vis
+gli (1) sekunder til x: (150) y: (-100)
 </code></pre>
 </li>
 <li>
 <p>Pappa Pingu kommer ut litt senere, og stiller Felix et spørsmål.
 Legg til følgende script på Pappa Pingu:</p>
-<pre><code class="blocks">    når jeg mottar [Kom ut v]
-    vent (2) sekunder
-    gå til x: (45) y: (-70)
-    vis
-    vent (1) sekunder
-    spør [Hva heter du?] og vent
-    send melding [Navn1]
+<pre><code class="blocks">når jeg mottar [Kom ut v]
+vent (2) sekunder
+gå til x: (45) y: (-70)
+vis
+vent (1) sekunder
+spør [Hva heter du?] og vent
+send melding [Navn1]
 </code></pre>
 </li>
 </ul>
@@ -522,19 +522,19 @@ Felix heter. Kall for eksempel meldingen <code>Navn1</code></p>
 </li>
 <li>
 <p>Legg til følgende skript på Pingu</p>
-<pre><code class="blocks">    når jeg mottar [Navn1 v]
-    si (svar) i (2) sekunder
-    si [Det er et rart navn!] i (2) sekunder
-    send melding [Navn2 v]
+<pre><code class="blocks">når jeg mottar [Navn1 v]
+si (svar) i (2) sekunder
+si [Det er et rart navn!] i (2) sekunder
+send melding [Navn2 v]
 </code></pre>
 </li>
 <li>
 <p>Legg til følgende skript på Felix for å få ham til å svare og si at
 han har bursdag:</p>
-<pre><code class="blocks">    når jeg mottar [Navn2 v]
-    si [Jeg har bursdag i dag!] i (2) sekunder
-    si (sett sammen [Jeg blir ] (alder)) i (2) sekunder
-    send melding [Party v]
+<pre><code class="blocks">når jeg mottar [Navn2 v]
+si [Jeg har bursdag i dag!] i (2) sekunder
+si (sett sammen [Jeg blir ] (alder)) i (2) sekunder
+send melding [Party v]
 </code></pre>
 </li>
 </ul>
@@ -552,12 +552,12 @@ rotere rundt med musen (du må kanskje bytte til vektorgrafikk).</p>
 <li>
 <p>Legg til en lyd du liker under <code class="blocklightgrey">Lyder</code>, og lag
 følgende skript på Pingu (vi har brukt lyden <code>human beatbox1</code>):</p>
-<pre><code class="blocks">    når jeg mottar [Party v]
-    spill lyden [human beatbox1 v]
-    gjenta (20) ganger
-        neste drakt
-        vent (0.2) sekunder
-    slutt
+<pre><code class="blocks">når jeg mottar [Party v]
+spill lyden [human beatbox1 v]
+gjenta (20) ganger
+    neste drakt
+    vent (0.2) sekunder
+slutt
 </code></pre>
 </li>
 </ul>

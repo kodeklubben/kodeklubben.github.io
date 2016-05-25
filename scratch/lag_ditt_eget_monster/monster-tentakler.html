@@ -14,13 +14,13 @@ function relative(url) {
 <strong>endre størrelse</strong> ved å bruke <code class="blockgreen">tilfeldig tall</code> med en
 lav verdi i en variabel, for så å vente et øyeblikk før vi
 gjenoppretter den originale størrelsen.</p>
-<pre><code class="blocks">    sett [tentakelRotasjon v] til (tilfeldig tall fra (1) til (10))
-    sett [tentakelStørrelse v] til (tilfeldig tall fra (1) til (10))
-    endre størrelse med (tentakelStørrelse)
-    vend venstre (tentakelRotasjon) grader
-    vent (0.5) sekunder
-    endre størrelse med ((tentakelStørrelse) * (-1))
-    vend høyre (tentakelRotasjon) grader
+<pre><code class="blocks">sett [tentakelRotasjon v] til (tilfeldig tall fra (1) til (10))
+sett [tentakelStørrelse v] til (tilfeldig tall fra (1) til (10))
+endre størrelse med (tentakelStørrelse)
+vend venstre (tentakelRotasjon) grader
+vent (0.5) sekunder
+endre størrelse med ((tentakelStørrelse) * (-1))
+vend høyre (tentakelRotasjon) grader
 </code></pre>
 <p>Merk at vi multipliserer <code class="blockdata">tentakelStørrelse</code> med -1
 for å få en negativ verdi.</p>

@@ -67,9 +67,9 @@ vil si at <code>Ball</code> og <code>Keeper</code> har skript med <code class="b
 <p>Dersom elevene vil at også <code>Ball</code> eller <code>Keeper</code> skal si noe kan det
 være utfordrende på grunn av <code class="blockcontrol">stopp</code>-klossen. En
 mulig løsning er som følger:</p>
-<pre><code class="blocks">    når jeg mottar [Redning v]
-    si [Hurra, jeg reddet!]
-    stopp [andre skript i figuren v] :: control
+<pre><code class="blocks">når jeg mottar [Redning v]
+si [Hurra, jeg reddet!]
+stopp [andre skript i figuren v] :: control
 </code></pre>
 <p>Det er her viktig å <em>ikke</em> bruke <code class="b">si [Hello!] i (2) sekunder</code>
 siden den klossen vil gjøre at <code>Ball</code> eller <code>Keeper</code> ikke slutter å
@@ -148,10 +148,10 @@ flaggermusa (den andre figuren)? Spesielt, pass på at de er bevisst
 hvilken figur som må programmeres (<em>Katten</em>). Spør om det det samme
 kan programmeres ved å legge et skript på den andre figuren (<em>Nei,
 siden Katten beveger seg er det Kattens oppførsel vi må beskrive</em>).</p>
-<pre><code class="blocks">    for alltid
-        pek mot [Bat1 v]
-        gå (10) steg
-    slutt
+<pre><code class="blocks">for alltid
+    pek mot [Bat1 v]
+    gå (10) steg
+slutt
 </code></pre>
 </li>
 <li>
@@ -163,10 +163,10 @@ lenge den ikke reagerer på at den berører flaggermusa (<em>ingen ny
 oppførsel å beskrive</em>).</p>
 <p>Det er mange måter å skrive kode for at flaggermusa rømmer. Det
 følgende er et eksempel (husk at koden hører til flaggermusa):</p>
-<pre><code class="blocks">    for alltid
-        vent til &lt;berører [Sprite1 v]&gt;
-        gli (0.2) sekunder til x: (tilfeldig tall fra (-240) til (240)) y: (tilfeldig tall fra (-180) til (180))
-    slutt
+<pre><code class="blocks">for alltid
+    vent til &lt;berører [Sprite1 v]&gt;
+    gli (0.2) sekunder til x: (tilfeldig tall fra (-240) til (240)) y: (tilfeldig tall fra (-180) til (180))
+slutt
 </code></pre>
 </li>
 <li>
@@ -178,12 +178,12 @@ programmering</strong> hvor programmer skrives som en serie kommandoer uten
 at det skilles mellom hvilken figur som kommanderes. I et slikt
 språk ville de to skriptene over skrives som <em>ett</em> skript omtrent
 som dette (ikke alle disse klossene eksisterer i Scratch):</p>
-<pre><code class="blocks">    for alltid
-        flytt [katten v] mot [flaggermusa v] :: motion
-        hvis &lt;[katten v] berører [flaggermusa v] :: sensing&gt;
-            flytt [flaggermusa v] til x: (tilfeldig tall fra (-240) til (240)) y: (tilfeldig tall fra (-180) til (180)) :: motion
-        slutt
+<pre><code class="blocks">for alltid
+    flytt [katten v] mot [flaggermusa v] :: motion
+    hvis &lt;[katten v] berører [flaggermusa v] :: sensing&gt;
+        flytt [flaggermusa v] til x: (tilfeldig tall fra (-240) til (240)) y: (tilfeldig tall fra (-180) til (180)) :: motion
     slutt
+slutt
 </code></pre>
 <p>Vis gjerne denne koden til elevene. I tillegg til at det bare er ett
 skript, hvilke andre forskjeller ser de? <em>Den andre store

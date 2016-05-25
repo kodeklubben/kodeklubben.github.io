@@ -15,32 +15,32 @@ function relative(url) {
 </li>
 <li>
 <p>Lag et skript som spiller en note når <code>A</code> trykkes.</p>
-<pre><code class="blocks">    når [a v] trykkes
-    send melding [piano-1 v]
+<pre><code class="blocks">når [a v] trykkes
+send melding [piano-1 v]
 
-    når jeg mottar [piano-1 v]
-    spill tone (60 v) i (0.5) takter
+når jeg mottar [piano-1 v]
+spill tone (60 v) i (0.5) takter
 </code></pre>
 </li>
 <li>
 <p>Lag to noter til for når man trykker <code>S</code> eller <code>D</code> på tastaturet.</p>
-<pre><code class="blocks">    når [a v] trykkes
-    send melding [piano-1 v]
+<pre><code class="blocks">når [a v] trykkes
+send melding [piano-1 v]
 
-    når [s v] trykkes
-    send melding [piano-2 v]
+når [s v] trykkes
+send melding [piano-2 v]
 
-    når [d v] trykkes
-    send melding [piano-3 v]
+når [d v] trykkes
+send melding [piano-3 v]
 
-    når jeg mottar [piano-1 v]
-    spill tone (60 v) i (0.5) takter
+når jeg mottar [piano-1 v]
+spill tone (60 v) i (0.5) takter
 
-    når jeg mottar [piano-2 v]
-    spill tone (64 v) i (0.5) takter
+når jeg mottar [piano-2 v]
+spill tone (64 v) i (0.5) takter
 
-    når jeg mottar [piano-3 v]
-    spill tone (67 v) i (0.5) takter
+når jeg mottar [piano-3 v]
+spill tone (67 v) i (0.5) takter
 </code></pre>
 </li>
 <li>
@@ -50,20 +50,20 @@ function relative(url) {
 <li>
 <p>Sørg for at hver note bytter til en annen drakt og tilbake til
 <code>drakt1</code> slik at det ser ut som tangenten blir trykket på.</p>
-<pre><code class="blocks">    når jeg mottar [piano-1 v]
-    bytt drakt til [costume2 v]
-    spill tone (60 v) i (0.5) takter
-    bytt drakt til [costume1 v]
+<pre><code class="blocks">når jeg mottar [piano-1 v]
+bytt drakt til [costume2 v]
+spill tone (60 v) i (0.5) takter
+bytt drakt til [costume1 v]
 
-    når jeg mottar [piano-2 v]
-    bytt drakt til [costume3 v]
-    spill tone (60 v) i (0.5) takter
-    bytt drakt til [costume1 v]
+når jeg mottar [piano-2 v]
+bytt drakt til [costume3 v]
+spill tone (60 v) i (0.5) takter
+bytt drakt til [costume1 v]
 
-    når jeg mottar [piano-3 v]
-    bytt drakt til [costume4 v]
-    spill tone (60 v) i (0.5) takter
-    bytt drakt til [costume1 v]
+når jeg mottar [piano-3 v]
+bytt drakt til [costume4 v]
+spill tone (60 v) i (0.5) takter
+bytt drakt til [costume1 v]
 </code></pre>
 </li>
 </ul>
@@ -71,8 +71,8 @@ function relative(url) {
 <section class="challenge" id="utfordring">
 <h2 class="challenge" id="utfordring">Utfordring</h2>
 <p>En måte å endre hvilket instrument som spilles.</p>
-<pre><code class="blocks">    når [pil opp v] trykkes
-    velg instrument (tilfeldig tall fra (1) til (99))
+<pre><code class="blocks">når [pil opp v] trykkes
+velg instrument (tilfeldig tall fra (1) til (99))
 </code></pre>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Lydmaskin - Piano&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/lydmaskin" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><p><a href="https://github.com/CodeClub/scratch-curriculum/blob/master/LICENSE.md">Code Club World Limited Terms of Service</a></p>

@@ -50,15 +50,15 @@ at den er omtrent like stor som løvinnen ved å bruke
 <li>
 <p>Velg først løvefiguren og få den til å <code class="blockmotion">gå 4 steg</code> når
 du trykker <code>L</code> tasten.</p>
-<pre><code class="blocks">    når [l v] trykkes
-    gå (4) steg
+<pre><code class="blocks">når [l v] trykkes
+gå (4) steg
 </code></pre>
 </li>
 <li>
 <p>Velg så papegøyefiguren og la den <code class="blockmotion">gå 4 steg</code> når du
 trykker <code>A</code> tasten.</p>
-<pre><code class="blocks">    når [a v] trykkes
-    gå (4) steg
+<pre><code class="blocks">når [a v] trykkes
+gå (4) steg
 </code></pre>
 </li>
 </ul>
@@ -91,20 +91,20 @@ en gang på den, og endre innhold ved å dobbeltklikke.</p>
 </li>
 <li>
 <p>Legg nå til et skript som viser figuren når spillet starter:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    vis
+<pre><code class="blocks">når grønt flagg klikkes
+vis
 </code></pre>
 </li>
 <li>
 <p>I tillegg vil vi at knappen først teller ned fra 3, sier <code>LØP!</code> og
 deretter blir skjult når den klikkes. Dette ordner du med følgende
 skript:</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    si [3] i (1) sekunder
-    si [2] i (1) sekunder
-    si [1] i (1) sekunder
-    si [LØP!] i (1) sekunder
-    skjul
+<pre><code class="blocks">når denne figuren klikkes
+si [3] i (1) sekunder
+si [2] i (1) sekunder
+si [1] i (1) sekunder
+si [LØP!] i (1) sekunder
+skjul
 </code></pre>
 </li>
 </ul>
@@ -138,9 +138,9 @@ ikke vises på scenen.</p>
 <li>
 <p>Sett <code class="blockdata">kappløp</code> til 0 når spillet startes ved å forandre
 <code class="blockevents">når grønt flagg klikkes</code>-skriptet slik:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    vis
-    sett [kappløp v] til [0]
+<pre><code class="blocks">når grønt flagg klikkes
+vis
+sett [kappløp v] til [0]
 </code></pre>
 </li>
 <li>
@@ -153,10 +153,10 @@ klossen <code class="blockdata">Sett kappløp til 1</code> under <code class="bl
 bevege seg etter at løpet har startet – det vil si når
 <code class="blockdata">kappløp</code> har verdien 1. Klikk først på papegøyen. Så
 endrer du:</p>
-<pre><code class="blocks">    når [a v] trykkes
-    hvis &lt;(kappløp) = [1]&gt;
-        gå (4) steg
-    slutt
+<pre><code class="blocks">når [a v] trykkes
+hvis &lt;(kappløp) = [1]&gt;
+    gå (4) steg
+slutt
 </code></pre>
 </li>
 <li>
@@ -182,13 +182,13 @@ klart for en ny runde.</em></p>
 <ul>
 <li>
 <p>Legg til en kloss i papegøyens skript som sier <code class="blockdata">sett kappløp til 0</code> hvis figuren berører kanten av skjermen:</p>
-<pre><code class="blocks">    når [a v] trykkes
-    hvis &lt;(kappløp) = [1]&gt;
-        gå (4) steg
-        hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til [0]
-        slutt
+<pre><code class="blocks">når [a v] trykkes
+hvis &lt;(kappløp) = [1]&gt;
+    gå (4) steg
+    hvis &lt;berører [kant v]?&gt;
+        sett [kappløp v] til [0]
     slutt
+slutt
 </code></pre>
 </li>
 <li>
@@ -203,15 +203,15 @@ dette, bruk lydene som følger med figurene.</p>
 <li>
 <p>Deretter legger du til klossene som spiller lyden og lar papegøyen
 fortelle at den vant:</p>
-<pre><code class="blocks">    når [a v] trykkes
-    hvis &lt;(kappløp) = [1]&gt;
-        gå (4) steg
-        hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til [0]
-            spill lyden [Polly v]
-            si [Polly vinner!] i (3) sekunder
-        slutt
+<pre><code class="blocks">når [a v] trykkes
+hvis &lt;(kappløp) = [1]&gt;
+    gå (4) steg
+    hvis &lt;berører [kant v]?&gt;
+        sett [kappløp v] til [0]
+        spill lyden [Polly v]
+        si [Polly vinner!] i (3) sekunder
     slutt
+slutt
 </code></pre>
 </li>
 <li>
@@ -243,23 +243,23 @@ over og nullstille spillet, slik at er klart for en ny runde.</em></p>
 <li>
 <p>Klikk på papegøyefiguren og legg til en kloss som sender melding
 <code>Avslutt</code> etter at figuren sier den har vunnet.</p>
-<pre><code class="blocks">    når [a v] trykkes
-    hvis &lt;(kappløp) = [1]&gt;
-        gå (4) steg
-        hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til [0]
-            spill lyden [Polly v]
-            si [Polly vinner! v] i (3) sekunder
-            send melding [Avslutt v]
-        slutt
+<pre><code class="blocks">når [a v] trykkes
+hvis &lt;(kappløp) = [1]&gt;
+    gå (4) steg
+    hvis &lt;berører [kant v]?&gt;
+        sett [kappløp v] til [0]
+        spill lyden [Polly v]
+        si [Polly vinner! v] i (3) sekunder
+        send melding [Avslutt v]
     slutt
+slutt
 </code></pre>
 </li>
 <li>
 <p>Vi trenger nå et nytt skript som lytter etter denne
 avslutningsmeldingen og flytter papegøyen tilbake til start.</p>
-<pre><code class="blocks">    når jeg mottar [Avslutt v]
-    sett x til (-170)
+<pre><code class="blocks">når jeg mottar [Avslutt v]
+sett x til (-170)
 </code></pre>
 </li>
 <li>
@@ -270,8 +270,8 @@ være sikker på at løvinnen og papegøyen starter fra samme sted.</p>
 <p>For at figurene skal stå på startstreken når kappløpet starter den
 aller første gangen må vi også legge til følgende klosser på begge
 figurene:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett x til (-170)
+<pre><code class="blocks">når grønt flagg klikkes
+sett x til (-170)
 </code></pre>
 </li>
 <li>
@@ -279,8 +279,8 @@ figurene:</p>
 at start-knappen kommer tilbake etter hver avsluttet runde. Klikk på
 startknapp-figuren og legg til et skript som viser knappen når
 avslutningsmeldingen blir mottatt.</p>
-<pre><code class="blocks">    når jeg mottar [Avslutt v]
-    vis
+<pre><code class="blocks">når jeg mottar [Avslutt v]
+vis
 </code></pre>
 </li>
 </ul>
@@ -317,20 +317,20 @@ denne aktiveres når raketten avfyres.</p>
 </ul>
 <p>Nedenfor er et forslag til hvordan et rakett-skript kan se ut. Du må
 legge til noen lyder og variabler på egen hånd.</p>
-<pre><code class="blocks">    når [q v] trykkes
-    hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
-        bytt drakt til [parrot-rakett v]
-        sett [rakett_brukt v] til [1]
-        gå (30) steg
-        spill lyden [motorcycle passing v]
-        hvis &lt;berører [kant v]?&gt;
-            sett [kappløp v] til [0]
-            spill lyden [Polly v]
-            si [Polly vinner! v] i (3) sekunder
-            send melding [Avslutt v]
-        slutt
-        bytt drakt til [parrot-a v]
+<pre><code class="blocks">når [q v] trykkes
+hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
+    bytt drakt til [parrot-rakett v]
+    sett [rakett_brukt v] til [1]
+    gå (30) steg
+    spill lyden [motorcycle passing v]
+    hvis &lt;berører [kant v]?&gt;
+        sett [kappløp v] til [0]
+        spill lyden [Polly v]
+        si [Polly vinner! v] i (3) sekunder
+        send melding [Avslutt v]
     slutt
+    bytt drakt til [parrot-a v]
+slutt
 </code></pre>
 </section>
 <section class="flag" id="test-prosjektet-6">
@@ -379,26 +379,26 @@ den på samme måte som andre kodeklosser?</p>
 <li>
 <p>Slett den andre <code class="blockcontrol">hvis</code><code class="blocksensing">berører kant?</code>-klossen fra skriptet ditt og erstatt også den
 med en <code class="blockmoreblocks">ferdig</code>-kloss.</p>
-<pre><code class="blocks">    definer ferdig
-    hvis &lt;berører [kant v]?&gt;
-        sett [kappløp v] til [0]
-        spill lyden [Polly v]
-        si [Polly vinner! v] i (3) sekunder
-        send melding [Avslutt v]
+<pre><code class="blocks">definer ferdig
+hvis &lt;berører [kant v]?&gt;
+    sett [kappløp v] til [0]
+    spill lyden [Polly v]
+    si [Polly vinner! v] i (3) sekunder
+    send melding [Avslutt v]
 
-    når [a v] trykkes
-    hvis &lt;(kappløp) = [1]&gt;
-        gå (4) steg
-        ferdig
+når [a v] trykkes
+hvis &lt;(kappløp) = [1]&gt;
+    gå (4) steg
+    ferdig
 
-    når [q v] trykkes
-    hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
-        bytt drakt til [parrot-rakett v]
-        sett [rakett_brukt v] til [1]
-        gå (30) steg
-        spill lyden [motorcycle passing v]
-        ferdig
-        bytt drakt til [parrot-a v]
+når [q v] trykkes
+hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
+    bytt drakt til [parrot-rakett v]
+    sett [rakett_brukt v] til [1]
+    gå (30) steg
+    spill lyden [motorcycle passing v]
+    ferdig
+    bytt drakt til [parrot-a v]
 </code></pre>
 </li>
 <li>

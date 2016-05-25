@@ -63,10 +63,10 @@ ikke midten av blyanten.</p>
 </li>
 <li>
 <p>Få blyanten til å følge musepekeren rundt på scenen ved å bruke <code class="blockcontrol">for alltid</code>- og <code class="blockmotion">gå til musepeker</code>-klossene.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå til [musepeker v]
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå til [musepeker v]
+slutt
 </code></pre>
 </li>
 </ul>
@@ -79,15 +79,15 @@ tegnefunksjoner. De vi er interessert i nå er <code class="blockpen">penn på</
 <p>Vi vil bruke museknappen til å kontrollere blyanten - når
 museknappen er nede tegner blyanten og når museknappen er oppe
 tegner den ikke. Vi kan gjøre dette ved å bruke enn <code class="blockcontrol">hvis ellers</code>- og en <code class="blocksensing">museknappen er nede?</code>-kloss. Utvid skriptet som følger.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå til [musepeker v]
-        hvis &lt;museknappen er nede?&gt;
-            penn på
-        ellers
-            penn av
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå til [musepeker v]
+    hvis &lt;museknappen er nede?&gt;
+        penn på
+    ellers
+        penn av
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -111,16 +111,16 @@ deg om fargen enda.</p>
 <li>
 <p>Etterhvert vil skjermen bli ganske full av rabbel. Vi kan bruke
 <code class="blockpen">slett</code>-klossen til å fjerne dette.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    slett
-    for alltid
-        gå til [musepeker v]
-        hvis &lt;museknappen er nede?&gt;
-            penn på
-        ellers
-            penn av
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+slett
+for alltid
+    gå til [musepeker v]
+    hvis &lt;museknappen er nede?&gt;
+        penn på
+    ellers
+        penn av
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -153,8 +153,8 @@ prosjektet. Velg <code>cancel-button.png</code>.</p>
 </li>
 <li>
 <p>Gi slette-figuren dette skriptet:</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    slett
+<pre><code class="blocks">når denne figuren klikkes
+slett
 </code></pre>
 </li>
 </ul>
@@ -187,8 +187,8 @@ skjermen.</p>
 </li>
 <li>
 <p>Gi den et skript som sender meldingen <code>Rød</code>.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    send melding [Rød v]
+<pre><code class="blocks">når denne figuren klikkes
+send melding [Rød v]
 </code></pre>
 <p>Dette er alt denne figuren gjør. Det vanskelige arbeidet gjøres av
 blyanten.</p>
@@ -203,9 +203,9 @@ drakten også.</p>
 <p>Legg til et nytt skript. Når blyanten får meldingen <code>Rød</code>, skal den
 forandre drakt til <code>red-pencil</code>. Og så skal den selvsagt også
 begynne å tegne rødt. Slik bygger du skriptet:</p>
-<pre><code class="blocks">    når jeg mottar [Rød v]
-    bytt drakt til [red-pencil v]
-    velg pennfarge [#FF0000]
+<pre><code class="blocks">når jeg mottar [Rød v]
+bytt drakt til [red-pencil v]
+velg pennfarge [#FF0000]
 </code></pre>
 <p>For å velge fargen i <code class="blockpen">velg pennfarge</code>-klossen kan du
 først klikke i fargeruten på klossen, og deretter på den røde
@@ -281,18 +281,18 @@ hvis <code>y</code> er større enn <em>-120</em> og mindre enn <em>170</em> og <
 enn <em>-230</em> og mindre enn <em>230</em>.  For å få plass til alle testene må
 du først legge inn en <code class="blockoperators">_ og _</code>-kloss, og deretter
 legge til to nye <code class="blockoperators">_ og _</code>-klosser inni denne.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    slett
-    for alltid
-        hvis &lt;&lt;&lt;(mus x) &gt; [-230]&gt; og &lt;(mus x) &lt; [230]&gt;&gt; og &lt;&lt;(mus y) &gt; [-120]&gt; og &lt;(mus y) &lt; [170]&gt;&gt;&gt;
-            gå til [musepeker v]
-            hvis &lt;museknappen er nede?&gt;
-                penn på
-            ellers
-                penn av
-            slutt
+<pre><code class="blocks">når grønt flagg klikkes
+slett
+for alltid
+    hvis &lt;&lt;&lt;(mus x) &gt; [-230]&gt; og &lt;(mus x) &lt; [230]&gt;&gt; og &lt;&lt;(mus y) &gt; [-120]&gt; og &lt;(mus y) &lt; [170]&gt;&gt;&gt;
+        gå til [musepeker v]
+        hvis &lt;museknappen er nede?&gt;
+            penn på
+        ellers
+            penn av
         slutt
     slutt
+slutt
 </code></pre>
 </li>
 <li>
@@ -301,22 +301,22 @@ bare blir borte når musepekeren går utenfor tavla. For å gjøre dette
 må vi erstatte <code class="blockcontrol">hvis</code>-klossen ovenfor med en <code class="blockcontrol">hvis - ellers</code>-kloss. Reglene blir nå: <strong>Hvis</strong> musepekeren
 er innenfor tavlas <code>x</code>- og <code>y</code>-koordinater følger blyanten pekeren,
 <strong>ellers</strong> skjules blyanten.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    slett
-    for alltid
-        hvis &lt;&lt;&lt;(mus x) &gt; [-230]&gt; og &lt;(mus x) &lt; [230]&gt;&gt; og &lt;&lt;(mus y) &gt; [-120]&gt; og &lt;(mus y) &lt; [170]&gt;&gt;&gt;
-            gå til [musepeker v]
-            vis
-            hvis &lt;museknappen er nede?&gt;
-                penn på
-            ellers
-                penn av
-            slutt
+<pre><code class="blocks">når grønt flagg klikkes
+slett
+for alltid
+    hvis &lt;&lt;&lt;(mus x) &gt; [-230]&gt; og &lt;(mus x) &lt; [230]&gt;&gt; og &lt;&lt;(mus y) &gt; [-120]&gt; og &lt;(mus y) &lt; [170]&gt;&gt;&gt;
+        gå til [musepeker v]
+        vis
+        hvis &lt;museknappen er nede?&gt;
+            penn på
         ellers
-            skjul
             penn av
         slutt
+    ellers
+        skjul
+        penn av
     slutt
+slutt
 </code></pre>
 <p>Fordi blyanten vil skjules når pekeren går utenfor tavla, må vi få
 den til å vises igjen når den kommer innenfor. Pass derfor på at
@@ -363,8 +363,8 @@ høyre hjørne, ved siden av slett-knappen.</p>
 </li>
 <li>
 <p>Gi viskelær-figuren et skript som sender meldingen <code>Visk</code>.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    send melding [Visk v]
+<pre><code class="blocks">når denne figuren klikkes
+send melding [Visk v]
 </code></pre>
 </li>
 <li>
@@ -376,9 +376,9 @@ viskelæret foran.</p>
 <li>
 <p>Blyanten svarer på <code>Visk</code>-meldingen med å bytte pennfarge til grå
 (bruk fargevelgeren for å velge bakgrunnsfargen til tavla).</p>
-<pre><code class="blocks">    når jeg mottar [Visk v]
-    bytt drakt til [eraser v]
-    velg pennfarge [#606060]
+<pre><code class="blocks">når jeg mottar [Visk v]
+bytt drakt til [eraser v]
+velg pennfarge [#606060]
 </code></pre>
 </li>
 </ul>
@@ -411,8 +411,8 @@ viskelæret foran.</p>
 biblioteket. Krymp figuren og plasser den nederst på skjermen ved
 siden av de andre verktøyene.  Når figuren klikkes skal den sende
 meldingen <code>Stempel</code>.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    send melding [Stempel v]
+<pre><code class="blocks">når denne figuren klikkes
+send melding [Stempel v]
 </code></pre>
 </li>
 <li>
@@ -431,19 +431,19 @@ eller stemple.</p>
 <code>Stempel</code>-meldingen.  Skriptet skal skifte drakt til den samme
 drakten du valgte for stempelet.  Deretter skal det sette verdien
 til <code class="blockdata">stempelmodus</code> lik <code>på</code>.</p>
-<pre><code class="blocks">    når jeg mottar [Stempel v]
-    bytt drakt til [scratch logo v]
-    sett [stempelmodus v] til [på]
+<pre><code class="blocks">når jeg mottar [Stempel v]
+bytt drakt til [scratch logo v]
+sett [stempelmodus v] til [på]
 </code></pre>
 </li>
 <li>
 <p>Forandre de andre skriptene som er knyttet til fargevelgerne og
 viskelæret slik at de setter <code class="blockdata">stempelmodus</code> lik
 <code>av</code>. For eksempel blir viskelærskriptet slik:</p>
-<pre><code class="blocks">    når jeg mottar [Visk v]
-    bytt drakt til [eraser v]
-    velg pennfarge [#606060]
-    sett [stempelmodus v] til [av]
+<pre><code class="blocks">når jeg mottar [Visk v]
+bytt drakt til [eraser v]
+velg pennfarge [#606060]
+sett [stempelmodus v] til [av]
 </code></pre>
 </li>
 <li>
@@ -452,26 +452,26 @@ viskelæret slik at de setter <code class="blockdata">stempelmodus</code> lik
 om vi skal tegne eller stemple. Hvis <code class="blockdata">stempelmodus</code> er
 satt til <code>på</code> skal vi stemple, hvis ikke skal vi bruke den
 eksisterende <code class="blockpen">penn på</code>-klossen.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    slett
-    for alltid
-        hvis &lt;&lt;&lt;(mus x) &gt; [-230]&gt; og &lt;(mus x) &lt; [230]&gt;&gt; og &lt;&lt;(mus y) &gt; [-120]&gt; og &lt;(mus y) &lt; [170]&gt;&gt;&gt;
-            gå til [musepeker v]
-            vis
-            hvis &lt;museknappen er nede?&gt;
-                hvis &lt;(stempelmodus) = [på]&gt;
-                    stemple avtrykk
-                ellers
-                    penn på
-                slutt
+<pre><code class="blocks">når grønt flagg klikkes
+slett
+for alltid
+    hvis &lt;&lt;&lt;(mus x) &gt; [-230]&gt; og &lt;(mus x) &lt; [230]&gt;&gt; og &lt;&lt;(mus y) &gt; [-120]&gt; og &lt;(mus y) &lt; [170]&gt;&gt;&gt;
+        gå til [musepeker v]
+        vis
+        hvis &lt;museknappen er nede?&gt;
+            hvis &lt;(stempelmodus) = [på]&gt;
+                stemple avtrykk
             ellers
-                penn av
+                penn på
             slutt
         ellers
-            skjul
             penn av
         slutt
+    ellers
+        skjul
+        penn av
     slutt
+slutt
 </code></pre>
 </li>
 </ul>

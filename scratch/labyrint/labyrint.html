@@ -44,9 +44,9 @@ trykker på <code>pil opp</code>-tasten.</p>
 <ul>
 <li>
 <p>Legg til følgende skript på <code>Utforsker</code>-figuren din.</p>
-<pre><code class="blocks">    når [pil opp v] trykkes
-    pek i retning (0 v)
-    gå (5) steg
+<pre><code class="blocks">når [pil opp v] trykkes
+pek i retning (0 v)
+gå (5) steg
 </code></pre>
 <p>Prøv å trykk på <code>pil opp</code>-tasten. Beveger utforskeren din seg
 oppover skjermen? Nå må vi lage lignende skript for de andre
@@ -55,17 +55,17 @@ tastene.</p>
 <li>
 <p>Legg også til disse skriptene, slik at <code>Utforsker</code> har totalt fire
 skript, ett for hver tast.</p>
-<pre><code class="blocks">    når [pil ned v] trykkes
-    pek i retning (180 v)
-    gå (5) steg
+<pre><code class="blocks">når [pil ned v] trykkes
+pek i retning (180 v)
+gå (5) steg
 
-    når [pil høyre v] trykkes
-    pek i retning (90 v)
-    gå (5) steg
+når [pil høyre v] trykkes
+pek i retning (90 v)
+gå (5) steg
 
-    når [pil venstre v] trykkes
-    pek i retning (-90 v)
-    gå (5) steg
+når [pil venstre v] trykkes
+pek i retning (-90 v)
+gå (5) steg
 </code></pre>
 </li>
 </ul>
@@ -110,28 +110,28 @@ scenen.</p>
 <li>
 <p>Lag først et nytt skript som setter verdien av <code class="b">(hastighet)</code> til
 <code>10</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [hastighet v] til [10]
+<pre><code class="blocks">når grønt flagg klikkes
+sett [hastighet v] til [10]
 </code></pre>
 </li>
 <li>
 <p>Deretter endrer vi de fire skriptene vi allerede har laget slik at
 de bruker <code class="b">(hastighet)</code>.</p>
-<pre><code class="blocks">    når [pil opp v] trykkes
-    pek i retning (0 v)
-    gå (hastighet) steg
+<pre><code class="blocks">når [pil opp v] trykkes
+pek i retning (0 v)
+gå (hastighet) steg
 
-    når [pil ned v] trykkes
-    pek i retning (180 v)
-    gå (hastighet) steg
+når [pil ned v] trykkes
+pek i retning (180 v)
+gå (hastighet) steg
 
-    når [pil høyre v] trykkes
-    pek i retning (90 v)
-    gå (hastighet) steg
+når [pil høyre v] trykkes
+pek i retning (90 v)
+gå (hastighet) steg
 
-    når [pil venstre v] trykkes
-    pek i retning (-90 v)
-    gå (hastighet) steg
+når [pil venstre v] trykkes
+pek i retning (-90 v)
+gå (hastighet) steg
 </code></pre>
 </li>
 </ul>
@@ -223,15 +223,15 @@ farge.</p>
 <li>
 <p>Vi legger <code class="b">&lt;berører fargen [#ffffff]&gt;</code>-klossen inn i skriptet vi
 allerede har laget som setter <code class="b">(hastighet)</code>-variabelen.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [hastighet v] til [10]
-    for alltid
-        hvis &lt;berører fargen [#cc0000]?&gt;
-            vend høyre (180) grader
-            gå (hastighet) steg
-            vend høyre (180) grader
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+sett [hastighet v] til [10]
+for alltid
+    hvis &lt;berører fargen [#cc0000]?&gt;
+        vend høyre (180) grader
+        gå (hastighet) steg
+        vend høyre (180) grader
     slutt
+slutt
 </code></pre>
 </li>
 <li>
@@ -259,9 +259,9 @@ veggen?</p>
 <h2 class="protip" id="tips-2">Tips</h2>
 <p>En måte vi kan bruke for å begrense hvor en figur kan gå, er å tvinge
 den til å ta et skritt tilbake når den gjør noe feil. I koden</p>
-<pre><code class="blocks">    vend høyre (180) grader
-    gå (hastighet) steg
-    vend høyre (180) grader
+<pre><code class="blocks">  vend høyre (180) grader
+  gå (hastighet) steg
+  vend høyre (180) grader
 </code></pre>
 <p>vil figuren først snu seg helt rundt (180 grader), deretter ta et
 skritt, og til slutt snu seg rundt igjen slik at den peker i samme
@@ -303,12 +303,12 @@ litt enklere å lage skriptet på <code>Skatt</code>.</p>
 <ul>
 <li>
 <p>Pass på at figuren <code>Skatt</code> er markert, og skriv følgende kode:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        hvis &lt;berører [Utforsker v]?&gt;
-            skjul
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    hvis &lt;berører [Utforsker v]?&gt;
+        skjul
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -334,13 +334,13 @@ skatten en gang, forblir skatten borte.</p>
 <li>
 <p>Vi må passe på at skatten vises på begynnelsen av spillet. Endre
 skriptet på <code>Skatt</code> ved å legge til <code class="b">vis</code> helt i begynnelsen.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    vis
-    for alltid
-        hvis &lt;berører [Utforsker v]?&gt;
-            skjul
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+vis
+for alltid
+    hvis &lt;berører [Utforsker v]?&gt;
+        skjul
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -364,16 +364,16 @@ disse to tallene inn i <code class="b">gå til x: () y: ()</code>-klossen.</p>
 <li>
 <p>Hele skriptet vil nå se slik ut (dine tall for <code>x</code> og <code>y</code> vil være
 forskjellige):</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [hastighet v] til [10]
-    gå til x: (-200) y: (0)
-    for alltid
-        hvis &lt;berører fargen [#cc0000]?&gt;
-            vend høyre (180) grader
-            gå (hastighet) steg
-            vend høyre (180) grader
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+sett [hastighet v] til [10]
+gå til x: (-200) y: (0)
+for alltid
+    hvis &lt;berører fargen [#cc0000]?&gt;
+        vend høyre (180) grader
+        gå (hastighet) steg
+        vend høyre (180) grader
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -413,13 +413,13 @@ Dette blir veldig likt hvordan <code>Skatt</code> merket at den ble funnet.</p>
 <ul>
 <li>
 <p>Legg til følgende kode:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        hvis &lt;berører [Utforsker v]?&gt;
-            si [Tok deg!] i (1) sekunder
-            stopp [alle v] :: control
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    hvis &lt;berører [Utforsker v]?&gt;
+        si [Tok deg!] i (1) sekunder
+        stopp [alle v] :: control
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -447,9 +447,9 @@ froskekongen?</p>
 <li>
 <p>Start et nytt skript på <code>Froskekonge</code>-figuren. Igjen kan du bytte ut
 tallene for <code>x</code> og <code>y</code> med noe som passer for din labyrint.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (50) y: (100)
-    pek i retning (-90 v)
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (50) y: (100)
+pek i retning (-90 v)
 </code></pre>
 </li>
 <li>
@@ -463,17 +463,17 @@ fjern avhukingen på variabelen.</p>
 <p>Vi kan nå utvide skriptet slik at froskekongen går fram og
 tilbake. Vi får ham til å snu når han treffer veggen på nesten samme
 måte som vi hindrer utforskeren i å gå gjennom veggen.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (50) y: (100)
-    pek i retning (-90 v)
-    sett [hastighet v] til [5]
-    for alltid
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (50) y: (100)
+pek i retning (-90 v)
+sett [hastighet v] til [5]
+for alltid
+    gå (hastighet) steg
+    hvis &lt;berører fargen [#cc0000]?&gt;
+        vend høyre (180) grader
         gå (hastighet) steg
-        hvis &lt;berører fargen [#cc0000]?&gt;
-            vend høyre (180) grader
-            gå (hastighet) steg
-        slutt
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -482,20 +482,20 @@ av og til endre retning.</p>
 <ul>
 <li>
 <p>Legg til kode som lar <code>Froskekonge</code> snu seg tilfeldig rundt i labyrinten:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (50) y: (100)
-    pek i retning (-90 v)
-    sett [hastighet v] til [5]
-    for alltid
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (50) y: (100)
+pek i retning (-90 v)
+sett [hastighet v] til [5]
+for alltid
+    gå (hastighet) steg
+    hvis &lt;berører fargen [#cc0000]?&gt;
+        vend høyre (180) grader
         gå (hastighet) steg
-        hvis &lt;berører fargen [#cc0000]?&gt;
-            vend høyre (180) grader
-            gå (hastighet) steg
-        slutt
-        hvis &lt;(tilfeldig tall fra (1) til (25)) = [1]&gt;
-            vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader
-        slutt
     slutt
+    hvis &lt;(tilfeldig tall fra (1) til (25)) = [1]&gt;
+        vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader
+    slutt
+slutt
 </code></pre>
 </li>
 </ul>

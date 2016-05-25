@@ -20,11 +20,11 @@ enkelt vil rotere ved skulderen og flytte seg med kroppen og de
 andre kroppsdelene. En ting vi må legge til er å sette retningen
 <code class="blockmotion">retning</code> til armen i en variabel (mer om det
 seinere).</p>
-<pre><code class="blocks">    når [mellomrom v] trykkes
-    vend venstre (15) grader
-    sett [venstre arm v] til (retning)
-    send melding [flyttet v]
-    endre x med (hastighet)
+<pre><code class="blocks">når [mellomrom v] trykkes
+vend venstre (15) grader
+sett [venstre arm v] til (retning)
+send melding [flyttet v]
+endre x med (hastighet)
 </code></pre>
 </li>
 <li>
@@ -32,9 +32,9 @@ seinere).</p>
 bruker vi trigonometri for å beregne hvor underarmen bør plasseres
 (Det kan godt være at du trenger å be om hjelp når du skal gjøre
 dette).</p>
-<pre><code class="blocks">    når jeg mottar [flyttet v]
-    gå til [Sprite3 v]
-    gå til x: ((x-posisjon) + ((45) * ([sin v] av (venstre arm)))) y: ((y-position) + ((45) * ([cos v] av (venstre arm))))
+<pre><code class="blocks">når jeg mottar [flyttet v]
+gå til [Sprite3 v]
+gå til x: ((x-posisjon) + ((45) * ([sin v] av (venstre arm)))) y: ((y-position) + ((45) * ([cos v] av (venstre arm))))
 </code></pre>
 </li>
 <li>

@@ -57,10 +57,10 @@ hva noen av disse klossene gjør?</p>
 <li>
 <p>La oss fylle opp listen! Vi starter med en ny melding, og
 deretter kan vi legge til ting i listen.</p>
-<pre><code class="blocks">    når jeg mottar [Lag lister v]
-    legg [London] til [steder v]
-    legg [Oslo] til [steder v]
-    legg [Barcelona] til [steder v]
+<pre><code class="blocks">når jeg mottar [Lag lister v]
+legg [London] til [steder v]
+legg [Oslo] til [steder v]
+legg [Barcelona] til [steder v]
 </code></pre>
 <p>Bruk gjerne de samme reisemålene som du allerede har.</p>
 </li>
@@ -72,7 +72,7 @@ ganger?</p>
 <li>
 <p>Vi kan sikre oss at hvert sted bare ligger en gang i listen ved å
 tømme listen før vi fyller den opp. Legg til</p>
-<pre><code class="blocks">    slett (alle v) i [steder v]
+<pre><code class="blocks">slett (alle v) i [steder v]
 </code></pre>
 <p>i koden før du legger til det første reisemålet.</p>
 </li>
@@ -89,19 +89,19 @@ stedfiguren.</p>
 <li>
 <p>Vi vil nå utvide <code>Lag lister</code>-blokken slik at vi fyller opp alle tre
 listene. Bruk dine egne reisemål og koordinater her om du vil:</p>
-<pre><code class="blocks">    når jeg mottar [Lag lister v]
-    slett (alle v) i [steder v]
-    slett (alle v) i [stederX v]
-    slett (alle v) i [stederY v]
-    legg [London] til [steder v]
-    legg [-135] til [stederX v]
-    legg [-30] til [stederY v]
-    legg [Oslo] til [steder v]
-    legg [-30] til [stederX v]
-    legg [75] til [stederY v]
-    legg [Barcelona] til [steder v]
-    legg [-135] til [stederX v]
-    legg [-175] til [stederY v]
+<pre><code class="blocks">når jeg mottar [Lag lister v]
+slett (alle v) i [steder v]
+slett (alle v) i [stederX v]
+slett (alle v) i [stederY v]
+legg [London] til [steder v]
+legg [-135] til [stederX v]
+legg [-30] til [stederY v]
+legg [Oslo] til [steder v]
+legg [-30] til [stederX v]
+legg [75] til [stederY v]
+legg [Barcelona] til [steder v]
+legg [-135] til [stederX v]
+legg [-175] til [stederY v]
 </code></pre>
 <p>Pass på at de tre listene er samkjørte slik at det er verdier for
 samme reisemål som står for eksempel øverst i hver liste.</p>
@@ -119,10 +119,10 @@ tilfeldig.</em></p>
 <li>
 <p>Først vil vi lage listene våre når spillet begynner.  Endre på koden
 for <code class="blockevents">Nytt spill</code> slik,</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    send melding [Lag lister v]
-    vis
-    send melding [Nytt sted v] og vent
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+send melding [Lag lister v]
+vis
+send melding [Nytt sted v] og vent
 </code></pre>
 </li>
 <li>
@@ -135,9 +135,9 @@ har.</p>
 <p>Koden for <code class="blockevents">Nytt sted</code> blir helt ny. Nå skal vi bruke
 både listene våre og den nye <code class="blockmoreblocks">Reis til</code>-klossen vi
 lagde forrige gang.</p>
-<pre><code class="blocks">    når jeg mottar [Nytt sted v]
-    sett [sted v] til (tilfeldig tall fra (1) til (lengden av [steder v]))
-    Reis til (element (sted) av [steder v]) (element (sted) av [stederX v]) (element (sted) av [stederY v]) :: custom
+<pre><code class="blocks">når jeg mottar [Nytt sted v]
+sett [sted v] til (tilfeldig tall fra (1) til (lengden av [steder v]))
+Reis til (element (sted) av [steder v]) (element (sted) av [stederX v]) (element (sted) av [stederY v]) :: custom
 </code></pre>
 </li>
 <li>
@@ -165,9 +165,9 @@ reisemål fra listene etterhvert som vi finner dem.</em></p>
 <p>For å unngå å bli spurt om å reise til samme sted flere ganger på
 rad vil vi slette reisemål fra listene etterhvert som vi finner dem.
 Legg til slettekommandoer helt nederst i <code class="blockevents">Nytt sted</code>-blokken,</p>
-<pre><code class="blocks">    slett (sted) i [steder v]
-    slett (sted) i [stederX v]
-    slett (sted) i [stederY v]
+<pre><code class="blocks">slett (sted) i [steder v]
+slett (sted) i [stederX v]
+slett (sted) i [stederY v]
 </code></pre>
 </li>
 <li>
@@ -210,22 +210,22 @@ programflyten omtrent som dette:</p>
 <li>
 <p>For å lage denne programflyten kan vi stort sett bruke skript på
 scenen. Lag de følgende enkle skriptene:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    send melding [Vis meny v]
+<pre><code class="blocks">når grønt flagg klikkes
+send melding [Vis meny v]
 
-    når jeg mottar [Vis meny v]
-    bytt bakgrunn til [meny v]
+når jeg mottar [Vis meny v]
+bytt bakgrunn til [meny v]
 
-    når [mellomrom v] trykkes
-    hvis &lt;(bakgrunnsnavn) = [meny]&gt;
-        send melding [Nytt spill v]
-    slutt
+når [mellomrom v] trykkes
+hvis &lt;(bakgrunnsnavn) = [meny]&gt;
+    send melding [Nytt spill v]
+slutt
 
-    når jeg mottar [Nytt spill v]
-    bytt bakgrunn til [spill v]
+når jeg mottar [Nytt spill v]
+bytt bakgrunn til [spill v]
 
-    når jeg mottar [Spill slutt v]
-    send melding [Vis meny v]
+når jeg mottar [Spill slutt v]
+send melding [Vis meny v]
 </code></pre>
 <p>Sammenlign disse skriptene med programflyten over. Ser du hvordan
 de henger sammen?</p>
@@ -244,9 +244,9 @@ tilbake til menyen når spillet er slutt?</p>
 <p>Et problem er at helikopteret, stedet og kartet blir liggende over
 menyen når spillet er slutt. Vi må passe på at disse skjules. Legg
 følgende kode på alle de tre figurene:</p>
-<pre><code class="blocks">    når jeg mottar [Spill slutt v]
-    skjul
-    stopp [andre skript i figuren v] :: control
+<pre><code class="blocks">når jeg mottar [Spill slutt v]
+skjul
+stopp [andre skript i figuren v] :: control
 </code></pre>
 <p>Med <code class="blockcontrol">stopp</code>-klossen passer vi på at alle skriptene
 stopper når spillet er slutt.</p>
@@ -324,12 +324,12 @@ og venner ved å trykke <code>Legg ut</code> øverst til høyre på skjermen.</p
 <p>Selv om leksjonene er ferdige betyr ikke det at du ikke kan
 videreutvikle spillet ditt. En enkel utvidelse er å legge på flere
 reisemål. Her er for eksempel to steder du kan legge til,</p>
-<pre><code class="blocks">    legg [Reykjavik] til [steder v]
-    legg [-215] til [stederX v]
-    legg [210] til [stederY v]
-    legg [Roma] til [steder v]
-    legg [-30] til [stederX v]
-    legg [-180] til [stederY v]
+<pre><code class="blocks">legg [Reykjavik] til [steder v]
+legg [-215] til [stederX v]
+legg [210] til [stederY v]
+legg [Roma] til [steder v]
+legg [-30] til [stederX v]
+legg [-180] til [stederY v]
 </code></pre>
 <p>men det er enda bedre om du finner på dine egne reisemål. Husk det
 trenger ikke bare være byer, det kan også være fjell, sjøer eller

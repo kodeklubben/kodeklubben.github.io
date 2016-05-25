@@ -69,14 +69,14 @@ Den første delen passer på at ballen starter riktig (riktig
 hastighet, riktig sted, riktig retning), mens den andre delen er
 løkken som gjør at ballen beveger seg og snur når den treffer kanten
 av skjermen.</p>
-<pre><code class="blocks">    når jeg mottar [Ny ball v]
-    sett [hastighet v] til [7]
-    gå til x: (0) y: (0)
-    pek i retning (tilfeldig tall fra (1) til (360))
-    for alltid
-        gå (hastighet) steg
-        sprett tilbake ved kanten
-    slutt
+<pre><code class="blocks">når jeg mottar [Ny ball v]
+sett [hastighet v] til [7]
+gå til x: (0) y: (0)
+pek i retning (tilfeldig tall fra (1) til (360))
+for alltid
+    gå (hastighet) steg
+    sprett tilbake ved kanten
+slutt
 </code></pre>
 <p>Les koden nøye mens du legger den til på ball-figuren. Pass på at
 du skjønner hva hver enkelt kloss gjør, fordi denne koden skal du
@@ -97,8 +97,8 @@ enklere starte spillet.</p>
 <ul>
 <li>
 <p>Legg denne enkle kodesnutten til på scenen:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    send melding [Ny ball v]
+<pre><code class="blocks">når grønt flagg klikkes
+send melding [Ny ball v]
 </code></pre>
 </li>
 </ul>
@@ -130,26 +130,26 @@ poeng (vi har brukt mørkeblått).</p>
 <li>
 <p>Om ballen treffer mål (mørkeblå) vil vi at den stopper, og
 etterhvert skal vi telle poeng. Dette kan vi gjøre ved å bytte ut</p>
-<pre><code class="blocks">    for alltid
-    slutt
+<pre><code class="blocks">for alltid
+slutt
 </code></pre>
 <p>med</p>
-<pre><code class="blocks">    gjenta til &lt;berører fargen [#0000FF]&gt;
-    slutt
-    send melding [Poeng v]
+<pre><code class="blocks">gjenta til &lt;berører fargen [#0000FF]&gt;
+slutt
+send melding [Poeng v]
 </code></pre>
 </li>
 <li>
 <p>For at ballen skal sprette når den treffer veggen (lyseblå) vil vi
 endre retningen på ballen selv. Igjen undersøker vi om ballen
 berører en spesiell farge ved å bytte ut</p>
-<pre><code class="blocks">    sprett tilbake ved kanten
+<pre><code class="blocks">sprett tilbake ved kanten
 </code></pre>
 <p>med for eksempel</p>
-<pre><code class="blocks">    hvis &lt;berører fargen [#9999FF]&gt;
-        pek i retning ((180) - (retning))
-        trommeslag (15 v) som varer (0.01) takter
-    slutt
+<pre><code class="blocks">hvis &lt;berører fargen [#9999FF]&gt;
+    pek i retning ((180) - (retning))
+    trommeslag (15 v) som varer (0.01) takter
+slutt
 </code></pre>
 <p>Skjønner du hva tallet <code>180</code> gjør? Prøv å tenk på hvordan en ball
 spretter i en vegg, og hvordan retningen på ballen endrer seg.</p>
@@ -179,8 +179,8 @@ eksempel tastene <code>W</code> og <code>S</code> trykkes.</p>
 <p>Test at du kan flytte racketen. Du vil kanskje også legge inn en
 begrensning slik at ikke racketen kan forsvinne ut av skjermen? Det
 kan du gjøre for eksempel med en test som ser omtrent slik ut:</p>
-<pre><code class="blocks">    hvis &lt;&lt;tast [w v] trykket&gt; og &lt;(y-posisjon) &lt; [150]&gt;&gt;
-    slutt
+<pre><code class="blocks">hvis &lt;&lt;tast [w v] trykket&gt; og &lt;(y-posisjon) &lt; [150]&gt;&gt;
+slutt
 </code></pre>
 </li>
 <li>

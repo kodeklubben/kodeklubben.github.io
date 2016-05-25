@@ -17,17 +17,17 @@ følge musepekeren må vi sette <code class="blockcontrol">for alltid</code>
 klossen. Når man trykker på det grønne flagget og skriptet har
 startet vil vi at øynene peker i retningen av musepekeren og flytter
 seg hvert brøkdelssekund.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    for alltid
-        pek mot [musepeker v]
-        vent (0.2) sekunder
-    slutt
+<pre><code class="blocks">når denne figuren klikkes
+for alltid
+    pek mot [musepeker v]
+    vent (0.2) sekunder
+slutt
 
-    når jeg mottar [flyttet høyre v]
-    endre x med (hastighet)
+når jeg mottar [flyttet høyre v]
+endre x med (hastighet)
 
-    når jeg mottar [flyttet venstre v]
-    endre x med ((hastighet) * (-1))
+når jeg mottar [flyttet venstre v]
+endre x med ((hastighet) * (-1))
 </code></pre>
 </li>
 </ul>

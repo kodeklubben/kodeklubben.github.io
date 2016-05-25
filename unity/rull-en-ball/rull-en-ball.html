@@ -390,43 +390,43 @@ endre det til:</p>
 
 <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PlayerController</span> : <span class="hljs-title">MonoBehaviour</span> {
 
-  <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> speed;
-  <span class="hljs-keyword">public</span> Text countText;                              <span class="hljs-comment">// Ny linje</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">float</span> speed;
+    <span class="hljs-keyword">public</span> Text countText;                              <span class="hljs-comment">// Ny linje</span>
 
-  <span class="hljs-keyword">private</span> Rigidbody rb;
-  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> count;
+    <span class="hljs-keyword">private</span> Rigidbody rb;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> count;
 
-  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> (<span class="hljs-params"></span>)
-  </span>{
-    rb = GetComponent&lt;Rigidbody&gt;();
-    count = <span class="hljs-number">0</span>;
-    SetCountText ();                                <span class="hljs-comment">// Ny linje</span>
-  }
-
-  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span> (<span class="hljs-params"></span>)
-  </span>{
-    <span class="hljs-keyword">float</span> moveHorizontal = Input.GetAxis (<span class="hljs-string">"Horizontal"</span>);
-    <span class="hljs-keyword">float</span> moveVertical = Input.GetAxis (<span class="hljs-string">"Vertical"</span>);
-
-    Vector3 movement = <span class="hljs-keyword">new</span> Vector3 (moveHorizontal, <span class="hljs-number">0.0</span>f, moveVertical);
-
-    rb.AddForce (movement * speed);
-  }
-
-  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider other</span>)
-  </span>{
-    <span class="hljs-keyword">if</span> (other.gameObject.CompareTag(<span class="hljs-string">"Pick Up"</span>))
-    {
-      other.gameObject.SetActive (<span class="hljs-keyword">false</span>);
-      count = count + <span class="hljs-number">1</span>;
-      SetCountText ();                            <span class="hljs-comment">// Ny linje</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Start</span> (<span class="hljs-params"></span>)
+    </span>{
+        rb = GetComponent&lt;Rigidbody&gt;();
+        count = <span class="hljs-number">0</span>;
+        SetCountText ();                                <span class="hljs-comment">// Ny linje</span>
     }
-  }
 
-  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetCountText</span> (<span class="hljs-params"></span>)                                <span class="hljs-comment">// Ny linje</span>
-  </span>{                                                   <span class="hljs-comment">// Ny linje</span>
-    countText.text = <span class="hljs-string">"Count: "</span> + count.ToString (); <span class="hljs-comment">// Ny linje</span>
-  }                                                   <span class="hljs-comment">// Ny linje</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">FixedUpdate</span> (<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">float</span> moveHorizontal = Input.GetAxis (<span class="hljs-string">"Horizontal"</span>);
+        <span class="hljs-keyword">float</span> moveVertical = Input.GetAxis (<span class="hljs-string">"Vertical"</span>);
+
+        Vector3 movement = <span class="hljs-keyword">new</span> Vector3 (moveHorizontal, <span class="hljs-number">0.0</span>f, moveVertical);
+
+        rb.AddForce (movement * speed);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider other</span>)
+    </span>{
+        <span class="hljs-keyword">if</span> (other.gameObject.CompareTag(<span class="hljs-string">"Pick Up"</span>))
+        {
+            other.gameObject.SetActive (<span class="hljs-keyword">false</span>);
+            count = count + <span class="hljs-number">1</span>;
+            SetCountText ();                            <span class="hljs-comment">// Ny linje</span>
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetCountText</span> (<span class="hljs-params"></span>)                                <span class="hljs-comment">// Ny linje</span>
+    </span>{                                                   <span class="hljs-comment">// Ny linje</span>
+        countText.text = <span class="hljs-string">"Count: "</span> + count.ToString (); <span class="hljs-comment">// Ny linje</span>
+    }                                                   <span class="hljs-comment">// Ny linje</span>
 }
 </code></pre>
 </li>

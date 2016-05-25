@@ -12,8 +12,8 @@ function relative(url) {
 <li>
 <p>For å få monsteret til å snakke, kan du bruke en
 <code class="blocklooks">si</code>-kloss.</p>
-<pre><code class="blocks">    når [mellomrom v] trykkes
-    si [Hallo!] i (2) sekunder
+<pre><code class="blocks">når [mellomrom v] trykkes
+si [Hallo!] i (2) sekunder
 </code></pre>
 </li>
 <li>
@@ -22,52 +22,52 @@ function relative(url) {
 rediger figuren som inneholder munnen - opprett en ny <code>drakt</code> som
 har lukket munn. Ved å bytte mellom de to, kan du animere at munnen
 åpner og lukker seg.</p>
-<pre><code class="blocks">    gjenta (8) ganger
-        vent (0.1) sekunder
-        bytt drakt til [munnLukket v]
-        vent (0.1) sekunder
-        bytt drakt til [munnÅpen v]
-    slutt
+<pre><code class="blocks">gjenta (8) ganger
+    vent (0.1) sekunder
+    bytt drakt til [munnLukket v]
+    vent (0.1) sekunder
+    bytt drakt til [munnÅpen v]
+slutt
 </code></pre>
 </li>
 <li>
 <p>For å koble de to skriptene sammen, kan du få
 <code class="blocklooks">si</code>-klossen til å sende en melding, som den andre
 blokken kan reagere på.</p>
-<pre><code class="blocks">    når [mellomrom v] trykkes
-    send melding [snakk v]
-    si [Hallo!] i (2) sekunder
+<pre><code class="blocks">når [mellomrom v] trykkes
+send melding [snakk v]
+si [Hallo!] i (2) sekunder
 
-    når jeg mottar [snakk v]
-    gjenta (8) ganger
-        vent (0.1) sekunder
-        bytt drakt til [munnLukket v]
-        vent (0.1) sekunder
-        bytt drakt til [munnÅpen v]
-    slutt
+når jeg mottar [snakk v]
+gjenta (8) ganger
+    vent (0.1) sekunder
+    bytt drakt til [munnLukket v]
+    vent (0.1) sekunder
+    bytt drakt til [munnÅpen v]
+slutt
 </code></pre>
 </li>
 <li>
 <p>For å gjøre det litt mer fleksibelt, bruk en variabel for å
 kontrollere <code class="blockdata">snakketid</code>, hvor lenge monsteret sier noe,
 og for å kontrollere hvor mange ganger animasjonsløkken er gjentatt.</p>
-<pre><code class="blocks">    når [mellomrom v] trykkes
-    sett [snakketid v] til [2]
-    send melding [snakk v]
-    si [Hallo!] i (snakketid) sekunder
+<pre><code class="blocks">når [mellomrom v] trykkes
+sett [snakketid v] til [2]
+send melding [snakk v]
+si [Hallo!] i (snakketid) sekunder
 
-    når [a v] trykkes
-    sett [snakketid v] til [4]
-    send melding [snakk v]
-    si [Noe litt lengre] i (snakketid) sekunder
+når [a v] trykkes
+sett [snakketid v] til [4]
+send melding [snakk v]
+si [Noe litt lengre] i (snakketid) sekunder
 
-    når jeg mottar [snakk v]
-    gjenta ((snakketid) * (4)) ganger
-        vent (0.1) sekunder
-        bytt drakt til [munnLukket v]
-        vent (0.1) sekunder
-        bytt drakt til [munnÅpen v]
-    slutt
+når jeg mottar [snakk v]
+gjenta ((snakketid) * (4)) ganger
+    vent (0.1) sekunder
+    bytt drakt til [munnLukket v]
+    vent (0.1) sekunder
+    bytt drakt til [munnÅpen v]
+slutt
 </code></pre>
 </li>
 </ul>
@@ -77,8 +77,8 @@ løkken gjentas nok ganger)</strong></p>
 <li>
 <p>Du kan også få monsteret ditt til å si lyder ved å bruke en av
 lydklossene. Husk å importere lydene under <code>Lyd</code>-fanen.</p>
-<pre><code class="blocks">    når jeg mottar [snakk v]
-    spill lyden [Screech v]
+<pre><code class="blocks">når jeg mottar [snakk v]
+spill lyden [Screech v]
 </code></pre>
 </li>
 </ul>

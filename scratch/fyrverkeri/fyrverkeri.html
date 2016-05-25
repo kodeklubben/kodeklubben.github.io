@@ -52,8 +52,8 @@ legge til en rakett-figur i prosjektet, <code>fyrverkeri_lydogbilder/rocket.png<
 <li>
 <p>Vi vil at raketten skal skjules når du klikker på det grønne
 flagget.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
 </code></pre>
 </li>
 </ul>
@@ -64,9 +64,9 @@ trykker på mellomromstasten.</p>
 <p>Legg til en kloss <code class="blockevents">når mellomrom trykkes</code>. Deretter
 lager vi to klosser som gjør raketten synlig og lar den bevege seg
 mot musepekeren.</p>
-<pre><code class="blocks">    når [mellomrom v] trykkes
-    vis
-    gli (1) sekunder til x: (mus x) y: (mus y)
+<pre><code class="blocks">når [mellomrom v] trykkes
+vis
+gli (1) sekunder til x: (mus x) y: (mus y)
 </code></pre>
 </li>
 </ul>
@@ -96,13 +96,13 @@ slik at raketten alltid flyr mot musepekeren fra bunnen av skjermen.</p>
 <p>Før du fyrer opp raketten: bruk klossen <code class="blockmotion">gå til</code> for å
 få raketten til å flytte seg til bunnen av skjermen, men slik at den
 er samme sted horisontalt.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
 
-    når [mellomrom v] trykkes
-    gå til x: (mus x) y: (-200)
-    vis
-    gli (1) sekunder til x: (mus x) y: (mus y)
+når [mellomrom v] trykkes
+gå til x: (mus x) y: (-200)
+vis
+gli (1) sekunder til x: (mus x) y: (mus y)
 </code></pre>
 </li>
 </ul>
@@ -132,15 +132,15 @@ inn i <code class="blockcontrol">for alltid</code>- og <code class="blockcontrol
 </li>
 <li>
 <p>Flytt skriptet fra <code class="blockevents">når mellomrom trykkes</code> til <code class="blockevents">når grønt flagg klikkes</code>, slik at det blir seende slik ut:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    for alltid
-        hvis &lt;museknappen er nede?&gt;
-            gå til x: (mus x) y: (-200)
-            vis
-            gli (1) sekunder til x: (mus x) y: (mus y)
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+for alltid
+    hvis &lt;museknappen er nede?&gt;
+        gå til x: (mus x) y: (-200)
+        vis
+        gli (1) sekunder til x: (mus x) y: (mus y)
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -184,35 +184,35 @@ den når musepekeren. For å importere en lyd gå til fanen
 <code class="blocklightgrey">Lyder</code> og klikk på <em>Last opp lyd fra fil</em>,
 <img src="../bilder/hent-fra-fil.png" alt="Last opp lyd fra fil">. Last opp
 lyden <code>fyrverkeri_lydogbilder/bang.wav</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    for alltid
-        hvis &lt;museknappen er nede?&gt;
-            gå til x: (mus x) y: (-200)
-            spill lyden [bang v]
-            vis
-            gli (1) sekunder til x: (mus x) y: (mus y)
-            skjul
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+for alltid
+    hvis &lt;museknappen er nede?&gt;
+        gå til x: (mus x) y: (-200)
+        spill lyden [bang v]
+        vis
+        gli (1) sekunder til x: (mus x) y: (mus y)
+        skjul
     slutt
+slutt
 </code></pre>
 </li>
 <li>
 <p>Neste steg er å få raketten til å sende en melding til resten av
 spillet når den eksploderer. Vi skal lytte etter meldingen
 senere. Lag en ny melding som heter <code>Eksploder</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    for alltid
-        hvis &lt;museknappen er nede?&gt;
-            gå til x: (mus x) y: (-200)
-            spill lyden [bang v]
-            vis
-            gli (1) sekunder til x: (mus x) y: (mus y)
-            skjul
-            send melding [Eksploder v]
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+for alltid
+    hvis &lt;museknappen er nede?&gt;
+        gå til x: (mus x) y: (-200)
+        spill lyden [bang v]
+        vis
+        gli (1) sekunder til x: (mus x) y: (mus y)
+        skjul
+        send melding [Eksploder v]
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -240,12 +240,12 @@ skjules akkurat samtidig som det smeller.</p>
 <li>
 <p>Når denne figuren får meldingen <code>Eksploder</code> passer vi på at den er
 gjemt, flytter den til raketten ved bruk av klossen <code class="blockmotion">gå til</code>, viser den og skjuler den igjen 1 sekund senere.</p>
-<pre><code class="blocks">    når jeg mottar [Eksploder v]
-    skjul
-    gå til x: ([x-posisjon v] av [rocket v]) y: ([y-posisjon v] av [rocket v])
-    vis
-    vent (1) sekunder
-    skjul
+<pre><code class="blocks">når jeg mottar [Eksploder v]
+skjul
+gå til x: ([x-posisjon v] av [rocket v]) y: ([y-posisjon v] av [rocket v])
+vis
+vent (1) sekunder
+skjul
 </code></pre>
 </li>
 </ul>
@@ -274,13 +274,13 @@ helt like ut.</em></p>
 <li>
 <p>Vi kan gjøre hver eksplosjon unik ved å bruke klossen <code class="blocklooks">sett fargeeffekt</code> og velge en tilfeldig farge før
 eksplosjonen vises.</p>
-<pre><code class="blocks">    når jeg mottar [Eksploder v]
-    skjul
-    sett [farge v] effekt til (tilfeldig tall fra (1) til (200))
-    gå til x: ([x-posisjon v] av [rocket v]) y: ([y-posisjon v] av [rocket v])
-    vis
-    vent (1) sekunder
-    skjul
+<pre><code class="blocks">når jeg mottar [Eksploder v]
+skjul
+sett [farge v] effekt til (tilfeldig tall fra (1) til (200))
+gå til x: ([x-posisjon v] av [rocket v]) y: ([y-posisjon v] av [rocket v])
+vis
+vent (1) sekunder
+skjul
 </code></pre>
 </li>
 <li>
@@ -318,18 +318,18 @@ passende sted i skriptet til Firework1.)</p>
 stedet for å vente i 1 sekund sett størrelsen til figuren til 5% før
 den vises, og etter at den blir synlig øk størrelsen med 5 tjue
 ganger ved bruk av klossen <code class="blockcontrol">gjenta</code>.</p>
-<pre><code class="blocks">    når jeg mottar [Eksploder v]
-    skjul
-    neste drakt
-    sett [farge v] effekt til (tilfeldig tall fra (1) til (200))
-    gå til x: ([x-posisjon v] av [rocket v]) y: ([y-posisjon v] av [rocket v])
-    sett størrelse til (5) %
-    vis
-    gjenta (20) ganger
-        endre størrelse med (5)
-    slutt
-    vent (1) sekunder
-    skjul
+<pre><code class="blocks">når jeg mottar [Eksploder v]
+skjul
+neste drakt
+sett [farge v] effekt til (tilfeldig tall fra (1) til (200))
+gå til x: ([x-posisjon v] av [rocket v]) y: ([y-posisjon v] av [rocket v])
+sett størrelse til (5) %
+vis
+gjenta (20) ganger
+    endre størrelse med (5)
+slutt
+vent (1) sekunder
+skjul
 </code></pre>
 </li>
 </ul>
@@ -372,18 +372,18 @@ programmer.</p>
 med <code class="blockevents">send melding og vent</code>. Da vil ikke løkken gjentas
 før den forrige eksplosjonen er ferdig. Gå tilbake til <code>rocket</code> og
 endre skriptet:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    for alltid
-        hvis &lt;museknappen er nede?&gt;
-            gå til x: (mus x) y: (-200)
-            spill lyden [bang v]
-            vis
-            gli (1.5) sekunder til x: (mus x) y: (mus y)
-            skjul
-            send melding [Eksploder v] og vent
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+for alltid
+    hvis &lt;museknappen er nede?&gt;
+        gå til x: (mus x) y: (-200)
+        spill lyden [bang v]
+        vis
+        gli (1.5) sekunder til x: (mus x) y: (mus y)
+        skjul
+        send melding [Eksploder v] og vent
     slutt
+slutt
 </code></pre>
 </li>
 </ul>

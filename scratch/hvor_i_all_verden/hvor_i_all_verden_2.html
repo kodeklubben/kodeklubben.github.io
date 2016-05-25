@@ -63,8 +63,8 @@ den ned på nytt fra <a href="europakart.png">europakart.png</a>.</p>
 <li>
 <p>For å være sikre på at denne figuren ligger bakerst som en bakgrunn
 kan vi starte med følgende kode:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå nedover (50) lag
+<pre><code class="blocks">når grønt flagg klikkes
+gå nedover (50) lag
 </code></pre>
 </li>
 <li>
@@ -72,7 +72,7 @@ kan vi starte med følgende kode:</p>
 Scratch en begrensning på hvor store figurer kan være. Du kan se
 dette om du først krysser av for at <code class="blocklooks">størrelse</code> skal
 vises på kart-figuren. Deretter kan du endre størrelsen med</p>
-<pre><code class="blocks">    sett størrelse til (9999) %
+<pre><code class="blocks">sett størrelse til (9999) %
 </code></pre>
 <p>Du vil se at størrelsen ikke blir satt til <code>9999</code>, men til et
 mindre tall. Legg på en kloss som setter så stor størrelse som
@@ -121,11 +121,11 @@ kartet.</p>
 <li>
 <p>Vi skal nå endre hva som skjer når du trykker på piltastene. I
 stedet for at helikopteret skal</p>
-<pre><code class="blocks">    gå (hastighet) steg
+<pre><code class="blocks">gå (hastighet) steg
 </code></pre>
 <p>vil vi endre <code class="blockdata">X</code> eller <code class="blockdata">Y</code> med
 <code class="blockdata">hastighet</code> eller med</p>
-<pre><code class="blocks">    ((0) - (hastighet))
+<pre><code class="blocks">((0) - (hastighet))
 </code></pre>
 <p>Oppdater alle fire hvis-løkkene på helikopteret.</p>
 </li>
@@ -159,11 +159,11 @@ oppover må vi flytte kartet nedover.</p>
 <ul>
 <li>
 <p>Legg til denne koden på kartet:</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    vis
-    for alltid
-        gå til x: ((0) - (X)) y: ((0) - (Y))
-    slutt
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+vis
+for alltid
+    gå til x: ((0) - (X)) y: ((0) - (Y))
+slutt
 </code></pre>
 </li>
 </ul>
@@ -201,7 +201,7 @@ slik at helikopteret ikke kan fly ut av kartet?</p>
 <p>Det er litt vanskelig å teste når vi har gjort reisemålet
 usynlig. Endre derfor på gjennomsiktigheten til sted-figuren. For
 eksempel kan du sette</p>
-<pre><code class="blocks">    sett [gjennomsiktig v] effekt til (50)
+<pre><code class="blocks">sett [gjennomsiktig v] effekt til (50)
 </code></pre>
 </li>
 <li>
@@ -213,20 +213,20 @@ skal gjelde kun for sted-figuren.</p>
 </li>
 <li>
 <p>Bytt ut</p>
-<pre><code class="blocks">    gå til x: (-98) y: (-120)
+<pre><code class="blocks">gå til x: (-98) y: (-120)
 </code></pre>
 <p>med kode som setter variablene i stedet:</p>
-<pre><code class="blocks">    sett [stedX v] til [-98]
-    sett [stedY v] til [-120]
+<pre><code class="blocks">sett [stedX v] til [-98]
+sett [stedY v] til [-120]
 </code></pre>
 </li>
 <li>
 <p>Vi kan nå lage en helt ny blokk som flytter stedet rundt på
 skjermen.</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    for alltid
-        gå til x: ((stedX) - (X)) y: ((stedY) - (Y))
-    slutt
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+for alltid
+    gå til x: ((stedX) - (X)) y: ((stedY) - (Y))
+slutt
 </code></pre>
 <p>Prøv spillet. Flytter den røde prikken seg rundt på kartet?</p>
 </li>
@@ -263,7 +263,7 @@ slik ut:</p>
 </li>
 <li>
 <p>Etter at du klikker <code>OK</code> dukker det opp en ny kloss på skjermen:</p>
-<pre><code class="blocks">    definer Reis til (sted) (x) (y)
+<pre><code class="blocks">definer Reis til (sted) (x) (y)
 </code></pre>
 <p>Under denne klossen kan vi definere hva funksjonen vår skal gjøre.</p>
 </li>
@@ -271,33 +271,33 @@ slik ut:</p>
 <p>Flytt skriptet ditt fra <code class="blockevents">Nytt sted</code>-blokken til den nye
 funksjonen, og endre litt - spesielt i variablene - slik at
 funksjonen din ser slik ut:</p>
-<pre><code class="blocks">    definer Reis til (sted) (x) (y)
-    sett [gjennomsiktig v] effekt til (100)
-    sett [stedX v] til (x)
-    sett [stedY v] til (y)
-    sett [Reis til v] til (sted)
-    vent til &lt;berører [Helikopter v]?&gt;
-    sett [gjennomsiktig v] effekt til (0)
-    si (sett sammen [Fant ] (sted))
-    gjenta (5) ganger
-        gjenta (10) ganger
-            endre størrelse med (10)
-        slutt
-        gjenta (10) ganger
-            endre størrelse med (-10)
-        slutt
+<pre><code class="blocks">definer Reis til (sted) (x) (y)
+sett [gjennomsiktig v] effekt til (100)
+sett [stedX v] til (x)
+sett [stedY v] til (y)
+sett [Reis til v] til (sted)
+vent til &lt;berører [Helikopter v]?&gt;
+sett [gjennomsiktig v] effekt til (0)
+si (sett sammen [Fant ] (sted))
+gjenta (5) ganger
+    gjenta (10) ganger
+        endre størrelse med (10)
     slutt
-    si []
+    gjenta (10) ganger
+        endre størrelse med (-10)
+    slutt
+slutt
+si []
 </code></pre>
 </li>
 <li>
 <p>Til slutt kan vi endre på <code class="blockevents">Nytt spill</code>-blokken slik at
 vi bruker den nye funksjonen. For eksempel</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    vis
-    Reis til [London] (-135) (-30) :: custom
-    Reis til [Oslo] (-30) (75) :: custom
-    Reis til [Barcelona] (-135) (-175) :: custom
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+vis
+Reis til [London] (-135) (-30) :: custom
+Reis til [Oslo] (-30) (75) :: custom
+Reis til [Barcelona] (-135) (-175) :: custom
 </code></pre>
 </li>
 <li>
@@ -307,7 +307,7 @@ reisemålet, vil det neste reisemålet bli funnet automatisk. Det er
 fordi vi ikke rekker å flytte sirkelen før vi tester om den berører
 helikopteret.</p>
 <p>Den enkleste måten å løse dette på er å legge på klossen</p>
-<pre><code class="blocks">    vent til &lt;ikke &lt;berører [Helikopter v]?&gt;&gt;
+<pre><code class="blocks">vent til &lt;ikke &lt;berører [Helikopter v]?&gt;&gt;
 </code></pre>
 <p>rett før vi venter til helikopteret berøres inne i funksjonen vår.</p>
 </li>

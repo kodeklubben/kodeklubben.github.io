@@ -43,8 +43,8 @@ figurene du vil!</p>
 <li>
 <p>La oss nå få en tilfeldig ting til å dukke opp på tavlen. Bruk dette
 skriptet.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt drakt til (tilfeldig tall fra (1) til (5))
+<pre><code class="blocks">når grønt flagg klikkes
+bytt drakt til (tilfeldig tall fra (1) til (5))
 </code></pre>
 </li>
 </ul>
@@ -82,15 +82,15 @@ synke. Poengvariabelen fungerer dermed som en slags tidteller.</p>
 </li>
 <li>
 <p>Endre skriptet slik:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt drakt til (tilfeldig tall fra (1) til (5))
-    sett [poeng v] til [110]
-    gjenta til &lt;(poeng) = [0]&gt;
-        endre [poeng v] med (-10)
-        sett [piksel v] effekt til (poeng)
-        sett [farge v] effekt til (poeng)
-        vent (1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+bytt drakt til (tilfeldig tall fra (1) til (5))
+sett [poeng v] til [110]
+gjenta til &lt;(poeng) = [0]&gt;
+    endre [poeng v] med (-10)
+    sett [piksel v] effekt til (poeng)
+    sett [farge v] effekt til (poeng)
+    vent (1) sekunder
+slutt
 </code></pre>
 </li>
 </ul>
@@ -153,16 +153,16 @@ variabelen ikke vises i spillet.</p>
 <p>Endre skriptet slik at det klarer å holde styr på hva som er rett
 svar.  Etter at vi har bestemt drakten legger du derfor til klossen
 <code class="blockdata">sett riktig til</code><code class="blocklooks">drakt nr.</code>:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt drakt til (tilfeldig tall fra (1) til (5))
-    sett [riktig v] til (drakt nr.)
-    sett [poeng v] til [110]
-    gjenta til &lt;(poeng) = [0]&gt;
-        endre [poeng v] med (-10)
-        sett [piksel v] effekt til (poeng)
-        sett [farge v] effekt til (poeng)
-        vent (1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+bytt drakt til (tilfeldig tall fra (1) til (5))
+sett [riktig v] til (drakt nr.)
+sett [poeng v] til [110]
+gjenta til &lt;(poeng) = [0]&gt;
+    endre [poeng v] med (-10)
+    sett [piksel v] effekt til (poeng)
+    sett [farge v] effekt til (poeng)
+    vent (1) sekunder
+slutt
 </code></pre>
 </li>
 </ul>
@@ -197,12 +197,12 @@ skal ha skript knyttet til seg.</p>
 <p>Nå må vi få alle figurene til å reagere når de blir klikket på. Hva
 som skal skje avhenger av om spilleren har klikket riktig eller
 galt. Legg til dette skriptet til <code>Svar1</code>:</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    hvis &lt;(riktig) = [1]&gt;
-        send melding [Vant v]
-    ellers
-        skjul
-    slutt
+<pre><code class="blocks">når denne figuren klikkes
+hvis &lt;(riktig) = [1]&gt;
+    send melding [Vant v]
+ellers
+    skjul
+slutt
 </code></pre>
 </li>
 <li>
@@ -212,8 +212,8 @@ kopi. For hver figur, bytt 1 til 2, 3, og så videre.</p>
 <li>
 <p>Nå skal vi lage skriptet som gir melding til spilleren når han har
 vunnet. Klikk på <code>Spørsmål</code> igjen og legg til dette skriptet:</p>
-<pre><code class="blocks">    når jeg mottar [Vant v]
-    si (sett sammen [Gratulerer! Din poengsum ble ] (poeng))
+<pre><code class="blocks">når jeg mottar [Vant v]
+si (sett sammen [Gratulerer! Din poengsum ble ] (poeng))
 </code></pre>
 </li>
 </ul>
@@ -245,8 +245,8 @@ at man har klikket på riktig svar.</p>
 <li>
 <p>For å fikse det første problemet kan vi bare legge til følgende
 skript for hver av de fem svarfigurene:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    vis
+<pre><code class="blocks">når grønt flagg klikkes
+vis
 </code></pre>
 </li>
 </ul>
@@ -266,22 +266,22 @@ poengsummen har blitt <code>0</code> eller <code class="blockdata">vant</code> e
 <p>Til slutt legger vi også inn en <code class="blocklooks">ta bort grafiske effekter</code>-kloss som avslører spørsmålsfiguren når
 spilleren har gjettet riktig. Skriptene på <code>Spørsmål</code> skal nå se
 slik ut:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt drakt til (tilfeldig tall fra (1) til (5))
-    sett [riktig v] til (drakt nr.)
-    sett [poeng v] til [110]
-    sett [vant v] til [0]
-    gjenta til &lt;&lt;(poeng) = [0]&gt; eller &lt;(vant) = [1]&gt;&gt;
-        endre [poeng v] med (-10)
-        sett [piksel v] effekt til (poeng)
-        sett [farge v] effekt til (poeng)
-        vent (1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+bytt drakt til (tilfeldig tall fra (1) til (5))
+sett [riktig v] til (drakt nr.)
+sett [poeng v] til [110]
+sett [vant v] til [0]
+gjenta til &lt;&lt;(poeng) = [0]&gt; eller &lt;(vant) = [1]&gt;&gt;
+    endre [poeng v] med (-10)
+    sett [piksel v] effekt til (poeng)
+    sett [farge v] effekt til (poeng)
+    vent (1) sekunder
+slutt
 
-    når jeg mottar [Vant v]
-    sett [vant v] til [1]
-    ta bort grafiske effekter
-    si (sett sammen [Gratulerer! Din poengsum ble] (poeng))
+når jeg mottar [Vant v]
+sett [vant v] til [1]
+ta bort grafiske effekter
+si (sett sammen [Gratulerer! Din poengsum ble] (poeng))
 </code></pre>
 </li>
 </ul>

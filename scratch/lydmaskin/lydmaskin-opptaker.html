@@ -19,23 +19,23 @@ function relative(url) {
 <li>
 <p>For hvert av instrumentene (tromme, piano, lyder etc.), må du legge
 til følgende i <code class="blockevents">når jeg mottar</code> klossen.</p>
-<pre><code class="blocks">    hvis &lt;(opptak) = [1]&gt;
-        legg (tid) til [timing v]
-        legg (katt) til [instrument v]
-    slutt
+<pre><code class="blocks">hvis &lt;(opptak) = [1]&gt;
+    legg (tid) til [timing v]
+    legg (katt) til [instrument v]
+slutt
 </code></pre>
 <p>Endre ordet <code>katt</code> i <code class="blocklist">legg katt til instrument</code> slik
 at det stemmer med navnet til meldingen som brukes for å spille
 denne lyden.</p>
-<pre><code class="blocks">    når jeg mottar [drum v]
-    trommeslag (48 v) som varer (0.2) takter
-    hvis &lt;(opptak) = [1]&gt;
-        legg (tid) til [timing v]
-        legg (katt) til [instrument v]
-    slutt
-    sett størrelse til (110) %
-    vent (0.1) sekunder
-    sett størrelse til (100) %
+<pre><code class="blocks">når jeg mottar [drum v]
+trommeslag (48 v) som varer (0.2) takter
+hvis &lt;(opptak) = [1]&gt;
+    legg (tid) til [timing v]
+    legg (katt) til [instrument v]
+slutt
+sett størrelse til (110) %
+vent (0.1) sekunder
+sett størrelse til (100) %
 </code></pre>
 </li>
 <li>
@@ -68,19 +68,19 @@ denne <code>Spill av</code>.</p>
 <li>
 <p>Nå må vi få avspillingen til å gjøre noe. Legg dette skriptet til
 <code>Spill av</code>.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    sett [recording v] til [0]
-    sett [index v] til [1]
-    nullstill klokka
-    for alltid
-        hvis &lt;(element (index) av [timing v]) &lt; (timer)&gt;
-            send melding (element (index) av [instrument v])
-            endre [index v] med (1)
-            hvis &lt;(index) &gt; (lengden av [timing v])&gt;
-                stopp [dette skriptet] :: control
-            slutt
+<pre><code class="blocks">når denne figuren klikkes
+sett [recording v] til [0]
+sett [index v] til [1]
+nullstill klokka
+for alltid
+    hvis &lt;(element (index) av [timing v]) &lt; (timer)&gt;
+        send melding (element (index) av [instrument v])
+        endre [index v] med (1)
+        hvis &lt;(index) &gt; (lengden av [timing v])&gt;
+            stopp [dette skriptet] :: control
         slutt
     slutt
+slutt
 </code></pre>
 </li>
 </ul>

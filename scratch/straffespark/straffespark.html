@@ -38,8 +38,8 @@ klikker på ham. Merk <code>Leo</code> i figurvinduet nederst på skjermen, og
 klikk <code>Skript</code>-fanen slik at du ser de forskjellige kommandoklossene
 igjen. Pusle deretter sammen de følgende klossene i skriptvinduet
 til høyre:</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    gå (10) steg
+<pre><code class="blocks">når denne figuren klikkes
+gå (10) steg
 </code></pre>
 </li>
 </ul>
@@ -68,8 +68,8 @@ ham dit du vil.</p>
 <p>Vi vil likevel programmere en enklere måte å få <code>Leo</code> tilbake på
 banen på. Lag et <strong>nytt</strong> skript, <strong>ved siden av</strong> det du allerede
 har laget, som ser slik ut:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-180) y: (-30)
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-180) y: (-30)
 </code></pre>
 </li>
 <li>
@@ -119,12 +119,12 @@ vi først fotballen på plass foran katten. Etter at ballen berører
 <code>Leo</code> (det vil si <code>Leo</code> sparker ballen) begynner ballen å bevege
 seg. Se om du kjenner igjen hvor i programmet de forskjellige
 tingene skjer:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-125) y: (-60)
-    vent til &lt;berører [Leo v]?&gt;
-    for alltid
-        gå (6) steg
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-125) y: (-60)
+vent til &lt;berører [Leo v]?&gt;
+for alltid
+    gå (6) steg
+slutt
 </code></pre>
 </li>
 </ul>
@@ -169,13 +169,13 @@ figuren under.</p>
 </li>
 <li>
 <p>Lag det følgende programmet for keeperen:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (100) y: (-50)
-    pek i retning (0 v)
-    for alltid
-        gå (15) steg
-        sprett tilbake ved kanten
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (100) y: (-50)
+pek i retning (0 v)
+for alltid
+    gå (15) steg
+    sprett tilbake ved kanten
+slutt
 </code></pre>
 <p>Det er et par nye klosser i dette skriptet. Les programmet nøye. Hva
 tror du de nye klossene gjør?</p>
@@ -238,16 +238,16 @@ eller når ballen går i mål.</p>
 <p>Vi begynner med å finne ut når keeperen redder ballen. Klikk på
 <code>Ball</code>. Legg til en <code class="blockcontrol">hvis ellers</code>-kloss i skriptet
 slik:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-125) y: (-60)
-    vent til &lt;berører [Leo v]?&gt;
-    for alltid
-        gå (6) steg
-        hvis &lt;berører [Keeper v]?&gt;
-            send melding [Redning v]
-        ellers
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-125) y: (-60)
+vent til &lt;berører [Leo v]?&gt;
+for alltid
+    gå (6) steg
+    hvis &lt;berører [Keeper v]?&gt;
+        send melding [Redning v]
+    ellers
     slutt
+slutt
 </code></pre>
 <p>I klossen <code class="b">send melding [message1 v]</code> må du velge <code>Ny melding</code> og
 deretter skrive inn <code>Redning</code> som meldingsnavn.</p>
@@ -261,8 +261,8 @@ reagere på ting som skjer.</p>
 <p>Vi vil nå at både ballen og keeperen skal slutte å bevege seg ved en
 redning. Legg til dette som et nytt skript på både <code>Ball</code> og
 <code>Keeper</code>:</p>
-<pre><code class="blocks">    når jeg mottar [Redning v]
-    stopp [andre skript i figuren v] :: control
+<pre><code class="blocks">når jeg mottar [Redning v]
+stopp [andre skript i figuren v] :: control
 </code></pre>
 <p>Et triks er å først skrive denne koden for <code>Ball</code>. Deretter kan du
 kopiere den til <code>Keeper</code> ved å dra koden til <code>Keeper</code>-figuren i
@@ -293,33 +293,33 @@ og <code>y</code>. Disse viser koordinatene til musepekeren.</p>
 at den blir reddet. Om du prøver å peke på målstangen med
 musepekeren ser du at den står omtrent ved <code>x</code> lik 160. Utvid
 skriptet på ballen videre slik at det blir seende slik ut:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-125) y: (-60)
-    vent til &lt;berører [Leo v]?&gt;
-    for alltid
-        gå (6) steg
-        hvis &lt;berører [Keeper v]?&gt;
-            send melding [Redning v]
-        ellers
-            hvis &lt;(x-posisjon) &gt; [160]&gt;
-                send melding [Mål v]
-            slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-125) y: (-60)
+vent til &lt;berører [Leo v]?&gt;
+for alltid
+    gå (6) steg
+    hvis &lt;berører [Keeper v]?&gt;
+        send melding [Redning v]
+    ellers
+        hvis &lt;(x-posisjon) &gt; [160]&gt;
+            send melding [Mål v]
         slutt
     slutt
+slutt
 </code></pre>
 </li>
 <li>
 <p>På samme måte som for redning kan vi avslutte bevegelsen til <code>Ball</code>
 og <code>Keeper</code> ved å lage dette skriptet på begge figurene:</p>
-<pre><code class="blocks">    når jeg mottar [Mål v]
-    stopp [andre skript i figuren v] :: control
+<pre><code class="blocks">når jeg mottar [Mål v]
+stopp [andre skript i figuren v] :: control
 </code></pre>
 </li>
 <li>
 <p>Vi kan også la <code>Leo</code> juble litt når han scorer mål. Klikk på
 kattefiguren og gi ham følgende skript:</p>
-<pre><code class="blocks">    når jeg mottar [Mål v]
-    si [Ja, det ble mål!!] i (2) sekunder
+<pre><code class="blocks">når jeg mottar [Mål v]
+si [Ja, det ble mål!!] i (2) sekunder
 </code></pre>
 </li>
 <li>
@@ -373,8 +373,8 @@ tallet <code class="blockdata">0</code>.</p>
 <p>Vi vil nå telle målene. Lag et nytt skript som endrer <code class="b">(Mål)</code>
 hver gang meldingen <code>Mål</code> sendes, ved å lage dette skriptet på
 Scenen:</p>
-<pre><code class="blocks">    når jeg mottar [Mål v]
-    endre [Mål v] med (1)
+<pre><code class="blocks">når jeg mottar [Mål v]
+endre [Mål v] med (1)
 </code></pre>
 </li>
 <li>
@@ -383,8 +383,8 @@ variabel som heter <code class="b">(Redninger)</code>.</p>
 </li>
 <li>
 <p>Lag deretter et nytt skript for å telle redningene:</p>
-<pre><code class="blocks">    når jeg mottar [Redning v]
-    endre [Redninger v] med (1)
+<pre><code class="blocks">når jeg mottar [Redning v]
+endre [Redninger v] med (1)
 </code></pre>
 </li>
 </ul>
@@ -426,54 +426,54 @@ bakgrunnen <code>Tap</code> og skriv også her en passende tekst.</p>
 <li>
 <p>Lag et skript på bakgrunnen som setter variabelene dine til 0 ved
 begynnelsen av spillet.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [Mål v] til [0]
-    sett [Redninger v] til [0]
-    bytt bakgrunn til [goal1]
-    send melding [Nytt spark v]
+<pre><code class="blocks">når grønt flagg klikkes
+sett [Mål v] til [0]
+sett [Redninger v] til [0]
+bytt bakgrunn til [goal1]
+send melding [Nytt spark v]
 </code></pre>
 </li>
 <li>
 <p>Vi vil nå spille uten at vi må klikke på det grønne flagget for hver
 gang vi skal skyte et straffespark. Til dette bruker vi meldingen
 <code>Nytt spark</code>. Vi må nå bytte ut</p>
-<pre><code class="blocks">    når grønt flagg klikkes
+<pre><code class="blocks">når grønt flagg klikkes
 </code></pre>
 <p>med</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spark v]
+<pre><code class="blocks">når jeg mottar [Nytt spark v]
 </code></pre>
 <p>på både <code>Leo</code>, <code>Ball</code> og <code>Keeper</code>. For eksempel, på <code>Leo</code> blir
 skriptet seende slik ut:</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spark v]
-    gå til x: (-180) y: (-30)
+<pre><code class="blocks">når jeg mottar [Nytt spark v]
+gå til x: (-180) y: (-30)
 </code></pre>
 </li>
 <li>
 <p>Til slutt legger vi på testen om vi har scoret 10 mål, eller om
 keeperen har reddet 10 ganger. Endre <code>Mål</code>-skriptet på scenen slik
 at det blir seende slik ut:</p>
-<pre><code class="blocks">    når jeg mottar [Mål v]
-    endre [Mål v] med (1)
-    vent (2) sekunder
-    hvis &lt;(Mål) &lt; [10]&gt;
-        send melding [Nytt spark v]
-    ellers
-        bytt bakgrunn til [Seier v]
-        stopp [alle v] :: control
-    slutt
+<pre><code class="blocks">når jeg mottar [Mål v]
+endre [Mål v] med (1)
+vent (2) sekunder
+hvis &lt;(Mål) &lt; [10]&gt;
+    send melding [Nytt spark v]
+ellers
+    bytt bakgrunn til [Seier v]
+    stopp [alle v] :: control
+slutt
 </code></pre>
 </li>
 <li>
 <p>På samme måte endrer du <code>Redning</code>-skriptet på scenen:</p>
-<pre><code class="blocks">    når jeg mottar [Redning v]
-    endre [Redninger v] med (1)
-    vent (2) sekunder
-    hvis &lt;(Redninger) &lt; [10]&gt;
-        send melding [Nytt spark v]
-    ellers
-        bytt bakgrunn til [Tap v]
-        stopp [alle v] :: control
-    slutt
+<pre><code class="blocks">når jeg mottar [Redning v]
+endre [Redninger v] med (1)
+vent (2) sekunder
+hvis &lt;(Redninger) &lt; [10]&gt;
+    send melding [Nytt spark v]
+ellers
+    bytt bakgrunn til [Tap v]
+    stopp [alle v] :: control
+slutt
 </code></pre>
 </li>
 </ul>

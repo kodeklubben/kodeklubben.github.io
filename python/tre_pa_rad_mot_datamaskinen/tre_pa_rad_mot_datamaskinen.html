@@ -173,11 +173,11 @@ mainloop()
     draw_shape(<span class="hljs-string">"X"</span>, across, down)
 </code></pre>
 <p>Først bruker vi <code>free_squares</code> til å lage en liste over de tomme rutene. Deretter velger vi en tilfeldig av disse rutene. Vi vil nå oversette dette rutenummeret til rad- og kolonne-nummer. Dette gjør vi ved å bruke <code>%</code> og <code>//</code> operatorene. La oss se litt nærmere på hvordan dette virker:</p>
-<pre><code>     <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
-     -----
- <span class="hljs-number">0</span> | <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
- <span class="hljs-number">1</span> | <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
- <span class="hljs-number">2</span> | <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span>
+<pre><code>    <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+    -----
+<span class="hljs-number">0</span> | <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span>
+<span class="hljs-number">1</span> | <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
+<span class="hljs-number">2</span> | <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span>
 </code></pre>
 <p>For eksempel er rute nummer 5 i rad 1 og kolonne 2. Hvis vi deler 5 på 3 får vi 1 med 2 i rest.</p>
 <p><code>5 // 3</code> er 1, <code>6 // 3</code> er 2, og så videre. Operatoren <code>//</code> forteller oss hvor mange ganger et tall deler et annet, men ser bort i fra resten. Siden vi har 3 kolonner forteller <code>5 // 3</code> oss i hvilken rad rute 5 er.</p>

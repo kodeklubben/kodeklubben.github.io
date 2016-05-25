@@ -27,10 +27,10 @@ programmert!</p>
 <li>
 <p>Prøv å klikk på de blå klossene midt på skjermen. For eksempel, om
 du klikker på</p>
-<pre><code class="blocks">    gå (10) steg
+<pre><code class="blocks">gå (10) steg
 </code></pre>
 <p>skal du se at katten flytter litt på seg, og om du klikker på</p>
-<pre><code class="blocks">    vend høyre (15) grader
+<pre><code class="blocks">vend høyre (15) grader
 </code></pre>
 <p>vil den snu seg! Disse klossene er kommandoer vi kan gi til
 katten!</p>
@@ -46,11 +46,11 @@ kategoriene og prøv noen av klossene du finner!</p>
 til det store tomme området til høyre på skjermen.</p>
 <p>Prøv å pusle sammen disse klossene (bruk fargene for å finne
 riktig kategori):</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå (10) steg
-        vend høyre (15) grader
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå (10) steg
+    vend høyre (15) grader
+slutt
 </code></pre>
 </li>
 </ul>
@@ -80,18 +80,18 @@ katten beveger seg. I kategorien <code class="blocksensing">Sansning</code> finn
 kloss som reagerer når en tast er trykket. Den kan vi bruke til å
 styre katten med piltastene.</p>
 <p>Bytt ut klossene i koden din slik at den blir seende slik ut:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        hvis &lt;tast [pil høyre v] trykket?&gt;
-            vend høyre (5) grader
-        slutt
-        hvis &lt;tast [pil venstre v] trykket?&gt;
-            vend venstre (5) grader
-        slutt
-        hvis &lt;tast [pil opp v] trykket?&gt;
-            gå (5) steg
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    hvis &lt;tast [pil høyre v] trykket?&gt;
+        vend høyre (5) grader
     slutt
+    hvis &lt;tast [pil venstre v] trykket?&gt;
+        vend venstre (5) grader
+    slutt
+    hvis &lt;tast [pil opp v] trykket?&gt;
+        gå (5) steg
+    slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -160,10 +160,10 @@ realistisk.</p>
 <p>Først kan vi få jordkloden til å rotere. Dette er enkelt, vi har jo
 allerede gjort det for katten! Pass på at jordkloden er merket i
 figurlisten, og lag deretter dette skriptet:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        vend høyre (1) grader
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    vend høyre (1) grader
+slutt
 </code></pre>
 </li>
 <li>
@@ -173,19 +173,19 @@ jo nærmere den kommer jordkloden.</p>
 <p>Klikk på katten i figurlisten. Legg <code class="blocklooks">sett størrelse til</code> nederst i <code class="blockcontrol">for alltid</code>-løkka,
 slik at størrelsen på katten er avhengig av avstanden til
 jordkloden:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        hvis &lt;tast [pil høyre v] trykket?&gt;
-            vend høyre (5) grader
-        slutt
-        hvis &lt;tast [pil venstre v] trykket?&gt;
-            vend venstre (5) grader
-        slutt
-        hvis &lt;tast [pil opp v] trykket?&gt;
-            gå (5) steg
-        slutt
-        sett størrelse til (avstand til [Earth v])%
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    hvis &lt;tast [pil høyre v] trykket?&gt;
+        vend høyre (5) grader
     slutt
+    hvis &lt;tast [pil venstre v] trykket?&gt;
+        vend venstre (5) grader
+    slutt
+    hvis &lt;tast [pil opp v] trykket?&gt;
+        gå (5) steg
+    slutt
+    sett størrelse til (avstand til [Earth v])%
+slutt
 </code></pre>
 </li>
 </ul>
@@ -209,10 +209,10 @@ jordkloden:</p>
 <p>For å gjøre det enda mer realistisk vil vi forandre hvor langt
 katten flytter seg med. Når den er langt unna oss flytter den seg
 ikke like mange steg. Bytt ut</p>
-<pre><code class="blocks">    gå (5) steg
+<pre><code class="blocks">gå (5) steg
 </code></pre>
 <p>med</p>
-<pre><code class="blocks">    gå ((avstand til [Earth v]) / (50)) steg
+<pre><code class="blocks">gå ((avstand til [Earth v]) / (50)) steg
 </code></pre>
 <p>Denne klossen er litt komplisert fordi den er satt sammen av tre
 forskjellige klosser. Se på fargene så finner du de riktige
@@ -250,12 +250,12 @@ med. Vi kan la astrokatten vår bli påvirket av gravitasjonen også.</p>
 <li>
 <p>Lag et nytt skript på katten. Du kan bare legge klossene ved siden
 av det skriptet du allerede har laget. Skriptet skal se slik ut:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-200) y: (150)
-    for alltid
-        pek mot [Earth v]
-        gå (1) steg
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-200) y: (150)
+for alltid
+    pek mot [Earth v]
+    gå (1) steg
+slutt
 </code></pre>
 </li>
 <li>
@@ -281,14 +281,14 @@ på <code>Lag en variabel</code>. Kall variabelen <code>katteretning</code>.</p>
 <li>
 <p>Vi kan nå bruke denne variabelen til å huske hvilken retning katten
 pekte. Endre skriptet ditt ved å legge til to nye klosser:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    gå til x: (-200) y: (150)
-    for alltid
-        sett [katteretning v] til (retning)
-        pek mot [Earth v]
-        gå (1) steg
-        pek i retning (katteretning)
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+gå til x: (-200) y: (150)
+for alltid
+    sett [katteretning v] til (retning)
+    pek mot [Earth v]
+    gå (1) steg
+    pek i retning (katteretning)
+slutt
 </code></pre>
 </li>
 </ul>

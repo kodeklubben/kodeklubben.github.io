@@ -47,11 +47,11 @@ dem.</em></p>
 </li>
 <li>
 <p>Legg til dette skriptet:</p>
-<pre><code class="blocks">    Når grønt flagg klikkes
-    for alltid
-        neste drakt
-        vent (0.5) sekunder
-    slutt
+<pre><code class="blocks">Når grønt flagg klikkes
+for alltid
+    neste drakt
+    vent (0.5) sekunder
+slutt
 </code></pre>
 </li>
 <li>
@@ -93,19 +93,19 @@ avhukingen foran variabelen slik at den ikke vises på scenen.</p>
 <li>
 <p>På starten av spillet vil ikke figuren ha blitt klikket så da setter
 vi variabelen til <code>0</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [stoppet v] til [0]
-    for alltid
-        neste drakt
-        vent (0.5) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+sett [stoppet v] til [0]
+for alltid
+    neste drakt
+    vent (0.5) sekunder
+slutt
 </code></pre>
 </li>
 <li>
 <p>Nå vil vi sette variabelen <code class="blockdata">stoppet</code> til <code>1</code> når noen
 klikker på figuren.</p>
-<pre><code class="blocks">    når denne figuren klikkes
-    sett [stoppet v] til [1]
+<pre><code class="blocks">når denne figuren klikkes
+sett [stoppet v] til [1]
 </code></pre>
 </li>
 <li>
@@ -114,14 +114,14 @@ variabelen <code class="blockdata">stoppet</code> blir <code>1</code>. Legg til 
 <code class="blockcontrol">hvis</code>-løkke og bruk en <code class="blockoperators">_ = _</code>
 operator-kloss for å sjekke om <code class="blockdata">stoppet</code> fremdeles er
 <code>0</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [stoppet v] til [0]
-    for alltid
-        hvis &lt;(stoppet) = [0]&gt;
-            neste drakt
-            vent (0.5) sekunder
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+sett [stoppet v] til [0]
+for alltid
+    hvis &lt;(stoppet) = [0]&gt;
+        neste drakt
+        vent (0.5) sekunder
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -198,15 +198,15 @@ til en <code class="blocklooks">bytt drakt til</code>-kloss med <code class="blo
 <li>
 <p>Vi kan også bruke den samme klossen i <code class="blockcontrol">for alltid</code>-løkken slik at figuren skifter til en ulik
 drakt hver gang den forandres.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    sett [stoppet v] til [0]
-    bytt drakt til (tilfeldig tall fra (1) til (3))
-    for alltid
-        hvis &lt;(stoppet) = [0]&gt;
-            bytt drakt til (tilfeldig tall fra (1) til (3))
-            vent (0.5) sekunder
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+sett [stoppet v] til [0]
+bytt drakt til (tilfeldig tall fra (1) til (3))
+for alltid
+    hvis &lt;(stoppet) = [0]&gt;
+        bytt drakt til (tilfeldig tall fra (1) til (3))
+        vent (0.5) sekunder
     slutt
+slutt
 </code></pre>
 </li>
 <li>
@@ -275,10 +275,10 @@ hadde blitt klikket på. La oss sjekke
 <code class="blockdata">stoppet</code>-variabelen for <code>Figur3</code> for å se om den er
 klikket. For å gjøre dette bruker vi en <code class="blocksensing">x-posisjon av Figur3</code>-kloss fra <code class="blocksensing">Sansning</code>, men hvor
 vi bytter ut <code>x-posisjon</code> med <code>stoppet</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt bakgrunn til [Spill v]
-    vent til &lt;([stoppet v] av [Figur3 v])  = [1]&gt;
-    bytt bakgrunn til [Slutt v]
+<pre><code class="blocks">når grønt flagg klikkes
+bytt bakgrunn til [Spill v]
+vent til &lt;([stoppet v] av [Figur3 v])  = [1]&gt;
+bytt bakgrunn til [Slutt v]
 </code></pre>
 </li>
 </ul>
@@ -308,10 +308,10 @@ rekkefølge figurene stoppes i.</p>
 kan være litt trøblete å lage, så forsøk å gjøre ett steg av
 gangen. Legg merke til at vi har satt sammen to
 <code class="blockoperators">og</code>-klosser, tre <code class="blockoperators">_ = _</code>-operatorer og tre <code class="blocksensing">stoppet av Figur</code>-klosser.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt bakgrunn til [Spill v]
-    vent til &lt; &lt; &lt;([stoppet v] av [Figur1 v]) = [1]&gt; og &lt;([stoppet v] av [Figur2 v]) = [1]&gt; &gt; og &lt;([stoppet v] av [Figur3 v]) = [1]&gt; &gt;
-    bytt bakgrunn til [Slutt v]
+<pre><code class="blocks">når grønt flagg klikkes
+bytt bakgrunn til [Spill v]
+vent til &lt; &lt; &lt;([stoppet v] av [Figur1 v]) = [1]&gt; og &lt;([stoppet v] av [Figur2 v]) = [1]&gt; &gt; og &lt;([stoppet v] av [Figur3 v]) = [1]&gt; &gt;
+bytt bakgrunn til [Slutt v]
 </code></pre>
 </li>
 </ul>
@@ -357,14 +357,14 @@ nummer). Vi bruker en kloss som ligner på <code class="blocksensing">x-posisjon
 istedet for å se på <code class="blockdata">stoppet</code>-variabelen, skal vi sjekke
 <code>drakt nr.</code> og se om <code>Figur1</code> har samme drakt som <code>Figur2</code> og om
 <code>Figur2</code> har samme drakt som <code>Figur3</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    bytt bakgrunn til [Spill v]
-    vent til &lt; &lt; &lt;([stoppet v] av [Figur1 v]) = [1]&gt; og &lt;([stoppet v] av [Figur2 v]) = [1]&gt; &gt; og &lt;([stoppet v] av [Figur3 v]) = [1]&gt; &gt;
-    hvis &lt;&lt;([drakt nr. v]  av [Figur1 v]) = ([drakt nr. v]  av [Figur2 v])&gt; og &lt;([drakt nr. v]  av [Figur2 v]) = ([drakt nr. v] av [Figur3 v])&gt;&gt;
-        bytt bakgrunn til [Vinner v]
-    ellers
-        bytt bakgrunn til [Taper v]
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+bytt bakgrunn til [Spill v]
+vent til &lt; &lt; &lt;([stoppet v] av [Figur1 v]) = [1]&gt; og &lt;([stoppet v] av [Figur2 v]) = [1]&gt; &gt; og &lt;([stoppet v] av [Figur3 v]) = [1]&gt; &gt;
+hvis &lt;&lt;([drakt nr. v]  av [Figur1 v]) = ([drakt nr. v]  av [Figur2 v])&gt; og &lt;([drakt nr. v]  av [Figur2 v]) = ([drakt nr. v] av [Figur3 v])&gt;&gt;
+    bytt bakgrunn til [Vinner v]
+ellers
+    bytt bakgrunn til [Taper v]
+slutt
 </code></pre>
 </li>
 </ul>

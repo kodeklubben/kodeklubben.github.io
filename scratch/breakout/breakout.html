@@ -67,19 +67,19 @@ mange bokser vi har slik at vi senere kan sjekke om vi har skutt ned
 alle. Lag derfor en variabel <code class="blockdata">Antall bokser</code> som gjelder
 for alle figurer. I denne koden må du kanskje endre de forskjellige
 tallene litt, slik at de passer størrelsen på din boks.</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    skjul
-    sett [Antall bokser v] til [0]
-    sett y til (160)
-    gjenta (5) ganger
-        sett x til (-200)
-        gjenta (11) ganger
-            endre [Antall bokser v] med (1)
-            lag klon av [meg v]
-            endre x med (40)
-        slutt
-        endre y med (-25)
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+skjul
+sett [Antall bokser v] til [0]
+sett y til (160)
+gjenta (5) ganger
+    sett x til (-200)
+    gjenta (11) ganger
+        endre [Antall bokser v] med (1)
+        lag klon av [meg v]
+        endre x med (40)
     slutt
+    endre y med (-25)
+slutt
 </code></pre>
 </li>
 <li>
@@ -87,11 +87,11 @@ tallene litt, slik at de passer størrelsen på din boks.</p>
 starter når klonen lages. Siden vi enda ikke har en ball, lager vi
 et enkelt skript hvor hver boks (det vil her si alle boksene) blir
 borte når mellomrom trykkes.</p>
-<pre><code class="blocks">    når jeg starter som klon
-    vis
-    vent til &lt;tast [mellomrom v] trykket?&gt;
-    endre [Antall bokser v] med (-1)
-    slett denne klonen
+<pre><code class="blocks">når jeg starter som klon
+vis
+vent til &lt;tast [mellomrom v] trykket?&gt;
+endre [Antall bokser v] med (-1)
+slett denne klonen
 </code></pre>
 <p>Etter at vi har laget en ball og en racket skal vi oppdatere denne
 koden slik at boksene i stedet forsvinner når de blir truffet av
@@ -150,8 +150,8 @@ du legge til en <code class="blockcontrol">hvis</code>-test hvor du sender en
 <li>
 <p>Ballen må svare på denne meldingen ved å endre retning, for eksempel
 med kode som ser omtrent ut som følger:</p>
-<pre><code class="blocks">    når jeg mottar [Sprett horisontalt v]
-    pek i retning ((180) - (retning))
+<pre><code class="blocks">når jeg mottar [Sprett horisontalt v]
+pek i retning ((180) - (retning))
 </code></pre>
 </li>
 </ul>
@@ -253,10 +253,10 @@ boksene gi forskjellige poeng eller bonuser.</p>
 forskjellige boksene som forskjellige drakter. Deretter kan du
 lage en <code class="blockdata">brett</code>-variabel som lister opp hvilken
 drakt hver boks skal bruke. For eksempel kan denne se slik ut:</p>
-<pre><code class="blocks">    sett [brett v] til [1111111111111222222211112233322111122222221111111111111]
+<pre><code class="blocks">sett [brett v] til [1111111111111222222211112233322111122222221111111111111]
 </code></pre>
 <p>Denne kan så brukes når du setter ut boksene omtrent som dette:</p>
-<pre><code class="blocks">    bytt drakt til (bokstav (antall bokser) i (brett))
+<pre><code class="blocks">bytt drakt til (bokstav (antall bokser) i (brett))
 </code></pre>
 <p>Videre i spillet kan du teste på <code class="blocklooks">drakt nr.</code> for å
 vite hvilken type boks du har med å gjøre.</p>

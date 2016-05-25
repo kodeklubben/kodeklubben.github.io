@@ -44,13 +44,13 @@ Felixa. Izaberi pozadinu i zatim pritisni OK.</p>
 <li>
 <p>Pritisni na Felixa, odaberi karticu <code>Skripte</code> i programiraj program
 ispod:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
-    ponavljaj  :: cstart control
-        okreni se k [strelice misa v]  :: motion
-        idi (10) koraka  :: motion
-        sljedeći kostim  :: looks
-        bubnjaj po (3 v) (0.25) puta  :: sound
-    end
+<pre><code class="blocks">kada je ⚑ kliknut  :: hat events
+ponavljaj  :: cstart control
+    okreni se k [strelice misa v]  :: motion
+    idi (10) koraka  :: motion
+    sljedeći kostim  :: looks
+    bubnjaj po (3 v) (0.25) puta  :: sound
+end
 </code></pre>
 </li>
 </ul>
@@ -104,11 +104,11 @@ iznad Felixa. Izaberi kategoriju <code>Životinje</code> i <code>Mouse1</code>
 <li>
 <p>Pritisni na Herberta, odaberi karticu <code>Skripte</code> i programiraj
 program ispod:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
-    ponavljaj  :: cstart control
-        idi do [strelice misa v]  :: motion
-        okreni se k [Felix v]  :: motion
-    end
+<pre><code class="blocks">kada je ⚑ kliknut  :: hat events
+ponavljaj  :: cstart control
+    idi do [strelice misa v]  :: motion
+    okreni se k [Felix v]  :: motion
+end
 </code></pre>
 </li>
 </ul>
@@ -133,16 +133,16 @@ program ispod:</p>
 <ul>
 <li>
 <p>Promjeni <code>Skripte</code> od Felixa tako da bude isti kao program ispod:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
-    ponavljaj  :: cstart control
-        okreni se k [strelice misa v]  :: motion
-        idi (10) koraka  :: motion
-        sljedeći kostim  :: looks
-        bubnjaj po (3 v) (0.25) puta  :: sound
-        ako (dodiruje [Herbert v]? :: sensing) onda  :: cstart control
-            govori [Uhvatio sam te!] (1) sekundi  :: looks
-        end
+<pre><code class="blocks">kada je ⚑ kliknut  :: hat events
+ponavljaj  :: cstart control
+    okreni se k [strelice misa v]  :: motion
+    idi (10) koraka  :: motion
+    sljedeći kostim  :: looks
+    bubnjaj po (3 v) (0.25) puta  :: sound
+    ako (dodiruje [Herbert v]? :: sensing) onda  :: cstart control
+        govori [Uhvatio sam te!] (1) sekundi  :: looks
     end
+end
 </code></pre>
 </li>
 </ul>
@@ -163,18 +163,18 @@ program ispod:</p>
 <li>
 <p>Promjeni <code>Skripte</code> od Felixa tako da program pošalje poruku da je
 Herbert uhvačen:</p>
-<pre><code class="blocks">  kada je ⚑ kliknut  :: hat events
-  ponavljaj  :: cstart control
-      okreni se k [strelice misa v]  :: motion
-      idi (10) koraka  :: motion
-      sljedeći kostim  :: looks
-      bubnjaj po (3 v) (0.25) puta  :: sound
-      ako (dodiruje [Herbert v]? :: sensing) onda  :: cstart control
-          pošalji [Uhvatio v]  :: events
-          govori [Uhvatio sam te!] (1) sekundi  :: looks
-          čekaj (1) sekundi  :: control
-      end
-  end
+<pre><code class="blocks">kada je ⚑ kliknut  :: hat events
+ponavljaj  :: cstart control
+    okreni se k [strelice misa v]  :: motion
+    idi (10) koraka  :: motion
+    sljedeći kostim  :: looks
+    bubnjaj po (3 v) (0.25) puta  :: sound
+    ako (dodiruje [Herbert v]? :: sensing) onda  :: cstart control
+        pošalji [Uhvatio v]  :: events
+        govori [Uhvatio sam te!] (1) sekundi  :: looks
+        čekaj (1) sekundi  :: control
+    end
+end
 </code></pre>
 </li>
 <li>
@@ -193,10 +193,10 @@ kostim <code>Duh</code>.</p>
 </li>
 <li>
 <p>Pritisni na <code>Skripte</code> i dodaj ovaj program. Zadrži stari program.</p>
-<pre><code class="blocks">    kada primim [Uhvatio v]  :: hat events
-    promijeni kostim u [Duh v]  :: looks
-    čekaj (0.5) sekundi  :: control
-    promijeni kostim u [Živ v]  :: looks
+<pre><code class="blocks">kada primim [Uhvatio v]  :: hat events
+promijeni kostim u [Duh v]  :: looks
+čekaj (0.5) sekundi  :: control
+promijeni kostim u [Živ v]  :: looks
 </code></pre>
 </li>
 </ul>
@@ -235,15 +235,15 @@ važe za sve likove (figure). Pritisni OK.</p>
 <li>
 <p>Pritisni na <code>Pozornica</code> lijevo od Felixa. Izaberi <code>Skripte</code> i dodaj
 ova dva programa:</p>
-<pre><code class="blocks">    kada je ⚑ kliknut  :: hat events
-    postavi [Bodovi v] na [0]  :: variables
-    ponavljaj  :: cstart control
-        čekaj (1) sekundi  :: control
-        promijeni [Bodovi v] za (1)  :: variables
-    end
+<pre><code class="blocks">kada je ⚑ kliknut  :: hat events
+postavi [Bodovi v] na [0]  :: variables
+ponavljaj  :: cstart control
+    čekaj (1) sekundi  :: control
+    promijeni [Bodovi v] za (1)  :: variables
+end
 
-    kada primim [Uhvatio v]  :: hat events
-    promijeni [Bodovi v] za (-10)  :: variables
+kada primim [Uhvatio v]  :: hat events
+promijeni [Bodovi v] za (-10)  :: variables
 </code></pre>
 </li>
 </ul>

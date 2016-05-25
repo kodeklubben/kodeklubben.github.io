@@ -40,9 +40,9 @@ spøkelsesfiguren din. Gi den navnet <code>Spøkelse</code>.</p>
 <p>Nå skal vi lage et enkelt skript som får spøkelset til å fly over
 skjermen. Bygg sammen en <code class="blockcontrol">gjenta</code>- og en
 <code class="blockmotion">gå</code>-kloss på denne måten:</p>
-<pre><code class="blocks">    gjenta (200) ganger
-        gå (5) steg
-    slutt
+<pre><code class="blocks">gjenta (200) ganger
+    gå (5) steg
+slutt
 </code></pre>
 </li>
 <li>
@@ -53,10 +53,10 @@ ditt på seg? Ser du et problem?</p>
 <p>Spøkelset ser ut som om det setter seg fast når det kommer til
 kanten! Dette kan vi fikse med en
 <code class="blockmotion">sprett tilbake</code>-kloss:</p>
-<pre><code class="blocks">    gjenta (200) ganger
-        gå (5) steg
-        sprett tilbake ved kanten
-    slutt
+<pre><code class="blocks">gjenta (200) ganger
+    gå (5) steg
+    sprett tilbake ved kanten
+slutt
 </code></pre>
 </li>
 <li>
@@ -67,11 +67,11 @@ kanten! Dette kan vi fikse med en
 at spøkelset bare skal snu seg sidelengs med en
 <code class="blockmotion">begrens rotasjon</code>-kloss. Denne legger vi helt først i
 skriptet på denne måten:</p>
-<pre><code class="blocks">    begrens rotasjon [vend sideveis v]
-    gjenta (200) ganger
-        gå (5) steg
-        sprett tilbake ved kanten
-    slutt
+<pre><code class="blocks">begrens rotasjon [vend sideveis v]
+gjenta (200) ganger
+    gå (5) steg
+    sprett tilbake ved kanten
+slutt
 </code></pre>
 </li>
 <li>
@@ -106,10 +106,10 @@ har brukt <code>Fantasi/Ghoul</code>. Endre navnet på figuren til <code>Demon</
 <p>For at det skal se ut som demonen kommer flyvende mot oss, vil vi at
 den skal starte veldig liten, og deretter bli større. Lag dette
 skriptet.</p>
-<pre><code class="blocks">    sett størrelse til (0) %
-    gjenta (100) ganger
-        endre størrelse med (4)
-    slutt
+<pre><code class="blocks">sett størrelse til (0) %
+gjenta (100) ganger
+    endre størrelse med (4)
+slutt
 </code></pre>
 </li>
 <li>
@@ -120,13 +120,13 @@ skriptet.</p>
 være bedre å skjule spøkelset når det ikke animeres. Klikk på
 spøkelsesfiguren, og legg til en <code class="blocklooks">vis</code>- og en
 <code class="blocklooks">skjul</code>-kloss i skriptet:</p>
-<pre><code class="blocks">    begrens rotasjon [vend sideveis v]
-    vis
-    gjenta (200) ganger
-        gå (5) steg
-        sprett tilbake ved kanten
-    slutt
-    skjul
+<pre><code class="blocks">begrens rotasjon [vend sideveis v]
+vis
+gjenta (200) ganger
+    gå (5) steg
+    sprett tilbake ved kanten
+slutt
+skjul
 </code></pre>
 </li>
 <li>
@@ -136,12 +136,12 @@ ferdig med å fly frem og tilbake?</p>
 <li>
 <p>Vi kan også gjøre det samme med demonen sitt skript. Klikk på
 demon-figuren, og endre skriptet til</p>
-<pre><code class="blocks">    sett størrelse til (0) %
-    vis
-    gjenta (100) ganger
-        endre størrelse med (4)
-    slutt
-    skjul
+<pre><code class="blocks">sett størrelse til (0) %
+vis
+gjenta (100) ganger
+    endre størrelse med (4)
+slutt
+skjul
 </code></pre>
 </li>
 <li>
@@ -171,27 +171,27 @@ skal både bytte bakgrunnen og starte spøkelsesanimasjonen.</p>
 <ul>
 <li>
 <p>Klikk på <code>Scene</code> og lag dette skriptet:</p>
-<pre><code class="blocks">    når jeg mottar [Animer spøkelse v]
-    bytt bakgrunn til [Svart v]
+<pre><code class="blocks">når jeg mottar [Animer spøkelse v]
+bytt bakgrunn til [Svart v]
 </code></pre>
 </li>
 <li>
 <p>Klikk på spøkelsesfiguren og endre skriptet ved å legge til en kloss
 på toppen:</p>
-<pre><code class="blocks">    når jeg mottar [Animer spøkelse v]
-    begrens rotasjon [vend sideveis v]
-    vis
-    gjenta (200) ganger
-        gå (5) steg
-        sprett tilbake ved kanten
-    slutt
-    skjul
+<pre><code class="blocks">når jeg mottar [Animer spøkelse v]
+begrens rotasjon [vend sideveis v]
+vis
+gjenta (200) ganger
+    gå (5) steg
+    sprett tilbake ved kanten
+slutt
+skjul
 </code></pre>
 </li>
 <li>
 <p>Nå venter skriptene våre på meldingen. For å teste kan vi dra
 klossen</p>
-<pre><code class="blocks">    send melding [Animer spøkelse v]
+<pre><code class="blocks">send melding [Animer spøkelse v]
 </code></pre>
 <p>ut ved siden av det store skriptet til spøkelset.</p>
 </li>
@@ -202,24 +202,24 @@ Animeres spøkelset over en svart bakgrunn?</p>
 <li>
 <p>Vi vil nå gjøre det samme for demonen. Legg til et nytt skript på
 scenen:</p>
-<pre><code class="blocks">    når jeg mottar [Animer demon v]
-    bytt bakgrunn til [Skog v]
+<pre><code class="blocks">når jeg mottar [Animer demon v]
+bytt bakgrunn til [Skog v]
 </code></pre>
 </li>
 <li>
 <p>Klikk på demonfiguren og endre skriptet slik</p>
-<pre><code class="blocks">    når jeg mottar [Animer demon v]
-    sett størrelse til (0) %
-    vis
-    gjenta (100) ganger
-        endre størrelse med (4)
-    slutt
-    skjul
+<pre><code class="blocks">når jeg mottar [Animer demon v]
+sett størrelse til (0) %
+vis
+gjenta (100) ganger
+    endre størrelse med (4)
+slutt
+skjul
 </code></pre>
 </li>
 <li>
 <p>Legg også til klossen</p>
-<pre><code class="blocks">    send melding [Animer demon v]
+<pre><code class="blocks">send melding [Animer demon v]
 </code></pre>
 <p>for å teste at animasjonen fungerer.</p>
 </li>
@@ -241,10 +241,10 @@ vises i sekvens etter hverandre.</em></p>
 <li>
 <p>Vi begynner med å lage en <code class="blockcontrol">for alltid</code>-løkke på
 scenen, som sender meldinger:</p>
-<pre><code class="blocks">    for alltid
-        send melding [Animer spøkelse v] og vent
-        send melding [Animer demon v] og vent
-    slutt
+<pre><code class="blocks">for alltid
+    send melding [Animer spøkelse v] og vent
+    send melding [Animer demon v] og vent
+slutt
 </code></pre>
 </li>
 <li>
@@ -254,41 +254,41 @@ scenen, som sender meldinger:</p>
 <li>
 <p>Det vil se litt bedre ut med en kort pause mellom animasjonene. Legg
 til et par <code class="blockcontrol">vent</code>-klosser i skriptet.</p>
-<pre><code class="blocks">    for alltid
-        send melding [Animer spøkelse v] og vent
-        vent (1) sekunder
-        send melding [Animer demon v] og vent
-        vent (1) sekunder
-    slutt
+<pre><code class="blocks">for alltid
+    send melding [Animer spøkelse v] og vent
+    vent (1) sekunder
+    send melding [Animer demon v] og vent
+    vent (1) sekunder
+slutt
 </code></pre>
 </li>
 <li>
 <p>For å gjøre det enklere å starte animasjonen legger vi til en kloss
 som gjør at animasjonen starter når det grønne flagget øverst på
 skjermen klikkes.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        send melding [Animer spøkelse v] og vent
-        vent (1) sekunder
-        send melding [Animer demon v] og vent
-        vent (1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    send melding [Animer spøkelse v] og vent
+    vent (1) sekunder
+    send melding [Animer demon v] og vent
+    vent (1) sekunder
+slutt
 </code></pre>
 </li>
 <li>
 <p>Vi kan også bruke grønt flagg-klosser på figurene for å være sikre
 på at de starter animasjonen på riktig måte. Legg dette skriptet på
 spøkelset:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    gå til x: (0) y:(0)
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+gå til x: (0) y:(0)
 </code></pre>
 </li>
 <li>
 <p>Legg et tilsvarende skript på demonen:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    gå til x: (0) y:(0)
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+gå til x: (0) y:(0)
 </code></pre>
 </li>
 </ul>
@@ -332,13 +332,13 @@ mellom de to draktene.</p>
 </li>
 <li>
 <p>Klikk på <code class="blocklightgrey">Skript</code>-fanen og legg på dette skriptet:</p>
-<pre><code class="blocks">    når jeg mottar [Animer gresskar v]
-    vis
-    gjenta (50) ganger
-        neste drakt
-        vent (tilfeldig tall fra (0.1) til (0.3)) sekunder
-    slutt
-    skjul
+<pre><code class="blocks">når jeg mottar [Animer gresskar v]
+vis
+gjenta (50) ganger
+    neste drakt
+    vent (tilfeldig tall fra (0.1) til (0.3)) sekunder
+slutt
+skjul
 </code></pre>
 <p>Bytt gjerne ut meldingsnavnet <code>Animer gresskar</code> med noe som passer
 for din figur. Klikk på skriptet (eller send en melding) for å
@@ -346,30 +346,30 @@ teste animasjonen. Ser det bra ut?</p>
 </li>
 <li>
 <p>Legg også til startposisjonen for den figuren:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    skjul
-    gå til x: (0) y: (0)
+<pre><code class="blocks">når grønt flagg klikkes
+skjul
+gå til x: (0) y: (0)
 </code></pre>
 </li>
 <li>
 <p>Gå så til scenen og legg på et skript som bytter til riktig bakgrunn
 for den siste animasjonen. Her har vi brukt den svarte bakgrunnen.</p>
-<pre><code class="blocks">    når jeg mottar [Animer gresskar v]
-    bytt bakgrunn til [Svart v]
+<pre><code class="blocks">når jeg mottar [Animer gresskar v]
+bytt bakgrunn til [Svart v]
 </code></pre>
 </li>
 <li>
 <p>Til slutt legger vi denne siste animasjonen til i hovedløkken som
 viser animasjonene:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        send melding [Animer spøkelse v] og vent
-        vent (1) sekunder
-        send melding [Animer demon v] og vent
-        vent (1) sekunder
-        send melding [Animer gresskar v] og vent
-        vent (1) sekunder
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    send melding [Animer spøkelse v] og vent
+    vent (1) sekunder
+    send melding [Animer demon v] og vent
+    vent (1) sekunder
+    send melding [Animer gresskar v] og vent
+    vent (1) sekunder
+slutt
 </code></pre>
 </li>
 </ul>
@@ -422,7 +422,16 @@ tekst som ser slik ut:</p>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">body</span> <span class="hljs-attribute">bgcolor</span>=<span class="hljs-value">"#000000"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"overflow-y: hidden; height: 890px; margin-left: auto; margin-right: auto; width: 1180px;"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"applet"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">iframe</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"margin-top:-56px; margin-left: -10px"</span> <span class="hljs-attribute">allowtransparency</span>=<span class="hljs-value">"true"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"1200"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"960"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://scratch.mit.edu/projects/embed/30923784/?autostart=true"</span> <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">"0"</span> <span class="hljs-attribute">scrolling</span>=<span class="hljs-value">"no"</span> <span class="hljs-attribute">seamless</span>=<span class="hljs-value">"seamless"</span> <span class="hljs-attribute">allowfullscreen</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">iframe</span>
+  <span class="hljs-attribute">style</span>=<span class="hljs-value">"margin-top:-56px; margin-left: -10px"</span>
+  <span class="hljs-attribute">allowtransparency</span>=<span class="hljs-value">"true"</span>
+  <span class="hljs-attribute">width</span>=<span class="hljs-value">"1200"</span>
+  <span class="hljs-attribute">height</span>=<span class="hljs-value">"960"</span>
+  <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://scratch.mit.edu/projects/embed/30923784/?autostart=true"</span>
+  <span class="hljs-attribute">frameborder</span>=<span class="hljs-value">"0"</span>
+  <span class="hljs-attribute">scrolling</span>=<span class="hljs-value">"no"</span>
+  <span class="hljs-attribute">seamless</span>=<span class="hljs-value">"seamless"</span>
+  <span class="hljs-attribute">allowfullscreen</span>=<span class="hljs-value">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">iframe</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>

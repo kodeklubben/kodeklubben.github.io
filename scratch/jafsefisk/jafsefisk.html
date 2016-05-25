@@ -46,11 +46,11 @@ rotasjonsmåte <img src="../bilder/rotasjonsmate-hv.png" alt="Høyre/Venstre">.<
 <li>
 <p>Få fisken til å følge musepekeren rundt i sjøen ved å lage dette
 skriptet:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        pek mot [musepeker v]
-        gå (3) steg
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    pek mot [musepeker v]
+    gå (3) steg
+slutt
 </code></pre>
 </li>
 </ul>
@@ -77,13 +77,13 @@ skriptet:</p>
 <p>Du kan stoppe JafseFisks maniske flipping hvis du sørger for at den
 bare flytter seg når den ikke er for nær musepekeren (<code class="b">avstand til [musepeker v]</code> ligger i
 <code class="blocksensing">Sansning</code>-kategorien).</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        hvis &lt;(avstand til [musepeker v]) &gt; [10]&gt;
-            pek mot [musepeker v]
-            gå (3) steg
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    hvis &lt;(avstand til [musepeker v]) &gt; [10]&gt;
+        pek mot [musepeker v]
+        gå (3) steg
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -123,12 +123,12 @@ stopp-knappen.</p>
 <p>Få byttedyret til å bevege seg i tilfeldige retninger. Først skal vi
 la det bevege seg litt framover, og så snu en tilfeldig valgt vinkel
 med eller mot klokka, og deretter gjenta.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå (2) steg
-        vend venstre (tilfeldig tall fra (-20) til (20)) grader
-        sprett tilbake ved kanten
-    slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå (2) steg
+    vend venstre (tilfeldig tall fra (-20) til (20)) grader
+    sprett tilbake ved kanten
+slutt
 </code></pre>
 </li>
 </ul>
@@ -175,17 +175,17 @@ så å dukke opp igjen en liten stund senere.</p>
 så komme tilbake etter 3 sekunder. Bruk
 <code class="b">berører [JafseFisk v]?</code> for å sjekke om byttet kommer borti
 JafseFisk. Utvid skriptet på byttedyret slik som dette:</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå (2) steg
-        vend venstre (tilfeldig tall fra (-20) til (20)) grader
-        sprett tilbake ved kanten
-        hvis &lt;berører [JafseFisk v]?&gt;
-            skjul
-            vent (3) sekunder
-            vis
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå (2) steg
+    vend venstre (tilfeldig tall fra (-20) til (20)) grader
+    sprett tilbake ved kanten
+    hvis &lt;berører [JafseFisk v]?&gt;
+        skjul
+        vent (3) sekunder
+        vis
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -220,18 +220,18 @@ klikker du på fargen i klossen og deretter på fiskens tenner.</p>
 <p>Nå kan vi la byttet flytte seg til et tilfeldig punkt på skjermen
 før det dukker opp igjen ved å bruke <code class="b">gå til x: (tilfeldig tall fra (-220) til (220)) y: (tilfeldig tall fra (-170) til (170))</code>
 som vi gir tilfeldige verdier for <code>x</code> og <code>y</code>.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå (2) steg
-        vend venstre (tilfeldig tall fra (-20) til (20)) grader
-        sprett tilbake ved kanten
-        hvis &lt;&lt;berører [JafseFisk v]?&gt; og &lt;berører fargen [#FFFFFF]?&gt;&gt;
-            skjul
-            vent (3) sekunder
-            gå til x: (tilfeldig tall fra (-220) til (220)) y: (tilfeldig tall fra (-170) til (170))
-            vis
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå (2) steg
+    vend venstre (tilfeldig tall fra (-20) til (20)) grader
+    sprett tilbake ved kanten
+    hvis &lt;&lt;berører [JafseFisk v]?&gt; og &lt;berører fargen [#FFFFFF]?&gt;&gt;
+        skjul
+        vent (3) sekunder
+        gå til x: (tilfeldig tall fra (-220) til (220)) y: (tilfeldig tall fra (-170) til (170))
+        vis
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -261,19 +261,19 @@ lyd og bytte drakt.</em></p>
 <p>For at JafseFisk skal vite hva som skjer kan vi la byttet
 <code class="b">send melding [Du tok meg! v]</code> om at det er spist, før det
 forsvinner.</p>
-<pre><code class="blocks">    når grønt flagg klikkes
-    for alltid
-        gå (2) steg
-        vend venstre (tilfeldig tall fra (-20) til (20)) grader
-        sprett tilbake ved kanten
-        hvis &lt;&lt;berører [JafseFisk v]?&gt; og &lt;berører fargen [#FFFFFF]?&gt;&gt;
-            send melding [Du tok meg! v]
-            skjul
-            vent (3) sekunder
-            gå til x: (tilfeldig tall fra (-220) til (220)) y: (tilfeldig tall fra (-170) til (170))
-            vis
-        slutt
+<pre><code class="blocks">når grønt flagg klikkes
+for alltid
+    gå (2) steg
+    vend venstre (tilfeldig tall fra (-20) til (20)) grader
+    sprett tilbake ved kanten
+    hvis &lt;&lt;berører [JafseFisk v]?&gt; og &lt;berører fargen [#FFFFFF]?&gt;&gt;
+        send melding [Du tok meg! v]
+        skjul
+        vent (3) sekunder
+        gå til x: (tilfeldig tall fra (-220) til (220)) y: (tilfeldig tall fra (-170) til (170))
+        vis
     slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -289,14 +289,14 @@ JafseFisk. Kall drakten <code>Lukket munn</code>.</p>
 meldingen <code>Du tok meg!</code> fra byttedyret. Dette skriptet gjør at
 fisken spiller av boblelyden og <code class="b">bytt drakt til [Åpen munn v]</code>
 drakten, venter litt og så bytter tilbake.</p>
-<pre><code class="blocks">    når jeg mottar [Du tok meg! v]
-    spill lyden [bubbles v]
-    gjenta (2) ganger
-        bytt drakt til [Lukket munn v]
-        vent (0.5) sekunder
-        bytt drakt til [Åpen munn v]
-        vent (0.5) sekunder
-    slutt
+<pre><code class="blocks">når jeg mottar [Du tok meg! v]
+spill lyden [bubbles v]
+gjenta (2) ganger
+    bytt drakt til [Lukket munn v]
+    vent (0.5) sekunder
+    bytt drakt til [Åpen munn v]
+    vent (0.5) sekunder
+slutt
 </code></pre>
 </li>
 </ul>

@@ -103,21 +103,21 @@ må huske på er at <code>x</code>-koordinatene på skjermen går fra <code>-240
 <code>240</code>, mens <code>y</code>-koordinatene ligger mellom <code>-180</code> og <code>180</code>. Siden
 Scratch passer på at figurer ikke går helt av skjermen flytter vi
 dem litt innenfor skjermkanten:</p>
-<pre><code class="blocks">    når jeg mottar [Nytt spill v]
-    for alltid
-        hvis &lt;(x-posisjon) &lt; [-235]&gt;
-            endre x med (470)
-        slutt
-        hvis &lt;(x-posisjon) &gt; [235]&gt;
-            endre x med (-470)
-        slutt
-        hvis &lt;(y-posisjon) &lt; [-175]&gt;
-            endre y med (350)
-        slutt
-        hvis &lt;(y-posisjon) &gt; [175]&gt;
-            endre y med (-350)
-        slutt
+<pre><code class="blocks">når jeg mottar [Nytt spill v]
+for alltid
+    hvis &lt;(x-posisjon) &lt; [-235]&gt;
+        endre x med (470)
     slutt
+    hvis &lt;(x-posisjon) &gt; [235]&gt;
+        endre x med (-470)
+    slutt
+    hvis &lt;(y-posisjon) &lt; [-175]&gt;
+        endre y med (350)
+    slutt
+    hvis &lt;(y-posisjon) &gt; [175]&gt;
+        endre y med (-350)
+    slutt
+slutt
 </code></pre>
 </li>
 </ul>
@@ -150,10 +150,10 @@ romskipet. Dette siste kan du gjøre med en kombinasjon av <code class="blockmot
 mellomromtasten trykkes kan vi starte <code class="blockcontrol">hvis</code>-testen
 med å vente til mellomromtasten er sluppet igjen. Dette trikset ser
 omtrent slik ut:</p>
-<pre><code class="blocks">    hvis &lt;tast [mellomrom v] trykket?&gt;
-        vent til &lt;ikke &lt;tast [mellomrom v] trykket?&gt;&gt;
-        ...
-    slutt
+<pre><code class="blocks">hvis &lt;tast [mellomrom v] trykket?&gt;
+    vent til &lt;ikke &lt;tast [mellomrom v] trykket?&gt;&gt;
+    ...
+slutt
 </code></pre>
 </li>
 <li>
@@ -212,7 +212,7 @@ tilfeldige steder på skjermen når det mottar <code>Nytt spill</code>-meldingen
 <code class="blocklooks">vises</code>. Videre kan den gå inn i en løkke som <code class="blockcontrol">gjentas til</code> figuren <code class="blocksensing">berører romskipet</code>. Inne
 i løkken lar du først asteroiden <code class="blockmotion">gå noen steg</code>. Deretter må du teste om asteroiden <code class="blocksensing">berører et skudd</code>. Hvis den gjør det kan du lage asteroiden
 mindre med en kloss som ligner</p>
-<pre><code class="blocks">    sett størrelse til ((størrelse) / (2)) %
+<pre><code class="blocks">sett størrelse til ((størrelse) / (2)) %
 </code></pre>
 <p><code class="blockcontrol">Hvis</code> <code class="blocklooks">størrelsen</code> fortsatt er større
 enn for eksempel 10 kan du lage et par nye kloner av denne mindre
@@ -235,10 +235,10 @@ asteroidene. Her må vi være litt forsiktig så vi ikke sletter
 skudd-klonene før asteroidene merker at de er truffet. Dette kan vi
 fikse ved å legge inn en ørliten forsinkelse. Du kan for eksempel
 legge inn kode som dette i løkka som flytter skudd-figuren:</p>
-<pre><code class="blocks">    hvis &lt;berører [Asteroide v] ?&gt;
-        vent (0.01) sekunder
-        slett denne klonen
-    slutt
+<pre><code class="blocks">hvis &lt;berører [Asteroide v] ?&gt;
+    vent (0.01) sekunder
+    slett denne klonen
+slutt
 </code></pre>
 </li>
 </ul>
@@ -257,7 +257,7 @@ til inspirasjon?</em></p>
 <p>Gi poeng når spilleren treffer en asteroide. Man burde kanskje få
 flere poeng for å treffe de små asteroidene? Det kan du fikse med en
 utregning omtrent som</p>
-<pre><code class="blocks">    avrund ((100) / (størrelse))
+<pre><code class="blocks">avrund ((100) / (størrelse))
 </code></pre>
 </li>
 <li>
