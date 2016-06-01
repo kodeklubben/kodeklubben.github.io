@@ -1,0 +1,100 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Last ned Scratchkart | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Last ned Scratchkart</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/kart/kart.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src="leaflet-image.js"></script>
+<section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Her kan du laste ned kart som passer å bruke som bakgrunner i
+Scratch-prosjektene dine.</p>
+<div style="margin: auto; width: 480px">
+  <div id="kart" style="width: 480px; height: 360px"></div>
+  <p>
+    <br />
+    <a id="last_ned_som_bilde" class="btn btn-default btn-lg btn-block">Last ned som Scratch-bakgrunn</a>
+  </p>
+</div>
+</section>
+<section class="activity" id="hvordan-bruke-kartene-i-scratch">
+<h1 class="activity" id="hvordan-bruke-kartene-i-scratch">Hvordan bruke kartene i Scratch</h1>
+<p><em>For å bruke et av disse kartene i Scratch må du først laste det ned til
+datamaskin som en bildefil. Deretter laster du bildefilen opp som en bakgrunn i
+Scratch.</em></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Velg kartutsnitt ved å klikke og dra i kartet. Du kan forstørre og forminske
+kartet med <img src="knapp_pluss.png" alt="+"> og <img src="knapp_minus.png" alt="-">-knappene.</p>
+</li>
+<li>
+<p>Velg utseende på kartet fra listen som dukker opp når du peker på
+<img src="kartlag.png" alt="kartlag"> i nedre høyre hjørne.</p>
+</li>
+<li>
+<p>Klikk på <strong>Last ned som Scratch-bakgrunn</strong>.</p>
+</li>
+</ul>
+<p>Dette vil laste ned kartet til datamaskinen din som en bildefil. Om du ikke får
+velge filnavn selv vil bildefilen hete <code>kart.png</code> og sannsynligvis ligge i en
+katalog som heter <code>Nedlastinger</code>.</p>
+<p>Nå skal vi se hvordan vi legger inn kartet som en bakgrunn i Scratch.</p>
+<ul>
+<li>
+<p>Åpne et Scratchprosjekt hvor du vil bruke kartet.</p>
+</li>
+<li>
+<p>Klikk på <img src="../bilder/hent-fra-fil.png" alt="Last opp bakgrunn fra fil"> nederst til
+venstre for å laste opp en ny bakgrunn fra fil.</p>
+</li>
+<li>
+<p>Velg filen <code>kart.png</code> som du nettopp lastet ned.</p>
+</li>
+</ul>
+<p>Kartet skal nå dukke opp som en bakgrunn i prosjektet ditt. Om du ønsker kan du
+alternativt bruke kartet som en figur.</p>
+</section>
+<section class="tip" id="opphavsrett">
+<h2 class="tip" id="opphavsrett">Opphavsrett</h2>
+<p>Kartene du laster ned fra denne siden kan du fritt bruke som du vil. Men de som
+har laget kartene ønsker at du forteller at du bruker kartene deres. Om du
+titter i nederste høyre hjørne av kartgeneratoren (ikke det ferdige kartet) vil
+du se at det står navnet på dem som har laget det (Kartverket, OpenStreetMap,
+Stamen eller Thunderforest). Dette må du nevne om du legger ut prosjektet ditt.</p>
+<p>Dette er lett å gjøre i Scratch. Klikk på <code>Se prosjektsiden</code> øverst til
+høyre. Du kommer da til en side hvor du kan beskrive prosjektet. En av boksene
+heter <code>Merknader og bidragsytere</code>. Her kan du nevne dem som opprinnelig har
+laget kartet, og at du har lastet det ned fra denne nettsiden.</p>
+<script src="kart.js"></script>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Last ned Scratchkart&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/kart" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Geir Arne Hjelle og Lance Olav Eastgate</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>// bind shim for phantomJS
+Function.prototype.bind = Function.prototype.bind || function (thisp) {
+  var fn = this;
+  var args = Array.prototype.slice.call(arguments, 1);
+  return function () {
+    return fn.apply(thisp, args);
+  };
+};
+$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks.renderMatching('code.blocks', {
+    languages: ['nb', 'en']
+  });
+  scratchblocks.renderMatching('code.b', {
+    languages: ['nb', 'en'],
+    inline: true
+  });
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
