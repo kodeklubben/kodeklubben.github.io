@@ -1,0 +1,184 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bygge et hus | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Learn To Mod</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Bygge et hus</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Learn To Mod</span></a><div class="pdf"><a href="/learntomod/bygge_et_hus/bygge_et_hus.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Du må ha et hus så du kan bo i stil!
+La oss kode en modd som bygger et hus med vegger og tak, flere etasjer,
+vinduer, dører og trapp mellom hver etasje.</p>
+<p><figure><img src="./intro.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-vegger">
+<h1 class="activity" id="steg-1-vegger">Steg 1: Vegger</h1>
+<p>Først skal du kode modden så den bygger fire vegger.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Lag en modd som bygger fire vegger:</p>
+<p><figure><img src="image1.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<p>Da kan du teste modden i Minecraft og se om den bygger 4 vegger.</p>
+<p>Som du kan se så bygger du med materialet som har ID kode ‘155:2’ for å
+bygge med ‘Chiseled Quartz Block’. Siden LTM ikke har absolutt alle
+materialene som er i Minecraft som ferdige klosser så kan du gå til denne siden:
+<a href="http://www.minecraftinfo.com/idlist.htm"><em>http://www.minecraftinfo.com/idlist.htm</em></a>
+for å finne ID koden for det materialet du vil bygge med.</p>
+</section>
+</section>
+<section class="activity" id="steg-2-plass-til-dorer">
+<h1 class="activity" id="steg-2-plass-til-dorer">Steg 2: Plass til dører</h1>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Nå må du bestemme hvor du vil ha dører og vinduer, det kan være lurt å
+tegne opp en vegg på et ruteark og markere hvor du vil ha dør, vinduer
+og i hvilke etasjer du vil ha gulv.</p>
+<p>Du skal legge inn en if-test i den innerste løkken som bygger med
+riktig materiale i hver posisjon. Det er lurt å begynne if-testen med
+det materialet som er du skal ha minst av. Denne if-testen kan bli
+ganske stor etter hvert, så vi lager en egen funksjon som vi kaller
+velgmateriale.</p>
+<p>La oss først bestemme hvor dørene skal være. Det som er spesiellt med
+dører er at de må bygges etter at det som er rundt dem er bygd, så vi
+lar de posisjonene være tomme i første omgang. Så setter vi inn dører
+der senere i programmet.</p>
+<p>Jeg vil ha en dør i X posisjon 8-9 og Y posisjon 1-2, da blir funksjonen min sånn:</p>
+<p><figure><img src="image2.png" alt=""></figure></p>
+</li>
+<li>
+<p>Du må også huske å kalle funksjonen fra den innerste løkken i vegger funksjonen:</p>
+<p><figure><img src="image3.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-2">
+<h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
+<p>Da kan du teste modden!</p>
+</section>
+</section>
+<section class="activity" id="steg-3-vinduer">
+<h1 class="activity" id="steg-3-vinduer">Steg 3: Vinduer</h1>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Nå kan du utvide if-testen sånn at den bygger vinduer der du vil ha dem.
+Jeg vil ha vinduer i Y posisjon 2, 6, 10 og 14, men ikke i hjørnene av
+hver vegg (X posisjon 1). Da blir min funksjon sånn:</p>
+<p><figure><img src="image4.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-tak-dorer-gulv-og-trapper">
+<h1 class="activity" id="steg-4-tak-dorer-gulv-og-trapper">Steg 4: Tak, dører, gulv og trapper</h1>
+<p>Nå skal vi bygge tak på huset, la oss prøve noen forskjellige typer tak
+før du velger den du liker best.</p>
+<p>Når du bygger tak skal du du bruke noen funksjoner som finnes i ScriptCraft
+som gjør at du trenger å kode veldig lite. Learn To Mod er bygd på ScriptCraft
+så alt du kan gjøre med ScriptCraft kan du få til i Learn To Mod.
+For å se alle mulighetene som finnes kan du gå til denne siden:
+<a href="https://github.com/walterhiggins/ScriptCraft/blob/master/docs/API-Reference.md">ScriptCraft API Referanse</a></p>
+<p>Hvis du vil lære mer om hvordan du kan programmere i Javascript med ScriptCraft
+kan du gå til denne siden:
+<a href="https://github.com/walterhiggins/ScriptCraft/blob/master/docs/YoungPersonsGuideToProgrammingMinecraft.md#the-young-persons-guide-to-programming-in-minecraft">The young persons guide to programming in Minecraft</a></p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul>
+<li>
+<p>Du skal bruke en drone funksjon som heter prism for å bygge et skråtak.
+Lag en funksjon som heter tak1 og legg inn følgende kode:</p>
+<p><figure><img src="image5.png" alt=""></figure></p>
+</li>
+<li>
+<p>Husk også å legge inn kall til tak1 funksjonen på slutten av main funksjonen.</p>
+</li>
+<li>
+<p>Nå kan du teste modden i Minecraft, taket mitt ser sånn ut:</p>
+<p><figure><img src="image6.png" alt=""></figure></p>
+</li>
+<li>
+<p>Hvis du ser inni huset så ser du at taket er flatt på innsiden, hvis du
+bruker prism0 (tallet null tilslutt) funksjonen så får du et tak som er
+hult på innsiden, prøv det og se hva du liker best.</p>
+</li>
+<li>
+<p>Hvis du vil se hvordan huset blir med et flatt tak kan du prøve det som står i dette punktet.
+Det flate taket skal stikke en kloss utenfor huset på hver side.
+Siden huset vårt er 16 klosser i bredde og dypde må taket da bli 18 x 18 klosser.
+Du kan programmere denne «manuellt» ved å lage en sånn funksjon:</p>
+<p><figure><img src="image7.png" alt=""></figure></p>
+<p>Eller du kan utnytte en ScriptCraft funksjon som heter box og lage en
+enklere funksjon som gjør akkurat det samme:</p>
+<p><figure><img src="image8.png" alt=""></figure></p>
+<p>Det kan lønne seg å lære kode som andre har laget!</p>
+</li>
+<li>
+<p>La oss bygge gulv. Nå som du har lært box funksjonen så bruker du den
+til å lage gulv på bakken og på 4, 8 og 12 posisjon i høyden. Innsiden
+av huset vårt er 14x14 klosser og vi bygger med glowstone så det blir
+lyst også om natten (husk å legge inn kall til gulv funksjonen til slutt
+i main funksjonen):</p>
+<p><figure><img src="image9.png" alt=""></figure></p>
+</li>
+<li>
+<p>Hm det fungerte for så vidt, men vi trenger hull i gulvene så vi kan
+bygge trapp mellom hver etasje. La oss bygge en funksjon som lager hull
+i hver etasje:</p>
+<p><figure><img src="image10.png" alt=""></figure></p>
+</li>
+<li>
+<p>La oss bygge en trapp mellom hver etasje, ScriptCraft har en funksjon
+for å bygge trapper, men den fungerer dessverre ikke på LTM så vi må
+bygge trappen litt mer manuellt. Koden du skal lime inn i Javascript klossen er:</p>
+<p><code>tr.box(blocks.stairs.quartz + &quot;:&quot; + Drone.PLAYER\_STAIRS\_FACING\[tr.dir\]);</code></p>
+<p>Funksjonen skal se sånn ut:</p>
+<p><figure><img src="image11.png" alt=""></figure></p>
+</li>
+<li>
+<p>La oss sette inn fire dører, du skal bruke en ScriptCraft funksjon som
+heter door2 som lager en dobbeltdør:</p>
+<p><figure><img src="image12.png" alt=""></figure></p>
+<p>Hvis du heller vil ha en jerndør så bruker du door2_iron funksjonen isteden.
+Hvis du bruker jerndører så må du også legge til en knapp eller noe annet
+som kan åpne døren.</p>
+</li>
+<li>
+<p>Husk å legge inn kall til trapp og dør funksjonene til slutt i main funksjonen.</p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-3">
+<h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
+<p>Nå kan du teste modden din i Minecraft! Trykk på den grønne <strong>Mod</strong> knappen
+øverst og gå til Minecraft og kjør modden din!</p>
+<p>Hvis den ikke fungerer så må du rette opp litt i modden, det er helt vanlig.</p>
+</section>
+<section class="challenge" id="utfordring-innredning-i-alle-etasjene">
+<h2 class="challenge" id="utfordring-innredning-i-alle-etasjene">Utfordring: Innredning i alle etasjene</h2>
+<p>Når du går inn i huset ditt så ser du at alle etasjene mangler innredning.
+Din utfordring er å lage innredning i alle etasjene. En mulighet er å lage en funksjon som lager
+en type innredning og teste den i Minecraft. Hvis du vil ha forskjellig innredning i hver etasje
+så kan du enten lage flere forskjellige funksjoner (f.eks. innredning1, innredning2 osv.) eller
+du kan lage en liste med de tingene du vil ha som innredning og velge tilfeldige rader fra den listen
+etterhvert som du styrer dronen din rundt i hver etasje. Lykke til!</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Learn To Mod: Bygge et hus&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/learntomod/bygge_et_hus" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Pål G. Solheim</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

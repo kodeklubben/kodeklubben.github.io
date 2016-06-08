@@ -1,0 +1,323 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bygge en kube | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Learn To Mod</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Bygge en kube</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Learn To Mod</span></a><div class="pdf"><a href="/learntomod/bygge_en_kube/bygge_en_kube.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Vi skal bygge en kube i minecraft og lære endel viktige klosser i Learn To Mod. Oppgaven er forklart i detalj og egner seg som den første oppgaven du gjør i Learn To Mod.</p>
+<p><figure><img src="./intro.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-lage-en-ny-mod">
+<h1 class="activity" id="steg-1-lage-en-ny-mod">Steg 1: Lage en ny mod</h1>
+<p>Gå til Mod-siden ved å velge <strong>Play</strong> &gt; <strong>Mod</strong> i menyen på toppen:</p>
+<p><figure><img src="./image1.png" alt=""></figure></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Klikk i feltet hvor det står <strong>mod_name_here</strong>.</p>
+</li>
+<li>
+<p>Gi modden navnet <code>kube</code> og trykk på den blå knappen som heter <strong>Blockly (Multiplayer)</strong>.</p>
+<p><figure><img src="./image2.jpeg" alt=""></figure></p>
+<p>Modden dukker da opp til høyre:</p>
+<p><figure><img src="./image3.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Klikk på modden og du kommer til en side som ser sånn ut:</p>
+<p><figure><img src="./image4.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Klikk på knappen <strong>Code</strong> for å komme til kodesiden:</p>
+<p><figure><img src="./image5.jpeg" alt=""></figure></p>
+<p>Her lages koden i modden ved å velge blokker fra menyen til venstre.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-bygge-en-rad">
+<h1 class="activity" id="steg-2-bygge-en-rad">Steg 2: Bygge en rad</h1>
+<p>Kuben skal bestå av mange rader med blokker. Vi begynner med å lage en rad.</p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Alle modder må ha en funksjon som heter main, klikk på <strong>Functions</strong>:</p>
+<p><figure><img src="./image6.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Velg den øverste klossen og klikk på den for å legge den til. Klikk så i
+feltet der det står <strong>do something</strong> og skriv <code>main</code> (bare små bokstaver).</p>
+<p><figure><img src="./image7.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Legg til en variabel ved å klikke <strong>Variables</strong>, velg klossen <strong>set item to</strong>
+og dra den inn i main-funksjonen.</p>
+<p><figure><img src="./image8.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Variabelen heter nå item, men du skal gi den et nytt navn. Klikk på
+pilen ved siden av teksten <code>item</code>:</p>
+<p><figure><img src="./image9.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Velg <strong>New variable...</strong> og skriv <code>d</code>:</p>
+<p><figure><img src="./image10.jpeg" alt=""></figure></p>
+<p>Klikk <strong>OK</strong>. Nå heter den nye variabelen <code>d</code>.</p>
+<p>For at modden vår skal kunne bygge ting i Minecraft skal vi bruke en drone.
+En drone er som en usynlig robot som kan gå hvor som helst i Minecraft (også gjennom vegger).
+En drone kan gjøre mye kult, først skal vi bruke den til å bygge ting.</p>
+</li>
+<li>
+<p>Variabelen <code>d</code> skal inneholde en ny drone. Klikk på <strong>Minecraft</strong> til venstre,
+klikk så på <strong>Drone</strong> og velg <strong>new Drone</strong>.</p>
+<p><figure><img src="./image11.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Dra klossen <strong>new Drone</strong> så den klikker sammen med <strong>set d to</strong> klossen.</p>
+<p>For å lage raden med klosser skal dronen plassere en kloss, flytte seg,
+plassere en kloss, flytte seg, plassere en kloss, flytte seg og så videre.
+Når vi skal gjøre noe likt flere ganger i et program så bruker vi løkker, som kalles <em>loops</em> på engelsk.</p>
+</li>
+<li>
+<p>Klikk på <strong>Loops</strong>:</p>
+<p><figure><img src="./image12.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Velg klossen som heter <strong>repeat 10 times</strong> og dra den under
+<strong>set d to new drone</strong> klossen. Så klikker du <strong>Minecraft</strong> &gt; <strong>Drone</strong> og
+velger klossen som heter <strong>Drone d places block of type</strong> og
+drar den så den havner inni <strong>repeat 10 times</strong> løkken:</p>
+<p><figure><img src="./image13.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Så skal du bestemme hva slags materiale som det skal bygges med. Til
+venstre under <strong>Minecraft</strong> finnes alle materialene du kan bygge med i
+alfabetisk rekkefølge <strong>Materials [A-C]</strong> osv. Velg det materialet du vil
+bruke og putt det inn i det tomme feltet.</p>
+</li>
+<li>
+<p>Så skal du få dronen til å flytte seg en plass til venstre. Velg
+<strong>Minecraft</strong> &gt; <strong>Drone</strong> og velg klossen <strong>Move Drone d in
+direction up distance 1</strong>. Dra klossen inn i løkken så det ser sånn ut:</p>
+<p><figure><img src="./image14.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Klikk på den lille pilen ved siden av <strong>up</strong> og velg <strong>left</strong> sånn at dronen
+går et steg til venstre.</p>
+</li>
+<li>
+<p>Så skal du få dronen til å gå 10 steg tilbake når den er ferdig med
+raden (utenfor løkken og under). Velg <strong>Minecraft</strong> &gt; <strong>Drone</strong> og velg
+<strong>Move Drone d in direction right distance 10</strong> og dra den under løkken så det blir sånn:</p>
+<p><figure><img src="./image15.jpeg" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<p>Nå er du klar til å teste ut modden. Klikk på den grønne knappen på
+toppen som heter <strong>Mod</strong>. Det skal da komme en beskjed til høyre om at
+modden er laget på Minecraft serveren.</p>
+<p><figure><img src="./image16.jpeg" alt=""></figure></p>
+<p>Da kan du gå til Minecraft og teste modden!</p>
+</section>
+<section class="check" id="koble-til-serveren">
+<h2 class="check" id="koble-til-serveren">Koble til serveren</h2>
+<ul>
+<li>Åpne <strong>Minecraft</strong>, velg <strong>multiplayer</strong> og dobbeltklikk på <strong>Learntomod</strong> serveren.</li>
+<li>Hvis du ikke har lagt inn serveren så gjør du det nå:
+<ul>
+<li>Adressen til serveren er <code>play.learntomod.com</code>.</li>
+<li>Gå inn på serveren og se at du blir flyttet til din egen server.</li>
+</ul>
+</li>
+</ul>
+</section>
+<section class="check" id="kjore-modden">
+<h2 class="check" id="kjore-modden">Kjøre modden</h2>
+<ul>
+<li>
+<p>Finn en bra plass hvor du vil at modden skal bygge.</p>
+</li>
+<li>
+<p>Trykk <strong>9</strong> for å aktivere modde-kisten din.</p>
+</li>
+<li>
+<p><strong>Høyre-klikk</strong> for å åpne kisten.</p>
+</li>
+<li>
+<p>Sjekk at du har en mod der.</p>
+</li>
+<li>
+<p>Putt modden i spor <strong>1</strong>.</p>
+</li>
+<li>
+<p><strong>Esc</strong> ut.</p>
+</li>
+<li>
+<p>Trykk <strong>1</strong>.</p>
+</li>
+<li>
+<p><strong>Høyre-klikk</strong> for å kjøre modden din.</p>
+</li>
+<li>
+<p>Sjekk at den har blitt kjørt.</p>
+</li>
+<li>
+<p>OK? Ble det laget en rad i Minecraft? Hvis ikke må du finne ut hva som er feil, rette det opp i modden og teste på nytt i Minecraft.</p>
+<p>Når jeg kjørte min mod så ble det en rad i bakken der jeg pekte når jeg kjørte modden:</p>
+<p><figure><img src="./image17.jpeg" alt=""></figure></p>
+<p>Raden ble bygd i bakken hvis du pekte på bakken når du kjørte modden. La
+oss endre modden så den bygger over bakken.</p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Velg <strong>Minecraft</strong> &gt; <strong>Drone</strong> og
+velg <strong>Move drone d in direction up distance 1</strong> og dra den under klossen som heter <strong>set d to
+new drone</strong>. Så det blir sånn:</p>
+<p><figure><img src="./image18.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Trykk på den grønne knappen som heter <strong>Mod</strong> og gå til Minecraft og test modden på nytt.</p>
+<p><figure><img src="./image19.jpeg" alt=""></figure></p>
+<p>Nå ble det bedre!</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-bruke-egne-funksjoner">
+<h1 class="activity" id="steg-3-bruke-egne-funksjoner">Steg 3: Bruke egne funksjoner</h1>
+<p>Når du skal lage store modder er det greit å bryte opp i flere
+funksjoner så blir det lettere å lese hva modden gjør.</p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Velg <strong>Functions</strong> og lag en ny funksjon som heter <code>rad</code>:</p>
+<p><figure><img src="./image20.jpeg" alt=""></figure></p>
+</li>
+<li>
+<p>Ta tak i klossene ved å klikke på <strong>repeat 10 times</strong> og dra dem inn i den nye funksjonen:</p>
+<p><figure><img src="./image21.jpeg" alt=""></figure></p>
+<p>For at den nye funksjonen skal utføres så må du legge inn et <strong>kall</strong> til funksjonen
+fra main-funksjonen.</p>
+</li>
+<li>
+<p>Velg <strong>Functions</strong> og dra klossen som heter <strong>rad</strong> inn til slutt i main-funksjonen:</p>
+<p><figure><img src="./image22.jpeg" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-2">
+<h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
+<p>Nå kan du teste modden på nytt. Trykk på <strong>Mod</strong> knappen og gå til
+Minecraft og kjør modden på nytt. Den skal fremdeles bygge en rad.</p>
+</section>
+</section>
+<section class="activity" id="steg-4-bygge-en-firkant">
+<h1 class="activity" id="steg-4-bygge-en-firkant">Steg 4: Bygge en firkant</h1>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul>
+<li>
+<p>Du skal lage en funksjon som heter <code>firkant</code> og som bruker <strong>rad</strong> funksjonen
+til å bygge en firkant. Når du er ferdig skal det se sånn ut:</p>
+<p><figure><img src="./image23.jpeg" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-3">
+<h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
+<ul>
+<li>Nå kan du teste modden på nytt. Trykk på <strong>Mod</strong> knappen og gå til
+Minecraft og kjør modden på nytt. Den skal nå bygge en firkant.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-bygge-en-kube">
+<h1 class="activity" id="steg-4-bygge-en-kube">Steg 4: Bygge en kube</h1>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
+<ul>
+<li>
+<p>Du skal lage en ny funksjon som heter <code>kube</code> og som bruker <strong>firkant</strong> funksjonen
+til å bygge en hel kube. Når du er ferdig skal det se sånn ut:</p>
+<p><figure><img src="./image24.jpeg" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-4">
+<h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
+<ul>
+<li>
+<p>Test modden, trykk <strong>Mod</strong> knappen og gå til Minecraft og kjør den.</p>
+</li>
+<li>
+<p>Hva skjer i Minecraft? Ble det bygd en kube?</p>
+<p>Hvis ikke så må du finne feilen, rette den og trykke <strong>Mod</strong> knappen på nytt og teste den i Minecraft.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-5-bruke-variabler">
+<h1 class="activity" id="steg-5-bruke-variabler">Steg 5: Bruke variabler</h1>
+<p>Hvis du vil lage en mindre eller større kube så er det tungvint å få det til
+siden vi bruke tallet <code>10</code> så mange forskjellige steder. Når vi bruker noe
+mange steder er det bedre å bruke en variabel.</p>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
+<ul>
+<li>
+<p>Gå til <strong>Variables</strong> og lag en ny variabel som heter <strong>bredde</strong> og plasser den
+som kloss nr. 2 i <strong>main</strong> funksjonen.</p>
+</li>
+<li>
+<p>Ta bort alle <strong>10-tallene</strong> ved å dra dem bort i søppelkassen.</p>
+</li>
+<li>
+<p>Gå til <strong>Variables</strong> og velg den nye variabelen <strong>bredde</strong>
+og dra den inn i alle de tomme hullene der 10-tallet var før.</p>
+</li>
+<li>
+<p>Når du har lagt inn variabelen bredde på alle de tomme hullene så kan du
+endre på <strong>verdien</strong> til variabelen i toppen av programmet og teste at
+modden bygger en større eller mindre kube i Minecraft.</p>
+<p>Kult! Du har laget din første mod i Minecraft og lært masse! Du har lært
+å bruke variabler og funksjoner til å gjøre programmet lett å forstå. Du
+har lært å bruke løkker til å gjøre noe mange ganger og å bruke droner
+til å bygge ting i Minecraft.</p>
+</li>
+</ul>
+<section class="protip" id="tips-kopiere-klosser">
+<h3 class="protip" id="tips-kopiere-klosser">Tips: Kopiere klosser</h3>
+<p>Du kan lage en kopi av en kloss ved å <strong>peke</strong> på den, <strong>høyre-klikke</strong> og velge
+<strong>Duplicate</strong>:</p>
+<p><figure><img src="./image25.png" alt=""></figure></p>
+</section>
+</section>
+<section class="challenge" id="utfordring-hul-kube-med-monstre">
+<h2 class="challenge" id="utfordring-hul-kube-med-monstre">Utfordring: Hul kube med monstre!</h2>
+<p>Nå kommer det en utfordring! Du skal lage en kube som er tom innvendig
+ved å bygge en ny kube inni den første, men denne skal bygges med luft.
+Pass på at den innerste kuben har en bredde som er <strong>2 mindre enn</strong> den ytterste kuben.
+Til slutt skal du lage en funksjon som fyller kuben med <strong>monstre</strong>.</p>
+<p>Når du er ferdig skal modden ligne på denne:</p>
+<p><figure><img src="./image26.jpeg" alt=""></figure></p>
+<p>Test modden i Minecraft og lag et hull i kuben for å se hva som er inni.
+Hvis du vil så kan du lage den første kuben av glass så er det enda
+lettere å se monstrene.</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Learn To Mod: Bygge en kube&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/learntomod/bygge_en_kube" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Pål G. Solheim</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

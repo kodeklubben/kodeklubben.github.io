@@ -1,0 +1,168 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bygge en pyramide | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Learn To Mod</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Bygge en pyramide</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Learn To Mod</span></a><div class="pdf"><a href="/learntomod/bygge_en_pyramide/bygge_en_pyramide.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>La oss gjøre som Egypterne og bygge en pyramide!
+Denne oppgaven har ikke så detaljerte instruksjoner som &quot;Bygge en kube&quot;,
+den passer fint som oppgave nr 2.</p>
+<p><figure><img src="./intro.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-lage-en-ny-mod">
+<h1 class="activity" id="steg-1-lage-en-ny-mod">Steg 1: Lage en ny mod</h1>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Gå til <strong>Play</strong> &gt; <strong>Mod</strong> (i menyen) og skriv <code>pyramide</code> i feltet der det står <strong>mod_name_here</strong>. Trykk på den blå knappen som heter <strong>Blockly (multiplayer)</strong></p>
+<p><figure><img src="image1.png" alt=""></figure></p>
+</li>
+<li>
+<p>Klikk på den nye firkanten som dukker opp til høyre for teksten:</p>
+<p><figure><img src="image2.png" alt=""></figure></p>
+</li>
+<li>
+<p>Klikk på den gule <strong>Code</strong> knappen til høyre i bildet for å redigere modden:</p>
+<p><figure><img src="image3.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-1-lage-main-funksjonen">
+<h1 class="activity" id="steg-1-lage-main-funksjonen">Steg 1: Lage main funksjonen</h1>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Lag en funksjon som heter <code>main</code> med en ny drone som heter <code>d</code>:</p>
+<p><figure><img src="image4.png" alt=""></figure></p>
+</li>
+<li>
+<p>Lag en variabel som heter bredde og en som heter høyde:
+<strong>Variables</strong> &gt; <strong>Velg den øverste klossen</strong> &gt; <strong>dra den inn i main</strong> &gt;
+<strong>klikk på pil nedover</strong> &gt; <strong>velg new variable</strong> &gt; <code>skriv navnet</code> &gt; Klikk <strong>OK</strong></p>
+<p><figure><img src="image5.png" alt=""></figure></p>
+</li>
+<li>
+<p>Bredde variabelen skal du bestemme selv, men det er best å velge et
+oddetall for da kan vi få en kloss på toppen av pyramiden. Høyde variabelen skal datamaskinen regne ut. (kan du tenke deg hvorfor?).</p>
+<p>Sett <strong>bredde</strong> til et tall og høyde til <strong>bredde delt på 2</strong>:</p>
+<p><figure><img src="image6.png" alt=""></figure></p>
+</li>
+<li>
+<p>Når vi deler et oddetall på 2 så avrunder datamaskinen nedover så vi må legge til <strong>1</strong>
+for å få en kloss på toppen av pyramiden. Du må legge inn en if-test som sjekker om bredde
+er et oddetall og i så fall legger til 1 på høyde variabelen.</p>
+<p><strong>Logic</strong> &gt; <strong>If-klossen</strong> &gt; <strong>dra den inn i slutten på main funksjonen</strong></p>
+<p><strong>Math</strong> &gt; <img src="image7.png" alt=""> &gt; <strong>koble den til if-klossen</strong> &gt; <strong>forandre even til odd</strong></p>
+<p><strong>Variables</strong> &gt; <strong>bredde-klossen</strong> &gt; <strong>dra den inn i det tomme hullet i if-klossen</strong></p>
+<p><strong>Variables</strong> &gt; <img src="image8.png" alt=""> &gt; <strong>dra inni if-klossen</strong> (til høyre for do).</p>
+<p><strong>Math</strong> &gt; <img src="image9.png" alt=""> &gt; <strong>kobles til set høyde klossen</strong></p>
+<p><strong>Variables</strong> &gt; <strong>høyde klossen</strong> &gt; <strong>dra inn i den første tomme hullet</strong></p>
+<p><strong>Math</strong> &gt; <strong>øverste klossen</strong> &gt; <strong>dra inn i det siste tomme hullet</strong> &gt; <strong>forandre tallet til 1</strong></p>
+<p>Da blir det sånn:</p>
+<p><figure><img src="image10.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-bygge-en-pyramide">
+<h1 class="activity" id="steg-2-bygge-en-pyramide">Steg 2: Bygge en pyramide</h1>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Lag en funksjon som bygger en rad med klosser. Bredde variablen
+skal bestemme hvor mange klosser som skal brukes. Denne funksjonen
+har du laget før så vi viser bare et eksempel på hvordan den kan se ut:</p>
+<p><figure><img src="image11.png" alt=""></figure></p>
+</li>
+<li>
+<p>Lag en funksjon som du kaller <strong>pyramide</strong> og dra 2 <strong>repeat-løkker</strong> inni hverandre:</p>
+<p><strong>Functions</strong> &gt; <strong>den øverste klossen</strong> &gt; <strong>endre navnet til pyramide</strong></p>
+<p><strong>Loops</strong> &gt; <strong>Repeat 10 times klossen</strong> &gt; <strong>dra inn i funksjonen</strong></p>
+<p><strong>Loops</strong> &gt; <strong>Repeat 10 times klossen</strong> &gt; <strong>dra inn i den første repeat-løkken</strong></p>
+<p>Det skal se sånn ut:</p>
+<p><figure><img src="image12.png" alt=""></figure></p>
+</li>
+<li>
+<p>Dra de to <strong>10 klossene</strong> i søppelkassen. Putt <strong>høyde</strong> variabelen i det første tomme hullet
+og <strong>bredde</strong> variabelen i det andre tomme hullet:</p>
+<p><figure><img src="image13.png" alt=""></figure></p>
+<p>Den innerste løkken skal bygge en nivå og den ytterste løkken skal styre dronen oppover i høyden
+og justere størrelsen på hvert nivå sånn at det blir en pyramide.</p>
+</li>
+<li>
+<p>Inni den innerste løkken skal du legge til et «kall» til rad funksjonen
+og så styre dronen fremover sånn at denne løkken bygger et nivå i pyramiden:</p>
+<p><strong>Functions</strong> &gt; <strong>rad</strong> &gt; <strong>dra den inn i den innerste løkken</strong></p>
+<p><strong>Minecraft</strong> &gt; <strong>Drone</strong> &gt; <strong>Kloss nr. 2 fra toppen</strong> &gt; <strong>dra den rett under
+rad klossen</strong> (inni den innerste løkken) og forandre retningen til <strong>forward</strong></p>
+</li>
+<li>
+<p>Utenfor den innerste løkken skal du så få dronen til å gå tilbake til
+der den startet, dvs. bakover <code>bredde</code> ganger:</p>
+<p><figure><img src="image14.png" alt=""></figure></p>
+</li>
+<li>
+<p>Siden hvert nivå oppover i pyramiden skal være 2 klosser mindre må du
+justere bredde variabelen med -2. Så må du få dronen til å gå 1 posisjon
+oppover, 1 posisjon fremover og 1 posisjon til venstre:</p>
+<p><strong>Math</strong> &gt; <strong>change item klossen</strong> &gt; <strong>dra under forrige kloss</strong> &gt; <strong>pil
+nedover og velge bredde variablen</strong> &gt; <strong>forandre tallet til -2</strong></p>
+<p><strong>Minecraft</strong> &gt; <strong>Drone</strong> &gt; <strong>Kloss nr. 2 fra toppen</strong> &gt; <strong>dra under forrige kloss</strong></p>
+<p><strong>Minecraft</strong> &gt; <strong>Drone</strong> &gt; <strong>Kloss nr. 2 fra toppen</strong> &gt; <strong>dra under forrige
+kloss</strong> &gt; <strong>forandre retning til fremover</strong></p>
+<p><strong>Minecraft</strong> &gt; <strong>Drone</strong> &gt; <strong>Kloss nr. 2 fra toppen</strong> &gt; <strong>dra under forrige
+kloss</strong> &gt; <strong>forandre retning til venstre</strong></p>
+<p>Da blir pyramide funksjonen sånn:</p>
+</li>
+</ul>
+<p><figure><img src="image15.png" alt=""></figure></p>
+<ul>
+<li>
+<p>Nå mangler du bare litt i main funksjonen før pyramiden er klar!</p>
+<p>For at dronen skal starte å bygge over bakken så flytter du dronen opp en posisjon:</p>
+<p><strong>Minecraft</strong> &gt; <strong>Drone</strong> &gt; <strong>Kloss nr. 2 fra toppen</strong> &gt; <strong>dra den inn på
+slutten av main funksjonen</strong></p>
+<p>Tilslutt må du utføre pyramide funksjonen helt til slutt i main funksjonen</p>
+<p><strong>Functions</strong> &gt; <strong>pyramide</strong> &gt; <strong>dra den inn på slutten av main funksjonen</strong></p>
+<p>Da skal main funksjonen se sånn ut:</p>
+<p><figure><img src="image16.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<p>Nå kan du teste modden din i Minecraft! Trykk på den grønne <strong>Mod</strong> knappen
+øverst og gå til Minecraft og kjør modden din!</p>
+<p>Hvis den ikke fungerer så må du rette opp litt i modden, det er helt vanlig.</p>
+<p>Modden din skal se omtrent slik ut:</p>
+<p><figure><img src="image17.png" alt=""></figure></p>
+<p>Gratulerer!</p>
+</section>
+<section class="challenge" id="utfordring-pyramider-av-forskjellig-storrelse">
+<h2 class="challenge" id="utfordring-pyramider-av-forskjellig-storrelse">Utfordring: Pyramider av forskjellig størrelse</h2>
+<p>Hvis du kjører modden din flere ganger etter hverandre i Minecraft
+så blir alltid pyramidene like store. Litt kjedelig!
+Du kan enkelt endre modden så den bygger pyramider av forskjellig størrelse.
+Under Math kategorien er det en kloss som heter <strong>Random integer from 1 to 100</strong>
+som velger et tilfeldig tall mellom det første tallet og det siste tallet.
+Når du bruker den så er det lurt å forandre tallene så bredden på pyramidene blir sånn passe, f.eks. fra 10 til 40.</p>
+<p>Prøv å legg inn en if-test sånn at det alltid blir et oddetall i bredde variabelen.
+Tips: du kan bruke <strong>is even</strong> betingelsen under Math kategorien og legge til <strong>1</strong> hvis tallet er et partall.</p>
+<p>Test modden din flere ganger etter hverandre i Minecraft og sjekk at du får forskjellig størrelse på pyramidene.</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Learn To Mod: Bygge en pyramide&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/learntomod/bygge_en_pyramide" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Pål G. Solheim</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
