@@ -6,7 +6,7 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Blinkende lysdiode</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/blinkende_lysdiode/blinkende_lysdiode.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Blinkende lysdiode</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/blinkende_lysdiode/blinkende_lysdiode.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p><strong>Arduino</strong> er en mikrokontroller som kan programmeres til å styre elektroniske
 dingser og duppeditter. Ved hjelp av en Arduino kan du skru av og på
@@ -54,32 +54,40 @@ Under ser du Arduino-brettet. Finn frem din Arduino og studer den!</p>
 <li>Den første digitale porten heter <strong>0</strong>.</li>
 <li>Den siste digitale porten heter <strong>13</strong>.</li>
 <li>Det er altså totalt 14 digitale porter.</li>
-<li>Portene som har <strong>~</strong> ved siden av seg har funksjonaliteten <em>PWM</em> (Pulse Width Modulation).</li>
-<li>På den andre siden har vi analoge innganger, merket <strong>ANALOG IN</strong>.</li>
-<li>Første analoge inngang heter <strong>A0</strong>.</li>
-<li>Den siste analoge inngangen heter <strong>A5</strong>.</li>
-<li>Det er altså 6 analoge innganger.</li>
-<li><strong>5V</strong> er 5 Volt.</li>
-<li><strong>GND</strong> er jord, altså 0 Volt eller minus som noen kaller det.</li>
-<li>Hva tror du <strong>3.3V</strong> er?</li>
+<li><strong>GND</strong> er ground, jord på norsk.</li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-3-lag-en-krets">
 <h1 class="activity" id="steg-3-lag-en-krets">Steg 3: Lag en krets</h1>
 <p><em>Nå skal vi lage vår første krets på en Arduino.</em></p>
+<section class="check" id="dette-trenger-du">
+<h2 class="check" id="dette-trenger-du">Dette trenger du</h2>
+<ul>
+<li>
+<p>2 ledninger</p>
+</li>
+<li>
+<p>1 LED</p>
+</li>
+<li>
+<p>1 Arduino Uno</p>
+</li>
+<li>
+<p>1 breadboard</p>
+</li>
+<li>
+<p>1 motstand 220 Ohm (Fargekode: rød-rød-brun-gull)</p>
+<p><figure><img src="komp.jpg" alt=""></figure></p>
+</li>
+</ul>
+</section>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
 <li>
-<p>Finn en lysdiode og noen ledninger.</p>
-</li>
-<li>
-<p>Finn en 270 Ohm motstand.</p>
-</li>
-<li>
 <p>Koble slik som vist i figuren:</p>
-<p><figure><img src="led.png" alt=""></figure></p>
+<p><figure><img src="blinker.png" alt=""></figure></p>
 </li>
 <li>
 <p>Ingenting skjer, vi må skrive kode!</p>
@@ -91,14 +99,14 @@ Under ser du Arduino-brettet. Finn frem din Arduino og studer den!</p>
 at det er en lukket krets. Det vil si at strømmen går fra pluss til minus
 gjennom kretsen:</p>
 <ul>
-<li>Fra digital 13 (pluss).</li>
-<li>Gjennom lysdioden.</li>
+<li>Fra digital 8 (pluss).</li>
 <li>Gjennom motstanden.</li>
+<li>Gjennom lysdioden.</li>
 <li>Til GND (minus).</li>
 </ul>
-<p>Port 13 som er tilkoblet den røde ledningen er en digital port. Denne porten
-kan vi programmere slik at lysdioden blinker. Dette er akkurat som en
-<strong>lysbryter</strong>.</p>
+<p>Port 8 som er tilkoblet den røde ledningen er en digital port. Denne porten
+kan vi programmere slik at lysdioden blinker. Da vil den fungere som en
+<strong>lysknapp</strong>.</p>
 <p>Den fargerike klumpen er en motstand. Denne begrenser strømmen,
 slik at vi ikke ødelegger lysdioden.</p>
 </section>
@@ -127,39 +135,59 @@ Det første programmet skal blinke med lysdioden.</p>
 </li>
 <li>
 <p>Skriv denne koden:</p>
-<pre><code class="cpp"><span class="hljs-comment">// Dette er porten vi har koblet lysdioden til</span>
-<span class="hljs-keyword">int</span> led = <span class="hljs-number">13</span>;
+<pre><code class="cpp"><span class="hljs-keyword">int</span> led = <span class="hljs-number">8</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
-  <span class="hljs-comment">// Porten til lysdioden (13) skal være utgang</span>
   pinMode(led, OUTPUT);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
-  <span class="hljs-comment">// Skru på lysdioden</span>
   digitalWrite(led, HIGH);
-  <span class="hljs-comment">// Vent 1000 millisekund</span>
   delay(<span class="hljs-number">1000</span>);
-  <span class="hljs-comment">// Skru av lysdioden</span>
   digitalWrite(led, LOW);
-  <span class="hljs-comment">// Vent 1000 millisekund</span>
   delay(<span class="hljs-number">1000</span>);
 }
 </code></pre>
 </li>
 <li>
-<p>Trykk på play-knappen for å laste opp koden.</p>
+<p>Trykk på <img src="upload.png" alt=""> for å laste opp koden. Denne sjekker først om koden
+er riktig, og så vil programmet ditt kjøre på arduinoen.</p>
 </li>
 <li>
 <p>Blinker lysdioden?</p>
 </li>
 </ul>
+<section class="protip" id="virker-det-ikke">
+<h3 class="protip" id="virker-det-ikke">Virker det ikke?</h3>
+<p>Hvis det ikke virker, så kan det hende at Arduino-programmet står på feil <strong>port</strong>
+og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
+<ul>
+<li>
+<p>Brett er satt riktig: <strong>Tools -&gt; Board -&gt; Arduino/Genuino Uno</strong></p>
+</li>
+<li>
+<p>Port er satt riktig:</p>
+<ul>
+<li>Windows: <strong>Tools -&gt; Port -&gt; COM1</strong> (kan være et annet tall)
+<img src="port.png" alt=""></li>
+<li>Mac: <strong>Tools -&gt; Port -&gt;/dev/tty.usbmodem262471</strong> (kan være et annet tall)</li>
+</ul>
+</li>
+<li>
+<p>Lysdioden er koblet riktig vei</p>
+<ul>
+<li>Den korteste &quot;foten&quot; skal gå til GND</li>
+</ul>
+</li>
+</ul>
+<p>Hvis dette ikke fungerer, kan du prøve å lukke programmet og åpne det igjen.</p>
+</section>
 <section class="challenge" id="utfordringer">
 <h3 class="challenge" id="utfordringer">Utfordringer</h3>
 <ul>
 <li>Klarer du å få lysdioden til å blinke raskt, med en lang pause mellom blinkene?</li>
 <li>Klarer du å lage ditt eget blinkemønster?</li>
-<li>Klarer du å endre utgangen til port 11? Hvilken ledning må du flytte?</li>
+<li>Klarer du å endre utgangen til port 13? Hvilken ledning må du flytte?</li>
 </ul>
 </section>
 <section class="protip" id="hva-er-void-setup-og-void-loop">
@@ -174,9 +202,9 @@ toppen i <code>void loop()</code> rett etter den er ferdig med slutten på <code
 <section class="protip" id="hva-er-led">
 <h3 class="protip" id="hva-er-led">Hva er <code>led</code>?</h3>
 <p>Noe av det første som står i koden er:</p>
-<pre><code class="cpp"><span class="hljs-keyword">int</span> led = <span class="hljs-number">13</span>;
+<pre><code class="cpp"><span class="hljs-keyword">int</span> led = <span class="hljs-number">8</span>;
 </code></pre>
-<p>LED står for Light Emitting Diode, eller lysdiode på norsk. Linjen lagrer tallet 13
+<p>LED står for Light Emitting Diode, eller lysdiode på norsk. Linjen lagrer tallet 8
 til <em>variabelen</em> <code>led</code>, som er heltall (<strong>int</strong>eger på engelsk). Da kan vi senere
 bruke <code>led</code> i <code>pinMode</code>:</p>
 <pre><code class="cpp">pinMode(led, OUTPUT);
@@ -186,7 +214,7 @@ bruke <code>led</code> i <code>pinMode</code>:</p>
 </code></pre>
 <p>Dette er fint hvis vi senere ønsker å bytte utgang. Da trenger vi bare å endre
 en linje, istedenfor alle linjene vi nå bruker <code>led</code>.</p>
-<p>Husk at du alltid må bruke <strong>;</strong> på slutten av hver kode linje!</p>
+<p>Husk at du alltid må bruke <code>;</code> på slutten av hver kodelinje!</p>
 </section>
 </section>
 </section>
@@ -199,40 +227,33 @@ lampen av og på med en knapp!</p>
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
 <li>
-<p>Finn en ledning og en knapp.</p>
+<p>Finn tre ledninger til, og en knapp.</p>
 </li>
 <li>
-<p>Koble til bryteren som på bildet under:</p>
+<p>Koble til knappen som på bildet under:</p>
 <p><figure><img src="bryter.png" alt=""></figure></p>
 </li>
 <li>
 <p>Skriv denne koden:</p>
-<pre><code class="cpp"><span class="hljs-comment">// Dette er porten vi har koblet lysdioden til</span>
-<span class="hljs-keyword">int</span> led = <span class="hljs-number">13</span>;
-<span class="hljs-comment">// Dette er porten vi har koblet knappen til</span>
+<pre><code class="cpp"><span class="hljs-keyword">int</span> led = <span class="hljs-number">8</span>;
 <span class="hljs-keyword">int</span> knapp = <span class="hljs-number">7</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
-  <span class="hljs-comment">// Porten til lysdioden (13) skal være utgang</span>
   pinMode(led, OUTPUT);
-  <span class="hljs-comment">// Porten til knappen (7) skal være inngang</span>
   pinMode(knapp, INPUT_PULLUP);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
-  <span class="hljs-comment">// Her sjekker vi om knappen er trykket inn eller ikke</span>
   <span class="hljs-keyword">if</span>(digitalRead(knapp) == LOW){
-    <span class="hljs-comment">// Hvis knappen er trykket inn skal lampen lyse</span>
     digitalWrite(led, HIGH);
   } <span class="hljs-keyword">else</span> {
-    <span class="hljs-comment">// Hvis knappen ikke er trykket inn, vil ikke lampen lyse</span>
     digitalWrite(led, LOW);
   }
 }
 </code></pre>
 </li>
 <li>
-<p>Trykk på play-knappen for å laste opp koden.</p>
+<p>Trykk på <img src="upload.png" alt=""> for å laste opp koden.</p>
 </li>
 <li>
 <p>Lyser lysdioden når du trykker på knappen?</p>
@@ -249,12 +270,15 @@ lampen av og på med en knapp!</p>
 <li>
 <p>Kan du få lysdioden til å lyse svakt med <code>analogWrite(led, 50);</code>?</p>
 <p>Hva skjer om <code>50</code> endres til ett større tall?</p>
-<p><strong>Merk:</strong> Lysdioden må være tilkoblet en port som har <em>PWM</em> for at
-<code>analogWrite</code> skal fungere.</p>
+<p><strong>Merk:</strong> Lysdioden må være tilkoblet en port som har <em>PWM</em> (port med følgende
+tegn: <em>~</em>) for at <code>analogWrite</code> skal fungere.</p>
 </li>
 <li>
 <p>Kan du få lysdioden til å skrus på av et kort trykk på knappen?
 Og deretter skru av lysdioden med et nytt kort trykk?</p>
+</li>
+<li>
+<p>Kan du få til det samme med å bruke bare 3 ledninger?</p>
 </li>
 </ul>
 </section>
