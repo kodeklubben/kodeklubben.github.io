@@ -1,0 +1,319 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>HTML: Del inn nettsiden | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">HTML: Del inn nettsiden</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/del_inn_nettsiden/del_inn_nettsiden.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p><strong>Målet med denne oppgaven</strong> er å lære hvordan man kan organisere en nettside ved å dele den inn med forskjellige tagger. Dersom du ikke er kjent med tagg-strukturen i HTML som vi har sett på de tidligere oppgaven, så anbefaler jeg at du går tilbake og se disse. Vi skal også se på hvordan vi kan sette farge på de forskjellige taggene ved hjelp av CSS, men vi kommer ikke til å gå i dybden i denne oppgaven. For mer CSS, se spillelisten som heter <code>CSS</code>.</p>
+<p>I denne oppgaven vil du gjøre oppgaver der du må programmere uten oppskrift, dersom du står fast kan du trykke på &quot;Se koden så langt&quot; og se én måte å løse oppgaven på. Det er ingen fasit på oppgavene du gjør her, men vi kommer med et forslag til hvordan de kan løses.</p>
+<p>Når vi er ferdig med oppgaven kommer siden din til å se noe sånt ut, kanskje med litt mer tekst eller andre farger:</p>
+<p><figure><img src="ressurser/html_del_inn_5.png" alt="screenshot"></figure></p>
+<p><strong>Lykke til!</strong></p>
+</section>
+<section class="activity" id="steg-1-divdiv">
+<h1 class="activity" id="steg-1-divdiv">Steg 1: <code>&lt;div&gt;&lt;/div&gt;</code></h1>
+<p><code>&lt;div&gt;</code>-taggen er en veldig mye brukt tag. <code>div</code> står for <code>division</code> eller seksjon. Vi bruker denne taggen for å organisere forskjellige deler av siden og brukes ofte sammen med CSS (utseende), som vi skal se på i en senere del av oppgaven. La oss se på et eksempel:</p>
+<ul>
+<li>Gå inn på <a href="http://kidsakoder.no">kidsakoder.no</a></li>
+<li>Trykk på <code>X-Ray Goggles</code> eller bruk utviklerverktøy (Chrome: Visning -&gt; Utvikler -&gt; Utviklingsverktøy, Firefox: bruk <a href="https://goggles.mozilla.org/">X-Ray Goggles</a>)</li>
+<li>Trykk på symbolet helt øverst til venstre i utviklervindu og holder over forskjellige elementer på siden. Se på koden i utviklervindu, ser du at det er mange <code>&lt;div&gt;</code>-tagger?</li>
+<li>Trykk på de forskjellige og se hvor på siden du finner dem.</li>
+<li>Finner du <code>&lt;div&gt;</code>-taggen til LKK-logoen og menyen?</li>
+<li>Finner du <code>&lt;div&gt;</code>-taggen til der hvor nyhetene er plassert?</li>
+</ul>
+<p>Under ser du utviklingsverktøyet til Chrome til høyre og kidsakoder.no til venstre. I utviklervindu ser vi flere <code>&lt;div&gt;</code>-tagger inne i hverandre. Disse skal vi lære mer om.</p>
+<p><figure><img src="ressurser/html_del_inn_4.png" alt="screenshot"></figure></p>
+<p>Som du ser er <code>&lt;div&gt;</code>-taggen brukt til å organisere elementer eller ting på nettsiden. Legg også merke til at alle <code>&lt;div&gt;</code>-taggene har en <code>ID</code>. Dette er for at det skal være enklere å holde styr på hva som ligger i disse seksjonene og for at det skal være enklere å sette design (CSS) på dem.</p>
+<p><strong>La oss prøve ut <code>&lt;div&gt;</code>-taggen selv!</strong></p>
+</section>
+<section class="activity" id="steg-2-vi-deler-inn-hjemmesiden-var-i-3-deler">
+<h1 class="activity" id="steg-2-vi-deler-inn-hjemmesiden-var-i-3-deler">Steg 2: Vi deler inn hjemmesiden vår i 3 deler</h1>
+<p>Som vi kanskje husker fra oppgaven med <a href="../forsvunnet_katt/forsvunnet_katt.md">Den forsvunnede katten</a>, så ser oppbyggningen av en tom nettside slik ut:</p>
+<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p>Husker du også at vi kan legge til metadata i <code>&lt;head&gt;</code> for å blant annet få tittel på nettsiden vår?</p>
+<ul>
+<li>Legg til din egen tittel</li>
+</ul>
+<p>Når vi skal lage en <code>&lt;div&gt;</code> på siden vår må vi legge denne inne i <code>&lt;body&gt;</code>-taggen vår.</p>
+<ul>
+<li>
+<p>Lage en <code>&lt;div&gt;</code>. Denne skal holde styr på det som er øverst på siden vår. Denne kalles ofte for en header (det er ikke det samme som <code>&lt;head&gt;</code>).</p>
+</li>
+<li>
+<p>Studer kidsakoder.no med utviklingsverktøyet og se om du finner <code>&lt;header&gt;</code>-taggen eller en <code>&lt;div&gt;</code> med <code>ID</code> som inneholder <em>header</em>.</p>
+</li>
+</ul>
+<p>Fant du det? Det er en sånn vi prøver å lage, bare at vi skal forenkle det litt.</p>
+<ul>
+<li>Legg til en overskrift i <code>&lt;div&gt;</code>-taggen du akkurat lagde.</li>
+</ul>
+<toggle>
+<strong>Se koden så langt</strong>
+<hide>
+<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span> 3-delt side <span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span> Den øverste div-en <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+  </hide>
+</toggle>
+<ul>
+<li>
+<p>La oss lage en <code>&lt;div&gt;</code> som skal holde styr på navigasjonsmenyen vår. Legg denne under der den andre <code>&lt;div&gt;</code>-en ble avsluttet</p>
+</li>
+<li>
+<p>La oss nå lage en liste med 3 elementer som skal være menyen vår. Du velger selv hva som skal være med i listen.</p>
+</li>
+</ul>
+<toggle>
+<strong>Hint</strong>
+<hide>
+<pre><code class="html">     <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Hjem <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Mine hobbyer <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Om meg <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+</code></pre>
+</hide>
+</toggle>
+<ul>
+<li>Lage en ny <code>&lt;div&gt;</code> som skal ha innholdet på siden vår. Inni den kan vi skrive en overskrift og legge til litt tekst. Gjerne også et bilde hvis du vil det.</li>
+</ul>
+<toggle>
+<strong>Se koden så langt</strong>
+<hide>
+<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span> 3-delt side <span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span> Den øverste div-en <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Hjem <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Mine hobbyer <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Om meg <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span> Min side <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> Denne siden inneholder informasjon om meg, hvem jeg er og mine hobbyer. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+  </hide>
+</toggle>
+<p><strong>Nå har du delt inn siden i 3 deler: Header, navigasjon og hovedområdet eller innhold.</strong></p>
+</section>
+<section class="activity" id="steg-3-vi-prover-litt-css">
+<h1 class="activity" id="steg-3-vi-prover-litt-css">Steg 3: Vi prøver litt CSS</h1>
+<p>La oss nå sette farge på de 3 <code>&lt;div&gt;</code>-ene vi har laget. For å gjøre det bruker vi attributtet <code>style=””</code>. I <code>style</code> kan vi legge til variabler som for eksempel <code>background-color: favoritt fargen din</code>.</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-color: red"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Prøv å legge til forskjellig farge på hver av <code>&lt;div&gt;</code>-ene og se hva som skjer.</li>
+</ul>
+<toggle>
+<strong>Se et eksempel</strong>
+<hide>
+<img src="ressurser/html_del_inn_1.png" width="100%">
+</hide>
+</toggle>
+<p>Nå skal vi sette en <code>ID</code> på <code>&lt;div&gt;</code>-ene våre før vi skal se litt mer på <em>CSS</em>. Kan du tenke deg noen gode IDer vi kan sette på <code>&lt;div&gt;</code>-ene våre?</p>
+</section>
+<section class="activity" id="steg-4-vi-legger-til-en-id">
+<h1 class="activity" id="steg-4-vi-legger-til-en-id">Steg 4: Vi legger til en ID</h1>
+<p>ID er en fin ting å bruke hvis vi vil ha forskjellig stil på forskjellige seksjoner på siden vår.  Vi har laget 3 <code>&lt;div&gt;</code>-tagger hvor en holder styr på <em>headeren</em>, en på <em>navigasjonsbaren</em> og en på <em>innholdet</em>.</p>
+<p>ID lages ved å legge til attributte <code>id=””</code> som attributt i <code>&lt;div&gt;</code>-taggen.</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"navn_på_id-en"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Gi en passende <code>ID</code> til de 3 <code>&lt;div&gt;</code>-ene i steg 2.</li>
+</ul>
+<toggle>
+<strong>Se et forslag til løsning</strong>
+<hide>
+<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span> 3-delt side <span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"header"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-color: red"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span> Den øverste div-en <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"nav"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-color: green"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Hjem <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Mine hobbyer <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Om meg <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"innhold"</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"background-color: blue"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span> Min side <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> Denne siden inneholder informasjon om meg, hvem jeg er og mine hobbyer. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+  </hide>
+</toggle>
+<p>Nå som vi har laget IDer på <code>&lt;div&gt;</code>-ene våre skal vi prøve ut en ny måte å lage CSS på.</p>
+</section>
+<section class="activity" id="steg-5-litt-mer-css">
+<h1 class="activity" id="steg-5-litt-mer-css">Steg 5: Litt mer CSS</h1>
+<p>Vi endrer hvordan en side ser ut gjennom å bruke språket <strong>CSS</strong> (som står for <strong>Cascading Style Sheets</strong>). Dette er et veldig enkelt språk, og du vil lære mer av dette i senere oppgaver. <strong>CSS</strong> er bygget opp på denne måten:</p>
+<pre><code class="css"><span class="hljs-tag">selector</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">property</span>:<span class="hljs-value"> value</span></span>;
+}</span>
+</code></pre>
+<ul>
+<li>Kan du finne knappene for ‘{‘ og ‘}’ på ditt tastatur? Hva med ‘:’ og ‘;’ ? Disse trenger vi får å skrive <strong>CSS</strong></li>
+</ul>
+<p><code>Selektorer</code> er som regel HTML-tagger som <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code>. Men de kan også være IDer og klasser, som vi vil lære om senere.</p>
+<p><code>Property</code> kan være for eksempel <code>background-color</code> som vi har brukt. Flere <code>properties</code> finner du på <a href="http://w3schools.com/css">w3schools.com/css</a></p>
+<p><code>Value</code> er det som kommer etter en <code>property</code> og er verdien du sender til <code>property</code>. Denne kan være <code>red</code>, for eksempel.</p>
+<p>Under ser du hvordan du kan legge til CSS i <code>&lt;head&gt;</code>-taggen med 3 IDer:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+    <span class="hljs-id">#header</span><span class="hljs-rules">{
+
+    }</span>
+
+    <span class="hljs-id">#nav</span><span class="hljs-rules">{
+
+    }</span>  
+
+    <span class="hljs-id">#innhold</span><span class="hljs-rules">{
+
+    }</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Ta vekk <code>style</code>-attributtene i <code>&lt;div&gt;</code>-ene.</li>
+<li>Lagre og last inn siden. Forsvant bakgrunnsfargen?</li>
+<li>Legg til bakgrunnsfargen igjen ved å legge det i <em>CSS</em>-en i <code>&lt;head&gt;</code></li>
+</ul>
+<toggle>
+<strong>Se et eksempel</strong>
+<hide>
+<img src="ressurser/html_del_inn_2.png" width="100%">
+</hide>
+</toggle>
+<p>Det finnes flere måter å skive farger i CSS på. Vi har nå brukt kjente ord som <code>red</code>, <code>blue</code>og <code>green</code>. Men vi kan faktisk lage 16 millioner forskjellige farger ved å bruke en annen metode. For å lage dise fargene skal vi bruke tall fra 0-9 og bokstaver fra A-Z. Vi setter disse sammen i en kombinasjon av 6 tall og/eller bokstaver. Siden det tar veldig lang tid å prøve ut alle kombinasjonene, så bruker vi litt hjelp for å finne de fargene vi vil ha:</p>
+<ul>
+<li>Gå inn på <a href="http://paletton.com">paletton.com</a> eller <a href="http://colourpicker.com">colourpicker.com</a> og velg og vrak i masse forskjellige farger.</li>
+<li>Erstatt de fargene du har med noen andre du liker ved å bruke <code>#</code> foran de 6 tall/bokstavene. Eksempel: <code>#338F33</code> gir en ganske fin grønnfarge.</li>
+</ul>
+<toggle>
+<strong>Se koden så langt</strong>
+<hide>
+<pre><code class="css"><span class="hljs-id">#nav</span><span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#338F33</span></span></span>;
+}</span>
+</code></pre>
+  </hide>
+</toggle>
+<p>Vi skal se enda mer på CSS etter vi har lært litt mer HTML.</p>
+<section class="try" id="utfordring">
+<h2 class="try" id="utfordring">Utfordring</h2>
+<ul>
+<li>Gå inn på <a href="http://w3schools.com/css">w3schools.com/css</a> og se om du finner en flere “properties” du kan endre på.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-6-html5-tagger">
+<h1 class="activity" id="steg-6-html5-tagger">Steg 6: HTML5-tagger</h1>
+<p>Nå har vi sett på hvordan vi kan bruke <code>&lt;div&gt;</code>-taggen til å organisere nettsiden vår, og vi har sett på hvordan vi kan sette stiler på disse ved hjelp av CSS. Det kommer stadig nye versjoner av HTML og nå er vi på versjon HTML5. Ved denne versjonen kom det noen nye tagger vi skal se på. Her er en liste over noen:</p>
+<p><code>&lt;nav&gt;</code> - holder på navigasjonslenkene til siden</p>
+<p><code>&lt;header&gt;</code> - her ligger overskriften til siden eller til en artikkel på siden (for eksempel h1)</p>
+<p><code>&lt;main&gt;</code> - hovedelementene til siden legges her</p>
+<p><code>&lt;section&gt;</code> - brukes for å lage en egen seksjon på siden</p>
+<p><code>&lt;footer&gt;</code> - denne ligger alltid nederst på siden, der har man gjerne kontaktinformasjon eller hvem som har skrevet nettsiden. Skroll ned på denne siden og se hva det står nederst.</p>
+<p><code>&lt;article&gt;</code> - dersom man har en artikkel på nettsiden, kan man skrive den inne i denne taggen</p>
+<p>Du kan lese om flere her: <a href="http://www.w3schools.com/html/html5_new_elements.asp">http://www.w3schools.com/html/html5_new_elements.asp</a></p>
+<p>Disse taggene gjør det enklere for nettleseren å lese hva innholdet på siden er. Nå skal vi bytte ut <code>&lt;div&gt;</code>-taggene på siden vår med noen av taggene over.</p>
+<ul>
+<li>Kan du tenke deg hvilke taggen vi bør bruke istedet for <code>&lt;div&gt;</code>-ene?</li>
+<li>La oss starte med <code>&lt;div id=”header”&gt;</code>, bytt den ut med <code>&lt;header&gt;</code></li>
+<li>Gjør det samme med <code>&lt;div id=”nav”&gt;</code> og <code>&lt;div id=”innhold”&gt;</code>
+NB! Husk å fjerne <code>&lt;/div&gt;</code> og erstatte disse med <code>&lt;/header&gt;, &lt;/nav&gt;</code> og <code>&lt;/section&gt;</code></li>
+</ul>
+<p>Nå vil <code>&lt;body&gt;</code>-en se noe sånt ut:</p>
+<pre><code class="html">    <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span> Den øverste div-en <span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Hjem <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Mine hobbyer <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> Om meg <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span> Min side <span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> Denne siden inneholder informasjon om meg, hvem jeg er og mine hobbyer.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+
+</code></pre>
+<ul>
+<li>Lagre og kjør og se om du får opp akkurat det samme. Forsvant fargene?
+For å få fargene til å fungere igjen må vi endre CSSen. Siden vi ikke har en ID på taggene våre har vi 2 valg: enten sette en ID på dem eller så kan vi gjerne <code>#</code> i CSSen.</li>
+</ul>
+<p><code>#nav</code> i CSS betyr at vi endrer stilen på en tag med ID <code>nav</code>. Hvis vi ikke har noe foran <code>nav</code> betyr dette: “for alle <code>&lt;nav&gt;</code>-tagger”. Så nå som vi bruker HTML5-taggene må vi også endre på CSSen vår.</p>
+<ul>
+<li>Fjern <code>#</code> i CSSen</li>
+<li>Legg til selektorene (taggene) du vil ha CSS på</li>
+</ul>
+<p>CSS-en bør se noe sånt ut: (Merk at jeg har sikkert andre farger enn deg)</p>
+<pre><code class="css">      <span class="hljs-tag">header</span><span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#D46A6A</span></span></span>;
+      }</span>
+
+      <span class="hljs-tag">nav</span><span class="hljs-rules">{
+           <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#55AA55</span></span></span>;
+      }</span>
+
+      <span class="hljs-tag">section</span><span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#669999</span></span></span>;
+      }</span>
+</code></pre>
+<ul>
+<li>Legg til farge på bakgrunnen for hele siden ved å legge til CSS på <code>&lt;body&gt;</code>-taggen. Velg farge selv.</li>
+</ul>
+<p>Nå vil koden se noe sånt ut:</p>
+<p><figure><img src="ressurser/html_del_inn_6.png" alt="screenshot"></figure></p>
+<p>Nå har du lært hvordan man kan dele inn en nettside ved hjelp av <code>&lt;div&gt;</code>-taggen og HTML5-tagger. La oss nå se hvordan vi kan lenke sammen nettsider.</p>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: HTML: Del inn nettsiden&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/del_inn_nettsiden" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
