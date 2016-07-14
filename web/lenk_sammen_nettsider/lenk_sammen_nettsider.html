@@ -1,0 +1,75 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>HTML: Lenk sammen nettsider | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">HTML: Lenk sammen nettsider</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/lenk_sammen_nettsider/lenk_sammen_nettsider.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I denne oppgaven må du bruke det du har lært til nå for å lage 3 nettsider som skal linke til hverandre. Her er et eksempel: <a href="http://www.ulv.no/">www.ulv.no</a>.</p>
+<p>Denne siden linker til 2 nye sider som linker tilbake igjen til ulv.no. I denne oppgaven skal vi gjøre det samme bare at alle sidene skal lenke til hverandre.</p>
+</section>
+<section class="activity" id="lenk-sammen-nettsider">
+<h1 class="activity" id="lenk-sammen-nettsider">Lenk sammen nettsider</h1>
+<ol>
+<li>Lag 3 nye HTML-sider eller bruk 3 sider fra de tidligere oppgavene</li>
+<li>Lenk den først siden til de 2 andre sidene (Husk: sidene bør ligge i sammen mappe)</li>
+<li>Lagre og prøv ut kommer deg fra den første siden til de 2 andre sidene.</li>
+</ol>
+<p><strong>Fungerer det ikke?</strong></p>
+<p>Prøv hintene under og sørg for at sidene ligger i samme mappe.</p>
+<toggle>
+ <strong>Hint 1</strong>
+ <hide>
+<pre><code class="html">     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side2.html"</span>&gt;</span> Side 2 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side3.html"</span>&gt;</span> Side 3 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</code></pre>
+ </hide>
+</toggle>
+<br/>
+<p>Dersom du bruker <a href="http://www.w3schools.com/tags/tag_nav.asp"><code>&lt;nav&gt;</code>-taggen</a> fra oppgave <a href="../del_inn_nettside/del_inn_nettside.html">“Del inn nettsiden&quot;</a>, så kan du legge lenkene inne i <code>&lt;nav&gt;</code>-taggen.</p>
+<toggle>
+ <strong>Hint 2</strong>
+ <hide>
+<pre><code class="html"> <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side2.html"</span>&gt;</span>Side 2 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side3.html"</span>&gt;</span> Side 3 <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+</code></pre>
+ </hide>
+</toggle>
+<ol start="4">
+<li>Nå skal du lenke sammen de 2 andre sidene med hverandre og med den første siden sånn at alle sidene linker til hverandre.</li>
+</ol>
+<p><strong>Bra jobba!</strong> Nå har du 3 sider som er lenkeT til hverandre.</p>
+</section>
+<section class="activity" id="et-eksempel">
+<h1 class="activity" id="et-eksempel">Et eksempel</h1>
+<p>Her er et eksempel på 3 sider som er knyttet sammen. Koden er hentet fra <a href="../del_inn_nettside/del_inn_nettside.html">“Del inn nettsiden&quot;</a> hvor vi lære hvordan vi delte inn nettsiden ved hjelp av <code>&lt;div&gt;</code>- og <code>&lt;nav&gt;</code>-tagger.</p>
+<section>
+<h2 id="hjem">Hjem</h2>
+<p><figure><img src="ressurser/hjem.png" alt="screenshot"></figure></p>
+</section>
+<section>
+<h2 id="mine-hobbyer">Mine hobbyer</h2>
+<p><figure><img src="ressurser/mine_hobbyer.png" alt="screenshot"></figure></p>
+</section>
+<section>
+<h2 id="om-meg">Om meg</h2>
+<p><figure><img src="ressurser/om_meg.png" alt="screenshot"></figure></p>
+</section>
+</section>
+<section class="try" id="tips">
+<h1 class="try" id="tips">TIPS</h1>
+<p>Bruk gjerne <a href="http://www.w3schools.com/">w3schools</a> for å få enda mer hjelp eller lese mer om HTML-tagger. Dersom det er vanskelig språk så spør du en voksen, lærere eller veileder.</p>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: HTML: Lenk sammen nettsider&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/lenk_sammen_nettsider" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
