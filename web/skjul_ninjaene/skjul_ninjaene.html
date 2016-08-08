@@ -1,4 +1,4 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Skjul ninjaene | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>CSS: Skjul ninjaene | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
 // ex: python/index.html -> ../python/index.html
 function relative(url) {
   var urlRoot = '../..';
@@ -6,9 +6,10 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Skjul ninjaene</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/skjul_ninjaene/skjul_ninjaene.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">CSS: Skjul ninjaene</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/skjul_ninjaene/skjul_ninjaene.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>Dette prosjektet vil utvide din kunnskapen din om CSS-kungfu.</p>
+<p>Dette prosjektet vil utvide dine talenter i <strong>CSS-kungfu</strong>.</p>
+<p>I denne oppgaven skal du lære hvordan du kan flytte rundt på elementer og gjemme elementene bak andre elementer ved hjelp av CSS.</p>
 <p>Fem ninjaer kom til byen, og du må skjule dem før noen legger merke til dem. Ved å bruke dine egne ninja-liknende CSS-kunnskaper må du hjelpe dem å finne et sikkert gjemmested. Du kan flytte ninjaene selv, og noen objekter i gaten også. Fort – det er ingen tid å miste!</p>
 <p><figure><img src="ninjas.png" alt="screenshot"></figure></p>
 </section>
@@ -16,57 +17,233 @@ function relative(url) {
 <h1 class="activity" id="steg-1-mot-ninjaene">Steg 1: Møt ninjaene</h1>
 <ul>
 <li>
-<p>Last ned <a href="ninjaer.zip">ninjaer.zip</a> og pakk ut filene på din datamaskin.</p>
+<p>Last ned <a href="ninja.zip">ninja.zip</a> og pakk ut filene på din datamaskin.</p>
 </li>
 <li>
-<p>Åpne filen kalt ninjaer.html i teksteditoren. Åpne det opp i nettleseren også.</p>
+<p>Åpne filen kalt <code>ninjaer.html</code> i en teksteditor.</p>
 </li>
 <li>
-<p>Les gjennom koden. Kan du gjette hvilken del av koden som hører til delene i gatene? Legg merke til av vi bruker to språk her: HTML for å legge til elementene på siden, og CSS plassert mellom <code>style</code> taggene.</p>
+<p>Åpne <code>ninjaer.html</code> i nettleseren for å se hvordan den ser ut.</p>
 </li>
 <li>
-<p>Elementene vi skal leke med er bildene (<code>&lt;img&gt;</code> taggen). Vi kan ta kontroll over deres plassering ved å bruke CSS.</p>
+<p>Les gjennom koden. Kan du gjette hvilken del av koden som hører til delene i gatene? Legg merke til av vi bruker to språk her: <code>HTML</code> for å legge til elementene på siden, og <code>CSS</code> plassert mellom <code>&lt;style&gt;</code>-taggene.</p>
+</li>
+<li>
+<p>Elementene vi skal leke med er bildene, <code>&lt;img&gt;</code>-taggen. Vi kan ta kontroll over deres plassering ved å bruke CSS.</p>
 </li>
 </ul>
-<p>**Kom igjen – La oss flytte en ninja! **</p>
+<p><strong>Kom igjen – La oss flytte en ninja!</strong></p>
+<p>Alle ninjaene har fått eget navn ved bruk av <code>id</code> attributtet. La oss flytte &quot;Alex The Ninja&quot; først.</p>
 <ul>
-<li>Alle ninjaene har fått eget navn ved bruk av <code>id</code> attributtet. La oss flytte Alex The Ninja først. Finn Alex sin CSS-stil.</li>
-<li>• Endre verdien på <code>left</code>(venstre) til <code>100px</code> og <code>top</code> til <code>320px</code>.
-Når position egenskapene er satt til <code>absolute</code> menes det at vi vil beskrive posisjonen i relasjon til foreldreelementet til ninjaen – I dette eksempelet <code>&lt;div&gt;</code> med <code>id</code> <code>gatehjoerne</code>.
-<code>px</code> betyr <code>pixel</code>(punkter). <code>left</code> beskriver hvor langt fra venstrekanten ninjaen skal plasseres (antall pixler) og <code>top</code> forteller nettleseren hvor langt ninjaen skal flyttes ned fra toppen.</li>
+<li>Finn Alex sin CSS-stil.</li>
+<li>Endre verdien på <code>left</code>(venstre) til <code>100px</code> og <code>top</code> til <code>320px</code>.</li>
+</ul>
+<p>Når <code>position</code> egenskapene er satt til <code>absolute</code> menes det at vi vil beskrive posisjonen i relasjon til foreldreelementet til ninjaen – I dette eksempelet <code>&lt;div&gt;</code> med <code>id</code> <code>gatehjoerne</code>.</p>
+<p><code>px</code> betyr <code>pixel</code>(punkter). <code>left</code> beskriver hvor langt fra venstrekanten ninjaen skal plasseres (antall pixler) og <code>top</code> forteller nettleseren hvor langt ninjaen skal flyttes ned fra toppen.</p>
+<ul>
 <li>Endre <code>left</code> til <code>right</code> og <code>top</code> til <code>bottom</code>. Nå vil koden fortelle nettleseren at den skal plassere ninjaen <code>100px</code> fra den høyre kanten og <code>320px</code> fra bunnen.</li>
 </ul>
-<p>Pixel beskriver det minste fysiske punktet som kan vises på skjermen din. Det brukes ofte til å beskrive størrelsen på skjermen din.</p>
+<p>Pixel er en måleenhet som vi bruker til å forklare hvor stort et element skal være eller hvor det skal plasseres på siden. Hvis du endrer <code>right</code> fra <code>100px</code> til <code>101px</code>, så ser vi at den blir ikke flyttet veldig langt. Derfor gjør <code>pixler</code> det enklere for oss å designe nettsiden så detaljert vi vil.</p>
 </section>
-<section class="activity" id="steg-2-las-prove-a-beskrive-dette-litt-annerledes">
-<h1 class="activity" id="steg-2-las-prove-a-beskrive-dette-litt-annerledes">Steg 2: Las prøve å beskrive dette litt annerledes.</h1>
-<p>Nå vet du hvordan vi bruker pixel-posisjonering. Dette er ikke den eneste måten man kan beskrive plasseringer på skjermen, så la oss se på hva slags andre muligheter vi har.</p>
+<section class="activity" id="steg-2-en-annen-mate-a-flytte-pa">
+<h1 class="activity" id="steg-2-en-annen-mate-a-flytte-pa">Steg 2: En annen måte å flytte på</h1>
+<p>Nå vet du hvordan vi bruker pixel-posisjonering. Dette er ikke den eneste måten man kan beskrive plasseringer på skjermen, så la oss se på hva slags andre muligheter vi har. Vi skal nå se på hvordan vi kan bruke <code>%</code>, det ser slik ut:</p>
+<pre><code class="css">  <span class="hljs-id">#id</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+  }</span>
+</code></pre>
+<p><code>100%</code> beskriver hele bredden som er tilgjengelig på skjermen. Når vi plasserer ninjaer og andre objekter i forhold til <code>gatehjornet</code>, som er 600 pixler bred, så vil 100% være lik <code>600px</code> i vårt eksempel. Hvis vi hadde laget et større gatehjørne, f.eks. 800 pixler bredt, ville <code>100%</code> bety en bredde på <code>800px</code>. Avhengig av sammenhengen så kan størrelsen beskrevet i prosenter(<code>%</code>) har forskjellige betydninger.</p>
 <ul>
-<li>Finn <code>soppelkasse</code> elementet i CSSen.</li>
+<li>
+<p>Finn <code>soppelkasse</code>-elementet i CSSen.</p>
+</li>
+<li>
+<p>Bytt ut verdiene <code>190px</code> og <code>460px</code> i <code>soppelkasse</code>-elementet med prosenter sånn at søppelkassen står på ca. samme sted som den gjør nå. Trenger ikke være helt nøyaktig.</p>
+</li>
 </ul>
-<p>100% beskriver hele bredden som er tilgjengelig på skjermen. Når vi plasserer ninjaer og andre objekter i forhold til <code>gatehjornet</code>, som er 600 pixler bred, så vil 100% være lik <code>600px</code> i vårt eksempel. Hvis vi hadde laget et større gatehjørne, f.eks. 800 pixler bredt, ville 100% bety en bredde på <code>800px</code>. Avhengig av sammenhengen så kan størrelsen beskrevet i prosenter har forskjellige betydninger.</p>
 </section>
 <section class="activity" id="steg-3-en-storrelsetype-til">
 <h1 class="activity" id="steg-3-en-storrelsetype-til">Steg 3:  En størrelsetype til</h1>
-<p>Som om vi ikke har nok størrelse-typer nå, skal vi likevel prøve en til! Du vet nå hvordan man skal bruke pixler (px) og prosent(%). La oss nå prøve <code>em</code>.</p>
-<p><code>Em</code> er en måleenhet som vi låner fra typografi, som er handler om utsende på bokstaver og tekst. Én em er det samme som den gjeldende skriftstørrelsen. Legg merke til at på toppen av CSS, definerte vi font-size i body taggen som 20px, så én em vil være 20 pixler.</p>
+<p>Som om vi ikke har nok størrelse-typer nå, skal vi likevel prøve en til! Du vet nå hvordan man skal bruke pixler (<code>px</code>) og prosent(<code>%</code>). La oss nå prøve <code>em</code>.</p>
+<p><code>Em</code> er en måleenhet som vi låner fra typografi, som er handler om utsende på bokstaver og tekst. Én <code>em</code> er det samme som den gjeldende skriftstørrelsen. Legg merke til at på toppen av CSS-en, definerte vi <code>font-size</code> i <code>body</code>-taggen som <code>20px</code>, så én <code>em</code> vil være <code>20px</code>.</p>
 <ul>
-<li>Vi skrev tidligere at størrelsen på én <code>em</code> er basert på fontstørrelsen. For å teste dette, finn <code>body</code> i CSSen. Endre <code>font-size</code> verdien til 30px. Hva skjedde?
-Som dere ser når vi endre <code>em</code> til 30 pixler så endrer bredden og høyden seg til 30 pixels bred og 30 pixels høy på alle elementer som bruker denne verdien. Og som dere ser alle disse elementene har endret posisjon!</li>
+<li>La oss teste dette ut, finn <code>body</code> i CSSen. Endre <code>font-size</code> verdien til <code>30px</code>. Hva skjedde?</li>
+<li>Studer koden og får å finne elementene som skal flytte på seg når <code>font-size</code> endres.</li>
+<li>Flytter de riktige elementene på seg?</li>
+</ul>
+<p>Som dere ser når vi endre <code>em</code> til 30 pixler så endrer bredden og høyden seg til 30 pixels bred og 30 pixels høy på alle elementer som bruker denne verdien.</p>
+</section>
+<section class="activity" id="steg-4-flytt-figurer-fremover">
+<h1 class="activity" id="steg-4-flytt-figurer-fremover">Steg 4: Flytt figurer fremover</h1>
+<p>Før vi skal begynne å gjemme ninjaene, skal vi studere én ting til: <code>z-index</code>.</p>
+<ul>
+<li>Let gjennom CSS-en og se om du finner <code>z-index</code>.</li>
+</ul>
+<p><code>Z-index</code> finner du to steder: i klassen <code>.ninja</code> og i id-en <code>#andre_gjenstander</code>. <code>Z-index</code> bestemmer hvilke element som ligger fremst på siden, altså hvilke element som skal ligge oppå de andre. Vi ser at <code>#andre_gjenstander</code> har en verdi på 200 og <code>.ninja</code> har en verdi på 1. Dette betyr at ninjaene vil legge seg bak elementene med høyere <code>z-index</code>-verdi.</p>
+<p>Her er et bilde som beskriver <code>z-index</code>:</p>
+<p><img src="zindex1.png" alt="z-index" width="30%"></p>
+<ul>
+<li>Prøv å endre på <code>z-index</code>-verdien og se hva som skjer</li>
+<li>Legg til <code>z-index</code> på et element og se om du kan få elementet til å legge seg bak eller foran et annet</li>
+</ul>
+<p><strong>Eksempel:</strong></p>
+<pre><code class="css">  <span class="hljs-id">#andre_objekter</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
+  }</span>
+
+  <span class="hljs-class">.ninja</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">2</span></span></span>;
+  }</span>
+</code></pre>
+<ul>
+<li>Bytt tilbake og forbered deg på redde ninjaene!</li>
 </ul>
 </section>
-<section class="activity" id="steg-4-fort-deg-skjul-ninjaene">
-<h1 class="activity" id="steg-4-fort-deg-skjul-ninjaene">Steg 4: Fort deg, skjul ninjaene! </h1>
-<p>Nå når du vet hvordan du skal flytte på elementene på skjermen, er det på tide å hjelpe ninjaene. Bruk de forskjellige måtene som er beskrevet over. Husk, du kan også flytte noen av objektene. Hvilken måte synes du er den beste å flytte de på? Finn den beste måten å skjule dem på. Lykke til!</p>
+<section class="activity" id="steg-5-fort-deg-skjul-ninjaene">
+<h1 class="activity" id="steg-5-fort-deg-skjul-ninjaene">Steg 5: Fort deg, skjul ninjaene! </h1>
+<ul>
+<li>Se gjennom koden, finn ut hvilke elementer du kan hjemme ninjaene bak!</li>
+<li>Bruk det du har lært til å gjemme ninjaene</li>
+</ul>
+<p>Her finnes det ingen fasit, så du må legge til og endre kode sånn at du får gjemt ninjaene! Sitter du fast bør du enten lese oppgaven på nytt eller prøve å finne hjelp på <a href="http://www.w3schools.com/css/default.asp">w3schools.com</a>. Det ligger også et eksempel nederst i denne oppgaven.</p>
+<p><strong>LYKKE TIL!</strong></p>
 <section class="try" id="ting-du-kan-prove">
 <h2 class="try" id="ting-du-kan-prove">Ting du kan prøve:</h2>
 <ul>
-<li>Kan du finne ut hvordan du kan få ninjaene til å komme foran noen av gateobjektene? Hva skjer om du kopierer <code>&lt;img&gt;</code> taggen for ninjaen etter <code>&lt;img&gt;</code> taggen som viser objektet?</li>
+<li>Legg gjerne til <code>z-index</code> eller endre <code>position</code> i CSS-en på de elementene du føler trenger det</li>
+<li>Kan du finne ut hvordan du kan få ninjaene til å komme foran noen av gateobjektene? Hva skjer om du kopierer <code>&lt;img&gt;</code>-taggen for ninjaen etter <code>&lt;img&gt;</code>-taggen som viser objektet?</li>
 <li>Klarer du å legge til flere objekter på scenen? Du kan legge til bilder fra datamaskinen din, eller finne noen på internett.</li>
 </ul>
 </section>
+<section>
+<h2 id="eksempel"><strong>Eksempel:</strong></h2>
+<p><figure><img src="resultat.png" alt="resultat"></figure></p>
+<toggle>
+<strong>Vis forslag til kode</strong>
+  <hide>
+<pre><code class="html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">utf-8</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Skjul ninjaene<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+
+ <span class="hljs-tag">body</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+ }</span>
+
+ <span class="hljs-id">#gatehjorne</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">955px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">700px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(gatehjorne.png)</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+ }</span>
+ <span class="hljs-id">#andre_objekter</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">200</span></span></span>;
+ }</span>
+ <span class="hljs-id">#kontainer</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">14%</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">73%</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">2</span></span></span>;
+ }</span>
+ <span class="hljs-id">#soppelkasse</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">190px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">460px</span></span></span>;
+ }</span>
+ <span class="hljs-id">#sykkel</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> -<span class="hljs-number">520px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> -<span class="hljs-number">20em</span></span></span>;
+ }</span>
+ <span class="hljs-id">#kafe_skilt</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">2em</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">11em</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">2</span></span></span>;
+ }</span>
+ <span class="hljs-id">#kumlokk</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">20em</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">520px</span></span></span>;
+ }</span>
+
+ <span class="hljs-comment">/* Ninjas */</span>
+
+ <span class="hljs-id">#lucy_the_ninja</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">280px</span></span></span>;
+ }</span>
+ <span class="hljs-id">#alex_the_ninja</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">90px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">140px</span></span></span>;
+ }</span>
+ <span class="hljs-id">#katy_the_ninja</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">380px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">6em</span></span></span>;
+ }</span>
+ <span class="hljs-id">#sam_the_ninja</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> static</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">150px</span></span></span>;
+ }</span>
+ <span class="hljs-id">#omar_the_ninja</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
+   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">250px</span></span></span>;
+ }</span>
+ <span class="hljs-class">.ninja</span> <span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
+ }</span>
+
+ <span class="hljs-comment">/* Other objects (you can't move these) */</span>
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"jsbin-css"</span>&gt;</span><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"gatehjorne"</span>&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"lucy_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"lucy.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"alex_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"alex.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"katy_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"katy.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"omar_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"omar.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"sam_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"sam.png"</span> /&gt;</span>
+
+
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kumlokk"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kumlokk.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kontainer"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kontainer.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"soppelkasse"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"soppelkasse.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"sykkel"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"sykkel.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kafe_skilt"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kafe_skilt.png"</span> /&gt;</span>
+
+ <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"andre_objekter"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"andre_objekter.png"</span> /&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="undefined">
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+
+</code></pre>
+  </hide>
+</toggle>
 </section>
-</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: Skjul ninjaene&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/skjul_ninjaene" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: CSS: Skjul ninjaene&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/skjul_ninjaene" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
