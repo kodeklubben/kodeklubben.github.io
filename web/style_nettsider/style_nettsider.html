@@ -1,4 +1,4 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Style nettsider | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>CSS: Style nettsider | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
 // ex: python/index.html -> ../python/index.html
 function relative(url) {
   var urlRoot = '../..';
@@ -6,63 +6,99 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">Style nettsider</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span data-i18n="html=layout.levelNames.2">Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/style_nettsider/style_nettsider.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../../assets/img/ccno_logo.png" class="logo hidden-xs"/><h1 class="title">CSS: Style nettsider</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span data-i18n="html=layout.levelNames.2">Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/style_nettsider/style_nettsider.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>La oss gjøre nettsiden bedre med noen stiler.
-I denne og neste leksjon skal vi lære oss hvordan å endre farge, tekst, størrelse og mer!</p>
-<p>Vi endrer hvordan en side ser ut gjennom å bruke et språk som heter <strong>CSS</strong> (som står for <strong>Cascading Style Sheets</strong>). Det er et veldig enkelt språk å lære. La oss begynne.</p>
+<p>Nå skal vi lære å endre på stilen til nettsider. I denne oppgaven forventer vi at du har gjort HTML-oppgavene eller er litt kjent med HTML fra før av.</p>
+<p>I denne og neste leksjon skal vi lære oss hvordan å <strong>endre farge, tekst, størrelse og mer</strong>! Dette gjør vi ved å lære oss å bruke et språk som heter <strong>CSS</strong> (som står for <strong>Cascading Style Sheets</strong>). Det er et veldig enkelt språk å lære. La oss begynne.</p>
+<p>Resultatet kommer til å se noe sånt ut:</p>
+<p><img src="ressurser/bilde1.png" alt="screenshot2">
+<img src="ressurser/bilde2.png" alt="screenshot3"></p>
 </section>
-<section class="activity" id="steg-1-konfigurasjon-for-vi-legger-til-stiler">
-<h1 class="activity" id="steg-1-konfigurasjon-for-vi-legger-til-stiler">Steg 1: Konfigurasjon før vi legger til stiler</h1>
-<p>Det finnes mange måter å lage stiler på, inline, i “head”, eller som en et eget .css-dokument som vi linker til fra “head”. Men i dag skal vi legge stilene i “head” på vår htmlside så vi ikke trenger å tenke på å håndtere flere filer.</p>
-<section class="check" id="sjekkliste">
-<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<section class="activity" id="steg-1-hvordan-fungerer-css">
+<h1 class="activity" id="steg-1-hvordan-fungerer-css">Steg 1: Hvordan fungerer CSS?</h1>
+<p>Det finnes mange måter å lage stiler på. En av dem er <strong>inline</strong> hvor du skriver stilen rett i en tag, om dette:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"color:red"</span>&gt;</span>Tekst som er rød<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+<p>En annen måte er å lage en egen <code>.css</code>-fil og referere til den i <code>&lt;head&gt;</code>:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"navn_på_css_filen_din.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+</code></pre>
+<p>Men i dag skal vi bruke den siste metoden hvor vi legger stilene i <code>&lt;head&gt;</code> slik:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+        &lt;<span class="hljs-tag">--</span>! <span class="hljs-tag">Her</span> <span class="hljs-tag">skal</span> <span class="hljs-tag">vi</span> <span class="hljs-tag">skrive</span> <span class="hljs-tag">CSS-en</span> <span class="hljs-tag">--</span>&gt;
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+</code></pre>
+<p>På denne måten slipper vi å håndere flere filer, vi kan ha alt vi trenger i én fil.</p>
 <ul>
-<li>
-<p>Åpne index.html fra foldern Felix som vi lagte i forrige leksjon.</p>
-</li>
-<li>
-<p>I seksjonen “head” trenger vi en <strong>style tag</strong>.</p>
-</li>
+<li>Åpne index.html fra mappen Felix som vi lagde i oppgaven <a href="../forsvunnet_katt/forsvunnet_katt.html">Forvunnet katt</a> eller last ned filen ved å høyreklikke og trykk <code>lagre som</code>: <a href="../forsvunnet_katt/ressurser/index.html">index.html</a>. Lag en mappe som heter <code>Felix</code> og legg <code>index.html</code> i den.</li>
 </ul>
-<pre><code class="css"> &lt;style&gt;
- &lt;/style&gt;
+<ul>
+<li>I seksjonen <code>&lt;head&gt;</code> trenger vi en <strong>style-tag</strong>.</li>
+</ul>
+<pre><code class="html"> <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+ </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
 </code></pre>
 <p>Alle stiler skal legges mellom disse elementene. Generelt ser css-kode slik ut:</p>
 <pre><code class="css"><span class="hljs-tag">selector</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">property</span>:<span class="hljs-value"> value</span></span>;
 }</span>
 </code></pre>
+<p>Selektorer kan være html-element som <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code>, eller <code>id-er</code> og <code>klasser</code>, men disse skal vi se på senere. Selektorer brukes for å fortelle CSS-en hvilke HTML-objekter vi skal sette stil på. Hvilken stil selektoren får avheniger av hva man setter på <code>property</code> og <code>value</code>.</p>
+<p><code>Property</code> eller <code>attributt</code> er gjerne en egenskap man kan tilegne selektoren, sammen med en verdi, <code>value</code>. Eksempler på <code>property</code> og <code>value</code> kan være <code>color: blue;</code>, <code>background-color: red;</code> og <code>font-family: &quot;Times New Roman&quot;, Serif;</code>.</p>
 <ul>
-<li>Kan du finne knappene for ‘{‘ og ‘}’ på ditt tastatur? Hva med ‘:’ og ‘;’ ?
-Selektorer kan være html-element som <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code>. Men de kan også være andre ting som vi vil lære om senere.</li>
+<li>Kan du finne knappene for <code>{</code> og <code>}</code> på ditt tastatur?</li>
+<li>Hva med <code>:</code> og <code>;</code>?</li>
 </ul>
-</section>
+<p>Finner du dem ikke, så få hjelp av noen til å finne dem for deg, fordi disse er viktige. Dersom du ikke har med <code>{ }</code>, <code>:</code>eller <code>;</code> på de riktige stedene, så vil ikke HTML-en din få stil. Derfor er det viktig å allerede nå å vite hvor man finner <code>{ }</code>, <code>:</code>eller <code>;</code> på tastaturet.</p>
 </section>
 <section class="activity" id="steg-2-legg-til-farge">
 <h1 class="activity" id="steg-2-legg-til-farge">Steg 2: Legg til farge</h1>
-<p>La oss legge til farge med hjelp av attributtet color! CSS er faktisk oppfunnet av en norsk gutt!</p>
-<p>La oss endre <code>h1</code> til å være rød istedenfor svart.</p>
+<p>Visste du at CSS er faktisk oppfunnet av en norsk gutt? Det er litt kult!</p>
+<p>La oss endre <code>h1</code> til å være <code>rød</code> istedenfor <code>svart</code> ved hjelp av property-en <code>color</code>:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
   <span class="hljs-tag">h1</span> <span class="hljs-rules">{
       <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
     }</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
 </code></pre>
+<p><strong>NB! Husk å sette <code>;</code> etter <code>value</code>.</strong></p>
 <section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din">
 <h2 class="save" id="lagre-filen-og-vise-den-i-nettleseren-din"><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
-<p>Teksten skal nå være rød! Det finnes forskjellige måter å representere en farge på. Det er 16 grunnleggende fargenavn, som er aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, og yellow.</p>
+<p>Overskriften skal nå være <code>rød</code>! Det finnes forskjellige måter å representere en farge på. Det er 16 grunnleggende fargenavn: aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, og yellow.</p>
+<ul>
+<li>Prøv og endre fargen til noe annet!</li>
+</ul>
+<p>De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfabetisk rekkefølge kan dere finne på
+<a href="http://www.w3.org/TR/css3-color/#svg-color">http://www.w3.org/TR/css3-color/#svg-color</a>. Er din favorittfargen i listen?</p>
+<ul>
+<li>Men vi kan bruke enda flere farger gjennom å bruke den heksadesimale koden istedenfor navnet. En heksadesimal kode er en <code>#</code> fulgt av 6 tegn der tegnene kan være sifferne 0-9 eller bokstavene A, B, C, D, E, F. Gjennom å bruke heksadesimale koder kan vi representere mer enn 16 millioner farger.</li>
+</ul>
 <ul>
 <li>
-<p>Prøv og endre fargen til noe annet!
-De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfabetisk rekkefølge kan dere finne på
-<a href="http://www.w3.org/TR/css3-color/#svg-color">http://www.w3.org/TR/css3-color/#svg-color</a> Er din yndlingsfarge i listen?</p>
-</li>
-<li>
-<p>Men vi kan bruke enda flere farger gjennom å bruke den heksadesimale koden istedenfor navnet. En heksadesimal kode er en # fulgt av 6 tegn der tegnen kan være sifferne 0-9 eller bokstavene A, B, C, D, E, F. Gjennom å bruke heksadesimale koder kan vi representere mer enn 16 millioner farger.</p>
-</li>
-<li>
 <p>Kodeklubben sin favorittfarge er <code>#58AB57</code>. Kan du gjette hvilken farge det er? Prøv å endre noen tekst til den fargen og se hvordan det ser ut i en nettleser.</p>
+</li>
+<li>
+<p>Prøve å endre teksten, <code>&lt;p&gt;</code>, på siden til denne fargen: <code>#58AB57</code>.</p>
+</li>
+</ul>
+<toggle>
+ <strong>Hint</strong>
+ <hide>
+<pre><code class="css"> <span class="hljs-tag">p</span><span class="hljs-rules">{
+   <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#58AB57</span></span></span>;
+ }</span>
+</code></pre>
+   </hide>
+</toggle>
+<ul>
+<li>
+<p>Bruk <a href="http://www.colourpicker.com">www.colourpicker.com</a> til å finne en farge du liker. Colourpicker genererer det nummer du trenger, så kan du enkelt klippe og lime det inn i koden din.</p>
+</li>
+<li>
+<p>Finn en farge du liker med <code>Colourpicker</code> og endre teksten på siden til den fargen du fant.</p>
 </li>
 </ul>
 </section>
@@ -72,10 +108,10 @@ De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfab
 </section>
 <section class="activity" id="steg-3-gi-farge-til-spesifikke-elementer">
 <h1 class="activity" id="steg-3-gi-farge-til-spesifikke-elementer">Steg 3: Gi farge til spesifikke elementer</h1>
-<p>Hva om vi vil gjøre sånn at ordet oransje i settningen ´Pelsen hans er oransje´ får oransje farge? Ikke hele seksjonen, men akkurat det ordet.</p>
-<p>En måte å gjøre dette på er å putte taggen <span> rundt ordet, på denne måten:</p>
-<p><code>&lt;span&gt;oransje&lt;/span&gt;</code></p>
-<p>Vi kan da i seksjonen <code>head</code> lage en stil for <code>span</code></p>
+<p>Hva om vi vil gjøre sånn at ordet <code>oransje</code> i setningen <code>Pelsen hans er oransje</code> får oransje farge? Ikke hele setningen, men akkurat det ordet. Da bruker vi en tag som heter <code>&lt;span&gt;</code>. Vi legger taggen rundt ordet vi vil sette farge på slik:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre>
+<p>I <code>&lt;head&gt;</code> kan vi nå gjøre at alle <code>&lt;span&gt;</code>-taggene blir oransje slik:</p>
 <pre><code class="css"><span class="hljs-tag">span</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
 }</span>
@@ -84,51 +120,57 @@ De fleste nettlesere støtter i tillegg 130 andre fargenavn, hele listen i alfab
 <h2 class="save" id="lagre-filen-og-vise-den-i-nettleseren-din-3"><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
 </section>
 </section>
-<section class="activity" id="steg-4-bakgrunn">
-<h1 class="activity" id="steg-4-bakgrunn">Steg 4: Bakgrunn</h1>
+<section class="activity" id="steg-4-la-oss-endre-bakgrunnen">
+<h1 class="activity" id="steg-4-la-oss-endre-bakgrunnen">Steg 4: La oss endre bakgrunnen</h1>
 <p>Vi kan legge til farge på bakgrunnen også, ikke bare på tekst. For eksempel:</p>
 <pre><code class="css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#D2FAFC</span></span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#D2FAFC</span></span></span>;
 }</span>
 </code></pre>
-<p>Dette vil gjøre at hele bakgrunnen blir blå. Du kan velge hvilken farge du ønsker fra en liste på <a href="http://www.colourpicker.com">www.colourpicker.com</a> som da genererer det nummer du trenger og så kan du klippe og lime det inn i din kode.</p>
+<p>Dette vil gjøre at hele bakgrunnen blir blå.</p>
 <p>Prøve nå:</p>
 <pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
 }</span>
 </code></pre>
-<p>Siden vi allerede hadde en <code>h1</code> deklarert i filen kan vi bare putte inn attributtet background-color sammen med color, vi trenger ikke å skrive alt om igjen.</p>
+<p>Siden vi allerede hadde en <code>h1</code> deklarert i filen kan vi bare putte inn property-en <code>background-color</code> sammen med <code>color</code>, vi trenger ikke å skrive alt om igjen.</p>
 <pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
   <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
   <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
 }</span>
 </code></pre>
-<pre><code><span class="hljs-preprocessor">## Nå skal du __LAGRE__ filen og se hvordan det ser ut. {.save}</span>
-
-<span class="hljs-preprocessor">## Morro med tekst</span>
-Kanskje skulle tittelen være __større__ og med store bokstaver. Vi kan spesifisere størrelsen på teksten gjennom å bruke `font-size`. Verdiene kan være forskjellige, men de mest brukte er <span class="hljs-number">12</span>, <span class="hljs-number">14</span>, <span class="hljs-number">16</span>, <span class="hljs-number">32</span>, <span class="hljs-number">48</span> og <span class="hljs-number">72</span> piksler.
-La oss prøve ut <span class="hljs-number">72</span>px <span class="hljs-keyword">for</span> nå. (px betyr piksel)
-
-```css
-h1 {
-  color:red;
-  background-color:black;
-  font-size:<span class="hljs-number">72</span>px;
-}
+<section class="save" id="na-skal-du-lagre-filen-og-se-hvordan-det-ser-ut">
+<h2 class="save" id="na-skal-du-lagre-filen-og-se-hvordan-det-ser-ut">Nå skal du <strong>LAGRE</strong> filen og se hvordan det ser ut.</h2>
+<p>Legg merke til at kun bakgrunnen til <code>h1</code> blir svart og ikke hele siden. For å få hele siden bruker må vi legge til bakgrunnsfarge på <code>body</code>, som vist over.</p>
+</section>
+</section>
+<section class="activity" id="steg-5-morro-med-tekst">
+<h1 class="activity" id="steg-5-morro-med-tekst">Steg 5: Morro med tekst</h1>
+<p>Kanskje skulle tittelen være <strong>større</strong> og med store bokstaver. Vi kan spesifisere størrelsen på teksten gjennom å bruke <code>font-size</code>. Verdiene kan være forskjellige, men de mest brukte er 12, 14, 16, 32, 48 og 72 piksler.</p>
+<ul>
+<li>La oss prøve ut <code>72px</code> for nå. (px betyr piksel)</li>
+</ul>
+<pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
+  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">72px</span></span></span>;
+}</span>
 </code></pre>
-<p>Nå skal du forsøke å endre tittelen til å være kun i store bokstaver bare gjennom å bruke <code>text-transform:uppercase;</code> Vi kan også gjøre den understreket gjennom å bruke <code>text-decoration:underline;</code></p>
+<ul>
+<li>Nå skal du forsøke å endre tittelen til å være kun i store bokstaver bare gjennom å bruke <code>text-transform:uppercase;</code> Vi kan også gjøre den understreket gjennom å bruke <code>text-decoration:underline;</code></li>
+</ul>
 <section class="save" id="na-skal-du-lagre-filen-og-se-hvordan-den-ser-ut">
 <h2 class="save" id="na-skal-du-lagre-filen-og-se-hvordan-den-ser-ut">Nå skal du <strong>LAGRE</strong> filen og se hvordan den ser ut.</h2>
 <p>Er det ikke mye større forskjell nå?</p>
-<section>
-<h3 id="for-de-som-bruker-firefox-eller-chrome-som-nettleser">For de som bruker Firefox eller Chrome som nettleser.</h3>
-<p>Det finnes faktisk også en annen verdi for “text-decoration” som er “blink”. Jeg kommer ikke til å fortelle deg hva det gjør. Du må teste det. <code>text-decoration:blink;</code> (det blir litt masete etterhvert, men det er lov å gå tilbake til “underline” hvis du vil).</p>
+<section class="try" id="for-de-som-bruker-firefox-eller-chrome-som-nettleser">
+<h3 class="try" id="for-de-som-bruker-firefox-eller-chrome-som-nettleser">For de som bruker Firefox eller Chrome som nettleser.</h3>
+<p>Det finnes faktisk også en annen verdi for <code>text-decoration</code> som er <code>blink</code>. Jeg kommer ikke til å fortelle deg hva det gjør. Du må teste det. <code>text-decoration:blink;</code> (det blir litt masete etterhvert, men det er lov å gå tilbake til “underline” hvis du vil).</p>
 </section>
 </section>
 </section>
 <section class="activity" id="steg-6-sentrere-tekst-og-bilder-horisontalt">
-<h1 class="activity" id="steg-6-sentrere-tekst-og-bilder-horisontalt">Steg 6. Sentrere tekst (og bilder) horisontalt</h1>
-<p>All vår tekst vises helt borte til venstre. Vi kan endre det gjennom å bruke <code>text-align:center</code> (man kan også bruke ´right´(høyre), ´left´(venstre) er standard).</p>
+<h1 class="activity" id="steg-6-sentrere-tekst-og-bilder-horisontalt">Steg 6: Sentrere tekst (og bilder) horisontalt</h1>
+<p>All vår tekst vises helt borte til venstre. Vi kan endre det gjennom å bruke <code>text-align:center</code> (man kan også bruke <code>right</code>(høyre) og  <code>left</code>(venstre)).</p>
 <ol>
 <li>For denne nettsiden vil vi at all vår tekst skal være sentrert, og da kan vi skrive: (Merk deg at den engelske måten å stave senter på er center.)</li>
 </ol>
@@ -137,13 +179,69 @@ h1 {
   <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
 }</span>
 </code></pre>
-<p>La du merke til at alt på nettsiden ble sentrert når vi har lagt til ‘text-align:center’ i seksjonen “body”? Det er fordi alt innenfor elementet “body” arver stilen. Dette skjer når et element er innenfor et annet, som dette her:</p>
+<p>La du merke til at alt på nettsiden ble sentrert når vi har lagt til <code>text-align:center</code> i seksjonen <code>&lt;body&gt;</code>? Det er fordi alt innenfor elementet <code>&lt;body&gt;</code> arver stilen. Dette skjer når et element er innenfor et annet, som dette her:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Vennligst<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> kontakt eieren hans<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 </code></pre>
-<p>Teksten “Vennligst” vil ha stilen fra elementet <code>&lt;p&gt;</code> med stilen fra elementet <code>&lt;em&gt;</code> lagt på. Dette er grunnen til at man kaller det <strong>cascading</strong> - stilene blir videreført fra et element til alle ene som er innenfor dem.
+<p>Teksten <em>“Vennligst”</em> vil ha stilen fra elementet <code>&lt;p&gt;</code> med stilen fra elementet <code>&lt;em&gt;</code> lagt på. Dette er grunnen til at man kaller det <strong>cascading</strong> - stilene blir videreført fra et element til alle ene som er innenfor dem.
 Men vær forsiktig, det finnes noen stiler som ikke blir videreført.</p>
 <section class="save" id="na-skal-du-lagre-filen-og-apne-den-i-en-nettleser">
 <h2 class="save" id="na-skal-du-lagre-filen-og-apne-den-i-en-nettleser">Nå skal du <strong>LAGRE</strong> filen og åpne den i en nettleser</h2>
+</section>
+</section>
+<section class="activity" id="steg-7-koden-vi-har-til-na">
+<h1 class="activity" id="steg-7-koden-vi-har-til-na">Steg 7: Koden vi har til nå</h1>
+<section>
+<h2 id="resultat">Resultat:</h2>
+<p><img src="ressurser/bilde1.png" alt="screenshot2">
+<img src="ressurser/bilde2.png" alt="screenshot3"></p>
+</section>
+<section>
+<h2 id="koden">Koden:</h2>
+<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"no"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"author"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"#"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"En side laget for å finne katten Felix"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"keywords"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Felix, katt, forsvunnet"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Katten Felix er forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!---CSS-stilen til siden ---&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+
+    <span class="hljs-tag">body</span><span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#F8FAF4</span></span></span>;
+      <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
+    }</span>
+
+    <span class="hljs-tag">h1</span><span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
+      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
+      <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">72px</span></span></span>;
+      <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> uppercase</span></span>;
+    }</span>
+
+    <span class="hljs-tag">span</span> <span class="hljs-rules">{
+      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
+    }</span>
+
+
+  </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- Dette er et Kodeklubb-prosjekt. Felix er ikke ekte og er egentlig ikke forsvunnet. --&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://kodeklubben.github.io/web/forsvunnet_katt/missingcat.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"bilde av Felix"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Takk!<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
 </section>
 <section class="try" id="videre-studier">
 <h2 class="try" id="videre-studier">Videre studier</h2>
@@ -153,7 +251,7 @@ Men vær forsiktig, det finnes noen stiler som ikke blir videreført.</p>
 </ul>
 </section>
 </section>
-</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: Style nettsider&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/style_nettsider" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: CSS: Style nettsider&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/style_nettsider" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
