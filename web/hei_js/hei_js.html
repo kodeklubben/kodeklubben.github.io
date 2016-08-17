@@ -1,4 +1,4 @@
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hei JavaScript! | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>JS: Hei JavaScript! | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
 // ex: python/index.html -> ../python/index.html
 function relative(url) {
   var urlRoot = '../..';
@@ -6,7 +6,7 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Hei JavaScript!</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/hei_js/hei_js.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">JS: Hei JavaScript!</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/hei_js/hei_js.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>I denne oppgaven blir du introdusert for programmeringsspråket JavaScript. Du
 skal gjøre den klassiske oppgaven <em>Hei verden</em>, med en katt.</p>
@@ -20,6 +20,15 @@ din direkte, men i JS Bin blir stegene lik for alle, uansett om du bruker
 Internet Explorer, Mozilla Firefox, Chrome, Opera, Safari eller en annen
 nettleser. I tillegg er det med JS Bin mulig å gjøre denne oppgaven på
 nettbrett.</p>
+<section class="tip" id="tips">
+<h2 class="tip" id="tips">Tips</h2>
+<p>Her er flere måter å kjøre JavaScript-kode på:</p>
+<ul>
+<li>Lagre en <code>.js</code>-fil i din favoritt teksteditor og åpne den i en nettleser</li>
+<li>Skrive kode mellom <code>&lt;script&gt; &lt;/script&gt;</code> i <code>&lt;body&gt;</code> eller <code>&lt;head&gt;</code> i en HTML-fil,  og åpne den i en nettleser</li>
+<li>I <code>&lt;head&gt;</code>, skrive <code>&lt;script src=&quot;fil_navn.js&quot;&gt;&lt;/script&gt;</code></li>
+</ul>
+</section>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
@@ -53,10 +62,10 @@ i <strong>Console</strong>.</p>
 <h2 class="tip" id="forklaring">Forklaring</h2>
 <p>Her er en forklaring til koden over:</p>
 <ul>
-<li><code>console.log()</code> betyr at vi ønsker å kjøre kommandoen med navnet <code>console.log</code>.</li>
+<li><code>console.log()</code> betyr at vi ønsker å kjøre kommandoen med navnet <code>console.log</code>. Den skriver ut det som er mellom parantesene til <code>log()</code> i konsollen.</li>
 <li><code>.log</code> er en av flere utskriftsmetoder. Prøv <code>console.error</code>, ser du hva
 forskjellen til <code>console.log</code> er?</li>
-<li>Tekst skrives mellom <code>&quot;</code>, slik som <code>&quot;hei verden&quot;</code>.</li>
+<li>Tekst som skrives ut til konsollen ligger  mellom <code>&quot;</code>, slik som <code>&quot;hei verden&quot;</code>.</li>
 <li><code>;</code> betyr at kodesetningen er ferdig.</li>
 </ul>
 </section>
@@ -65,7 +74,7 @@ forskjellen til <code>console.log</code> er?</li>
 <h1 class="activity" id="steg-2-lage-en-funksjon">Steg 2: Lage en funksjon</h1>
 <p>En funksjon er nesten som en oppskrift. Funksjoner brukes når man ønsker å
 gjenbruke kode flere ganger eller bryte opp et problem til mindre biter. En
-funksjon kan både ta i mot og returnere data. Din funksjon skal hete <code>hei</code>,
+funksjon kan både ta i mot og gi fra seg (returnere) data. Din funksjon skal hete <code>hei</code>,
 ta i mot et <code>navn</code> og skrive navnet til konsollen.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
@@ -80,21 +89,21 @@ ta i mot et <code>navn</code> og skrive navnet til konsollen.</p>
 }
 </code></pre>
 </li>
-<li>
-<p><code>function hei</code> betyr at funksjonen skal hete <code>hei</code>.</p>
-</li>
-<li>
-<p><code>(navn)</code> betyr at vi kan sende inn data til funksjonen.</p>
-</li>
-<li>
-<p><code>{</code> markerer starten til funksjonen.</p>
-</li>
-<li>
-<p><code>}</code> markerer slutten til funksjonen.</p>
-</li>
-<li>
-<p>Mellom <code>{</code> og <code>}</code> er det som funksjonen skal gjøre.</p>
-</li>
+</ul>
+</section>
+<section class="tip" id="forklaring-2">
+<h2 class="tip" id="forklaring-2">Forklaring</h2>
+<ul>
+<li><code>function hei</code> betyr at funksjonen skal hete <code>hei</code>.</li>
+<li><code>(navn)</code> betyr at vi kan sende inn data til funksjonen. <code>navn</code> blir her en variabel, den holder på en verdi som kan endres. Vi skal se nærmere på dette senere.</li>
+<li><code>{</code> markerer starten til funksjonen.</li>
+<li><code>}</code> markerer slutten til funksjonen.</li>
+<li>Mellom <code>{</code> og <code>}</code> er det som funksjonen skal gjøre.</li>
+</ul>
+</section>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
 <li>
 <p>Akkurat nå gjør ikke funksjonen så mye, men la oss teste den ut. Skriv dette
 etter funksjonen:</p>
@@ -112,9 +121,17 @@ hei(<span class="hljs-string">"Jens"</span>);
 <p>Ser du både <code>&quot;Emma&quot;</code> og <code>&quot;Jens&quot;</code> i konsollen?</p>
 </li>
 </ul>
+<p>Koden til nå:</p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hei</span>(<span class="hljs-params">navn</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(navn)
+}
+
+hei(<span class="hljs-string">"Emma"</span>);
+hei(<span class="hljs-string">"Jens"</span>);
+</code></pre>
 </section>
-<section class="tip" id="tips">
-<h2 class="tip" id="tips">Tips</h2>
+<section class="tip" id="tips-2">
+<h2 class="tip" id="tips-2">Tips</h2>
 <p>Du kan slette historien i <strong>Console</strong> ved å trykke på knappen <button>Clear</button>, eller legge inn <code>console.clear();</code>
 i koden din.</p>
 </section>
@@ -123,14 +140,14 @@ i koden din.</p>
 <h1 class="activity" id="steg-3-hei-navn">Steg 3: Hei navn!</h1>
 <p>I steg 2 gjorde vi ikke noe annet enn det som <code>console.log</code> gjør. Nå skal du få
 <code>hei(&quot;Emma&quot;)</code> til å skrive ut <code>&quot;Hei Emma!&quot;</code>.</p>
-<section class="check" id="sjekkliste-3">
-<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul>
 <li>
 <p>I JavaScript kan vi legge sammen tekst med <code>+</code>.</p>
 </li>
 <li>
-<p>Endre <code>hei</code>:</p>
+<p>La oss endre funksjonen <code>hei</code>:</p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hei</span>(<span class="hljs-params">navn</span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hei "</span> + navn + <span class="hljs-string">"!"</span>);
 }
@@ -150,12 +167,16 @@ i koden din.</p>
 </li>
 </ul>
 </section>
+<section class="tip" id="forklaring-3">
+<h2 class="tip" id="forklaring-3">Forklaring</h2>
+<p>I funksjonen <code>hei</code> vil <code>navn</code> være en variabel. Den holder på en verdi og denne verdien kan endres. Først er <code>navn</code> det samme som <code>Emma</code>, så blir <code>navn</code> til <code>Jens</code>. Variabler er svært nyttig innfor programmering og vi kommer til å bruke masse variabler fremover.</p>
+</section>
 </section>
 <section class="activity" id="steg-4-katten-sier-hei">
 <h1 class="activity" id="steg-4-katten-sier-hei">Steg 4: Katten sier hei</h1>
 <p>I dette siste steget skal du lage en katt som sier hei.</p>
-<section class="check" id="sjekkliste-4">
-<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul>
 <li>
 <p>Bytt ut <code>function hei</code> ved å kopiere koden under:</p>
@@ -184,13 +205,13 @@ i koden din.</p>
 <p><code>\</code> brukes til spesielle bokstaver. <code>\n</code> for eksempel betyr <em>ny linje</em>. Derfor
 må du skrive <code>\\</code> dersom du ønsker en vanlig bakoverstrek.</p>
 </section>
-<section class="save" id="steg-5-dele-prosjektet">
-<h2 class="save" id="steg-5-dele-prosjektet">Steg 5: Dele prosjektet</h2>
+</section>
+<section class="activity" id="steg-5-dele-prosjektet">
+<h1 class="activity" id="steg-5-dele-prosjektet">Steg 5: Dele prosjektet</h1>
 <p>Kanskje hadde det vært kult å sende en kattehilsen til noen av dine beste
 venner? La oss lage en personlig hilsen til hver av de.</p>
-</section>
-<section class="check" id="sjekkliste-5">
-<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul>
 <li>
 <p>Sørg for at du kjører <code>hei</code> med navnet til din venn:</p>
@@ -227,12 +248,42 @@ sendte til vennene dine.</p>
 </li>
 </ul>
 </section>
-<section class="save" id="steg-6-lagre-prosjektet-pa-datamaskinen-din">
-<h2 class="save" id="steg-6-lagre-prosjektet-pa-datamaskinen-din">Steg 6: Lagre prosjektet på datamaskinen din</h2>
-<p>Det er også mulig å laste ned prosjektet og lagre det på datamaskinen. La oss gjøre det.</p>
+<section class="tip" id="en-annen-mate-a-dele-programmet">
+<h2 class="tip" id="en-annen-mate-a-dele-programmet">En annen måte å dele programmet</h2>
+<p>Husker du oppgaven <a href="../publiser/publiser.html">HTML: Publiser nettsiden din</a>? Kanskje du kan laste opp JavaScript-koden til din <code>Github</code>-side? Et lite tips er å legge JavaScript-koden inn i <code>&lt;head&gt;</code>-taggen ved å bruke disse taggene:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="undefined">
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>Du kan også lagre JavaScript-koden i en egen <code>.js</code>-fil, for eksempel <code>katt.js</code>. Så kan du referere til den fra en HTML-fil på denne måten:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"katt.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+</code></pre>
+<p>Husk at <code>katt.js</code> må da ligge i samme mappe som HTML-filen. Dette skal vi prøve ut senere.</p>
+<p>Men for at dette skal funkere må vi skrive om <code>console.log()</code> til:</p>
+<pre><code class="js"><span class="hljs-built_in">document</span>.writeln();
+</code></pre>
+<p>Denne kommandoen skriver rett på HTML-siden og ikke i <code>konsollen</code>. På denne måten vil vennene dine kunne se koden uten å åpne <code>konsollen</code>. Problemet med <code>document.writeln()</code>er at vi ikke får hver utskrift på en egen linje, derfor må vi også legge til denne CSS-en:</p>
+<pre><code class="js"><span class="hljs-string">`document.body.style.whiteSpace = "pre"; //gjør at du kan ha flere mellomrom etterhverandre
+</span></code></pre>
+<p><code>document.writeln()</code> legger også til et linjeskift etter den har skrevet ut teksten, dersom du ikke ønsker det kan du bruke <code>document.write()</code>.</p>
+<p>Nå ser koden slik ut:</p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hei</span>(<span class="hljs-params">navn</span>) </span>{
+    <span class="hljs-built_in">document</span>.writeln(<span class="hljs-string">"&lt; Mjau, "</span> + navn + <span class="hljs-string">"! &gt;                 "</span>);
+    <span class="hljs-built_in">document</span>.writeln(<span class="hljs-string">"    \\                           "</span>);
+    <span class="hljs-built_in">document</span>.writeln(<span class="hljs-string">"      /\\___/\\                   "</span>);
+    <span class="hljs-built_in">document</span>.writeln(<span class="hljs-string">"     ( o o  )                  "</span>);
+    <span class="hljs-built_in">document</span>.writeln(<span class="hljs-string">"      \\ =0= /                   "</span>);
+}
+<span class="hljs-built_in">document</span>.body.style.whiteSpace = <span class="hljs-string">"pre"</span>;
+</code></pre>
 </section>
-<section class="check" id="sjekkliste-6">
-<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
+</section>
+<section class="activity" id="steg-6-lagre-prosjektet-pa-datamaskinen-din">
+<h1 class="activity" id="steg-6-lagre-prosjektet-pa-datamaskinen-din">Steg 6: Lagre prosjektet på datamaskinen din</h1>
+<p>Det er også mulig å laste ned prosjektet og lagre det på datamaskinen. La oss gjøre det.</p>
+<section class="check" id="sjekkliste-7">
+<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
 <ul>
 <li>
 <p>Trykk på <strong>File</strong> &gt; <strong>Download</strong>.</p>
@@ -264,9 +315,10 @@ sendte til vennene dine.</p>
 <p>Hva skjer?</p>
 </li>
 </ul>
+<p><strong>Gratulerer!</strong> Du har nå skrevet ditt første JavaScript-program!</p>
 </section>
 </section>
-</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: Hei JavaScript!&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/hei_js" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Arve Seljebu</p>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: JS: Hei JavaScript!&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/hei_js" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Arve Seljebu</p>
 </div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
