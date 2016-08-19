@@ -1,0 +1,358 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>CSS: Layout | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">CSS: Layout</h1><div class="lesson-icons"><div class="level"><img title="Level 4" src="../../assets/img/level4.png"/><span data-i18n="html=layout.levelNames.4">Ekspert</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/layout/layout.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Målet med oppgaven er å lære hvordan man lager en nettside med en meny og et innholdsfelt.</p>
+<p>I denne oppgaven forventer vi at du har vært gjennom HTML- og CSS-oppgavene så langt og/eller er kjent med <code>&lt;div&gt;</code>- og HTML5-taggene.</p>
+<p><figure><img src="ressurser/screenshot_resultat.png" alt="resultat"></figure></p>
+</section>
+<section class="activity" id="steg-1-vi-starter-fra-toppen">
+<h1 class="activity" id="steg-1-vi-starter-fra-toppen">Steg 1: Vi starter fra toppen</h1>
+<p>Før vi starter må vi ha en helt enkel HTML-side. Siden vi har lært å bruke HTML5-tagger, så bruker vi det i denne oppgaven.</p>
+<ul>
+<li>Last ned og pakk ut <a href="ressurser/layout.zip">layout.zip</a></li>
+<li>Åpne <code>index.html</code> i din favoritt teksteditor</li>
+<li>Legg nå til bildet <code>header.jpg</code> innenfor taggen <code>&lt;header&gt;</code> (husk å legge til <code>alt</code>-tekst)</li>
+</ul>
+<toggle>
+  <strong>Hint</strong>
+  <hide>
+<pre><code class="html">  <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"header.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"header"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+</code></pre>
+  </hide>
+</toggle>
+<p>Bildet er 1080 (bredde) × 250 (høyde) piksler (<code>pixels</code> eller `px) så vi velger derfor å bruke bredden til bilde som et mål på hvor bred siden vår skal være.</p>
+<p>Som du ser er det et hvitt mellomrom over og på siden av bildet. Dette kan vi bli kvitt ved å bruke følgende CSS innenfor <code>&lt;style&gt;</code>:</p>
+<pre><code class="css"><span class="hljs-tag">body</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">1080px</span></span></span>;
+}</span>
+</code></pre>
+<p><code>margin-top: 0px; margin-bottom: 0px;</code> fjerner alle marger i <code>&lt;body&gt;</code> som allerede ligger inne som standard. Denne midtstiller også <code>&lt;body&gt;</code>-taggen på siden vår.</p>
+<p><code>width: 1080px;</code> forteller nettsiden vår at <code>&lt;body&gt;</code> skal være <code>1080px</code> bred.</p>
+<p>Siden vi har definert hvor bred <code>&lt;body&gt;</code> skal være, så ser vi tydeligere at vi har midtstilt headeren vår.</p>
+<section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din">
+<h2 class="save" id="lagre-filen-og-vise-den-i-nettleseren-din"><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
+</section>
+</section>
+<section class="activity" id="steg-2-legg-til-bakgrunn">
+<h1 class="activity" id="steg-2-legg-til-bakgrunn">Steg 2: Legg til bakgrunn</h1>
+<p>Nå som vi har et bilde som <code>header</code>, kan det være passende å finne en fin bakgrunn. Ved hjelp av et utvidelsesverktøy til Chrome som heter <a href="https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp">ColorZilla</a>, så fant jeg ut hvilke grønnfarge som var på <code>header.jpg</code>. <code>ColorZilla</code> finnes til <code>Firefox</code> <a href="https://addons.mozilla.org/en-us/firefox/addon/colorzilla/">her</a>. Fargen jeg har valgt å bruke er <code>#3DD14B</code>.</p>
+<p>Siden vi nå har gjort <code>body</code> smalere (<code>1080px</code> bred) så kan vi nå bruke <code>html</code>-selektoren i CSS for å sette bakgrunnsfarge. Da er det også viktig at vi definerer hvor bred og høy <code>html</code>-en skal være, og det bør være hele nettlesern, altså <code>100%</code>:</p>
+<pre><code class="css"><span class="hljs-tag">html</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DD14B</span></span></span>;
+}</span>
+</code></pre>
+<section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din-2">
+<h2 class="save" id="lagre-filen-og-vise-den-i-nettleseren-din-2"><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
+</section>
+</section>
+<section class="activity" id="steg-3-legg-til-meny">
+<h1 class="activity" id="steg-3-legg-til-meny">Steg 3: Legg til meny</h1>
+<p>Å legge til en meny er ikke bare bare. Vi skal nå gå gjennom steg for steg for å få menyen til å se fin og ordentlig ut.</p>
+<p>Det første vi må gjøre er å legge til lenker i menyen vår. Menyen vår skal ligge i <code>&lt;nav&gt;</code>-taggen.</p>
+<ul>
+<li>Lag en liste og legg til 3 liste elementer som skal ha hver sin link.</li>
+</ul>
+<toggle>
+  <strong>Hint</strong>
+  <hide>
+<pre><code class="html">  <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">il</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"index.html"</span>&gt;</span>Hjem<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">il</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+</code></pre>
+  </hide>
+</toggle>
+<p>Nå ser siden vår slik ut:</p>
+<p><figure><img src="ressurser/screenshot_1.png" alt="screenshot"></figure></p>
+<p>Nå skal vi få vekk prikkene bak liste-elementene og gjøre sånn at de vises etter hverandre mot venstre:</p>
+<pre><code class="css"><span class="hljs-tag">nav</span> <span class="hljs-tag">ul</span> <span class="hljs-tag">li</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value">left</span></span>;             <span class="hljs-comment">/* gjør at teksten flyter fra venstre mot høyre */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">list-style-type</span>:<span class="hljs-value"> none</span></span>;  <span class="hljs-comment">/* gjerner punktet foran liste-elementet */</span>
+}</span>
+</code></pre>
+<ul>
+<li>Kan du tenke deg hvorfor det står <code>nav ul li</code>?</li>
+</ul>
+<p>Grunnen til at vi skriver <code>nav ul li</code> på denne er for å spesifisere at vi skal sette stil på <code>li</code> (List items) i den uordnede listen <code>ul</code> som ligger innenfor <code>nav</code>-taggen. På denne måten vil ikke andre lister bli påvirket av den stilen vi setter, kun den lista som ligger mellom <code>&lt;nav&gt;</code>-taggen. Nå ser nettsiden vår slik ut:</p>
+<p><figure><img src="ressurser/screenshot_2.png" alt="screenshot"></figure></p>
+<p>Nå ser vi at vi har fått liste-elementene våre til å legge seg mot høyre og har ikke lengre punkter bak seg. Nå skal vi sette stil på hele lista og ikke bare liste-elementene. For å gjøre dette må vi bruke <code>nav ul</code>. I koden under er det nokså kjente ting. Vi midtstiller alt, setter en høyde og bredde på listen og vi setter en kant rundt listen for å markere hvor menyen vår skal gå. Det siste, <code>padding: 0px</code>, er for å fjerne et standard inntrykk som du får når du bruker lister.</p>
+<ul>
+<li>Studer koden under</li>
+<li>Prøv å fjerne/kommentere ut en linje eller fler for å se hva de gjør.</li>
+<li>Forstår du hvorfor vi har <code>1072px</code> istedet for <code>1080px</code>?</li>
+</ul>
+<pre><code class="css"><span class="hljs-tag">nav</span> <span class="hljs-tag">ul</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;        <span class="hljs-comment">/* fjerner marger og midtstiller */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">1072px</span></span></span>;          <span class="hljs-comment">/* setter bredden til 1040px, siden */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">40px</span></span></span>;           <span class="hljs-comment">/* setter høyden til 40px */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000000</span> <span class="hljs-number">4px</span> solid</span></span>; <span class="hljs-comment">/* Ramme rundt hele lista */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;           <span class="hljs-comment">/* Fjerner standard mellomrom mellom tekst og "vegger" */</span>
+}</span>
+</code></pre>
+<p>Grunnen til at vi bruker <code>1072px</code> istedet for <code>1080px</code> er fordi vi har en hovedramme som er på <code>4px</code>og som er på både høyre og venstre siden, altså <code>2 * 4px = 8px</code>.</p>
+<p><figure><img src="ressurser/screenshot_4.png" alt="screenshot"></figure></p>
+<p>Siden vi skal ha en meny, så har vi lagt inn lenker(<code>&lt;a&gt;</code>) i liste-elementene. Vi må derfor legge til CSS for at disse skal vises på en skikkelig måte. Nå skal vi dele inn hovedrammen vi har laget slik at det ser ut som lenkene er knapper. I kodeblokken under ser du hvordan vi kan lage mellomrom mellom lenkene ved å bruke <code>padding</code>, legge til en strek på høyre side for at den skal se ut som en knapp, ta vekk understreker, gjøre skriften større og gjøre den grønn.</p>
+<ul>
+<li>Studer koden under</li>
+<li>Hva skjer om du fjerner <code>padding-left</code>og <code>padding-right</code>?</li>
+<li>Hva skjer om du fjerner <code>display: block</code>?</li>
+<li>Hva skjer om du fjerner <code>color: #3DD14B</code>?</li>
+<li>Prøv å endre på tallene og se hva som skjer.</li>
+</ul>
+<pre><code class="css"><span class="hljs-tag">nav</span> <span class="hljs-tag">ul</span> <span class="hljs-tag">li</span> <span class="hljs-tag">a</span><span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;         <span class="hljs-comment">/* Gjør at kantene går helt opp til hovedrammen */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;     <span class="hljs-comment">/* mellomrommet til venstre fra teksten til rammen */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;    <span class="hljs-comment">/* mellomrommet til høyre fra teksten til rammen */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">40px</span></span></span>;      <span class="hljs-comment">/* hvor høy linjen skal være */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">border-right</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000000</span> <span class="hljs-number">4px</span> solid</span></span>; <span class="hljs-comment">/* legger til ramme med farge, tykkelse og stil */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> none</span></span>;  <span class="hljs-comment">/* tar vekk understreker */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;        <span class="hljs-comment">/* setter skriftstørrelsen til 20px */</span>
+    <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DD14B</span></span></span>; 
+}</span>
+</code></pre>
+<section>
+<h3 id="nettsiden-salangt">Nettsiden sålangt:</h3>
+<p><figure><img src="ressurser/screenshot_3.png" alt="screenshot"></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-4-legge-til-innhold-pa-siden">
+<h1 class="activity" id="steg-4-legge-til-innhold-pa-siden">Steg 4: Legge til innhold på siden</h1>
+<p>Nå skal vi legge til en overskrift og litt tekst på siden vår. Dette gjør vi innenfor <code>&lt;section&gt;</code>-taggen.</p>
+<ul>
+<li>Legg til en overskrift. Husker du hvilken tag man bruker da?</li>
+<li>Legg til litt tekst, du kan også legge til et bilde hvis du ønsker det</li>
+</ul>
+<toggle>
+  <strong>Hint</strong>
+  <hide>
+<pre><code class="html">  <span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Overskrift<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Noe tekst<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
+  </hide>
+</toggle>
+<ul>
+<li>Legg til en passende bakgrunnsfarge på <code>section</code></li>
+<li>Legg til en høyde på <code>section</code> slik at siden blir seendes større og mer komplett ut</li>
+<li>Legg til en passende farge på overskriften din</li>
+<li>Bruk <code>padding</code> til å få flytte overskriften litt vekk fra kanten på venstre side</li>
+<li>Gjør det samme du gjorde med overskriften, med paragrafen du har laget</li>
+<li>Dersom du la inn et bilde, prøv å få det sentrert på siden</li>
+</ul>
+<toggle>
+  <strong>Hint</strong>
+  <hide>
+<pre><code class="css">  <span class="hljs-tag">section</span><span class="hljs-rules">{
+      <span class="hljs-comment">/* bakgrunnsfarge */</span>
+      <span class="hljs-comment">/* høyde */</span>
+  }</span>
+  <span class="hljs-tag">section</span> <span class="hljs-tag">h1</span><span class="hljs-rules">{
+      <span class="hljs-comment">/* farge */</span>
+      <span class="hljs-comment">/* padding */</span>
+  }</span>
+  <span class="hljs-tag">section</span> <span class="hljs-tag">p</span><span class="hljs-rules">{
+      <span class="hljs-comment">/* farge */</span>
+      <span class="hljs-comment">/* padding */</span>
+  }</span>
+</code></pre>
+  </hide>
+</toggle>
+<section>
+<h3 id="nettsiden-salangt-2">Nettsiden sålangt:</h3>
+<p><figure><img src="ressurser/screenshot_5.png" alt="screenshot"></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-5-legge-til-footer">
+<h1 class="activity" id="steg-5-legge-til-footer">Steg 5: Legge til footer</h1>
+<p>Nå skal vi legge til informasjon i <code>&lt;footer&gt;</code>. En <code>footer</code> er nederst på siden og viser gjerne kontaktinformasjon til de som har siden, om det er copyright på siden eller så er det også gjerne et <code>sitemap</code>. Et <code>sitemap</code> er en oversikt over hele nettsiden sånn at det skal være enkelt for brukeren å finne frem på siden. La oss nå bare legge litt en enkel tekst i <code>footeren</code>.</p>
+<ul>
+<li>Legg til en paragraf med navnet ditt og gjerne årstall eller datoen i dag.</li>
+</ul>
+<p>Vi vil gjerne vise at <code>footeren</code> faktisk er en footer sånn at den ikke blandes inn med <code>section</code>. Derfor kan det være lurt å legge til en <code>border</code> på toppen av <code>footeren</code>. La oss nå legge til litt CSS.</p>
+<ul>
+<li>Legg til en passe høyde på <code>footer</code></li>
+<li>Hvis du føler at vi trenger litt <code>padding</code>, så legg til det</li>
+<li>Legg til en passende bakgrunnsfarge</li>
+<li>Legg til en farge på teksten sånn at den syns bedre</li>
+<li>Legg til en <code>border-top</code> for å få en ramme øverst på <code>footeren</code>.</li>
+</ul>
+<section>
+<h3 id="na-ser-siden-slik-ut">Nå ser siden slik ut:</h3>
+<p><figure><img src="ressurser/screenshot_6.png" alt="screenshot"></figure></p>
+<toggle>
+  <strong>Forslag til footer-CSS</strong>
+  <hide>
+<pre><code class="css">      <span class="hljs-tag">footer</span><span class="hljs-rules">{
+          <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">40px</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#634335</span></span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">border-top</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DD14B</span> <span class="hljs-number">4px</span> solid</span></span>;
+          <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#3DD14B</span></span></span>;
+      }</span>
+</code></pre>
+  </hide>
+</toggle>
+<p><strong>Gratulerer! Du har nå laget din første layout!</strong> La oss nå koble sammen flere siden sånn at det ligner mer på en ordentlig side. Du har sikkert lagt merke til at linkene våre i menyen ikke fungerer?</p>
+</section>
+</section>
+<section class="activity" id="steg-6-koble-flere-sider-sammen">
+<h1 class="activity" id="steg-6-koble-flere-sider-sammen">Steg 6: Koble flere sider sammen</h1>
+<p>Nå skal vi lage 2 nye sider med samme stil slik at alle sidene blir koblet sammen. I <code>Steg 3: Legg til meny</code> lagde du meny og la til 2 lenker, nå skal vi lage disse sidene. Jeg har brukt <code>side2.html</code> og <code>side3.html</code>. Du kan kalle dem hva du vil.</p>
+<ul>
+<li>Kopier all kode fra <code>index.html</code> til 2 nye sider <code>side2.html</code> og <code>side3.html</code></li>
+<li>Nå skal du endre overskriften og teksten i <code>side2.html</code> og <code>side3.html</code> slik at du får 3 ulike sider</li>
+<li>Sørg for at de 2 sidene ligger i <code>nav</code> på alle sidene</li>
+</ul>
+<p><strong>Eksempel:</strong></p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"index.html"</span>&gt;</span>Hjem<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side2.html"</span>&gt;</span>Side 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side3.html"</span>&gt;</span>Side 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Prøv å trykk deg til hver av sidene for å teste om lenkene fungerer. Fungerer de? Hvis ikke må du sjekke at alle filene ligger i samme mappe og er skrevet riktig.</li>
+</ul>
+<p><strong>TADA! Du har nå laget en flott nettside som du kan bygge videre på!</strong></p>
+<section class="try" id="ting-a-jobbe-videre-med">
+<h2 class="try" id="ting-a-jobbe-videre-med">Ting å jobbe videre med</h2>
+<ul>
+<li>Bruk <a href="http://www.w3schools.com/css/css_link.asp">w3schools.com/css/css_link.asp</a> til å legge til forandring på linkene når du holder over dem</li>
+<li>Legg til enda en side for eksempel &quot;Mitt favorittspill&quot;. Skriv om det, legg til bilder og videoer som er relatert til spillet.</li>
+<li>Legg teksten på siden i en <code>div</code>-er og sett forskjellig stil på dem</li>
+<li>Del inn <code>section</code> slik at du kan få forskjellige deler på siden, hent gjerne inspirasjon fra internett. Feks: <a href="http://vg.no">vg.no</a></li>
+</ul>
+</section>
+</section>
+<section class="activity" id="eksempel-pa-kode-for-nettsiden">
+<h1 class="activity" id="eksempel-pa-kode-for-nettsiden">Eksempel på kode for nettsiden</h1>
+<p><strong>MERK:</strong> Legg merke til at under <code>border</code> er fargekoden <code>#000</code> i stedet for <code>#000000</code>. Dette betyr akkurat det samme: <code>#rgb</code> eller <code>#rrggbb</code>. Ved 6 tall og bokstaver kan du enklere spesifisere en mer nøyaktig farge enn hvis du bare bruker <code>#rgb</code>. R = rød, G = grønn, B = blå. Det er tallene og bokstavene som bestemmer hvor mye av rød, grønn og blå det skal være i fargen.</p>
+<pre><code class="html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Layout<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+    
+    <span class="hljs-tag">html</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#3DD14B</span></span></span>;
+
+    }</span>
+    
+    <span class="hljs-tag">body</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">1080px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#634335</span></span></span>;
+    }</span>
+    
+
+    
+    <span class="hljs-tag">nav</span> <span class="hljs-tag">ul</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">margin-top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;        <span class="hljs-comment">/* fjerner marger og midtstiller */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">margin-bottom</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">1072px</span></span></span>;          <span class="hljs-comment">/* setter bredden til 1040px, siden */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">40px</span></span></span>;           <span class="hljs-comment">/* setter høyden til 40px */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">border</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000</span> <span class="hljs-number">4px</span> solid</span></span>; <span class="hljs-comment">/* Ramme rundt hele lista */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;           <span class="hljs-comment">/* Fjerner standard mellomrom mellom tekst og "vegger" */</span>
+    }</span>
+    
+    <span class="hljs-tag">nav</span> <span class="hljs-tag">ul</span> <span class="hljs-tag">li</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">float</span>:<span class="hljs-value">left</span></span>;             <span class="hljs-comment">/* gjør at teksten flyter mot venstre */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">list-style-type</span>:<span class="hljs-value"> none</span></span>;  <span class="hljs-comment">/* gjerner punktet foran liste-elementet */</span>
+
+    }</span>
+    
+    <span class="hljs-tag">nav</span> <span class="hljs-tag">ul</span> <span class="hljs-tag">li</span> <span class="hljs-tag">a</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>;         <span class="hljs-comment">/* Gjør at kantene går helt opp til hoved rammen */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;     <span class="hljs-comment">/* mellomrommet til venstre fra teksten til rammen */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">padding-right</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;    <span class="hljs-comment">/* mellomrommet til høyre fra teksten til rammen */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">line-height</span>:<span class="hljs-value"> <span class="hljs-number">40px</span></span></span>;      <span class="hljs-comment">/* hvor høy linjen skal være */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">border-right</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000</span> <span class="hljs-number">4px</span> solid</span></span>; <span class="hljs-comment">/* legger til ramme med farge, tykkelse og stil */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> none</span></span>;  <span class="hljs-comment">/* tar vekk understreker */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;        <span class="hljs-comment">/* setter skriftstørrelsen til 20px */</span>
+        <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DD14B</span></span></span>; 
+    }</span>
+    
+    <span class="hljs-tag">section</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#634335</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">400px</span></span></span>;
+    }</span>
+    
+    <span class="hljs-tag">section</span> <span class="hljs-tag">h1</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#FFF</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">30px</span></span></span>;
+    }</span>
+    
+    <span class="hljs-tag">section</span> <span class="hljs-tag">p</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DD14B</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">30px</span></span></span>;
+    }</span>
+    
+    <span class="hljs-tag">footer</span><span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">40px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">padding-left</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">padding-bottom</span>:<span class="hljs-value"> <span class="hljs-number">10px</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#634335</span></span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">border-top</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#3DD14B</span> <span class="hljs-number">4px</span> solid</span></span>;
+        <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#3DD14B</span></span></span>;
+    }</span>
+    
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"header.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"header"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-title">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"index.html"</span>&gt;</span>Hjem<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side2.html"</span>&gt;</span>Side 2<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"side3.html"</span>&gt;</span>Side 3<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Velkommen<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Dette er min nye kule hjemmeside.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Kodeklubben Trondheim, 2016<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+    
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: CSS: Layout&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/layout" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
