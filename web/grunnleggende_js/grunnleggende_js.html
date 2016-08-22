@@ -1,0 +1,413 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>JS: Grunnleggende JavaScript | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">JS: Grunnleggende JavaScript</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span data-i18n="html=layout.levelNames.2">Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/grunnleggende_js/grunnleggende_js.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I denne oppgaven skal du lære helt enkle og grunnleggende elementer av <code>JavaScript</code>. Du vil lære om <code>variabler</code>, <code>if-setninger</code>, <code>funksjoner</code> og <code>løkker</code>.</p>
+<p>For å gjøre denne oppgaven trenger du ingen forkunnskaper innenfor HTML eller CSS, men det er veldig lurt å kunne HTML og CSS når man skal programmere JavaScript.</p>
+<p>Hvis HTML er en bil, så er CSS utseendet og designet på bilen, mens JavaScript står for all funksjonalitet som å skru på motoren, få bilen til å kjøre osv. Hvis du har programmert et tekstlig programmeringsspråk som for eksempel <code>Python</code> før, så vil nok mye i denne oppgaven være kjent.</p>
+<p>La oss begynne!</p>
+</section>
+<section class="activity" id="steg-1-variabler">
+<h1 class="activity" id="steg-1-variabler">Steg 1: Variabler</h1>
+<p>Dersom du gjorde oppgaven <a href="../hei_js/hei_js.html">Hei JavaScript</a> så er nok variabler kjent. Samme gjelder hvis du har programmert litt fra før. Men litt repetisjon skader ikke!</p>
+<p>En variabel i JavaScript ser slik ut:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> variabelNavn = <span class="hljs-string">"verdi"</span>;
+</code></pre>
+<p><code>var</code> forteller JavaScript at det er en variabel. En variabel kan være <code>et tall</code>, <code>tekst</code> eller  en annen <code>variabel</code>:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> tall = <span class="hljs-number">9</span>;
+<span class="hljs-keyword">var</span> tekst = <span class="hljs-string">"Dette er en string (tekst på engelsk)"</span>;
+<span class="hljs-keyword">var</span> variabel = tall; <span class="hljs-comment">// "variabel" vil nå ha samme verdi som tall, selv når tall endres</span>
+</code></pre>
+<p><strong>La oss prøve oss litt frem!</strong></p>
+<ul>
+<li>Gå inn på <a href="https://jsbin.com/?js,console">JSbin.com</a> og sørg for at fanene <code>JavaScript</code> og <code>Console</code> er markert. Dette gjør du ved å trykke på dem.</li>
+<li>I <code>JavaScript</code>-vindu skriver du følgende:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> tall = <span class="hljs-number">9</span>;
+<span class="hljs-keyword">var</span> tekst = <span class="hljs-string">"Hei på deg!"</span>;
+</code></pre>
+<section class="tip" id="forklaring">
+<h2 class="tip" id="forklaring">Forklaring</h2>
+<p>Husk at hver linje i JavaScript avsluttes med enten <code>;</code> eller <code>}</code>, avhengig av om du lager en variabel eller en funksjon. Når vi bruker variabeler avslutter vi med <code>;</code>, med funksjoner avslutter vi med <code>}</code>.</p>
+</section>
+<section>
+<h2 id=""></h2>
+<p>For at vi skal kunne skrive ut noe til <code>Console</code> bruker vi <code>console.log()</code>:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> tekst = <span class="hljs-string">"Hei på deg!"</span>;
+<span class="hljs-built_in">console</span>.log(tekst);
+</code></pre>
+<ul>
+<li>Trykk på <code>Run</code></li>
+<li>Vises teskten?</li>
+<li>La oss prøve oss på litt variabel-morro. Lag følgende variabler, du kan godt slette det du allerede har:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> tall1 = <span class="hljs-number">4</span>;
+<span class="hljs-keyword">var</span> tall2 = <span class="hljs-number">7</span>; 
+</code></pre>
+<ul>
+<li>Nå skal vi ta de to variablene og plusse dem sammen:</li>
+</ul>
+<pre><code class="js"><span class="hljs-built_in">console</span>.log(tall1 + tall2);
+</code></pre>
+<ul>
+<li>Trykk <code>Run</code>. Fikk du 11?</li>
+<li>Nå som vi vet at vi kan få JavaScript til å regne for oss, ta å bytt ut <code>+</code> med de andre regneartene vi har og se om JavaScript klarer å regne ut med dem.</li>
+</ul>
+<p>La oss nå se på hvordan vi kan la en variabel være en annen:</p>
+<ul>
+<li>Legg til enda en variabel:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> tall3 = tall2;
+</code></pre>
+<ul>
+<li>Hva blir skriver <code>console.log(tall3 * tall2)</code> ut?</li>
+</ul>
+<toggle>
+    <strong>Svar</strong>
+    <hide>
+        49. Fordi 7 * 7 = 49.
+    </hide>
+</toggle>
+<ul>
+<li>Skriv ut <code>tall3</code> og <code>tall2</code> til <code>console</code></li>
+<li>Prøv å endre på <code>tall2</code>, hva skjer med <code>tall3</code>?</li>
+</ul>
+<p><code>tall3</code> er jo satt til å være det samme som <code>tall2</code> og derfor blir den endret når <code>tall2</code> blir endret.</p>
+<p>Vi kan også legge til ekstra verdier til en variabel:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> tall4 = tall3 + tall1 + <span class="hljs-number">5</span>; 
+</code></pre>
+<ul>
+<li>Bruk <code>console.log</code> til å skrive ut <code>tall4</code>.</li>
+</ul>
+<p>Nå har vi fått prøvd ut litt forskjellige variabeler, da skal vi bruke dette sammen med <code>if-setninger</code> for å sjekke om noe er sant eller ikke.</p>
+</section>
+</section>
+<section class="activity" id="steg-2-if-setninger">
+<h1 class="activity" id="steg-2-if-setninger">Steg 2: If-setninger</h1>
+<p>En <code>if/else</code>-setning ser slik ut i JavaScript:</p>
+<pre><code class="js"><span class="hljs-keyword">if</span>(betingelse) {
+    <span class="hljs-comment">// Kjør koden som blir skrevet her</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Kjør koden som blir skrevet her istedet</span>
+}
+</code></pre>
+<p>Når vi bruker <code>if/else</code> sjekker vi en betingelse og basert på om betingelsen er sann eller usann, så kjører vi en gitt kode. La oss se på et eksempel med tall.</p>
+<ul>
+<li>Skriv dette inn i JSBin:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> tall = <span class="hljs-number">5</span>;
+
+<span class="hljs-keyword">if</span>(tall === <span class="hljs-number">5</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Tallet er midt mellom 1 og 10"</span>);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Tallet er enten over eller under 5"</span>);
+}
+</code></pre>
+<section class="tip" id="forklaring-2">
+<h2 class="tip" id="forklaring-2">Forklaring</h2>
+<p>Dersom <code>tall</code> har verdien <code>5</code> vil den første meldingen skrives ut, dersom <code>tall</code> har en annen verdi, så vil den andre meldingen skrives ut. For å sjekke om en variabel er lik noe så bruker vi <code>===</code>. Da sjekker JavaScript om verdien og datatypen (nummer, tekst osv) er like.</p>
+<ul>
+<li>Endre variabelen <code>tall</code> til andre verdier og se hvilke melding du får ut.</li>
+</ul>
+</section>
+<section>
+<h2 id="-2"></h2>
+<ul>
+<li>La oss lage sjekk på om du kan ta sertifikatet til bil eller moped:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> alder = <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">if</span>(alder &gt;= <span class="hljs-number">18</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Du er gammel nok til å kjøre bil"</span>);
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(alder &gt;= <span class="hljs-number">16</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Du er gammel nok til å kjøre moped"</span>);
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Du er dessverre ikke gammel nok"</span>); 
+}
+</code></pre>
+</section>
+<section class="tip" id="forklaring-3">
+<h2 class="tip" id="forklaring-3">Forklaring</h2>
+<ul>
+<li><code>if(alder &gt;= 18)</code> betyr: hvis alder er større eller lik 18. Altså er du 18 år eller eldre vil denne setningen være sann og du er gammel nok til å kjøre bil.</li>
+<li><code>else if(alder &gt;= 16)</code> betyr: dersom <code>if</code>-testen var usann, så sjekker den om alder er større eller lik 16, og hvis denne betingelsen er sann så sier den at du er gammel nok til å kjøre moped.</li>
+<li><code>else</code> betyr <code>ellers</code> og vil si at koden til denne kjører dersom de andre testene blir usanne. Altså hvis du er under 16 år så får du beskjed om at du ikke er gammel nok.</li>
+</ul>
+</section>
+<section>
+<h2 id="-3"></h2>
+<ul>
+<li>
+<p>Prøv å endre <code>alder</code> slik at du får testet om <code>if/else</code>-setningene fungerer.</p>
+</li>
+<li>
+<p>La oss legge til noe som heter <code>prompt</code>, dette gjør at du kan ta inn <code>input</code> fra brukeren av nettsiden:</p>
+</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> alder = prompt(<span class="hljs-string">"Hvor gammel er du?"</span>);
+</code></pre>
+<p>Nå skal vi ta dette opp ett hakk hvor vi skal sjekke hva klokken er og skrive en melding ut i fra det. Da bruker vi noe som heter <code>Date</code> i JavaScript, denne inneholder informasjon om dagen i dag. Dette er en klasse, hva det vil si skal vi ikke fokusere på nå.</p>
+<ul>
+<li>Vi lager to variabler, en som er en <code>Date</code>-klasse og en annen som henter timen vi er i nå:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> dato = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(); <span class="hljs-comment">// Henter informasjon om dagen i dag</span>
+<span class="hljs-keyword">var</span> tid = dato.getHours(); <span class="hljs-comment">// Henter timen (klokka) vi er i nå</span>
+</code></pre>
+<ul>
+<li>Bruk <code>console.log</code> til å sjekke hva variabelen <code>tid</code> inneholder.</li>
+</ul>
+<p>Før du skal få en oppgave må vi gå igjennom noen verktøy vi kan bruke i <code>if/else</code>:</p>
+</section>
+<section class="tip" id="forklaring-4">
+<h2 class="tip" id="forklaring-4">Forklaring </h2>
+<ul>
+<li>I en <code>if(betingelse)</code> kan vi sjekke flere ting samtidig ved å bruke <code>&amp;&amp;</code> eller <code>||</code>. <code>&amp;&amp;</code> betyr <code>og</code>, <code>||</code> betyr <code>eller</code>. Finner du ikke disse på tastaturet, så spør en voksen om å hjelpe deg. Eksempel:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+<span class="hljs-keyword">var</span> mnd = date.getMonth();
+<span class="hljs-keyword">var</span> dato = date.getDate();
+
+<span class="hljs-keyword">if</span>(navn === <span class="hljs-string">"Lars"</span> &amp;&amp; mnd === <span class="hljs-number">7</span> &amp;&amp; dato === <span class="hljs-number">10</span>) { <span class="hljs-comment">// mnd = måned, dato = dagen i måneden</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Gratulerer med navnedagen, Lars!"</span>); 
+}
+</code></pre>
+<p>For at denne koden skal være sann må navnet være <code>Lars</code> og datoen må være <code>10.8</code>, altså 10. August. <code>getMonth()</code> leverer ut et tall fra 0-11, derfor er August 7 og ikke 8. Les mer om <code>Date</code> <a href="http://www.w3schools.com/jsref/jsref_obj_date.asp">her</a>.</p>
+<p>Samme kan du gjøre med <code>||</code> hvis du heller vil sjekke <code>eller</code>:</p>
+<pre><code class="js"><span class="hljs-keyword">if</span>(mnd === <span class="hljs-number">7</span> &amp;&amp; dato === <span class="hljs-number">10</span>) {
+    <span class="hljs-keyword">if</span>(navn === <span class="hljs-string">"Lars"</span> || navn === <span class="hljs-string">"Lasse"</span>) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Gratulerer med navnedagen!"</span>);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Du har dessverre ikke navnedag i dag."</span>);
+    }
+}
+</code></pre>
+<p>Legg merke til her at hvis datoen er <code>10.8</code> så hopper du inn til en ny <code>if/else</code> som sjekker om navnet ditt enten er <code>Lars</code> eller <code>Lasse</code>. Hvis det er feil dato skjer det ingenting.</p>
+</section>
+<section>
+<h2 id="-4"></h2>
+<p>Nå håper jeg du har fått litt mer dreisen på <code>if/else</code>, hvis ikke kommer vi til å jobbe mer med dette senere. Innen for <code>if/else</code> er det mye å utforske, så det tar litt tid og erfaring å bli vant til alt.</p>
+<p>Nå skal vi se på <code>funksjoner</code>!</p>
+</section>
+</section>
+<section class="activity" id="steg-3-funksjoner">
+<h1 class="activity" id="steg-3-funksjoner">Steg 3: Funksjoner</h1>
+<p>Til nå har vi bare skrevet linjer med kode i <code>JSBin</code>. Når koden kjøres, så blir den lest fra topp til bunn, linje for linje, så koden vil kjøre i den rekkefølgen den står i. Men noen ganger ønsker vi at koden skal kjøre når en hendelse inntreffer eller noe annet skjer. Ved hjelp av <code>funksjoner</code> kan vi selv bestemme når koden skal kjøre eller om den ikke skal kjøre i det hele tatt.</p>
+<p>Oppsettet ser slik ut:</p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">funksjonsNavn</span>(<span class="hljs-params">parameter1, parameter2</span>) </span>{
+    <span class="hljs-comment">// Kode som utføres når funksjonen kalles</span>
+}
+
+funksjonsNavn(paramenter1, parameter2); <span class="hljs-comment">// Gjør at funksjonen blir kjørt</span>
+</code></pre>
+<p>En funksjon tar noen ganger inn noen variabler den ønsker å bruk ved hjelp av <code>parameter</code>, men ofte tar man ikke inn noen <code>parameter</code> og da ser en funksjon sånn ut:</p>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">navn</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">// Kode</span>
+}
+
+navn(); <span class="hljs-comment">//for å kjøre funksjonen</span>
+</code></pre>
+<p>En funksjon kalles ofte for en <code>metode</code>. Videre kommer vi til å bruke <code>funksjon</code> og <code>metode</code> litt om hverandre.</p>
+<ul>
+<li>Ta nå koden som har med alder å gjøre, og legg den inn i en funksjon. Kall funksjonen for <code>sjekkAlder</code></li>
+</ul>
+<toggle>
+    <strong>Hint</strong>
+<hide>
+<pre><code>function sjekkAlder() {
+    var alder = prompt(&quot;Hvor gammel er du?&quot;);
+
+    if(alder &gt;= 18) {
+         console.log(&quot;Du er gammel nok til å kjøre bil&quot;);
+    } else if(alder &gt;= 16) {
+        console.log(&quot;Du er gammel nok til å kjøre moped&quot;);
+    } else {
+        console.log(&quot;Du er dessverre ikke gammel nok&quot;); 
+    }       
+}
+</code></pre>
+</hide>
+</toggle>
+<ul>
+<li>Legg på kode for at <code>sjekkAlder</code> skal kjøre.</li>
+</ul>
+<toggle>
+    <strong> Hint </strong>
+    <hide>
+    sjekkAlder();
+    </hide>
+</toggle>
+<p>La oss nå se på et annet eksempel på bruk av funksjoner. Vi skal nå lage en funksjon som skal ta inn et <code>paramenter</code> og <code>returnere</code> en verdi.</p>
+<p>Vi lager en funksjon som konverterer <code>fahrenheit</code>(tempratur mål i USA) til <code>Celsius</code>.</p>
+<ul>
+<li>Slett det du har i JSBin eller åpne et nytt vindu i JSBin (File -&gt; New)</li>
+<li>Lag følgende funksjon:</li>
+</ul>
+<pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fahrenheitTilCelsius</span>(<span class="hljs-params">fahrenheit</span>) </span>{
+    <span class="hljs-keyword">return</span> (<span class="hljs-number">5</span>/<span class="hljs-number">9</span>) * (fahrenheit - <span class="hljs-number">32</span>);
+}
+</code></pre>
+<section class="tip" id="forklaring-5">
+<h2 class="tip" id="forklaring-5">Forklaring</h2>
+<ul>
+<li><code>fahrenheitTilCelsius(fahrenheit)</code> betyr at vi tar inn en variabel som heter <code>fahrenheit</code>. Den kan kun brukes innenfor <code>{ }</code> i funksjonen vår.</li>
+<li><code>return (5/9) * (fahrenheit - 32)</code> bruker variabelen <code>fahrenheit</code> og regner sammen mattestykket som står der.</li>
+<li>Men hva betyr <code>return</code>?</li>
+<li>Return betyr at funksjonen returnerer en verdi til brukeren som brukeren kan se, lagre eller bruke videre. La oss se på et eksempel:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> grader = fahrenheitTilCelsius(<span class="hljs-number">77</span>); 
+</code></pre>
+<ul>
+<li>Koden over kjører funksjonen <code>fahrenheitTilCelsius</code> med paramenter <code>77</code>. Funksjonen regner da ut hvor mange <code>celsius</code> 77 fahrenheit er og lagrer denne verdien i variabelen <code>grader</code>.</li>
+</ul>
+</section>
+<section>
+<h2 id="-5"></h2>
+<p>Nå som vi har fått litt kontroll på hva en <code>funksjon</code> eller <code>metode</code> er, skal vi bevege oss over til <code>løkker</code>.</p>
+</section>
+</section>
+<section class="activity" id="steg-4-lokker">
+<h1 class="activity" id="steg-4-lokker">Steg 4: Løkker</h1>
+<p>Vi som programmerer er ganske late og derfor bruker vi verktøy til å gjenta kode. Løkker gjør akkurat dette. Ved hjelp av løkker kan vi gjenta kode istedet for å skrive mange linjer med kode. Så vi skal i denne seksjonen se på to type løkker: <code>for</code>-løkker og <code>while</code>-løkker.</p>
+<section class="tip" id="for-lokke">
+<h2 class="tip" id="for-lokke">For-løkke</h2>
+<pre><code class="js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+    <span class="hljs-comment">// Kode som kjøres ett gitt antall ganger</span>
+}
+</code></pre>
+<ul>
+<li><code>var i = 0;</code> dette er en variabel som fungerer som en teller, derfor er det et tall og det starter gjerne på <code>0</code>.</li>
+<li><code>i &lt; 10;</code> dette er en betingelse som forteller løkken om den skal fortsette eller av sluttes. Her sier vi at løkken skal kjøre så lenge variabelen <code>i</code> er mindre enn 10.</li>
+<li><code>i++;</code> øker variabelen <code>i</code> med <code>1</code> for hver runde løkken kjører.
+Eksempel:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++;) {
+    <span class="hljs-built_in">console</span>.log(i); 
+}
+</code></pre>
+<p>Dette skrives ut i konsollen:</p>
+<pre><code class="js"><span class="hljs-number">0</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+<span class="hljs-number">4</span>
+<span class="hljs-number">5</span>
+<span class="hljs-number">6</span>
+<span class="hljs-number">7</span>
+<span class="hljs-number">8</span>
+<span class="hljs-number">9</span>
+</code></pre>
+<p>Man kan gjøre det samme hvis man for eksempel skal skrive ut en melding mange ganger eller skrive ut hva du har i handle listen din:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> handleliste = [<span class="hljs-string">"melk"</span>, <span class="hljs-string">"egg"</span>, <span class="hljs-string">"smør"</span>, <span class="hljs-string">"toalettpapir"</span>, <span class="hljs-string">"brus"</span>, <span class="hljs-string">"epler"</span>, <span class="hljs-string">"bananer"</span>]  <span class="hljs-comment">//[] betyr liste</span>
+
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; handleliste.length; i++) {
+    <span class="hljs-built_in">console</span>.log(handleliste[i]); 
+}
+</code></pre>
+<ul>
+<li><code>[]</code> betyr liste, og alle elementene som er i listen blir separert med <code>,</code>.</li>
+<li><code>handleliste.length()</code> er et tall på hvor stor listen er. Skriv <code>console.log(handleliste.length);</code> i JSBin og se hva slags tall du får ut.</li>
+<li>Når vi skal skrive ut et gitt element fra en liste skriver vi <code>handleliste[index]</code>. <code>index</code> her er hvilken plass i lista elementet har. Skal du skrive ut det første elementet skriver du <code>handleliste[0]</code>. <code>handleliste[1]</code> er det andre elementet, osv.</li>
+</ul>
+</section>
+<section>
+<h2 id="-6"></h2>
+</section>
+<section class="check" id="prov-selv">
+<h2 class="check" id="prov-selv">Prøv selv!</h2>
+<ul>
+<li>Åpne ny side i JSBin</li>
+<li>Prøv å skriv ut tallene fra 1 - 100 ved hjelp av en <code>for</code>-løkke</li>
+<li>Bytt på telleren <code>i++</code> slik at alle partall mellom 1 og 100 skrives ut</li>
+</ul>
+<toggle>
+    <strong>Hint</strong>
+    <hide>
+        Bytt ut i++ med i+=2
+    </hide>
+</toggle>
+<ul>
+<li>Klarer du å skrive ut alle oddetallene også?</li>
+</ul>
+<p><strong>Bra! La oss se på lister.</strong></p>
+<ul>
+<li>Lag nå en liste over dine favoritt spill</li>
+<li>Skriv ut alle ved hjelp av en <code>for</code>-løkke</li>
+<li>Skriv ut annen hvert element i lista (hint: bruk samme metode som med partall)</li>
+</ul>
+</section>
+<section class="tip" id="while-lokke">
+<h2 class="tip" id="while-lokke">While-løkke</h2>
+<pre><code class="js"><span class="hljs-keyword">while</span>(betingelse) {
+    <span class="hljs-comment">// Kjøre kode til betingelsen er usann</span>
+}
+</code></pre>
+<p>En <code>while</code>-løkke kjører en blokk med kode helt til <code>betingelsen</code> blir sann. <code>While</code>-løkker er fine å bruke om man for eksempel skal lage spill:</p>
+<pre><code class="js"><span class="hljs-keyword">while</span>(!gameOver) {
+    <span class="hljs-comment">// Kjør spill</span>
+}
+</code></pre>
+<p><code>!</code> betyr <code>not</code>, altså betyr <code>!gameOver</code> at løkken kjører så lenge spillet <code>ikke er slutt</code>. Dersom vi vil at en løkke skal kjøre for alltid kan vi sette betingelsen til <code>True</code>.</p>
+<p>Vi kan også gjøre det samme som vi gjorde med <code>for</code>-løkken:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">while</span>(i &lt; <span class="hljs-number">10</span>) {
+    <span class="hljs-built_in">console</span>.log(i);
+    i++;
+}
+</code></pre>
+<p>Forskjellen her er at vi må lage en tellende variabel som vi definere (<code>var i = 0;</code>) utenfor selve løkken. Selve telleren (<code>i++</code>) legger vi etter all koden vi har løkken sånn at den teller opp etter vi har utført det vi skal.</p>
+</section>
+<section>
+<h2 id="-7"></h2>
+</section>
+<section class="check" id="prov-selv-2">
+<h2 class="check" id="prov-selv-2">Prøv selv</h2>
+<ul>
+<li>
+<p>Skriv om <code>while</code>-løkken til å skrive ut alle tallene fra 1-100</p>
+</li>
+<li>
+<p>Skriv om løkken slik at du skriver ut alle partallene fra 1-100</p>
+</li>
+<li>
+<p>Bruk listen din over favorittspill og skriv ut alle elementene ved hjelp av <code>while</code>-løkken</p>
+</li>
+</ul>
+<p><strong>La oss nå lage et enkelt <code>Kron eller mynt</code>-spill ved hjelp av <code>while</code>.</strong></p>
+<ul>
+<li>Åpne en ny <a href="https://jsbin.com/?js,console">JSbin.com</a></li>
+<li>Lag en variabel, <code>krone</code>, som skal være enten 0 eller 1, dette skal være tilfeldig:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> krone = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">2</span>);
+</code></pre>
+<p><code>Math.floor()</code> runder ned tallet du får fra <code>Math.random()</code>. <code>Math.random()</code> henter et tall mellom 0 og 1, derfor bruker vi <code>*2</code> for at tallet blir mellom 0-2.</p>
+<ul>
+<li>Lag en <code>while</code>-løkke som skal kjøre helt til du får <code>mynt</code>. Vi sier nå at <code>kron</code> er <code>1</code> og <code>mynt</code> er <code>0</code>:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">while</span>(krone === <span class="hljs-number">0</span>) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Kron! Vi flipper igjen..."</span>);
+    <span class="hljs-keyword">var</span> krone = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">2</span>);
+}
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Mynt! Gratulerer!"</span>);
+</code></pre>
+<p><strong>Bra jobba!</strong> Nå har du lært masse om JavaScript!</p>
+</section>
+<section class="challenge" id="utfordring">
+<h2 class="challenge" id="utfordring">Utfordring</h2>
+<ul>
+<li>Bruk <code>prompt</code> til å ta inn et valg fra brukeren sånn at du selv kan bestemme om du vil ha <code>Kron</code> eller <code>Mynt</code>.</li>
+<li>Klarer du å gjøre det samme med terninger? Da må du ha tallene fra 0-6 og ikke bare fra 0-2.</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: JS: Grunnleggende JavaScript&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/grunnleggende_js" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
