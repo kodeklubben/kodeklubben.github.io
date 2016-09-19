@@ -1,0 +1,96 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Bruk data i Scratch | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Bruk data i Scratch</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/data/data.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.0.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/3.2.2/es6-promise.min.js"></script>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>-->
+<script type="text/javascript" src="papaparse.min.js"></script> <!-- Using local copy because CDN contains a bug in guessDelimiter, should disappear when they bump version -->
+<section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Her kan du gjøre om regneark og datafiler til lister som du kan bruke i
+Scratchprosjektene dine.</p>
+<div style="margin: auto; width: 480px">
+  <button id="hent_fil" class="btn btn-default btn-lg btn-block">Last opp datafil</button>
+  <input type="file" id="csv_fil" style="display:none">
+  <div id="feilmelding"></div>
+</div>
+</section>
+<section class="activity" id="hvordan-laste-opp-en-datafil">
+<h1 class="activity" id="hvordan-laste-opp-en-datafil">Hvordan laste opp en datafil</h1>
+<p><em>Denne tjenesten lager Scratchprosjekter fra såkalte <strong>CSV-filer</strong>. Dette er et
+vanlig format for datalagring. Du kan finne mange CSV-filer på nettet, eller
+lage dine egne med regnearkprogrammer som Excel, Numbers eller Libre Office.</em></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Legg en CSV-fil lokalt på harddisken din. Du kan enten laste denne ned fra
+nettet eller lage den selv.</p>
+</li>
+<li>
+<p>Klikk på knappen <strong>Last opp datafil</strong> lenger opp på denne siden.</p>
+</li>
+</ul>
+<p>Dette vil lage et Scratchprosjekt av datafilen din. Om du ikke får velge filnavn
+selv vil prosjektet hete <code>data.sb2</code> og sannsynligvis ligge i en katalog som
+heter <code>Nedlastinger</code>.</p>
+</section>
+</section>
+<section class="activity" id="hvordan-laste-dataene-inn-i-scratch">
+<h1 class="activity" id="hvordan-laste-dataene-inn-i-scratch">Hvordan laste dataene inn i Scratch</h1>
+<p><em>Vi skal nå se hvordan du kan laste dataene dine inn i Scratch.</em></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Start et nytt Scratchprosjekt.</p>
+</li>
+<li>
+<p>Klikk på <strong>Fil</strong>-menyen og velg <strong>Last opp fra maskinen</strong>.</p>
+</li>
+<li>
+<p>Velg filen du lastet ned i forrige steg. Sannsynligvis heter den <code>data.sb2</code> og
+ligger i katalogen <code>Nedlastinger</code>.</p>
+</li>
+<li>
+<p>Si <strong>OK</strong> til å slette innholdet i det eksisterende prosjektet (du startet et
+nytt Scratchprosjekt, ikke sant?)</p>
+</li>
+<li>
+<p>Dataene dine er nå tilgjengelige som <strong>lister</strong> i Scratch. For å programmere
+med disse bruker du klosser fra <code class="blocksdata">Data</code>-kategorien.</p>
+</li>
+</ul>
+<script type="text/javascript" src="data.js"></script>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Scratch: Bruk data i Scratch&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/data" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Geir Arne Hjelle og Lance Olav Eastgate</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>// bind shim for phantomJS
+Function.prototype.bind = Function.prototype.bind || function (thisp) {
+  var fn = this;
+  var args = Array.prototype.slice.call(arguments, 1);
+  return function () {
+    return fn.apply(thisp, args);
+  };
+};
+$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks.renderMatching('code.blocks', {
+    languages: ['nb', 'en']
+  });
+  scratchblocks.renderMatching('code.b', {
+    languages: ['nb', 'en'],
+    inline: true
+  });
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
