@@ -1,0 +1,164 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Buzzer | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Buzzer</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/buzzer/buzzer.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Nå som vi har sett litt på hvordan vi kan kontrollere en lysdiode på forskjellige måter, kan
+gå over til å lage litt lyd!</p>
+</section>
+<section class="activity" id="steg-1-finn-frem-utstyr">
+<h1 class="activity" id="steg-1-finn-frem-utstyr">Steg 1: Finn frem utstyr</h1>
+<p>Før vi kan begynne å lage kretsen og koden, er vi nødt til å finne frem alt vi trenger.
+I denne oppgaven trenger vi i hovedsak en buzzer.</p>
+<section class="check" id="dette-trenger-du">
+<h2 class="check" id="dette-trenger-du">Dette trenger du</h2>
+<ul>
+<li>1 Arduino Uno</li>
+<li>1 breadboard</li>
+<li>2 ledninger</li>
+<li>1 buzzer</li>
+</ul>
+<figure><img src="buz.jpg" style="width: 900px"></figure>
+</section>
+</section>
+<section class="activity" id="steg-2-lag-kretsen">
+<h1 class="activity" id="steg-2-lag-kretsen">Steg 2: Lag kretsen</h1>
+<p>Før vi kan begynne med programmeringen, så er vi nødt til å lage en krets.
+Hvis du nå har funnet frem alt du trenger kan du følge instruksjonene og illustrasjonen
+under</p>
+<figure><img src="krets.png" style="width: 900px"></figure>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>Ledning fra GND på Arduinoen til den negative lederen på buzzeren</li>
+<li>Ledning fra 11~ på Arduinoen til den positive lederen på buzzeren</li>
+</ul>
+</section>
+<section class="protip" id="porter-merket-med">
+<h2 class="protip" id="porter-merket-med">Porter merket med ~</h2>
+<p>Husker du hva &quot;~&quot; betyde? Det har seg slik at alle porter merket med &quot;~&quot;
+har en spesiel funksjon kalt PWM. Dette står for &quot;Pulse With Modulation&quot;
+og brukes for å lage et analogt signal. I denne oppgaven bruker vi dette
+for å generer toner.</p>
+</section>
+</section>
+<section class="activity" id="steg-3-lag-en-tone">
+<h1 class="activity" id="steg-3-lag-en-tone">Steg 3: Lag en tone</h1>
+<p><em>Nå skal vi lage vår første tone med Arduinoen.</em></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Åpne Arduino-programmet om det ikke allerede er åpent.</p>
+</li>
+<li>
+<p>Arduino-programmet starter med denne koden:</p>
+<pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+
+}
+</code></pre>
+</li>
+<li>
+<p>Skriv denne koden:</p>
+<pre><code class="cpp"><span class="hljs-keyword">int</span> lyd = <span class="hljs-number">11</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+  pinMode(lyd, OUTPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+  tone(lyd, <span class="hljs-number">880</span>);
+}
+</code></pre>
+</li>
+<li>
+<p>Trykk på <img src="upload.png" alt=""> for å laste opp koden. Denne sjekker først om koden
+er riktig, og så vil programmet ditt kjøre på arduinoen.</p>
+</li>
+<li>
+<p>Lager den lyd?</p>
+</li>
+</ul>
+<section class="protip" id="virker-det-ikke">
+<h3 class="protip" id="virker-det-ikke">Virker det ikke?</h3>
+<p>Hvis det ikke virker, så kan det hende at Arduino-programmet står på feil <strong>port</strong>
+og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
+<ul>
+<li>
+<p>Brett er satt riktig: <strong>Tools -&gt; Board -&gt; Arduino/Genuino Uno</strong></p>
+</li>
+<li>
+<p>Port er satt riktig:</p>
+<ul>
+<li>Windows: <strong>Tools -&gt; Port -&gt; COM1</strong> (kan være et annet tall)
+<img src="port.png" alt=""></li>
+<li>Mac: <strong>Tools -&gt; Port -&gt;/dev/tty.usbmodem262471</strong> (kan være et annet tall)</li>
+</ul>
+</li>
+</ul>
+<p>Hvis dette ikke fungerer, kan du prøve å lukke programmet og åpne det igjen.</p>
+</section>
+<section class="challenge" id="utfordringer">
+<h3 class="challenge" id="utfordringer">Utfordringer</h3>
+<ul>
+<li>Klarer du å finne ut hvilken tone dette er? (Hint: 880 er frekvensen til tonen)</li>
+<li>Klarer du å lage en annen tone?</li>
+</ul>
+</section>
+</section>
+</section>
+<section class="activity" id="steg-4-bruk-en-fotoresistor-til-a-styre-lyden">
+<h1 class="activity" id="steg-4-bruk-en-fotoresistor-til-a-styre-lyden">Steg 4: Bruk en fotoresistor til å styre lyden</h1>
+<p>Vi kan bruke en annen lysor for å styre lyden også. La oss se hvordan vi kan få en
+fotoresistor til å styre lyden. En fotoresistor varierer motstanden etter hvor mye
+lys den får inn. Finn frem alt du trenger og koble opp slik som på diagrammet under
+og følg sjekklisten!</p>
+<figure><img src="foto.jpg" style="width: 900px"></figure>
+<figure><img src="ldr.png" style="width: 900px"></figure>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>La alle de andre komponentene være som før</li>
+<li>Ledning fra en fot på fotoresistoren til A5 på arduinoen</li>
+<li>Ledning fra fot på fotoresistor til GND</li>
+<li>Skriv  koden under:</li>
+</ul>
+<pre><code class="cpp"><span class="hljs-keyword">int</span> lyd = <span class="hljs-number">11</span>;
+<span class="hljs-keyword">int</span> lys = A3;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+	pinMode(lys, INPUT_PULLUP);
+	pinMode(lyd, OUTPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+	tone(lyd, analogRead(lys)*<span class="hljs-number">3.2</span>);
+}
+</code></pre>
+<p>Se der! Nå har du lært å lage litt lyd med Arduino!</p>
+<section class="challenge" id="utfordringer-2">
+<h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
+<p>Her er noen nøtter du kan prøve deg på ved å endre koden.</p>
+<ul>
+<li>Klarer du å bruke knapper for å spille forksjellige toner?</li>
+<li>Kan du få en RGB lysdiode til å lyse forskjellige farger for forskjellige toner?</li>
+</ul>
+</section>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Arduino: Buzzer&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/arduino/buzzer" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Adrian Helle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
