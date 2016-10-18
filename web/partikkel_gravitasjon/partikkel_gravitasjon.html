@@ -14,7 +14,7 @@ function relative(url) {
 
 
         var canvas, ctx;
-        
+
         var drawInterval = setInterval(function(){draw()}, 30);
 
 
@@ -38,18 +38,18 @@ function relative(url) {
 
             ctx.fillStyle = 'red';
             ctx.fillRect(particle.x, particle.y,particle.size,particle.size);
-            
+
             particle.gravitySpeed += particle.gravity;
             particle.y += particle.gravitySpeed;
-            
+
             kant = canvas.height - particle.size;
             if(particle.y > kant){
-                particle.y = kant; 
+                particle.y = kant;
                 particle.gravitySpeed = 0;
-            
+
                 setTimeout(function() { particle.y = 0; }, 2000);
             }
-            
+
         }
 
 </script>
@@ -126,7 +126,7 @@ OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du 
     <span class="hljs-keyword">var</span> key = inputKey.keyCode;
 } <span class="hljs-keyword">else</span> {
     <span class="hljs-keyword">var</span> key = inputKey.which;
-} 
+}
 </code></pre>
 <p>Grunnen til at du må bruke <code>keyCode</code> og <code>which</code> er fordi ikke alle nettlesere støtter <code>keyCode</code>, men bruker <code>which</code> istedet.</p>
 <ul>
@@ -140,7 +140,7 @@ OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du 
 <p>For at du skal få gravitasjonen tilbake når du slipper knappen må du lage en funksjon for <code>window.onkeyup</code>.</p>
 </li>
 <li>
-<p>Les mer om <code>window.onkeyup</code> osv her: <a href="http://www.w3schools.com/jsref/event_onkeydown">w3school</a></p>
+<p>Les mer om <code>window.onkeyup</code> osv her: <a href="http://www.w3schools.com/jsref/event_onkeydown.asp">w3school</a></p>
 </li>
 </ul>
 <p>Dersom du står bomfast: <a href="https://jsbin.com/sezumakiyo/edit?html,output">Forlag til kode</a></p>
