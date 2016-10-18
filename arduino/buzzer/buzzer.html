@@ -8,8 +8,8 @@ function relative(url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Buzzer</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/buzzer/buzzer.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>Nå som vi har sett litt på hvordan vi kan kontrollere en lysdiode på forskjellige måter, kan
-gå over til å lage litt lyd!</p>
+<p>Nå som vi har sett litt på hvordan vi kan kontrollere en lysdiode på
+forskjellige måter, kan vi gå over til å lage litt lyd!</p>
 </section>
 <section class="activity" id="steg-1-finn-frem-utstyr">
 <h1 class="activity" id="steg-1-finn-frem-utstyr">Steg 1: Finn frem utstyr</h1>
@@ -30,13 +30,13 @@ I denne oppgaven trenger vi i hovedsak en buzzer.</p>
 <h1 class="activity" id="steg-2-lag-kretsen">Steg 2: Lag kretsen</h1>
 <p>Før vi kan begynne med programmeringen, så er vi nødt til å lage en krets.
 Hvis du nå har funnet frem alt du trenger kan du følge instruksjonene og illustrasjonen
-under</p>
+under.</p>
 <figure><img src="krets.png" style="width: 900px"></figure>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li>Ledning fra GND på Arduinoen til den negative lederen på buzzeren</li>
-<li>Ledning fra 11~ på Arduinoen til den positive lederen på buzzeren</li>
+<li>Ledning fra GND på Arduinoen til den negative lederen på buzzeren.</li>
+<li>Ledning fra 11~ på Arduinoen til den positive lederen på buzzeren.</li>
 </ul>
 </section>
 <section class="protip" id="porter-merket-med">
@@ -110,7 +110,7 @@ og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
 <section class="challenge" id="utfordringer">
 <h3 class="challenge" id="utfordringer">Utfordringer</h3>
 <ul>
-<li>Klarer du å finne ut hvilken tone dette er? (Hint: 880 er frekvensen til tonen)</li>
+<li>Klarer du å finne ut hvilken tone dette er? (Hint: 880 er frekvensen til tonen.)</li>
 <li>Klarer du å lage en annen tone?</li>
 </ul>
 </section>
@@ -118,7 +118,7 @@ og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
 </section>
 <section class="activity" id="steg-4-bruk-en-fotoresistor-til-a-styre-lyden">
 <h1 class="activity" id="steg-4-bruk-en-fotoresistor-til-a-styre-lyden">Steg 4: Bruk en fotoresistor til å styre lyden</h1>
-<p>Vi kan bruke en annen lysor for å styre lyden også. La oss se hvordan vi kan få en
+<p>Vi kan bruke en lyssensor for å styre lyden også. La oss se hvordan vi kan få en
 fotoresistor til å styre lyden. En fotoresistor varierer motstanden etter hvor mye
 lys den får inn. Finn frem alt du trenger og koble opp slik som på diagrammet under
 og følg sjekklisten!</p>
@@ -127,9 +127,9 @@ og følg sjekklisten!</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li>La alle de andre komponentene være som før</li>
-<li>Ledning fra en fot på fotoresistoren til A5 på arduinoen</li>
-<li>Ledning fra fot på fotoresistor til GND</li>
+<li>La alle de andre komponentene være som før.</li>
+<li>Ledning fra en fot på fotoresistoren til A5 på arduinoen.</li>
+<li>Ledning fra fot på fotoresistor til GND.</li>
 <li>Skriv  koden under:</li>
 </ul>
 <pre><code class="cpp"><span class="hljs-keyword">int</span> lyd = <span class="hljs-number">11</span>;
@@ -149,7 +149,7 @@ og følg sjekklisten!</p>
 <h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
 <p>Her er noen nøtter du kan prøve deg på ved å endre koden.</p>
 <ul>
-<li>Klarer du å bruke knapper for å spille forksjellige toner?</li>
+<li>Klarer du å bruke knapper for å spille forskjellige toner?</li>
 <li>Kan du få en RGB lysdiode til å lyse forskjellige farger for forskjellige toner?</li>
 </ul>
 </section>

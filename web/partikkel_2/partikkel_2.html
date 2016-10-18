@@ -1,0 +1,136 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>JS: Partikkel-fest | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">JS: Partikkel-fest</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/partikkel_2/partikkel_2.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Denne oppgaven bygger på koden du skrev i oppgaven <a href="../partikkel_animasjon/partikkel_animasjon.html">Partikkel-animasjon</a>. Så dersom du ikke har gjort den, så anbefaler vi å gjøre <a href="../partikkel_animasjon/partikkel_animasjon.html">Partikkel-animasjon</a> før du fortsetter på denne oppgaven.</p>
+<p>Her skal vi videreutvikle <code>partikkel</code>-animasjonen vår slik at den ser slik ut:</p>
+<p><canvas id="canvas" width="500" height="500"></canvas></p>
+<script>
+
+
+        var canvas, ctx;
+        var partikkelListe = [];
+        
+        var drawInterval = setInterval(function(){draw()}, 30);
+
+
+        
+        
+
+        window.onload = function(){
+            canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            drawInterval;
+        };
+
+
+        //Tegner og skyter particle opp
+        function draw(){
+            
+            var particle = {
+                x: 250,
+                y: 250,
+                xSpeed: Math.floor(Math.random()*20 - Math.random()*20),
+                ySpeed: Math.floor(Math.random()*20 - Math.random()*20),
+                size: 10
+
+            };
+            
+            partikkelListe.push(particle);
+            
+            ctx.clearRect(0,0,500,500);
+
+            
+            for (var i=0; i<partikkelListe.length; i++) {
+                particle = partikkelListe[i];
+            
+
+                
+                ctx.fillStyle = 'red';
+                ctx.fillRect(particle.x, particle.y,particle.size,particle.size);;
+            
+                particle.x = particle.x + particle.xSpeed;
+                particle.y = particle.y + particle.ySpeed;
+            
+                particle.size = particle.size * 0.96;
+            }
+
+        }
+</script>
+<p>Merk at i denne oppgaven vil du kun få beskrevet hva du skal gjøre med et par hint. Du vil ikke få presentert den ferdige koden.</p>
+</section>
+<section class="activity" id="steg-1-hva-ma-gjores">
+<h1 class="activity" id="steg-1-hva-ma-gjores">Steg 1: Hva må gjøres?</h1>
+<p>I denne oppgaven får du kun små eksempler på kode for å hjelpe deg til å komme frem til resultatet. Derfor skal vi gå gjennom tankemåten til å lage animasjonen over ved å presentere en liste over ting som må gjøres:</p>
+<p>La oss studere animasjonen og analysere hva den inneholder:</p>
+<ul>
+<li>Et partikkel i midten av skjermen som alltid er der. Hva kan være grunnen til det?</li>
+<li>Partiklene som går ut fra midten og blir mindre og mindre jo lengre ut de går</li>
+<li>Hastigheten til hvert partikkel varierer</li>
+<li>Retningen varierer, men et partikkel reiser i en rett linje</li>
+<li>Det er mange partikler som blir til hvert sekund</li>
+</ul>
+<p>La oss analysere punktene over, og se hva på hva vi må programmere. Vi starter fra toppen:</p>
+<ul>
+<li>Siden partiklene går ut fra midten må jo alle starte der, derfor må vi setter <code>x</code>- og <code>y</code>-posisjonen til å være det samme for hvert partikkel.</li>
+<li>Siden partiklene blir mindre og mindre, men starter med samme størrelse, må vi endre på <code>størrelser</code>-attributtet til partiklet på samme måte som vi gjør når vi skal flytte på det. Tips: bruk ganging (<code>*</code>) for å få en bedre minknings-effekt.</li>
+<li>Siden hastigheten varierer kan vi bruke <code>Math.random</code> til <code>xSpeed</code> og <code>ySpeed</code>, her er et forslag til hvordan det kan se ut:</li>
+</ul>
+<section class="tip" id="">
+<h2 class="tip" id=""></h2>
+<pre><code class="js">xSpeed: <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">20</span> - <span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">20</span>));
+</code></pre>
+<p>Dette vil gjøre at du får et positivt eller negativt tall med varierende hastighet fra -20 til 20 i <code>x</code>-retning. Gjør det samme for <code>y</code>-retningen for å få partiklene til å bevege seg overalt på skjermen.</p>
+</section>
+<section>
+<h2 id="-2"></h2>
+<ul>
+<li>For å få dem til å følge en rett linje bruker vi bare endringer i <code>x</code>- og <code>y</code>-retning fra forrige oppgave: <code>particle.x = particle.x + particle.xSpeed;</code>.</li>
+<li>Siden det er mange som blir laget på engang må vi for hver gang <code>draw()</code> blir kalt, legge et nytt partikkel i en <code>liste</code> og bruke en <code>for</code>-løkke til å endre hvert partikkel sine attributter og gjenta dette for alle elementene i listen.</li>
+</ul>
+<section>
+<h4 id="prov-selv-forst-dersom-du-ikke-far-det-til-kan-du-benytte-deg-av-hintene-under">Prøv selv først! Dersom du ikke får det til kan du benytte deg av hintene under.</h4>
+</section>
+</section>
+</section>
+<section class="activity" id="hint">
+<h1 class="activity" id="hint">Hint</h1>
+<section class="tip" id="for-lokke">
+<h2 class="tip" id="for-lokke">For-løkke</h2>
+<ul>
+<li>En <code>for</code>-løkke som skal gå gjennom en liste vil se slik ut:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;listeNavn.length; i++){
+    <span class="hljs-comment">//kode</span>
+    element = listeNavn[i] <span class="hljs-comment">// element blir nå det i-te elementet i listen, "i" blir her et tall fra 0 til lengden av listen. </span>
+}
+</code></pre>
+</section>
+<section>
+<h2 id="-3"></h2>
+</section>
+<section class="tip" id="oppbygning-av-koden">
+<h2 class="tip" id="oppbygning-av-koden">Oppbygning av koden</h2>
+<p>For at du skal kunne bygge opp koden slik at partiklene oppfører seg som den gjør i animasjonen må vi tenke over hvor vi putter koden vår.</p>
+<ul>
+<li>All endring på partikkel-objektet bør skje i <code>for</code>-løkken. På denne måten vil endringene skje gradvis som gjør at animasjonen blir finere.</li>
+<li>Når man bør legge elementer i <code>partikkel</code>-lista bør du eksperimentere litt med.</li>
+<li>Du bør også eksperimentere litt med når du bruker <code>clearRect()</code>, klarer du å se hva som er forskjellen på om du legger den i eller utenfor <code>for</code>-løkken?</li>
+</ul>
+</section>
+<section>
+<h2 id="-4"></h2>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: JS: Partikkel-fest&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/partikkel_2" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
