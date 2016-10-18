@@ -1,0 +1,375 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>JS: Partikkel-animasjon | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">JS: Partikkel-animasjon</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span data-i18n="html=layout.levelNames.2">Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/partikkel_animasjon/partikkel_animasjon.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduction">
+<h1 class="intro" id="introduction">Introduction</h1>
+<p>I denne oppgaven skal vi bruke JavaScript til å få figurer vi å bevege seg. Vi skal altså lære å animere ved hjelp av JavaScript og noe som heter <code>Canvas</code>. Under ser du animasjonen vi kommer til å lage.</p>
+<p>Denne oppgaven er den første i en liten serie av andre <code>partikkel</code>-oppgaver, derfor er det viktig å forstå det som skjer i denne oppgaven.</p>
+<p><canvas id="canvas" width="300" height="300"></canvas></p>
+<script>
+
+        var canvas, ctx;
+        var drawInterval = setInterval(function(){draw()}, 30);
+
+
+        var particle = {
+            x: 0,
+            y: 0,
+            xSpeed: 2,
+            ySpeed: 2,
+            size: 10
+
+        };
+
+        window.onload = function() {
+            canvas = document.getElementById("canvas");
+            ctx = canvas.getContext("2d");
+            drawInterval;
+        };
+
+
+        function draw() {
+
+            ctx.clearRect(0,0,300,300);
+
+            ctx.fillStyle = 'red';
+            ctx.fillRect(particle.x, particle.y,particle.size,particle.size);
+
+            particle.x = particle.x + particle.xSpeed;
+            particle.y = particle.y + particle.ySpeed;
+            
+            if(particle.x === 300 && particle.y === 300){
+                particle.x = 0;
+                particle.y = 0;
+                drawInterval;
+            }
+        }
+
+
+
+    </script>
+<p>I denne oppgaven vil du få bruk for det du har lært i oppgaven <a href="../grunnleggene_js/grunnleggende_js.html">Grunnleggende JavaScript</a>.</p>
+</section>
+<section class="activity" id="steg-1-canvas-elementet">
+<h1 class="activity" id="steg-1-canvas-elementet">Steg 1: Canvas-elementet</h1>
+<p>I HTML bruker vi <code>&lt;canvas&gt;</code> til å tegne figurer ved hjelp av JavaScript. Selve <code>&lt;canvas&gt;</code>-elementet gjør ikke så stor nytte for seg, så derfor bruker vi JavaScript til å fortelle hva slags grafikk <code>&lt;canvas&gt;</code>-elementet skal inneholde. La oss skrive det som trengs for å jobbe med <code>canvas</code>:</p>
+<ul>
+<li>Åpne favoritt teksteditoren din</li>
+<li>Lag en ny HTML-fil som heter <code>partikler.html</code></li>
+<li>Kopier koden under inn i <code>partikler.html</code>:</li>
+</ul>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Partikkel-fest<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+        <span class="hljs-tag">body</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#666</span></span></span>;
+        }</span>
+
+        <span class="hljs-id">#canvas</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#000</span></span></span>;
+            <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"><span class="hljs-number">100px</span></span></span>;
+        }</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"canvas"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+
+</code></pre>
+<section class="tip" id="forklaring-canvas">
+<h2 class="tip" id="forklaring-canvas">Forklaring: Canvas</h2>
+<ul>
+<li><code>&lt;canvas id=&quot;canvas&quot; width=&quot;500&quot; height=&quot;500&quot;&gt;&lt;/canvas&gt;</code> er selve <code>Canvas</code>-elementet. Den har en gitt høyde og bredde <code>500px x 500px</code>. Vi skal bruke JavaScript til å lage andre elementer inne i <code>canvas</code>-elementet.</li>
+<li>I CSSen er det lagt til en <code>grå</code> bakgrunnsfarge til <code>&lt;body&gt;</code> og sort bakgrunnsfarge til <code>&lt;canvas&gt;</code>.</li>
+</ul>
+</section>
+<section>
+<h2 id=""></h2>
+</section>
+</section>
+<section class="activity" id="steg-2-tegn-et-objekt">
+<h1 class="activity" id="steg-2-tegn-et-objekt">Steg 2: Tegn et objekt</h1>
+<p>Nå som vi vet hvordan <code>canvas</code> ser ut er det på tide å prøve det ut:</p>
+<ul>
+<li>
+<p>Sett inn <code>&lt;script&gt; &lt;/script&gt;</code> i koden din</p>
+</li>
+<li>
+<p>Lag to tomme variabeler:</p>
+</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> canvas;
+<span class="hljs-keyword">var</span> ctx;
+</code></pre>
+<ul>
+<li>Vi skal nå fylle disse variablene når siden vår lastes, da bruker vi noe som heter <code>window.onload</code>:</li>
+</ul>
+<pre><code class="js"><span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"canvas"</span>);
+    ctx = canvas.getContext(<span class="hljs-string">"2d"</span>);
+}
+</code></pre>
+<p><code>canvas</code>-variabelen holder nå på HTML-elementet vårt.</p>
+<p><code>ctx</code>-variabelen vil være det grafiske elementet som blir lagt til i <code>canvas</code>, dette elementet kan vi manipulere ved hjelp av stil, som vi skal se på snart.</p>
+<p>For å kunne lage grafikk i <code>canvas</code> er de to linjene over påkrevd, så nå som vi har det på plass kan vi starte å tegne!</p>
+<ul>
+<li>Nå skal vi lage objekter, så la oss lære litt om hva et <code>objekt</code> er:</li>
+</ul>
+<section class="tip" id="forklaring-objekt">
+<h2 class="tip" id="forklaring-objekt">Forklaring: Objekt</h2>
+<p>La oss nå lage et <code>objekt</code> som skal tegnes. I JavaScript er et objekt en variabel som kan holde på flere verdier eller variabler, som vi ofte kaller for <code>attributter</code>. La oss se på et raskt eksempel med en bil:</p>
+<pre><code class="js"><span class="hljs-keyword">var</span> bil = {
+    navn: <span class="hljs-string">"Volkswagen"</span>,
+    modell: <span class="hljs-string">"Golf"</span>
+    antallSeter: <span class="hljs-number">5</span>,
+    farge: <span class="hljs-string">"Blå"</span>,
+};
+</code></pre>
+<p>Vi kan enkelt hente ut informasjonen vi vil ha fra objektet ved å skive følgende:</p>
+<pre><code class="js"><span class="hljs-built_in">console</span>.log(bil.navn); <span class="hljs-comment">// Skriver ut navnet på bilen: Volkswagen</span>
+<span class="hljs-built_in">console</span>.log(bil.farge); <span class="hljs-comment">// Skriver ut fargen på bilen: Blå</span>
+</code></pre>
+<p>For å endre på ett av attributtene gjør vi bare følgende:</p>
+<pre><code class="js">bil.farge = <span class="hljs-string">"Rød"</span>;
+</code></pre>
+<p>Nå vil attributtet <code>farge</code> bli endret fra <code>Blå</code> til <code>Rød</code>.</p>
+<p>På denne måten slipper vi å lage mange variabler, som skal høre til samme element, vi bruker bare <code>objekter</code>.</p>
+</section>
+<section>
+<h2 id="-2"></h2>
+<ul>
+<li>
+<p>Lag et objekt som heter <code>particle</code> og som inneholder følgende attributter: <code>x</code>-posisjon, <code>y</code>-posisjon, <code>størrelse</code> og <code>farge</code></p>
+</li>
+<li>
+<p>Bestem selv en passende verdi for attributtene. Disse kan være lurt å eksperimentere litt med senere i oppgaven.</p>
+</li>
+</ul>
+<toggle>
+    <strong> Hint </strong>
+    <hide>
+        Setter du x og y til 0, så vil den starte oppe i venstre hjørne. Høyden og bredden er piksel-verdier (px).
+    </hide>
+</toggle>
+<ul>
+<li>
+<p>Lag en funksjon som heter <code>draw</code>. Denne skal tegne elementet for oss.</p>
+</li>
+<li>
+<p>I <code>draw</code> skal vi nå legge til hvilke farge vi vil at elementet vårt skal ha, du bestemmer selv hvilken farge:</p>
+</li>
+</ul>
+<pre><code class="js">ctx.fillStyle = particle.farge;
+</code></pre>
+<ul>
+<li>Nå skal vi tegne et kvadrat (firkant hvor alle sidene er like lange) i fargen vi valgte over:</li>
+</ul>
+<pre><code class="js">ctx.fillRect(particle.x,particle.y,particle.size,particle.size);
+</code></pre>
+</section>
+<section class="tip" id="forklaring-ctxfillrect">
+<h2 class="tip" id="forklaring-ctxfillrect">Forklaring: ctx.fillRect()</h2>
+<p><code>ctx.fillRect()</code> tar inn 4 variabler:</p>
+<pre><code class="js">ctx.fillRect(x-posisjon, y-posisjon, bredde, høyde); 
+</code></pre>
+<p>Over brukte vi de attributtene vi lagde i objektet <code>particle</code>.</p>
+<p>I vårt objekt <code>particle</code> har vi satt en <code>x</code>- og <code>y</code>-posisjon, samt en størrelse som vi setter på både <code>bredde</code> og <code>høyde</code> for å få et kvadrat.</p>
+</section>
+<section>
+<h2 id="-3"></h2>
+<ul>
+<li>Lagre og kjør funksjonen <code>draw()</code> når siden lastes.</li>
+</ul>
+<p>Forslag til koden så langt:</p>
+<pre><code class="html">CTYPE html&gt;
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+        <span class="hljs-tag">body</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#666</span></span></span>;
+        }</span>
+
+        <span class="hljs-id">#canvas</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000</span></span></span>;
+            <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
+        }</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+
+        <span class="hljs-keyword">var</span> canvas;
+        <span class="hljs-keyword">var</span> ctx;
+
+        <span class="hljs-keyword">var</span> particle = {
+            x: <span class="hljs-number">0</span>,
+            y: <span class="hljs-number">0</span>,
+            size: <span class="hljs-number">10</span>,
+            farge: <span class="hljs-string">"red"</span>
+        };
+
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"canvas"</span>);
+            ctx = canvas.getContext(<span class="hljs-string">"2d"</span>);
+            draw(); 
+        };
+
+
+        <span class="hljs-comment">//Tegner particle</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+            ctx.fillStyle = particle.farge;
+            ctx.fillRect(particle.x, particle.y,particle.size,particle.size);
+        };
+      
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"canvas"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+
+</code></pre>
+</section>
+</section>
+<section class="activity" id="steg-3-flytt-pa-partikkelet">
+<h1 class="activity" id="steg-3-flytt-pa-partikkelet">Steg 3: Flytt på partikkelet</h1>
+<p>Nå som vi har fått frem en rød firkant, som er partikkelet vårt, så skal vi nå se hvordan vi kan få den til å flytte på seg. For å få dette til å skje må vi legge til noen nye attributter i objektet vårt, og endre disse underveis i funksjonen vår. For å gjøre dette må vi lære å bruke <code>setInterval</code>, men først må vi endre på objektet vårt.</p>
+<ul>
+<li>I objektet <code>particle</code>, legg til attributtene <code>xSpeed</code> og <code>ySpeed</code></li>
+<li>Sett verdiene til <code>xSpeed</code> og <code>ySpeed</code> til å være <code>2</code> foreløpig</li>
+</ul>
+<p>I <code>draw</code> må vi nå endre <code>particle</code> sin <code>x</code>-posisjon med <code>xSpeed</code>, samme må vi gjøre med <code>y</code>-posisjonen. Måten man øker et attributt på er slik:</p>
+<pre><code class="js">objekt.attributt1 = objekt.attributt1 + objekt.attributt2;
+</code></pre>
+<ul>
+<li>Legg til det som trengs i <code>draw</code> for å få <code>particle</code> til å endre <code>x</code>- og <code>y</code>-posisjonen sin</li>
+</ul>
+<toggle>
+    <strong> Hint </strong>
+    <hide>
+        particle.x = particle.x + particle.xSpeed;
+    </hide>
+</toggle>
+<p>For at vi skal få en animasjon så må vi kjører <code>draw</code> flere ganger enn bare 1, derfor må vi bruke <code>setInterval</code> for å gjenta <code>draw</code>.</p>
+<ul>
+<li>Lag en ny variabel som heter <code>drawInterval</code> og ser slik ut:</li>
+</ul>
+<pre><code class="js"><span class="hljs-keyword">var</span> drawInterval = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ draw(); }, <span class="hljs-number">30</span>); 
+</code></pre>
+<section class="tip" id="forklaring-setinterval">
+<h2 class="tip" id="forklaring-setinterval">Forklaring: setInterval</h2>
+<ul>
+<li><code>setInterval</code> lager en funksjon som skal kjøre hvert X millisekund</li>
+<li><code>setInterval(function() { draw(); }, 30);</code> kjører funksjonen <code>draw()</code> hvert 30 millisekund. NB! 1000 millisekunder er ett sekund</li>
+</ul>
+</section>
+<section>
+<h2 id="-4"></h2>
+<ul>
+<li>Fjern <code>draw()</code>, vi trenger ikke erstatte den med <code>drawInterval</code> fordi denne gjøres automatisk når variabelen blir laget</li>
+<li>Lagre og kjør siden vi har laget til nå!</li>
+</ul>
+<p>Som du ser så lager den en lang diagonal stripe. Som du kanskje har skjønt må vi finne en måte vi kan fjerne den forrige vi tegnet slik at vi skaper en illusjon om at den flytter på seg og ikke bare lager mange etter hverandre.</p>
+<ul>
+<li>
+<p>I starten av <code>draw</code> må vi bruke <code>ctx.clearRect(0,0,500,500);</code> for å fjerne alt som er innenfor det svarte. Altså fra (<code>x</code>,<code>y</code>)-posisjonen (0,0) og helt til (500,500).</p>
+</li>
+<li>
+<p>Lagre og kjør på nytt!</p>
+</li>
+</ul>
+<p><strong>Gratulere du har laget din første animasjon i JavaScript!</strong></p>
+</section>
+<section class="challenge" id="utfordring">
+<h2 class="challenge" id="utfordring">Utfordring</h2>
+<ul>
+<li>Prøve å få partikkelet til å gå rett frem</li>
+<li>Få partikkelet til å gå rett ned</li>
+<li>Få partikkelet til å gå baklengs</li>
+<li>Får du til at partikkelet bytter til en tilfeldig farge hver gang den bytter posisjon?</li>
+</ul>
+</section>
+<section>
+<h2 id="-5"></h2>
+<p>Ekssempel på ferdig kode til oppgaven:</p>
+<pre><code class="js">&lt;!DOCTYPE html&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+        <span class="hljs-tag">body</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#666</span></span></span>;
+        }</span>
+
+        <span class="hljs-id">#canvas</span> <span class="hljs-rules">{
+            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#000</span></span></span>;
+            <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"><span class="hljs-number">100px</span></span></span>;
+        }</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+
+        <span class="hljs-keyword">var</span> canvas, ctx;
+        <span class="hljs-keyword">var</span> drawInterval = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ draw(); }, <span class="hljs-number">30</span>);
+
+
+        <span class="hljs-keyword">var</span> particle = {
+            x: <span class="hljs-number">0</span>,
+            y: <span class="hljs-number">0</span>,
+            xSpeed: <span class="hljs-number">2</span>,
+            ySpeed: <span class="hljs-number">2</span>,
+            size: <span class="hljs-number">10</span>,
+            farge: <span class="hljs-string">"red"</span>
+        };
+
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"canvas"</span>);
+            ctx = canvas.getContext(<span class="hljs-string">"2d"</span>);
+        };
+
+
+        <span class="hljs-comment">//Tegner og skyter particle opp</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params"></span>) </span>{
+
+            ctx.clearRect(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">500</span>,<span class="hljs-number">500</span>);
+
+            ctx.fillStyle = particle.farge;
+            ctx.fillRect(particle.x, particle.y,particle.size,particle.size);
+
+            particle.x = particle.x + particle.xSpeed;
+            particle.y = particle.y + particle.ySpeed;
+
+        }
+
+
+
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"canvas"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</span></code></pre>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: JS: Partikkel-animasjon&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/partikkel_animasjon" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
