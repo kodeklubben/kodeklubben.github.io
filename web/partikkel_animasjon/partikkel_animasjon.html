@@ -42,7 +42,7 @@ function relative(url) {
 
             particle.x = particle.x + particle.xSpeed;
             particle.y = particle.y + particle.ySpeed;
-            
+
             if(particle.x === 300 && particle.y === 300){
                 particle.x = 0;
                 particle.y = 0;
@@ -53,7 +53,7 @@ function relative(url) {
 
 
     </script>
-<p>I denne oppgaven vil du få bruk for det du har lært i oppgaven <a href="../grunnleggene_js/grunnleggende_js.html">Grunnleggende JavaScript</a>.</p>
+<p>I denne oppgaven vil du få bruk for det du har lært i oppgaven <a href="../grunnleggende_js/grunnleggende_js.html">Grunnleggende JavaScript</a>.</p>
 </section>
 <section class="activity" id="steg-1-canvas-elementet">
 <h1 class="activity" id="steg-1-canvas-elementet">Steg 1: Canvas-elementet</h1>
@@ -179,7 +179,7 @@ function relative(url) {
 <section class="tip" id="forklaring-ctxfillrect">
 <h2 class="tip" id="forklaring-ctxfillrect">Forklaring: ctx.fillRect()</h2>
 <p><code>ctx.fillRect()</code> tar inn 4 variabler:</p>
-<pre><code class="js">ctx.fillRect(x-posisjon, y-posisjon, bredde, høyde); 
+<pre><code class="js">ctx.fillRect(x-posisjon, y-posisjon, bredde, høyde);
 </code></pre>
 <p>Over brukte vi de attributtene vi lagde i objektet <code>particle</code>.</p>
 <p>I vårt objekt <code>particle</code> har vi satt en <code>x</code>- og <code>y</code>-posisjon, samt en størrelse som vi setter på både <code>bredde</code> og <code>høyde</code> for å få et kvadrat.</p>
@@ -220,7 +220,7 @@ function relative(url) {
         <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
             canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"canvas"</span>);
             ctx = canvas.getContext(<span class="hljs-string">"2d"</span>);
-            draw(); 
+            draw();
         };
 
 
@@ -229,7 +229,7 @@ function relative(url) {
             ctx.fillStyle = particle.farge;
             ctx.fillRect(particle.x, particle.y,particle.size,particle.size);
         };
-      
+
     </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
@@ -266,7 +266,7 @@ function relative(url) {
 <ul>
 <li>Lag en ny variabel som heter <code>drawInterval</code> og ser slik ut:</li>
 </ul>
-<pre><code class="js"><span class="hljs-keyword">var</span> drawInterval = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ draw(); }, <span class="hljs-number">30</span>); 
+<pre><code class="js"><span class="hljs-keyword">var</span> drawInterval = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ draw(); }, <span class="hljs-number">30</span>);
 </code></pre>
 <section class="tip" id="forklaring-setinterval">
 <h2 class="tip" id="forklaring-setinterval">Forklaring: setInterval</h2>
