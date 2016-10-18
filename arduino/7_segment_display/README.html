@@ -1,0 +1,203 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lærerveiledning - 7-Segment Display | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Lærerveiledning - 7-Segment Display</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/7_segment_display/README.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="lesson-link"><a href="7_segment_display.html"><span class="icon"></span><span data-i18n="html=layout.lesson" class="text">Oppgave</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section>
+<h1 id="informasjon-til-veiledere">Informasjon til veiledere</h1>
+<section>
+<h2 id="laeringsmal">Læringsmål</h2>
+<p>Oppgaven «7-Segment Display» introduserer flere konsepter:</p>
+<ul>
+<li>En teknikk for å utforske ukjente komponenter</li>
+<li>7-Segment Display</li>
+<li>Funksjoner og funksjonskall</li>
+<li>Switch statements</li>
+</ul>
+</section>
+<section>
+<h2 id="merk">Merk</h2>
+<p>Denne oppgaven krever at elevene holder styr på en god del ledninger, og
+sluttresultatet vil se noe kaotisk ut.</p>
+<p><figure><img src="kaotisk.jpg" alt="kaotisk"></figure></p>
+</section>
+</section>
+<section>
+<h1 id="losningsforslag">Løsningsforslag</h1>
+<section>
+<h2 id="display-som-teller-opp-og-ned-med-to-knapper">Display som teller opp og ned med to knapper.</h2>
+<p>Kobling:</p>
+<p><figure><img src="toknappkrets.jpg" alt="Kobling"></figure></p>
+<p>Kode:</p>
+<pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">blank</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> led = <span class="hljs-number">6</span>; led &lt;= <span class="hljs-number">13</span>; led++) {
+    digitalWrite(led, LOW);
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_0</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">7</span>, HIGH);
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+  digitalWrite(<span class="hljs-number">10</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_1</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_2</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+  digitalWrite(<span class="hljs-number">10</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_3</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_4</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">7</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_5</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">7</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_6</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">7</span>, HIGH);
+  digitalWrite(<span class="hljs-number">10</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_7</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_8</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">7</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+  digitalWrite(<span class="hljs-number">10</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_9</span><span class="hljs-params">()</span> </span>{
+  blank();
+  digitalWrite(<span class="hljs-number">8</span>, HIGH);
+  digitalWrite(<span class="hljs-number">7</span>, HIGH);
+  digitalWrite(<span class="hljs-number">6</span>, HIGH);
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">12</span>, HIGH);
+}
+
+<span class="hljs-keyword">int</span> minus = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">int</span> pluss = <span class="hljs-number">4</span>;
+<span class="hljs-keyword">int</span> tall = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> led = <span class="hljs-number">6</span>; led &lt;= <span class="hljs-number">13</span>; led++) {
+    pinMode(led, OUTPUT);
+  }
+  pinMode(pluss, INPUT_PULLUP);
+  pinMode(minus, INPUT_PULLUP);
+  tegn_0();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">oppdater</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">switch</span> (tall) {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+      tegn_1();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+      tegn_2();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+      tegn_3();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+      tegn_4();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+      tegn_5();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
+      tegn_6();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:
+      tegn_7();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:
+      tegn_8();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:
+      tegn_9();
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
+      tall = <span class="hljs-number">9</span>;
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+      tegn_0();
+      tall = <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">break</span>;
+  }
+  digitalWrite(<span class="hljs-number">13</span>, HIGH);
+  delay(<span class="hljs-number">150</span>);
+  digitalWrite(<span class="hljs-number">13</span>, LOW);
+  delay(<span class="hljs-number">150</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">if</span> (digitalRead(pluss) == LOW) {
+    tall += <span class="hljs-number">1</span>;
+    oppdater();
+  }
+  <span class="hljs-keyword">if</span> (digitalRead(minus) == LOW) {
+    tall -= <span class="hljs-number">1</span>;
+    oppdater();
+  }
+}
+</code></pre>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Arduino: Lærerveiledning - 7-Segment Display&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/arduino/7_segment_display" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

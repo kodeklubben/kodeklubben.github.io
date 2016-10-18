@@ -1,0 +1,250 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>7-Segment Display | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">7-Segment Display</h1><div class="lesson-icons"><div class="level"><img title="Level 2" src="../../assets/img/level2.png"/><span data-i18n="html=layout.levelNames.2">Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/7_segment_display/7_segment_display.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>La oss se på å få ett display til å telle.</p>
+</section>
+<section class="activity" id="steg-1-finn-frem-utstyr">
+<h1 class="activity" id="steg-1-finn-frem-utstyr">Steg 1: Finn frem utstyr</h1>
+<section class="check" id="til-denne-oppgaven-trenger-du">
+<h2 class="check" id="til-denne-oppgaven-trenger-du">Til denne oppgaven trenger du</h2>
+<ul>
+<li>1 Arduino Uno</li>
+<li>1 breadboard</li>
+<li>2 motstander 1k Ohm (Fargekode: brun-svart-rød-gull)</li>
+<li>11 ledninger</li>
+<li>1 7-segment display</li>
+</ul>
+<p><figure><img src="utstyr.jpg" alt="utstyr"></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-2-utforskning">
+<h1 class="activity" id="steg-2-utforskning">Steg 2: Utforskning</h1>
+<p>Før vi får displayet til å vise tall, er det nyttig å utforske displayet for å
+se hvilke pinner som lyser opp hvilken del av displayet.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>Motstand fra de to midterste pinnene på displayet.</li>
+<li>Ledning fra andre enden av motstandene til ground.</li>
+<li>Ledning fra pin 13 på Arduino til pinnen nederst til høyre på displayet.</li>
+</ul>
+<p><figure><img src="utforskning.jpg" alt="utforskning"></figure></p>
+<pre><code class="cpp">
+<span class="hljs-keyword">int</span> pin = <span class="hljs-number">13</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+    pinMode(pin, OUTPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+    pinMode(pin, HIGH);
+    delay(<span class="hljs-number">500</span>);
+    pinMode(pin, LOW);
+    delay(<span class="hljs-number">500</span>);
+}
+
+</code></pre>
+<p>Flytt så rundt på ledningen som står i breadboardet for å se hvilke pinner på
+displayet som får hvilken del av segmentet til å blinke.</p>
+</section>
+</section>
+<section class="activity" id="steg-3-fa-displayet-til-a-telle-oppover">
+<h1 class="activity" id="steg-3-fa-displayet-til-a-telle-oppover">Steg 3: Få displayet til å telle oppover</h1>
+<p>Før vi skriver kode for å få displayet til å telle oppover, er vi nødt til å
+lage den fulle kretsen.</p>
+<p><figure><img src="fullkrets.jpg" alt="fullkrets"></figure></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>Motstand fra de to midterste pinnene på displayet.</li>
+<li>Ledning fra andre enden av motstandene til ground.</li>
+<li>Koble resten av ledningene som vist på bildet over.</li>
+</ul>
+</section>
+<section class="activity" id="skriv-kode">
+<h2 class="activity" id="skriv-kode">Skriv kode</h2>
+<pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">blank_ut_display</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> led = <span class="hljs-number">6</span>; led &lt;= <span class="hljs-number">13</span>; ++led) {
+        digitalWrite(led, LOW);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_0</span><span class="hljs-params">()</span> </span>{
+    blank_ut_display();
+    digitalWrite(<span class="hljs-number">7</span>, HIGH);
+    digitalWrite(<span class="hljs-number">8</span>, HIGH);
+    digitalWrite(<span class="hljs-number">9</span>, HIGH);
+    digitalWrite(<span class="hljs-number">12</span>, HIGH);
+    digitalWrite(<span class="hljs-number">11</span>, HIGH);
+    digitalWrite(<span class="hljs-number">10</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_1</span><span class="hljs-params">()</span> </span>{
+    blank_ut_display();
+    digitalWrite(<span class="hljs-number">9</span>, HIGH);
+    digitalWrite(<span class="hljs-number">12</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_2</span><span class="hljs-params">()</span> </span>{
+    blank_ut_display();
+    digitalWrite(<span class="hljs-number">8</span>, HIGH);
+    digitalWrite(<span class="hljs-number">9</span>, HIGH);
+    digitalWrite(<span class="hljs-number">6</span>, HIGH);
+    digitalWrite(<span class="hljs-number">10</span>, HIGH);
+    digitalWrite(<span class="hljs-number">11</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">tegn_3</span><span class="hljs-params">()</span> </span>{
+    blank_ut_display();
+    digitalWrite(<span class="hljs-number">8</span>, HIGH);
+    digitalWrite(<span class="hljs-number">9</span>, HIGH);
+    digitalWrite(<span class="hljs-number">6</span>, HIGH);
+    digitalWrite(<span class="hljs-number">12</span>, HIGH);
+    digitalWrite(<span class="hljs-number">11</span>, HIGH);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> led = <span class="hljs-number">6</span>; led &lt;= <span class="hljs-number">13</span>; ++led) {
+        pinMode(led, OUTPUT);
+    }
+    blank_ut_display();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+    tegn_0();
+    delay(<span class="hljs-number">500</span>);
+    tegn_1();
+    delay(<span class="hljs-number">500</span>);
+    tegn_2();
+    delay(<span class="hljs-number">500</span>);
+    tegn_3();
+    delay(<span class="hljs-number">500</span>);
+}
+</code></pre>
+<section class="protip" id="om-funksjoner">
+<h3 class="protip" id="om-funksjoner">Om funksjoner</h3>
+<p>I denne oppgaven har vi introdusert <code>void blank_ut_display()</code>, <code>void tegn_0()</code>,
+<code>void tegn_1()</code>, <code>void tegn_2()</code> og <code>void tegn_3()</code>. Disse kaller vi
+<em>funksjoner</em>, og er en måte å gruppere kode på. Når vi i <code>void loop()</code> sier
+<code>tegn_0();</code> gjør vi et <em>funksjonskall</em> til <code>void tegn_0()</code>, og koden inni den
+funksjonen kjøres.</p>
+<p>Hvis du ser på <code>void setup()</code> og <code>void loop()</code> er dette også funksjoner, hvor
+<code>void setup()</code> kalles ved oppstart av programmet, og <code>void loop()</code> kalles på
+nytt og på nytt.</p>
+</section>
+<section class="challenge" id="utfordringer">
+<h3 class="challenge" id="utfordringer">Utfordringer</h3>
+<ul>
+<li>Klarer du å få displayet til å telle fra 0 til 9?</li>
+<li>Klarer du å få punktumet til å blinke mens vi teller?</li>
+<li>Klarer du å få punktumet til å blinke dobbelt så fort som vi teller?</li>
+</ul>
+</section>
+</section>
+</section>
+<section class="activity" id="steg-4-bruk-en-knapp-for-a-telle-oppover">
+<h1 class="activity" id="steg-4-bruk-en-knapp-for-a-telle-oppover">Steg 4: Bruk en knapp for å telle oppover</h1>
+<section class="sjekkliste" id="til-denne-delen-trenger-du-i-tillegg">
+<h2 class="sjekkliste" id="til-denne-delen-trenger-du-i-tillegg">Til denne delen trenger du i tillegg</h2>
+<ul>
+<li>2 ledninger.</li>
+<li>1 trykkknapp.</li>
+</ul>
+<p><figure><img src="enknappkrets.jpg" alt="enknapp"></figure></p>
+<p>Koble opp som vist på bildet over. Eneste forskjellen her er knappen.</p>
+</section>
+<section class="activity" id="endre-kode">
+<h2 class="activity" id="endre-kode">Endre kode</h2>
+<pre><code class="cpp">...
+
+<span class="hljs-keyword">int</span> tall = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">int</span> knapp = <span class="hljs-number">4</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> led = <span class="hljs-number">6</span>; led &lt;= <span class="hljs-number">13</span>; ++led) {
+        pinMode(led, OUTPUT);
+    }
+    pinMode(knapp, INPUT_PULLUP);
+    tegn_0();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">if</span> (digitalRead(knapp) == LOW) {
+        tall += <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">switch</span> (tall) {
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                tegn_1();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+                tegn_2();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+                tegn_3();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                tall = <span class="hljs-number">0</span>;
+                tegn_0();
+                <span class="hljs-keyword">break</span>;
+        }
+        delay(<span class="hljs-number">300</span>);
+    }
+}
+</code></pre>
+<section class="protip" id="om-switch">
+<h3 class="protip" id="om-switch">Om switch</h3>
+<p>Her har vi introdusert switch. Denne kan minne om en if, hvor
+<code>switch (tall)</code> sjekker verdien av tall, og finner riktig verdi
+i <code>case</code> kallene under. Så når tallet er 2 vil vi gå til <code>case 2:</code> og eksekvere
+koden under dette. <code>break</code> vil si at vi er ferdige med casen.</p>
+<p>Dersom en <code>case</code> mangler <code>break</code>, vil koden som er under kjøre. Altså neste
+<code>case</code>. Dette kalles å <em>falle gjennom</em>, eller <em>fall through</em> på engelsk. Dette
+er en ganske vanlig feil, så om man faktisk mener at neste case skal kjøres,
+legger man ofte på en kommentar:</p>
+<pre><code class="cpp"><span class="hljs-keyword">switch</span> (tall) {
+  <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+    kode_her();
+    <span class="hljs-comment">// fall gjennom</span>
+  <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+    mer_kode_her();
+    <span class="hljs-keyword">break</span>;
+  <span class="hljs-keyword">default</span>:
+    ...
+</code></pre>
+<ul>
+<li>Dersom <code>tall == 0</code> vil koden i både <code>case 0</code> og <code>case 1</code> kjøres, altså faller den
+gjennom fra <code>case 0</code> til <code>case 1</code>.</li>
+<li>Dersom <code>tall == 1</code> kjøres kun koden i <code>case 1</code>.</li>
+<li>Dersom <code>tall != 0 &amp;&amp; tall != 1</code> kjøres koden i default.</li>
+</ul>
+<p>Hvis verdien av <code>tall</code> ikke matcher noen <code>case</code> linjene vil vi eksekvere koden
+i <code>default</code>.</p>
+<p>Så i vår kode, når <code>tall</code> er 4 vil vi treffe <code>default</code>, sette tall til 0 og så
+tegne 0. Dette er grunnen til at vi begynner på igjen på 0 etter vi har telt til 3.</p>
+</section>
+<section class="challenge" id="utfordringer-2">
+<h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
+<ul>
+<li>Klarer du å utvide til å telle til '9'?</li>
+<li>Klarer du å hindre at vi &quot;går rundt&quot; i tellingen, slik at å trykke på knappen
+når du allerede er på '9' ikke gjør noe?</li>
+<li>Klarer du å få punktumet til å lyse når du trykker inn knappen?</li>
+<li>Klarer du å legge til en ekstra knapp som teller nedover, så én knapp teller
+oppover, og den andre nedover?</li>
+</ul>
+</section>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Arduino: 7-Segment Display&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/arduino/7_segment_display" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Martin Ertsås &amp; Morten Minde Neergaard</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
