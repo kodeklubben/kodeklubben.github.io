@@ -6,7 +6,7 @@ function relative(url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Buzzer</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/buzzer/buzzer.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Buzzer</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/buzzer/buzzer.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Nå som vi har sett litt på hvordan vi kan kontrollere en lysdiode på
 forskjellige måter, kan vi gå over til å lage litt lyd!</p>
@@ -22,6 +22,7 @@ I denne oppgaven trenger vi i hovedsak en buzzer.</p>
 <li>1 breadboard</li>
 <li>2 ledninger</li>
 <li>1 buzzer</li>
+<li>1 motstand 270 Ohm (rød-lilla-brun-gull)</li>
 </ul>
 <figure><img src="buz.jpg" style="width: 900px"></figure>
 </section>
@@ -35,16 +36,16 @@ under.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul>
-<li>Ledning fra GND på Arduinoen til den negative lederen på buzzeren.</li>
-<li>Ledning fra 11~ på Arduinoen til den positive lederen på buzzeren.</li>
+<li>Ledning fra GND på Arduinoen til den negative lederen på buzzeren</li>
+<li>Ledning fra 11~ på Arduinoen til motstand</li>
+<li>Motstand til den positive lederen på buzzeren</li>
 </ul>
 </section>
 <section class="protip" id="porter-merket-med">
 <h2 class="protip" id="porter-merket-med">Porter merket med ~</h2>
-<p>Husker du hva &quot;~&quot; betyde? Det har seg slik at alle porter merket med &quot;~&quot;
+<p>Husker du hva &quot;~&quot; betyr? Det har seg slik at alle porter merket med &quot;~&quot;
 har en spesiel funksjon kalt PWM. Dette står for &quot;Pulse With Modulation&quot;
-og brukes for å lage et analogt signal. I denne oppgaven bruker vi dette
-for å generer toner.</p>
+og kan blant annet brukes for å spille lyder.</p>
 </section>
 </section>
 <section class="activity" id="steg-3-lag-en-tone">
@@ -110,16 +111,15 @@ og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
 <section class="challenge" id="utfordringer">
 <h3 class="challenge" id="utfordringer">Utfordringer</h3>
 <ul>
-<li>Klarer du å finne ut hvilken tone dette er? (Hint: 880 er frekvensen til tonen.)</li>
-<li>Klarer du å lage en annen tone?</li>
+<li>Hva skjer hvis du endrer tallet 880 til ett annet?</li>
 </ul>
 </section>
 </section>
 </section>
-<section class="activity" id="steg-4-bruk-en-fotoresistor-til-a-styre-lyden">
-<h1 class="activity" id="steg-4-bruk-en-fotoresistor-til-a-styre-lyden">Steg 4: Bruk en fotoresistor til å styre lyden</h1>
-<p>Vi kan bruke en lyssensor for å styre lyden også. La oss se hvordan vi kan få en
-fotoresistor til å styre lyden. En fotoresistor varierer motstanden etter hvor mye
+<section class="activity" id="steg-4-bruk-en-lysfolsom-motstand-til-a-styre-lyden">
+<h1 class="activity" id="steg-4-bruk-en-lysfolsom-motstand-til-a-styre-lyden">Steg 4: Bruk en lysfølsom motstand til å styre lyden</h1>
+<p>Vi kan bruke en annen input for å styre lyden også. La oss se hvordan vi kan få en
+lysfølsom motstand til å styre lyden. En lysfølsom motstand varierer motstanden etter hvor mye
 lys den får inn. Finn frem alt du trenger og koble opp slik som på diagrammet under
 og følg sjekklisten!</p>
 <figure><img src="foto.jpg" style="width: 900px"></figure>
@@ -127,21 +127,23 @@ og følg sjekklisten!</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul>
-<li>La alle de andre komponentene være som før.</li>
-<li>Ledning fra en fot på fotoresistoren til A5 på arduinoen.</li>
-<li>Ledning fra fot på fotoresistor til GND.</li>
+<li>La alle de andre komponentene være som før</li>
+<li>Ledning fra en fot på lysfølsom motstanden til A5 på arduinoen</li>
+<li>Ledning fra fot på lysfølsom motstand til GND</li>
 <li>Skriv  koden under:</li>
 </ul>
 <pre><code class="cpp"><span class="hljs-keyword">int</span> lyd = <span class="hljs-number">11</span>;
-<span class="hljs-keyword">int</span> lys = A3;
+<span class="hljs-keyword">int</span> lys = A5;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
-	pinMode(lys, INPUT_PULLUP);
-	pinMode(lyd, OUTPUT);
+  pinMode(lys, INPUT_PULLUP);
+  pinMode(lyd, OUTPUT);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
-	tone(lyd, analogRead(lys)*<span class="hljs-number">3.2</span>);
+  <span class="hljs-keyword">int</span> frekvens = analogRead(lys) * <span class="hljs-number">3.2</span>;
+  tone(lyd, frekvens);
+  delay(<span class="hljs-number">100</span>);
 }
 </code></pre>
 <p>Se der! Nå har du lært å lage litt lyd med Arduino!</p>
@@ -149,8 +151,25 @@ og følg sjekklisten!</p>
 <h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
 <p>Her er noen nøtter du kan prøve deg på ved å endre koden.</p>
 <ul>
-<li>Klarer du å bruke knapper for å spille forskjellige toner?</li>
-<li>Kan du få en RGB lysdiode til å lyse forskjellige farger for forskjellige toner?</li>
+<li>Hva skjer hvis du endrer verdien til delay?</li>
+<li>Kan du få en lysdiode til å lyse med forskjellig intensitet gitt forskjellige toner?</li>
+<li>Klarer du å bruke knapper for å spille forksjellige toner?</li>
+</ul>
+</section>
+<section class="protip" id="map">
+<h3 class="protip" id="map">Map</h3>
+<p><code>map</code> tar en verdi, og endrer den fra ett tall i en gitt range til ett tall i en annen.
+F. eks. vil</p>
+<pre><code class="cpp"><span class="hljs-keyword">int</span> lysstyrke = analogRead(lys);
+<span class="hljs-keyword">int</span> verdi = <span class="hljs-built_in">map</span>(lysstyrke, <span class="hljs-number">15</span>, <span class="hljs-number">512</span>, <span class="hljs-number">100</span>, <span class="hljs-number">1500</span>);
+</code></pre>
+<p>gi <code>verdi</code> ett tall
+mellom 15 og 512, hvor en lysstyrke på 15 gir 100 og en lysstyrke på 512 gir 1500.</p>
+</section>
+<section class="challenge" id="utfording-vanskelig">
+<h3 class="challenge" id="utfording-vanskelig">Utfording (Vanskelig)</h3>
+<ul>
+<li>Kan du bytte ut <code>analogRead(lys)*3.2</code> til å bruke map?</li>
 </ul>
 </section>
 </section>
