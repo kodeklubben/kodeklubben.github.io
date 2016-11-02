@@ -1,0 +1,155 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Hvor er HTML? Jeg ser den ikke! | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Hvor er HTML? Jeg ser den ikke!</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/hvor_er_html/hvor_er_html.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Målet med oppgaven er å <em>vise</em> hvor HTML finnes i virkelige nettsider, slik som den siden du er på nå. Når du er ferdig med oppgaven skal du ha litt bedre kjennskap til HTML, samt enkelt kunne endre på nettsider du er inne på.</p>
+<p>Denne oppgaven er demonstrert med nettleseren Google Chrome. Bruk Google Chrome hvis du har den.</p>
+</section>
+<section class="activity" id="steg-1-se">
+<h1 class="activity" id="steg-1-se">Steg 1: Se</h1>
+<p>Hvor er da all HTML-koden bak nettsidene vi ser til vanlig? Den er gjemt bak nettleseren! La oss ta en titt.</p>
+<section class="check" id="aktiviteter">
+<h2 class="check" id="aktiviteter">Aktiviteter</h2>
+<ul>
+<li>
+<p>Gå til <a href="http://kodeklubben.github.io">kodeklubben.github.io</a> i Chrome eller Firefox</p>
+</li>
+<li>
+<p>Høyreklikk på katten og trykk <code>Inspiser</code> (norsk) eller <code>Inspect</code> (engelsk).</p>
+<p><figure><img src="inspiser_katten.png" alt=""></figure></p>
+<p>Når vi klikker på <code>Inspiser</code>, får vi se en meny til hjelp for utviklere. Denne er svært nyttig til webutvikling.</p>
+<p><figure><img src="kattens_kildekode.png" alt=""></figure></p>
+<p>Ser du den fargede teksten, du også? Det er HTML, slik Chrome leser den! Nettsidens kildekode.</p>
+<p>Kildekoden til katten ser slik ut:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"scratch/logo-black.png"</span>&gt;</span>
+</code></pre>
+</li>
+<li>
+<p>Se om du finner igjen <code>scratch/logo_black.png</code> i kildekoden. Hold pekeren over filnavnet. Ser du filen dukker opp?</p>
+</li>
+<li>
+<p>Inspiser slangen. Hva er filnavnet til slangen? Ser du det samme som meg?</p>
+<p><figure><img src="slangens_kildekode.png" alt=""></figure></p>
+<p>Kildekoden til slangen ser slik ut:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"python/logo-black.png"</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="protip" id="hva-har-vi-laert">
+<h2 class="protip" id="hva-har-vi-laert">Hva har vi lært?</h2>
+<p><strong>Høyreklikk og inspiser</strong> finner HTML-koden til elementet vi ser på.</p>
+<p><strong>HTML-kode for bilder</strong> ser slik ut:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"fil.png"</span>&gt;</span>
+</code></pre>
+</section>
+</section>
+<section class="activity" id="steg-2-fjern">
+<h1 class="activity" id="steg-2-fjern">Steg 2: Fjern</h1>
+<p>Utviklerverktøyet i nettleseren lar oss tulle med HTML-koden til alle nettsider vi er på. Vi ødelegger ikke nettsidene, altså!</p>
+<p>Alle endringer vi gjør på nettsiden blir altså igjen på vår egen datamaskin. Vi ødelegger ikke for andre når vi endrer på nettsider!</p>
+<section class="protip" id="alt-borte-vekk">
+<h2 class="protip" id="alt-borte-vekk">Alt borte vekk?</h2>
+<p>Tips: Skulle du fjerne alt for mye, last siden på nytt med oppdater-knappen. Da blir alt som det var. Prøv!</p>
+</section>
+<section class="check" id="aktiviteter-2">
+<h2 class="check" id="aktiviteter-2">Aktiviteter</h2>
+<p>Jeg er glad i Minecraft. Men Minecraft er ikke først i listen over kurs! La oss gjøre noe med det. Vi fjerner alt som er foran!</p>
+<ul>
+<li>
+<p>Høyreklikk på katten og inspiser. Finn elementet med katten. Fjern elementet med tasten <code>delete</code> på tastaturet!</p>
+<p><figure><img src="katten_er_borte.png" alt=""></figure></p>
+</li>
+<li>
+<p>Yes! Katten ble borte!</p>
+<p>... men. Vent litt. Slangen gikk ikke til venstre. Hva skjedde nå, mon tro? Og det står fremdeles <code>Scratch</code> under den tomme plassen?</p>
+<p><figure><img src="kattens_usynlige_boks.png" alt=""></figure></p>
+<p>Ha! Det er en usynlig boks igjen, den som tidligere hadde katten i seg! Den heter <code>&lt;a&gt;</code>, og er en link:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"scratch/index.html"</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"scratch"</span> <span class="hljs-attribute">data-original-title</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">title</span>=<span class="hljs-value">""</span> <span class="hljs-attribute">aria-describedby</span>=<span class="hljs-value">"popover162945"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"logo-wrapper"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Scratch<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+</code></pre>
+</li>
+<li>
+<p>Trykk på den lille pilen ved siden av linken  <code>&lt;a&gt;</code>. Da gjemmer vi hva som er inni linken!</p>
+<p><figure><img src="liten_a.png" alt=""></figure></p>
+</li>
+<li>
+<p>Fjern teksten <code>Scratch</code>. Merk den som under, og trykk <code>delete</code>:</p>
+<p><figure><img src="teksten_scratch.png" alt=""></figure></p>
+<p>Simsalabim!</p>
+<p><figure><img src="simsalabim.png" alt=""></figure></p>
+<p>La oss fjerne litt mer.</p>
+</li>
+<li>
+<p>Fjern elementet som inneholder alle kursene:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"courses"</span>&gt;</span>
+</code></pre>
+<p><figure><img src="class_courses.png" alt=""></figure></p>
+<p>Poff!</p>
+<p><figure><img src="alt_borte.png" alt=""></figure></p>
+<p>Å nei! Nå ble alt borte!</p>
+<p>Last siden på nytt for å få den gamle tilbake.</p>
+<p>Nå må du hjelpe meg å få Minecraft først i køen.</p>
+</li>
+<li>
+<p>Finn elementet som er den usynlige boksen rundt katten. Fjern det!</p>
+</li>
+<li>
+<p>Finn elementet som er den usynlige boksen rundt slangen. Fjern det!</p>
+</li>
+<li>
+<p>Gjør det samme for <code>Lego Mindstorms</code>, <code>Web</code>, <code>App Inventor</code> og <code>CodeStudio</code>.</p>
+<p><figure><img src="minecraft_yay.png" alt=""></figure></p>
+<p>Sånn skal det se ut!</p>
+</li>
+</ul>
+</section>
+<section class="protip" id="hva-har-vi-laert-2">
+<h2 class="protip" id="hva-har-vi-laert-2">Hva har vi lært?</h2>
+<p><strong>HTML</strong> inneholder koder som er usynlige når vi ser på en nettside!</p>
+<p>Disse kan være lenker (<code>&lt;a&gt;</code>) eller bokser (<code>&lt;div&gt;</code>).</p>
+<p>Vi kan fremdeles finne og se alle de usynlige kodene når vi bruker <code>Inspiser</code>!</p>
+</section>
+</section>
+<section class="activity" id="steg-3-skap">
+<h1 class="activity" id="steg-3-skap">Steg 3: Skap</h1>
+<p>Nå skal vi leke! La oss putte denne rakkeren</p>
+<p><figure><img src="schnauzer.jpg" alt=""></figure></p>
+<p>på <strong>alle kursene</strong>!</p>
+<p><figure><img src="schnauzere.png" alt=""></figure></p>
+<section class="check" id="aktiviteter-3">
+<h2 class="check" id="aktiviteter-3">Aktiviteter</h2>
+<ul>
+<li>
+<p>Finn et bilde du liker på internett. Hent bildeadressen ved høyreklikke på bildet:</p>
+<p><figure><img src="bildeadresse.png" alt=""></figure></p>
+</li>
+<li>
+<p>Endre alle bildene ved å redigere <code>src</code>-attributten til <code>&lt;img&gt;</code>-taggen:</p>
+<p><figure><img src="ny_og_bedre_src.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-masse-moro">
+<h1 class="activity" id="steg-4-masse-moro">Steg 4: Masse moro!</h1>
+<p>Gratulerer! Du er har kommet ett skritt på vei til å bli webutvikler!</p>
+<p><figure><img src="schnauzer_web_developer.jpg" alt=""></figure></p>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Web: Hvor er HTML? Jeg ser den ikke!&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/web/hvor_er_html" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
