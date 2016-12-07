@@ -64,7 +64,7 @@
   },
   indexjs: {
     externalResource: 'Ekstern ressurs',
-    externalCourse: 'Dette er et ekstern kurs.',
+    externalCourse: 'Dette er et eksternt kurs.',
     continueToCourse: 'Forsett til kurset.',
     externalLesson: 'Dette er en ekstern oppgave.',
     continueToLesson: 'Fortsett til oppgaven.'
