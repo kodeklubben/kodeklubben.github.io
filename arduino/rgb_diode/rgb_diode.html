@@ -1,0 +1,141 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>RGB-lysdiode | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">RGB-lysdiode</h1><div class="lesson-icons"><div class="level"><img title="Level 1" src="../../assets/img/level1.png"/><span data-i18n="html=layout.levelNames.1">Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/rgb_diode/rgb_diode.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span data-i18n="html=layout.teacherNotes" class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>I denne oppgaven skal vi se på å få en RGB-lysdiode til å lyse.</p>
+</section>
+<section class="activity" id="steg-1-finn-frem-utstyr">
+<h1 class="activity" id="steg-1-finn-frem-utstyr">Steg 1: Finn frem utstyr</h1>
+<section class="check" id="til-denne-oppgaven-trenger-du">
+<h2 class="check" id="til-denne-oppgaven-trenger-du">Til denne oppgaven trenger du</h2>
+<ul>
+<li>1 Arduino Uno</li>
+<li>1 breadboard</li>
+<li>1 motstand 1k Ohm (Fargekode: brun-svart-rød-gull)</li>
+<li>4 ledninger</li>
+<li>1 RGB-lysdiode</li>
+</ul>
+<p><figure><img src="utstyr.jpeg" alt="utstyr"></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-2-oppkobling">
+<h1 class="activity" id="steg-2-oppkobling">Steg 2: Oppkobling</h1>
+<p><figure><img src="kobling.png" alt="kobling"></figure></p>
+</section>
+<section class="activity" id="steg-3-programmering">
+<h1 class="activity" id="steg-3-programmering">Steg 3: Programmering</h1>
+<pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clear</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">auto</span> led = <span class="hljs-number">9</span>;
+  <span class="hljs-keyword">while</span> (led &lt;= <span class="hljs-number">11</span>) {
+    digitalWrite(led, LOW);
+    ++led;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">auto</span> led = <span class="hljs-number">9</span>;
+  <span class="hljs-keyword">while</span> (led &lt;= <span class="hljs-number">11</span>) {
+    pinMode(led, OUTPUT);
+    ++led;
+  }
+  clear();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">auto</span> led = <span class="hljs-number">9</span>;
+  <span class="hljs-keyword">while</span> (led &lt;= <span class="hljs-number">11</span>) {
+    clear();
+    digitalWrite(led, HIGH);
+    delay(<span class="hljs-number">1000</span>);
+    ++led;
+  }
+  digitalWrite(<span class="hljs-number">9</span>, HIGH);
+  digitalWrite(<span class="hljs-number">10</span>, HIGH);
+  digitalWrite(<span class="hljs-number">11</span>, HIGH);
+  delay(<span class="hljs-number">1000</span>);
+}
+</code></pre>
+<section class="protip" id="while-lokker">
+<h3 class="protip" id="while-lokker"><code>while</code>-løkker</h3>
+<p>I denne kodesnutten ser du at vi bruker <code>while</code>. Dette er en løkke, og brukes for å kjøre samme kode gjentatte ganger.</p>
+<p><code>while</code> fungerer ved at koden repeteres så lenge uttrykket i parenteser er sant. Du kan tenke på det som en gjentagende <code>if</code>-test.</p>
+<ul>
+<li>Som vi ser av koden starter <code>led</code> med verdien 9. Siden 9 er mindre en 11 er uttrykket sant, og vi kjører koden inne i
+løkka. På slutten av løkka skriver vi <code>++led</code>, som øker verdien av <code>led</code> til 10.</li>
+<li>Deretter sjekker vi igjen om <code>led &lt;= 11</code>. Siden 10 er mindre enn 11 går vi inn i løkka igjen, og kjører koden igjen. På slutten av løkka økes <code>led</code>
+på nytt, denne gangen til 11.</li>
+<li>Når vi så tester <code>led &lt;= 11</code> er <code>led</code> lik 11, som gjør at vi kjører koden enda en gang. På slutten av løkka øker vi nå <code>led</code> til 12.</li>
+<li>Når vi til slutt sjekker om <code>led &lt;= 11</code> er ikke lenger uttrykket sant, siden 12 er større enn 11. Derfor går vi ikke lenger inn i løkka, men fortsetter videre i funksjonen vi er i.</li>
+</ul>
+</section>
+</section>
+<section>
+<h1 id="for-lokker"><code>for</code>-løkker</h1>
+<p>I eksempelet over skriver vi veldig mange linjer kode for å lage en løkke. Først initialiserer vi en variabel, så har
+vi en test som sjekker om vi skal kjøre koden i løkka, så endrer vi en variabel for å holde styr på når løkka skal
+avslutte.</p>
+<p>Dette er noe som gjøres veldig ofte, så for å skape mindre kode, og kode som er enklere å lese, har
+vi <code>for</code>-løkker. <code>while</code>-løkkene vi har skrevet ovenfor kan enkelt skrives om til <code>for</code>-løkker slik:</p>
+<pre><code class="cpp"><span class="hljs-keyword">auto</span> led = <span class="hljs-number">9</span>;
+<span class="hljs-keyword">while</span> (led &lt;= <span class="hljs-number">11</span>) {
+  &lt;kode&gt;
+  ++led;
+}
+</code></pre>
+<pre><code class="cpp"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> led = <span class="hljs-number">9</span>; led &lt;= <span class="hljs-number">11</span>; ++led) {
+  &lt;kode&gt;
+}
+</code></pre>
+<section class="challenge" id="utfordring">
+<h3 class="challenge" id="utfordring">Utfordring</h3>
+<ul>
+<li>Klarer du å skrive om det første programmet i denne oppgaven til å bruke <code>for</code>-løkker istedenfor <code>while</code>-løkker?</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="nostede-lokker">
+<h1 class="activity" id="nostede-lokker">Nøstede løkker</h1>
+<p>Løkker kan brukes inni hverandre.</p>
+<pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> led = <span class="hljs-number">9</span>; led &lt;= <span class="hljs-number">11</span>; ++led) {
+    clear();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> verdi = <span class="hljs-number">0</span>; verdi &lt; <span class="hljs-number">256</span>; ++verdi) {
+      analogWrite(led, verdi);
+      delay(<span class="hljs-number">5</span>);
+    }
+  }
+}
+</code></pre>
+<p>Denne koden vil:</p>
+<ul>
+<li>Slå av alle fargene</li>
+<li>Gradvis øke lysintensitet på pinne 9 fra 0 til 255</li>
+<li>Slå av alle fargene</li>
+<li>Gradvis øke lysintensitet på pinne 10 fra 0 til 255</li>
+<li>Slå av alle fargene</li>
+<li>Gradvis øke lysintensitet på pinne 11 fra 0 til 255</li>
+</ul>
+<p>Skriv inn koden og se selv hva den gjør.</p>
+<section class="challenge" id="utfordringer">
+<h3 class="challenge" id="utfordringer">Utfordringer</h3>
+<ul>
+<li>Kan du få lysdioden til å først øke så senke fargeintensiteten før den bytter farge? (<code>++i</code> øker i med 1, <code>--i</code> minker i
+med 1)</li>
+<li>Kan du få lysdioden til å sykle gjennom alle fargekombinasjonene?
+(blå, grønn, blå + grønn, rød, rød + blå, rød + grønn, rød + blå + grønn)</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Arduino: RGB-lysdiode&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/arduino/rgb_diode" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Morten Minde Neergaard &amp; Martin Ertsås</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

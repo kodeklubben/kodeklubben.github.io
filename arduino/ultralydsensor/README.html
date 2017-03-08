@@ -1,0 +1,76 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lærerveiledning - Ultralydsensor | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Lærerveiledning - Ultralydsensor</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/ultralydsensor/README.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="lesson-link"><a href="ultralydsensor.html"><span class="icon"></span><span data-i18n="html=layout.lesson" class="text">Oppgave</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section>
+<h1 id="informasjon-til-veiledere">Informasjon til veiledere</h1>
+<section>
+<h2 id="laeringsmal">Læringsmål</h2>
+<p>Oppgaven «Ultralydsensor» introduserer flere konsepter:</p>
+<ul>
+<li>Bruk av ultralydsensor</li>
+<li>Seriellkonsoll</li>
+</ul>
+</section>
+</section>
+<section>
+<h1 id="koblingsskjema">Koblingsskjema</h1>
+<p>Elevene skal allerede ha løst en del oppgaver før de begynner på denne, men
+hittil alltid fått koblingsskjema utlevert. Denne oppgaven kan være en god
+anledning til å la dem prøve å koble opp komponentene uten skjema. Det kan dog
+være greit å ha et koblingsskjema eller tre i bakhånd for å dele ut:</p>
+<p><figure><img src="ultra.png" alt="kobling"></figure></p>
+</section>
+<section>
+<h1 id="hjelp-til-7-segment-utfordringen">Hjelp til 7-segment-utfordringen</h1>
+<p>I oppgaven <a href="../7_segment_display/7_segment_display.html">7-Segment Display</a> har
+vi laget koden som kan vise et tall mellom 0 og 9 på et display. Koden under
+vil bare skrive ut «Om du hadde hatt et display burde det vist tallet (tall)»
+om og om igjen på seriellkonsollet.</p>
+<pre><code class="cpp"><span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span> ekko = <span class="hljs-number">2</span>; <span class="hljs-comment">// Echo pin</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span> sender = <span class="hljs-number">3</span>; <span class="hljs-comment">// Trig pin</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span> lydens_hastighet = <span class="hljs-number">0.034029</span>; <span class="hljs-comment">// 340.29 m/s</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  Serial.begin(<span class="hljs-number">9600</span>);
+  pinMode(ekko, INPUT);
+  pinMode(sender, OUTPUT);
+
+  digitalWrite(sender, LOW);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  digitalWrite(sender, HIGH);
+  delayMicroseconds(<span class="hljs-number">5</span>);
+  digitalWrite(sender, LOW);
+
+  <span class="hljs-keyword">auto</span> tid = pulseIn(ekko);
+  <span class="hljs-keyword">auto</span> avstand = (tid * hastighet) / <span class="hljs-number">2</span>;
+
+  <span class="hljs-keyword">auto</span> syvsegment = <span class="hljs-built_in">map</span>(avstand, <span class="hljs-number">0</span>, <span class="hljs-number">127</span>, <span class="hljs-number">0</span>, <span class="hljs-number">9</span>);
+  Serial.print(<span class="hljs-string">"Om du hadde hatt et display burde det vist tallet "</span>);
+  Serial.println(constrain(syvsegment, <span class="hljs-number">0</span>, <span class="hljs-number">9</span>));
+
+  delay(<span class="hljs-number">100</span>);
+}
+</code></pre>
+<p><code>map</code> vil lineært skalere <code>avstand</code> fra verdiområdet 0-127 til en verdi fra 0
+til 9. En avstand på over 127 cm vil gi høyere verdier enn 9.</p>
+<p>Tallet 127 cm er litt tilfeldig valgt som et tall som kan gi mening for å
+oppdage gjenstander rundt pulten. Ultralydsensoren skal kunne «se» opp til 4
+meter fremfor seg, men da må de være store og flate (f.eks. en vegg).</p>
+<p>For formelen brukt i <code>map</code>, se referansen for hos
+<a href="https://www.arduino.cc/Reference/Map">arduino.cc</a>. Dette kan være relevant om
+man vil vinkle denne oppgaven inn mot matematikk.</p>
+<p><code>constrain</code> vil her gjøre at alle verdier høyere enn 9 vil bli satt til 9.</p>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Arduino: Lærerveiledning - Ultralydsensor&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/arduino/ultralydsensor" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

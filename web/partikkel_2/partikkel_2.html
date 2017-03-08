@@ -16,23 +16,17 @@ function relative(url) {
 
         var canvas, ctx;
         var partikkelListe = [];
-        
-        var drawInterval = setInterval(function(){draw()}, 30);
-
-
-        
-        
 
         window.onload = function(){
             canvas = document.getElementById("canvas");
             ctx = canvas.getContext("2d");
-            drawInterval;
+            setInterval(draw, 30);
         };
 
 
         //Tegner og skyter particle opp
         function draw(){
-            
+
             var particle = {
                 x: 250,
                 y: 250,
@@ -41,23 +35,23 @@ function relative(url) {
                 size: 10
 
             };
-            
+
             partikkelListe.push(particle);
-            
+
             ctx.clearRect(0,0,500,500);
 
-            
+
             for (var i=0; i<partikkelListe.length; i++) {
                 particle = partikkelListe[i];
-            
 
-                
+
+
                 ctx.fillStyle = 'red';
                 ctx.fillRect(particle.x, particle.y,particle.size,particle.size);;
-            
+
                 particle.x = particle.x + particle.xSpeed;
                 particle.y = particle.y + particle.ySpeed;
-            
+
                 particle.size = particle.size * 0.96;
             }
 
@@ -108,7 +102,7 @@ function relative(url) {
 </ul>
 <pre><code class="js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i&lt;listeNavn.length; i++){
     <span class="hljs-comment">//kode</span>
-    element = listeNavn[i] <span class="hljs-comment">// element blir nå det i-te elementet i listen, "i" blir her et tall fra 0 til lengden av listen. </span>
+    element = listeNavn[i] <span class="hljs-comment">// element blir nå det i-te elementet i listen, "i" blir her et tall fra 0 til lengden av listen.</span>
 }
 </code></pre>
 </section>
