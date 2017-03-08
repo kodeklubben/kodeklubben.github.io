@@ -1,0 +1,279 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Input fra brukeren | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Elm</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Input fra brukeren</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Elm</span></a><div class="pdf"><a href="/elm/4_input/4_input.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Input-felter lar brukere skrive inn tekst, tall, datoer og så videre i nettsiden vår. Informasjonen vi får fra brukerne kan vi endre, skrive ut, og kombinere med annen informasjon.</p>
+</section>
+<section class="activity" id="hente-tekst-fra-brukeren">
+<h1 class="activity" id="hente-tekst-fra-brukeren">Hente tekst fra brukeren</h1>
+<section class="check" id="moduler-og-program">
+<h2 class="check" id="moduler-og-program">Moduler og program</h2>
+<ul>
+<li>Øverst i koden vår må vi si hvilke <em>moduler</em> vi skal bruke</li>
+</ul>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput, onClick)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+</code></pre>
+</section>
+<section class="check" id="modell-meldinger-og-oppdatering">
+<h2 class="check" id="modell-meldinger-og-oppdatering">Modell, meldinger og oppdatering</h2>
+<ul>
+<li>Vi oppretter programmet vårt med en <em>modell</em> som inneholder data (<code>model</code>), et <em>brukergrensesnitt</em> hvor vi viser frem data (<code>view</code>) og en funksjon for <em>oppdatering</em> av data (<code>update</code>). Vi kommer tilbake til hvordan vi oppretter disse, skriv inn følgende i koden:</li>
+</ul>
+<pre><code class="elm"><span class="hljs-title">main</span> =
+  beginnerProgram { model = <span class="hljs-string">""</span>, view = view, update = update }
+</code></pre>
+<ul>
+<li>Så trenger vi å si hva slags <em>meldinger</em> (<code>Msg</code>) vi skal sende i programmet. Til å begynne med har vi bare én meldingstype, og det er meldingen som sendes når brukeren endrer teksten i input-feltet, her kaller vi den for <code>Endre</code>.</li>
+</ul>
+<pre><code class="elm"><span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span></span>
+</code></pre>
+<ul>
+<li>Etter det må vi skrive hva som skal skje når teksten oppdateres med en <em>update</em>-funksjon:</li>
+</ul>
+<pre><code class="elm"><span class="hljs-title">update</span> msg model =
+  <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
+    <span class="hljs-type">Endre</span> tekst -&gt;
+      tekst
+</code></pre>
+<p>Nå hentes bare teksten inn, og sendes rett ut igjen. Det er kanskje litt rart, når funksjonen vår heter <code>Endre</code>? La oss endre teksten!</p>
+<p>For å endre teksten, kan vi bruke innebygde funksjoner i <code>String</code>-modulen.</p>
+</section>
+<section class="check" id="skriv-ut-teksten">
+<h2 class="check" id="skriv-ut-teksten">Skriv ut teksten</h2>
+<ul>
+<li>Til slutt må vi ha et sted som viser teksten, da bruker vi et <em>view</em>:</li>
+</ul>
+<pre><code class="elm"><span class="hljs-title">view</span> model =
+  div []
+    [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
+    , div [ ] [ text model ]
+    ]
+</code></pre>
+<p><code>input [ placeholder &quot;Baklengstekst&quot;, onInput Endre ] []</code> er det som blir til et input-felt. Teksten etter <code>placeholder</code> sier hva som skal stå i feltet før brukeren skriver inn noe. <code>onInput</code> sier hva som skal skje når brukeren skriver inn tekst. I vårt tilfelle sender vi en <code>Endre</code>-melding som hentes inn i <code>update</code>-funksjonen. Når brukeren skriver inn &quot;Teodor&quot;, sendes en melding av typen <code>Endre &quot;Teodor&quot;</code> inn i <code>update</code>-funksjonen.</p>
+<p>Setter vi alle delene sammen, vil koden vår se slik ut:</p>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+
+
+<span class="hljs-title">main</span> =
+  beginnerProgram { model = <span class="hljs-string">""</span>, view = view, update = update }
+
+
+<span class="hljs-comment">-- UPDATE</span>
+
+<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span></span>
+
+<span class="hljs-title">update</span> msg model =
+  <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
+    <span class="hljs-type">Endre</span> tekst -&gt;
+      <span class="hljs-type">String</span>.reverse tekst
+
+
+<span class="hljs-comment">-- VIEW</span>
+
+<span class="hljs-title">view</span> model =
+  div []
+    [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
+    , div [ ] [ text model ]
+    ]
+</code></pre>
+<section class="protip" id="kommentarer">
+<h3 class="protip" id="kommentarer">Kommentarer</h3>
+<p>I koden over har vi skrevet <code>-- UPDATE</code> og <code>-- VIEW</code>. Det har vi gjort for å gjøre koden mer strukturert og lesbar. Alle linjer som starter med to bindestreker (--) ignoreres i Elm. Dette er hva vi kaller kommentarer! Kommentarer er ment for menneskene som leser koden, enten deg selv eller de du samarbeider med.</p>
+</section>
+</section>
+</section>
+<section class="activity" id="lag-en-setning">
+<h1 class="activity" id="lag-en-setning">Lag en setning</h1>
+<section class="check" id="ny-modell">
+<h2 class="check" id="ny-modell">Ny modell</h2>
+<p>Nå skal vi lagre en setning i tillegg til teksten som brukeren skriver inn. Da må vi endre <em>modellen</em> vår. Den nye modellen skal se slik ut:</p>
+<pre><code class="elm">
+<span class="hljs-comment">-- MODEL</span>
+<span class="hljs-title">model</span> =
+  {
+    tekst = <span class="hljs-string">""</span>
+  , setning = <span class="hljs-string">""</span>
+  }
+
+</code></pre>
+<p>Her kan vi se at modellen inneholder to tekster, som er tomme når man åpner nettsiden.</p>
+<p>Oppdater også programmet slik at vi bruker den nye modellen:</p>
+<pre><code class="elm"><span class="hljs-title">main</span> =
+  beginnerProgram { model = model, view = view, update = update }
+</code></pre>
+</section>
+<section class="check" id="oppdater">
+<h2 class="check" id="oppdater">Oppdater</h2>
+<p>Nå skal vi gjøre det mulig å lagre baklengstekstene i en setning med mellomrom mellom hvert ord. Da må vi endre <code>update</code> slik at den kan ta inn tekst og legge den til i <code>setning</code> i modellen vår:</p>
+<pre><code class="elm"><span class="hljs-comment">-- UPDATE</span>
+
+<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span> | <span class="hljs-type">LeggTil</span> <span class="hljs-type">String</span></span>
+
+<span class="hljs-title">update</span> msg model =
+  <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
+    <span class="hljs-type">Endre</span> nyTekst -&gt;
+      { model | tekst = <span class="hljs-type">String</span>.reverse nyTekst }
+    <span class="hljs-type">LeggTil</span> nyTekst -&gt;
+      { model | setning = model.setning ++ <span class="hljs-string">" "</span> ++ nyTekst  }
+</code></pre>
+<p><code>Msg</code> forteller oss hva slags input-meldinger vi kan ta imot fra nettsiden vår. Tidligere hadde vi bare <code>Endre</code>-funksjonen for når noen skriver inn tekst, nå har vi også <code>LeggTil</code>-funksjonen som gjør det mulig å legge til teksten i en setning.</p>
+<p>Vi må også oppdatere <code>update</code> med hva som skal skje når den får inn melding av typen <code>LeggTil</code>. Om vi ikke gjør det, vil Elm gi beskjed:
+<img src="feil_case.png" alt=""></p>
+</section>
+<section class="check" id="ny-knapp">
+<h2 class="check" id="ny-knapp">Ny knapp</h2>
+<p>Nå mangler vi bare en knapp for å legge til tekst i setningen:</p>
+<pre><code class="elm"><span class="hljs-comment">-- VIEW</span>
+
+<span class="hljs-title">view</span> model =
+  div []
+    [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
+    , button [ onClick (<span class="hljs-type">LeggTil</span> model.tekst) ] [ text <span class="hljs-string">"Legg til"</span> ]
+    , div [ ] [ text model.tekst ]
+    , div [ ] [ text model.setning ]
+    ]
+</code></pre>
+<p><code>onClick</code> bestemmer hva som skal skje når brukeren trykker på knappen. Her <em>kaller</em> vi funksjonen <code>LeggTil</code> og sender med teksten som ligger i modellen vi lagde tidligere.</p>
+<p>Programmet vårt ser slik ut med den nye knappen:</p>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput, onClick)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+
+
+<span class="hljs-title">main</span> =
+  beginnerProgram { model = model, view = view, update = update }
+
+<span class="hljs-comment">-- MODEL</span>
+<span class="hljs-title">model</span> =
+  {
+    tekst = <span class="hljs-string">""</span>
+  , setning = <span class="hljs-string">""</span>
+  }
+
+<span class="hljs-comment">-- UPDATE</span>
+
+<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span> | <span class="hljs-type">LeggTil</span> <span class="hljs-type">String</span></span>
+
+<span class="hljs-title">update</span> msg model =
+  <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
+    <span class="hljs-type">Endre</span> nyTekst -&gt;
+      { model | tekst = <span class="hljs-type">String</span>.reverse nyTekst }
+    <span class="hljs-type">LeggTil</span> nyTekst -&gt;
+      { model | setning = model.setning ++ <span class="hljs-string">" "</span> ++ nyTekst  }
+
+
+<span class="hljs-comment">-- VIEW</span>
+
+<span class="hljs-title">view</span> model =
+  div []
+    [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
+    , button [ onClick (<span class="hljs-type">LeggTil</span> model.tekst) ] [ text <span class="hljs-string">"Legg til"</span> ]
+    , div [ ] [ text model.tekst ]
+    , div [ ] [ text model.setning ]
+    ]
+</code></pre>
+</section>
+<section class="try" id="ting-du-kan-prove">
+<h2 class="try" id="ting-du-kan-prove">Ting du kan prøve</h2>
+<ul>
+<li>Utvid nettsiden med en knapp som snur alle ordene i setningen tilbake til rett vei</li>
+<li>Tekst kan manipuleres med mange forskjellige innebygde funksjoner som <code>String.repeat</code> (gjenta en tekst), <code>String.toUpper</code> (gjør alle BOKSTAVENE TIL STORE BOKSTAVER)</li>
+<li>Se full liste av hva man kan gjøre med tekst <a href="http://package.elm-lang.org/packages/elm-lang/core/5.1.1/String">i dokumentasjonen (på engelsk)</a></li>
+</ul>
+</section>
+</section>
+<section class="activity" id="fargevelger">
+<h1 class="activity" id="fargevelger">Fargevelger</h1>
+<p>Det finnes mange forskjellige type input-felter. Til nå har vi sett på tekst-input, men vi har også muligheten til å bare ta inn tall. I denne oppgaven skal vi lage en fargevelger. Farger på nettsider defineres som oftest i grader av rød, grønn og blå. Hver farge har en verdi fra 0 til 255.</p>
+<p>Vi skal lagre tre verdier i modellen vår, rød, grønn og blå i feltene <code>rod</code>, <code>gronn</code> og <code>blaa</code>.</p>
+<ul>
+<li>Legg til det første feltet i modellen vår, <code>rod</code>:</li>
+</ul>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+
+<span class="hljs-title">main</span> =
+  beginnerProgram { model = model, view = view, update = update }
+
+<span class="hljs-comment">-- MODEL</span>
+<span class="hljs-title">model</span> =
+  {
+    rod = <span class="hljs-string">""</span>
+  }
+</code></pre>
+<ul>
+<li>Lagre rødstyrken fra en input, men begrens rekkevidden fra 0 til 255 med <code>Html.Attributes.min</code> og <code>Html.Attributes.max</code>:</li>
+</ul>
+<pre><code class="elm"><span class="hljs-title">input</span> [ type_ <span class="hljs-string">"number"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min <span class="hljs-string">"0"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max <span class="hljs-string">"255"</span> ] []
+</code></pre>
+<p>Vi trenger også å håndtere bruker-input, slik som i forrige oppgave</p>
+<ul>
+<li>Legg til koden som mangler:</li>
+</ul>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+
+<span class="hljs-title">main</span> =
+  beginnerProgram { model = model, view = view, update = update }
+
+<span class="hljs-comment">-- MODEL</span>
+<span class="hljs-title">model</span> =
+  {
+    rod = <span class="hljs-string">""</span>
+  }
+
+<span class="hljs-comment">-- UPDATE</span>
+
+<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">EndreRod</span> <span class="hljs-type">String</span></span>
+
+<span class="hljs-title">update</span> msg model =
+  <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
+
+
+<span class="hljs-comment">-- VIEW</span>
+
+<span class="hljs-title">view</span> model =
+  div [ style [(<span class="hljs-string">"height"</span>, <span class="hljs-string">"100%"</span>), (<span class="hljs-string">"background"</span>, <span class="hljs-string">"rgb(255, 255, 255)"</span>)] ]
+    [ input [ type_ <span class="hljs-string">"number"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min <span class="hljs-string">"0"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max <span class="hljs-string">"255"</span> ] []
+    , div [] [ text model.rod ]
+    ]
+</code></pre>
+<ul>
+<li>Legg til input-felter for de to andre fargene, og meldingene <code>EndreGronn</code> og <code>EndreBlaa</code></li>
+<li>Oppdater <code>rgb(255, 255, 255)</code> slik at den bruker verdiene for rød, grønn og blå fra modellen vår (hint: slå sammen tekst)</li>
+<li>Bytt ut number-input med <code>range</code>, og se hva som skjer!</li>
+</ul>
+<section class="check" id="innebygd-fargevelger">
+<h2 class="check" id="innebygd-fargevelger">Innebygd fargevelger</h2>
+<p><figure><img src="colors.gif" alt=""></figure></p>
+<p>Chrome, Edge, Firefox og Opera er nettlesere som kommer med innebygd fargevelger. Fargevelger er også en type input-felt.</p>
+<ul>
+<li>Lag en ny type input på nettsiden, som bruker fargevelger-type istedenfor <code>range</code> (hint: på engelsk er farge <code>color</code>)</li>
+<li>Bytt ut verdien for <code>background</code> med fargen fra fargevelgeren (husk å legge til fargen i modellen og i <code>update</code>)</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Elm: Input fra brukeren&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/elm/4_input" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Alexander Perry</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
