@@ -1,0 +1,282 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Lær av et annet spill! | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Elm</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Lær av et annet spill!</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Elm</span></a><div class="pdf"><a href="/elm/6_lare_andres_spill/6_lare_andres_spill.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Så langt har dere lært å <em>skrive egen kode</em>. Å lære å skrive kode krever mye
+trening for å bli god.</p>
+<p>Det er også viktig å kunne <em>lese</em> kode. Da lurer vi på ting som</p>
+<ul>
+<li>Hvor finner jeg andres kode?</li>
+<li>Hvordan kjører jeg andres kode?</li>
+<li>Hvor begynner jeg når jeg skal finne ut hvordan ting henger sammen?</li>
+<li>Hva skjer om jeg endrer på <em>dette</em>?</li>
+</ul>
+<p>Til dette bruker vi spillet Elm Joust, skrevet av Stefan Kreitmayer fra
+Tyskland.</p>
+</section>
+<section class="activity" id="steg-1-hvordan-fungerer-spillet">
+<h1 class="activity" id="steg-1-hvordan-fungerer-spillet">Steg 1: Hvordan fungerer spillet?</h1>
+<p>Før vi reprogrammerer spillet, skal vi ha det litt gøy, og finne ut hvordan det
+henger sammen.</p>
+<section class="check" id="spill">
+<h2 class="check" id="spill">Spill!</h2>
+<ul>
+<li>Gå til <a href="http://kreitmayer.com/elm-joust/">spillsiden til Elm Joust</a></li>
+<li>Finn en partner å prøve spillet sammen med. Det er OK å være tre personer og
+bytte på hvilke to som spiller.</li>
+<li>Hvor mange serier må man vinne for å vinne et spill?</li>
+</ul>
+<p>Har du spilt litt? Ti minutter er passe tid.</p>
+</section>
+<section class="check" id="hvordan-tegnes-ballen">
+<h2 class="check" id="hvordan-tegnes-ballen">Hvordan tegnes ballen?</h2>
+<p>Nå skal vi se på hvordan spillet er bygget opp.</p>
+<ul>
+<li>Start spillet</li>
+<li>Inspiser den ene ballen</li>
+</ul>
+</section>
+<section class="protip" id="hvordan-inspisere">
+<h2 class="protip" id="hvordan-inspisere">Hvordan inspisere?</h2>
+<p>Oppgaven &quot;Hvor er HTML? Jeg ser den ikke!&quot; under Web-kategorien går gjennom
+hvordan vi kan inspisere elementer på en nettside. Ta en titt her hvis du
+trenger!</p>
+</section>
+<section class="check" id="hvordan-tegnes-det-andre">
+<h2 class="check" id="hvordan-tegnes-det-andre">Hvordan tegnes det andre?</h2>
+<p>Først skal vi se på selve spillet.</p>
+<ul>
+<li>Hva slags SVG-element er brukt til å tegne ballene?</li>
+<li>Hva slags SVG-element er brukt til å tegne plattformen?</li>
+<li>Hva slags SVG-element er brukt til å tegne stillingen?</li>
+</ul>
+<p>Finn <code>svg</code>-taggen.</p>
+<ul>
+<li>Hva er <code>width</code> og <code>height</code>?</li>
+</ul>
+<p>Gjør vinduet ditt større eller mindre.</p>
+<ul>
+<li>Hva er nå <code>width</code> og <code>height</code>?</li>
+</ul>
+</section>
+<section class="protip" id="svg-i-elm-og-i-nettleseren">
+<h2 class="protip" id="svg-i-elm-og-i-nettleseren">Svg i Elm og i nettleseren</h2>
+<p>Som i Html ser Svg forskjellig ut i Elm og i Nettleseren.</p>
+<p>Slik ser det ut i <strong>Elm</strong>:</p>
+<pre><code class="elm"><span class="hljs-title">circle</span>
+  [ cx <span class="hljs-string">"240"</span>
+  , cy <span class="hljs-string">"361.6"</span>
+  , r <span class="hljs-string">"28.799999999999997"</span>
+  , fill <span class="hljs-string">"rgba(255,255,255,.5)"</span>
+  ]
+  [ ]
+</code></pre>
+<p>Slik ser det ut i <strong>Nettleseren</strong>:</p>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">circle</span>
+  <span class="hljs-attribute">cx</span>=<span class="hljs-value">"240"</span>
+  <span class="hljs-attribute">cy</span>=<span class="hljs-value">"361.6"</span>
+  <span class="hljs-attribute">r</span>=<span class="hljs-value">"28.799999999999997"</span>
+  <span class="hljs-attribute">fill</span>=<span class="hljs-value">"rgba(255,255,255,.5)"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">circle</span>&gt;</span>
+</code></pre>
+</section>
+</section>
+<section class="activity" id="steg-2-last-ned-og-kjor-spillet-lokalt">
+<h1 class="activity" id="steg-2-last-ned-og-kjor-spillet-lokalt">Steg 2: Last ned og kjør spillet lokalt</h1>
+<p>Elm Joust er et større Elm-program enn programmene vi har skrevet til nå. Når vi
+skriver store programmer, deler vi dem ofte i flere filer for å holde orden. Til
+programmer skrevet i flere filer, holder ikke Try Elm, og vi må kjøre programmet
+på egen PC.</p>
+<section class="check" id="last-ned-kildekoden">
+<h2 class="check" id="last-ned-kildekoden">Last ned kildekoden</h2>
+<ul>
+<li>Gå til <a href="https://github.com/teodorlu/elm-joust">https://github.com/teodorlu/elm-joust</a>, og trykk på den grønne knappen
+<strong>Clone or download</strong>.</li>
+</ul>
+<p>Du kan bruke <code>git</code> i stedet hvis du vil.</p>
+</section>
+<section class="check" id="pakk-ut-kildekoden">
+<h2 class="check" id="pakk-ut-kildekoden">Pakk ut kildekoden</h2>
+<ul>
+<li>Høyreklikk på zip-filen du lastet ned og velg <strong>Pakk ut...</strong> eller liknende.</li>
+</ul>
+</section>
+<section class="check" id="apne-kommandovindu-i-mappen-der-kildekoden-ligger">
+<h2 class="check" id="apne-kommandovindu-i-mappen-der-kildekoden-ligger">Åpne kommandovindu i mappen der kildekoden ligger</h2>
+<ul>
+<li>
+<p>Gå til mappen der du pakket ut filene.</p>
+</li>
+<li>
+<p>Åpne et kommandovindu her.</p>
+<p>På <strong>Windows</strong> kan du holde inne Shift (pil opp for å lage store bokstaver),
+<strong>høyreklikke</strong> og velge <strong>Åpne kommandovindu her</strong> eller tilsvarende.</p>
+<p>På <strong>Linux</strong> kan ofte du <strong>høyreklikke</strong> og velge <strong>Open in Terminal</strong>.</p>
+</li>
+</ul>
+</section>
+<section class="check" id="bygg-programmet">
+<h2 class="check" id="bygg-programmet">Bygg programmet</h2>
+<p>For små Elm-programmer bruker vi Elm Reactor for å bygge programmet mens vi
+utvikler. Elm Joust er et større program, og vi må bruke et <em>byggscript</em>. Vi
+bruker et <em>byggscript</em> til å ta Elm-kode og lage en nettside av den.</p>
+<ul>
+<li>
+<p>Kjør byggscriptet ved å skrive <code>build.bat</code> eller <code>./build.sh</code> i
+kommandovinduet.</p>
+<p>På <strong>Windows</strong> heter byggscriptet <code>build.bat</code>.</p>
+<p>På <strong>Mac</strong> og <strong>Linux</strong> heter byggscriptet <code>build.sh</code>.</p>
+</li>
+</ul>
+</section>
+<section class="check" id="apne-spillet-i-nettleseren">
+<h2 class="check" id="apne-spillet-i-nettleseren">Åpne spillet i nettleseren</h2>
+<p>Nå kan vi kjøre spillet.</p>
+<ul>
+<li>Åpne <code>index.html</code> i nettleseren.</li>
+</ul>
+<p>Prøv spillet igjen!</p>
+<ul>
+<li>Fungerer det likt som i nettleseren?</li>
+</ul>
+</section>
+<section class="protip" id="om-a-bygge-programmer-fra-kildekode">
+<h2 class="protip" id="om-a-bygge-programmer-fra-kildekode">Om å bygge programmer fra kildekode</h2>
+<p>Når vi utvikler programmer lager vi først kildekoden. Med kildekoden kan vi
+bygge og teste programmet.</p>
+<p>Vi tester programmet vårt for å se at det fungerer før vi sender det til andre.
+Når vi bygger Elm Joust direkte fra kildekoden, får vi den <em>aller siste</em>
+versjonen av programmet, som ikke alltid er grundig testet.</p>
+<p>Å bygge programmer vi skal bruke fra kildekode er lærerikt, men kan være
+vanskelig.</p>
+</section>
+</section>
+<section class="activity" id="steg-3-endre-reglene">
+<h1 class="activity" id="steg-3-endre-reglene">Steg 3: Endre reglene</h1>
+<p><figure><img src="neo.jpg" alt=""></figure></p>
+<p><em>Neo liker også å endre reglene</em></p>
+<section class="check" id="kontroller-tyngdekraften">
+<h2 class="check" id="kontroller-tyngdekraften">Kontroller tyngdekraften</h2>
+<p>Et søk i kildekoden viser at funksjonen <code>gravity</code> er definert i <code>src/Update.elm</code>
+på linje 202.</p>
+<ul>
+<li>Senk tyngdekraften. Hva gjør det med spillet? Liker du det?</li>
+<li>Øk tyngdekraften. Bedre? Mer kjedelig?</li>
+</ul>
+</section>
+<section class="protip" id="fysikk">
+<h2 class="protip" id="fysikk">Fysikk</h2>
+<p>Reglene for hvordan objekter beveger seg heter <strong>Fysikk</strong>. Når du justerer
+tyngdekraften i spillet, endrer du på <em>fysikken</em> i spillet.</p>
+<p>Andre fysikkregler:</p>
+<ul>
+<li>Når ballene treffer hverandre, spretter de tilbake i hver sin retning</li>
+<li>Du faller nedover</li>
+<li>Du kan kun hoppe når du står på bakken</li>
+</ul>
+<p>Noen ting blir mer morsomme når vi ikke følger fysikken! I dette spillet kan vi
+styre ballen <em>når den er i lufta</em>. Dette er svært vanskelig å få til, og fjerner
+vi luften (&quot;om vi er i <em>vakum</em>&quot;), er det helt umulig!</p>
+</section>
+<section class="check" id="endre-fargene">
+<h2 class="check" id="endre-fargene">Endre fargene</h2>
+<p>Spillet slik det er nå er meget ... grått.</p>
+<!-- TODO image grey -->
+<p>Funksjonen <code>renderPlayer</code> er definert i <code>src/View.elm</code>, på linje 137. Ser du
+kallet til Svg.circle?</p>
+<ul>
+<li>
+<p>Bytt ut fyllfargen til sirkelen med fargerik farge!</p>
+<p>&quot;#FF69B4&quot; gir en skarp rosa. Du vil kanskje ha noe annet?</p>
+</li>
+</ul>
+<p>Men! Nå blir begge spillerene våre like rosa (eller en annen farge?). Dette
+fikser vi ved å legge til en ny parameter på funksjonen vår.</p>
+<p>Farger representeres som <em>Tekst</em> i Elm, på engelsk <strong>String</strong>.</p>
+<ul>
+<li>
+<p>Endre funksjonsdeklarasjonen til</p>
+<pre><code class="elm"><span class="hljs-title">renderPlayer</span> : (<span class="hljs-type">Int</span>,<span class="hljs-type">Int</span>) -&gt; <span class="hljs-type">Player</span> -&gt; <span class="hljs-type">String</span> -&gt; <span class="hljs-type">Svg</span> <span class="hljs-type">Msg</span>
+<span class="hljs-title">renderPlayer</span> (w,h) {position} color =
+</code></pre>
+</li>
+<li>
+<p>Kjør byggscriptet. Hvorfor kompilerer ikke programmet?</p>
+<p>Hvor brukes funksjonen <code>renderPlayer</code>? Må vi fikse noe her?</p>
+<p>Når jeg søker etter <code>renderPlayer</code>, får jeg flere match: <em>linje 79</em>, <em>linje
+80</em>, <em>linje 99</em>, <em>linje 136</em> og <em>linje 137</em>.</p>
+</li>
+<li>
+<p>Når du får koden til å kjøre, er fremdeles spillerene grå? Må vi endre på
+funksjonen <code>renderPlayer</code> også? Hvor settes fargen til sirkelen?</p>
+</li>
+</ul>
+<!-- TODO image colorized :D -->
+</section>
+<section class="check" id="juster-tiden">
+<h2 class="check" id="juster-tiden">Juster tiden</h2>
+<p>Et søk etter &quot;time&quot; finner funksjonen <code>steerAndGravity</code> i <code>src/Update.elm</code>.
+Dette er signaturen til <code>steerAndGravity</code>:</p>
+<pre><code class="elm"><span class="hljs-title">steerAndGravity</span> : <span class="hljs-type">Time</span> -&gt; <span class="hljs-type">Ui</span> -&gt; <span class="hljs-type">Player</span> -&gt; <span class="hljs-type">Player</span>
+<span class="hljs-title">steerAndGravity</span> delta {pressedKeys} ({velocity} <span class="hljs-keyword">as</span> player) =
+</code></pre>
+<p>Ah! <code>delta</code>, av type <code>Time</code>! Jeg gjetter at denne er tiden mellom hver gang
+spillet oppdateres.</p>
+<p>Hvor kaller vi <code>steerAndGravity</code>? Jeg fant disse to linjene:</p>
+<pre><code class="elm">          player1 = scene.player1 |&gt; steerAndGravity delta ui
+          player2 = scene.player2 |&gt; steerAndGravity delta ui
+</code></pre>
+<ul>
+<li>
+<p>Skru opp farten på spillet -- få tiden til å gå fortere!</p>
+<p>Hint: juster <code>delta</code>.</p>
+</li>
+<li>
+<p>Sett forskjellig fart på de to spillerene. Er det fordel å ha rask tid eller
+sakte tid?</p>
+</li>
+</ul>
+</section>
+<section class="protip" id="soke-i-kildekode">
+<h2 class="protip" id="soke-i-kildekode">Søke i kildekode</h2>
+<p>Trykk <code>Control + F</code> i editoren din. Kommer det opp et søkefelt? Prøv å skriv i
+det. Matcher det ordet du skriver i kildekoden?</p>
+<p>Søk er veldig nyttig for å navigere rundt i kode som andre har skrevet. I din
+egen kode kan du ofte huske litt av hvordan du har gjort ting. I andres kode er
+det vanskelig å vite hvor ting ligger!</p>
+</section>
+<section class="check" id="sprettball">
+<h2 class="check" id="sprettball">Sprettball!</h2>
+<p>Når ballene treffer hverandre, må vi regne ut ny fart for begge ballene. Et søk
+etter &quot;collision&quot; finner <code>handleCollisions</code> i <code>Update.elm</code>.</p>
+<ul>
+<li>Kan du få til ordentlig sprett i kollisjonene?</li>
+</ul>
+<p>Hmm, spillet ville vært litt urettferdig om en ball var tung som en elefant, og
+den andre kun var en liten tennisball.</p>
+<ul>
+<li>Kan du gjøre så spiller én er tung, og spiller to lett?</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-gjett-hvilken-regel">
+<h1 class="activity" id="steg-4-gjett-hvilken-regel">Steg 4: gjett hvilken regel!</h1>
+<p>Nå har du laget din helt egne versjon av Elm Joust.</p>
+<ul>
+<li>Finn en partner som du kan spille spillet ditt med.</li>
+<li>Klarer partneren din å gjette hvilke regler du har endret?</li>
+</ul>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Elm: Lær av et annet spill!&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/elm/6_lare_andres_spill" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Teodor Heggelund</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
