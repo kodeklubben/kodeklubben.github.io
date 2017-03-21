@@ -1,0 +1,357 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Fraktaler og datastrukturer | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative(url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span data-i18n="html=layout.home">Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Elm</a></div><a data-i18n="title=layout.takeTour" title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" data-i18n="placeholder=layout.search" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1 data-i18n="html=layout.searchResults">Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Fraktaler og datastrukturer</h1><div class="lesson-icons"><div class="level"><img title="Level 3" src="../../assets/img/level3.png"/><span data-i18n="html=layout.levelNames.3">Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Elm</span></a><div class="pdf"><a href="/elm/10_fraktaler/10_fraktaler.pdf" data-i18n="title=layout.downloadPdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>En fraktal er en geometri med et mønster som gjentar seg selv inne i seg selv.
+Høres ikke det rart ut? I denne oppgaven skal vi lage våre egne.</p>
+<p>Her er Sierpinski-teppet, som er en fraktal:</p>
+<p><figure><img src="sierpinski.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-hvordan-fungerer-sierpinski">
+<h1 class="activity" id="steg-1-hvordan-fungerer-sierpinski">Steg 1: Hvordan fungerer Sierpinski?</h1>
+<p>Fraktaler følger tre regler:</p>
+<ul>
+<li><strong>Startregelen</strong> gir hvor vi skal starte. Med en firkant? En trekant? En
+strek?</li>
+<li><strong>Tegneregelen</strong> gir hvordan vi skal tegne på nivået vi er. Fargelegge en bit
+av firkanten? Splitte en strek i to?</li>
+<li><strong>Rekursjonsregelen</strong> deler opp figuren vår i mindre biter, som vi kjører på
+nytt i. Lager firkanten vi tegnet nye firkanter? Lager streken vi tegnet nye
+streker? Gjenta for hver strek.</li>
+</ul>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<p>Gå til <a href="https://en.wikipedia.org/wiki/Sierpinski_carpet">Wikipedia-artikkelen</a>
+til Sierpinski-teppet. Se på animasjonen.</p>
+<ul>
+<li>Hvordan er teppet før det begynner å bli fargelagt? Dette er <strong>startregelen</strong>.</li>
+<li>Hva tegner vi i hver firkant? Dette er <strong>tegneregelen</strong>.</li>
+<li>Hvordan gjentas regelen? Dette er <strong>rekursjonsregelen</strong>.</li>
+</ul>
+<p>Se på figurene under avsnittet <strong>Process</strong>. Ser du at noe gjentar seg?</p>
+</section>
+</section>
+<section class="activity" id="steg-2-tegne-kvadrater-med-svg">
+<h1 class="activity" id="steg-2-tegne-kvadrater-med-svg">Steg 2: Tegne kvadrater med SVG</h1>
+<p>Nå skal vi begynne å tegne kvadratene teppet:</p>
+<p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect><rect x="3" y="3" width="3" height="3" fill="green"></rect><rect x="12" y="3" width="3" height="3" fill="green"></rect><rect x="21" y="3" width="3" height="3" fill="green"></rect><rect x="3" y="12" width="3" height="3" fill="green"></rect><rect x="21" y="12" width="3" height="3" fill="green"></rect><rect x="3" y="21" width="3" height="3" fill="green"></rect><rect x="12" y="21" width="3" height="3" fill="green"></rect><rect x="21" y="21" width="3" height="3" fill="green"></rect></svg></p>
+<p>Ett kvadrat kan vi tegne slik:</p>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, rect)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, fill, x, y, width, height)</span></span>
+
+
+<span class="hljs-title">main</span> =
+    svg
+      [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 27 27"</span> ]
+      [ rect [ x <span class="hljs-string">"0"</span>, y <span class="hljs-string">"0"</span>, width <span class="hljs-string">"27"</span>, height <span class="hljs-string">"27"</span>, fill <span class="hljs-string">"blue"</span> ] [ ]
+      , rect [ x <span class="hljs-string">"9"</span>, y <span class="hljs-string">"9"</span>, width <span class="hljs-string">"9"</span>, height <span class="hljs-string">"9"</span>, fill <span class="hljs-string">"green"</span> ] [ ]
+      ]
+</code></pre>
+<p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect></svg></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>Hvordan kan vi da tegne mange kvadrater?</li>
+<li>Hva bestemmer posisjonen til tallene?</li>
+<li>Hvor mange store grønne kvadrater har du tegnet?</li>
+<li>Hvor mange små grønne kvadrater har du tegnet?</li>
+<li><strong>Utvid koden til å tegne mange kvadrater</strong>.</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-datastrukturer">
+<h1 class="activity" id="steg-3-datastrukturer">Steg 3: Datastrukturer</h1>
+<p>Kan du telle hvor mange kvadrater det finnes i Sierpinski-teppet? Ikke jeg
+heller. Hmm, gidder vi da å skrive de maaaange linjene SVG for hånd? Nei, vi
+programmerer!</p>
+<p>Vi skal nå representere kvadrater med Records i Elm. Records lar oss lage <em>våre
+egne typer</em>. Vi kommer til å lage en type for punkter og en type for kvadrater.</p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<p>Nå skal du få prøve å lese Elm sine egne læreressurser.</p>
+<ul>
+<li>Gå til <a href="http://elm-lang.org/docs/records">Elm-dokumentasjonen for records</a>.
+Finner du eksempelet for et punkt?</li>
+</ul>
+<p>Vi legger til en liten snutt i programmet vårt:</p>
+<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(div, text, h1)</span></span>
+
+<span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, rect)</span></span>
+<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, fill, x, y, width, height)</span></span>
+
+<span class="hljs-title">myPoint</span> =
+    { x = <span class="hljs-number">9</span>
+    , y = <span class="hljs-number">3</span>
+    }
+
+<span class="hljs-title">main</span> =
+    div []
+      [ h1 [] [ text (toString myPoint) ]
+      , svg
+        [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 27 27"</span> ]
+        [ rect [ x <span class="hljs-string">"0"</span>, y <span class="hljs-string">"0"</span>, width <span class="hljs-string">"27"</span>, height <span class="hljs-string">"27"</span>, fill <span class="hljs-string">"blue"</span> ] [ ]
+        , rect [ x <span class="hljs-string">"3"</span>, y <span class="hljs-string">"3"</span>, width <span class="hljs-string">"3"</span>, height <span class="hljs-string">"3"</span>, fill <span class="hljs-string">"green"</span> ] [ ]
+        ]
+      ]
+</code></pre>
+<p>Nå kan du endre <code>toString myPoint</code> for å skrive ut noe annet.</p>
+</section>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul>
+<li>Skriv ut kun <code>x</code>-attributten til <code>myPoint</code></li>
+<li>Lag et annet punkt, <code>yourPoint</code>. Velg koordinater og skriv ut dette i stedet.</li>
+<li>Lag et tredje punkt, <code>theirPoint</code>. Dette skal du lage <em>ut ifra <code>myPoint</code></em>, men
+du skal bytte ut x-verdien med <code>0</code>. Se avsnittet <strong>Updating Records</strong> i guiden.</li>
+</ul>
+<p>Nå skal vi ta steget videre og lage våre egne punkter.</p>
+<p><strong>Husk!</strong> Du kan bruke linjen <code>[ h1 [] [ text (toString yz) ]</code> til å teste
+verdier.</p>
+<ul>
+<li>Les de to første eksemplene i avsnittet <strong>Record types</strong>.</li>
+</ul>
+<p>Her finnes det allerede en <code>Point</code>-type vi kan bruke. Har du definert <code>myPoint</code>
+og <code>yourPoint</code> på samme måte som det gjøres i guiden?</p>
+<ul>
+<li>
+<p>Skriv inn <code>Point</code>-typen i programmet ditt</p>
+</li>
+<li>
+<p>Spesifiser at punktene dine skal være av typen <code>Point</code>:</p>
+<pre><code class="elm"><span class="hljs-comment">-- myPoint : Point betyr at myPoint skal være av type Point</span>
+<span class="hljs-title">myPoint</span> : <span class="hljs-type">Point</span>
+<span class="hljs-title">myPoint</span> = <span class="hljs-comment">-- din tidligere løsning</span>
+
+<span class="hljs-comment">-- yourPoint : Point betyr at yourPoint skal være av type Point</span>
+<span class="hljs-title">yourPoint</span> : <span class="hljs-type">Point</span>
+<span class="hljs-title">yourPoint</span> = <span class="hljs-comment">-- din tidligere løsning</span>
+</code></pre>
+</li>
+</ul>
+<p>Klager kompilatoren? Hvorfor/hvorfor ikke? Om den klager betyr det ikke at du
+har gjort noe feil. Det bare at du og guiden lagde punkter på forskjellig måte.</p>
+<ul>
+<li>Utvid punktene dine med en z-verdi. Hva skjer når du kopilerer? Klarer du tyde
+feilmeldingen?</li>
+<li>Lag en ny type: <code>Point3D</code> som også har Z-verdi, og spesifiser at punktene dine
+skal være av denne typen:<pre><code class="elm"><span class="hljs-title">myPoint</span> : <span class="hljs-type">Point3D</span>
+<span class="hljs-comment">-- ...</span>
+</code></pre>
+</li>
+</ul>
+<p>Dette får vi bruk for!</p>
+</section>
+</section>
+<section class="activity" id="steg-4-datastrukturer-i-datastrukturer">
+<h1 class="activity" id="steg-4-datastrukturer-i-datastrukturer">Steg 4: Datastrukturer i datastrukturer</h1>
+<p>I steg 3 bygget vi opp datastruktren <code>Point</code> fra to tall av typen <code>Float</code>.</p>
+<p>Nå skal vi bruke får egen type, <code>Point</code>, til å bygge opp ett kvadrat.</p>
+<section class="protip" id="desimaltall">
+<h2 class="protip" id="desimaltall">Desimaltall</h2>
+<p>Obs! Her kommer det matte. Viktig for oss nå:</p>
+<p>Kommatall i Elm har typen <code>Float</code>.</p>
+<p>Dette har en forklaring:</p>
+<p>Desimaltall i Elm har typen <code>Float</code>. Float er kort for <em>Floating point number</em>,
+som på norsk er <em>flyttall</em>. Disse kalles flyttall fordi de har <em>flytende
+presisjon</em>. Det betyr at vi kan ha et fast antall <em>siffer</em> med nøyaktighet. Vi
+kan også lage veldig store tall, som 1000 * 1000 * 1000 * 1000 * 10000</p>
+</section>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
+<ul>
+<li>Hva må vi vite om et kvadrat for at vi skal kunne tegne det?</li>
+<li>Lag typen kvadrat: <code>type alias Square = -- ...</code></li>
+</ul>
+<p>Nå skal vi tegne kvadratet!</p>
+<pre><code class="elm"><span class="hljs-title">viewSquare</span> square = <span class="hljs-comment">-- ...</span>
+</code></pre>
+<ul>
+<li>Lag funksjonen <code>viewSquare</code>. Bruk <code>rect</code> fra SVG som du har brukt tidligere.</li>
+</ul>
+<p><strong>Obs!</strong> Når vi tegner kvadrater må vi bruke en farge. En måte å løse det på er
+å ha en <code>color : String</code>-attributt på <code>Square</code>.</p>
+<p>Her er hvordan jeg bruker min <code>viewSquare</code>:</p>
+<pre><code class="elm"><span class="hljs-title">start</span> =
+  { corner = { x = <span class="hljs-number">0.0</span>
+             , y = <span class="hljs-number">0.0</span>
+             }
+  , width = <span class="hljs-number">27.0</span>
+  , color = <span class="hljs-string">"blue"</span>
+  }
+
+<span class="hljs-title">center</span> =
+  { corner = { x = <span class="hljs-number">9.0</span>
+             , y = <span class="hljs-number">9.0</span>
+             }
+  , width = <span class="hljs-number">9.0</span>
+  , color = <span class="hljs-string">"green"</span>
+  }
+
+
+<span class="hljs-title">main</span> =
+    div []
+      [ h1 [] [ text (toString start)
+              , text (toString center)
+              ]
+      , svg
+        [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 27 27"</span> ]
+        [ viewSquare start
+        , viewSquare center
+        ]
+      ]
+</code></pre>
+<p>Dette blir seende slik ut på min PC:</p>
+<div>{ corner = { x = 0, y = 0 }, width = 27, color = "blue" }{ corner = { x = 9, y = 9 }, width = 9, color = "green" }<svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect></svg></div>
+<p>Nå har vi <strong>startregelen</strong> i boks! Den er kvadratet <code>start</code>!</p>
+</section>
+</section>
+<section class="activity" id="steg-5-senterkvadrat-og-let">
+<h1 class="activity" id="steg-5-senterkvadrat-og-let">Steg 5: Senterkvadrat og <code>let</code></h1>
+<p>Vi kan sette binde navn med <code>let</code>. Her binder vi <code>age</code> til alderen vi regner ut:</p>
+<pre><code class="elm"><span class="hljs-title">describeAge</span> yearNow yearBorn =
+  <span class="hljs-keyword">let</span> age = yearNow - yearBorn
+  <span class="hljs-keyword">in</span> <span class="hljs-string">"The age is "</span> ++ (toString age)
+</code></pre>
+<p>Vi kan binde flere navn som kan være avhengig av hverandre:</p>
+<pre><code class="elm"><span class="hljs-title">describeHalfAge</span> yearNow yearBorn =
+  <span class="hljs-keyword">let</span> age = yearNow - yearBorn
+      halfAge / <span class="hljs-number">2</span>
+  <span class="hljs-keyword">in</span> <span class="hljs-string">"Half the age is "</span> ++ (toString halfAge)
+</code></pre>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
+<ul>
+<li>Lag funksjonen <code>describeDoubleAge</code>. Hva skal denne gjøre?</li>
+<li>Les overskriften <strong>Let expressions</strong>
+i <a href="http://elm-lang.org/docs/syntax">syntaxguiden</a>. Her er det noen eksempler.
+Prøv selv!</li>
+</ul>
+<p>Nå skal vi tilbake til fraktalene våre, vi skal lage den grønne firkanten i
+sentrum. Denne gangen med kode!</p>
+<ul>
+<li>Lag funksjonen <code>centerSquare</code>. Denne skal ta inn et kvadrat og returnere
+kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
+</ul>
+<p>Her er en start:</p>
+<pre><code class="elm"><span class="hljs-title">centerSquare</span> : <span class="hljs-type">Square</span> -&gt; <span class="hljs-type">Square</span>
+<span class="hljs-title">centerSquare</span> old =
+    <span class="hljs-keyword">let</span> x = 
+</code></pre>
+<p>Du skal kunne bruke den slik:</p>
+<pre><code>&gt; centerSquare
+&lt;function&gt; : Utils.Square -&gt; Utils.Square
+&gt; centerSquare start
+{ <span class="hljs-built_in">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-variable">width</span> = <span class="hljs-number">9</span>, corner = { x = <span class="hljs-number">9</span>, y = <span class="hljs-number">9</span> } } : Utils.Square
+`
+
+... hva må x-verdien være om det nye kvadratet skal være i sentrum av det forrige?
+
+&lt;svg <span class="hljs-variable">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-variable">height</span>=<span class="hljs-string">"500"</span> viewBox=<span class="hljs-string">"0 0 27 27"</span>&gt;&lt;<span class="hljs-built_in">rect</span> x=<span class="hljs-string">"0"</span> y=<span class="hljs-string">"0"</span> <span class="hljs-variable">width</span>=<span class="hljs-string">"27"</span> <span class="hljs-variable">height</span>=<span class="hljs-string">"27"</span> <span class="hljs-built_in">fill</span>=<span class="hljs-string">"blue"</span>&gt;&lt;/<span class="hljs-built_in">rect</span>&gt;&lt;<span class="hljs-built_in">rect</span> x=<span class="hljs-string">"9"</span> y=<span class="hljs-string">"9"</span> <span class="hljs-variable">width</span>=<span class="hljs-string">"9"</span> <span class="hljs-variable">height</span>=<span class="hljs-string">"9"</span> <span class="hljs-built_in">fill</span>=<span class="hljs-string">"green"</span>&gt;&lt;/<span class="hljs-built_in">rect</span>&gt;&lt;/svg&gt;
+
+# Steg <span class="hljs-number">6</span>: Funksjoner fra `List` og `<span class="hljs-keyword">String</span>` {.activity}
+
+`List.<span class="hljs-built_in">map</span>` kjører en funksjon på hvert element i en liste. Eksempel:
+
+</code></pre>
+<blockquote>
+<p>add1 x = x + 1
+<function> : number -&gt; number
+List.map add1 [10, 20, 30]
+[11,21,31] : List number
+times2 x = x * 2
+<function> : number -&gt; number
+List.map times2 [10, 20, 30]
+[20,40,60] : List number</p>
+</blockquote>
+<pre><code>
+<span class="hljs-header">## Sjekkliste {.check}</span>
+
+<span class="hljs-bullet">- </span>Les avnsitet om <span class="hljs-code">`List.map`</span> i [<span class="hljs-link_label">dokumentasjonen til List</span>](<span class="hljs-link_url">http://package.elm-lang.org/packages/elm-lang/core/latest/List#map</span>).
+<span class="hljs-bullet">- </span>Bruk <span class="hljs-code">`List.map`</span> til å lage listen <span class="hljs-code">`["1","2","3","4"]`</span>
+
+<span class="hljs-code">`List.range`</span> kan lage en liste med tall. Eksempel:
+
+</code></pre>
+<blockquote>
+<p>List.map toString (List.range 1 4)
+[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;] : List String
+List.range 5 10
+[5,6,7,8,9,10] : List Int
+List.range 0 3
+[0,1,2,3] : List Int</p>
+</blockquote>
+<pre><code>
+- Les avsnittet om `<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span>` i [dokumentasjonen til <span class="hljs-keyword">List</span>](http:<span class="hljs-comment">//package.elm-lang.org/packages/elm-lang/core/latest/List#range)</span>
+- Bruk `<span class="hljs-keyword">List</span>.map` og `<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span>` til å lage denne store listen:
+
+```elm
+[<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>,<span class="hljs-string">"5"</span>,<span class="hljs-string">"6"</span>,<span class="hljs-string">"7"</span>,<span class="hljs-string">"8"</span>,<span class="hljs-string">"9"</span>,<span class="hljs-string">"10"</span>,<span class="hljs-string">"11"</span>,<span class="hljs-string">"12"</span>,<span class="hljs-string">"13"</span>,<span class="hljs-string">"14"</span>
+,<span class="hljs-string">"15"</span>,<span class="hljs-string">"16"</span>,<span class="hljs-string">"17"</span>,<span class="hljs-string">"18"</span>,<span class="hljs-string">"19"</span>,<span class="hljs-string">"20"</span>,<span class="hljs-string">"21"</span>,<span class="hljs-string">"22"</span>,<span class="hljs-string">"23"</span>,<span class="hljs-string">"24"</span>,<span class="hljs-string">"25"</span>,<span class="hljs-string">"26"</span>,<span class="hljs-string">"27"</span>
+,<span class="hljs-string">"28"</span>,<span class="hljs-string">"29"</span>,<span class="hljs-string">"30"</span>]
+</code></pre>
+<p>Vi innfører enda en nyttig funksjon: <code>String.join</code>. Denne bygger opp tekst fra
+en liste.</p>
+<ul>
+<li>Les dokumentasjonen til <code>String.join</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/String#join">dokumentasjonen til String</a></li>
+<li>Lag funksjonen <code>sayTo</code>. Den skal kunne brukes slik:</li>
+</ul>
+<pre><code>&gt; sayTo <span class="hljs-number">10</span>
+<span class="hljs-string">"1 og 2 og 3 og 4 og 5 og 6 og 7 og 8 og 9 og 10"</span> : <span class="hljs-keyword">String
+</span>&gt; sayTo <span class="hljs-number">3</span>
+<span class="hljs-string">"1 og 2 og 3"</span> : <span class="hljs-keyword">String
+</span></code></pre>
+<p>Bra! Gi deg selv en klapp på skulderen.</p>
+</section>
+</section>
+<section class="activity" id="steg-7-kvadrater-langs-kanten">
+<h1 class="activity" id="steg-7-kvadrater-langs-kanten">Steg 7: Kvadrater langs kanten</h1>
+<p>Nå skal vi finne kvadratene langs kanten. Hvor mange blir det? Tell de røde:</p>
+<p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect><rect x="3" y="3" width="3" height="3" fill="red"></rect><rect x="12" y="3" width="3" height="3" fill="red"></rect><rect x="21" y="3" width="3" height="3" fill="red"></rect><rect x="3" y="12" width="3" height="3" fill="red"></rect><rect x="21" y="12" width="3" height="3" fill="red"></rect><rect x="3" y="21" width="3" height="3" fill="red"></rect><rect x="12" y="21" width="3" height="3" fill="red"></rect><rect x="21" y="21" width="3" height="3" fill="red"></rect></svg></p>
+<p><strong>Obs!</strong> Denne er en utfording. Ta deg god tid.</p>
+<section class="check" id="sjekkliste-7">
+<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
+<ul>
+<li>Lag funksjonen <code>borderSquares</code>. Denne skal vi kunne bruke slik:</li>
+</ul>
+<pre><code>&gt; start
+{ color = <span class="hljs-string">"green"</span>, width = <span class="hljs-number">729</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">0</span> } } : Utils.Square
+&gt; borderSquares start
+[{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">0</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">243</span>, y = <span class="hljs-number">0</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">486</span>, y = <span class="hljs-number">0</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">243</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">486</span>, y = <span class="hljs-number">243</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">486</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">243</span>, y = <span class="hljs-number">486</span> } }
+,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">486</span>, y = <span class="hljs-number">486</span> } }]
+    : List Utils.Square
+</code></pre>
+</section>
+</section>
+<section class="activity" id="steg-xx-tegn-fraktalen">
+<h1 class="activity" id="steg-xx-tegn-fraktalen">Steg XX: Tegn fraktalen</h1>
+<p><strong>OBS!</strong> Teodor ble ikke ferdig med oppgaven! Her er hva vi vil ende opp med:</p>
+<p><strong>Nivå 1</strong>:
+<svg width="100%" viewBox="0 0 729 729"><rect x="0" y="0" width="729" height="729" fill="green"></rect><rect x="243" y="243" width="243" height="243" fill="blue"></rect></svg></p>
+<p><strong>Nivå 2</strong>:
+<svg width="100%" viewBox="0 0 729 729"><rect x="0" y="0" width="729" height="729" fill="green"></rect><rect x="243" y="243" width="243" height="243" fill="blue"></rect><rect x="81" y="81" width="81" height="81" fill="blue"></rect><rect x="324" y="81" width="81" height="81" fill="blue"></rect><rect x="567" y="81" width="81" height="81" fill="blue"></rect><rect x="81" y="324" width="81" height="81" fill="blue"></rect><rect x="567" y="324" width="81" height="81" fill="blue"></rect><rect x="81" y="567" width="81" height="81" fill="blue"></rect><rect x="324" y="567" width="81" height="81" fill="blue"></rect><rect x="567" y="567" width="81" height="81" fill="blue"></rect></svg></p>
+<p><strong>Nivå 3</strong>:
+<svg width="100%" viewBox="0 0 729 729"><rect x="0" y="0" width="729" height="729" fill="green"></rect><rect x="243" y="243" width="243" height="243" fill="blue"></rect><rect x="81" y="81" width="81" height="81" fill="blue"></rect><rect x="27" y="27" width="27" height="27" fill="blue"></rect><rect x="108" y="27" width="27" height="27" fill="blue"></rect><rect x="189" y="27" width="27" height="27" fill="blue"></rect><rect x="27" y="108" width="27" height="27" fill="blue"></rect><rect x="189" y="108" width="27" height="27" fill="blue"></rect><rect x="27" y="189" width="27" height="27" fill="blue"></rect><rect x="108" y="189" width="27" height="27" fill="blue"></rect><rect x="189" y="189" width="27" height="27" fill="blue"></rect><rect x="324" y="81" width="81" height="81" fill="blue"></rect><rect x="270" y="27" width="27" height="27" fill="blue"></rect><rect x="351" y="27" width="27" height="27" fill="blue"></rect><rect x="432" y="27" width="27" height="27" fill="blue"></rect><rect x="270" y="108" width="27" height="27" fill="blue"></rect><rect x="432" y="108" width="27" height="27" fill="blue"></rect><rect x="270" y="189" width="27" height="27" fill="blue"></rect><rect x="351" y="189" width="27" height="27" fill="blue"></rect><rect x="432" y="189" width="27" height="27" fill="blue"></rect><rect x="567" y="81" width="81" height="81" fill="blue"></rect><rect x="513" y="27" width="27" height="27" fill="blue"></rect><rect x="594" y="27" width="27" height="27" fill="blue"></rect><rect x="675" y="27" width="27" height="27" fill="blue"></rect><rect x="513" y="108" width="27" height="27" fill="blue"></rect><rect x="675" y="108" width="27" height="27" fill="blue"></rect><rect x="513" y="189" width="27" height="27" fill="blue"></rect><rect x="594" y="189" width="27" height="27" fill="blue"></rect><rect x="675" y="189" width="27" height="27" fill="blue"></rect><rect x="81" y="324" width="81" height="81" fill="blue"></rect><rect x="27" y="270" width="27" height="27" fill="blue"></rect><rect x="108" y="270" width="27" height="27" fill="blue"></rect><rect x="189" y="270" width="27" height="27" fill="blue"></rect><rect x="27" y="351" width="27" height="27" fill="blue"></rect><rect x="189" y="351" width="27" height="27" fill="blue"></rect><rect x="27" y="432" width="27" height="27" fill="blue"></rect><rect x="108" y="432" width="27" height="27" fill="blue"></rect><rect x="189" y="432" width="27" height="27" fill="blue"></rect><rect x="567" y="324" width="81" height="81" fill="blue"></rect><rect x="513" y="270" width="27" height="27" fill="blue"></rect><rect x="594" y="270" width="27" height="27" fill="blue"></rect><rect x="675" y="270" width="27" height="27" fill="blue"></rect><rect x="513" y="351" width="27" height="27" fill="blue"></rect><rect x="675" y="351" width="27" height="27" fill="blue"></rect><rect x="513" y="432" width="27" height="27" fill="blue"></rect><rect x="594" y="432" width="27" height="27" fill="blue"></rect><rect x="675" y="432" width="27" height="27" fill="blue"></rect><rect x="81" y="567" width="81" height="81" fill="blue"></rect><rect x="27" y="513" width="27" height="27" fill="blue"></rect><rect x="108" y="513" width="27" height="27" fill="blue"></rect><rect x="189" y="513" width="27" height="27" fill="blue"></rect><rect x="27" y="594" width="27" height="27" fill="blue"></rect><rect x="189" y="594" width="27" height="27" fill="blue"></rect><rect x="27" y="675" width="27" height="27" fill="blue"></rect><rect x="108" y="675" width="27" height="27" fill="blue"></rect><rect x="189" y="675" width="27" height="27" fill="blue"></rect><rect x="324" y="567" width="81" height="81" fill="blue"></rect><rect x="270" y="513" width="27" height="27" fill="blue"></rect><rect x="351" y="513" width="27" height="27" fill="blue"></rect><rect x="432" y="513" width="27" height="27" fill="blue"></rect><rect x="270" y="594" width="27" height="27" fill="blue"></rect><rect x="432" y="594" width="27" height="27" fill="blue"></rect><rect x="270" y="675" width="27" height="27" fill="blue"></rect><rect x="351" y="675" width="27" height="27" fill="blue"></rect><rect x="432" y="675" width="27" height="27" fill="blue"></rect><rect x="567" y="567" width="81" height="81" fill="blue"></rect><rect x="513" y="513" width="27" height="27" fill="blue"></rect><rect x="594" y="513" width="27" height="27" fill="blue"></rect><rect x="675" y="513" width="27" height="27" fill="blue"></rect><rect x="513" y="594" width="27" height="27" fill="blue"></rect><rect x="675" y="594" width="27" height="27" fill="blue"></rect><rect x="513" y="675" width="27" height="27" fill="blue"></rect><rect x="594" y="675" width="27" height="27" fill="blue"></rect><rect x="675" y="675" width="27" height="27" fill="blue"></rect></svg></p>
+<p><strong>Nivå 4</strong>:
+<svg width="100%" viewBox="0 0 729 729"><rect x="0" y="0" width="729" height="729" fill="green"></rect><rect x="243" y="243" width="243" height="243" fill="blue"></rect><rect x="81" y="81" width="81" height="81" fill="blue"></rect><rect x="27" y="27" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="blue"></rect><rect x="36" y="9" width="9" height="9" fill="blue"></rect><rect x="63" y="9" width="9" height="9" fill="blue"></rect><rect x="9" y="36" width="9" height="9" fill="blue"></rect><rect x="63" y="36" width="9" height="9" fill="blue"></rect><rect x="9" y="63" width="9" height="9" fill="blue"></rect><rect x="36" y="63" width="9" height="9" fill="blue"></rect><rect x="63" y="63" width="9" height="9" fill="blue"></rect><rect x="108" y="27" width="27" height="27" fill="blue"></rect><rect x="90" y="9" width="9" height="9" fill="blue"></rect><rect x="117" y="9" width="9" height="9" fill="blue"></rect><rect x="144" y="9" width="9" height="9" fill="blue"></rect><rect x="90" y="36" width="9" height="9" fill="blue"></rect><rect x="144" y="36" width="9" height="9" fill="blue"></rect><rect x="90" y="63" width="9" height="9" fill="blue"></rect><rect x="117" y="63" width="9" height="9" fill="blue"></rect><rect x="144" y="63" width="9" height="9" fill="blue"></rect><rect x="189" y="27" width="27" height="27" fill="blue"></rect><rect x="171" y="9" width="9" height="9" fill="blue"></rect><rect x="198" y="9" width="9" height="9" fill="blue"></rect><rect x="225" y="9" width="9" height="9" fill="blue"></rect><rect x="171" y="36" width="9" height="9" fill="blue"></rect><rect x="225" y="36" width="9" height="9" fill="blue"></rect><rect x="171" y="63" width="9" height="9" fill="blue"></rect><rect x="198" y="63" width="9" height="9" fill="blue"></rect><rect x="225" y="63" width="9" height="9" fill="blue"></rect><rect x="27" y="108" width="27" height="27" fill="blue"></rect><rect x="9" y="90" width="9" height="9" fill="blue"></rect><rect x="36" y="90" width="9" height="9" fill="blue"></rect><rect x="63" y="90" width="9" height="9" fill="blue"></rect><rect x="9" y="117" width="9" height="9" fill="blue"></rect><rect x="63" y="117" width="9" height="9" fill="blue"></rect><rect x="9" y="144" width="9" height="9" fill="blue"></rect><rect x="36" y="144" width="9" height="9" fill="blue"></rect><rect x="63" y="144" width="9" height="9" fill="blue"></rect><rect x="189" y="108" width="27" height="27" fill="blue"></rect><rect x="171" y="90" width="9" height="9" fill="blue"></rect><rect x="198" y="90" width="9" height="9" fill="blue"></rect><rect x="225" y="90" width="9" height="9" fill="blue"></rect><rect x="171" y="117" width="9" height="9" fill="blue"></rect><rect x="225" y="117" width="9" height="9" fill="blue"></rect><rect x="171" y="144" width="9" height="9" fill="blue"></rect><rect x="198" y="144" width="9" height="9" fill="blue"></rect><rect x="225" y="144" width="9" height="9" fill="blue"></rect><rect x="27" y="189" width="27" height="27" fill="blue"></rect><rect x="9" y="171" width="9" height="9" fill="blue"></rect><rect x="36" y="171" width="9" height="9" fill="blue"></rect><rect x="63" y="171" width="9" height="9" fill="blue"></rect><rect x="9" y="198" width="9" height="9" fill="blue"></rect><rect x="63" y="198" width="9" height="9" fill="blue"></rect><rect x="9" y="225" width="9" height="9" fill="blue"></rect><rect x="36" y="225" width="9" height="9" fill="blue"></rect><rect x="63" y="225" width="9" height="9" fill="blue"></rect><rect x="108" y="189" width="27" height="27" fill="blue"></rect><rect x="90" y="171" width="9" height="9" fill="blue"></rect><rect x="117" y="171" width="9" height="9" fill="blue"></rect><rect x="144" y="171" width="9" height="9" fill="blue"></rect><rect x="90" y="198" width="9" height="9" fill="blue"></rect><rect x="144" y="198" width="9" height="9" fill="blue"></rect><rect x="90" y="225" width="9" height="9" fill="blue"></rect><rect x="117" y="225" width="9" height="9" fill="blue"></rect><rect x="144" y="225" width="9" height="9" fill="blue"></rect><rect x="189" y="189" width="27" height="27" fill="blue"></rect><rect x="171" y="171" width="9" height="9" fill="blue"></rect><rect x="198" y="171" width="9" height="9" fill="blue"></rect><rect x="225" y="171" width="9" height="9" fill="blue"></rect><rect x="171" y="198" width="9" height="9" fill="blue"></rect><rect x="225" y="198" width="9" height="9" fill="blue"></rect><rect x="171" y="225" width="9" height="9" fill="blue"></rect><rect x="198" y="225" width="9" height="9" fill="blue"></rect><rect x="225" y="225" width="9" height="9" fill="blue"></rect><rect x="324" y="81" width="81" height="81" fill="blue"></rect><rect x="270" y="27" width="27" height="27" fill="blue"></rect><rect x="252" y="9" width="9" height="9" fill="blue"></rect><rect x="279" y="9" width="9" height="9" fill="blue"></rect><rect x="306" y="9" width="9" height="9" fill="blue"></rect><rect x="252" y="36" width="9" height="9" fill="blue"></rect><rect x="306" y="36" width="9" height="9" fill="blue"></rect><rect x="252" y="63" width="9" height="9" fill="blue"></rect><rect x="279" y="63" width="9" height="9" fill="blue"></rect><rect x="306" y="63" width="9" height="9" fill="blue"></rect><rect x="351" y="27" width="27" height="27" fill="blue"></rect><rect x="333" y="9" width="9" height="9" fill="blue"></rect><rect x="360" y="9" width="9" height="9" fill="blue"></rect><rect x="387" y="9" width="9" height="9" fill="blue"></rect><rect x="333" y="36" width="9" height="9" fill="blue"></rect><rect x="387" y="36" width="9" height="9" fill="blue"></rect><rect x="333" y="63" width="9" height="9" fill="blue"></rect><rect x="360" y="63" width="9" height="9" fill="blue"></rect><rect x="387" y="63" width="9" height="9" fill="blue"></rect><rect x="432" y="27" width="27" height="27" fill="blue"></rect><rect x="414" y="9" width="9" height="9" fill="blue"></rect><rect x="441" y="9" width="9" height="9" fill="blue"></rect><rect x="468" y="9" width="9" height="9" fill="blue"></rect><rect x="414" y="36" width="9" height="9" fill="blue"></rect><rect x="468" y="36" width="9" height="9" fill="blue"></rect><rect x="414" y="63" width="9" height="9" fill="blue"></rect><rect x="441" y="63" width="9" height="9" fill="blue"></rect><rect x="468" y="63" width="9" height="9" fill="blue"></rect><rect x="270" y="108" width="27" height="27" fill="blue"></rect><rect x="252" y="90" width="9" height="9" fill="blue"></rect><rect x="279" y="90" width="9" height="9" fill="blue"></rect><rect x="306" y="90" width="9" height="9" fill="blue"></rect><rect x="252" y="117" width="9" height="9" fill="blue"></rect><rect x="306" y="117" width="9" height="9" fill="blue"></rect><rect x="252" y="144" width="9" height="9" fill="blue"></rect><rect x="279" y="144" width="9" height="9" fill="blue"></rect><rect x="306" y="144" width="9" height="9" fill="blue"></rect><rect x="432" y="108" width="27" height="27" fill="blue"></rect><rect x="414" y="90" width="9" height="9" fill="blue"></rect><rect x="441" y="90" width="9" height="9" fill="blue"></rect><rect x="468" y="90" width="9" height="9" fill="blue"></rect><rect x="414" y="117" width="9" height="9" fill="blue"></rect><rect x="468" y="117" width="9" height="9" fill="blue"></rect><rect x="414" y="144" width="9" height="9" fill="blue"></rect><rect x="441" y="144" width="9" height="9" fill="blue"></rect><rect x="468" y="144" width="9" height="9" fill="blue"></rect><rect x="270" y="189" width="27" height="27" fill="blue"></rect><rect x="252" y="171" width="9" height="9" fill="blue"></rect><rect x="279" y="171" width="9" height="9" fill="blue"></rect><rect x="306" y="171" width="9" height="9" fill="blue"></rect><rect x="252" y="198" width="9" height="9" fill="blue"></rect><rect x="306" y="198" width="9" height="9" fill="blue"></rect><rect x="252" y="225" width="9" height="9" fill="blue"></rect><rect x="279" y="225" width="9" height="9" fill="blue"></rect><rect x="306" y="225" width="9" height="9" fill="blue"></rect><rect x="351" y="189" width="27" height="27" fill="blue"></rect><rect x="333" y="171" width="9" height="9" fill="blue"></rect><rect x="360" y="171" width="9" height="9" fill="blue"></rect><rect x="387" y="171" width="9" height="9" fill="blue"></rect><rect x="333" y="198" width="9" height="9" fill="blue"></rect><rect x="387" y="198" width="9" height="9" fill="blue"></rect><rect x="333" y="225" width="9" height="9" fill="blue"></rect><rect x="360" y="225" width="9" height="9" fill="blue"></rect><rect x="387" y="225" width="9" height="9" fill="blue"></rect><rect x="432" y="189" width="27" height="27" fill="blue"></rect><rect x="414" y="171" width="9" height="9" fill="blue"></rect><rect x="441" y="171" width="9" height="9" fill="blue"></rect><rect x="468" y="171" width="9" height="9" fill="blue"></rect><rect x="414" y="198" width="9" height="9" fill="blue"></rect><rect x="468" y="198" width="9" height="9" fill="blue"></rect><rect x="414" y="225" width="9" height="9" fill="blue"></rect><rect x="441" y="225" width="9" height="9" fill="blue"></rect><rect x="468" y="225" width="9" height="9" fill="blue"></rect><rect x="567" y="81" width="81" height="81" fill="blue"></rect><rect x="513" y="27" width="27" height="27" fill="blue"></rect><rect x="495" y="9" width="9" height="9" fill="blue"></rect><rect x="522" y="9" width="9" height="9" fill="blue"></rect><rect x="549" y="9" width="9" height="9" fill="blue"></rect><rect x="495" y="36" width="9" height="9" fill="blue"></rect><rect x="549" y="36" width="9" height="9" fill="blue"></rect><rect x="495" y="63" width="9" height="9" fill="blue"></rect><rect x="522" y="63" width="9" height="9" fill="blue"></rect><rect x="549" y="63" width="9" height="9" fill="blue"></rect><rect x="594" y="27" width="27" height="27" fill="blue"></rect><rect x="576" y="9" width="9" height="9" fill="blue"></rect><rect x="603" y="9" width="9" height="9" fill="blue"></rect><rect x="630" y="9" width="9" height="9" fill="blue"></rect><rect x="576" y="36" width="9" height="9" fill="blue"></rect><rect x="630" y="36" width="9" height="9" fill="blue"></rect><rect x="576" y="63" width="9" height="9" fill="blue"></rect><rect x="603" y="63" width="9" height="9" fill="blue"></rect><rect x="630" y="63" width="9" height="9" fill="blue"></rect><rect x="675" y="27" width="27" height="27" fill="blue"></rect><rect x="657" y="9" width="9" height="9" fill="blue"></rect><rect x="684" y="9" width="9" height="9" fill="blue"></rect><rect x="711" y="9" width="9" height="9" fill="blue"></rect><rect x="657" y="36" width="9" height="9" fill="blue"></rect><rect x="711" y="36" width="9" height="9" fill="blue"></rect><rect x="657" y="63" width="9" height="9" fill="blue"></rect><rect x="684" y="63" width="9" height="9" fill="blue"></rect><rect x="711" y="63" width="9" height="9" fill="blue"></rect><rect x="513" y="108" width="27" height="27" fill="blue"></rect><rect x="495" y="90" width="9" height="9" fill="blue"></rect><rect x="522" y="90" width="9" height="9" fill="blue"></rect><rect x="549" y="90" width="9" height="9" fill="blue"></rect><rect x="495" y="117" width="9" height="9" fill="blue"></rect><rect x="549" y="117" width="9" height="9" fill="blue"></rect><rect x="495" y="144" width="9" height="9" fill="blue"></rect><rect x="522" y="144" width="9" height="9" fill="blue"></rect><rect x="549" y="144" width="9" height="9" fill="blue"></rect><rect x="675" y="108" width="27" height="27" fill="blue"></rect><rect x="657" y="90" width="9" height="9" fill="blue"></rect><rect x="684" y="90" width="9" height="9" fill="blue"></rect><rect x="711" y="90" width="9" height="9" fill="blue"></rect><rect x="657" y="117" width="9" height="9" fill="blue"></rect><rect x="711" y="117" width="9" height="9" fill="blue"></rect><rect x="657" y="144" width="9" height="9" fill="blue"></rect><rect x="684" y="144" width="9" height="9" fill="blue"></rect><rect x="711" y="144" width="9" height="9" fill="blue"></rect><rect x="513" y="189" width="27" height="27" fill="blue"></rect><rect x="495" y="171" width="9" height="9" fill="blue"></rect><rect x="522" y="171" width="9" height="9" fill="blue"></rect><rect x="549" y="171" width="9" height="9" fill="blue"></rect><rect x="495" y="198" width="9" height="9" fill="blue"></rect><rect x="549" y="198" width="9" height="9" fill="blue"></rect><rect x="495" y="225" width="9" height="9" fill="blue"></rect><rect x="522" y="225" width="9" height="9" fill="blue"></rect><rect x="549" y="225" width="9" height="9" fill="blue"></rect><rect x="594" y="189" width="27" height="27" fill="blue"></rect><rect x="576" y="171" width="9" height="9" fill="blue"></rect><rect x="603" y="171" width="9" height="9" fill="blue"></rect><rect x="630" y="171" width="9" height="9" fill="blue"></rect><rect x="576" y="198" width="9" height="9" fill="blue"></rect><rect x="630" y="198" width="9" height="9" fill="blue"></rect><rect x="576" y="225" width="9" height="9" fill="blue"></rect><rect x="603" y="225" width="9" height="9" fill="blue"></rect><rect x="630" y="225" width="9" height="9" fill="blue"></rect><rect x="675" y="189" width="27" height="27" fill="blue"></rect><rect x="657" y="171" width="9" height="9" fill="blue"></rect><rect x="684" y="171" width="9" height="9" fill="blue"></rect><rect x="711" y="171" width="9" height="9" fill="blue"></rect><rect x="657" y="198" width="9" height="9" fill="blue"></rect><rect x="711" y="198" width="9" height="9" fill="blue"></rect><rect x="657" y="225" width="9" height="9" fill="blue"></rect><rect x="684" y="225" width="9" height="9" fill="blue"></rect><rect x="711" y="225" width="9" height="9" fill="blue"></rect><rect x="81" y="324" width="81" height="81" fill="blue"></rect><rect x="27" y="270" width="27" height="27" fill="blue"></rect><rect x="9" y="252" width="9" height="9" fill="blue"></rect><rect x="36" y="252" width="9" height="9" fill="blue"></rect><rect x="63" y="252" width="9" height="9" fill="blue"></rect><rect x="9" y="279" width="9" height="9" fill="blue"></rect><rect x="63" y="279" width="9" height="9" fill="blue"></rect><rect x="9" y="306" width="9" height="9" fill="blue"></rect><rect x="36" y="306" width="9" height="9" fill="blue"></rect><rect x="63" y="306" width="9" height="9" fill="blue"></rect><rect x="108" y="270" width="27" height="27" fill="blue"></rect><rect x="90" y="252" width="9" height="9" fill="blue"></rect><rect x="117" y="252" width="9" height="9" fill="blue"></rect><rect x="144" y="252" width="9" height="9" fill="blue"></rect><rect x="90" y="279" width="9" height="9" fill="blue"></rect><rect x="144" y="279" width="9" height="9" fill="blue"></rect><rect x="90" y="306" width="9" height="9" fill="blue"></rect><rect x="117" y="306" width="9" height="9" fill="blue"></rect><rect x="144" y="306" width="9" height="9" fill="blue"></rect><rect x="189" y="270" width="27" height="27" fill="blue"></rect><rect x="171" y="252" width="9" height="9" fill="blue"></rect><rect x="198" y="252" width="9" height="9" fill="blue"></rect><rect x="225" y="252" width="9" height="9" fill="blue"></rect><rect x="171" y="279" width="9" height="9" fill="blue"></rect><rect x="225" y="279" width="9" height="9" fill="blue"></rect><rect x="171" y="306" width="9" height="9" fill="blue"></rect><rect x="198" y="306" width="9" height="9" fill="blue"></rect><rect x="225" y="306" width="9" height="9" fill="blue"></rect><rect x="27" y="351" width="27" height="27" fill="blue"></rect><rect x="9" y="333" width="9" height="9" fill="blue"></rect><rect x="36" y="333" width="9" height="9" fill="blue"></rect><rect x="63" y="333" width="9" height="9" fill="blue"></rect><rect x="9" y="360" width="9" height="9" fill="blue"></rect><rect x="63" y="360" width="9" height="9" fill="blue"></rect><rect x="9" y="387" width="9" height="9" fill="blue"></rect><rect x="36" y="387" width="9" height="9" fill="blue"></rect><rect x="63" y="387" width="9" height="9" fill="blue"></rect><rect x="189" y="351" width="27" height="27" fill="blue"></rect><rect x="171" y="333" width="9" height="9" fill="blue"></rect><rect x="198" y="333" width="9" height="9" fill="blue"></rect><rect x="225" y="333" width="9" height="9" fill="blue"></rect><rect x="171" y="360" width="9" height="9" fill="blue"></rect><rect x="225" y="360" width="9" height="9" fill="blue"></rect><rect x="171" y="387" width="9" height="9" fill="blue"></rect><rect x="198" y="387" width="9" height="9" fill="blue"></rect><rect x="225" y="387" width="9" height="9" fill="blue"></rect><rect x="27" y="432" width="27" height="27" fill="blue"></rect><rect x="9" y="414" width="9" height="9" fill="blue"></rect><rect x="36" y="414" width="9" height="9" fill="blue"></rect><rect x="63" y="414" width="9" height="9" fill="blue"></rect><rect x="9" y="441" width="9" height="9" fill="blue"></rect><rect x="63" y="441" width="9" height="9" fill="blue"></rect><rect x="9" y="468" width="9" height="9" fill="blue"></rect><rect x="36" y="468" width="9" height="9" fill="blue"></rect><rect x="63" y="468" width="9" height="9" fill="blue"></rect><rect x="108" y="432" width="27" height="27" fill="blue"></rect><rect x="90" y="414" width="9" height="9" fill="blue"></rect><rect x="117" y="414" width="9" height="9" fill="blue"></rect><rect x="144" y="414" width="9" height="9" fill="blue"></rect><rect x="90" y="441" width="9" height="9" fill="blue"></rect><rect x="144" y="441" width="9" height="9" fill="blue"></rect><rect x="90" y="468" width="9" height="9" fill="blue"></rect><rect x="117" y="468" width="9" height="9" fill="blue"></rect><rect x="144" y="468" width="9" height="9" fill="blue"></rect><rect x="189" y="432" width="27" height="27" fill="blue"></rect><rect x="171" y="414" width="9" height="9" fill="blue"></rect><rect x="198" y="414" width="9" height="9" fill="blue"></rect><rect x="225" y="414" width="9" height="9" fill="blue"></rect><rect x="171" y="441" width="9" height="9" fill="blue"></rect><rect x="225" y="441" width="9" height="9" fill="blue"></rect><rect x="171" y="468" width="9" height="9" fill="blue"></rect><rect x="198" y="468" width="9" height="9" fill="blue"></rect><rect x="225" y="468" width="9" height="9" fill="blue"></rect><rect x="567" y="324" width="81" height="81" fill="blue"></rect><rect x="513" y="270" width="27" height="27" fill="blue"></rect><rect x="495" y="252" width="9" height="9" fill="blue"></rect><rect x="522" y="252" width="9" height="9" fill="blue"></rect><rect x="549" y="252" width="9" height="9" fill="blue"></rect><rect x="495" y="279" width="9" height="9" fill="blue"></rect><rect x="549" y="279" width="9" height="9" fill="blue"></rect><rect x="495" y="306" width="9" height="9" fill="blue"></rect><rect x="522" y="306" width="9" height="9" fill="blue"></rect><rect x="549" y="306" width="9" height="9" fill="blue"></rect><rect x="594" y="270" width="27" height="27" fill="blue"></rect><rect x="576" y="252" width="9" height="9" fill="blue"></rect><rect x="603" y="252" width="9" height="9" fill="blue"></rect><rect x="630" y="252" width="9" height="9" fill="blue"></rect><rect x="576" y="279" width="9" height="9" fill="blue"></rect><rect x="630" y="279" width="9" height="9" fill="blue"></rect><rect x="576" y="306" width="9" height="9" fill="blue"></rect><rect x="603" y="306" width="9" height="9" fill="blue"></rect><rect x="630" y="306" width="9" height="9" fill="blue"></rect><rect x="675" y="270" width="27" height="27" fill="blue"></rect><rect x="657" y="252" width="9" height="9" fill="blue"></rect><rect x="684" y="252" width="9" height="9" fill="blue"></rect><rect x="711" y="252" width="9" height="9" fill="blue"></rect><rect x="657" y="279" width="9" height="9" fill="blue"></rect><rect x="711" y="279" width="9" height="9" fill="blue"></rect><rect x="657" y="306" width="9" height="9" fill="blue"></rect><rect x="684" y="306" width="9" height="9" fill="blue"></rect><rect x="711" y="306" width="9" height="9" fill="blue"></rect><rect x="513" y="351" width="27" height="27" fill="blue"></rect><rect x="495" y="333" width="9" height="9" fill="blue"></rect><rect x="522" y="333" width="9" height="9" fill="blue"></rect><rect x="549" y="333" width="9" height="9" fill="blue"></rect><rect x="495" y="360" width="9" height="9" fill="blue"></rect><rect x="549" y="360" width="9" height="9" fill="blue"></rect><rect x="495" y="387" width="9" height="9" fill="blue"></rect><rect x="522" y="387" width="9" height="9" fill="blue"></rect><rect x="549" y="387" width="9" height="9" fill="blue"></rect><rect x="675" y="351" width="27" height="27" fill="blue"></rect><rect x="657" y="333" width="9" height="9" fill="blue"></rect><rect x="684" y="333" width="9" height="9" fill="blue"></rect><rect x="711" y="333" width="9" height="9" fill="blue"></rect><rect x="657" y="360" width="9" height="9" fill="blue"></rect><rect x="711" y="360" width="9" height="9" fill="blue"></rect><rect x="657" y="387" width="9" height="9" fill="blue"></rect><rect x="684" y="387" width="9" height="9" fill="blue"></rect><rect x="711" y="387" width="9" height="9" fill="blue"></rect><rect x="513" y="432" width="27" height="27" fill="blue"></rect><rect x="495" y="414" width="9" height="9" fill="blue"></rect><rect x="522" y="414" width="9" height="9" fill="blue"></rect><rect x="549" y="414" width="9" height="9" fill="blue"></rect><rect x="495" y="441" width="9" height="9" fill="blue"></rect><rect x="549" y="441" width="9" height="9" fill="blue"></rect><rect x="495" y="468" width="9" height="9" fill="blue"></rect><rect x="522" y="468" width="9" height="9" fill="blue"></rect><rect x="549" y="468" width="9" height="9" fill="blue"></rect><rect x="594" y="432" width="27" height="27" fill="blue"></rect><rect x="576" y="414" width="9" height="9" fill="blue"></rect><rect x="603" y="414" width="9" height="9" fill="blue"></rect><rect x="630" y="414" width="9" height="9" fill="blue"></rect><rect x="576" y="441" width="9" height="9" fill="blue"></rect><rect x="630" y="441" width="9" height="9" fill="blue"></rect><rect x="576" y="468" width="9" height="9" fill="blue"></rect><rect x="603" y="468" width="9" height="9" fill="blue"></rect><rect x="630" y="468" width="9" height="9" fill="blue"></rect><rect x="675" y="432" width="27" height="27" fill="blue"></rect><rect x="657" y="414" width="9" height="9" fill="blue"></rect><rect x="684" y="414" width="9" height="9" fill="blue"></rect><rect x="711" y="414" width="9" height="9" fill="blue"></rect><rect x="657" y="441" width="9" height="9" fill="blue"></rect><rect x="711" y="441" width="9" height="9" fill="blue"></rect><rect x="657" y="468" width="9" height="9" fill="blue"></rect><rect x="684" y="468" width="9" height="9" fill="blue"></rect><rect x="711" y="468" width="9" height="9" fill="blue"></rect><rect x="81" y="567" width="81" height="81" fill="blue"></rect><rect x="27" y="513" width="27" height="27" fill="blue"></rect><rect x="9" y="495" width="9" height="9" fill="blue"></rect><rect x="36" y="495" width="9" height="9" fill="blue"></rect><rect x="63" y="495" width="9" height="9" fill="blue"></rect><rect x="9" y="522" width="9" height="9" fill="blue"></rect><rect x="63" y="522" width="9" height="9" fill="blue"></rect><rect x="9" y="549" width="9" height="9" fill="blue"></rect><rect x="36" y="549" width="9" height="9" fill="blue"></rect><rect x="63" y="549" width="9" height="9" fill="blue"></rect><rect x="108" y="513" width="27" height="27" fill="blue"></rect><rect x="90" y="495" width="9" height="9" fill="blue"></rect><rect x="117" y="495" width="9" height="9" fill="blue"></rect><rect x="144" y="495" width="9" height="9" fill="blue"></rect><rect x="90" y="522" width="9" height="9" fill="blue"></rect><rect x="144" y="522" width="9" height="9" fill="blue"></rect><rect x="90" y="549" width="9" height="9" fill="blue"></rect><rect x="117" y="549" width="9" height="9" fill="blue"></rect><rect x="144" y="549" width="9" height="9" fill="blue"></rect><rect x="189" y="513" width="27" height="27" fill="blue"></rect><rect x="171" y="495" width="9" height="9" fill="blue"></rect><rect x="198" y="495" width="9" height="9" fill="blue"></rect><rect x="225" y="495" width="9" height="9" fill="blue"></rect><rect x="171" y="522" width="9" height="9" fill="blue"></rect><rect x="225" y="522" width="9" height="9" fill="blue"></rect><rect x="171" y="549" width="9" height="9" fill="blue"></rect><rect x="198" y="549" width="9" height="9" fill="blue"></rect><rect x="225" y="549" width="9" height="9" fill="blue"></rect><rect x="27" y="594" width="27" height="27" fill="blue"></rect><rect x="9" y="576" width="9" height="9" fill="blue"></rect><rect x="36" y="576" width="9" height="9" fill="blue"></rect><rect x="63" y="576" width="9" height="9" fill="blue"></rect><rect x="9" y="603" width="9" height="9" fill="blue"></rect><rect x="63" y="603" width="9" height="9" fill="blue"></rect><rect x="9" y="630" width="9" height="9" fill="blue"></rect><rect x="36" y="630" width="9" height="9" fill="blue"></rect><rect x="63" y="630" width="9" height="9" fill="blue"></rect><rect x="189" y="594" width="27" height="27" fill="blue"></rect><rect x="171" y="576" width="9" height="9" fill="blue"></rect><rect x="198" y="576" width="9" height="9" fill="blue"></rect><rect x="225" y="576" width="9" height="9" fill="blue"></rect><rect x="171" y="603" width="9" height="9" fill="blue"></rect><rect x="225" y="603" width="9" height="9" fill="blue"></rect><rect x="171" y="630" width="9" height="9" fill="blue"></rect><rect x="198" y="630" width="9" height="9" fill="blue"></rect><rect x="225" y="630" width="9" height="9" fill="blue"></rect><rect x="27" y="675" width="27" height="27" fill="blue"></rect><rect x="9" y="657" width="9" height="9" fill="blue"></rect><rect x="36" y="657" width="9" height="9" fill="blue"></rect><rect x="63" y="657" width="9" height="9" fill="blue"></rect><rect x="9" y="684" width="9" height="9" fill="blue"></rect><rect x="63" y="684" width="9" height="9" fill="blue"></rect><rect x="9" y="711" width="9" height="9" fill="blue"></rect><rect x="36" y="711" width="9" height="9" fill="blue"></rect><rect x="63" y="711" width="9" height="9" fill="blue"></rect><rect x="108" y="675" width="27" height="27" fill="blue"></rect><rect x="90" y="657" width="9" height="9" fill="blue"></rect><rect x="117" y="657" width="9" height="9" fill="blue"></rect><rect x="144" y="657" width="9" height="9" fill="blue"></rect><rect x="90" y="684" width="9" height="9" fill="blue"></rect><rect x="144" y="684" width="9" height="9" fill="blue"></rect><rect x="90" y="711" width="9" height="9" fill="blue"></rect><rect x="117" y="711" width="9" height="9" fill="blue"></rect><rect x="144" y="711" width="9" height="9" fill="blue"></rect><rect x="189" y="675" width="27" height="27" fill="blue"></rect><rect x="171" y="657" width="9" height="9" fill="blue"></rect><rect x="198" y="657" width="9" height="9" fill="blue"></rect><rect x="225" y="657" width="9" height="9" fill="blue"></rect><rect x="171" y="684" width="9" height="9" fill="blue"></rect><rect x="225" y="684" width="9" height="9" fill="blue"></rect><rect x="171" y="711" width="9" height="9" fill="blue"></rect><rect x="198" y="711" width="9" height="9" fill="blue"></rect><rect x="225" y="711" width="9" height="9" fill="blue"></rect><rect x="324" y="567" width="81" height="81" fill="blue"></rect><rect x="270" y="513" width="27" height="27" fill="blue"></rect><rect x="252" y="495" width="9" height="9" fill="blue"></rect><rect x="279" y="495" width="9" height="9" fill="blue"></rect><rect x="306" y="495" width="9" height="9" fill="blue"></rect><rect x="252" y="522" width="9" height="9" fill="blue"></rect><rect x="306" y="522" width="9" height="9" fill="blue"></rect><rect x="252" y="549" width="9" height="9" fill="blue"></rect><rect x="279" y="549" width="9" height="9" fill="blue"></rect><rect x="306" y="549" width="9" height="9" fill="blue"></rect><rect x="351" y="513" width="27" height="27" fill="blue"></rect><rect x="333" y="495" width="9" height="9" fill="blue"></rect><rect x="360" y="495" width="9" height="9" fill="blue"></rect><rect x="387" y="495" width="9" height="9" fill="blue"></rect><rect x="333" y="522" width="9" height="9" fill="blue"></rect><rect x="387" y="522" width="9" height="9" fill="blue"></rect><rect x="333" y="549" width="9" height="9" fill="blue"></rect><rect x="360" y="549" width="9" height="9" fill="blue"></rect><rect x="387" y="549" width="9" height="9" fill="blue"></rect><rect x="432" y="513" width="27" height="27" fill="blue"></rect><rect x="414" y="495" width="9" height="9" fill="blue"></rect><rect x="441" y="495" width="9" height="9" fill="blue"></rect><rect x="468" y="495" width="9" height="9" fill="blue"></rect><rect x="414" y="522" width="9" height="9" fill="blue"></rect><rect x="468" y="522" width="9" height="9" fill="blue"></rect><rect x="414" y="549" width="9" height="9" fill="blue"></rect><rect x="441" y="549" width="9" height="9" fill="blue"></rect><rect x="468" y="549" width="9" height="9" fill="blue"></rect><rect x="270" y="594" width="27" height="27" fill="blue"></rect><rect x="252" y="576" width="9" height="9" fill="blue"></rect><rect x="279" y="576" width="9" height="9" fill="blue"></rect><rect x="306" y="576" width="9" height="9" fill="blue"></rect><rect x="252" y="603" width="9" height="9" fill="blue"></rect><rect x="306" y="603" width="9" height="9" fill="blue"></rect><rect x="252" y="630" width="9" height="9" fill="blue"></rect><rect x="279" y="630" width="9" height="9" fill="blue"></rect><rect x="306" y="630" width="9" height="9" fill="blue"></rect><rect x="432" y="594" width="27" height="27" fill="blue"></rect><rect x="414" y="576" width="9" height="9" fill="blue"></rect><rect x="441" y="576" width="9" height="9" fill="blue"></rect><rect x="468" y="576" width="9" height="9" fill="blue"></rect><rect x="414" y="603" width="9" height="9" fill="blue"></rect><rect x="468" y="603" width="9" height="9" fill="blue"></rect><rect x="414" y="630" width="9" height="9" fill="blue"></rect><rect x="441" y="630" width="9" height="9" fill="blue"></rect><rect x="468" y="630" width="9" height="9" fill="blue"></rect><rect x="270" y="675" width="27" height="27" fill="blue"></rect><rect x="252" y="657" width="9" height="9" fill="blue"></rect><rect x="279" y="657" width="9" height="9" fill="blue"></rect><rect x="306" y="657" width="9" height="9" fill="blue"></rect><rect x="252" y="684" width="9" height="9" fill="blue"></rect><rect x="306" y="684" width="9" height="9" fill="blue"></rect><rect x="252" y="711" width="9" height="9" fill="blue"></rect><rect x="279" y="711" width="9" height="9" fill="blue"></rect><rect x="306" y="711" width="9" height="9" fill="blue"></rect><rect x="351" y="675" width="27" height="27" fill="blue"></rect><rect x="333" y="657" width="9" height="9" fill="blue"></rect><rect x="360" y="657" width="9" height="9" fill="blue"></rect><rect x="387" y="657" width="9" height="9" fill="blue"></rect><rect x="333" y="684" width="9" height="9" fill="blue"></rect><rect x="387" y="684" width="9" height="9" fill="blue"></rect><rect x="333" y="711" width="9" height="9" fill="blue"></rect><rect x="360" y="711" width="9" height="9" fill="blue"></rect><rect x="387" y="711" width="9" height="9" fill="blue"></rect><rect x="432" y="675" width="27" height="27" fill="blue"></rect><rect x="414" y="657" width="9" height="9" fill="blue"></rect><rect x="441" y="657" width="9" height="9" fill="blue"></rect><rect x="468" y="657" width="9" height="9" fill="blue"></rect><rect x="414" y="684" width="9" height="9" fill="blue"></rect><rect x="468" y="684" width="9" height="9" fill="blue"></rect><rect x="414" y="711" width="9" height="9" fill="blue"></rect><rect x="441" y="711" width="9" height="9" fill="blue"></rect><rect x="468" y="711" width="9" height="9" fill="blue"></rect><rect x="567" y="567" width="81" height="81" fill="blue"></rect><rect x="513" y="513" width="27" height="27" fill="blue"></rect><rect x="495" y="495" width="9" height="9" fill="blue"></rect><rect x="522" y="495" width="9" height="9" fill="blue"></rect><rect x="549" y="495" width="9" height="9" fill="blue"></rect><rect x="495" y="522" width="9" height="9" fill="blue"></rect><rect x="549" y="522" width="9" height="9" fill="blue"></rect><rect x="495" y="549" width="9" height="9" fill="blue"></rect><rect x="522" y="549" width="9" height="9" fill="blue"></rect><rect x="549" y="549" width="9" height="9" fill="blue"></rect><rect x="594" y="513" width="27" height="27" fill="blue"></rect><rect x="576" y="495" width="9" height="9" fill="blue"></rect><rect x="603" y="495" width="9" height="9" fill="blue"></rect><rect x="630" y="495" width="9" height="9" fill="blue"></rect><rect x="576" y="522" width="9" height="9" fill="blue"></rect><rect x="630" y="522" width="9" height="9" fill="blue"></rect><rect x="576" y="549" width="9" height="9" fill="blue"></rect><rect x="603" y="549" width="9" height="9" fill="blue"></rect><rect x="630" y="549" width="9" height="9" fill="blue"></rect><rect x="675" y="513" width="27" height="27" fill="blue"></rect><rect x="657" y="495" width="9" height="9" fill="blue"></rect><rect x="684" y="495" width="9" height="9" fill="blue"></rect><rect x="711" y="495" width="9" height="9" fill="blue"></rect><rect x="657" y="522" width="9" height="9" fill="blue"></rect><rect x="711" y="522" width="9" height="9" fill="blue"></rect><rect x="657" y="549" width="9" height="9" fill="blue"></rect><rect x="684" y="549" width="9" height="9" fill="blue"></rect><rect x="711" y="549" width="9" height="9" fill="blue"></rect><rect x="513" y="594" width="27" height="27" fill="blue"></rect><rect x="495" y="576" width="9" height="9" fill="blue"></rect><rect x="522" y="576" width="9" height="9" fill="blue"></rect><rect x="549" y="576" width="9" height="9" fill="blue"></rect><rect x="495" y="603" width="9" height="9" fill="blue"></rect><rect x="549" y="603" width="9" height="9" fill="blue"></rect><rect x="495" y="630" width="9" height="9" fill="blue"></rect><rect x="522" y="630" width="9" height="9" fill="blue"></rect><rect x="549" y="630" width="9" height="9" fill="blue"></rect><rect x="675" y="594" width="27" height="27" fill="blue"></rect><rect x="657" y="576" width="9" height="9" fill="blue"></rect><rect x="684" y="576" width="9" height="9" fill="blue"></rect><rect x="711" y="576" width="9" height="9" fill="blue"></rect><rect x="657" y="603" width="9" height="9" fill="blue"></rect><rect x="711" y="603" width="9" height="9" fill="blue"></rect><rect x="657" y="630" width="9" height="9" fill="blue"></rect><rect x="684" y="630" width="9" height="9" fill="blue"></rect><rect x="711" y="630" width="9" height="9" fill="blue"></rect><rect x="513" y="675" width="27" height="27" fill="blue"></rect><rect x="495" y="657" width="9" height="9" fill="blue"></rect><rect x="522" y="657" width="9" height="9" fill="blue"></rect><rect x="549" y="657" width="9" height="9" fill="blue"></rect><rect x="495" y="684" width="9" height="9" fill="blue"></rect><rect x="549" y="684" width="9" height="9" fill="blue"></rect><rect x="495" y="711" width="9" height="9" fill="blue"></rect><rect x="522" y="711" width="9" height="9" fill="blue"></rect><rect x="549" y="711" width="9" height="9" fill="blue"></rect><rect x="594" y="675" width="27" height="27" fill="blue"></rect><rect x="576" y="657" width="9" height="9" fill="blue"></rect><rect x="603" y="657" width="9" height="9" fill="blue"></rect><rect x="630" y="657" width="9" height="9" fill="blue"></rect><rect x="576" y="684" width="9" height="9" fill="blue"></rect><rect x="630" y="684" width="9" height="9" fill="blue"></rect><rect x="576" y="711" width="9" height="9" fill="blue"></rect><rect x="603" y="711" width="9" height="9" fill="blue"></rect><rect x="630" y="711" width="9" height="9" fill="blue"></rect><rect x="675" y="675" width="27" height="27" fill="blue"></rect><rect x="657" y="657" width="9" height="9" fill="blue"></rect><rect x="684" y="657" width="9" height="9" fill="blue"></rect><rect x="711" y="657" width="9" height="9" fill="blue"></rect><rect x="657" y="684" width="9" height="9" fill="blue"></rect><rect x="711" y="684" width="9" height="9" fill="blue"></rect><rect x="657" y="711" width="9" height="9" fill="blue"></rect><rect x="684" y="711" width="9" height="9" fill="blue"></rect><rect x="711" y="711" width="9" height="9" fill="blue"></rect></svg></p>
+<p>... nå tar det så lang tid på min PC at jeg ikke gidder lenger inn!</p>
+<p>Prøv videre selv, så kommer jeg tilbake til neste uke.</p>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Elm: Fraktaler og datastrukturer&amp;body=Beskriv ditt problem..." class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/elm/10_fraktaler" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong data-i18n="html=layout.license">Lisens</strong><strong>:</strong></p><a rel="license" data-i18n="href=layout.licenseUrl" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong data-i18n="html=layout.author">Forfatter</strong><strong>:</strong></p><p>Teodor Heggelund</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 data-i18n="html=layout.greeting" class="modal-title">Hei der!</h4></div><div class="modal-body"><p data-i18n="html=layout.askTour">Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button data-i18n="html=layout.yes" class="btn btn-success">Ja!</button><button data-dismiss="modal" data-i18n="html=layout.no" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
