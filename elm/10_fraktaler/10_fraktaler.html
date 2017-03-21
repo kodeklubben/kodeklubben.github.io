@@ -221,7 +221,7 @@ kan også lage veldig store tall, som 1000 * 1000 * 1000 * 1000 * 10000</p>
 <p>Vi kan binde flere navn som kan være avhengig av hverandre:</p>
 <pre><code class="elm"><span class="hljs-title">describeHalfAge</span> yearNow yearBorn =
   <span class="hljs-keyword">let</span> age = yearNow - yearBorn
-      halfAge / <span class="hljs-number">2</span>
+      halfAge = age / <span class="hljs-number">2</span>
   <span class="hljs-keyword">in</span> <span class="hljs-string">"Half the age is "</span> ++ (toString halfAge)
 </code></pre>
 <section class="check" id="sjekkliste-6">
@@ -245,53 +245,45 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 </code></pre>
 <p>Du skal kunne bruke den slik:</p>
 <pre><code>&gt; centerSquare
-&lt;function&gt; : Utils.Square -&gt; Utils.Square
-&gt; centerSquare start
-{ <span class="hljs-built_in">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-variable">width</span> = <span class="hljs-number">9</span>, corner = { x = <span class="hljs-number">9</span>, y = <span class="hljs-number">9</span> } } : Utils.Square
-`
-
-... hva må x-verdien være om det nye kvadratet skal være i sentrum av det forrige?
-
-&lt;svg <span class="hljs-variable">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-variable">height</span>=<span class="hljs-string">"500"</span> viewBox=<span class="hljs-string">"0 0 27 27"</span>&gt;&lt;<span class="hljs-built_in">rect</span> x=<span class="hljs-string">"0"</span> y=<span class="hljs-string">"0"</span> <span class="hljs-variable">width</span>=<span class="hljs-string">"27"</span> <span class="hljs-variable">height</span>=<span class="hljs-string">"27"</span> <span class="hljs-built_in">fill</span>=<span class="hljs-string">"blue"</span>&gt;&lt;/<span class="hljs-built_in">rect</span>&gt;&lt;<span class="hljs-built_in">rect</span> x=<span class="hljs-string">"9"</span> y=<span class="hljs-string">"9"</span> <span class="hljs-variable">width</span>=<span class="hljs-string">"9"</span> <span class="hljs-variable">height</span>=<span class="hljs-string">"9"</span> <span class="hljs-built_in">fill</span>=<span class="hljs-string">"green"</span>&gt;&lt;/<span class="hljs-built_in">rect</span>&gt;&lt;/svg&gt;
-
-# Steg <span class="hljs-number">6</span>: Funksjoner fra `List` og `<span class="hljs-keyword">String</span>` {.activity}
-
-`List.<span class="hljs-built_in">map</span>` kjører en funksjon på hvert element i en liste. Eksempel:
-
+&lt;<span class="hljs-keyword">function</span>&gt; : Utils.Square -&gt; Utils.Square
+&gt; centerSquare <span class="hljs-keyword">start</span>
+{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">9</span>, corner = { x = <span class="hljs-number">9</span>, y = <span class="hljs-number">9</span> } } : Utils.Square
 </code></pre>
-<blockquote>
-<p>add1 x = x + 1
-<function> : number -&gt; number
-List.map add1 [10, 20, 30]
-[11,21,31] : List number
-times2 x = x * 2
-<function> : number -&gt; number
-List.map times2 [10, 20, 30]
-[20,40,60] : List number</p>
-</blockquote>
-<pre><code>
-<span class="hljs-header">## Sjekkliste {.check}</span>
-
-<span class="hljs-bullet">- </span>Les avnsitet om <span class="hljs-code">`List.map`</span> i [<span class="hljs-link_label">dokumentasjonen til List</span>](<span class="hljs-link_url">http://package.elm-lang.org/packages/elm-lang/core/latest/List#map</span>).
-<span class="hljs-bullet">- </span>Bruk <span class="hljs-code">`List.map`</span> til å lage listen <span class="hljs-code">`["1","2","3","4"]`</span>
-
-<span class="hljs-code">`List.range`</span> kan lage en liste med tall. Eksempel:
-
+<p>... hva må x-verdien være om det nye kvadratet skal være i sentrum av det forrige?</p>
+<p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect></svg></p>
+</section>
+</section>
+<section class="activity" id="steg-6-funksjoner-fra-list-og-string">
+<h1 class="activity" id="steg-6-funksjoner-fra-list-og-string">Steg 6: Funksjoner fra <code>List</code> og <code>String</code></h1>
+<p><code>List.map</code> kjører en funksjon på hvert element i en liste. Eksempel:</p>
+<pre><code>&gt; add1 x = x + <span class="hljs-number">1</span>
+&lt;function&gt; : number -&gt; number
+&gt; List.<span class="hljs-built_in">map</span> add1 [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+[<span class="hljs-number">11</span>,<span class="hljs-number">21</span>,<span class="hljs-number">31</span>] : List number
+&gt; times2 x = x * <span class="hljs-number">2</span>
+&lt;function&gt; : number -&gt; number
+&gt; List.<span class="hljs-built_in">map</span> times2 [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+[<span class="hljs-number">20</span>,<span class="hljs-number">40</span>,<span class="hljs-number">60</span>] : List number
 </code></pre>
-<blockquote>
-<p>List.map toString (List.range 1 4)
-[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;] : List String
-List.range 5 10
-[5,6,7,8,9,10] : List Int
-List.range 0 3
-[0,1,2,3] : List Int</p>
-</blockquote>
-<pre><code>
-- Les avsnittet om `<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span>` i [dokumentasjonen til <span class="hljs-keyword">List</span>](http:<span class="hljs-comment">//package.elm-lang.org/packages/elm-lang/core/latest/List#range)</span>
-- Bruk `<span class="hljs-keyword">List</span>.map` og `<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span>` til å lage denne store listen:
-
-```elm
-[<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>,<span class="hljs-string">"5"</span>,<span class="hljs-string">"6"</span>,<span class="hljs-string">"7"</span>,<span class="hljs-string">"8"</span>,<span class="hljs-string">"9"</span>,<span class="hljs-string">"10"</span>,<span class="hljs-string">"11"</span>,<span class="hljs-string">"12"</span>,<span class="hljs-string">"13"</span>,<span class="hljs-string">"14"</span>
+<section class="check" id="sjekkliste-7">
+<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
+<ul>
+<li>Les avnsitet om <code>List.map</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/List#map">dokumentasjonen til List</a>.</li>
+<li>Bruk <code>List.map</code> til å lage listen <code>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;]</code></li>
+</ul>
+<p><code>List.range</code> kan lage en liste med tall. Eksempel:</p>
+<pre><code>&gt; <span class="hljs-keyword">List</span>.map <span class="hljs-keyword">toString</span> (<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 1 4)
+[<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>] : <span class="hljs-keyword">List</span> <span class="hljs-literal">String</span>
+&gt; <span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 5 10
+[5,6,7,8,9,10] : <span class="hljs-keyword">List</span> Int
+&gt; <span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 0 3
+[0,1,2,3] : <span class="hljs-keyword">List</span> Int
+</code></pre>
+<ul>
+<li>Les avsnittet om <code>List.range</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/List#range">dokumentasjonen til List</a></li>
+<li>Bruk <code>List.map</code> og <code>List.range</code> til å lage denne store listen:</li>
+</ul>
+<pre><code class="elm">[<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>,<span class="hljs-string">"5"</span>,<span class="hljs-string">"6"</span>,<span class="hljs-string">"7"</span>,<span class="hljs-string">"8"</span>,<span class="hljs-string">"9"</span>,<span class="hljs-string">"10"</span>,<span class="hljs-string">"11"</span>,<span class="hljs-string">"12"</span>,<span class="hljs-string">"13"</span>,<span class="hljs-string">"14"</span>
 ,<span class="hljs-string">"15"</span>,<span class="hljs-string">"16"</span>,<span class="hljs-string">"17"</span>,<span class="hljs-string">"18"</span>,<span class="hljs-string">"19"</span>,<span class="hljs-string">"20"</span>,<span class="hljs-string">"21"</span>,<span class="hljs-string">"22"</span>,<span class="hljs-string">"23"</span>,<span class="hljs-string">"24"</span>,<span class="hljs-string">"25"</span>,<span class="hljs-string">"26"</span>,<span class="hljs-string">"27"</span>
 ,<span class="hljs-string">"28"</span>,<span class="hljs-string">"29"</span>,<span class="hljs-string">"30"</span>]
 </code></pre>
@@ -314,8 +306,8 @@ en liste.</p>
 <p>Nå skal vi finne kvadratene langs kanten. Hvor mange blir det? Tell de røde:</p>
 <p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect><rect x="3" y="3" width="3" height="3" fill="red"></rect><rect x="12" y="3" width="3" height="3" fill="red"></rect><rect x="21" y="3" width="3" height="3" fill="red"></rect><rect x="3" y="12" width="3" height="3" fill="red"></rect><rect x="21" y="12" width="3" height="3" fill="red"></rect><rect x="3" y="21" width="3" height="3" fill="red"></rect><rect x="12" y="21" width="3" height="3" fill="red"></rect><rect x="21" y="21" width="3" height="3" fill="red"></rect></svg></p>
 <p><strong>Obs!</strong> Denne er en utfording. Ta deg god tid.</p>
-<section class="check" id="sjekkliste-7">
-<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
+<section class="check" id="sjekkliste-8">
+<h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
 <ul>
 <li>Lag funksjonen <code>borderSquares</code>. Denne skal vi kunne bruke slik:</li>
 </ul>
