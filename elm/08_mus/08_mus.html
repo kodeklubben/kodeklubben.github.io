@@ -39,7 +39,7 @@ som vi tidligere lyttet på tid.</p>
 <span class="hljs-title">main</span> =
     view model
 
-<span class="hljs-title">view</span> model = 
+<span class="hljs-title">view</span> model =
     svg
       [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 200 200"</span> ]
       [ circle [ cx (toString model.position.x)
@@ -99,7 +99,7 @@ noe.</p>
     }
 
 
-<span class="hljs-title">view</span> model = 
+<span class="hljs-title">view</span> model =
     svg
       [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 200 200"</span> ]
       [ circle [ cx (toString model.position.x)
@@ -114,14 +114,14 @@ noe.</p>
 <span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =</span>
   { position : <span class="hljs-type">Position</span>
   }
-  
+
 
 <span class="hljs-title">update</span> : <span class="hljs-type">Msg</span> -&gt; <span class="hljs-type">Model</span> -&gt; (<span class="hljs-type">Model</span>, <span class="hljs-type">Cmd</span> <span class="hljs-type">Msg</span>)
 <span class="hljs-title">update</span> msg model =
   (model, <span class="hljs-type">Cmd</span>.none)
 
 
-<span class="hljs-title">subscriptions</span> model = 
+<span class="hljs-title">subscriptions</span> model =
   <span class="hljs-type">Sub</span>.batch [ <span class="hljs-type">Mouse</span>.moves <span class="hljs-type">DragAt</span>, <span class="hljs-type">Mouse</span>.ups <span class="hljs-type">DragEnd</span> ]
 </code></pre>
 </section>
@@ -154,7 +154,7 @@ noe.</p>
     }
 
 
-<span class="hljs-title">view</span> model = 
+<span class="hljs-title">view</span> model =
     svg
       [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 200 200"</span> ]
       [ circle [ cx (toString model.position.x)
@@ -170,7 +170,7 @@ noe.</p>
 <span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =</span>
   { position : <span class="hljs-type">Position</span>
   }
-  
+
 
 <span class="hljs-title">update</span> : <span class="hljs-type">Msg</span> -&gt; <span class="hljs-type">Model</span> -&gt; (<span class="hljs-type">Model</span>, <span class="hljs-type">Cmd</span> <span class="hljs-type">Msg</span>)
 <span class="hljs-title">update</span> msg model =
@@ -181,7 +181,7 @@ noe.</p>
 
 
 <span class="hljs-title">subscriptions</span> model =
-  <span class="hljs-type">Sub</span>.batch [<span class="hljs-type">Mouse</span>.moves <span class="hljs-type">MouseAt</span>] 
+  <span class="hljs-type">Sub</span>.batch [<span class="hljs-type">Mouse</span>.moves <span class="hljs-type">MouseAt</span>]
 </code></pre>
 <p>Her er det noe rart! Ballen er ikke samme sted som pekeren. Hvorfor?</p>
 <ul>
