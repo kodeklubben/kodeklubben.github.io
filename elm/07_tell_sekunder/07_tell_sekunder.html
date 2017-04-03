@@ -116,8 +116,8 @@ når vi starter opp</li>
 <section class="activity" id="steg-1-en-sekundteller">
 <h1 class="activity" id="steg-1-en-sekundteller">Steg 1: En sekundteller</h1>
 <p>Her er en enkel sekundteller:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, text)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Time <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Time</span>, second)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, text)
+<span class="hljs-keyword">import</span> Time <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Time</span>, second)
 
 
 
@@ -132,7 +132,7 @@ når vi starter opp</li>
 
 <span class="hljs-comment">-- MODEL</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =</span>
+<span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =
   { count : <span class="hljs-type">Int</span>
   }
 
@@ -147,7 +147,7 @@ når vi starter opp</li>
 
 <span class="hljs-comment">-- UPDATE</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span></span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span>
   = <span class="hljs-type">Tick</span> <span class="hljs-type">Time</span>
 
 
@@ -185,7 +185,7 @@ når vi starter opp</li>
 <p>Hva skjedde med modellen?</p>
 <pre><code class="elm"><span class="hljs-comment">-- MODEL</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =</span>
+<span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =
   { count : <span class="hljs-type">Int</span>
   }
 
@@ -215,7 +215,7 @@ du <code>Cmd.none</code>, som betyr &quot;gjør ingenting&quot;.</p>
 <h1 class="activity" id="oppdatere-telleren">Oppdatere telleren</h1>
 <pre><code class="elm"><span class="hljs-comment">-- UPDATE</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span></span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span>
   = <span class="hljs-type">Tick</span> <span class="hljs-type">Time</span>
 
 
@@ -259,7 +259,7 @@ i
 <li>Hva skjer om du abonnerer på millisekunder?</li>
 </ul>
 <p>Øverst i <code>Time-modulen</code> finner vi:</p>
-<pre><code class="elm"><span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Time</span> =</span>
+<pre><code class="elm"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Time</span> =
     <span class="hljs-type">Float</span>
 </code></pre>
 <p>Dette betyr at tid bare er et tall. Disse kan vi plusse og dele!</p>

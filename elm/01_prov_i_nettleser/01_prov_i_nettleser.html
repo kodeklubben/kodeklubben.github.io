@@ -29,7 +29,7 @@ i Web-kurset først om du ikke har hørt om HTML før.</p>
 <p>Hmm! Det gjorde ikke så mye. Skrev kun ut &quot;Hello, World!&quot; La oss gjøre det
 litt mer spennende, og lære Elm norsk. Jeg heter Teodor, så jeg endrer
 programmet til følgende:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(text)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (text)
 
 <span class="hljs-title">main</span> =
   text <span class="hljs-string">"Hei, Teodor! Godt å se deg!"</span>
@@ -54,11 +54,11 @@ være inne i andre elementer. Eksempel:</p>
 </ul>
 <p><code>div</code>-elementet inneholder tre elementer: <code>h1</code>, <code>p</code> og <code>p</code>.</p>
 <p>Dette ser slik ut i HTML:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Stor overskrift<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Første avsnitt.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Andre avsnitt.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Stor overskrift<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Første avsnitt.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Andre avsnitt.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>og slik ut i Elm:</p>
 <pre><code class="elm"><span class="hljs-title">div</span> []

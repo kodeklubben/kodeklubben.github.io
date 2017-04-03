@@ -51,8 +51,8 @@ er det helt greit.</p>
 <ul>
 <li>Lim inn dette i kodefeltet:</li>
 </ul>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, circle, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, cx, cy, r, fill, x, y, width, height)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
 
 
 <span class="hljs-title">main</span> =
@@ -103,8 +103,8 @@ følgende: <code>C:\Users\teodor\Desktop\Elm&gt;</code></p>
 <h2 class="check" id="importere-moduler">Importere moduler</h2>
 <p>Tidligere har vi brukt pakken <strong>Html</strong> og importert funksjoner som <code>p</code> for
 avsnitt og <code>h1</code> for overskrifter.</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, circle, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, cx, cy, r, fill, x, y, width, height)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
 </code></pre>
 <p>Nå bruker vi pakken <strong>Svg</strong> og importerer funksjoner som <code>circle</code> for sirkel og
 <code>rect</code> for rektangler.</p>
@@ -288,18 +288,18 @@ du hvordan du importerer moduler?</li>
 <h2 class="protip" id="hvordan-a-importere-funksjoner-fra-moduler">Hvordan å importere funksjoner fra moduler</h2>
 <p>I Elm bygger vi opp funksjoner. Vi kan importere en modul, og bruke funksjoner
 fra modulen:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html
 
 <span class="hljs-title">main</span> = <span class="hljs-type">Html</span>.text <span class="hljs-string">"Hello!"</span>
 </code></pre>
 <p>Vi kan også importere funksjoner direkte fra en modul:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(text)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (text)
 
 <span class="hljs-title">main</span> = text <span class="hljs-string">"Hello!"</span>
 </code></pre>
 <p>For å importere mange funksjoner fra samme modul, legger vi komma mellom
 funksjonene:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(text, h1, p, ul, li)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (text, h1, p, ul, li)
 <span class="hljs-comment">-- ...</span>
 </code></pre>
 </section>
@@ -437,9 +437,9 @@ ha forskjellig radius i x- og y-retning.</p>
 <section class="activity" id="svg-inne-i-et-html-dokument">
 <h1 class="activity" id="svg-inne-i-et-html-dokument">Svg inne i et Html-dokument</h1>
 <p>Det går an å skrive Svg inne i et Html-dokument. Her er et eksempel:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, circle, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, cx, cy, r, fill, x, y, width, height)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(text, div, h1, p)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
+<span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (text, div, h1, p)
 
 
 <span class="hljs-title">main</span> =

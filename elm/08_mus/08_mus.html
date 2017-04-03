@@ -22,10 +22,10 @@ ting som har vært i tidligere oppgaver:</p>
 <p>Vi trenger <code>Html.program</code> fordi vi skal lytte på musebevegelser på samme måte
 som vi tidligere lyttet på tid.</p>
 <p>Først setter vi opp SVG til å vise en ball vi kan styre posisjonen til:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, circle, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, cx, cy, r, fill, x, y, width, height)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
 
-<span class="hljs-import"><span class="hljs-keyword">import</span> Mouse <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Position</span>)</span></span>
+<span class="hljs-keyword">import</span> Mouse <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Position</span>)
 
 
 <span class="hljs-title">p</span> = <span class="hljs-type">Position</span> <span class="hljs-number">10</span> <span class="hljs-number">20</span>
@@ -73,11 +73,11 @@ har vi allerede skrevet. La oss fylle inn update og subscriptions som ikke gjør
 noe.</p>
 <p>Vi legger inn en variant hvor <code>update</code> gir tilbake modellen uendret, og
 <code>subscriptions</code> ignorerer alt som kommer inn:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, circle, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, cx, cy, r, fill, x, y, width, height)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
 
-<span class="hljs-import"><span class="hljs-keyword">import</span> Mouse <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Position</span>)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html</span>
+<span class="hljs-keyword">import</span> Mouse <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Position</span>)
+<span class="hljs-keyword">import</span> Html
 
 
 <span class="hljs-title">p</span> = <span class="hljs-type">Position</span> <span class="hljs-number">10</span> <span class="hljs-number">20</span>
@@ -108,10 +108,10 @@ noe.</p>
       ]
 
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> =</span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> =
   <span class="hljs-type">NoChange</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =</span>
+<span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =
   { position : <span class="hljs-type">Position</span>
   }
 
@@ -128,11 +128,11 @@ noe.</p>
 <section class="activity" id="steg-3-koble-pa-musen">
 <h1 class="activity" id="steg-3-koble-pa-musen">Steg 3: koble på musen</h1>
 <p>Vi kobler på mus:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, circle, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, cx, cy, r, fill, x, y, width, height)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
 
-<span class="hljs-import"><span class="hljs-keyword">import</span> Mouse <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Position</span>)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html</span>
+<span class="hljs-keyword">import</span> Mouse <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Position</span>)
+<span class="hljs-keyword">import</span> Html
 
 
 <span class="hljs-title">p</span> = <span class="hljs-type">Position</span> <span class="hljs-number">10</span> <span class="hljs-number">20</span>
@@ -163,11 +163,11 @@ noe.</p>
       ]
 
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> =</span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> =
   <span class="hljs-type">MouseAt</span> <span class="hljs-type">Position</span>
 
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =</span>
+<span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Model</span> =
   { position : <span class="hljs-type">Position</span>
   }
 

@@ -42,8 +42,8 @@ til Sierpinski-teppet. Se på animasjonen.</p>
 <p>Nå skal vi begynne å tegne kvadratene teppet:</p>
 <p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect><rect x="3" y="3" width="3" height="3" fill="green"></rect><rect x="12" y="3" width="3" height="3" fill="green"></rect><rect x="21" y="3" width="3" height="3" fill="green"></rect><rect x="3" y="12" width="3" height="3" fill="green"></rect><rect x="21" y="12" width="3" height="3" fill="green"></rect><rect x="3" y="21" width="3" height="3" fill="green"></rect><rect x="12" y="21" width="3" height="3" fill="green"></rect><rect x="21" y="21" width="3" height="3" fill="green"></rect></svg></p>
 <p>Ett kvadrat kan vi tegne slik:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, fill, x, y, width, height)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, fill, x, y, width, height)
 
 
 <span class="hljs-title">main</span> =
@@ -80,10 +80,10 @@ egne typer</em>. Vi kommer til å lage en type for punkter og en type for kvadra
 Finner du eksempelet for et punkt?</li>
 </ul>
 <p>Vi legger til en liten snutt i programmet vårt:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(div, text, h1)</span></span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (div, text, h1)
 
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> <span class="hljs-container">(svg, rect)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(width, height, viewBox, fill, x, y, width, height)</span></span>
+<span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, rect)
+<span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, fill, x, y, width, height)
 
 <span class="hljs-title">myPoint</span> =
     { x = <span class="hljs-number">9</span>
@@ -245,9 +245,9 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 </code></pre>
 <p>Du skal kunne bruke den slik:</p>
 <pre><code>&gt; centerSquare
-&lt;<span class="hljs-keyword">function</span>&gt; : Utils.Square -&gt; Utils.Square
-&gt; centerSquare <span class="hljs-keyword">start</span>
-{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">9</span>, corner = { x = <span class="hljs-number">9</span>, y = <span class="hljs-number">9</span> } } : Utils.Square
+&lt;function&gt; : Utils.Square -&gt; Utils.Square
+&gt; centerSquare start
+{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">9</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">9</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">9</span> } } : Utils.Square
 </code></pre>
 <p>... hva må x-verdien være om det nye kvadratet skal være i sentrum av det forrige?</p>
 <p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect></svg></p>
@@ -274,13 +274,13 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 <h1 class="activity" id="steg-6-funksjoner-fra-list-og-string">Steg 6: Funksjoner fra <code>List</code> og <code>String</code></h1>
 <p><code>List.map</code> kjører en funksjon på hvert element i en liste. Eksempel:</p>
 <pre><code>&gt; add1 x = x + <span class="hljs-number">1</span>
-&lt;function&gt; : number -&gt; number
-&gt; List.<span class="hljs-built_in">map</span> add1 [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
-[<span class="hljs-number">11</span>,<span class="hljs-number">21</span>,<span class="hljs-number">31</span>] : List number
+&lt;<span class="hljs-function"><span class="hljs-keyword">function</span></span>&gt; : <span class="hljs-keyword">number</span> -&gt; <span class="hljs-keyword">number</span>
+&gt; List.map add1 [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+[<span class="hljs-number">11</span>,<span class="hljs-number">21</span>,<span class="hljs-number">31</span>] : List <span class="hljs-keyword">number</span>
 &gt; times2 x = x * <span class="hljs-number">2</span>
-&lt;function&gt; : number -&gt; number
-&gt; List.<span class="hljs-built_in">map</span> times2 [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
-[<span class="hljs-number">20</span>,<span class="hljs-number">40</span>,<span class="hljs-number">60</span>] : List number
+&lt;<span class="hljs-function"><span class="hljs-keyword">function</span></span>&gt; : <span class="hljs-keyword">number</span> -&gt; <span class="hljs-keyword">number</span>
+&gt; List.map times2 [<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>]
+[<span class="hljs-number">20</span>,<span class="hljs-number">40</span>,<span class="hljs-number">60</span>] : List <span class="hljs-keyword">number</span>
 </code></pre>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
@@ -290,7 +290,7 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 </ul>
 <p><code>List.range</code> kan lage en liste med tall. Eksempel:</p>
 <pre><code>&gt; <span class="hljs-keyword">List</span>.map <span class="hljs-keyword">toString</span> (<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 1 4)
-[<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>] : <span class="hljs-keyword">List</span> <span class="hljs-literal">String</span>
+[<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>] : <span class="hljs-keyword">List</span> <span class="hljs-built_in">String</span>
 &gt; <span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 5 10
 [5,6,7,8,9,10] : <span class="hljs-keyword">List</span> Int
 &gt; <span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 0 3
@@ -310,11 +310,11 @@ en liste.</p>
 <li>Les dokumentasjonen til <code>String.join</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/String#join">dokumentasjonen til String</a></li>
 <li>Lag funksjonen <code>sayTo</code>. Den skal kunne brukes slik:</li>
 </ul>
-<pre><code>&gt; sayTo <span class="hljs-number">10</span>
-<span class="hljs-string">"1 og 2 og 3 og 4 og 5 og 6 og 7 og 8 og 9 og 10"</span> : <span class="hljs-keyword">String
-</span>&gt; sayTo <span class="hljs-number">3</span>
-<span class="hljs-string">"1 og 2 og 3"</span> : <span class="hljs-keyword">String
-</span></code></pre>
+<pre><code>&gt; sayTo 10
+"1 og<span class="hljs-number"> 2 </span>og<span class="hljs-number"> 3 </span>og<span class="hljs-number"> 4 </span>og<span class="hljs-number"> 5 </span>og<span class="hljs-number"> 6 </span>og<span class="hljs-number"> 7 </span>og<span class="hljs-number"> 8 </span>og<span class="hljs-number"> 9 </span>og 10" : String
+&gt; sayTo 3
+"1 og<span class="hljs-number"> 2 </span>og 3" : String
+</code></pre>
 <p>Bra! Gi deg selv en klapp på skulderen.</p>
 </section>
 </section>
@@ -329,16 +329,16 @@ en liste.</p>
 <li>Lag funksjonen <code>borderSquares</code>. Denne skal vi kunne bruke slik:</li>
 </ul>
 <pre><code>&gt; start
-{ color = <span class="hljs-string">"green"</span>, width = <span class="hljs-number">729</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">0</span> } } : Utils.Square
+{ <span class="hljs-attr">color</span> = <span class="hljs-string">"green"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">729</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">0</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">0</span> } } : Utils.Square
 &gt; borderSquares start
-[{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">0</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">243</span>, y = <span class="hljs-number">0</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">486</span>, y = <span class="hljs-number">0</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">243</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">486</span>, y = <span class="hljs-number">243</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">0</span>, y = <span class="hljs-number">486</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">243</span>, y = <span class="hljs-number">486</span> } }
-,{ color = <span class="hljs-string">"blue"</span>, width = <span class="hljs-number">243</span>, corner = { x = <span class="hljs-number">486</span>, y = <span class="hljs-number">486</span> } }]
+[{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">0</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">0</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">0</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">486</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">0</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">0</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">243</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">486</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">243</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">0</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">486</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">486</span> } }
+,{ <span class="hljs-attr">color</span> = <span class="hljs-string">"blue"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">243</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">486</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">486</span> } }]
     : List Utils.Square
 </code></pre>
 <p>Får du til? Prøv selv først.</p>
@@ -404,10 +404,10 @@ firkanter.</p>
 <ul>
 <li>
 <p>Lag filen Tall.elm. Legg inn dette i toppen:</p>
-<pre><code class="elm"><span class="hljs-module"><span class="hljs-keyword">module</span> Tall exposing <span class="hljs-container">(..)</span>
+<pre><code class="elm"><span class="hljs-keyword">module</span> Tall <span class="hljs-keyword">exposing</span> (..)
 
-hei = "Hei!"
-</span></code></pre>
+<span class="hljs-title">hei</span> = <span class="hljs-string">"Hei!"</span>
+</code></pre>
 </li>
 <li>
 <p>Start <code>elm repl</code> fra kommandovindu i samme mappe</p>
@@ -506,7 +506,7 @@ begynnelsen, og gir tilbake alle mulighetene.</li>
 
             <span class="hljs-comment">-- Funksjon som tar inn en start og lager alle sluttene.</span>
             <span class="hljs-comment">-- Hvorfor bruker vi n-1? Hva skjer om vi bruker n i stedet?</span>
-            fortsett nyStart = sifreAvLengde (n-<span class="hljs-number">1</span>) nyStart
+            fortsett nyStart = sifreAvLengde (n<span class="hljs-number">-1</span>) nyStart
 
             <span class="hljs-comment">-- Lager listene med fortsettelser for 0, 1, 2, ..., i hver sin liste</span>
             fortsettelser = <span class="hljs-type">List</span>.map fortsett starter
@@ -539,7 +539,7 @@ koden litt:</p>
 
             <span class="hljs-comment">-- Funksjon som tar inn en start og lager alle sluttene.</span>
             <span class="hljs-comment">-- Hvorfor bruker vi n-1? Hva skjer om vi bruker n i stedet?</span>
-            fortsett nyStart = sifreAvLengde (n-<span class="hljs-number">1</span>) nyStart
+            fortsett nyStart = sifreAvLengde (n<span class="hljs-number">-1</span>) nyStart
 
         <span class="hljs-comment">-- Slår sammen fortsettelsene i én liste</span>
         <span class="hljs-keyword">in</span> <span class="hljs-type">List</span>.concat (<span class="hljs-type">List</span>.map fortsett starter)
@@ -558,7 +558,7 @@ Da kan vi korte ned litt til:</p>
 
             <span class="hljs-comment">-- Funksjon som tar inn en start og lager alle sluttene.</span>
             <span class="hljs-comment">-- Hvorfor bruker vi n-1? Hva skjer om vi bruker n i stedet?</span>
-            fortsett nyStart = sifreAvLengde (n-<span class="hljs-number">1</span>) nyStart
+            fortsett nyStart = sifreAvLengde (n<span class="hljs-number">-1</span>) nyStart
 
         <span class="hljs-comment">-- Slår sammen fortsettelsene i én liste</span>
         <span class="hljs-keyword">in</span> <span class="hljs-type">List</span>.concatMap fortsett starter

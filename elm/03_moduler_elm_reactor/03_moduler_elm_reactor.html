@@ -23,7 +23,7 @@ i <a href="../02_funksjoner_elm_repl/02_funksjoner_elm_repl.html">oppgave 2</a>.
 <li>Lag en ny fil.</li>
 <li>Fyll inn dette i filen:</li>
 </ul>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html
 
 <span class="hljs-title">main</span> = <span class="hljs-type">Html</span>.text <span class="hljs-string">"Hei, verden!"</span>
 </code></pre>
@@ -35,7 +35,7 @@ i <a href="../02_funksjoner_elm_repl/02_funksjoner_elm_repl.html">oppgave 2</a>.
 <li>Om du har gjort <a href="../02_funksjoner_elm_repl/02_funksjoner_elm_repl.html">oppgave 2</a>, kan du nå åpne kommandolinjen og skrive inn <code>elm reactor</code>:</li>
 </ul>
 <pre><code>elm-reactor <span class="hljs-number">0.18</span><span class="hljs-number">.0</span>
-Listening on http:<span class="hljs-comment">//localhost:8000/</span>
+Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">//localhost:8000/</span>
 </code></pre>
 <p>Det betyr at Elm venter på at du skal åpne <a href="http://localhost:8000/">http://localhost:8000/</a> i en nettleser. Finn så igjen filen <code>hei.elm</code>.</p>
 <p><figure><img src="file_navigation.png" alt=""></figure></p>
@@ -65,16 +65,16 @@ Listening on http:<span class="hljs-comment">//localhost:8000/</span>
 <section class="activity" id="nar-noe-gar-galt">
 <h1 class="activity" id="nar-noe-gar-galt">Når noe går galt</h1>
 <p>Elm prøver så godt den kan å hjelpe oss å skrive korrekte programmer. Når vi har gjort noe rart, sier den ifra. Endre <code>oppgave1a.elm</code> til følgende:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html
 
 <span class="hljs-title">main</span> = <span class="hljs-type">Html</span>.taxt <span class="hljs-string">"Hei, verden!"</span>
 </code></pre>
 <p>Elm svarer følgende:</p>
-<pre><code>Cannot find variable <span class="hljs-escape">`H</span>tml.taxt<span class="hljs-escape">`.</span>
+<pre><code>Cannot find variable `Html.taxt`.
 
 <span class="hljs-number">3</span>| main = Html.taxt <span class="hljs-string">"Hei, verden!"</span>
           ^^^^^^^^^
-<span class="hljs-escape">`H</span>tml<span class="hljs-escape">` </span>does <span class="hljs-literal">not</span> expose <span class="hljs-escape">`t</span>axt<span class="hljs-escape">`.</span> Maybe you want one of the following?
+`Html` does <span class="hljs-literal">not</span> expose `taxt`. Maybe you want one of the following?
 
     Html.text
 </code></pre>
@@ -94,8 +94,8 @@ Listening on http:<span class="hljs-comment">//localhost:8000/</span>
 <ul>
 <li>Skriv inn dette i starten av filen:</li>
 </ul>
-<pre><code class="elm">  <span class="hljs-module"><span class="hljs-keyword">module</span> Knapper exposing <span class="hljs-container">(..)</span>
-</span></code></pre>
+<pre><code class="elm">  <span class="hljs-keyword">module</span> Knapper <span class="hljs-keyword">exposing</span> (..)
+</code></pre>
 <p>Filen <code>Knapper.elm</code> inneholder nå en modul kalt <code>Knapper</code>!</p>
 <ul>
 <li>Prøv å åpne <code>localhost:8000/Knapper.elm</code></li>
@@ -104,16 +104,16 @@ Listening on http:<span class="hljs-comment">//localhost:8000/</span>
 <ul>
 <li>Legg til en knapp i modulen:</li>
 </ul>
-<pre><code class="elm">  <span class="hljs-module"><span class="hljs-keyword">module</span> Knapper exposing <span class="hljs-container">(..)</span>
-  import Html exposing <span class="hljs-container">(button, text)</span>
+<pre><code class="elm">  <span class="hljs-keyword">module</span> Knapper <span class="hljs-keyword">exposing</span> (..)
+  <span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (button, text)
 
-  okKnapp = button [] [text "Ok!"]
-</span></code></pre>
+  okKnapp = button [] [text <span class="hljs-string">"Ok!"</span>]
+</code></pre>
 <p><code>import Html exposing (button, text)</code> importerer <em>Html-modulen</em>, som gjør at vi kan bruke Html-elementer i modulen vår. Siden vi skal bruke elementene <code>button</code> for å lage en knapp og <code>text</code> for å legge tekst på knappen, må vi legge til <code>(button, text)</code> når vi importerer Html-modulen.</p>
 <ul>
 <li>Legg til den nye knappen i filen fra forrige oppgave</li>
 </ul>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Knapper</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Knapper
 
 <span class="hljs-title">main</span> = <span class="hljs-type">Knapper</span>.okKnapp
 </code></pre>
@@ -121,21 +121,21 @@ Listening on http:<span class="hljs-comment">//localhost:8000/</span>
 <ul>
 <li>Legg til en ekstra stilig knapp</li>
 </ul>
-<pre><code class="elm">  module Knapper exposing (..)
-  import Html exposing (button, text)
-  import Html.Attributes exposing (..)
+<pre><code class="elm">  <span class="hljs-keyword">module</span> Knapper <span class="hljs-keyword">exposing</span> (..)
+  <span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (button, text)
+  <span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
 
-  okKnapp = button [] [text "Ok!"]
-  stiligKnapp = button [styling] [text "Stilig!"]
+  okKnapp = button [] [text <span class="hljs-string">"Ok!"</span>]
+  stiligKnapp = button [styling] [text <span class="hljs-string">"Stilig!"</span>]
 
   styling =
     style
-      [ ("border-radius", "100%")
-      , ("padding", "10px")
-      , ("font-size", "5em")
-      , ("text-align", "center")
-      , ("background", "red")
-      , ("color", "blue")
+      [ (<span class="hljs-string">"border-radius"</span>, <span class="hljs-string">"100%"</span>)
+      , (<span class="hljs-string">"padding"</span>, <span class="hljs-string">"10px"</span>)
+      , (<span class="hljs-string">"font-size"</span>, <span class="hljs-string">"5em"</span>)
+      , (<span class="hljs-string">"text-align"</span>, <span class="hljs-string">"center"</span>)
+      , (<span class="hljs-string">"background"</span>, <span class="hljs-string">"red"</span>)
+      , (<span class="hljs-string">"color"</span>, <span class="hljs-string">"blue"</span>)
       ]
 </code></pre>
 <ul>

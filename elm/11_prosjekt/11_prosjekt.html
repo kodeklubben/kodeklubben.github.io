@@ -14,43 +14,43 @@ forslag for å komme i gang.</p>
 <section class="activity" id="ide-1-spill">
 <h1 class="activity" id="ide-1-spill">Idé 1: spill</h1>
 <p>Her er en måte å sjekke hva brukeren trykker på av knapper:</p>
-<pre><code class="elm">module Main exposing (..)
+<pre><code class="elm"><span class="hljs-keyword">module</span> Main <span class="hljs-keyword">exposing</span> (..)
 
-import Html exposing ( text )
-import Keyboard
+<span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> ( text )
+<span class="hljs-keyword">import</span> Keyboard
 
-type Msg = Down Int
-         | Up Int
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Down</span> <span class="hljs-type">Int</span>
+         | <span class="hljs-type">Up</span> <span class="hljs-type">Int</span>
 
-model =
-    { lastDown = 0
-    , lastUp = 0
+<span class="hljs-title">model</span> =
+    { lastDown = <span class="hljs-number">0</span>
+    , lastUp = <span class="hljs-number">0</span>
     }
 
-main =
-    Html.program
-       { init = ( model, Cmd.none )
+<span class="hljs-title">main</span> =
+    <span class="hljs-type">Html</span>.program
+       { init = ( model, <span class="hljs-type">Cmd</span>.none )
        , view = view
        , update = update
        , subscriptions = subscriptions
        }
 
-update msg model =
-    let
+<span class="hljs-title">update</span> msg model =
+    <span class="hljs-keyword">let</span>
         newmodel =
-            case msg of
-                Down d -&gt; { model | lastDown = d }
-                Up u -&gt; { model | lastUp = u}
-    in
-        ( newmodel, Cmd.none )
+            <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
+                <span class="hljs-type">Down</span> d -&gt; { model | lastDown = d }
+                <span class="hljs-type">Up</span> u -&gt; { model | lastUp = u}
+    <span class="hljs-keyword">in</span>
+        ( newmodel, <span class="hljs-type">Cmd</span>.none )
 
-view model = text ( "Last down: " ++ toString model.lastDown
-                    ++ ", last up: " ++ toString model.lastUp )
+<span class="hljs-title">view</span> model = text ( <span class="hljs-string">"Last down: "</span> ++ toString model.lastDown
+                    ++ <span class="hljs-string">", last up: "</span> ++ toString model.lastUp )
 
-subscriptions model =
-    Sub.batch
-        [ Keyboard.downs Down
-        , Keyboard.ups Up
+<span class="hljs-title">subscriptions</span> model =
+    <span class="hljs-type">Sub</span>.batch
+        [ <span class="hljs-type">Keyboard</span>.downs <span class="hljs-type">Down</span>
+        , <span class="hljs-type">Keyboard</span>.ups <span class="hljs-type">Up</span>
         ]
 </code></pre>
 <section class="protip" id="modulen-keyboard">

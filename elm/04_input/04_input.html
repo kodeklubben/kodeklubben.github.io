@@ -17,10 +17,10 @@ function relative (url) {
 <ul>
 <li>Øverst i koden vår må vi si hvilke <em>moduler</em> vi skal bruke</li>
 </ul>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput, onClick)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)
+<span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
+<span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> (onInput, onClick)
+<span class="hljs-keyword">import</span> String
 </code></pre>
 </section>
 <section class="check" id="modell-meldinger-og-oppdatering">
@@ -34,7 +34,7 @@ function relative (url) {
 <ul>
 <li>Så trenger vi å si hva slags <em>meldinger</em> (<code>Msg</code>) vi skal sende i programmet. Til å begynne med har vi bare én meldingstype, og det er meldingen som sendes når brukeren endrer teksten i input-feltet, her kaller vi den for <code>Endre</code>.</li>
 </ul>
-<pre><code class="elm"><span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span></span>
+<pre><code class="elm"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span>
 </code></pre>
 <ul>
 <li>Etter det må vi skrive hva som skal skje når teksten oppdateres med en <em>update</em>-funksjon:</li>
@@ -60,10 +60,10 @@ function relative (url) {
 </code></pre>
 <p><code>input [ placeholder &quot;Baklengstekst&quot;, onInput Endre ] []</code> er det som blir til et input-felt. Teksten etter <code>placeholder</code> sier hva som skal stå i feltet før brukeren skriver inn noe. <code>onInput</code> sier hva som skal skje når brukeren skriver inn tekst. I vårt tilfelle sender vi en <code>Endre</code>-melding som hentes inn i <code>update</code>-funksjonen. Når brukeren skriver inn &quot;Teodor&quot;, sendes en melding av typen <code>Endre &quot;Teodor&quot;</code> inn i <code>update</code>-funksjonen.</p>
 <p>Setter vi alle delene sammen, vil koden vår se slik ut:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)
+<span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
+<span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> (onInput)
+<span class="hljs-keyword">import</span> String
 
 
 <span class="hljs-title">main</span> =
@@ -72,7 +72,7 @@ function relative (url) {
 
 <span class="hljs-comment">-- UPDATE</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span></span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span>
 
 <span class="hljs-title">update</span> msg model =
   <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
@@ -119,7 +119,7 @@ function relative (url) {
 <p>Nå skal vi gjøre det mulig å lagre baklengstekstene i en setning med mellomrom mellom hvert ord. Da må vi endre <code>update</code> slik at den kan ta inn tekst og legge den til i <code>setning</code> i modellen vår:</p>
 <pre><code class="elm"><span class="hljs-comment">-- UPDATE</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span> | <span class="hljs-type">LeggTil</span> <span class="hljs-type">String</span></span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span> | <span class="hljs-type">LeggTil</span> <span class="hljs-type">String</span>
 
 <span class="hljs-title">update</span> msg model =
   <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
@@ -147,10 +147,10 @@ function relative (url) {
 </code></pre>
 <p><code>onClick</code> bestemmer hva som skal skje når brukeren trykker på knappen. Her <em>kaller</em> vi funksjonen <code>LeggTil</code> og sender med teksten som ligger i modellen vi lagde tidligere.</p>
 <p>Programmet vårt ser slik ut med den nye knappen:</p>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput, onClick)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)
+<span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
+<span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> (onInput, onClick)
+<span class="hljs-keyword">import</span> String
 
 
 <span class="hljs-title">main</span> =
@@ -165,7 +165,7 @@ function relative (url) {
 
 <span class="hljs-comment">-- UPDATE</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span> | <span class="hljs-type">LeggTil</span> <span class="hljs-type">String</span></span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span> | <span class="hljs-type">LeggTil</span> <span class="hljs-type">String</span>
 
 <span class="hljs-title">update</span> msg model =
   <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
@@ -202,10 +202,10 @@ function relative (url) {
 <ul>
 <li>Legg til det første feltet i modellen vår, <code>rod</code>:</li>
 </ul>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)
+<span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
+<span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> (onInput)
+<span class="hljs-keyword">import</span> String
 
 <span class="hljs-title">main</span> =
   beginnerProgram { model = model, view = view, update = update }
@@ -219,16 +219,16 @@ function relative (url) {
 <ul>
 <li>Lagre rødstyrken fra en input, men begrens rekkevidden fra 0 til 255 med <code>Html.Attributes.min</code> og <code>Html.Attributes.max</code>:</li>
 </ul>
-<pre><code class="elm"><span class="hljs-title">input</span> [ type_ <span class="hljs-string">"number"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min <span class="hljs-string">"0"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max <span class="hljs-string">"255"</span> ] []
+<pre><code class="elm"><span class="hljs-title">input</span> [ type_ "number", <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min "0", <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max "255" ] []
 </code></pre>
 <p>Vi trenger også å håndtere bruker-input, slik som i forrige oppgave</p>
 <ul>
 <li>Legg til koden som mangler:</li>
 </ul>
-<pre><code class="elm"><span class="hljs-import"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> <span class="hljs-container">(<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> <span class="hljs-container">(..)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> <span class="hljs-container">(onInput)</span></span>
-<span class="hljs-import"><span class="hljs-keyword">import</span> String</span>
+<pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)
+<span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
+<span class="hljs-keyword">import</span> Html.Events <span class="hljs-keyword">exposing</span> (onInput)
+<span class="hljs-keyword">import</span> String
 
 <span class="hljs-title">main</span> =
   beginnerProgram { model = model, view = view, update = update }
@@ -241,7 +241,7 @@ function relative (url) {
 
 <span class="hljs-comment">-- UPDATE</span>
 
-<span class="hljs-typedef"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">EndreRod</span> <span class="hljs-type">String</span></span>
+<span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">EndreRod</span> <span class="hljs-type">String</span>
 
 <span class="hljs-title">update</span> msg model =
   <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
@@ -251,7 +251,7 @@ function relative (url) {
 
 <span class="hljs-title">view</span> model =
   div [ style [(<span class="hljs-string">"height"</span>, <span class="hljs-string">"100%"</span>), (<span class="hljs-string">"background"</span>, <span class="hljs-string">"rgb(255, 255, 255)"</span>)] ]
-    [ input [ type_ <span class="hljs-string">"number"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min <span class="hljs-string">"0"</span>, <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max <span class="hljs-string">"255"</span> ] []
+    [ input [ type_ "number", <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min "0", <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max "255" ] []
     , div [] [ text model.rod ]
     ]
 </code></pre>
