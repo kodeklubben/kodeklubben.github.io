@@ -1,0 +1,377 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Snurrige figurer | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Snurrige figurer</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/snurrige_figurer/snurrige_figurer.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Det er ganske enkelt å lage interessante animasjoner i Scratch. Her skal vi se
+hvordan vi kan flytte og snurre på figurer for å skape spennende mønstre.</p>
+<p><figure><img src="snurrige_figurer.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-en-snurrig-figur">
+<h1 class="activity" id="steg-1-en-snurrig-figur">Steg 1: En snurrig figur</h1>
+<p><em>La oss begynne enkelt. Vi vil først se hvordan vi kan flytte og snurre på en figur.</em></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul>
+<li>
+<p>Start et nytt prosjekt, for eksempel ved å klikke <code>Programmering</code> i
+menyen. Hvis du allerede har startet et prosjekt kan du begynne på
+et nytt ved å velge <code>Fil</code> og deretter <code>Ny</code>.</p>
+</li>
+<li>
+<p>Slett kattefiguren.</p>
+</li>
+<li>
+<p>Vi vil starte med en enkel trekant-figur. Denne kan vi lage på forskjellige
+måter. Først tegner vi denne selv, men nedenfor vil vi også vise deg hvordan
+du kan lage en trekant fra en av de eksisterende figurene.</p>
+<p>Klikk på <img src="../bilder/tegn-ny.png" alt="Tegn ny figur"> for å tegne din egen
+figur. Trykk deretter <code>Bytt til vektorgrafikk</code> nede til høyre, og bruk
+linjeverktøyet, <img src="../bilder/tegn-linje.png" alt="Linje">, til å tegne en trekant.</p>
+<p><figure><img src="tegn_trekant.png" alt=""></figure></p>
+</li>
+<li>
+<p>Nå skal vi få trekanten til å flytte seg! Skriv denne koden:</p>
+<pre><code class="blocks">når [a v] trykkes
+gå til x: (0) y: (120)
+pek i retning (90 v)
+gjenta (90) ganger
+    vend høyre (4) grader
+    gå (8) steg
+slutt
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<p><strong>Trykk på A-tasten.</strong></p>
+<ul>
+<li>
+<p>Flytter trekanten seg rundt på skjermen?</p>
+</li>
+<li>
+<p>Legg merke til at trekanten snurrer mens den flytter seg.</p>
+</li>
+</ul>
+</section>
+<section class="save" id="lagre-prosjektet">
+<h2 class="save" id="lagre-prosjektet">Lagre prosjektet</h2>
+<p>Du har nå skrevet et lite program! Scratch lagrer alt du gjør med
+jevne mellomrom. Det er likevel en god vane å lagre selv også
+innimellom.</p>
+<ul>
+<li>
+<p>Over scenen er det et tekstfelt hvor du kan gi et navn til prosjektet
+ditt. Kall det for eksempel <code>Snurrige figurer</code>.</p>
+</li>
+<li>
+<p>I menyen <code>Fil</code> kan du velge <code>Lagre nå</code> for å lagre prosjektet.</p>
+</li>
+</ul>
+</section>
+<section class="try" id="endre-en-eksisterende-figur">
+<h2 class="try" id="endre-en-eksisterende-figur">Endre en eksisterende figur</h2>
+<p>Selv om det ikke finnes en trekant i figurbiblioteket, kan vi gjøre om en av de
+andre figurene til en trekant. Om du allerede har laget en trekant trenger du
+ikke gjøre dette. Men det viser deg en morsom måte å leke med Scratchfigurene
+på.</p>
+<ul>
+<li>
+<p>Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket"> for å
+hente en eksisterende figur. Velg figuren <code>ting/Star2</code>.</p>
+</li>
+<li>
+<p>Gå til <code>Drakter</code>-fanen. Ser du at denne stjernen består av to trekanter lagt
+oppå hverandre?</p>
+</li>
+<li>
+<p>Klikk på stjernen slik at den får en firkant rundt seg (blir merket). Det
+dukker da opp en ny knapp som kalles <code>Del opp gruppe</code> (se skjermbildet
+under). Klikk på denne knappen.</p>
+<p><figure><img src="del_opp_stjernegruppe.png" alt=""></figure></p>
+</li>
+<li>
+<p>Stjernen har nå blitt delt i to trekant-figurer. Du kan nå klikke på en av
+trekantene, og deretter på <code>delete</code>-tasten på tastaturet for å slette den.</p>
+</li>
+<li>
+<p>Du står nå igjen med en trekant-figur! Bruk gjerne <code>Fyll farge</code>-verktøyet,
+<img src="../bilder/fyll-med-farge.png" alt="Fyll farge"> for å endre farge på trekanten!</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-mange-trekanter">
+<h1 class="activity" id="steg-2-mange-trekanter">Steg 2: Mange trekanter</h1>
+<p><em>Mye morsomt kan skje når vi lager mange trekanter!</em></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul>
+<li>
+<p>Vi skal nå lage mange trekanter. Dette gjør vi ved hjelp av noe som heter
+<strong>kloning</strong>. I Scratch er en <strong>klon</strong> en kopi av en figur.</p>
+<p>Kopier koden du skrev tidligere ved å høyreklikke på den og velg <code>lag en kopi</code>. Endre tasten som starter skriptet til <code>b</code> og legg klossen <code class="b">lag klon av [meg v]</code> nederst i <code class="blockcontrol">gjenta</code>-løkken. Det nye skriptet
+skal da se slik ut:</p>
+<pre><code class="blocks">når [b v] trykkes
+gå til x: (0) y: (120)
+pek i retning (90 v)
+gjenta (90) ganger
+    vend høyre (4) grader
+    gå (8) steg
+    lag klon av [meg v]
+slutt
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-2">
+<h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
+<p><strong>Trykk på B-tasten.</strong></p>
+<ul>
+<li>
+<p>Nå skal det tegnes mange trekanter på skjermen i en sirkel.</p>
+</li>
+<li>
+<p>Om du stopper skriptet (klikk på den røde knappen ved siden av det grønne
+flagget) blir trekantene borte! Dette er fordi trekantene var kopier som bare
+lever så lenge programmet kjører, de er ikke egne figurer.</p>
+</li>
+</ul>
+</section>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul>
+<li>
+<p>Vi kan også få trekantene til å røre på seg. Skriv først denne enkle koden:</p>
+<pre><code class="blocks">når jeg mottar [snurr v]
+for alltid
+    vend høyre (4) grader
+slutt
+</code></pre>
+</li>
+<li>
+<p>Legg til klossen <code class="b">send melding [snurr v]</code> nederst i <em>B</em>-skriptet (etter
+<code class="blockcontrol">gjenta</code>-løkken).</p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-3">
+<h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
+<p><strong>Trykk på B-tasten.</strong></p>
+<ul>
+<li>
+<p>Begynner trekantene å røre på seg etter at de er tegnet opp? Blir mønsteret levende?</p>
+</li>
+<li>
+<p>Prøv å endre på <code>4</code>-tallet i <em>snurr</em>-skriptet. Hva skjer? Alt dette skjer bare
+fordi mange trekanter snurrer sammen!</p>
+</li>
+</ul>
+</section>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul>
+<li>
+<p>Vi kan også la trekantene flytte litt på seg. Skriv et nytt skript:</p>
+<pre><code class="blocks">når jeg mottar [flytt og snurr v]
+for alltid
+    gå (3) steg
+    vend høyre (4) grader
+slutt
+</code></pre>
+</li>
+<li>
+<p>Endre <code class="b">send melding [ v]</code>-klossen nederst i <em>B</em>-skriptet slik at den starter
+dette nye <em>flytt og snurr</em>-skriptet.</p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-4">
+<h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
+<p><strong>Trykk på B-tasten.</strong></p>
+<ul>
+<li>
+<p>Hvordan endrer mønsteret seg?</p>
+</li>
+<li>
+<p>Prøv igjen å endre på tallene i det siste skriptet.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-mer-variasjon">
+<h1 class="activity" id="steg-3-mer-variasjon">Steg 3: Mer variasjon</h1>
+<p><em>Vi skal nå se hvordan vi kan lage mer variasjon blant de snurrende figurene,
+ved å endre på hvordan de starter.</em></p>
+</section>
+<section class="check" id="sjekkliste-5">
+<h1 class="check" id="sjekkliste-5">Sjekkliste</h1>
+<ul>
+<li>
+<p>Lag en ny variabel, <code class="b">retning :: variables</code>. Det er viktig at du merker av at variabelen
+gjelder kun <strong>For denne figuren</strong>. Dette gjør nemlig at hver klon kan ha sin
+egen verdi for <code class="b">retning :: variables</code>.</p>
+</li>
+<li>
+<p>Lag en kopi av <em>B</em>-skriptet. Endre tasten som starter skriptet til <code>c</code>, og
+legg også til de to <code class="b">retning :: stack variables</code>-klossene.</p>
+<pre><code class="blocks">når [c v] trykkes
+sett [retning v] til (0)
+gå til x: (0) y: (120)
+pek i retning (90 v)
+gjenta (90) ganger
+    vend høyre (4) grader
+    gå (8) steg
+    endre [retning v] med (-4)
+    lag klon av [meg v]
+slutt
+send melding [flytt og snurr v]
+</code></pre>
+</li>
+<li>
+<p>Nå skal vi sette retningen på hver klon i det den lages. Lag dette nye skriptet:</p>
+<pre><code class="blocks">når jeg starter som klon
+pek i retning (retning :: variables)
+</code></pre>
+</li>
+</ul>
+<section class="flag" id="test-prosjektet-5">
+<h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
+<p><strong>Trykk på C-tasten.</strong></p>
+<ul>
+<li>
+<p>Ser du at trekantene peker i andre retninger. Dette forandrer mønsteret helt!</p>
+</li>
+<li>
+<p>Det ser ut som om en enkelt trekant svever rundt litt utenfor mønsteret! Hva
+skjer med denne trekanten?</p>
+</li>
+</ul>
+</section>
+<section class="check" id="sjekkliste-6">
+<h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
+<ul>
+<li>
+<p>Den ene trekanten som ikke passer helt inn i mønsteret er figuren vår. Alle de
+andre trekantene er kloner. Vi har ikke sett denne trekanten tidligere fordi
+den pekte i samme retning som klonene. Men nå snur vi jo på klonene!</p>
+<p>La oss skjule figuren så den ikke ødelegger mønsteret. Legg til en
+<code class="b">skjul</code>-kloss øverst i <em>C</em>-skriptet.</p>
+</li>
+<li>
+<p>Siden klonene er kopier av figuren vil de også skjules. Det vil vi jo ikke. Vi
+må derfor passe på at klonene vises. Legg til en <code class="b">vis</code>-kloss som dette:</p>
+<pre><code class="blocks">når jeg starter som klon
+vis
+pek i retning (retning :: variables)
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-6">
+<h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
+<p><strong>Trykk på C-tasten.</strong></p>
+<ul>
+<li>
+<p>Er den flytende trekanten som ikke passet inn i mønsteret borte?</p>
+</li>
+<li>
+<p>Lek med tallet <code>-4</code> i <code class="b">endre [retning v] :: variables</code>-klossen. Hvilken
+effekt har det å endre dette tallet?</p>
+<p>Du oppdager kanskje at det fungerer best om tallet går opp i 4? Hvorfor
+henger ikke figuren sammen hvis tallet ikke går opp i 4? (Prøv for eksempel
+med <code class="b">endre [retning v] med (1)</code>.)</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-andre-figurer">
+<h1 class="activity" id="steg-4-andre-figurer">Steg 4: Andre figurer</h1>
+<p><em>Vi kan også lage mønstre av andre figurer enn trekanter.</em></p>
+<p><figure><img src="dansende_sirkler.png" alt=""></figure></p>
+<section class="check" id="sjekkliste-7">
+<h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
+<ul>
+<li>
+<p>Klikk på <code>Drakter</code>-fanen. Velg en ny drakt fra biblioteket ved å klikke på
+<img src="../bilder/hent-fra-bibliotek.png" alt="Velg drakt fra biblioteket">. Velg for
+eksempel hjertet <code>ting/heart red</code>.</p>
+</li>
+<li>
+<p>Start programmet igjen ved å trykke på <strong>C</strong>-tasten. Dannes det nå et mønster
+av hjerter? Prøv å hente inn andre drakter eller tegn dine egne.</p>
+</li>
+<li>
+<p>For å lage spennende mønstre er det også andre ting du kan endre på. Prøv å
+legg til klosser for gjennomsiktig effekt og fargeeffekt som følger:</p>
+<pre><code class="blocks">når [c v] trykkes
+skjul
+sett [gjennomsiktig v] effekt til (70)
+sett [retning v] til (0)
+gå til x: (0) y: (120)
+pek i retning (90 v)
+gjenta (90) ganger
+    vend høyre (4) grader
+    gå (8) steg
+    endre [retning v] med (-4)
+    endre [farge v] effekt med (20)
+    lag klon av [meg v]
+slutt
+send melding [flytt og snurr v]
+</code></pre>
+</li>
+</ul>
+<section class="try" id="flere-ideer">
+<h3 class="try" id="flere-ideer">Flere ideer</h3>
+<p>Tenk på andre ting du kan gjøre for å lage interessante snurrige figurer. Her er
+noen ideer:</p>
+<ul>
+<li>
+<p>Endre størrelsen på de forskjellige klonene.</p>
+</li>
+<li>
+<p>Tegn en figur som består av tekst. Kanskje du kan få navnet ditt til å danse
+rundt på skjermen?</p>
+</li>
+<li>
+<p>Endre senterpunktet til drakten: Klikk <code>Drakter</code>-fanen og klikk på
+<img src="../bilder/velg_senterpunkt.png" alt="Velg senterpunkt"> øverst til høyre.</p>
+</li>
+<li>
+<p>Bruk penn-verktøyet for å tegne mønster på bakgrunnen samtidig. Legg for
+eksempel til klossen <code class="b">penn på</code> under <code class="b">når jeg starter som klon</code>.</p>
+</li>
+</ul>
+</section>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Scratch: Snurrige figurer&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/snurrige_figurer" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/snurrige_figurer" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Geir Arne Hjelle og Carl Andreas Myrland</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>// bind shim for phantomJS
+Function.prototype.bind = Function.prototype.bind || function (thisp) {
+  var fn = this;
+  var args = Array.prototype.slice.call(arguments, 1);
+  return function () {
+    return fn.apply(thisp, args);
+  };
+};
+$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks.renderMatching('code.blocks', {
+    languages: ['nb', 'en']
+  });
+  scratchblocks.renderMatching('code.b', {
+    languages: ['nb', 'en'],
+    inline: true
+  });
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
