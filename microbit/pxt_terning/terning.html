@@ -1,0 +1,205 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>PXT: Terning | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Micro:bit</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">PXT: Terning</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Micro:bit</span></a><div class="pdf"><a href="/microbit/pxt_terning/terning.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Kan micro:biten vår brukes som en terning? Ja, det er faktisk ganske enkelt!</p>
+<p><figure><img src="terning.jpg" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-vi-rister-los">
+<h1 class="activity" id="steg-1-vi-rister-los">Steg 1: Vi rister løs</h1>
+<p><em>Vi begynner med å vise et tall når vi rister på micro:biten.</em></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt PXT-prosjekt, for eksempel ved å gå til
+<a href="https://makecode.microbit.org/?lang=no">makecode.microbit.org</a>.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Vi vil at noe skal skje når vi rister på micro:biten. Til dette kan vi
+bruke <code>når ristes</code>-klossen som finnes i kategorien <code>Inndata</code>.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Aller først vil vi bare se at vi får til å vise tallet <strong>1</strong>. For å vise
+tall bruker vi <code>vis tall</code>-klossen i <code>Basis</code>-kategorien.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Sett sammen disse to klossene slik at skriptet ditt ser slik ut:</label></p>
+<p><figure><img src="risteskript_1.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<p>Det er to forskjellige måter vi kan teste micro:bit-programmer på:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Til venstre på skjermen er det et bilde av en micro:bit. Dette er faktisk
+en simulator som kan kjøre programmet vi nettopp laget:</label></p>
+<p>Siden vår kode skal reagere når man rister på micro:biten kan du simulere
+dette ved å klikke på den hvite prikken til venstre for teksten <code>SHAKE</code> på
+micro:bit-simulatoren. Tallet <strong>1</strong> skal vises på skjermen til
+micro:bit-simulatoren.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Enda morsommere er det å teste programmet på micro:biten din! Koble
+micro:biten din til datamaskinen med en USB-kabel. Klikk deretter på knappen
+<code>Last ned</code> nede til venstre på skjermen.</label></p>
+<p>Det lastes nå ned en fil som heter <code>microbit-Uten-navn.hex</code> til datamaskinen
+din. Samtidig dukker det opp et vindu som sier at du må flytte denne filen
+til MICROBIT-disken. Dersom du trenger hjelp til dette så spør en av
+veilederne.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-tilfeldig-terning">
+<h1 class="activity" id="steg-2-tilfeldig-terning">Steg 2: Tilfeldig terning</h1>
+<p><em>Terninger skal jo vise forskjellige tall, hvordan gjør vi det på en micro:bit?</em></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Før vi kaster en vanlig terning vet vi ikke hva resultatet kommer til å
+bli. Vi vet at det vil bli enten 1, 2, 3, 4, 5 eller 6, men ikke hvilket av
+disse tallene terningen lander på. Et slikt resultat kaller vi et <strong>tilfeldig
+tall</strong>. Tilfeldige tall kan vi lage på micro:biten med klossen <code>tilfeldig tall 0 til 4</code> i <code>Matematikk</code>-kategorien.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Prøv selv å legg denne <code>tilfeldig tall</code>-klossen inn i koden din, slik at
+det tilfeldige tallet vises i stedet for <strong>1</strong> som tidligere.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Bruk simulatoren eller last koden til micro:biten din for å teste som
+tidligere. Når du rister på micro:biten (eller klikker på <code>SHAKE</code>) skal det
+lages nye tilfeldige tall. Rist flere ganger. Forandrer tallet seg?</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> En vanlig terning viser tallene 1, 2, 3, 4, 5 og 6. Om du brukte
+<code>tilfeldig tall 0 til 4</code>-klossen velger micro:biten mellom tallene 0, 1, 2, 3
+og 4. Hvordan kan vi få micro:biten til å også velge mellom tallene 1 til 6?</label></p>
+</li>
+</ul>
+<p>Vi gir deg ikke hele svaret, du må prøve litt på egen hånd! Men nedenfor er to
+tips om du står fast!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Du kan endre på <strong>4</strong>-tallet i <code>tilfeldig tall 0 til 4</code>-klossen. Hva skjer
+da?</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Du kan ikke endre på <strong>0</strong> i <code>tilfeldig tall</code>-klossen. I stedet kan du
+kombinere denne klossen med <code>0 + 0</code>-klossen som du også finner i
+<code>Matematikk</code>-kategorien.</label></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-terningen-ruller">
+<h1 class="activity" id="steg-3-terningen-ruller">Steg 3: Terningen ruller</h1>
+<p><em>En terning lander jo ikke bare på en side, den ruller og viser mange sider før
+den stopper.</em></p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Vi kan få micro:biten til å oppføre seg som om en rullende terning, ved at
+den viser flere forskjellige tall før den tilslutt stopper på ett av dem.</label></p>
+<p>For å gjøre en ting flere ganger bruker vi <strong>løkker</strong>. Hent klossen <code>gjenta 4 ganger</code> fra <code>Løkker</code>-kategorien. Legg den rundt <code>vis tall</code>-klossen på
+denne måten:</p>
+<p><figure><img src="risteskript_2.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Test programmet ditt igjen. Skjønner du hva <code>gjenta</code>-løkken gjør? Prøv å
+endre på de forsjellige tallene i koden din. Hva blir annerledes når du rister
+på micro:biten?</label></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-terningen-husker">
+<h1 class="activity" id="steg-4-terningen-husker">Steg 4: Terningen husker</h1>
+<p><em>Hva om vi vil bruke terningresultatet senere? Da må vi huske hva vi kastet!</em></p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Når vi programmerer bruker vi <strong>variabler</strong> til å huske ting for oss. La
+oss lage en variabel som kan huske det siste terningkastet:</label></p>
+<p>Klikk på <code>Variabler</code>-kategorien og deretter på knappen <code>Lag en variabel</code>. Gi
+den nye variabelen navnet <code>terning</code> og klikk <code>OK</code>. Du vil se at det dukker
+opp en kloss som heter <code>terning</code> i <code>Variabler</code>-kategorien.</p>
+<p><figure><img src="variabel_terning.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> For å bruke denne nye variabelen kan vi bestemme hva den skal huske med
+<code>sett variabel til 0</code>-klossen. La oss endre skriptet vårt slik at <code>terning</code>
+husker hvert terningkast. Legg til og flytt på klossene slik at skriptet ditt
+ser slik ut:</label></p>
+<p><figure><img src="risteskript_3.png" alt=""></figure></p>
+</li>
+</ul>
+<p>Om du tester prosjektet ditt nå skal det oppføre seg helt likt som før! Men
+denne endringen gir oss nye muligheter! Siden vi nå vet resultatet av
+terningkastet kan vi for eksempel vise et smilefjes hver gang vi kaster en 6'er:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Med klossen <code>vis bilde</code> som du finner i <code>Basis</code>-kategorien kan vi selv
+bestemme bildet som vises på skjermen til micro:biten. Prøv selv å tegne et
+smilefjes (eller et annet bilde du heller vil bruke).</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> For å sammenligne to ting bruker vi klosser fra <code>Logikk</code>-kategorien. Her
+vil vi sammenligne resultatet av terningkastet med tallet 6. Vi kan si at
+<code>hvis terning = 6</code> skal vi vise bildet smilefjes.</label></p>
+<p>Prøv å pusle sammen klosser fra <code>Logikk</code>- og <code>Variabler</code>-kategoriene som
+sier <code>hvis terning = 6</code>.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Vi vil sjekke om resultatet av terningkastet var 6 etter at terningen har
+rullet ferdig. Det betyr at vi må legge <code>hvis</code>-klossene etter løkken vi laget
+tidligere. Programmet ditt vil tilslutt se ut omtrent som dette:</label></p>
+<p><figure><img src="risteskript_4.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-5-mer-avanserte-terninger">
+<h1 class="activity" id="steg-5-mer-avanserte-terninger">Steg 5: Mer avanserte terninger</h1>
+<p><em>Hva kan vi bruke terningene våre til? Prøv selv dine ideer!</em></p>
+<section class="check" id="flere-ideer">
+<h2 class="check" id="flere-ideer">Flere ideer</h2>
+<p>Du har nå lært hvordan micro:biten kan kaste terning. Men det finnes mange måter
+dette kan utvikles videre på. Nedenfor er noen ideer, men finn gjerne på noe
+helt eget!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Kan terningen vise terningsymboler i stedet for tall? For eksempel, om du
+kaster 1 vises en prikk på skjermen, om du kaster 2 vises to prikker og så
+videre?</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Med micro:biten kan du også kaste to eller flere terninger samtidig! Lag
+flere terning-variabler og vis summen av disse til slutt!</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Kanskje du kan bruke <code>A</code>- eller <code>B</code>-knappen til å bestemme hvor mange
+terninger som kastes? Da trenger du en variabel, <code>antall kast</code>, og en løkke
+som gjentas <code>antall kast</code> ganger.</label></p>
+</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Micro:bit: PXT: Terning&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/pxt_terning" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/pxt_terning" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Geir Arne Hjelle</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
