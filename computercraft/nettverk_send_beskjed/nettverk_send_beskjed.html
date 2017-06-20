@@ -45,7 +45,7 @@ gi datamaskinene to roller: server og klient.</p>
 <ul>
 <li>
 <p>Sjekk id på <em>MaxMottak</em>. Min <em>MaxMottak</em> svarte følgende:</p>
-<pre><code>&gt; <span class="hljs-property">id</span>
+<pre><code>&gt; <span class="hljs-built_in">id</span>
 This <span class="hljs-keyword">is</span> computer <span class="hljs-comment">#5</span>
 This computer <span class="hljs-keyword">is</span> labelled <span class="hljs-string">"MaxMottak"</span>
 </code></pre>
@@ -53,20 +53,20 @@ This computer <span class="hljs-keyword">is</span> labelled <span class="hljs-st
 <li>
 <p>Sjekk plassering av modem på <em>MaxMottak</em>. Min svarte:</p>
 <pre><code>&gt; peripherals
-left <span class="hljs-list">(<span class="hljs-keyword">modem</span>)</span>
+left (<span class="hljs-name">modem</span>)
 </code></pre>
 </li>
 <li>
 <p>Start lua-tolkeren:</p>
-<pre><code>&gt; <span class="hljs-keyword">lua</span>
+<pre><code>&gt; lua
 Interactive Lua prompt.
-<span class="hljs-built_in">call</span> <span class="hljs-keyword">exit</span>() <span class="hljs-keyword">to</span> <span class="hljs-keyword">exit</span>.
-<span class="hljs-keyword">lua</span>&gt;
+call <span class="hljs-keyword">exit</span>() to <span class="hljs-keyword">exit</span>.
+lua&gt;
 </code></pre>
 </li>
 <li>
 <p>Koble til <code>rednet</code> og vent på beskjed. Husker du hvor modemet var plassert?</p>
-<pre><code class="lua">lua&gt; rednet.open(<span class="hljs-string">"left"</span>)
+<pre><code class="lua">lua&gt; rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"left"</span>)
 lua&gt; rednet.receive(<span class="hljs-number">100</span>)
 </code></pre>
 </li>

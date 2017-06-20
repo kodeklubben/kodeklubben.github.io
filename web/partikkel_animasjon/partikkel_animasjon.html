@@ -60,26 +60,26 @@ function relative (url) {
 <li>Lag en ny HTML-fil som heter <code>partikler.html</code></li>
 <li>Kopier koden under inn i <code>partikler.html</code>:</li>
 </ul>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Partikkel-fest<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-        <span class="hljs-tag">body</span> <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#666</span></span></span>;
-        }</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Partikkel-fest<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#666</span>;
+        }
 
-        <span class="hljs-id">#canvas</span> <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#000</span></span></span>;
-            <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"><span class="hljs-number">100px</span></span></span>;
-        }</span>
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+        <span class="hljs-selector-id">#canvas</span> {
+            <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#000</span>;
+            <span class="hljs-attribute">margin-left</span>:<span class="hljs-number">100px</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"canvas"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"canvas"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 
 </code></pre>
 <section class="tip" id="forklaring-canvas">
@@ -125,10 +125,10 @@ function relative (url) {
 <h2 class="tip" id="forklaring-objekt">Forklaring: Objekt</h2>
 <p>La oss nå lage et <code>objekt</code> som skal tegnes. I JavaScript er et objekt en variabel som kan holde på flere verdier eller variabler, som vi ofte kaller for <code>attributter</code>. La oss se på et raskt eksempel med en bil:</p>
 <pre><code class="js"><span class="hljs-keyword">var</span> bil = {
-    navn: <span class="hljs-string">"Volkswagen"</span>,
-    modell: <span class="hljs-string">"Golf"</span>
+    <span class="hljs-attr">navn</span>: <span class="hljs-string">"Volkswagen"</span>,
+    <span class="hljs-attr">modell</span>: <span class="hljs-string">"Golf"</span>
     antallSeter: <span class="hljs-number">5</span>,
-    farge: <span class="hljs-string">"Blå"</span>,
+    <span class="hljs-attr">farge</span>: <span class="hljs-string">"Blå"</span>,
 };
 </code></pre>
 <p>Vi kan enkelt hente ut informasjonen vi vil ha fra objektet ved å skive følgende:</p>
@@ -188,30 +188,30 @@ function relative (url) {
 </ul>
 <p>Forslag til koden så langt:</p>
 <pre><code class="html">CTYPE html&gt;
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-        <span class="hljs-tag">body</span> <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#666</span></span></span>;
-        }</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#666</span>;
+        }
 
-        <span class="hljs-id">#canvas</span> <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#000</span></span></span>;
-            <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-        }</span>
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-selector-id">#canvas</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#000</span>;
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">100px</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 
         <span class="hljs-keyword">var</span> canvas;
         <span class="hljs-keyword">var</span> ctx;
 
         <span class="hljs-keyword">var</span> particle = {
-            x: <span class="hljs-number">0</span>,
-            y: <span class="hljs-number">0</span>,
-            size: <span class="hljs-number">10</span>,
-            farge: <span class="hljs-string">"red"</span>
+            <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">size</span>: <span class="hljs-number">10</span>,
+            <span class="hljs-attr">farge</span>: <span class="hljs-string">"red"</span>
         };
 
         <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -227,15 +227,15 @@ function relative (url) {
             ctx.fillRect(particle.x, particle.y,particle.size,particle.size);
         };
 
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"canvas"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"canvas"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 
 </code></pre>
 </section>
@@ -302,32 +302,32 @@ function relative (url) {
 <h2 id="-5"></h2>
 <p>Ekssempel på ferdig kode til oppgaven:</p>
 <pre><code class="js">&lt;!DOCTYPE html&gt;
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-        <span class="hljs-tag">body</span> <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#666</span></span></span>;
-        }</span>
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#666</span>;
+        }
 
-        <span class="hljs-id">#canvas</span> <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"><span class="hljs-hexcolor">#000</span></span></span>;
-            <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"><span class="hljs-number">100px</span></span></span>;
-        }</span>
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-selector-id">#canvas</span> {
+            <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#000</span>;
+            <span class="hljs-attribute">margin-left</span>:<span class="hljs-number">100px</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
 
         <span class="hljs-keyword">var</span> canvas, ctx;
 
 
         <span class="hljs-keyword">var</span> particle = {
-            x: <span class="hljs-number">0</span>,
-            y: <span class="hljs-number">0</span>,
-            xSpeed: <span class="hljs-number">2</span>,
-            ySpeed: <span class="hljs-number">2</span>,
-            size: <span class="hljs-number">10</span>,
-            farge: <span class="hljs-string">"red"</span>
+            <span class="hljs-attr">x</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">y</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">xSpeed</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">ySpeed</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">size</span>: <span class="hljs-number">10</span>,
+            <span class="hljs-attr">farge</span>: <span class="hljs-string">"red"</span>
         };
 
         <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
@@ -352,15 +352,15 @@ function relative (url) {
 
 
 
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"canvas"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"500"</span> <span class="hljs-attribute">height</span>=<span class="hljs-value">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"canvas"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"500"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </span></code></pre>
 </section>
 </section>

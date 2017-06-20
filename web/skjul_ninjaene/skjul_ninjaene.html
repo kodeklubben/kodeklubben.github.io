@@ -48,10 +48,10 @@ function relative (url) {
 <section class="activity" id="steg-2-en-annen-mate-a-flytte-pa">
 <h1 class="activity" id="steg-2-en-annen-mate-a-flytte-pa">Steg 2: En annen måte å flytte på</h1>
 <p>Nå vet du hvordan vi bruker pixel-posisjonering. Dette er ikke den eneste måten man kan beskrive plasseringer på skjermen, så la oss se på hva slags andre muligheter vi har. Vi skal nå se på hvordan vi kan bruke <code>%</code>, det ser slik ut:</p>
-<pre><code class="css">  <span class="hljs-id">#id</span><span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
-  }</span>
+<pre><code class="css">  <span class="hljs-selector-id">#id</span>{
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">100%</span>;
+  }
 </code></pre>
 <p><code>100%</code> beskriver hele bredden som er tilgjengelig på skjermen. Når vi plasserer ninjaer og andre objekter i forhold til <code>gatehjornet</code>, som er 600 pixler bred, så vil 100% være lik <code>600px</code> i vårt eksempel. Hvis vi hadde laget et større gatehjørne, f.eks. 800 pixler bredt, ville <code>100%</code> bety en bredde på <code>800px</code>. Avhengig av sammenhengen så kan størrelsen beskrevet i prosenter(<code>%</code>) har forskjellige betydninger.</p>
 <ul>
@@ -88,13 +88,13 @@ function relative (url) {
 <li>Legg til <code>z-index</code> på et element og se om du kan få elementet til å legge seg bak eller foran et annet</li>
 </ul>
 <p><strong>Eksempel:</strong></p>
-<pre><code class="css">  <span class="hljs-id">#andre_objekter</span><span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
-  }</span>
+<pre><code class="css">  <span class="hljs-selector-id">#andre_objekter</span>{
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+  }
 
-  <span class="hljs-class">.ninja</span><span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">2</span></span></span>;
-  }</span>
+  <span class="hljs-selector-class">.ninja</span>{
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+  }
 </code></pre>
 <ul>
 <li>Bytt tilbake og forbered deg på redde ninjaene!</li>
@@ -122,121 +122,121 @@ function relative (url) {
 <toggle>
 <strong>Vis forslag til kode</strong>
   <hide>
-<pre><code class="html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">utf-8</span> /&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Skjul ninjaene<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<pre><code class="html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">utf-8</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Skjul ninjaene<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
 
- <span class="hljs-tag">body</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">20px</span></span></span>;
- }</span>
+ <span class="hljs-selector-tag">body</span> {
+   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+ }
 
- <span class="hljs-id">#gatehjorne</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">955px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">700px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(gatehjorne.png)</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
- }</span>
- <span class="hljs-id">#andre_objekter</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">margin-left</span>:<span class="hljs-value"> auto</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">margin-right</span>:<span class="hljs-value"> auto</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">200</span></span></span>;
- }</span>
- <span class="hljs-id">#kontainer</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">14%</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">73%</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">2</span></span></span>;
- }</span>
- <span class="hljs-id">#soppelkasse</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">190px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">460px</span></span></span>;
- }</span>
- <span class="hljs-id">#sykkel</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> -<span class="hljs-number">520px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> -<span class="hljs-number">20em</span></span></span>;
- }</span>
- <span class="hljs-id">#kafe_skilt</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">2em</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">11em</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">2</span></span></span>;
- }</span>
- <span class="hljs-id">#kumlokk</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">20em</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">520px</span></span></span>;
- }</span>
+ <span class="hljs-selector-id">#gatehjorne</span> {
+   <span class="hljs-attribute">width</span>: <span class="hljs-number">955px</span>;
+   <span class="hljs-attribute">height</span>: <span class="hljs-number">700px</span>;
+   <span class="hljs-attribute">margin-left</span>: auto;
+   <span class="hljs-attribute">margin-right</span>: auto;
+   <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(gatehjorne.png);
+   <span class="hljs-attribute">position</span>: relative;
+ }
+ <span class="hljs-selector-id">#andre_objekter</span> {
+   <span class="hljs-attribute">margin-left</span>: auto;
+   <span class="hljs-attribute">margin-right</span>: auto;
+   <span class="hljs-attribute">top</span>: <span class="hljs-number">0px</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">0px</span>;
+   <span class="hljs-attribute">position</span>: absolute;
+   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">200</span>;
+ }
+ <span class="hljs-selector-id">#kontainer</span> {
+   <span class="hljs-attribute">position</span>: absolute;
+   <span class="hljs-attribute">top</span>: <span class="hljs-number">14%</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">73%</span>;
+   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+ }
+ <span class="hljs-selector-id">#soppelkasse</span> {
+   <span class="hljs-attribute">position</span>: absolute;
+   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">190px</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">460px</span>;
+ }
+ <span class="hljs-selector-id">#sykkel</span> {
+   <span class="hljs-attribute">position</span>: relative;
+   <span class="hljs-attribute">bottom</span>: -<span class="hljs-number">520px</span>;
+   <span class="hljs-attribute">right</span>: -<span class="hljs-number">20em</span>;
+ }
+ <span class="hljs-selector-id">#kafe_skilt</span> {
+   <span class="hljs-attribute">position</span>: fixed;
+   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">2em</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">11em</span>;
+   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+ }
+ <span class="hljs-selector-id">#kumlokk</span> {
+   <span class="hljs-attribute">position</span>: fixed;
+   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">20em</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">520px</span>;
+ }
 
  <span class="hljs-comment">/* Ninjas */</span>
 
- <span class="hljs-id">#lucy_the_ninja</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">280px</span></span></span>;
- }</span>
- <span class="hljs-id">#alex_the_ninja</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">90px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">right</span>:<span class="hljs-value"> <span class="hljs-number">140px</span></span></span>;
- }</span>
- <span class="hljs-id">#katy_the_ninja</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">380px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">6em</span></span></span>;
- }</span>
- <span class="hljs-id">#sam_the_ninja</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> static</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">150px</span></span></span>;
- }</span>
- <span class="hljs-id">#omar_the_ninja</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> fixed</span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-   <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">250px</span></span></span>;
- }</span>
- <span class="hljs-class">.ninja</span> <span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
- }</span>
+ <span class="hljs-selector-id">#lucy_the_ninja</span> {
+   <span class="hljs-attribute">position</span>: fixed;
+   <span class="hljs-attribute">top</span>: <span class="hljs-number">0px</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">280px</span>;
+ }
+ <span class="hljs-selector-id">#alex_the_ninja</span> {
+   <span class="hljs-attribute">position</span>: absolute;
+   <span class="hljs-attribute">top</span>: <span class="hljs-number">90px</span>;
+   <span class="hljs-attribute">right</span>: <span class="hljs-number">140px</span>;
+ }
+ <span class="hljs-selector-id">#katy_the_ninja</span> {
+   <span class="hljs-attribute">position</span>: relative;
+   <span class="hljs-attribute">top</span>: <span class="hljs-number">380px</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">6em</span>;
+ }
+ <span class="hljs-selector-id">#sam_the_ninja</span> {
+   <span class="hljs-attribute">position</span>: static;
+   <span class="hljs-attribute">top</span>: <span class="hljs-number">100px</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">150px</span>;
+ }
+ <span class="hljs-selector-id">#omar_the_ninja</span> {
+   <span class="hljs-attribute">position</span>: fixed;
+   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">100px</span>;
+   <span class="hljs-attribute">left</span>: <span class="hljs-number">250px</span>;
+ }
+ <span class="hljs-selector-class">.ninja</span> {
+   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+ }
 
  <span class="hljs-comment">/* Other objects (you can't move these) */</span>
 
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">style</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"jsbin-css"</span>&gt;</span><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"gatehjorne"</span>&gt;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"jsbin-css"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"gatehjorne"</span>&gt;</span>
 
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"lucy_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"lucy.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"alex_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"alex.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"katy_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"katy.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"omar_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"omar.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"sam_the_ninja"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ninja"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"sam.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"lucy_the_ninja"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ninja"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"lucy.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"alex_the_ninja"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ninja"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"alex.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"katy_the_ninja"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ninja"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"katy.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"omar_the_ninja"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ninja"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"omar.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sam_the_ninja"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ninja"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"sam.png"</span> /&gt;</span>
 
 
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kumlokk"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kumlokk.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kontainer"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kontainer.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"soppelkasse"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"soppelkasse.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"sykkel"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"sykkel.png"</span> /&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kafe_skilt"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"movable"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kafe_skilt.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"kumlokk"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movable"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"kumlokk.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"kontainer"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movable"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"kontainer.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"soppelkasse"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movable"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"soppelkasse.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sykkel"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movable"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"sykkel.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"kafe_skilt"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"movable"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"kafe_skilt.png"</span> /&gt;</span>
 
- <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"andre_objekter"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"andre_objekter.png"</span> /&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"andre_objekter"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"andre_objekter.png"</span> /&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="undefined">
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
 
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 
 </code></pre>
   </hide>

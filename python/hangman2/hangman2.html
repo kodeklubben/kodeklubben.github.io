@@ -56,16 +56,16 @@ installert Python på riktig måte, lastet ned
 Denne funksjonen har to parametere - <code>secret_word</code> (det hemmelige ordet) og
 <code>remaining_letters</code> (en liste med de bokstavene brukeren ikke har gjettet).</p>
 <p>Her er et eksempel på hvordan funksjonen kan fungere:</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>remaining_letters =[<span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'h'</span>, <span class="hljs-string">'i'</span>, <span class="hljs-string">'j'</span>, <span class="hljs-string">'k'</span>, <span class="hljs-string">'l'</span>,
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>remaining_letters =[<span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'g'</span>, <span class="hljs-string">'h'</span>, <span class="hljs-string">'i'</span>, <span class="hljs-string">'j'</span>, <span class="hljs-string">'k'</span>, <span class="hljs-string">'l'</span>,
                         <span class="hljs-string">'m'</span>, <span class="hljs-string">'n'</span>, <span class="hljs-string">'o'</span>, <span class="hljs-string">'p'</span>, <span class="hljs-string">'q'</span>, <span class="hljs-string">'r'</span>, <span class="hljs-string">'s'</span>, <span class="hljs-string">'t'</span>, <span class="hljs-string">'u'</span>, <span class="hljs-string">'v'</span>, <span class="hljs-string">'w'</span>,
                         <span class="hljs-string">'x'</span>, <span class="hljs-string">'y'</span>, <span class="hljs-string">'z'</span>] <span class="hljs-comment"># alle bokstaver fra b til z</span>
-<span class="hljs-prompt">&gt;&gt;&gt; </span>secret_word = <span class="hljs-string">'banan'</span>
-<span class="hljs-prompt">&gt;&gt;&gt; </span>create_display_string(secret_word, remaining_letters)
+<span class="hljs-meta">&gt;&gt;&gt; </span>secret_word = <span class="hljs-string">'banan'</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span>create_display_string(secret_word, remaining_letters)
 <span class="hljs-string">'_ a _ a _'</span>
-<span class="hljs-prompt">&gt;&gt;&gt; </span>remaining_letters.remove(<span class="hljs-string">'b'</span>)
-<span class="hljs-prompt">&gt;&gt;&gt; </span>create_display_string(secret_word, remaining_letters)
+<span class="hljs-meta">&gt;&gt;&gt; </span>remaining_letters.remove(<span class="hljs-string">'b'</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>create_display_string(secret_word, remaining_letters)
 <span class="hljs-string">'b a _ a _'</span>
-<span class="hljs-prompt">&gt;&gt;&gt; </span>create_display_string(secret_word, [])
+<span class="hljs-meta">&gt;&gt;&gt; </span>create_display_string(secret_word, [])
 <span class="hljs-string">'b a n a n'</span>
 </code></pre>
 <p>Her er alle bokstaver i <code>secret_word</code> som også er i <code>remaining_letters</code>
@@ -79,7 +79,7 @@ være lurt å gå tilbake og lese igjennom alle de gule boksene i oppgaven.</p>
 <p>For å konvertere <code>secret_word</code> til ei liste må du bruke funksjonen <code>list()</code>.
 Du kan gi en streng som argument til <code>list()</code>, også returneres en liste av
 bokstaver.</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>list(<span class="hljs-string">"ord"</span>)
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>list(<span class="hljs-string">"ord"</span>)
 [<span class="hljs-string">'o'</span>, <span class="hljs-string">'r'</span>, <span class="hljs-string">'d'</span>]
 </code></pre>
 </li>

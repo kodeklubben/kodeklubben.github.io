@@ -79,10 +79,10 @@ _________/      <span class="hljs-string">\________</span>
 <p>Hva med den tredje figuren? Selv om den er litt komplisert å programmere om
 vi må skrive alle stegene vi må ta, er det egentlig bare det første fjellet
 tegnet fire ganger.</p>
-<pre><code>            /<span class="hljs-command">\
-</span>         __/  <span class="hljs-command">\_</span>_
-         <span class="hljs-command">\ </span>     /
-____/<span class="hljs-command">\_</span>__/      <span class="hljs-command">\_</span>__/<span class="hljs-command">\_</span>__
+<pre><code>            /\
+         <span class="hljs-variable">__</span>/  \<span class="hljs-variable">__</span>
+         \      /
+<span class="hljs-variable">____</span>/\<span class="hljs-variable">___</span>/      \<span class="hljs-variable">___</span>/\<span class="hljs-variable">___</span>
 
 </code></pre>
 <p>Du kan se at vi tegner den andre figuren (det enkle fjellet), deretter snur vi, tegner den igjen, snur, tegner igjen, snur og tegner den en siste gang.</p>
@@ -91,24 +91,24 @@ ____/<span class="hljs-command">\_</span>__/      <span class="hljs-command">\_<
 <ul>
 <li>
 <p>Istedenfor å skrive alle bevegelsene, la oss tegne den tredje figuren ved å kalle <code>second</code></p>
-<pre><code><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code>from turtle <span class="hljs-keyword">import</span> *
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">second</span><span class="hljs-params">()</span>:</span>
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
-    right(<span class="hljs-number">120</span>)
-    forward(<span class="hljs-number">30</span>)
-    left(<span class="hljs-number">60</span>)
-    forward(<span class="hljs-number">30</span>)
+def second():
+    forward(30)
+    left(60)
+    forward(30)
+    right(120)
+    forward(30)
+    left(60)
+    forward(30)
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">third</span><span class="hljs-params">()</span>:</span>
+def third():
     second()
-    left(<span class="hljs-number">60</span>)
+    left(60)
     second()
-    right(<span class="hljs-number">120</span>)
+    right(120)
     second()
-    left(<span class="hljs-number">60</span>)
+    left(60)
     second()
 
 third()
@@ -127,20 +127,20 @@ third()
 <ul>
 <li>
 <p>Lag en ny fil med koden under:</p>
-<pre><code><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
+<pre><code>from turtle <span class="hljs-keyword">import</span> *
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mountain</span><span class="hljs-params">(depth)</span>:</span>
-    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
+def mountain(depth):<span class="hljs-type"></span>
+    <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:<span class="hljs-type"></span>
            forward(<span class="hljs-number">10</span>)
-    <span class="hljs-keyword">else</span>:
-        newdepth = depth -<span class="hljs-number">1</span>
-        mountain(newdepth)
+    <span class="hljs-keyword">else</span>:<span class="hljs-type"></span>
+        <span class="hljs-keyword">new</span><span class="hljs-type">depth</span> = depth <span class="hljs-number">-1</span>
+        mountain(<span class="hljs-keyword">new</span><span class="hljs-type">depth</span>)
         left(<span class="hljs-number">60</span>)
-        mountain(newdepth)
+        mountain(<span class="hljs-keyword">new</span><span class="hljs-type">depth</span>)
         right(<span class="hljs-number">120</span>)
-        mountain(newdepth)
+        mountain(<span class="hljs-keyword">new</span><span class="hljs-type">depth</span>)
         left(<span class="hljs-number">60</span>)
-        mountain(newdepth)
+        mountain(<span class="hljs-keyword">new</span><span class="hljs-type">depth</span>)
 
 mountain(<span class="hljs-number">3</span>)
 </code></pre>
@@ -166,7 +166,7 @@ mountain(<span class="hljs-number">3</span>)
     <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
            forward(length)
     <span class="hljs-keyword">else</span>:
-        newdepth = depth -<span class="hljs-number">1</span>
+        newdepth = depth <span class="hljs-number">-1</span>
         mountain(newdepth, length)
         left(<span class="hljs-number">60</span>)
         mountain(newdepth, length)
@@ -266,7 +266,7 @@ ________|<span class="hljs-string">         </span>|________
     <span class="hljs-keyword">if</span> depth == <span class="hljs-number">1</span>:
            forward(length)
     <span class="hljs-keyword">else</span>:
-        newdepth = depth -<span class="hljs-number">1</span>
+        newdepth = depth <span class="hljs-number">-1</span>
 
         <span class="hljs-comment"># Hva skal vi skrive her?</span>
         <span class="hljs-comment"># Kopier inn koden fra steg 5 hit, men</span>
@@ -303,7 +303,7 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 <span class="hljs-code">    /      \</span>
 <span class="hljs-code">   /        \</span>
 <span class="hljs-code">  /          \</span>
-<span class="hljs-header"> /            \
+<span class="hljs-section"> /            \
 ----------------</span>
 
 <span class="hljs-code">       /\</span>
@@ -312,7 +312,7 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 <span class="hljs-code">    --------</span>
 <span class="hljs-code">   /\      /\</span>
 <span class="hljs-code">  /  \    /  \</span>
-<span class="hljs-header"> /    \  /    \
+<span class="hljs-section"> /    \  /    \
 ----------------</span>
 
 
@@ -322,7 +322,7 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 <span class="hljs-code">    --------</span>
 <span class="hljs-code">   /\      /\</span>
 <span class="hljs-code">  ----    ----</span>
-<span class="hljs-header"> /\  /\  /\  /\
+<span class="hljs-section"> /\  /\  /\  /\
 ----------------</span>
 </code></pre>
 <section class="check" id="sjekkliste-7">
@@ -363,7 +363,7 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 
 speed(<span class="hljs-number">11</span>)
 penup()
-setpos(-<span class="hljs-number">255</span>,-<span class="hljs-number">255</span>)
+setpos(<span class="hljs-number">-255</span>,<span class="hljs-number">-255</span>)
 triforce(<span class="hljs-number">7</span>, <span class="hljs-number">512</span>)
 </code></pre>
 <p>Du har kanskje lagt merke til at vi bruker en ny kommando <code>setpos</code> for å flytte skilpadden til hjørnet av skjermen.</p>
@@ -408,7 +408,7 @@ triforce(<span class="hljs-number">7</span>, <span class="hljs-number">512</span
 
 speed(<span class="hljs-number">11</span>)
 penup()
-setpos(-<span class="hljs-number">255</span>,-<span class="hljs-number">255</span>)
+setpos(<span class="hljs-number">-255</span>,<span class="hljs-number">-255</span>)
 bubble(<span class="hljs-number">6</span>, <span class="hljs-number">512</span>)
 </code></pre>
 </li>

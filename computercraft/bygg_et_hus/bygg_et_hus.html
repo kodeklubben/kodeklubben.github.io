@@ -537,13 +537,13 @@ nederste klossene, mens vinduene lages i høyde 2.</p>
 <p>Vi må til slutt også endre koden i <code>byggHus()</code> som kaller
 <code>byggVegg()</code>:</p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span></span>
-    byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-keyword">nil</span>)
+    byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-literal">nil</span>)
     turtle.turnLeft()
-    byggVegg(hoyde, dybde - <span class="hljs-number">1</span>, <span class="hljs-keyword">nil</span>, <span class="hljs-built_in">math</span>.floor(dybde / <span class="hljs-number">2</span>))
+    byggVegg(hoyde, dybde - <span class="hljs-number">1</span>, <span class="hljs-literal">nil</span>, math.floor(dybde / <span class="hljs-number">2</span>))
     turtle.turnLeft()
-    byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-keyword">nil</span>, bredde - <span class="hljs-number">2</span>)
+    byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-literal">nil</span>, bredde - <span class="hljs-number">2</span>)
     turtle.turnLeft()
-    byggVegg(hoyde, dybde - <span class="hljs-number">1</span>, <span class="hljs-keyword">nil</span>, <span class="hljs-number">2</span>)
+    byggVegg(hoyde, dybde - <span class="hljs-number">1</span>, <span class="hljs-literal">nil</span>, <span class="hljs-number">2</span>)
     turtle.turnLeft()
 
     byggTak(bredde, dybde)

@@ -47,7 +47,7 @@ pygame.display.set_mode(display, OPENGL | DOUBLEBUF)
 <h1 class="activity" id="steg-2-tegne-en-firkant">Steg 2: Tegne en firkant</h1>
 <p>Til nå har vi bare et tomt vindu som ikke viser noe fornuftig. Nå er det på tide å faktisk tegne en firkant. Det første du må gjøre er å legge til tre linjer rett over while-loopen din.</p>
 <pre><code class="python">gluPerspective(<span class="hljs-number">45</span>, display[<span class="hljs-number">0</span>]/display[<span class="hljs-number">1</span>], <span class="hljs-number">0.1</span>, <span class="hljs-number">50</span>)
-glTranslatef(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">5</span>)
+glTranslatef(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">-5</span>)
 glColor3fv((<span class="hljs-number">0</span>, <span class="hljs-number">127</span>, <span class="hljs-number">127</span>))
 </code></pre>
 <p>Det er ikke lett å registrere at disse linjene gjør noe spesielt før vi faktisk begynner å tegne noe på skjermen. I korte trekk så beskriver vi hvordan vi skal vise de tre dimensjonene på dataskjermen, flytter kameraposisjonen vår, og til slutt sier hvilken farge vi skal tegne med.</p>
@@ -60,10 +60,10 @@ glEnd()
 <p>OpenGL er biblioteket som vi bruker for å tegne 3D-grafikk. OpenGL fungerer stort sett slik at man oppgir en rekke punkter og så vil OpenGL tegne mellom disse punktene på en gitt måte. Når vi kaller glBegin(GL_QUADS) så vil OpenGL ta hver gruppe på fire punkter og tegne en flate mellom dem. glEnd sier ifra om at vi er ferdig med å tegne det vi skulle med GL_QUADS, og vi kan eventuelt tegne noe annet på en annen måte.</p>
 <p>For å sende inn et punkt som OpenGL skal bruke til å tegne med så bruker vi funksjonen glVertex3fv. Denne funksjonen tar inn et punkt, siden vi jobber i 3D så vil det bety at vi må ha tre tallverdier, en for x-aksen, y-aksen, og z-aksen.</p>
 <p>Det vi skal tegne er en firkant, derfor trenger vi å oppgi fire punkter. Legg følgende mellom glBegin og glEnd.</p>
-<pre><code class="python">glVertex3fv((-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
-glVertex3fv((-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+<pre><code class="python">glVertex3fv((<span class="hljs-number">-1</span>,<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>))
+glVertex3fv((<span class="hljs-number">-1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
 glVertex3fv(( <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
-glVertex3fv(( <span class="hljs-number">1</span>,-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>))
+glVertex3fv(( <span class="hljs-number">1</span>,<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>))
 </code></pre>
 <p>Hvis alt har gått rett for seg så skal du nå ha en nydelig og turkis firkant på skjermen din. Dessverre er det lite som avslører at dette er 3D og ikke bare 2D. Det fikser vi enkelt og greit ved å legge til litt rotasjon. Legg til den følgende linjen inne i while-løkken din.</p>
 <pre><code class="python">glRotatef(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)

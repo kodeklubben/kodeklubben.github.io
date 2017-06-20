@@ -251,13 +251,13 @@ sendte til vennene dine.</p>
 <section class="tip" id="en-annen-mate-a-dele-programmet">
 <h2 class="tip" id="en-annen-mate-a-dele-programmet">En annen måte å dele programmet</h2>
 <p>Husker du oppgaven <a href="../publiser/publiser.html">HTML: Publiser nettsiden din</a>? Kanskje du kan laste opp JavaScript-koden til din <code>Github</code>-side? Et lite tips er å legge JavaScript-koden inn i <code>&lt;head&gt;</code>-taggen ved å bruke disse taggene:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="undefined">
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <p>Du kan også lagre JavaScript-koden i en egen <code>.js</code>-fil, for eksempel <code>katt.js</code>. Så kan du referere til den fra en HTML-fil på denne måten:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"katt.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"katt.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 </code></pre>
 <p>Husk at <code>katt.js</code> må da ligge i samme mappe som HTML-filen. Dette skal vi prøve ut senere.</p>
 <p>Men for at dette skal funkere må vi skrive om <code>console.log()</code> til:</p>

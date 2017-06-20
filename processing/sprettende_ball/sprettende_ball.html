@@ -283,9 +283,9 @@ og høyde. Disse variablene får verdien til størrelsen på vinduet når <code>
 kalles. Endre <code>draw</code> til å bruke <code>width</code> og <code>height</code>:</p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
-  <span class="hljs-built_in">ellipse</span>(<span class="hljs-variable">width</span> / <span class="hljs-number">2</span>, <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">width</span> / <span class="hljs-number">2</span>, <span class="hljs-built_in">height</span> / <span class="hljs-number">2</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
-  <span class="hljs-built_in">ellipse</span>(<span class="hljs-variable">width</span>, <span class="hljs-variable">height</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
 }
 </code></pre>
 <p>Her har vi brukt regnestykkene <code>width / 2</code> og <code>height / 2</code> for å
@@ -306,8 +306,8 @@ på seg:</p>
 
 <span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
-  x = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
-  y = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+  x = <span class="hljs-built_in">width</span> / <span class="hljs-number">2</span>;
+  y = <span class="hljs-built_in">height</span> / <span class="hljs-number">2</span>;
 }
 </code></pre>
 <p><code>float x;</code> og <code>float y;</code> lager to variabler med navn <code>x</code> og <code>y</code>. Typen av
@@ -323,7 +323,7 @@ bruke <code>x</code> og <code>y</code>:</p>
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
   <span class="hljs-built_in">ellipse</span>(x, y, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
-  <span class="hljs-built_in">ellipse</span>(<span class="hljs-variable">width</span>, <span class="hljs-variable">height</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+  <span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">width</span>, <span class="hljs-built_in">height</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
 }
 </code></pre>
 <p>Den første sirkelen bruker nå <code>x</code> og <code>y</code> som posisjon. I tillegg la vi til
@@ -388,7 +388,7 @@ setningen hvor vi øker <code>x</code> og fjerner to av sirklene.</p>
     xFart = -xFart;
   }
 
-  <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-variable">width</span> - <span class="hljs-number">50</span>) {
+  <span class="hljs-keyword">if</span> (x &gt; <span class="hljs-built_in">width</span> - <span class="hljs-number">50</span>) {
     xFart = -xFart;
   }
 
@@ -396,7 +396,7 @@ setningen hvor vi øker <code>x</code> og fjerner to av sirklene.</p>
     yFart = -yFart;
   }
 
-  <span class="hljs-keyword">if</span> (y &gt; <span class="hljs-variable">height</span> - <span class="hljs-number">50</span>) {
+  <span class="hljs-keyword">if</span> (y &gt; <span class="hljs-built_in">height</span> - <span class="hljs-number">50</span>) {
     yFart = -yFart;
   }
 

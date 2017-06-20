@@ -234,10 +234,10 @@ points = <span class="hljs-number">0</span>
 <li>
 <p>Nå skal vi få tkinter til å displaye farge og tekst. Til dette bruker vi <code>randint()</code> funksjonen. Den lager et tilfeldig tall mellom to ytterpunkter. Lag denne under <code>box.delete(0, tkinter.END)</code></p>
 <pre><code class="python"><span class="hljs-comment"># Lager tilfeldig tall mellom 0 og 8</span>
-colour = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
+colour = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
 
 <span class="hljs-comment"># Lager tilfeldig tall til teksten.</span>
-text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
+text = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
 </code></pre>
 </li>
 <li>
@@ -254,8 +254,8 @@ text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hlj
 
     box.delete(<span class="hljs-number">0</span>, tkinter.END)
 
-    colour = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
-    text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
+    colour = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
+    text = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
 
     <span class="hljs-comment"># Oppdaterer labels</span>
     label.config(fg=str(colours_eng[colour]), text=str(colours[text]))
@@ -332,8 +332,8 @@ time_left = <span class="hljs-number">30</span>
 
     box.delete(<span class="hljs-number">0</span>, tkinter.END)
 
-    colour = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
-    text = randint(<span class="hljs-number">0</span>, len(colours)-<span class="hljs-number">1</span>)
+    colour = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
+    text = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
 
     label.config(fg=str(colours_eng[colour]), text=str(colours[text]))
     points_label.config(text=<span class="hljs-string">"Poeng: "</span> + str(points))

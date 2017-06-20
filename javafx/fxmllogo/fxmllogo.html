@@ -81,7 +81,7 @@ circle.setLayoutY(<span class="hljs-number">150</span>);
 circle.setRadius(<span class="hljs-number">40</span>);
 circle.setFill(Color.BLUE);
 </code></pre>
-<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
+<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Circle</span> <span class="hljs-attr">layoutX</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">layoutY</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">"40"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"blue"</span>/&gt;</span>
 </code></pre>
 <p>Noen typer objekter, f.eks. paneler (typene <strong>Pane</strong>, <strong>HBox</strong>, <strong>VBox</strong> og <strong>AnchorPane</strong>), <em>inneholder</em> andre objekter. I Java-koden må en legge den ene til <strong>children</strong>-lista til den andre, mens en i FXML legger det ene elementet inni det andre:</p>
 <pre><code class="java">Pane pane = <span class="hljs-keyword">new</span> Pane();
@@ -89,9 +89,9 @@ Circle circle = <span class="hljs-keyword">new</span> Circle();
 ...
 pane.getChildren().add(circle);
 </code></pre>
-<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Pane</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">Circle</span> <span class="hljs-attribute">layoutX</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">layoutY</span>=<span class="hljs-value">"150"</span> <span class="hljs-attribute">radius</span>=<span class="hljs-value">"40"</span> <span class="hljs-attribute">fill</span>=<span class="hljs-value">"blue"</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">Pane</span>&gt;</span>
+<pre><code class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Pane</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Circle</span> <span class="hljs-attr">layoutX</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">layoutY</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">radius</span>=<span class="hljs-string">"40"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"blue"</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Pane</span>&gt;</span>
 </code></pre>
 </section>
 </section>
@@ -183,22 +183,22 @@ pane.getChildren().add(circle);
 </li>
 </ul>
 <pre><code>
-  Trikset her er å lage et **FXMLLoader**-objekt (første linje i start-metoden, og be denne laste inn FXML-fila med load-metoden (andre linje).
-+ Kjør <span class="hljs-keyword">app</span>-<span class="hljs-keyword">en</span> ved å <span class="hljs-keyword">h</span>øyre-klikke på fila eller i editoren og velge `<span class="hljs-keyword">Run</span> <span class="hljs-keyword">as</span> &gt; Java Application`. Da skal det (etter litt venting) dukke opp et vindu som dette:
+  Trikset her er å lage et **FXMLLoader**-objekt (første linje i start-metoden, og <span class="hljs-keyword">be </span>denne laste inn FXML-fila med load-metoden (<span class="hljs-keyword">andre </span>linje).
++ Kjør app-en ved å høyre-klikke på fila eller i editoren og velge `Run as &gt; <span class="hljs-keyword">Java </span>Application`. Da skal det (etter litt venting) dukke opp et vindu som dette:
 
-  ![](<span class="hljs-keyword">run</span>-FxmlLogoApp-<span class="hljs-keyword">as</span>-java-application.png)
+  ![](run-FxmlLogoApp-as-<span class="hljs-keyword">java-application.png)
+</span>
+<span class="hljs-comment"># Hva har du lært?</span>
 
-# Hva har du <span class="hljs-keyword">l</span>ært?
-
-+ lage <span class="hljs-keyword">en</span> FXML-fil med Eclipse sin veiviser
++ lage en FXML-fil med Eclipse sin veiviser
 + redigere FXML i Eclipse sin FXML-editor.
-+ <span class="hljs-keyword">se</span> forhåndsvisning av FXML-innholdet i JavaFX Preview-panelet
-+ åpne FXML-fila i JavaFX Scene Builder med `<span class="hljs-keyword">Open</span> with SceneBuilder`
-+ legge nye elementer til FXML-fila ved å dra og slippe fra SceneBuilder sin paletten
-+ redigere grafiske egenskaper i SceneBuilder
-+ skrive <span class="hljs-keyword">app</span>-kode som laster inn og viser frem FXML-fila i et <span class="hljs-keyword">app</span>-vindu
++ se forhåndsvisning av FXML-innholdet i <span class="hljs-keyword">JavaFX </span>Preview-panelet
++ åpne FXML-fila i <span class="hljs-keyword">JavaFX </span><span class="hljs-keyword">Scene </span><span class="hljs-keyword">Builder </span>med `Open with <span class="hljs-keyword">SceneBuilder`
+</span>+ legge nye elementer til FXML-fila ved å dra og slippe fra <span class="hljs-keyword">SceneBuilder </span>sin paletten
++ redigere grafiske egenskaper i <span class="hljs-keyword">SceneBuilder
+</span>+ skrive app-kode som laster inn og viser frem FXML-fila i et app-vindu
 
-I leksjonen KalkulatorFX (to be continued) vil du <span class="hljs-keyword">l</span>ære hvordan du kan koble FXML-koden til Java-koden og gjøre <span class="hljs-keyword">app</span>-<span class="hljs-keyword">en</span> levende (interaktiv)!
+I leksjonen KalkulatorFX (to <span class="hljs-keyword">be </span>continued) vil du lære hvordan du kan koble FXML-koden til <span class="hljs-keyword">Java-koden </span>og gjøre app-en levende (interaktiv)!
 </code></pre>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Java FX: Logo med FXML&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/javafx/fxmllogo" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/javafx/fxmllogo" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Hallvard Trætteberg</p>

@@ -38,13 +38,13 @@ tilkoblet skjerm.</p>
 <p>La oss for eksempel prøve programmet <code>hello</code>. Dette er et enkelt
 program som vi såvidt har sett litt på tidligere. Det skriver bare
 teksten <em>Hello World!</em>. Kjør først programmet på datamaskinen:</p>
-<pre><code><span class="hljs-blockquote">&gt; hello</span>
+<pre><code><span class="hljs-quote">&gt; hello</span>
 Hello World!
 </code></pre>
 <p>Nå kan vi prøve å få dette til å kjøre på skjermen. Med skjermen
 koblet til på høyre (<em>right</em>) side av datamaskinen (som på bildet
 over) skriver vi bare</p>
-<pre><code>&gt;<span class="hljs-instruction"> monitor </span>right hello
+<pre><code>&gt;<span class="hljs-built_in"> monitor </span>right hello
 </code></pre>
 <p>Du kan nå trykke <code>Esc</code> for å gå ut av datamaskinen og se på
 skjermen. Står det <em>Hello World!</em>?</p>
@@ -98,8 +98,8 @@ et tillegg til datamaskinen).</p>
 <ul>
 <li>
 <p>Lag et enkelt program som heter <code>skjerm</code> og ser slik ut:</p>
-<pre><code class="lua">skjerm = peripheral.wrap(<span class="hljs-string">"right"</span>)
-skjerm.write(<span class="hljs-string">"Heisann!"</span>)
+<pre><code class="lua">skjerm = peripheral.<span class="hljs-built_in">wrap</span>(<span class="hljs-string">"right"</span>)
+skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"Heisann!"</span>)
 </code></pre>
 <p>Som vanlig kan du bytte ut <em>right</em> med for eksempel <em>left</em> eller
 <em>top</em> om du har plassert skjermen annerledes.</p>
@@ -113,7 +113,7 @@ programmet skrive til skjermen ved siden av datamaskinen.</p>
 trenger vi ikke å spesifisere hvilken side av datamaskinen skjermen
 er på. Endre programmet ditt som følger:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)     <span class="hljs-comment">-- endret linje</span>
-skjerm.write(<span class="hljs-string">"Heisann!"</span>)
+skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"Heisann!"</span>)
 </code></pre>
 </li>
 <li>
@@ -122,7 +122,7 @@ enkelt i en <em>if</em>-test:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>                                <span class="hljs-comment">-- ny linje</span>
-    skjerm.write(<span class="hljs-string">"Heisann!"</span>)
+    skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"Heisann!"</span>)
 <span class="hljs-keyword">else</span>                                          <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)       <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span>
@@ -150,7 +150,7 @@ se ut som følger:</p>
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     skjerm.clear()
-    skjerm.write(<span class="hljs-string">"O"</span>)
+    skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span>
@@ -166,7 +166,7 @@ koden din:</p>
     <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, <span class="hljs-number">10</span> <span class="hljs-keyword">do</span>                        <span class="hljs-comment">-- ny linje</span>
         skjerm.clear()
         skjerm.setCursorPos(<span class="hljs-number">3</span>, rad)           <span class="hljs-comment">-- ny linje</span>
-        skjerm.write(<span class="hljs-string">"O"</span>)
+        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)                              <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>
@@ -187,7 +187,7 @@ kodelinjene rundt slik at de blir som dette:</p>
     <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, <span class="hljs-number">10</span> <span class="hljs-keyword">do</span>                        <span class="hljs-comment">-- flyttet linje</span>
         skjerm.clear()                        <span class="hljs-comment">-- flyttet linje</span>
         skjerm.setCursorPos(<span class="hljs-number">3</span>, rad)           <span class="hljs-comment">-- flyttet linje</span>
-        skjerm.write(<span class="hljs-string">"O"</span>)                     <span class="hljs-comment">-- flyttet linje</span>
+        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)                     <span class="hljs-comment">-- flyttet linje</span>
         sleep(<span class="hljs-number">1</span>)                              <span class="hljs-comment">-- flyttet linje</span>
     <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- flyttet linje</span>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span>
@@ -223,7 +223,7 @@ skjermen:</p>
     <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>                     <span class="hljs-comment">-- endret linje</span>
         skjerm.clear()
         skjerm.setCursorPos(<span class="hljs-number">3</span>, rad)
-        skjerm.write(<span class="hljs-string">"O"</span>)
+        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
@@ -258,10 +258,10 @@ du bruker <code>Ctrl-T</code> for å avslutte programmet.</p>
     <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>                         <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>                 <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>                             <span class="hljs-comment">-- endret linje</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>                             <span class="hljs-comment">-- endret linje</span>
         skjerm.clear()
         skjerm.setCursorPos(X, Y)             <span class="hljs-comment">-- endret linje</span>
-        skjerm.write(<span class="hljs-string">"O"</span>)
+        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
 
         X = X + fartX                         <span class="hljs-comment">-- ny linje</span>
@@ -280,10 +280,10 @@ par tester nederst i funksjonen din:</p>
     <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
     <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">1</span>
 
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
         skjerm.clear()
         skjerm.setCursorPos(X, Y)
-        skjerm.write(<span class="hljs-string">"O"</span>)
+        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
 
         X = X + fartX
@@ -314,10 +314,10 @@ at ballen faller stadig raskere ned mot bakken, altså den øker
     <span class="hljs-keyword">local</span> fartX, fartY = <span class="hljs-number">1</span>, <span class="hljs-number">0</span>                 <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">local</span> gravitasjon = <span class="hljs-number">0.2</span>                   <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
         skjerm.clear()
         skjerm.setCursorPos(X, Y)
-        skjerm.write(<span class="hljs-string">"O"</span>)
+        skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">0.1</span>)
 
         fartY = fartY + gravitasjon           <span class="hljs-comment">-- ny linje</span>
@@ -356,7 +356,7 @@ med kommandoer du allerede kjenner:</p>
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     skjerm.clear()
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.write(<span class="hljs-string">"ComputerCraft"</span>)
+    skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"ComputerCraft"</span>)
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span>
@@ -395,7 +395,7 @@ størrelse hvor all teksten får plass på skjermen.</p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">brukStorTekst</span><span class="hljs-params">(skjerm, tekst)</span></span>
     <span class="hljs-keyword">local</span> lengde = #tekst
 
-    <span class="hljs-keyword">for</span> skala = <span class="hljs-number">5</span>, <span class="hljs-number">0.5</span>, -<span class="hljs-number">0.5</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">for</span> skala = <span class="hljs-number">5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">-0.5</span> <span class="hljs-keyword">do</span>
         skjerm.setTextScale(skala)
         skjerm.clear()
         bredde, hoyde = skjerm.getSize()
@@ -440,7 +440,7 @@ funksjonen <code>brukStorTekst</code>) se omtrent slik ut:</p>
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
     brukStorTekst(skjerm, tekst)
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.write(tekst)
+    skjerm.<span class="hljs-built_in">write</span>(tekst)
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span>
@@ -483,7 +483,7 @@ velkjent måte:</p>
     skjerm.clear()
 
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.write(tekst)
+    skjerm.<span class="hljs-built_in">write</span>(tekst)
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span>
@@ -506,9 +506,9 @@ i denne sammenhengen <em>del</em>, den brukes til å finne deltekster).</p>
     skjerm.clear()
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()         <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">local</span> deltekst = <span class="hljs-built_in">string</span>.sub(tekst, <span class="hljs-number">1</span>, bredde)  <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">local</span> deltekst = string.sub(tekst, <span class="hljs-number">1</span>, bredde)  <span class="hljs-comment">-- ny linje</span>
     skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
-    skjerm.write(deltekst)                         <span class="hljs-comment">-- endret linje</span>
+    skjerm.<span class="hljs-built_in">write</span>(deltekst)                         <span class="hljs-comment">-- endret linje</span>
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
 <span class="hljs-keyword">end</span>
@@ -530,11 +530,11 @@ du skjønner hvordan denne funksjonen virker.</p>
     <span class="hljs-keyword">local</span> lengde = #tekst                     <span class="hljs-comment">-- ny linje</span>
 
     <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>, lengde - bredde <span class="hljs-keyword">do</span>             <span class="hljs-comment">-- ny linje</span>
-        <span class="hljs-keyword">local</span> deltekst = <span class="hljs-built_in">string</span>.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
+        <span class="hljs-keyword">local</span> deltekst = string.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
                                   <span class="hljs-comment">-- deltekstlinjen er endret</span>
         skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
         skjerm.clear()                        <span class="hljs-comment">-- ny linje</span>
-        skjerm.write(deltekst)
+        skjerm.<span class="hljs-built_in">write</span>(deltekst)
     <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Ingen skjerm er koblet til"</span>)
@@ -571,16 +571,16 @@ begynner å animere den.</p>
     skjerm.setTextScale(<span class="hljs-number">5</span>)
     skjerm.clear()
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
-    <span class="hljs-keyword">local</span> luft = <span class="hljs-built_in">string</span>.rep(<span class="hljs-string">" "</span>, bredde)      <span class="hljs-comment">-- ny linje</span>
+    <span class="hljs-keyword">local</span> luft = string.rep(<span class="hljs-string">" "</span>, bredde)      <span class="hljs-comment">-- ny linje</span>
     tekst = luft .. tekst .. luft             <span class="hljs-comment">-- ny linje</span>
 
     <span class="hljs-keyword">local</span> lengde = #tekst
-    <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
         <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>, lengde - bredde <span class="hljs-keyword">do</span>
-            <span class="hljs-keyword">local</span> deltekst = <span class="hljs-built_in">string</span>.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
+            <span class="hljs-keyword">local</span> deltekst = string.sub(tekst, i+<span class="hljs-number">1</span>, i+bredde)
             skjerm.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
             skjerm.clear()
-            skjerm.write(deltekst)
+            skjerm.<span class="hljs-built_in">write</span>(deltekst)
             sleep(<span class="hljs-number">0.2</span>)
         <span class="hljs-keyword">end</span>
     <span class="hljs-keyword">end</span>

@@ -50,7 +50,7 @@ term.clear()
 term.setCursorPos(x, y)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-<span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)    <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)    <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-built_in">print</span>(hendelse)                               <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-built_in">print</span>(tast)                                   <span class="hljs-comment">-- ny linje</span>
 </code></pre>
@@ -76,7 +76,7 @@ term.clear()
 term.setCursorPos(x, y)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-<span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
+<span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
 <span class="hljs-keyword">if</span> tast == keys.q <span class="hljs-keyword">then</span>                        <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Du trykket Q'</span>)                     <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>                                          <span class="hljs-comment">-- ny linje</span>
@@ -90,12 +90,12 @@ trykket. Dersom tasten <code>Q</code> trykkes avslutter vi løkken med <code>bre
 <pre><code class="lua"><span class="hljs-keyword">local</span> x = <span class="hljs-number">20</span>
 <span class="hljs-keyword">local</span> y = <span class="hljs-number">10</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>                                 <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>                                 <span class="hljs-comment">-- ny linje</span>
     term.clear()
     term.setCursorPos(x, y)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-    <span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
+    <span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
     <span class="hljs-keyword">if</span> tast == keys.q <span class="hljs-keyword">then</span>
         <span class="hljs-keyword">break</span>                                 <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">end</span>
@@ -112,12 +112,12 @@ verdiene av <code>x</code> og <code>y</code> avhengig av hvilken piltast som try
 <pre><code class="lua"><span class="hljs-keyword">local</span> x = <span class="hljs-number">20</span>
 <span class="hljs-keyword">local</span> y = <span class="hljs-number">10</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()
     term.setCursorPos(x, y)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-    <span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
+    <span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
     <span class="hljs-keyword">if</span> tast == keys.q <span class="hljs-keyword">then</span>
         <span class="hljs-keyword">break</span>
     <span class="hljs-keyword">end</span>
@@ -146,10 +146,10 @@ etter. Vi bruker tilfeldige tall for å bestemme hvor skatten skal
 ligge. Endre begynnelsen av programmet ditt som følger:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> x = <span class="hljs-number">20</span>
 <span class="hljs-keyword">local</span> y = <span class="hljs-number">10</span>
-<span class="hljs-keyword">local</span> skattX = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">1</span>, <span class="hljs-number">50</span>)             <span class="hljs-comment">-- ny linje</span>
-<span class="hljs-keyword">local</span> skattY = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">1</span>, <span class="hljs-number">18</span>)             <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> skattX = math.random(<span class="hljs-number">1</span>, <span class="hljs-number">50</span>)             <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> skattY = math.random(<span class="hljs-number">1</span>, <span class="hljs-number">18</span>)             <span class="hljs-comment">-- ny linje</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()
     term.setCursorPos(skattX, skattY)         <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'X'</span>)                                <span class="hljs-comment">-- ny linje</span>
@@ -162,7 +162,7 @@ ligge. Endre begynnelsen av programmet ditt som følger:</p>
         <span class="hljs-keyword">break</span>                                 <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
+    <span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
     <span class="hljs-comment">-- resten av programmet er som tidligere</span>
 </code></pre>
 <p>Prøv spillet! Fungerer det som du hadde trodd? Klarer du å kanskje
@@ -276,16 +276,16 @@ av en dør og legg inn passord-programmet datamaskinen, det vil si
 skriv <code>edit passord</code> og skriv inn følgende:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()
     term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read(<span class="hljs-string">'*'</span>)
+    svar = <span class="hljs-built_in">read</span>(<span class="hljs-string">'*'</span>)
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)
         sleep(<span class="hljs-number">5</span>)
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
@@ -310,19 +310,19 @@ dette skal være mulig kan vi bytte ut <code>os.pullEvent</code> med noe som
 heter <code>os.pullEventRaw</code>. Disse fungerer omtrent på samme måte, men
 den siste bryr seg ikke om <code>Ctrl-T</code>.</p>
 <p>Skriv <code>edit startup</code> og legg til en linje øverst i koden din:</p>
-<pre><code class="lua"><span class="hljs-built_in">os</span>.pullEvent = <span class="hljs-built_in">os</span>.pullEventRaw                <span class="hljs-comment">-- ny linje</span>
+<pre><code class="lua">os.pullEvent = os.pullEventRaw                <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()
     term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read(<span class="hljs-string">'*'</span>)
+    svar = <span class="hljs-built_in">read</span>(<span class="hljs-string">'*'</span>)
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)
         sleep(<span class="hljs-number">5</span>)
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
@@ -363,7 +363,7 @@ disketten vi nettopp satte inn.</p>
 <p>La oss lage et enkelt program. Skriv <code>edit navn</code> og skriv inn
 følgende:</p>
 <pre><code class="lua"><span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva heter du?'</span>)
-navn = read()
+navn = <span class="hljs-built_in">read</span>()
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hei, '</span> .. navn)
 </code></pre>
 <p>Test at programmet virker ved å skrive <code>navn</code>.</p>
@@ -503,7 +503,7 @@ av <strong>heisann</strong> som vi skrev tidligere.</p>
 <p>La oss se på koden til <strong>hello</strong>. Skriv <code>edit hello</code>. Du vil se det
 følgende:</p>
 <pre><code class="lua"><span class="hljs-keyword">if</span> term.isColour() <span class="hljs-keyword">then</span>
-    term.setTextColour( <span class="hljs-number">2</span>^<span class="hljs-built_in">math</span>.random(<span class="hljs-number">0</span>,<span class="hljs-number">15</span>) )
+    term.setTextColour( <span class="hljs-number">2</span>^math.random(<span class="hljs-number">0</span>,<span class="hljs-number">15</span>) )
 <span class="hljs-keyword">end</span>
 textutils.slowPrint( <span class="hljs-string">"Hello World!"</span> )
 term.setTextColour( colours.white )
@@ -579,8 +579,8 @@ du kan bruke musen.</p>
 <p>La oss lage et enkelt tegneprogram. Skriv <code>edit tegne</code>, og skriv</p>
 <pre><code class="lua">term.clear()
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
-    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'mouse_click'</span>)
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = os.pullEvent(<span class="hljs-string">'mouse_click'</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Du klikket '</span> .. knapp)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Posisjon: x = '</span> .. x .. <span class="hljs-string">', y = '</span> .. y)
 <span class="hljs-keyword">end</span>
@@ -596,8 +596,8 @@ venstre-klikker. Vi kan også bruke høyre-klikk til å viske vekk det
 som er tegnet. Endre koden til</p>
 <pre><code class="lua">term.clear()
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
-    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'mouse_click'</span>)
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = os.pullEvent(<span class="hljs-string">'mouse_click'</span>)
     term.setCursorPos(x, y)                   <span class="hljs-comment">-- ny linje</span>
 
     <span class="hljs-keyword">if</span> knapp == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span>                        <span class="hljs-comment">-- ny linje</span>

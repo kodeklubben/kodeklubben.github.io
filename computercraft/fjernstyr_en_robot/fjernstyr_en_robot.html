@@ -121,13 +121,13 @@ Denne kan vi bruke mens vi går rundt, og er ikke bundet til én plass.</li>
 <ul>
 <li>
 <p>Vi kaller kontroller-programmet vårt <code>remote.lua</code></p>
-<pre><code>edit remote<span class="hljs-class">.lua</span>
+<pre><code>edit remote<span class="hljs-selector-class">.lua</span>
 </code></pre>
 </li>
 <li>
 <p>La oss starte med å lese inn hva brukeren trykker på:</p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remoteMove</span><span class="hljs-params">()</span></span>
-  <span class="hljs-keyword">local</span> action, keycode = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
+  <span class="hljs-keyword">local</span> action, keycode = os.pullEvent(<span class="hljs-string">'key'</span>)
   <span class="hljs-keyword">if</span> keycode == keys.w <span class="hljs-keyword">then</span>
     <span class="hljs-keyword">return</span> {<span class="hljs-string">"Go"</span>, <span class="hljs-string">"forward!"</span>}
   <span class="hljs-keyword">elseif</span> keycode == keys.a <span class="hljs-keyword">then</span>
@@ -139,8 +139,8 @@ Denne kan vi bruke mens vi går rundt, og er ikke bundet til én plass.</li>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">(  )</span></span>
   <span class="hljs-built_in">print</span>(<span class="hljs-string">"Venter på kommando ..."</span>)
-  rednet.open(<span class="hljs-string">"back"</span>)  <span class="hljs-comment">-- Hvor har du modemet ditt?</span>
-  <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+  rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"back"</span>)  <span class="hljs-comment">-- Hvor har du modemet ditt?</span>
+  <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     <span class="hljs-keyword">local</span> command = remoteMove()
     <span class="hljs-built_in">print</span>(<span class="hljs-built_in">unpack</span>(command))
   <span class="hljs-keyword">end</span>
@@ -179,13 +179,13 @@ til roboten som skal bevege på seg.</p>
 </li>
 <li>
 <p>Åpne lua-tolkeren, og lag en tabell:</p>
-<pre><code>&gt; lua
-lua&gt; tabell = {<span class="hljs-string">"hei"</span>, <span class="hljs-string">"på"</span>, <span class="hljs-string">"deg"</span>}
-lua&gt; <span class="hljs-built_in">print</span>(tabell)
-lua&gt; <span class="hljs-built_in">print</span>(<span class="hljs-built_in">unpack</span>(tabell))
-lua&gt; <span class="hljs-built_in">print</span>(tabell[<span class="hljs-number">1</span>])
-lua&gt; <span class="hljs-built_in">print</span>(tabell[<span class="hljs-number">2</span>])
-lua&gt; <span class="hljs-built_in">print</span>(tabell[<span class="hljs-number">3</span>])
+<pre><code>&gt; <span class="hljs-keyword">lua</span>
+<span class="hljs-keyword">lua</span>&gt; tabell = {<span class="hljs-string">"hei"</span>, <span class="hljs-string">"på"</span>, <span class="hljs-string">"deg"</span>}
+<span class="hljs-keyword">lua</span>&gt; <span class="hljs-keyword">print</span>(tabell)
+<span class="hljs-keyword">lua</span>&gt; <span class="hljs-keyword">print</span>(unpack(tabell))
+<span class="hljs-keyword">lua</span>&gt; <span class="hljs-keyword">print</span>(tabell[<span class="hljs-number">1</span>])
+<span class="hljs-keyword">lua</span>&gt; <span class="hljs-keyword">print</span>(tabell[<span class="hljs-number">2</span>])
+<span class="hljs-keyword">lua</span>&gt; <span class="hljs-keyword">print</span>(tabell[<span class="hljs-number">3</span>])
 </code></pre>
 </li>
 </ul>
@@ -212,8 +212,8 @@ elementet med firkantklammer: <code>tabell[2]</code>.</p>
 <ul>
 <li>
 <p>Start <code>CraftOS</code> på en robot, og kjør først kommandoen på &quot;vanlig&quot; vis:</p>
-<pre><code><span class="hljs-blockquote">&gt; go forward 5</span>
-<span class="hljs-blockquote">&gt; turn left</span>
+<pre><code><span class="hljs-quote">&gt; go forward 5</span>
+<span class="hljs-quote">&gt; turn left</span>
 </code></pre>
 </li>
 </ul>
@@ -284,15 +284,15 @@ programmerer eller voksen! Hva gjør programmet nå forskjellig?</p>
   <span class="hljs-keyword">elseif</span> keycode == keys.a <span class="hljs-keyword">then</span>
     <span class="hljs-keyword">return</span> {<span class="hljs-string">"Denne"</span>, <span class="hljs-string">"må"</span>, <span class="hljs-string">"du"</span>, <span class="hljs-string">"fikse"</span>, <span class="hljs-string">"selv!"</span>}
   <span class="hljs-keyword">else</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">nil</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 
 <span class="hljs-comment">-- ... og nye remoteMove sender nå kommandoen dit den skal!</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remoteMove</span><span class="hljs-params">()</span></span>
-  <span class="hljs-keyword">local</span> action, keycode = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
+  <span class="hljs-keyword">local</span> action, keycode = os.pullEvent(<span class="hljs-string">'key'</span>)
   command = toMoveCommand(keycode)
-  <span class="hljs-keyword">if</span> command == <span class="hljs-keyword">nil</span> <span class="hljs-keyword">then</span>
+  <span class="hljs-keyword">if</span> command == <span class="hljs-literal">nil</span> <span class="hljs-keyword">then</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Unknown key: "</span> .. keycode)
   <span class="hljs-keyword">else</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Sending "</span>.. <span class="hljs-built_in">unpack</span>(command))
@@ -303,8 +303,8 @@ programmerer eller voksen! Hva gjør programmet nå forskjellig?</p>
 <span class="hljs-comment">-- Denne er endret litt</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">(  )</span></span>
   <span class="hljs-built_in">print</span>(<span class="hljs-string">"Listening for move commands ..."</span>)
-  rednet.open(<span class="hljs-string">"back"</span>)
-  <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+  rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"back"</span>)
+  <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
   <span class="hljs-comment">-- Her skal vi ikke lenger skrive ut, men flytte på roboten</span>
     remoteMove()
   <span class="hljs-keyword">end</span>
@@ -348,8 +348,8 @@ Lag en tom fil i CraftOS for å få mappen til å dukke opp!</p>
 <p>Fyll så på med koden!</p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
   <span class="hljs-comment">-- Hva sier pheripherals? Hvilken side er modemet på?</span>
-  rednet.open(<span class="hljs-string">"left"</span>)
-  <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+  rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"left"</span>)
+  <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     sender, message = rednet.receive(<span class="hljs-number">99999</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">"Message from "</span> .. sender .. <span class="hljs-string">" received: "</span>)
     <span class="hljs-built_in">print</span>(message)
@@ -431,12 +431,12 @@ remoteId = <span class="hljs-built_in">tonumber</span>(arguments)
 <span class="hljs-comment">-- ... og remoteId = 5!</span>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pack</span><span class="hljs-params">(...)</span></span>
-  <span class="hljs-keyword">return</span> arg
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">arg</span>
 <span class="hljs-keyword">end</span>
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remoteCommand</span><span class="hljs-params">()</span></span>
-  <span class="hljs-built_in">io</span>.write(<span class="hljs-string">"ssh@"</span> .. remoteId .. <span class="hljs-string">"&gt; "</span>)
-  <span class="hljs-keyword">local</span> intputString = <span class="hljs-built_in">io</span>.read()
+  io.<span class="hljs-built_in">write</span>(<span class="hljs-string">"ssh@"</span> .. remoteId .. <span class="hljs-string">"&gt; "</span>)
+  <span class="hljs-keyword">local</span> intputString = io.<span class="hljs-built_in">read</span>()
   <span class="hljs-keyword">local</span> commandTable = pack(intputString)
   <span class="hljs-built_in">print</span>(<span class="hljs-string">"Sending: "</span>)
   <span class="hljs-built_in">print</span>(<span class="hljs-built_in">unpack</span>(commandTable))
@@ -445,8 +445,8 @@ remoteId = <span class="hljs-built_in">tonumber</span>(arguments)
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">(  )</span></span>
   <span class="hljs-built_in">print</span>(<span class="hljs-string">"Listening for move commands ..."</span>)
-  rednet.open(<span class="hljs-string">"back"</span>)
-  <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+  rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"back"</span>)
+  <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     remoteCommand()
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>

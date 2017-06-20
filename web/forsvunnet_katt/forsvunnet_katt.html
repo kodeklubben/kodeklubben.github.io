@@ -24,13 +24,13 @@ function relative (url) {
 <p>Nå kan du sette opp dokumentet ditt slik som du lærte i forrige leksjon.</p>
 </li>
 </ul>
-<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<pre><code class="html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <ul>
 <li>
@@ -46,16 +46,16 @@ function relative (url) {
 <toggle>
   <strong>Hint</strong>
   <hide>
-<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span> Katten Felix er forsvunnet <span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+<pre><code class="html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> Katten Felix er forsvunnet <span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
   </hide>
 </toggle>
@@ -77,26 +77,26 @@ function relative (url) {
 <p>Nå kan du skrive <code>&lt;img&gt;</code> taggen som du vanligvis ville gjort, men i scr attributten, istede for å skrive en URL skriver vi bare <code>felix.jpg</code> eller <code>felix.png</code>. Ikke glem å legge inn en <code>alt</code> attributt!</p>
 </li>
 </ul>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"felix.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"bilde av Felix"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"felix.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"bilde av Felix"</span>&gt;</span>
 </code></pre>
 <ul>
 <li>Lagre filen din og vis den i nettleseren.</li>
 </ul>
 <p>Dersom bildet er litt for stort, så kan vi gjøre det mindre ved hjelp av attributtet <code>width</code>. Vi spesifiserer ikke bredden i centimeter eller meter eller tommer eller fot, men i noe som kalles <code>pixler</code>. Jeg velger å gå for 400 pixler for dette bildet, du kan selv velge hvor stort det skal være, så prøv deg frem med forskjellige tall.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"felix.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"bilde av Felix"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"felix.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"bilde av Felix"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"400"</span>&gt;</span>
 </code></pre>
 </section>
 <section class="activity" id="steg-3-legg-til-beskrivelse-av-felix">
 <h1 class="activity" id="steg-3-legg-til-beskrivelse-av-felix">Steg 3: Legg til beskrivelse av Felix</h1>
 <p>Under bildet vil vi skrive en beskrivelse av Felix, og gi noen detaljer om når og hvor han forsvant. For dette kan vi skrive noen paragrafer.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er oransje. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er oransje. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>Vi trenger også informasjon om hvordan å kontakte eieren hvis noen har sett eller funnet Felix.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>Dette er bare en leke-epostadresse, men la oss gjøre det sånn at når noen klikker på den, så åpnes epostprogrammet deres. Vi gjør dette på nesten samme måten som vi lager en lenke, men istede for en <strong>url</strong> bruker vi <code>mailto</code> sånn som dette:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <section class="save" id="lagre-dokumentet-ditt-og-se-om-det-fungerer-i-nettleseren">
 <h2 class="save" id="lagre-dokumentet-ditt-og-se-om-det-fungerer-i-nettleseren">Lagre dokumentet ditt og se om det fungerer i nettleseren!</h2>
@@ -105,10 +105,10 @@ function relative (url) {
 <section class="activity" id="step-4-legge-til-fet-tekst-og-trykk">
 <h1 class="activity" id="step-4-legge-til-fet-tekst-og-trykk">Step 4: Legge til fet tekst og trykk</h1>
 <p>Vi vil virkelig at folk skal finne Felix, så vi vil legge litt <em>trykk</em> på <code>vennligst</code>. Dette gjør vi ved å bruke em taggen.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Vennligst<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> kontakt eieren hans på eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Har du sett Felix? <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Vennligst<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> kontakt eieren hans på eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>Vi vil også at ´Tusen takk´ skal vises skikkelig, som vi oppnår ved å bruke strong taggen.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Tusen takk!<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Tusen takk!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <section class="save" id="lagre-dokumentet-ditt-og-vis-det-i-nettleseren">
 <h2 class="save" id="lagre-dokumentet-ditt-og-vis-det-i-nettleseren">Lagre dokumentet ditt og vis det i nettleseren.</h2>
@@ -130,21 +130,21 @@ La oss legge en kommentar i filen som sier at dette er et Kodeklubb-prosjekt og 
 <section class="activity" id="steg-6-mer-metadata-det-er-bare-ting-som-legges-i-head">
 <h1 class="activity" id="steg-6-mer-metadata-det-er-bare-ting-som-legges-i-head">Steg 6: Mer metadata (Det er bare ting som legges i head)</h1>
 <p>La oss legge til hvem som har skrevet websiden til websiden, slik at de som ser filen vet at det er deg.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"author"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"#"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"#"</span>&gt;</span>
 </code></pre>
 <p>Erstatt <code>#</code> med navnet ditt.</p>
 <p>Det er også vanlig å legge til hvilket språk websiden er på. Vi gjør dette ved å legge til en attributt til <code>&lt;html&gt;</code> taggen.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"no"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"no"</span>&gt;</span>
 </code></pre>
 <p><code>no</code> står for norsk.</p>
 <p>Det er også god praksis å legge til tegnsettet (eller alfabet) dokumentet er skrevet i. Vi bruker vanligvis <strong>UTF-8</strong>.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
 </code></pre>
 <p>Vi kan også legge til en beskrivelse av websiden.</p>
-<pre><code class="html">  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"En side laget for å finne katten Felix"</span>&gt;</span>
+<pre><code class="html">  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"En side laget for å finne katten Felix"</span>&gt;</span>
 </code></pre>
 <p>Og noen nøkkelord, separert med komma</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"keywords"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Felix, katt, forsvunnet"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Felix, katt, forsvunnet"</span>&gt;</span>
 </code></pre>
 <p>Siden vår vil nå se ca slik ut:</p>
 <p><figure><img src="screenshot_jsbin.png" alt="screenshot"></figure></p>

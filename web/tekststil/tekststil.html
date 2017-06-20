@@ -34,22 +34,22 @@ function relative (url) {
 <li>Legg til <code>font-family</code> med en font du ønsker på overskriften på nettsiden din. Under har vi brukt fonten <code>impact</code> med <code>sans-serif</code>-stil, du kan godt velge en annen.</li>
 </ul>
 <p><strong>Merk!</strong> i CSS-en har vi <code>font-family: font, skriftstil</code>. Altså har vi navnet på fonten, etterfulgt av hvilken stil vi vil at den skal være, <code>sans-serif</code> eller <code>serif</code>.</p>
-<pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">72px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> underline</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> blink</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> impact, sans-serif</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">color</span>: red;
+  <span class="hljs-attribute">background-color</span>: black;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">72px</span>;
+  <span class="hljs-attribute">text-transform</span>: uppercase;
+  <span class="hljs-attribute">text-decoration</span>: underline;
+  <span class="hljs-attribute">text-decoration</span>: blink;
+  <span class="hljs-attribute">font-family</span>: impact, sans-serif;
+}
 </code></pre>
 <ul>
 <li>Nå skal du endre fonten for alle paragrafer (<code>&lt;p&gt;</code>).</li>
 </ul>
-<pre><code class="css"><span class="hljs-tag">p</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> georgia, <span class="hljs-string">'times new roman'</span>, serif</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">p</span> {
+  <span class="hljs-attribute">font-family</span>: georgia, <span class="hljs-string">'times new roman'</span>, serif;
+}
 </code></pre>
 <p>Som du ser over så står det to skirfttyper etter hverandre, <code>georgia</code> og <code>times new roman</code>. Dette forteller CSS-en at <code>georgia</code> er nettsidens førstevalg og dersom denne fonten ikke finnes på maskinen til personen som åpner nettsiden, så velger den <code>times new roman</code>. <code>Times new roman</code> blir derfor <strong>reserver fonten</strong>.</p>
 <section class="save" id="lagre-og-se-det-i-nettleseren">
@@ -65,17 +65,17 @@ function relative (url) {
 <li>Hvis du finner en du liker så prøv om du kan bruke den på nettsiden!</li>
 </ul>
 <p>Du kan også lage teksten i <strong>fet</strong>, <em>kursiv</em> eller begge deler ved hjelp av font-stilegenskaper. La oss forandre epostteksten (husk at den finner vi inne i a-taggen).</p>
-<pre><code class="css"><span class="hljs-tag">a</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">font-weight</span>: bold;
+}
 </code></pre>
 </section>
 <section class="save" id="lagre-og-se-det-i-nettleseren-2">
 <h2 class="save" id="lagre-og-se-det-i-nettleseren-2"><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>Eller vi kan sette teksten til <em>kursiv</em>.</p>
-<pre><code class="css"><span class="hljs-tag">a</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">font-style</span>: italic;
+}
 </code></pre>
 </section>
 <section class="save" id="lagre-og-se-det-i-nettleseren-3">
@@ -84,9 +84,9 @@ function relative (url) {
 <li>Det er også en font-stil-verdi (<code>font-style</code>) som heter ‘oblique’. Hvordan ser den ut?</li>
 </ul>
 <p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen <code>font-weight</code>. Den bruker verdier som <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste og 900 er den tykkeste. Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle fonter alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke <code>normal</code> eller <code>bold</code> osv. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
-<pre><code class="css"><span class="hljs-tag">h2</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> normal</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">h2</span> {
+  <span class="hljs-attribute">font-weight</span>: normal;
+}
 </code></pre>
 <p><strong>Prøv det!</strong></p>
 </section>
@@ -94,11 +94,11 @@ function relative (url) {
 <section class="activity" id="step-2-kantlinjer">
 <h1 class="activity" id="step-2-kantlinjer">Step 2: Kantlinjer!</h1>
 <p>La oss legge til en kantlinje eller en ramme rundt et bilde.</p>
-<pre><code class="css"><span class="hljs-tag">img</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> green</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-number">5px</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value"> solid</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">img</span> {
+  <span class="hljs-attribute">border-color</span>: green;
+  <span class="hljs-attribute">border-width</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">border-style</span>: solid;
+}
 </code></pre>
 <p><code>border-color</code> bestemmer hvilken farge rammen eller kantlinjen rundt bildet skal ha.</p>
 <p><code>border-width</code> er tykkelsen på rammen som går rundt bildet.</p>
@@ -122,27 +122,27 @@ function relative (url) {
 <section class="activity" id="step-3-ider-og-klasser">
 <h1 class="activity" id="step-3-ider-og-klasser">Step 3: IDer og klasser</h1>
 <p>Vi ønsker å lage et kontaktavsnitt som er <strong>uthevet</strong>. Vi kan ikke bruke <code>&lt;p&gt;</code> tag fordi det vil endre alle andre paragrafer også. For å gjøre dette må vi legge til en stil for de paragrafene vi vil skal være <strong>uthevet</strong>. For å gjøre dette kan vi bruke noe som kalles <code>ID</code>. Denne IDen gjør at vi kun endrer stil på de taggene som har samme ID. Vi trenger da å endre HTML-koden vår sånn at den ser slik ut:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <ul>
 <li>La oss gjøre den <strong>uthevet</strong> og sette en farge på teksten.</li>
 </ul>
 <p>Ved å sette stil på en <code>ID</code> bruker vi <code>#</code> foran ID-navnet i CSS-en:</p>
-<pre><code class="css"><span class="hljs-id">#uthevet</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-id">#uthevet</span> {
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">color</span>: red;
+}
 </code></pre>
 <section class="save" id="lagre-og-se-det-i-nettleseren-5">
 <h2 class="save" id="lagre-og-se-det-i-nettleseren-5"><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>En ID er unik og kan bare bli brukt en gang per side. Så hva gjør vi hvis du ønsker å lage to paragrafer med større skrift? Dette kan vi løse ved å bruke klasser. Det første vi må gjøre er å gi paragrafene et klassenavn, litt på samme måte som å sette en <code>ID</code> bare at vi bruker <code>class</code>.</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Takk!<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stor"</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stor"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Takk!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>Deretter setter vi stilen slik at tekten er større for alle paragrafer med <code>class=&quot;stor&quot;</code> (legg merke til at vi bruker <code>.</code> i stedet for <code>#</code>):</p>
-<pre><code class="css"><span class="hljs-class">.stor</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">24px</span></span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-class">.stor</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+}
 </code></pre>
 <ul>
 <li>Legg til en kant rundt klassen <code>.stor</code> og IDen <code>#uthevet</code>.</li>
@@ -174,78 +174,78 @@ function relative (url) {
 </section>
 <section>
 <h2 id="koden-for-eksempelet-over">Koden for eksempelet over:</h2>
-<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"no"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"author"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"#"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"En side laget for å finne katten Felix"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"keywords"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Felix, katt, forsvunnet"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Katten Felix er forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+<pre><code class="html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"no"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"#"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"En side laget for å finne katten Felix"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Felix, katt, forsvunnet"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Katten Felix er forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!--- CSSen for siden --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
 
-    <span class="hljs-tag">body</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#F8FAF4</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">body</span>{
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F8FAF4</span>;
+      <span class="hljs-attribute">text-align</span>: center;
+    }
 
-    <span class="hljs-tag">h1</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">72px</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">text-transform</span>:<span class="hljs-value"> uppercase</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> underline</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> blink</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> impact, sans-serif</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">h1</span>{
+      <span class="hljs-attribute">color</span>:red;
+      <span class="hljs-attribute">background-color</span>:black;
+      <span class="hljs-attribute">font-size</span>:<span class="hljs-number">72px</span>;
+      <span class="hljs-attribute">text-transform</span>: uppercase;
+      <span class="hljs-attribute">text-decoration</span>: underline;
+      <span class="hljs-attribute">text-decoration</span>: blink;
+      <span class="hljs-attribute">font-family</span>: impact, sans-serif;
+    }
 
-    <span class="hljs-tag">h2</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> normal</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">h2</span>{
+      <span class="hljs-attribute">font-weight</span>: normal;
+    }
 
-    <span class="hljs-tag">p</span> <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> georgia, <span class="hljs-string">'times new roman'</span>, serif</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">p</span> {
+      <span class="hljs-attribute">font-family</span>: georgia, <span class="hljs-string">'times new roman'</span>, serif;
+    }
 
-    <span class="hljs-tag">img</span> <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">border-color</span>:<span class="hljs-value"> green</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">border-width</span>:<span class="hljs-value"> <span class="hljs-number">5px</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">border-style</span>:<span class="hljs-value"> solid</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">img</span> {
+      <span class="hljs-attribute">border-color</span>: green;
+      <span class="hljs-attribute">border-width</span>: <span class="hljs-number">5px</span>;
+      <span class="hljs-attribute">border-style</span>: solid;
+    }
 
-    <span class="hljs-tag">span</span> <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">span</span> {
+      <span class="hljs-attribute">color</span>:orange;
+    }
 
-    <span class="hljs-tag">a</span> <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">font-style</span>:<span class="hljs-value"> italic</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">a</span> {
+      <span class="hljs-attribute">font-weight</span>: bold;
+      <span class="hljs-attribute">font-style</span>: italic;
+    }
 
-    <span class="hljs-id">#uthevet</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">font-weight</span>:<span class="hljs-value"> bold</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> red</span></span>;
-    }</span>
+    <span class="hljs-selector-id">#uthevet</span>{
+      <span class="hljs-attribute">font-weight</span>: bold;
+      <span class="hljs-attribute">color</span>: red;
+    }
 
-    <span class="hljs-class">.stor</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"> <span class="hljs-number">24px</span></span></span>;
-    }</span>
-  </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+    <span class="hljs-selector-class">.stor</span>{
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- Dette er et Kodeklubb-prosjekt. Felix er ikke ekte og er egentlig ikke forsvunnet. --&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Forvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://kodeklubben.github.io/web/forsvunnet_katt/missingcat.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"bilde av Felix"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"stor"</span>&gt;</span>Takk!<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Forvunnet<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://kodeklubben.github.io/web/forsvunnet_katt/missingcat.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"bilde av Felix"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"400"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stor"</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"stor"</span>&gt;</span>Takk!<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 </section>
 </section>

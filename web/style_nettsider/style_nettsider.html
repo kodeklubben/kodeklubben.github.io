@@ -17,19 +17,19 @@ function relative (url) {
 <section class="activity" id="steg-1-hvordan-fungerer-css">
 <h1 class="activity" id="steg-1-hvordan-fungerer-css">Steg 1: Hvordan fungerer CSS?</h1>
 <p>Det finnes mange måter å lage stiler på. En av dem er <strong>inline</strong> hvor du skriver stilen rett i en tag, om dette:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">"color:red"</span>&gt;</span>Tekst som er rød<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color:red"</span>&gt;</span>Tekst som er rød<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>En annen måte er å lage en egen <code>.css</code>-fil og referere til den i <code>&lt;head&gt;</code>:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/css"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"navn_på_css_filen_din.css"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"navn_på_css_filen_din.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 </code></pre>
 <p>Men i dag skal vi bruke den siste metoden hvor vi legger stilene i <code>&lt;head&gt;</code> slik:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-        &lt;<span class="hljs-tag">--</span>! <span class="hljs-tag">Her</span> <span class="hljs-tag">skal</span> <span class="hljs-tag">vi</span> <span class="hljs-tag">skrive</span> <span class="hljs-tag">CSS-en</span> <span class="hljs-tag">--</span>&gt;
-    </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="xml">
+        <span class="hljs-tag">&lt;<span class="hljs-name">--!</span> <span class="hljs-attr">Her</span> <span class="hljs-attr">skal</span> <span class="hljs-attr">vi</span> <span class="hljs-attr">skrive</span> <span class="hljs-attr">CSS-en</span> <span class="hljs-attr">--</span>&gt;</span>
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 </code></pre>
 <p>På denne måten slipper vi å håndere flere filer, vi kan ha alt vi trenger i én fil.</p>
 <ul>
@@ -38,13 +38,13 @@ function relative (url) {
 <ul>
 <li>I seksjonen <code>&lt;head&gt;</code> trenger vi en <strong>style-tag</strong>.</li>
 </ul>
-<pre><code class="html"> <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
- </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<pre><code class="html"> <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="undefined">
+ </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 </code></pre>
 <p>Alle stiler skal legges mellom disse elementene. Generelt ser css-kode slik ut:</p>
-<pre><code class="css"><span class="hljs-tag">selector</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">property</span>:<span class="hljs-value"> value</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">selector</span> {
+  <span class="hljs-attribute">property</span>: value;
+}
 </code></pre>
 <p>Selektorer kan være html-element som <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code>, eller <code>id-er</code> og <code>klasser</code>, men disse skal vi se på senere. Selektorer brukes for å fortelle CSS-en hvilke HTML-objekter vi skal sette stil på. Hvilken stil selektoren får avheniger av hva man setter på <code>property</code> og <code>value</code>.</p>
 <p><code>Property</code> eller <code>attributt</code> er gjerne en egenskap man kan tilegne selektoren, sammen med en verdi, <code>value</code>. Eksempler på <code>property</code> og <code>value</code> kan være <code>color: blue;</code>, <code>background-color: red;</code> og <code>font-family: &quot;Times New Roman&quot;, Serif;</code>.</p>
@@ -58,11 +58,11 @@ function relative (url) {
 <h1 class="activity" id="steg-2-legg-til-farge">Steg 2: Legg til farge</h1>
 <p>Visste du at CSS er faktisk oppfunnet av en norsk gutt? Det er litt kult!</p>
 <p>La oss endre <code>h1</code> til å være <code>rød</code> istedenfor <code>svart</code> ved hjelp av property-en <code>color</code>:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-  <span class="hljs-tag">h1</span> <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-    }</span>
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-tag">h1</span> {
+      <span class="hljs-attribute">color</span>:red;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 </code></pre>
 <p><strong>NB! Husk å sette <code>;</code> etter <code>value</code>.</strong></p>
 <section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din">
@@ -87,9 +87,9 @@ function relative (url) {
 <toggle>
  <strong>Hint</strong>
  <hide>
-<pre><code class="css"> <span class="hljs-tag">p</span><span class="hljs-rules">{
-   <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#58AB57</span></span></span>;
- }</span>
+<pre><code class="css"> <span class="hljs-selector-tag">p</span>{
+   <span class="hljs-attribute">color</span>: <span class="hljs-number">#58AB57</span>;
+ }
 </code></pre>
    </hide>
 </toggle>
@@ -109,12 +109,12 @@ function relative (url) {
 <section class="activity" id="steg-3-gi-farge-til-spesifikke-elementer">
 <h1 class="activity" id="steg-3-gi-farge-til-spesifikke-elementer">Steg 3: Gi farge til spesifikke elementer</h1>
 <p>Hva om vi vil gjøre sånn at ordet <code>oransje</code> i setningen <code>Pelsen hans er oransje</code> får oransje farge? Ikke hele setningen, men akkurat det ordet. Da bruker vi en tag som heter <code>&lt;span&gt;</code>. Vi legger taggen rundt ordet vi vil sette farge på slik:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 </code></pre>
 <p>I <code>&lt;head&gt;</code> kan vi nå gjøre at alle <code>&lt;span&gt;</code>-taggene blir oransje slik:</p>
-<pre><code class="css"><span class="hljs-tag">span</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">color</span>:orange;
+}
 </code></pre>
 <section class="save" id="lagre-filen-og-vise-den-i-nettleseren-din-3">
 <h2 class="save" id="lagre-filen-og-vise-den-i-nettleseren-din-3"><strong>LAGRE</strong> filen og <strong>VISE</strong> den i nettleseren din</h2>
@@ -123,21 +123,21 @@ function relative (url) {
 <section class="activity" id="steg-4-la-oss-endre-bakgrunnen">
 <h1 class="activity" id="steg-4-la-oss-endre-bakgrunnen">Steg 4: La oss endre bakgrunnen</h1>
 <p>Vi kan legge til farge på bakgrunnen også, ikke bare på tekst. For eksempel:</p>
-<pre><code class="css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#D2FAFC</span></span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#D2FAFC</span>;
+}
 </code></pre>
 <p>Dette vil gjøre at hele bakgrunnen blir blå.</p>
 <p>Prøve nå:</p>
-<pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">background-color</span>:black;
+}
 </code></pre>
 <p>Siden vi allerede hadde en <code>h1</code> deklarert i filen kan vi bare putte inn property-en <code>background-color</code> sammen med <code>color</code>, vi trenger ikke å skrive alt om igjen.</p>
-<pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> black</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">color</span>:red;
+  <span class="hljs-attribute">background-color</span>: black;
+}
 </code></pre>
 <section class="save" id="na-skal-du-lagre-filen-og-se-hvordan-det-ser-ut">
 <h2 class="save" id="na-skal-du-lagre-filen-og-se-hvordan-det-ser-ut">Nå skal du <strong>LAGRE</strong> filen og se hvordan det ser ut.</h2>
@@ -150,11 +150,11 @@ function relative (url) {
 <ul>
 <li>La oss prøve ut <code>72px</code> for nå. (px betyr piksel)</li>
 </ul>
-<pre><code class="css"><span class="hljs-tag">h1</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">72px</span></span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">color</span>:red;
+  <span class="hljs-attribute">background-color</span>:black;
+  <span class="hljs-attribute">font-size</span>:<span class="hljs-number">72px</span>;
+}
 </code></pre>
 <ul>
 <li>Nå skal du forsøke å endre tittelen til å være kun i store bokstaver bare gjennom å bruke <code>text-transform:uppercase;</code> Vi kan også gjøre den understreket gjennom å bruke <code>text-decoration:underline;</code></li>
@@ -174,13 +174,13 @@ function relative (url) {
 <ol>
 <li>For denne nettsiden vil vi at all vår tekst skal være sentrert, og da kan vi skrive: (Merk deg at den engelske måten å stave senter på er center.)</li>
 </ol>
-<pre><code class="css"><span class="hljs-tag">body</span> <span class="hljs-rules">{
-  <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#F8FAF4</span></span></span>;
-  <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F8FAF4</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+}
 </code></pre>
 <p>La du merke til at alt på nettsiden ble sentrert når vi har lagt til <code>text-align:center</code> i seksjonen <code>&lt;body&gt;</code>? Det er fordi alt innenfor elementet <code>&lt;body&gt;</code> arver stilen. Dette skjer når et element er innenfor et annet, som dette her:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? <span class="hljs-tag">&lt;<span class="hljs-title">em</span>&gt;</span>Vennligst<span class="hljs-tag">&lt;/<span class="hljs-title">em</span>&gt;</span> kontakt eieren hans<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Har du sett Felix? <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>Vennligst<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> kontakt eieren hans<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
 <p>Teksten <em>“Vennligst”</em> vil ha stilen fra elementet <code>&lt;p&gt;</code> med stilen fra elementet <code>&lt;em&gt;</code> lagt på. Dette er grunnen til at man kaller det <strong>cascading</strong> - stilene blir videreført fra et element til alle ene som er innenfor dem.
 Men vær forsiktig, det finnes noen stiler som ikke blir videreført.</p>
@@ -197,50 +197,50 @@ Men vær forsiktig, det finnes noen stiler som ikke blir videreført.</p>
 </section>
 <section>
 <h2 id="koden">Koden:</h2>
-<pre><code class="html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"no"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"author"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"#"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"En side laget for å finne katten Felix"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"keywords"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Felix, katt, forsvunnet"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Katten Felix er forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+<pre><code class="html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"no"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"author"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"#"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"description"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"En side laget for å finne katten Felix"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Felix, katt, forsvunnet"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Katten Felix er forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
 
   <span class="hljs-comment">&lt;!---CSS-stilen til siden ---&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
 
-    <span class="hljs-tag">body</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> <span class="hljs-hexcolor">#F8FAF4</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">text-align</span>:<span class="hljs-value"> center</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">body</span>{
+      <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#F8FAF4</span>;
+      <span class="hljs-attribute">text-align</span>: center;
+    }
 
-    <span class="hljs-tag">h1</span><span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">red</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value">black</span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">font-size</span>:<span class="hljs-value"><span class="hljs-number">72px</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">text-decoration</span>:<span class="hljs-value"> uppercase</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">h1</span>{
+      <span class="hljs-attribute">color</span>:red;
+      <span class="hljs-attribute">background-color</span>:black;
+      <span class="hljs-attribute">font-size</span>:<span class="hljs-number">72px</span>;
+      <span class="hljs-attribute">text-decoration</span>: uppercase;
+    }
 
-    <span class="hljs-tag">span</span> <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">color</span>:<span class="hljs-value">orange</span></span>;
-    }</span>
+    <span class="hljs-selector-tag">span</span> {
+      <span class="hljs-attribute">color</span>:orange;
+    }
 
 
-  </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-comment">&lt;!-- Dette er et Kodeklubb-prosjekt. Felix er ikke ekte og er egentlig ikke forsvunnet. --&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"http://kodeklubben.github.io/web/forsvunnet_katt/missingcat.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"bilde av Felix"</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">"400"</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>. <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-	<span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">strong</span>&gt;</span>Takk!<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Forsvunnet<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Katten Felix<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://kodeklubben.github.io/web/forsvunnet_katt/missingcat.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"bilde av Felix"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"400"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Felix er en veldig snill katt. Han liker å kose, sitte foran varmepumpa og lekemusa si. Pelsen hans er <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>oransje<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>. <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Han forvant fra hagen i går.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Takk!<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 </section>
 <section class="try" id="videre-studier">

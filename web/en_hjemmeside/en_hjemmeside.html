@@ -54,7 +54,7 @@ function relative (url) {
 <li>Finn en av <code>&lt;img&gt;</code> taggene. Vi har akkurat prøvd å feilstave en tagg og nettleseren var ikke sikker på hva den skulle gjøre med det. Men hva hvis vi feilstaver attributtet?</li>
 </ul>
 <p>Inne i <code>&lt;img&gt;</code> taggen har vi <code>src</code> og <code>alt</code> attributter:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"katt.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Katt"</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"katt.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Katt"</span>&gt;</span>
 </code></pre>
 <p><code>src</code> er hvor bildet blir hentet fra og hva det heter. I dette tilfellet ligger bildet på samme sted som <code>om_meg.html</code>. Hadde bildet ligget i en annen mappe måtte vi ha spesifisert det, for eksempel slik: <code>bilder/katt.png</code>.</p>
 <p><code>alt</code> er en tekst som kommer tilsyne dersom bildet ikke vises. Dette gjør at, for eksempel, blinde kan få lest opp hva det er bilde av via en skjermleser. Bildeteksten kan også hjelpe deg med å finne feil dersom et bilde ikke vises på nettsiden din.</p>
@@ -72,7 +72,7 @@ function relative (url) {
 <p>Nå fjern det andre anførselstegnet (<code>&quot;</code>) fra <code>alt</code> attributtet av dette bildet: den etter teksten, slik at du ender opp med dette:</p>
 </li>
 </ul>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"katt.png"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Katt /&gt;
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"katt.png"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Katt /&gt;
 </span></span></code></pre>
 <ul>
 <li>Lagre og oppdater i nettleseren.</li>
@@ -105,20 +105,20 @@ function relative (url) {
 <h2 id="challenge-slutt-"><!-- Challenge slutt --></h2>
 <p><strong>Er du ferdig? Flott! La oss nå linke de to sidene du har laget sammen.</strong></p>
 <p>Når vi har linket til deler av den samme siden, kunne vi bare peke linken til en bestemt id på siden, som dette:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"#kattunge"</span>&gt;</span> Klikk for å se en kattunge <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#kattunge"</span>&gt;</span> Klikk for å se en kattunge <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 <p>Som da tok deg til noe sånt som dette:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"kattunge"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"kattunge.jpg"</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">"Dette er en kattunge."</span> /&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"kattunge"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"kattunge.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Dette er en kattunge."</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <p>Hvis du vil koble til en annen side, trenger vi ikke å inkludere hashsymbolet (<code>#</code>), men i stedet må vi si hvilken fil vi vil linken skal ta oss til.</p>
 <p>Så for å linke fra <code>om_meg_side_2.html</code> til <code>om_meg.html</code> skriver vi slik:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"om_meg.html"</span>&gt;</span> Gå til Om Meg siden <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"om_meg.html"</span>&gt;</span> Gå til Om Meg siden <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 <p>Du kan endre anker teksten til noe annet, som tittelen på siden hvis du har endret det.</p>
 <p>For å linke tilbake fra <code>om_meg.html</code> til <code>om_meg_side_2.html</code> må du skrive det slik:</p>
-<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"om_meg_side_2.html"</span>&gt;</span> Gå til min andre side <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"om_meg_side_2.html"</span>&gt;</span> Gå til min andre side <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </code></pre>
 <p><strong>Gratulerer! Du har laget ditt eget nettsted.</strong></p>
 </section>

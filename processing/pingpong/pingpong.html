@@ -28,8 +28,8 @@ function relative (url) {
 <span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">300</span>);
 
-  ballX = <span class="hljs-variable">width</span> / <span class="hljs-number">2</span>;
-  ballY = <span class="hljs-variable">height</span> / <span class="hljs-number">2</span>;
+  ballX = <span class="hljs-built_in">width</span> / <span class="hljs-number">2</span>;
+  ballY = <span class="hljs-built_in">height</span> / <span class="hljs-number">2</span>;
 }
 
 <span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
@@ -39,13 +39,13 @@ function relative (url) {
   <span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
   ballXFart = -ballXFart;
   }
-  <span class="hljs-keyword">if</span> (ballX &gt; <span class="hljs-variable">width</span> - ballRadius) {
+  <span class="hljs-keyword">if</span> (ballX &gt; <span class="hljs-built_in">width</span> - ballRadius) {
   ballXFart = -ballXFart;
   }
   <span class="hljs-keyword">if</span> (ballY &lt; ballRadius) {
   ballYFart = -ballYFart;
   }
-  <span class="hljs-keyword">if</span> (ballY &gt; <span class="hljs-variable">height</span> - ballRadius) {
+  <span class="hljs-keyword">if</span> (ballY &gt; <span class="hljs-built_in">height</span> - ballRadius) {
   ballYFart = -ballYFart;
   }
 
@@ -152,10 +152,10 @@ stopper ballen og sender den tilbake.</p>
 <li>
 <p>Skriv inn følgende i draw():</p>
 <pre><code class="processing"><span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyPressed</span>) {
-  <span class="hljs-keyword">if</span> (<span class="hljs-variable">keyCode</span> == UP) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyCode</span> == UP) {
     rekkert1Y = rekkert1Y - <span class="hljs-number">2</span>;
   }
-  <span class="hljs-keyword">if</span> (<span class="hljs-variable">keyCode</span> == DOWN) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyCode</span> == DOWN) {
     rekkert1Y = rekkert1Y + <span class="hljs-number">2</span>;
   }
 }
@@ -171,10 +171,10 @@ som blir trykket ned, og beveger rekkerten basert på dette.</p>
 <h2 class="protip" id="bokstavtaster">Bokstavtaster</h2>
 <p>Hvis du vil styre ved å trykke på bokstavtaster istedenfor piltastene, må du endre litt på koden. Mange er vant til å styre opp med <strong>W</strong> og ned med <strong>S</strong>.</p>
 <p>Hvis du endrer:</p>
-<pre><code class="processing">  <span class="hljs-keyword">if</span> (<span class="hljs-variable">keyCode</span> == UP) {
+<pre><code class="processing">  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyCode</span> == UP) {
 </code></pre>
 <p>Til:</p>
-<pre><code class="processing">  <span class="hljs-keyword">if</span> (<span class="hljs-variable">key</span> == <span class="hljs-string">'w'</span>) {
+<pre><code class="processing">  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">key</span> == <span class="hljs-string">'w'</span>) {
 </code></pre>
 <p>kan du styre opp med <strong>W</strong>. Hva tror du at du må gjøre for å kunne styre ned med <strong>S</strong>?</p>
 </section>

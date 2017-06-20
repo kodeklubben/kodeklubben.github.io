@@ -17,15 +17,15 @@ function relative (url) {
 <h1 class="activity" id="steg-1-animasjons-attributtet">Steg 1: Animasjons-attributtet</h1>
 <p>Animasjon i CSS er ganske enkelt, i utgangspunktet har animasjonen 2 stadier: <code>start</code> og <code>slutt</code>. Mellom <code>start</code> og <code>slutt</code> kan du legge inn forskjellige faser, som vi skal se på litt senere. Animasjonen vil heller ikke gå i <code>loop</code> (altså gjenta seg selv) med mindre du forteller at den skal gjøre det.</p>
 <p>Før vi skal se på et enkelt eksempel skal vi se på <code>animation</code>-attributter. Vi skal bruke disse:</p>
-<pre><code class="css"><span class="hljs-id">#id</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">animation-name</span>:<span class="hljs-value"> et-navn</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-duration</span>:<span class="hljs-value"> <span class="hljs-number">1s</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-timing-function</span>:<span class="hljs-value"> linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-delay</span>:<span class="hljs-value"> <span class="hljs-number">1s</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-iteration-count</span>:<span class="hljs-value"> nummer|infinite</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-direction</span>:<span class="hljs-value"> normal|reverse|alternate|alternate-reverse</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-fill-mode</span>:<span class="hljs-value"> none|forwards|backwards|both</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-id">#id</span> {
+    <span class="hljs-attribute">animation-name</span>: et-navn;
+    <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">animation-timing-function</span>: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end;
+    <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">animation-iteration-count</span>: nummer|infinite;
+    <span class="hljs-attribute">animation-direction</span>: normal|reverse|alternate|alternate-reverse;
+    <span class="hljs-attribute">animation-fill-mode</span>: none|forwards|backwards|both;
+}
 </code></pre>
 <ul>
 <li><code>name</code>: Navnet på animasjonen.</li>
@@ -55,34 +55,34 @@ function relative (url) {
 </style>
 <div id="boks"></div>
 <br>
-<pre><code class="html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
-    <span class="hljs-id">#boks</span> <span class="hljs-rules">{
-        <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">50px</span></span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">50px</span></span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> blue</span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> relative</span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">animation-name</span>:<span class="hljs-value"> frem-og-tilbake</span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">animation-duration</span>:<span class="hljs-value"> <span class="hljs-number">2s</span></span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">animation-iteration-count</span>:<span class="hljs-value"> infinite</span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">animation-direction</span>:<span class="hljs-value"> alternate</span></span>;
-    }</span>
-    <span class="hljs-at_rule">@<span class="hljs-keyword">keyframes</span> frem-og-tilbake </span>{
-        0% <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-        }</span>
-        100% <span class="hljs-rules">{
-            <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-        }</span>
+<pre><code class="html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#boks</span> {
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">50px</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">50px</span>;
+        <span class="hljs-attribute">background-color</span>: blue;
+        <span class="hljs-attribute">position</span>: relative;
+        <span class="hljs-attribute">animation-name</span>: frem-og-tilbake;
+        <span class="hljs-attribute">animation-duration</span>: <span class="hljs-number">2s</span>;
+        <span class="hljs-attribute">animation-iteration-count</span>: infinite;
+        <span class="hljs-attribute">animation-direction</span>: alternate;
     }
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"boks"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+    @<span class="hljs-keyword">keyframes</span> frem-og-tilbake {
+        0% {
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">0px</span>;
+        }
+        100% {
+            <span class="hljs-attribute">left</span>: <span class="hljs-number">100px</span>;
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"boks"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <p><strong>La oss se nærmere på koden over:</strong></p>
 <p>Vi har en <code>&lt;div&gt;</code> med ID <code>boks</code>, den er 50x50px med blå bakgrunnsfarge. Posisjonen er <code>relative</code> som vil si at vi har muligheter for å flytte på den.</p>
@@ -99,9 +99,9 @@ function relative (url) {
 <p><code>@keyframes frem-og-tilbake</code> er det vi bruker for å spesifisere hva som skal skje under animasjonen. I dette tilfellet har vi satt navnet til animasjonen med <code>animation-name: frem-og-tilbake</code>, vi bruker derfor <code>@keyframes frem-og-tilbake</code> for å beskrive animasjonen.</p>
 <p>Innen for <code>@keyframes</code> kan vi nå spesifisere hva vi vil at animasjonen skal gjøre, vi har to faser, en start og en slutt. <code>0%</code> er animasjonens start og <code>100%</code> er animasjonens slutt. Derfor vil boksen vår starte til venstre (<code>left: 0px</code>) og slutte lengre til høyre (<code>left: 100px</code>).</p>
 <p><strong>NB!</strong> Verdiene i <code>animation</code>-attributtene kan også skrives som en egen linje, men det er da litt vanskeligere å finne ut hva som er hva:</p>
-<pre><code class="css"><span class="hljs-id">#boks</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">animation</span>:<span class="hljs-value"> frem-og-tilbake <span class="hljs-number">2s</span> ...</span></span>;
-}</span>
+<pre><code class="css"><span class="hljs-selector-id">#boks</span> {
+    <span class="hljs-attribute">animation</span>: frem-og-tilbake <span class="hljs-number">2s</span> ...;
+}
 </code></pre>
 <section class="challenge" id="utfordring">
 <h2 class="challenge" id="utfordring">Utfordring</h2>
@@ -132,15 +132,15 @@ function relative (url) {
     }
 </style>
 <div id="diagonalt"></div>
-<pre><code class="css"><span class="hljs-at_rule">@<span class="hljs-keyword">keyframes</span> diagonalt </span>{
-    0% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-    }</span>
-    100% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-      <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-    }</span>
+<pre><code class="css">@<span class="hljs-keyword">keyframes</span> diagonalt {
+    0% {
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">0px</span>;
+      <span class="hljs-attribute">left</span>: <span class="hljs-number">0px</span>;
+    }
+    100% {
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">100px</span>;
+      <span class="hljs-attribute">left</span>: <span class="hljs-number">100px</span>;
+    }
 }
 </code></pre>
 <p>Dette eksempelet får et objekt til å gå diagonalt siden det starter på <code>top: 0px; left: 0px;</code> og ender på <code>top: 100px; left: 100px;</code>.</p>
@@ -159,13 +159,13 @@ function relative (url) {
     }
 </style>
 <div id="ned"></div>
-<pre><code class="css"><span class="hljs-at_rule">@<span class="hljs-keyword">keyframes</span> ned </span>{
-    0% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">0px</span></span></span>;
-    }</span>
-    100% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">top</span>:<span class="hljs-value"> <span class="hljs-number">100px</span></span></span>;
-    }</span>
+<pre><code class="css">@<span class="hljs-keyword">keyframes</span> ned {
+    0% {
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">0px</span>;
+    }
+    100% {
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">100px</span>;
+    }
 }
 </code></pre>
 <p>Her går HTML-objektet nedover ved hjelp av <code>top</code>-attributtet.</p>
@@ -185,16 +185,16 @@ function relative (url) {
 </style>
 <div id="skifte_farge"></div>
 <br>
-<pre><code class="css"><span class="hljs-at_rule">@<span class="hljs-keyword">keyframes</span> skift-farge </span>{
-    0% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> blue</span></span>;
-    }</span>
-    50% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> yellow</span></span>;
-    }</span>
-    100% <span class="hljs-rules">{
-      <span class="hljs-rule"><span class="hljs-attribute">background-color</span>:<span class="hljs-value"> red</span></span>;
-    }</span>
+<pre><code class="css">@<span class="hljs-keyword">keyframes</span> skift-farge {
+    0% {
+      <span class="hljs-attribute">background-color</span>: blue;
+    }
+    50% {
+      <span class="hljs-attribute">background-color</span>: yellow;
+    }
+    100% {
+      <span class="hljs-attribute">background-color</span>: red;
+    }
 }
 </code></pre>
 <p>Merk at i dette eksempelet har vi lagt inn <code>50%</code>. Dette er et eksempel på at du kan dele inn animasjonen faser mellom <code>0%</code> og <code>100%</code>. Du kan legge til så mange faser du vil ved å bruke <code>%</code>.</p>
@@ -268,27 +268,27 @@ function relative (url) {
 <toggle>
 <strong>Forslag til kode så langt</strong>
 <hide>
-<pre><code class="css"><span class="hljs-id">#pickaxe</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">background-image</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">"pickaxe.png"</span>)</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">150px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">150px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">bottom</span>:<span class="hljs-value"> <span class="hljs-number">150px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> -<span class="hljs-number">150px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation</span>:<span class="hljs-value"> move-pickaxe <span class="hljs-number">2s</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-delay</span>:<span class="hljs-value"> <span class="hljs-number">1s</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-timing-function</span>:<span class="hljs-value"> linear</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-fill-mode</span>:<span class="hljs-value"> forwards</span></span>;
-}</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">keyframes</span> move-pickaxe </span>{
-    0% <span class="hljs-rules">{
-        <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value">-<span class="hljs-number">150px</span></span></span>;
-    }</span>
-    100% <span class="hljs-rules">{
-        <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> <span class="hljs-number">800px</span></span></span>;
-        <span class="hljs-rule"><span class="hljs-attribute">transform</span>:<span class="hljs-value"> <span class="hljs-function">rotate</span>(<span class="hljs-number">720deg</span>)</span></span>;
-    }</span>
+<pre><code class="css"><span class="hljs-selector-id">#pickaxe</span> {
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"pickaxe.png"</span>);
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">150px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">150px</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">150px</span>;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">150px</span>;
+    <span class="hljs-attribute">animation</span>: move-pickaxe <span class="hljs-number">2s</span>;
+    <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">animation-timing-function</span>: linear;
+    <span class="hljs-attribute">animation-fill-mode</span>: forwards;
+}
+@<span class="hljs-keyword">keyframes</span> move-pickaxe {
+    0% {
+        <span class="hljs-attribute">left</span>:-<span class="hljs-number">150px</span>;
+    }
+    100% {
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">800px</span>;
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(720deg);
+    }
 }
 </code></pre>
 </hide>
@@ -326,24 +326,24 @@ function relative (url) {
 <toggle>
 <strong>Forslag til kode for Minecraft-logo</strong>
 <hide>
-<pre><code class="css"><span class="hljs-id">#minecraft</span> <span class="hljs-rules">{
-    <span class="hljs-rule"><span class="hljs-attribute">background-image</span>:<span class="hljs-value"> <span class="hljs-function">url</span>(<span class="hljs-string">"minecraft.png"</span>)</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">z-index</span>:<span class="hljs-value"> <span class="hljs-number">1</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">616px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">154px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">position</span>:<span class="hljs-value"> absolute</span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> -<span class="hljs-number">900px</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation</span>:<span class="hljs-value"> move_minecraft <span class="hljs-number">4s</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-delay</span>:<span class="hljs-value"> <span class="hljs-number">3s</span></span></span>;
-    <span class="hljs-rule"><span class="hljs-attribute">animation-fill-mode</span>:<span class="hljs-value"> forwards</span></span>;
-}</span>
-<span class="hljs-at_rule">@<span class="hljs-keyword">keyframes</span> move_minecraft </span>{
-    0% <span class="hljs-rules">{
-        <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"> -<span class="hljs-number">900px</span></span></span>;
-    }</span>
-    100% <span class="hljs-rules">{
-        <span class="hljs-rule"><span class="hljs-attribute">left</span>:<span class="hljs-value"><span class="hljs-number">400px</span></span></span>;
-    }</span>
+<pre><code class="css"><span class="hljs-selector-id">#minecraft</span> {
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"minecraft.png"</span>);
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">616px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">154px</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-number">900px</span>;
+    <span class="hljs-attribute">animation</span>: move_minecraft <span class="hljs-number">4s</span>;
+    <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">3s</span>;
+    <span class="hljs-attribute">animation-fill-mode</span>: forwards;
+}
+@<span class="hljs-keyword">keyframes</span> move_minecraft {
+    0% {
+        <span class="hljs-attribute">left</span>: -<span class="hljs-number">900px</span>;
+    }
+    100% {
+        <span class="hljs-attribute">left</span>:<span class="hljs-number">400px</span>;
+    }
 }
 </code></pre>
 </hide>

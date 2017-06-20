@@ -251,7 +251,7 @@ skal spørre oss om passordet, ikke fortelle oss hva det er. Skriv
 som følger:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)                    <span class="hljs-comment">-- endret linje</span>
-svar = read()                                 <span class="hljs-comment">-- ny linje</span>
+svar = <span class="hljs-built_in">read</span>()                                 <span class="hljs-comment">-- ny linje</span>
 </code></pre>
 <p>Lagre, avslutt, og kjør programmet på nytt. Nå vil programmet
 spørre deg om passordet. Skjer det noe når du svarer? Funksjonen
@@ -267,7 +267,7 @@ passordet. Legg til en <code>if</code>-test nederst i programmet ditt slik som
 dette:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-svar = read()
+svar = <span class="hljs-built_in">read</span>()
 
 <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>                       <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Riktig, passordet er '</span> .. passord) <span class="hljs-comment">-- ny linje</span>
@@ -284,12 +284,12 @@ tidligere. La oss åpne døren hvis passordet er riktig. Etter 5
 sekunder kan vi lukke døren igjen. Endre programmet slik:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-svar = read()
+svar = <span class="hljs-built_in">read</span>()
 
 <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)          <span class="hljs-comment">-- endret linje</span>
+    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)          <span class="hljs-comment">-- endret linje</span>
     sleep(<span class="hljs-number">5</span>)                                  <span class="hljs-comment">-- endret linje</span>
-    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)         <span class="hljs-comment">-- endret linje</span>
+    redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)         <span class="hljs-comment">-- endret linje</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
 <p>Kjør programmet. Hva skjer nå når du skriver riktig passord?</p>
@@ -302,14 +302,14 @@ sekunder, før energien skrus av igjen og døren lukker seg.</p>
 lager derfor en løkke som kan spørre oss om passord igjen og igjen.</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>                                 <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>                                 <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read()
+    svar = <span class="hljs-built_in">read</span>()
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)
         sleep(<span class="hljs-number">5</span>)
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span>
 </code></pre>
@@ -345,16 +345,16 @@ synes på skjermen. I stedet vil vi at <code>*</code>-tegn skal vises. Programme
 ser da slik ut:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()                              <span class="hljs-comment">-- ny linje</span>
     term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)                   <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
+    svar = <span class="hljs-built_in">read</span>(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)
         sleep(<span class="hljs-number">5</span>)
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>

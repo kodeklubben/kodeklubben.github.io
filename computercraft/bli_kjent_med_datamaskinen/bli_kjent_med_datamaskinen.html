@@ -191,8 +191,8 @@ spill. Underveis vil vi også lære litt om tester og løkker.</em></p>
 </li>
 <li>
 <p>Skriv inn følgende program</p>
-<pre><code class="lua"><span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
-<span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<pre><code class="lua"><span class="hljs-keyword">local</span> tall1 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-keyword">local</span> tall2 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 </code></pre>
 <p>Pass på at du skriver de to punktumene <code>..</code> riktig. Disse betyr at
@@ -222,11 +222,11 @@ huske variabelen i dette programmet (lokalt).</p>
 <li>
 <p>Vi skal nå jobbe videre med programmet. Skriv <code>edit mattetest</code>
 igjen, og legg til en linje nederst i programmet.</p>
-<pre><code class="lua"><span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
-<span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<pre><code class="lua"><span class="hljs-keyword">local</span> tall1 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-keyword">local</span> tall2 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-svar = read()                                 <span class="hljs-comment">-- ny linje</span>
+svar = <span class="hljs-built_in">read</span>()                                 <span class="hljs-comment">-- ny linje</span>
 </code></pre>
 <p>Lagre, avslutt, og kjør programmet på nytt. Får du lov til å svare
 nå? Funksjonen <code>read</code> brukes for å lese ting du skriver på
@@ -239,11 +239,11 @@ riktig. For å gjøre dette vil vi bruke noe som heter
 sjekke om det er sant at svaret ditt er likt med det faktiske
 svaret. Legg til en <code>if</code>-test nederst i programmet ditt slik som
 dette:</p>
-<pre><code class="lua"><span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
-<span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<pre><code class="lua"><span class="hljs-keyword">local</span> tall1 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+<span class="hljs-keyword">local</span> tall2 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-svar = read()
+svar = <span class="hljs-built_in">read</span>()
 
 <span class="hljs-keyword">if</span> <span class="hljs-built_in">tonumber</span>(svar) == tall1 * tall2 <span class="hljs-keyword">then</span>  <span class="hljs-comment">-- alle linjer herifra</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Ja, svaret er '</span> .. svar)      <span class="hljs-comment">-- og ned er nye</span>
@@ -260,11 +260,11 @@ lager derfor en løkke som kan spørre oss flere spørsmål hver gang vi
 spiller. Her bruker vi en <code>for</code>-løkke som bare teller fra 1 til 5 for
 å stille oss fem spørsmål.</p>
 <pre><code class="lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>                               <span class="hljs-comment">-- ny linje</span>
-    <span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
-    <span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-keyword">local</span> tall1 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-keyword">local</span> tall2 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-    svar = read()
+    svar = <span class="hljs-built_in">read</span>()
 
     <span class="hljs-keyword">if</span> <span class="hljs-built_in">tonumber</span>(svar) == tall1 * tall2 <span class="hljs-keyword">then</span>
         <span class="hljs-built_in">print</span>(<span class="hljs-string">'Ja, svaret er '</span> .. svar)
@@ -286,11 +286,11 @@ vil vi endre verdien av variabelen etterhvert som svarer riktig.</p>
 <span class="hljs-keyword">local</span> ant_riktig  = <span class="hljs-number">0</span>                         <span class="hljs-comment">-- ny linje</span>
 
 <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, ant_stykker <span class="hljs-keyword">do</span>                     <span class="hljs-comment">-- endret linje</span>
-    <span class="hljs-keyword">local</span> tall1 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
-    <span class="hljs-keyword">local</span> tall2 = <span class="hljs-built_in">math</span>.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-keyword">local</span> tall1 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
+    <span class="hljs-keyword">local</span> tall2 = math.random(<span class="hljs-number">2</span>, <span class="hljs-number">12</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er '</span> .. tall1 .. <span class="hljs-string">' ganger '</span> .. tall2 .. <span class="hljs-string">'?'</span>)
 
-    svar = read()
+    svar = <span class="hljs-built_in">read</span>()
 
     <span class="hljs-keyword">if</span> <span class="hljs-built_in">tonumber</span>(svar) == tall1 * tall2 <span class="hljs-keyword">then</span>
         <span class="hljs-built_in">print</span>(<span class="hljs-string">'Ja, svaret er '</span> .. svar)
@@ -341,9 +341,9 @@ siden av døren. Det skal se omtrent slik ut:</p>
 <p>Lag et nytt program som heter <code>passord</code>:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read()
+    svar = <span class="hljs-built_in">read</span>()
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
         <span class="hljs-built_in">print</span> <span class="hljs-string">'Riktig'</span>
@@ -381,14 +381,14 @@ kan vi gjøre ved å bruke <strong>redstone</strong> som brukes for å overføre
 i Minecraft. Endre programmet <code>passord</code> som følger:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read()
+    svar = <span class="hljs-built_in">read</span>()
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)      <span class="hljs-comment">-- endret linje</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)      <span class="hljs-comment">-- endret linje</span>
         sleep(<span class="hljs-number">5</span>)                              <span class="hljs-comment">-- endret linje</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)     <span class="hljs-comment">-- endret linje</span>
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)     <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
@@ -411,16 +411,16 @@ synes på skjermen, i stedet vil vi at <code>*</code>-tegn skal vises. Programme
 ser da slik ut:</p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
-<span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()                              <span class="hljs-comment">-- ny linje</span>
     term.setCursorPos(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)                   <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Hva er passordet?'</span>)
-    svar = read(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
+    svar = <span class="hljs-built_in">read</span>(<span class="hljs-string">'*'</span>)                          <span class="hljs-comment">-- endret linje</span>
 
     <span class="hljs-keyword">if</span> svar == passord <span class="hljs-keyword">then</span>
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">true</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">true</span>)
         sleep(<span class="hljs-number">5</span>)
-        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-keyword">false</span>)
+        redstone.setOutput(<span class="hljs-string">'left'</span>, <span class="hljs-literal">false</span>)
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>

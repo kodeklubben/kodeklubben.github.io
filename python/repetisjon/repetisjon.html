@@ -15,13 +15,13 @@ av alle tingene du har lært i Python til nå.</p>
 <h1 class="activity" id="kodeblokker">Kodeblokker</h1>
 <p>I oppgavene er noen eksempler så korte at vi kan skrive de direkte inn i
 Python. Her er en kodeblokk som illustrerer et kort eksempel:</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">2</span>
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">1</span> == <span class="hljs-number">2</span>
 <span class="hljs-keyword">False</span>
 </code></pre>
 <p>Her betyr <code>&gt;&gt;&gt;</code> at Python er klar til å ta imot kode, <code>1 == 2</code> er koden, mens
 <code>False</code> er svaret.</p>
 <p>I andre eksempler er det ikke noe svar, men en utskrift av tekst isteden:</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei!"</span>)
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei!"</span>)
 Hei!
 </code></pre>
 <p>Når vi ikke bruker <code>&gt;&gt;&gt;</code> i kodeblokkene, er det fordi koden er flere linjer
@@ -55,13 +55,13 @@ Hei, Ada!
 <p>Vi kan bruke <code>print()</code> når vi skal skrive ut tekst til brukeren.
 Koden etter <code>&gt;&gt;&gt;</code> er kode vi skriver inn i f.eks. IDLE, og som
 kjøres med en gang.</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei, verden"</span>)
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Hei, verden"</span>)
 Hei, verden
 </code></pre>
 <p><code>input()</code> brukes når du ønsker å la brukeren gi input til programmet ditt.</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>number = input(<span class="hljs-string">"Skriv inn et tall: "</span>)
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>number = input(<span class="hljs-string">"Skriv inn et tall: "</span>)
 Skriv inn et tall: <span class="hljs-number">15</span>
-<span class="hljs-prompt">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Du skrev inn: "</span> + str(number))
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">"Du skrev inn: "</span> + str(number))
 Du skrev inn: <span class="hljs-number">15</span>
 </code></pre>
 <!--A little workaround to avoid checklist being a part of protip-->
@@ -139,10 +139,10 @@ Du er visst en pensjonist.
     print(<span class="hljs-string">"Hello"</span>)
 </code></pre>
 <p>Da får vi ut:</p>
-<pre><code><span class="hljs-prompt">&gt;&gt;</span>&gt;
-<span class="hljs-constant">Hello</span>
-<span class="hljs-constant">Hello</span>
-<span class="hljs-constant">Hello</span>
+<pre><code><span class="hljs-meta">&gt;&gt;</span>&gt;
+Hello
+Hello
+Hello
 </code></pre>
 <p>Vi kan også bruke <code>for</code>-løkker når vi ønsker å gå igjennom ei liste:</p>
 <pre><code class="python"><span class="hljs-comment"># print all elements in the list food_list</span>
@@ -151,7 +151,7 @@ food_list = [<span class="hljs-string">"eggs"</span>, <span class="hljs-string">
     print(food)
 </code></pre>
 <p>Dette programmet vil skrive ut:</p>
-<pre><code><span class="hljs-prompt">&gt;&gt;</span>&gt;
+<pre><code><span class="hljs-meta">&gt;&gt;</span>&gt;
 eggs
 ham
 spiced ham
@@ -164,10 +164,10 @@ jam
 <h1 class="check" id="-4"></h1>
 <p>Du skal nå lage ei liste med navn, og skrive ut alle navnene i lista. Resultatet
 kan se omtrent slik ut:</p>
-<pre><code><span class="hljs-prompt">&gt;&gt;</span>&gt;
-<span class="hljs-constant">Per</span>
-<span class="hljs-constant">Ada</span>
-<span class="hljs-constant">Kim</span>
+<pre><code><span class="hljs-meta">&gt;&gt;</span>&gt;
+Per
+Ada
+Kim
 </code></pre>
 <p>Dette du må gjøre:</p>
 <ul>
@@ -191,13 +191,13 @@ telle med steg på <code>2</code> eller steg på <code>100</code>.</li>
 <p>Ettersom rekken lages etterhvert som man teller over den, må man konvertere
 rekken til en liste dersom vi ønsker å se tallene i rekken. Rekken konverteres
 til en liste med <code>list()</code>. Her er noen eksempler:</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>))
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">1</span>))
 [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
-<span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">10</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">10</span>))
 [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>]
-<span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">200</span>, <span class="hljs-number">500</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">200</span>, <span class="hljs-number">500</span>))
 [<span class="hljs-number">200</span>, <span class="hljs-number">201</span>, <span class="hljs-number">202</span>, ..., <span class="hljs-number">497</span>, <span class="hljs-number">498</span>, <span class="hljs-number">499</span>]
-<span class="hljs-prompt">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">5</span>))
+<span class="hljs-meta">&gt;&gt;&gt; </span>list(range(<span class="hljs-number">0</span>, <span class="hljs-number">50</span>, <span class="hljs-number">5</span>))
 [<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>, <span class="hljs-number">20</span>, <span class="hljs-number">25</span>, <span class="hljs-number">30</span>, <span class="hljs-number">35</span>, <span class="hljs-number">40</span>, <span class="hljs-number">45</span>]
 </code></pre>
 <p><code>range()</code> kan brukes på mange måter, vi kan for eksempel gå igjennom den og
@@ -270,9 +270,9 @@ når vi kaller den.</p>
 <h1 class="check" id="-7"></h1>
 <p>Nå skal vi lage en funksjon som adderer to tall. Test at
 funksjonen din fungerer som dette:</p>
-<pre><code class="python"><span class="hljs-prompt">&gt;&gt;&gt; </span>sum = add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<pre><code class="python"><span class="hljs-meta">&gt;&gt;&gt; </span>sum = add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
 Fikk inn <span class="hljs-number">3</span> og <span class="hljs-number">4</span>
-<span class="hljs-prompt">&gt;&gt;&gt; </span>print(sum)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(sum)
 <span class="hljs-number">7</span>
 </code></pre>
 <p>Dette må du gjøre:</p>

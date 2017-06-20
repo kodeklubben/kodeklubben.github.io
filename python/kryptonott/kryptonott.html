@@ -51,7 +51,7 @@ alphabet = <span class="hljs-string">'ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅabcdefghij
         msgInt = alphabet.find(char)
         encInt = alphabet.find(key[i % key_length])
 
-        <span class="hljs-keyword">if</span> msgInt == -<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> encInt == -<span class="hljs-number">1</span>:
+        <span class="hljs-keyword">if</span> msgInt == <span class="hljs-number">-1</span> <span class="hljs-keyword">or</span> encInt == <span class="hljs-number">-1</span>:
             <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>
 
         encoded = (msgInt + encInt) % alphabet_length
