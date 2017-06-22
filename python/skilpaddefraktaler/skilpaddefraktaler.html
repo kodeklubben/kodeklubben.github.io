@@ -31,15 +31,15 @@ forward(<span class="hljs-number">270</span>)
 </code></pre>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Skriv inn programmet over. Lagre det med navnet <code>snoflak.py</code> og kjør
-det. En rett strek skal tegnes på skjermen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Skriv inn programmet over. Lagre det med navnet <code>snoflak.py</code> og kjør
+det. En rett strek skal tegnes på skjermen.</label></p>
 </li>
-<li>
-<p>Endre litt på tallene og fargene i koden slik at du husker hva de
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Endre litt på tallene og fargene i koden slik at du husker hva de
 forskjellige kommandoene gjør. Finner du en fargekombinasjon du
-liker?</p>
+liker?</label></p>
 </li>
 </ul>
 </section>
@@ -65,10 +65,10 @@ består av mange små kopier av slike fjell?</p>
 over.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Den rette streken har vi jo allerede tegnet. La oss bare endre litt
-i programmet vårt slik at dette blir en funksjon:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Den rette streken har vi jo allerede tegnet. La oss bare endre litt
+i programmet vårt slik at dette blir en funksjon:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -84,9 +84,9 @@ en()
 </code></pre>
 <p>Husk at vi må kalle funksjonen for at den skal bli gjort.</p>
 </li>
-<li>
-<p>La oss nå legge til en funksjon <code>to()</code> som tegner den andre figuren,
-det enkle fjellet. Skriv denne funksjonen i den samme filen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> La oss nå legge til en funksjon <code>to()</code> som tegner den andre figuren,
+det enkle fjellet. Skriv denne funksjonen i den samme filen.</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to</span><span class="hljs-params">()</span>:</span>
     forward(<span class="hljs-number">90</span>)
     left(<span class="hljs-number">60</span>)
@@ -100,16 +100,16 @@ to()
 </code></pre>
 <p>Ser du sammenhengen mellom figuren og koden?</p>
 </li>
-<li>
-<p>Kjør programmet ditt. Husk at du kan styre hvilke figurer som tegnes
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Kjør programmet ditt. Husk at du kan styre hvilke figurer som tegnes
 med hvilke funksjoner du kaller. Selv om både <code>en</code> og <code>to</code> er
-definert trenger du ikke kalle begge funksjonene.</p>
+definert trenger du ikke kalle begge funksjonene.</label></p>
 </li>
-<li>
-<p>I <code>to</code> har vi brukt <code>forward(90)</code>, mens i <code>en</code> brukte vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> I <code>to</code> har vi brukt <code>forward(90)</code>, mens i <code>en</code> brukte vi
 <code>forward(270)</code>. Det betyr at vi har tegnet den rette streken tre
 ganger mindre. Men vi har brukt vinkler slik at de fire strekene i
-<code>to</code> tilsammen blir like lang som den ene streken i <code>en</code>.</p>
+<code>to</code> tilsammen blir like lang som den ene streken i <code>en</code>.</label></p>
 <p>La oss endre litt i funksjonene slik at vi bruker <code>en</code> i stedet
 for <code>forward</code> når vi definerer <code>to</code>.</p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">en</span><span class="hljs-params">(lengde)</span>:</span>
@@ -127,14 +127,14 @@ for <code>forward</code> når vi definerer <code>to</code>.</p>
 to(<span class="hljs-number">270</span>)
 </code></pre>
 </li>
-<li>
-<p>Kjør programmet igjen. Tegnes fortsatt de samme figurene?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Kjør programmet igjen. Tegnes fortsatt de samme figurene?</label></p>
 </li>
-<li>
-<p>Vi vil nå tegne den tredje figuren. En måte å gjøre dette på kan
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi vil nå tegne den tredje figuren. En måte å gjøre dette på kan
 være å kombinere <code>forward</code>, <code>left</code> og <code>right</code> slik vi opprinnelig
 gjorde for <code>to</code>. Du trenger ikke skrive inn denne koden, men se på
-den og sammenlign med figuren. Ser du at det stemmer?</p>
+den og sammenlign med figuren. Ser du at det stemmer?</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tre</span><span class="hljs-params">()</span>:</span>
     forward(<span class="hljs-number">30</span>)
     left(<span class="hljs-number">60</span>)
@@ -169,10 +169,10 @@ den og sammenlign med figuren. Ser du at det stemmer?</p>
     forward(<span class="hljs-number">30</span>)
 </code></pre>
 </li>
-<li>
-<p>Dette er en kjedelig måte å programmere på: Vi må skrive kjempemye
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Dette er en kjedelig måte å programmere på: Vi må skrive kjempemye
 kode, det er veldig lett å gjøre feil og det tar tid å gjøre
-endringer i koden.</p>
+endringer i koden.</label></p>
 <p>Hvis du ser litt nærmere på koden vil du se at linjene</p>
 <pre><code class="python">    forward(<span class="hljs-number">30</span>)
     left(<span class="hljs-number">60</span>)
@@ -185,11 +185,11 @@ endringer i koden.</p>
 <p>går igjen flere ganger. Sammenlign disse linjene med funksjonen
 <code>to</code> fra tidligere. Ser du en måte vi kan forenkle koden vår?</p>
 </li>
-<li>
-<p>Vi har sett at koden til <code>tre</code> består av flere kopier av koden til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Vi har sett at koden til <code>tre</code> består av flere kopier av koden til
 <code>to</code>, bare krympet. Da kan vi jo gjøre samme trikset som tidligere,
 vi bare kaller <code>to</code>. Skriv inn følgende kode i den samme filen som
-<code>en</code> og <code>to</code>:</p>
+<code>en</code> og <code>to</code>:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tre</span><span class="hljs-params">(lengde)</span>:</span>
     to(lengde / <span class="hljs-number">3</span>)
     left(<span class="hljs-number">60</span>)
@@ -202,8 +202,8 @@ vi bare kaller <code>to</code>. Skriv inn følgende kode i den samme filen som
 tre()
 </code></pre>
 </li>
-<li>
-<p>Klarer du å tegne alle tre figurene nå?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Klarer du å tegne alle tre figurene nå?</label></p>
 </li>
 </ul>
 </section>
@@ -216,9 +216,9 @@ tre()
 <p>Nå kommer det morsomste. Før vi kaster bort tid på å lage flere
 funksjoner <code>fire</code>, <code>fem</code> og kanskje <code>seks</code>, skal vi se at vi kan lage
 en funksjon som kan lage alle disse for oss!</p>
-<ul>
-<li>Sammenlign funksjonene <code>to</code> og <code>tre</code>. Ser du at de er nesten helt
-like?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Sammenlign funksjonene <code>to</code> og <code>tre</code>. Ser du at de er nesten helt
+like?</label></li>
 </ul>
 <p>Vi skal nå bruke noe som kalles rekursjon for å lage en funksjon som
 gjør jobben til både <code>en</code>, <code>to</code> og <code>tre</code>. Rekursjon husker du kanskje
@@ -227,9 +227,9 @@ men for å gjøre noe som er litt enklere.</p>
 <p>Med rekursjon ser man gjerne på det enkle tilfellet og det generelle
 tilfellet. For disse figurene er <code>en</code> det enkle tilfellet hvor vi bare
 trenger å tegne en rett strek.</p>
-<ul>
-<li>
-<p>Legg til denne funksjonen. Dette er det enkle tilfellet:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Legg til denne funksjonen. Dette er det enkle tilfellet:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fjell</span><span class="hljs-params">(lengde, dybde)</span>:</span>
     <span class="hljs-keyword">if</span> dybde == <span class="hljs-number">1</span>:
         forward(lengde)
@@ -238,10 +238,10 @@ trenger å tegne en rett strek.</p>
 <p>Her bruker vi <code>return</code> for å si at vi ikke vil gjøre mer for det
 enkle tilfellet.</p>
 </li>
-<li>
-<p>Det generelle tilfellet er det vi har sett tidligere i <code>to</code> og
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Det generelle tilfellet er det vi har sett tidligere i <code>to</code> og
 <code>tre</code>. Med den nye variabelen <code>dybde</code> kan vi lage både <code>to</code> og <code>tre</code>
-med samme kode. Utvid funksjonen <code>fjell</code> slik at den ser slik ut:</p>
+med samme kode. Utvid funksjonen <code>fjell</code> slik at den ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fjell</span><span class="hljs-params">(lengde, dybde)</span>:</span>
     <span class="hljs-keyword">if</span> dybde == <span class="hljs-number">1</span>:
         forward(lengde)
@@ -257,8 +257,8 @@ med samme kode. Utvid funksjonen <code>fjell</code> slik at den ser slik ut:</p>
 </code></pre>
 <p>Kjenner du igjen koden fra tidligere?</p>
 </li>
-<li>
-<p>Prøv å tegn</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Prøv å tegn</label></p>
 <pre><code class="python">fjell(<span class="hljs-number">270</span>, <span class="hljs-number">2</span>)
 </code></pre>
 <p>og</p>
@@ -266,11 +266,11 @@ med samme kode. Utvid funksjonen <code>fjell</code> slik at den ser slik ut:</p>
 </code></pre>
 <p>Gir dette samme resultat som <code>to(270)</code> og <code>tre(270)</code>?</p>
 </li>
-<li>
-<p>Den nye funksjonen gjør enda mer enn <code>to</code> og <code>tre</code>. Vi kan bruke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Den nye funksjonen gjør enda mer enn <code>to</code> og <code>tre</code>. Vi kan bruke
 enda større dybde. Prøv for eksempel <code>fjell(270, 6)</code>. Denne vil
 bruke litt tid. Bruk <code>speed(11)</code> for at skilpadden skal bevege seg
-så raskt som mulig.</p>
+så raskt som mulig.</label></p>
 </li>
 </ul>
 </section>
@@ -280,11 +280,11 @@ så raskt som mulig.</p>
 <p>Vi skal nå kombinere flere slike fjell til et fint snøflak.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Til sist skal vi kombinere flere kall til <code>fjell</code>-funksjonen vår for
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Til sist skal vi kombinere flere kall til <code>fjell</code>-funksjonen vår for
 å tegne det fine snøflaket du så helt først i oppgaven. Ser du
-hvordan snøflaket består av tre fjell?</p>
+hvordan snøflaket består av tre fjell?</label></p>
 <p>Legg til denne funksjonen:</p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">snoflak</span><span class="hljs-params">(lengde, dybde)</span>:</span>
     <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
@@ -292,9 +292,9 @@ hvordan snøflaket består av tre fjell?</p>
         right(<span class="hljs-number">120</span>)
 </code></pre>
 </li>
-<li>
-<p>Prøv å kall denne <code>snoflak</code>-funksjonen med forskjellige lengder og
-dybder.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Prøv å kall denne <code>snoflak</code>-funksjonen med forskjellige lengder og
+dybder.</label></p>
 </li>
 </ul>
 <p>Dette snøflaket er en av de mest kjente fraktalene. Det har fått
@@ -311,13 +311,13 @@ het Helge von Koch.</p>
 litt form. I stedet for en trekant som danner fjellet vil vi bruke en
 firkant som i figuren under:</p>
 <p><figure><img src="firkantfjell_forstesteg.png" alt=""></figure></p>
-<ul>
-<li>
-<p>Lag en ny fil som du kaller <code>firkantfjell.py</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Lag en ny fil som du kaller <code>firkantfjell.py</code>.</label></p>
 </li>
-<li>
-<p>Som tidligere så kan vi prøve å tegne dette nye fjellet med
-funksjoner for hvert steg. For eksempel</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Som tidligere så kan vi prøve å tegne dette nye fjellet med
+funksjoner for hvert steg. For eksempel</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -343,10 +343,10 @@ speed(<span class="hljs-number">3</span>)
 to(<span class="hljs-number">270</span>)
 </code></pre>
 </li>
-<li>
-<p>Men vi har jo lært at det er mye bedre å bruke rekursjon. Vi vil
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Men vi har jo lært at det er mye bedre å bruke rekursjon. Vi vil
 lage en funksjon som kan tegne mange forskjellige firkantfjell ved
-at den kaller seg selv.</p>
+at den kaller seg selv.</label></p>
 <p>Prøv selv om du kan skrive denne. Se på hvordan vi laget <code>fjell</code>
 tidligere, og på hvordan vi laget <code>en</code> og <code>to</code> nå sist.</p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">firkantfjell</span><span class="hljs-params">(lengde, dybde)</span>:</span>
@@ -357,9 +357,9 @@ tidligere, og på hvordan vi laget <code>en</code> og <code>to</code> nå sist.<
     <span class="hljs-comment"># Her må du programmere det generelle tilfellet</span>
 </code></pre>
 </li>
-<li>
-<p>Test koden din. Blir det riktig? Nedenfor ser du et eksempel hvor vi
-har laget et firkantfjell med dybde 6.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Test koden din. Blir det riktig? Nedenfor ser du et eksempel hvor vi
+har laget et firkantfjell med dybde 6.</label></p>
 <p><figure><img src="firkantfjell.png" alt=""></figure></p>
 </li>
 </ul>
@@ -375,14 +375,14 @@ stegene:</p>
 <p><figure><img src="trekant_forstesteg.png" alt=""></figure></p>
 <p>Her ser vi at vi har en trekant som byttes ut med tre mindre
 trekanter.</p>
-<ul>
-<li>
-<p>Lag en ny fil <code>trekant.py</code> og legg til de vanlige kommandoene på
-toppen av filen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Lag en ny fil <code>trekant.py</code> og legg til de vanlige kommandoene på
+toppen av filen.</label></p>
 </li>
-<li>
-<p>I det enkle tilfellet vil vi nå tegne en trekant. Det kan vi gjøre
-på denne måten:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> I det enkle tilfellet vil vi nå tegne en trekant. Det kan vi gjøre
+på denne måten:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trekant</span><span class="hljs-params">(lengde, dybde)</span>:</span>
     <span class="hljs-keyword">if</span> dybde &lt;= <span class="hljs-number">1</span>:
         pendown()
@@ -393,10 +393,10 @@ på denne måten:</p>
         <span class="hljs-keyword">return</span>
 </code></pre>
 </li>
-<li>
-<p>For det generelle tilfellet må vi stable tre trekanter. Det kan vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> For det generelle tilfellet må vi stable tre trekanter. Det kan vi
 gjøre for eksempel med koden under. Sammenlign koden med figuren.
-Ser du sammenhengen?</p>
+Ser du sammenhengen?</label></p>
 <pre><code class="python">    trekant(lengde / <span class="hljs-number">2</span>, dybde - <span class="hljs-number">1</span>)
     forward(lengde / <span class="hljs-number">2</span>)
     trekant(lengde / <span class="hljs-number">2</span>, dybde - <span class="hljs-number">1</span>)
@@ -409,10 +409,10 @@ Ser du sammenhengen?</p>
     left(<span class="hljs-number">120</span>)
 </code></pre>
 </li>
-<li>
-<p>Tegn noen trekanter med forskjellig dybde og størrelse. Denne
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Tegn noen trekanter med forskjellig dybde og størrelse. Denne
 fraktalen er også ganske kjent, og går ofte under navnet
-Sierpinski-trekanten.</p>
+Sierpinski-trekanten.</label></p>
 </li>
 </ul>
 </section>

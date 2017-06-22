@@ -15,9 +15,9 @@ function relative (url) {
 <p>Vår begynnelse kommer til å ligne på det vi gjorde i <a href="../sprettende_ball/sprettende_ball.html">den sprettende ballen</a>.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start Processing og skriv dette:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start Processing og skriv dette:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span> ballX;
 <span class="hljs-built_in">float</span> ballY;
 <span class="hljs-built_in">float</span> ballXFart = <span class="hljs-number">2</span>;
@@ -57,31 +57,31 @@ function relative (url) {
 Vi bruker andre navn på variablene våre. Det er også noen helt nye variabler.</p>
 <p>Hvorfor tror du vi har gjort dette?</p>
 </li>
-</ul>
-<ul>
-<li>Kjør programmet ved å trykke på <strong>Ctrl + R</strong> eller knappen
-<img src="../play.png" alt="" title="Play - En knapp i verktøylinjen merket med pil"></li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Kjør programmet ved å trykke på <strong>Ctrl + R</strong> eller knappen
+<img src="../play.png" alt="" title="Play - En knapp i verktøylinjen merket med pil"></label></p>
+</li>
 </ul>
 <p><figure><img src="sprettendeBall.gif" alt="" title="En sprettende ball på en svart bakgrunn."></figure></p>
-<ul>
-<li>Lagre programmet som PingPong ved å trykke på <strong>Ctrl+S</strong> eller
-velg <strong>File --&gt; Save</strong> i menyen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lagre programmet som PingPong ved å trykke på <strong>Ctrl+S</strong> eller
+velg <strong>File --&gt; Save</strong> i menyen.</label></li>
 </ul>
 </section>
 <section class="try" id="utfordringer">
 <h2 class="try" id="utfordringer">Utfordringer</h2>
-<ul>
-<li>Kan du endre størrelsen på ballen?</li>
-<li>Kan du endre farten til ballen?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kan du endre størrelsen på ballen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Kan du endre farten til ballen?</label></li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-2-ballen-faller-bak">
 <h1 class="activity" id="steg-2-ballen-faller-bak">Steg 2: Ballen faller bak</h1>
 <p>I Ping pong skal du hindre at ballen faller bak rekkerten. For at det skal være vits å gjøre dette må vi først sørge for at ballen ikke bare spretter tilbake når den treffer venstre vegg. Vi kan begynne med å sørge for at ballen ikke spretter tilbake.</p>
-<ul>
-<li>
-<p>Fjern koden som gjør at ballen spretter tilbake (denne ligger i den øverste ‘if’-en), slik at du går fra dette:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Fjern koden som gjør at ballen spretter tilbake (denne ligger i den øverste ‘if’-en), slik at du går fra dette:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">if</span> (ballX &lt; ballRadius) {
   ballXFart = -ballXFart;
 }
@@ -96,17 +96,17 @@ velg <strong>File --&gt; Save</strong> i menyen.</li>
 </ul>
 <section class="try" id="utfordringer-2">
 <h2 class="try" id="utfordringer-2">Utfordringer</h2>
-<ul>
-<li>Kan du få ballen til å dukke opp et annet sted etter den har gått igjennom veggen?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Kan du få ballen til å dukke opp et annet sted etter den har gått igjennom veggen?</label></li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-3-legg-til-rekkerten">
 <h1 class="activity" id="steg-3-legg-til-rekkerten">Steg 3: Legg til rekkerten</h1>
 <p>Nå som ballen kan falle igjennom den venstre veggen, så må vi få på plass en rekkert, slik at du kan slå ballen tilbake. Det gjør vi ved å ha noen tallvariabler som representerer hvor rekkerten er og hvor stor den er. I tilegg så må vi ha kode som sender ballen tilbake.</p>
-<ul>
-<li>
-<p>Legge inn disse variablene nedenfor de som er der fra før:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Legge inn disse variablene nedenfor de som er der fra før:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span> rekkertHoyde = <span class="hljs-number">66</span>;
 <span class="hljs-built_in">float</span> rekkertBredde = <span class="hljs-number">5</span>;
 <span class="hljs-built_in">float</span> rekkert1X = <span class="hljs-number">20</span>;
@@ -134,9 +134,9 @@ stopper ballen og sender den tilbake.</p>
 <p><figure><img src="spretterPaRekkert.gif" alt="" title="Ballen spretter på rekkerten"></figure></p>
 <section class="try" id="utfordringer-3">
 <h2 class="try" id="utfordringer-3">Utfordringer</h2>
-<ul>
-<li>Kan du gjøre rekkerten mindre?</li>
-<li>Kan du endre plasseringen til rekkerten?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Kan du gjøre rekkerten mindre?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Kan du endre plasseringen til rekkerten?</label></li>
 </ul>
 </section>
 <section class="protip" id="forklaring">
@@ -148,9 +148,9 @@ stopper ballen og sender den tilbake.</p>
 <section>
 <h1 id="steg-4-styre-rekkerten">Steg 4: Styre rekkerten</h1>
 <p>Vi har en rekkert, men den er ikke til mye hjelp så lenge du ikke kan styre den. Derfor må du skrive kode som gjør at du kan styre den.</p>
-<ul>
-<li>
-<p>Skriv inn følgende i draw():</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv inn følgende i draw():</label></p>
 <pre><code class="processing"><span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyPressed</span>) {
   <span class="hljs-keyword">if</span> (<span class="hljs-built_in">keyCode</span> == UP) {
     rekkert1Y = rekkert1Y - <span class="hljs-number">2</span>;
@@ -180,11 +180,11 @@ som blir trykket ned, og beveger rekkerten basert på dette.</p>
 </section>
 <section class="try" id="utfordringer-4">
 <h2 class="try" id="utfordringer-4">Utfordringer</h2>
-<ul>
-<li>Kan du endre farten rekkerten beveger seg i?</li>
-<li>Kan du legge til en rekkert på den andre siden slik at to spillere kan spille mot hverandre?</li>
-<li>Kan du gjøre det slik at ballens vertikale retning (opp og ned) bestemmes av hvilken del av rekkerten den treffer?</li>
-<li>Kan du gjøre noe som gjør at spillet blir vanskeligere etter hvert? For eksempel at ballen går raskere og raskere etter hvert, eller at rakkerten blir mindre.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Kan du endre farten rekkerten beveger seg i?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Kan du legge til en rekkert på den andre siden slik at to spillere kan spille mot hverandre?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Kan du gjøre det slik at ballens vertikale retning (opp og ned) bestemmes av hvilken del av rekkerten den treffer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Kan du gjøre noe som gjør at spillet blir vanskeligere etter hvert? For eksempel at ballen går raskere og raskere etter hvert, eller at rakkerten blir mindre.</label></li>
 </ul>
 </section>
 </section>

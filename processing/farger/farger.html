@@ -26,9 +26,9 @@ den delen av koden som skal endres. For hvert steg kan du kjøre programmet
 med <strong>Ctrl + R</strong>, og hvis du vil, kan du lagre det med <strong>Ctrl + S</strong>.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner med å fylle bakgrunnen med sort:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Vi begynner med å fylle bakgrunnen med sort:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-comment">// bestem størrelse til vinduet</span>
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
@@ -41,8 +41,8 @@ med <strong>Ctrl + R</strong>, og hvis du vil, kan du lagre det med <strong>Ctrl
 <p>Dette har du kanskje sett før. Når vi kaller på <code>background</code> med
 bare ett tall får vi en gråtone der <code>0</code> er sort og <code>255</code> er hvitt.</p>
 </li>
-<li>
-<p>La oss endre på <code>draw</code> slik at vi får en rød bakgrunn:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> La oss endre på <code>draw</code> slik at vi får en rød bakgrunn:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
 }
@@ -50,16 +50,16 @@ bare ett tall får vi en gråtone der <code>0</code> er sort og <code>255</code>
 <p>Dette likner på det vi hadde i det første steget, men nå bruker vi
 plutselig tre tall istedenfor ett. La oss utforske dem.</p>
 </li>
-<li>
-<p>La oss endre <code>background</code> igjen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> La oss endre <code>background</code> igjen:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>);
 }
 </code></pre>
 <p>Når du kjører programmet, hvilken farge får du på bakgrunnen?</p>
 </li>
-<li>
-<p>La oss endre <code>background</code> enda en gang:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> La oss endre <code>background</code> enda en gang:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>);
 }
@@ -115,9 +115,9 @@ farger enn svart og hvit. Foreløpig har vi bare sett at vi kan styre
 fargen på bakgrunnen, så la oss se hva vi kan gjøre med fargene til former.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en sirkel i <code>draw</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Legg til en sirkel i <code>draw</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">width</span> / <span class="hljs-number">2</span>, <span class="hljs-built_in">height</span> / <span class="hljs-number">2</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
@@ -126,8 +126,8 @@ fargen på bakgrunnen, så la oss se hva vi kan gjøre med fargene til former.</
 <p>Hvis du kjører programmet, ser du kanskje noe du ikke har lagt
 merke til før: Hva er det som er rundt sirkelen?</p>
 </li>
-<li>
-<p>Endre fargen som sirkelen fargelegges med, med funksjonen <code>fill</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Endre fargen som sirkelen fargelegges med, med funksjonen <code>fill</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>);
   <span class="hljs-built_in">fill</span>(<span class="hljs-number">255</span>, <span class="hljs-number">192</span>, <span class="hljs-number">64</span>);
@@ -136,8 +136,8 @@ merke til før: Hva er det som er rundt sirkelen?</p>
 </code></pre>
 <p>Nå får du en mørkegul sirkel midt i vinduet på en blå bakgrunn.</p>
 </li>
-<li>
-<p>Endre fargen på omrisset med funksjonen <code>stroke</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Endre fargen på omrisset med funksjonen <code>stroke</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>);
   <span class="hljs-built_in">fill</span>(<span class="hljs-number">255</span>, <span class="hljs-number">192</span>, <span class="hljs-number">64</span>);
@@ -148,8 +148,8 @@ merke til før: Hva er det som er rundt sirkelen?</p>
 <p>Nå er streken rundt sirkelen en rødlig brun. Det er kanskje ikke
 så lett å se fargen på streken siden den er så tynn.</p>
 </li>
-<li>
-<p>Gjør omrisset fetere med funksjonen <code>strokeWeight</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Gjør omrisset fetere med funksjonen <code>strokeWeight</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>);
   <span class="hljs-built_in">fill</span>(<span class="hljs-number">255</span>, <span class="hljs-number">192</span>, <span class="hljs-number">64</span>);
@@ -164,16 +164,16 @@ så lett å se fargen på streken siden den er så tynn.</p>
 </section>
 <section class="try" id="eksperimenter">
 <h2 class="try" id="eksperimenter">Eksperimenter</h2>
-<ul>
-<li>Prøv forskjellige bakgrunnsfarger. Hvordan synes du forskjellige
-bakgrunnsfarger passer sammen med fargene på sirkelen?</li>
-<li>Prøv forskjellige fyllfarger. Hvordan passer disse med fargen på
-omrisset?</li>
-<li>Prøv forskjellige farger på omrisset. Hvordan passer det med
-bakgrunnen og fyllfargen?</li>
-<li>Prøv andre tykkelser på omrisset. Hvor synes du at det er passe
-tykt?</li>
-<li>Kan du tegne to sirkler på skjermen i forskjellige farger?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Prøv forskjellige bakgrunnsfarger. Hvordan synes du forskjellige
+bakgrunnsfarger passer sammen med fargene på sirkelen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Prøv forskjellige fyllfarger. Hvordan passer disse med fargen på
+omrisset?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Prøv forskjellige farger på omrisset. Hvordan passer det med
+bakgrunnen og fyllfargen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Prøv andre tykkelser på omrisset. Hvor synes du at det er passe
+tykt?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Kan du tegne to sirkler på skjermen i forskjellige farger?</label></li>
 </ul>
 </section>
 </section>
@@ -186,9 +186,9 @@ komfortabel med dette, kan det være lurt å bruke fargevelgeren som
 finnes i Processing.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne fargevelgeren ved å velge <strong>Tools → Color Selector</strong></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Åpne fargevelgeren ved å velge <strong>Tools → Color Selector</strong></label></p>
 <p><figure><img src="Fargevelger.png" alt="" title="Fargevelgeren slik den er når den først åpnes."></figure></p>
 <p>Du får da opp et vindu som lar deg velge farger. Her kan du fylle
 inn tallverdiene som vi har sett tidligere, R, G og B. Det er også
@@ -196,28 +196,28 @@ noen andre felt. H, S og B er for et  annet fargesystem som naturlig nok
 heter HSB. Det er også to områder som vi kan velge farge fra ved å klikke.
 Øverst til høyre vises fargen som er valgt.</p>
 </li>
-<li>
-<p>Prøv å trykke i det store fargefeltet til venstre. Her kan du velge hvor
-sterk og hvor lys fargen skal være.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Prøv å trykke i det store fargefeltet til venstre. Her kan du velge hvor
+sterk og hvor lys fargen skal være.</label></p>
 <p>Hva skjer med verdiene til R, G og B for lyse farger? Hva er verdien til R,
 G og B for mørke farger?</p>
 </li>
-<li>
-<p>Prøv å trykke i det lille fargefeltet rett ved siden av. Her kan du velge
-hvilken farge du vil ha.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Prøv å trykke i det lille fargefeltet rett ved siden av. Her kan du velge
+hvilken farge du vil ha.</label></p>
 <p><figure><img src="Fargevelger.gif" alt="" title="En animasjon som viser at fargen endres i
  fargevelgeren."></figure></p>
 <p>Hva skjer med verdiene til RGB nå?</p>
 </li>
-<li>
-<p>Finn en farge du liker til bakgrunnsfarge. Skriv inn verdiene for R,
-G og B i <code>background</code> og i <code>draw</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Finn en farge du liker til bakgrunnsfarge. Skriv inn verdiene for R,
+G og B i <code>background</code> og i <code>draw</code>.</label></p>
 </li>
-<li>
-<p>Finn en farge du liker til sirkelen. Trykk på knappen <strong>Copy</strong>. Visk
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Finn en farge du liker til sirkelen. Trykk på knappen <strong>Copy</strong>. Visk
 ut alle verdiene gitt i <code>fill</code> og lim inn den kopierte fargekoden:
 enten med <strong>Edit → Paste</strong> eller trykk på <strong>Ctrl + V</strong> eller
-<strong>Cmd + V</strong> hvis du bruker Mac.</p>
+<strong>Cmd + V</strong> hvis du bruker Mac.</label></p>
 <p>Når du limer inn, ser du at koden er på formen <code>#0123EF</code>. Dette er fargekoden
 som stod i det nederste tekstfeltet i fargevelgeren. Hvordan denne fargekoden
 fungerer er forklart i boksen under.</p>
@@ -270,25 +270,25 @@ hvor sterk fargen skal være. Det siste, <strong>B</strong>, bestemmer hvor lys
 fargen skal være.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Først tar vi en titt på hvordan fargevelgeren og HSB henger
-sammen. Åpne fargevelgeren igjen med <strong>Tools → Color Selector</strong>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Først tar vi en titt på hvordan fargevelgeren og HSB henger
+sammen. Åpne fargevelgeren igjen med <strong>Tools → Color Selector</strong>.</label></p>
 </li>
-<li>
-<p>Bruk det store fargefeltet til venstre og se hva som skjer med de
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Bruk det store fargefeltet til venstre og se hva som skjer med de
 tre verdiene: H, S og B. Hvordan oppfører de seg når du gjør fargen
 lysere, mørkere, sterkere og svakere? Kan du knytte en av de tre
-verdiene til bevegelse opp og ned? Hva med sideveis?</p>
+verdiene til bevegelse opp og ned? Hva med sideveis?</label></p>
 </li>
-<li>
-<p>Bruk det lille fargefeltet ved siden av og se hva som skjer med
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Bruk det lille fargefeltet ved siden av og se hva som skjer med
 verdiene nå. Hvilke av verdiene endres når du endrer plasseringen i
-dette feltet?</p>
+dette feltet?</label></p>
 </li>
-<li>
-<p>La oss prøve ut HSB nå som du har sett hvordan disse verdiene henger
-sammen i farge velgeren:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> La oss prøve ut HSB nå som du har sett hvordan disse verdiene henger
+sammen i farge velgeren:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
   <span class="hljs-built_in">colorMode</span>(HSB, <span class="hljs-number">360</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
@@ -312,13 +312,13 @@ gir 360 grader med fargetoner. Metning og lys gis typisk i
 prosent. Du kan selvfølgelig velge helt andre maksverdier om du
 ønsker det.</p>
 </li>
-<li>
-<p>Kjør programmet om du ikke har gjort det allerede.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Kjør programmet om du ikke har gjort det allerede.</label></p>
 </li>
-<li>
-<p>Vi har sett at rød ligger på null grader, og grønn på <code>120</code>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Vi har sett at rød ligger på null grader, og grønn på <code>120</code>
 grader. La oss se hvilke farger som befinner seg rundt hjulet ved å
-endre <code>draw</code>:</p>
+endre <code>draw</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
 
@@ -350,14 +350,14 @@ kolonner. Tilsvarende blir det tre tomrom i høyden når vi har to
 rader. Ved å dele på antall tomrom, får vi bredden på avstanden
 mellom to nabosirkler eller vinduskanten og den nærmeste sirkelen.</p>
 </li>
-<li>
-<p>Kjør programmet om du ikke har gjort det.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Kjør programmet om du ikke har gjort det.</label></p>
 </li>
-<li>
-<p>La oss se på hvordan metningen og lysheten påvirker fargen. Vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> La oss se på hvordan metningen og lysheten påvirker fargen. Vi
 legger til en variabel for fargetone som skal endres over tid, sånn
 at vi kan se effekten også på forskjellige fargetoner. Legg derfor
-til følgende øverst i programmet:</p>
+til følgende øverst i programmet:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span> tone;
 </code></pre>
 <p>Så endrer vi <code>draw</code> til å tegne opp 9 sirkler der radene har samme
@@ -458,10 +458,10 @@ hver fargekanal. Hvis farger skal endre seg veldig mye, kan det
 likevel være enklere med tre variabler.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner helt enkelt med en fargevariabel for bakgrunn og en for
-fyllfarge:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Vi begynner helt enkelt med en fargevariabel for bakgrunn og en for
+fyllfarge:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">color</span> bakgrunn = <span class="hljs-built_in">color</span>(<span class="hljs-number">32</span>, <span class="hljs-number">128</span>, <span class="hljs-number">64</span>);
 <span class="hljs-built_in">color</span> fyll = <span class="hljs-built_in">color</span>(<span class="hljs-number">64</span>, <span class="hljs-number">128</span>, <span class="hljs-number">255</span>);
 
@@ -480,10 +480,10 @@ bakgrunn. <code>color(32, 128, 64)</code> gir oss en verdi som vi kan putte i
 en <code>color</code>-variabel. Nå vi bruker variabelen i
 <code>background(bakgrunn)</code>, er det som om vi skrev <code>background(32, 128, 64)</code>.</p>
 </li>
-<li>
-<p>La oss se hvordan vi kan lage en farge som ligger et sted mellom to
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> La oss se hvordan vi kan lage en farge som ligger et sted mellom to
 farger med <code>lerpColor</code>. Legg til en ekstra farge for svart først i
-programmet:</p>
+programmet:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">color</span> svart = <span class="hljs-built_in">color</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
 </code></pre>
 <p>Så setter vi omrisset til sirkelen til å være en mellomting mellom
@@ -506,9 +506,9 @@ også lagt resultatet i en <code>color</code>-variabel: <code>color omriss = ler
 <p>Kjør programmet og merk at omrisset nå er en mørkere variant av
 blåfargen istedenfor helt svart.</p>
 </li>
-<li>
-<p>Hvis man vil bruke HSB istedenfor RGB, går det også an, men da må
-man bytte fargesystem før man lager fargene:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Hvis man vil bruke HSB istedenfor RGB, går det også an, men da må
+man bytte fargesystem før man lager fargene:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">color</span> bakgrunn;
 <span class="hljs-built_in">color</span> fyll;
 
@@ -533,13 +533,13 @@ fargene ovenfor?</p>
 </ul>
 <section class="try" id="prov-selv">
 <h3 class="try" id="prov-selv">Prøv selv</h3>
-<ul>
-<li>Ta utgangspunkt i punktet hvor du blandet farger med
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Ta utgangspunkt i punktet hvor du blandet farger med
 <code>lerpColor</code>. Kan du tegne et ansikt eller en annen figur med
 ellipser der du blander farger med <code>lerpColor</code> for omriss- og/eller
 fyllfargene? Hvis du skal bruke blandingsfarger til både omriss og
 fyll, kan det være lurt å legge resultatene av blandingen i
-<code>color</code>-variabler.</li>
+<code>color</code>-variabler.</label></li>
 </ul>
 </section>
 </section>

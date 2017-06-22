@@ -17,12 +17,12 @@ ganger taper du.</p>
 <p>Først må vi få datamaskinen til å velge et tilfeldig ord, så la oss begynne.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne IDLE, og åpne et nytt vindu</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Åpne IDLE, og åpne et nytt vindu</label></p>
 </li>
-<li>
-<p>Skriv inn følgende kode:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Skriv inn følgende kode:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
@@ -30,11 +30,11 @@ word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string
 print(word)
 </code></pre>
 </li>
-<li>
-<p>Lagre programmet ditt og kjør det. Hvilket ord skrives ut?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lagre programmet ditt og kjør det. Hvilket ord skrives ut?</label></p>
 </li>
-<li>
-<p>Kjør programmet en gang til. Skriver det ut et annet ord?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kjør programmet en gang til. Skriver det ut et annet ord?</label></p>
 </li>
 </ul>
 <p>Hver gang du kjører dette programmet vil det velge et tilfeldig ord fra listen <code>[&quot;kode&quot;, &quot;kurs&quot;]</code> ved hjelp av <code>choice</code>-funksjonen.</p>
@@ -45,9 +45,9 @@ print(word)
 <p>Nå har vi valgt et ord, la oss finne ut hvordan vi gjetter en bokstav.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>I den samme filen, endre koden så den ser ut som følger</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> I den samme filen, endre koden så den ser ut som følger</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
@@ -60,15 +60,15 @@ out = <span class="hljs-string">""</span>
 print(<span class="hljs-string">"Gjett en bokstav i ordet:"</span>, out)
 </code></pre>
 </li>
-<li>
-<p>Lagre og kjør programmet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lagre og kjør programmet.</label></p>
 </li>
-<li>
-<p>Du burde se <code>Gjett en bokstav i ordet: ____</code>, i output-vinduet (det andre vinduet, ikke vinduet du har skrevet programmet ditt i).</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Du burde se <code>Gjett en bokstav i ordet: ____</code>, i output-vinduet (det andre vinduet, ikke vinduet du har skrevet programmet ditt i).</label></p>
 <p>Vi bruker en <code>for</code>-løkke for å bygge en tekst hvor hver bokstav i ordet er byttet med en understrek <code>_</code>. Ordet <code>kode</code> vil da for eksempel skrives som <code>____</code> til skjermen.</p>
 </li>
-<li>
-<p>La oss gjette på en bokstav! Endre koden så den ser ut som dette</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> La oss gjette på en bokstav! Endre koden så den ser ut som dette</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
@@ -103,9 +103,9 @@ version av python.</p>
 <p>Nå skal vi bruke to nye komponenter i python, lister og <code>while</code>-løkker.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>I den samme filen, endre koden så den ser slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> I den samme filen, endre koden så den ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
@@ -139,8 +139,8 @@ guessed = []
     print()
 </code></pre>
 </li>
-<li>
-<p>Kjør koden og prøv å gjette bokstavene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Kjør koden og prøv å gjette bokstavene.</label></p>
 <p>Vi har laget en <code>while True</code>-løkke, tilsvarende <code>for alltid</code> i scratch. Denne vil i utgangspunktet fortsette å spørre spilleren om å gjette bokstaver for alltid. For å komme ut av løkken bruker vi kommandoen <code>break</code> når ordet har blitt gjettet.</p>
 <p>Vi bruker også en liste, <code>guessed</code>, hvor vi legger til bokstavene som er riktige for å huske dem senere.</p>
 </li>
@@ -153,9 +153,9 @@ guessed = []
 på må vi også huske på når spilleren gjetter feil.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste </h2>
-<ul>
-<li>
-<p>Endre filen du jobber med slik at den blir seende ut som dette:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Endre filen du jobber med slik at den blir seende ut som dette:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
@@ -201,9 +201,9 @@ wrong = []
 mange forsøk man har til å gjette.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Endre filen for å legge til en ny variabel, <code>tries</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Endre filen for å legge til en ny variabel, <code>tries</code>:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> choice
 
 word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
@@ -247,8 +247,8 @@ tries = <span class="hljs-number">7</span>
     print(<span class="hljs-string">"Du klarte ikke å gjette"</span>, word)
 </code></pre>
 </li>
-<li>
-<p>Kjør programmet, og se hva som skjer når du gjetter feil bokstaver.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Kjør programmet, og se hva som skjer når du gjetter feil bokstaver.</label></p>
 <p>Legg merke til at vi endret <code>while</code>-løkken ved å legge inn en forutsetning, <code>while tries &gt; 0</code>. Dette betyr at løkken bare kjøres så lenge variabelen <code>tries</code> er større enn 0. Kikker du litt rundt i koden ser du at <code>tries</code> starter med verdien 7, også blir den 1 mindre for hver feil bokstav som gjettes. Altså vil spilleren kunne gjette opp til 7 bokstaver feil før spillet er slutt.</p>
 </li>
 </ul>
@@ -258,14 +258,14 @@ tries = <span class="hljs-number">7</span>
 <h1 class="activity" id="steg-6-legg-til-nye-ord">Steg 6: Legg til nye ord</h1>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Finn linjen i programkoden som sier:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Finn linjen i programkoden som sier:</label></p>
 <pre><code class="python">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>])
 </code></pre>
 </li>
-<li>
-<p>Vi kan endre denne linjen for å legge til flere ord i spillet. Prøv for eksempel</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi kan endre denne linjen for å legge til flere ord i spillet. Prøv for eksempel</label></p>
 <pre><code class="python">word = choice([<span class="hljs-string">"kode"</span>, <span class="hljs-string">"kurs"</span>, <span class="hljs-string">"robot"</span>, <span class="hljs-string">"klubb"</span>])
 </code></pre>
 <p>Husk at ordene må stå i anførselstegn og at det må være komma mellom ordene for å lage en liste. Legg til flere ord som du finner på selv.</p>

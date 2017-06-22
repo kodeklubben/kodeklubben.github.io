@@ -23,18 +23,18 @@ kontrollerer en ballfigur mens den spretter rundt på skjermen. I
 resten av leksjonen vil du finne følgende:</em></p>
 <section class="check" id="plan">
 <h2 class="check" id="plan">Plan</h2>
-<ul>
-<li>
-<p>Hvordan lage en sprettende ball-figur</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Hvordan lage en sprettende ball-figur</label></p>
 </li>
-<li>
-<p>Litt mer kontroll på hvordan ballen spretter</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Litt mer kontroll på hvordan ballen spretter</label></p>
 </li>
-<li>
-<p>Racketer som spillerne kan styre</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Racketer som spillerne kan styre</label></p>
 </li>
-<li>
-<p>Poeng, lyder og slikt</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Poeng, lyder og slikt</label></p>
 </li>
 </ul>
 </section>
@@ -50,25 +50,25 @@ skjermen. Ingen spillere, ingen poeng, ingenting annet enn en
 sprettende ball!</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt. Slett kattefiguren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Start et nytt prosjekt. Slett kattefiguren.</label></p>
 </li>
-<li>
-<p>Lag en ny ball-figur. Du kan enten finne en i biblioteket, eller
-tegne en selv.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lag en ny ball-figur. Du kan enten finne en i biblioteket, eller
+tegne en selv.</label></p>
 </li>
-<li>
-<p>Vi vil ha muligheten til senere enkelt å endre hastigheten til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Vi vil ha muligheten til senere enkelt å endre hastigheten til
 ballen. Lag derfor en ny variabel <code class="blockdata">hastighet</code> som
-gjelder for ball-figuren.</p>
+gjelder for ball-figuren.</label></p>
 </li>
-<li>
-<p>Vår enkle kode for en sprettende ball består essensielt av to deler:
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vår enkle kode for en sprettende ball består essensielt av to deler:
 Den første delen passer på at ballen starter riktig (riktig
 hastighet, riktig sted, riktig retning), mens den andre delen er
 løkken som gjør at ballen beveger seg og snur når den treffer kanten
-av skjermen.</p>
+av skjermen.</label></p>
 <pre><code class="blocks">når jeg mottar [Ny ball v]
 sett [hastighet v] til [7]
 gå til x: (0) y: (0)
@@ -82,9 +82,9 @@ slutt
 du skjønner hva hver enkelt kloss gjør, fordi denne koden skal du
 endre selv etterhvert.</p>
 </li>
-<li>
-<p>Klikk på kodeblokken din for at den skal kjøre, og for at ballen
-skal begynne å bevege seg. Ser det bra ut?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Klikk på kodeblokken din for at den skal kjøre, og for at ballen
+skal begynne å bevege seg. Ser det bra ut?</label></p>
 </li>
 </ul>
 <section class="protip" id="en-bedre-mate-a-starte-programmet-pa">
@@ -120,16 +120,16 @@ berører andre figurer (som for eksempel racketene til spillerene),
 eller når den berører spesielle farger.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til din egen bakgrunn hvor du bruker forskjellige farger der du
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Legg til din egen bakgrunn hvor du bruker forskjellige farger der du
 vil at ballen skal sprette (vi har brukt lyseblått) og der du vil gi
-poeng (vi har brukt mørkeblått).</p>
+poeng (vi har brukt mørkeblått).</label></p>
 <p><figure><img src="bakgrunn.png" alt=""></figure></p>
 </li>
-<li>
-<p>Om ballen treffer mål (mørkeblå) vil vi at den stopper, og
-etterhvert skal vi telle poeng. Dette kan vi gjøre ved å bytte ut</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Om ballen treffer mål (mørkeblå) vil vi at den stopper, og
+etterhvert skal vi telle poeng. Dette kan vi gjøre ved å bytte ut</label></p>
 <pre><code class="blocks">for alltid
 slutt
 </code></pre>
@@ -139,10 +139,10 @@ slutt
 send melding [Poeng v]
 </code></pre>
 </li>
-<li>
-<p>For at ballen skal sprette når den treffer veggen (lyseblå) vil vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> For at ballen skal sprette når den treffer veggen (lyseblå) vil vi
 endre retningen på ballen selv. Igjen undersøker vi om ballen
-berører en spesiell farge ved å bytte ut</p>
+berører en spesiell farge ved å bytte ut</label></p>
 <pre><code class="blocks">sprett tilbake ved kanten
 </code></pre>
 <p>med for eksempel</p>
@@ -164,61 +164,61 @@ styre. Disse vil være veldig like hverandre, slik at vi kan først
 lage den ene racketen og deretter kopiere denne.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Tegn en ny figur. Lag for eksempel et rektangel som kan fungere som racket.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Tegn en ny figur. Lag for eksempel et rektangel som kan fungere som racket.</label></p>
 </li>
-<li>
-<p>Skriv kode som starter på meldingen <code>Ny ball</code>. På samme måte som for
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Skriv kode som starter på meldingen <code>Ny ball</code>. På samme måte som for
 ballen skal denne bestå av to deler: Først må koden passe på at
 racketen starter på riktig sted. Deretter går koden inn i en løkke
 hvor racketen flyttes opp og ned (<code class="blockmotion">endre y</code>) når for
-eksempel tastene <code>W</code> og <code>S</code> trykkes.</p>
+eksempel tastene <code>W</code> og <code>S</code> trykkes.</label></p>
 </li>
-<li>
-<p>Test at du kan flytte racketen. Du vil kanskje også legge inn en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Test at du kan flytte racketen. Du vil kanskje også legge inn en
 begrensning slik at ikke racketen kan forsvinne ut av skjermen? Det
-kan du gjøre for eksempel med en test som ser omtrent slik ut:</p>
+kan du gjøre for eksempel med en test som ser omtrent slik ut:</label></p>
 <pre><code class="blocks">hvis &lt;&lt;tast [w v] trykket&gt; og &lt;(y-posisjon) &lt; [150]&gt;&gt;
 slutt
 </code></pre>
 </li>
-<li>
-<p>Når du er fornøyd med hvordan denne racketen styres kan du kopiere
-den.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Når du er fornøyd med hvordan denne racketen styres kan du kopiere
+den.</label></p>
 </li>
-<li>
-<p>Endre litt på den nye racket-figuren. Du kan for eksempel endre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Endre litt på den nye racket-figuren. Du kan for eksempel endre
 fargen på den om du vil? Du må også endre litt i koden, slik at den
 starter på andre siden av skjermen og slik at den reagerer på andre
-taster, for eksempel <code>pil opp</code> og <code>pil ned</code>.</p>
+taster, for eksempel <code>pil opp</code> og <code>pil ned</code>.</label></p>
 </li>
-<li>
-<p>Til slutt må vi legge til kode på ball-figuren slik at ballen
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Til slutt må vi legge til kode på ball-figuren slik at ballen
 spretter når den berører en racket. Dette kan gjøres veldig likt
 hvordan vi fikk ballen til å sprette på veggen. Du må bare bruke
 <code class="blocksensing">berører farge</code> i stedet for
-<code class="blocksensing">berører</code>.</p>
+<code class="blocksensing">berører</code>.</label></p>
 </li>
-<li>
-<p>Siden ballen nå treffer en vertikal racket i stedet for en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Siden ballen nå treffer en vertikal racket i stedet for en
 horisontal vegg må vi også bytte ut tallet <code>180</code> i <code class="blockmotion">pek i retning</code>-klossen. Hvilket tall kan du bruke? Prøv deg
 fram, eller tenk gjennom hvordan en ball spretter når den treffer en
-vegg.</p>
+vegg.</label></p>
 </li>
-<li>
-<p>Sjekk at spillet nå fungerer! Ballen spretter fram og tilbake mellom
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Sjekk at spillet nå fungerer! Ballen spretter fram og tilbake mellom
 de to racketene. For å slippe å stadig starte spillet på nytt kan du
 lage litt enkel kode for ballen når den mottar meldingen <code>Poeng</code>. La
 denne koden spille en passende poeng-lyd til den er ferdig. Deretter
-kan den sende meldingen <code>Ny ball</code> igjen.</p>
+kan den sende meldingen <code>Ny ball</code> igjen.</label></p>
 </li>
-<li>
-<p>Du vil kanskje oppleve at racketene beveger seg raskere og raskere
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Du vil kanskje oppleve at racketene beveger seg raskere og raskere
 for hver ny ball? Dette skjer fordi hver gang meldingen <code>Ny ball</code>
 blir sendt startes en ny løkke som flytter racketene. For å fikse
 dette kan du <code class="blockcontrol">stoppe andre skript i figuren</code> for de to
-racketene når meldingen <code>Poeng</code> mottas.</p>
+racketene når meldingen <code>Poeng</code> mottas.</label></p>
 </li>
 </ul>
 </section>
@@ -232,59 +232,59 @@ spillet.</em></p>
 her er noen ideer som kan gjøre spillet enda morsommere å spille:</p>
 <section class="check" id="ideer-til-videreutvikling">
 <h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
-<ul>
-<li>
-<p>Legg til en poeng-teller. Dette kan du gjøre for eksempel med to
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Legg til en poeng-teller. Dette kan du gjøre for eksempel med to
 variabler, en for hver spiller. Når meldingen <code>Poeng</code> mottas kan du
 sjekke <code>x</code>-posisjonen av ball-figuren for å finne ut hvem som skal
-få poeng.</p>
+få poeng.</label></p>
 </li>
-<li>
-<p>La hastigheten øke etterhvert som ballen går frem og tilbake. For
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> La hastigheten øke etterhvert som ballen går frem og tilbake. For
 eksempel kan du la hastigheten øke hver gang ballen berører en av de
-to racketene.</p>
+to racketene.</label></p>
 </li>
-<li>
-<p>Det kan være et problem at ballen bare går opp og ned, og ikke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Det kan være et problem at ballen bare går opp og ned, og ikke
 sidelengs (eller veldig sakte sidelengs) siden vi har satt
 utgangsretningen til ballen helt tilfeldig. Kan du begrense hvilke
 retninger ballen starter i slik at den alltid beveger seg noe
-sidelengs?</p>
+sidelengs?</label></p>
 </li>
-<li>
-<p>I stedet for at ballen spretter perfekt på racketene kan du endre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> I stedet for at ballen spretter perfekt på racketene kan du endre
 retning litt tilfeldig, for eksempel ved å legge til et lite
 tilfeldig tall (positivt eller negativt) etter at ballen har snudd i
-racketen.</p>
+racketen.</label></p>
 </li>
-<li>
-<p>En morsommere, og mer naturlig, sprett på racketen kan du få ved å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> En morsommere, og mer naturlig, sprett på racketen kan du få ved å
 ta hensyn til hvor på racketen ballen treffer. Dette kan du gjøre
 for eksempel ved å sammenligne <code>y</code>-posisjonen til ballen og
-racketen.</p>
+racketen.</label></p>
 </li>
-<li>
-<p>Hva om man kan flytte racketene sidelengs også? Ikke bare opp og
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Hva om man kan flytte racketene sidelengs også? Ikke bare opp og
 ned? Det kan være lurt å begrense hvor langt racketene kan bevege
 seg sidelengs, for eksempel kun over halve skjermen. Da vil spillet
-ligne enda litt mer på tennis.</p>
+ligne enda litt mer på tennis.</label></p>
 </li>
-<li>
-<p>Kanskje du kan videreutvikle hele konseptet, slik at det er mulig å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Kanskje du kan videreutvikle hele konseptet, slik at det er mulig å
 plukke opp power-ups etterhvert som man spiller. For eksempel noe
 som endrer hastigheten på racketen eller ballen, eller kanskje lager
 litt skru på ballen. På nettet, for eksempel på
 <a href="http://www.ponggame.org/">http://www.ponggame.org/</a> finnes
-forskjellige Pong-varianter du kan hente inspirasjon fra.</p>
+forskjellige Pong-varianter du kan hente inspirasjon fra.</label></p>
 </li>
-<li>
-<p>Pong er morsomst når man er to spillere. Men av og til er man alene,
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Pong er morsomst når man er to spillere. Men av og til er man alene,
 og da hadde det vært morsomt om man kunne spilt mot
 datamaskinen. Klarer du å kode en av racketene slik at datamaskinen
 kan styre den? Det er ikke så veldig vanskelig, du kan for eksempel
 la datamaskinen flytte racketen sin opp eller ned ved å sammenligne
 <code>y</code>-posisjonen til ballen med <code>y</code>-posisjonen til racketen til
-datamaskinen.</p>
+datamaskinen.</label></p>
 </li>
 </ul>
 </section>

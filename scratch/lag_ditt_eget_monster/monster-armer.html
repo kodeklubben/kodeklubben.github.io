@@ -8,9 +8,9 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Monster - Hengslede armer</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/lag_ditt_eget_monster/monster-armer.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>En arm lages av to figurer, og de kan være ganske vanskelige å
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> En arm lages av to figurer, og de kan være ganske vanskelige å
 bygge, siden de to armene må vite om hverandre, slik at de ikke
 skilles og det blir seende rart ut. Dette kan gjøres med matematiske
 beregninger som kalles <strong>trigonometri</strong>, noe som regelmessig brukes
@@ -19,7 +19,7 @@ første figur er overarmen, som ikke er så vanskelig, da den ganske
 enkelt vil rotere ved skulderen og flytte seg med kroppen og de
 andre kroppsdelene. En ting vi må legge til er å sette retningen
 <code class="blockmotion">retning</code> til armen i en variabel (mer om det
-seinere).</p>
+seinere).</label></p>
 <pre><code class="blocks">når [mellomrom v] trykkes
 vend venstre (15) grader
 sett [venstre arm v] til (retning)
@@ -27,24 +27,24 @@ send melding [flyttet v]
 endre x med (hastighet)
 </code></pre>
 </li>
-<li>
-<p>Den neste beregningen brukes for å kontrollere <strong>underarmen</strong>. Her
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Den neste beregningen brukes for å kontrollere <strong>underarmen</strong>. Her
 bruker vi trigonometri for å beregne hvor underarmen bør plasseres
 (Det kan godt være at du trenger å be om hjelp når du skal gjøre
-dette).</p>
+dette).</label></p>
 <pre><code class="blocks">når jeg mottar [flyttet v]
 gå til [Sprite3 v]
 gå til x: ((x-posisjon) + ((45) * ([sin v] av (venstre arm)))) y: ((y-position) + ((45) * ([cos v] av (venstre arm))))
 </code></pre>
 </li>
-<li>
-<p>Først oppdaterer armen seg, når meldingen <code class="blockbrown">flyttet</code>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Først oppdaterer armen seg, når meldingen <code class="blockbrown">flyttet</code>
 blir sendt, men du kan bruke hvilken som helst melding, så lenge
 overarmen sender den eller flytter seg til samme medling som
-underarmen.</p>
+underarmen.</label></p>
 </li>
-<li>
-<p>Så flytter underarmen seg selv til <strong>senterpunktet</strong> av overarmen,
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Så flytter underarmen seg selv til <strong>senterpunktet</strong> av overarmen,
 dette er punktet hvor toppen av overarmen er festet til
 skulderen. Vi vil så flytte underarmen slik at den møter
 overarmen. Tenk deg at vi tegner en sirkel mens overarmen roterer
@@ -52,7 +52,7 @@ rundt skulderen, hva er så radius på den sirkelen? Armen i dette
 eksempelet er circa <strong>45 pixler</strong> lang. Vi trenger å finne ut hva
 punktet i den andre enden av armen er, og posisjonerer underarmen
 vår der. Man kan bruke trigonometri formelen over for å
-reposisjonere underarmen og lage en albue.</p>
+reposisjonere underarmen og lage en albue.</label></p>
 </li>
 </ul>
 </section>

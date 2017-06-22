@@ -26,12 +26,12 @@ mange linjer.
 </code></pre>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Skriv inn programmet over, og kjør det. Kommer teksten på flere linjer?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Skriv inn programmet over, og kjør det. Kommer teksten på flere linjer?</label></p>
 </li>
-<li>
-<p>Lagre det følgende programmet som skilpaddetekst.py, og se hva som skjer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lagre det følgende programmet som skilpaddetekst.py, og se hva som skjer.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 
@@ -50,8 +50,8 @@ print(TEXT)
 </code></pre>
 <p>Du skal nå se teksten printet ut i IDLE, men kan vi ikke få skilpadden til å skrive den for oss?</p>
 </li>
-<li>
-<p>Når vi skal skrive teksten med skilpadden, er det lettest å gjøre dette linje for linje, og det er derfor lettere om vi deler opp <code>TEXT</code> i en liste med enkeltlinjer. Til dette bruker vi <code>TEXT.split('\n')</code> som deler opp <code>TEXT</code> i flere linjer, og lagre denne i variabelen <code>LINES</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Når vi skal skrive teksten med skilpadden, er det lettest å gjøre dette linje for linje, og det er derfor lettere om vi deler opp <code>TEXT</code> i en liste med enkeltlinjer. Til dette bruker vi <code>TEXT.split('\n')</code> som deler opp <code>TEXT</code> i flere linjer, og lagre denne i variabelen <code>LINES</code>.</label></p>
 <pre><code class="python">LINES = TEXT.split(<span class="hljs-string">'\n'</span>)
 
 print(LINES)
@@ -68,16 +68,16 @@ print(LINES)
 <img src="turtle_box_gif.gif" alt=""></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner med å legge til størrelsen på tegnene, slik:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Vi begynner med å legge til størrelsen på tegnene, slik:</label></p>
 <p>(Pass på at denne koden ligger i samme fil som <code>TEXT</code>-variabelen.)</p>
 <pre><code class="python">SIZE  = <span class="hljs-number">15</span>
 </code></pre>
 <p><code>SIZE</code> er nå en variabel som inneholder størrelsen på boksen vår.</p>
 </li>
-<li>
-<p>Vi lager en funksjon <code>underline</code> for å lage en understrek:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Vi lager en funksjon <code>underline</code> for å lage en understrek:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">underline</span><span class="hljs-params">()</span>:</span>
     penup()
 
@@ -97,21 +97,21 @@ print(LINES)
     right(<span class="hljs-number">90</span>)
 </code></pre>
 </li>
-<li>
-<p>Kjør koden, og se hva som skjer:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Kjør koden, og se hva som skjer:</label></p>
 <pre><code class="python">underline()
 </code></pre>
 </li>
-<li>
-<p>Hva om vi ønsker å lage 10 understreker?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Hva om vi ønsker å lage 10 understreker?</label></p>
 <pre><code class="python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
     underline()
 </code></pre>
 <p>Det skal se slik ut, hvis du du ikke har feil i koden:
 <img src="turtle_underline.png" alt=""></p>
 </li>
-<li>
-<p>Hva skjer hvis du endrer størrelsen på &quot;boksen&quot;? Prøv å endre på <code>SIZE</code> variabelen, og se hva som skjer. (Prøv for eksempel 5 og 50)</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Hva skjer hvis du endrer størrelsen på &quot;boksen&quot;? Prøv å endre på <code>SIZE</code> variabelen, og se hva som skjer. (Prøv for eksempel 5 og 50)</label></p>
 </li>
 </ul>
 </section>
@@ -121,9 +121,9 @@ print(LINES)
 <p>La oss prøve å lage tegnet <code>|</code>. Dette er rett og slett bare en rett strek som skal tegnes lodrett, midt i &quot;boksen&quot;.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi lager funksjonen <code>bar</code> for å tegne <code>|</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi lager funksjonen <code>bar</code> for å tegne <code>|</code>.</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bar</span><span class="hljs-params">()</span>:</span>
     penup()
 
@@ -143,14 +143,14 @@ print(LINES)
     forward(SIZE/<span class="hljs-number">2</span>)
 </code></pre>
 </li>
-<li>
-<p>Endre <code>for</code>-løkka vi lagde tidligere til å inneholde dette</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Endre <code>for</code>-løkka vi lagde tidligere til å inneholde dette</label></p>
 <pre><code class="python"><span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
     bar()
 </code></pre>
 </li>
-<li>
-<p>Tegner skilpadden nå strekene på samme linje, slik som på bildet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Tegner skilpadden nå strekene på samme linje, slik som på bildet?</label></p>
 <p><figure><img src="turtle_bars.png" alt=""></figure></p>
 </li>
 </ul>
@@ -163,9 +163,9 @@ ny funksjon som lager en ny linje for oss?</p>
 <p>For å kunne lage en ny linje  må funksjonen vite hvor mange tegn den skal gå tilbake, vi må derfor deklarere funksjonen, med et parameter - en variabel som vi kan gi til funksjonen når vi skal kjøre den.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Skriv inn koden under:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Skriv inn koden under:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newline</span><span class="hljs-params">(lineLength)</span>:</span>
     penup()
 
@@ -179,8 +179,8 @@ ny funksjon som lager en ny linje for oss?</p>
 </code></pre>
 <p>Denne koden går først ned til linjen under, så går den tilbake begynnelsen av linjen. Legg merke til at vi kaller <code>forward</code> med <code>SIZE*lineLength</code> som argumenter. <code>lineLength</code> er hvor mange tegn som er på linjen vi kom fra, og <code>SIZE</code> er hvor stort hvert tegn er - dermed må skilpadden flytte seg <code>SIZE*lineLength</code> piksler tilbake.</p>
 </li>
-<li>
-<p>For å teste koden vår erstatter vi de tidligere <code>for</code>-løkkene med denne koden (pass på at dette blir plassert nederst i filen):</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> For å teste koden vår erstatter vi de tidligere <code>for</code>-løkkene med denne koden (pass på at dette blir plassert nederst i filen):</label></p>
 <pre><code class="python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
     underline()
 newline(<span class="hljs-number">10</span>)
@@ -200,9 +200,9 @@ newline(<span class="hljs-number">10</span>)
 <p>Her skal du bare få svaret og slippe å regne det ut selv. Diagonalen i boksene våre vil være lik <code>(2 * SIZE**2)**0.5</code>. <code>**</code>-operatoren betyr &quot;opphøyd i&quot; slik at <code>3**2</code> blir <code>9</code>. Når du opphøyer noe i <code>0.5</code>, er det det samme som å ta kvadratrota av tallet. Dermed vil <code>9**0.5</code> bli <code>3.0</code> Dersom du lurer på hvordan dette fungerer kan du spørre en CodeMaster/veileder, eller mattelæreren din.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Koden for en 'slash' - <code>/</code> blir slik:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Koden for en 'slash' - <code>/</code> blir slik:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">slash</span><span class="hljs-params">()</span>:</span>
     penup()
     right(<span class="hljs-number">90</span>)
@@ -216,8 +216,8 @@ newline(<span class="hljs-number">10</span>)
     right(<span class="hljs-number">45</span>)
 </code></pre>
 </li>
-<li>
-<p>Koden for en 'backslash' - <code>\</code> blir slik:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Koden for en 'backslash' - <code>\</code> blir slik:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">backslash</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment"># \</span>
     penup()
     right(<span class="hljs-number">45</span>)
@@ -231,8 +231,8 @@ newline(<span class="hljs-number">10</span>)
     right(<span class="hljs-number">90</span>)
 </code></pre>
 </li>
-<li>
-<p>La oss endre på <code>for</code>-løkkene våre, og teste at koden blir korrekt (pass på at denne koden fremdeles ligger nederst).</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> La oss endre på <code>for</code>-løkkene våre, og teste at koden blir korrekt (pass på at denne koden fremdeles ligger nederst).</label></p>
 <pre><code class="python">length = <span class="hljs-number">10</span>
 <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(length):
     backslash()
@@ -251,15 +251,15 @@ newline(length)
 <p>Vi trenger en funksjon for å skrive blanke tegn, og  vi trenger å oversette fra teksttegn til funksjoner. La oss begynne med det enkleste.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å skrive blanke tegn, så må vi, enkelt og greit, bare bevege oss til neste boks. Det gjør vi slik:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> For å skrive blanke tegn, så må vi, enkelt og greit, bare bevege oss til neste boks. Det gjør vi slik:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">blank</span><span class="hljs-params">()</span>:</span>
     forward(SIZE)
 </code></pre>
 </li>
-<li>
-<p>For å oversette fra teksttegn til funksjoner kommer vi til å bruke en dictionary. Dictionary betyr ordbok, og det er akkurat slik den fungerer. Vi &quot;slår opp&quot; noe i ordboka, og får noe tilbake. I vårt tilfelle skal vi slå opp på tegn, og få en funksjon tilbake igjen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> For å oversette fra teksttegn til funksjoner kommer vi til å bruke en dictionary. Dictionary betyr ordbok, og det er akkurat slik den fungerer. Vi &quot;slår opp&quot; noe i ordboka, og får noe tilbake. I vårt tilfelle skal vi slå opp på tegn, og få en funksjon tilbake igjen.</label></p>
 <p>Først lager vi ordboka:</p>
 <pre><code class="python">MOVES = {
     <span class="hljs-string">" "</span> : blank,
@@ -286,8 +286,8 @@ function()
     function = MOVES[<span class="hljs-string">"_"</span>]
 </code></pre>
 </li>
-<li>
-<p>Nå kan vi lage en ny funksjon, <code>create_text</code> som lager teksten vår.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Nå kan vi lage en ny funksjon, <code>create_text</code> som lager teksten vår.</label></p>
 <p>For å passe på at vi får plass til all teksten vår, ønsker vi å begynne øverst til venstre i vinduet vårt. Dette kan vi fikse ved hjelp av <code>setx</code> og <code>sety</code> som lar oss flytte skilpadden til den posisjonen vi ønsker.</p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_text</span><span class="hljs-params">()</span>:</span>
     penup()
@@ -305,8 +305,8 @@ function()
 </code></pre>
 <p>Som du kanskje ser, så har vi en <code>for</code>-løkke inni en annen <code>for</code>-løkke. Den ytterste (første) <code>for</code>-løkka går igjennom alle linjene i <code>LINES</code>, mens den innerste går igjennom alle tegnene i hver linje. Inni den innerste <code>for</code>-løkka sjekker vi om vi har en funksjon for tegnet, og hvis vi ikke har det så hopper vi bare over det ved å skrive et blankt tegn i stedenfor.</p>
 </li>
-<li>
-<p>For å kjøre funksjonen vår, lager vi en <code>main</code>-funksjon som sørger for å sette riktig fart og riktig linjebredde.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> For å kjøre funksjonen vår, lager vi en <code>main</code>-funksjon som sørger for å sette riktig fart og riktig linjebredde.</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
     shape(<span class="hljs-string">"turtle"</span>)
 
@@ -317,8 +317,8 @@ function()
 main()
 </code></pre>
 </li>
-<li>
-<p>Kjør koden og se resultatet ditt!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Kjør koden og se resultatet ditt!</label></p>
 </li>
 </ul>
 </section>

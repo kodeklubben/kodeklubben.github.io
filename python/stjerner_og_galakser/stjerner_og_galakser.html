@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Python</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Stjerner og galakser</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Python</span></a><div class="pdf"><a href="/python/stjerner_og_galakser/stjerner_og_galakser.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Python</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Stjerner og galakser</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Python</span></a><div class="pdf"><a href="/python/stjerner_og_galakser/stjerner_og_galakser.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>I denne oppgaven skal vi bruke funksjoner for å gjøre programmene vi skriver enklere og mer oversiktlige.</p>
 </section>
@@ -14,9 +14,9 @@ function relative (url) {
 <h1 class="activity" id="steg-1-tegne-stjerner">Steg 1: Tegne stjerner</h1>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner med å bruke det du allerede kan om tegning med skilpadden. Kjør dette programmet:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Vi begynner med å bruke det du allerede kan om tegning med skilpadden. Kjør dette programmet:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># Denne koden tegner en liten grå stjerne på en mørkeblå bakgrunn</span>
@@ -40,13 +40,13 @@ done()
 <p><figure><img src="sky-star.png" alt="" title="Sky med en stjerne og skilpadde"></figure></p>
 </li>
 </ul>
-<ul>
-<li>
-<p>Kan du alle komandoene? <code>bgcolor(color)</code> setter fargen på bakgrunnen.
-Sørg for å forstå alle før du går videre.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Kan du alle komandoene? <code>bgcolor(color)</code> setter fargen på bakgrunnen.
+Sørg for å forstå alle før du går videre.</label></p>
 </li>
-<li>
-<p>Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code>drawStar()</code> og kaller denne tre ganger for å tegne tre stjerner.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Nå skal vi tegne tre stjerner på forskjellige posisjoner på skjermen. Vi lager en funksjon som heter <code>drawStar()</code> og kaller denne tre ganger for å tegne tre stjerner.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne stjerner</span>
@@ -88,9 +88,9 @@ done()
 <p>En bedre måte å gjøre det på er å sende inn verdier til funksjonen <code>drawStar()</code> for å fortelle hvilken størrelse du vil ha. Du har allerede brukt flere funksjoner som mottar verdier på denne måten. For eksempel: <code>forward(100)</code> Her sender du 100 inn funksjonen og det gjør at skilpadden går 100 piksler frem.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Her er et program med en &quot;stjernetegne-funksjon&quot; som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funksjonen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Her er et program med en &quot;stjernetegne-funksjon&quot; som kan tegne stjerner i forskjellige størrelser ut i fra hvilket tall du sender inn i funksjonen.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse</span>
@@ -120,12 +120,12 @@ done()
 </code></pre>
 <p><figure><img src="sky-function.png" alt="" title="Sky med tre stjerner"></figure></p>
 </li>
-<li>
-<p>Når programmet ditt kjører <code>drawStar(50)</code> er altså verdien til starSize lik 50. Dette gjør at kommandoen <code>forward(starSize)</code> inne i løkken tegner en linje som er 50 piksler lang.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Når programmet ditt kjører <code>drawStar(50)</code> er altså verdien til starSize lik 50. Dette gjør at kommandoen <code>forward(starSize)</code> inne i løkken tegner en linje som er 50 piksler lang.</label></p>
 <p><figure><img src="sky-parameter-passing.png" alt=""></figure></p>
 </li>
-<li>
-<p>Det er mulig å sende inn flere verdier inn i funksjonen. For eksempel kan vi sende inn hvilken farge vi vil at stjernen skal ha.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Det er mulig å sende inn flere verdier inn i funksjonen. For eksempel kan vi sende inn hvilken farge vi vil at stjernen skal ha.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
@@ -168,9 +168,9 @@ done()
 <p>Vi skal nå bruke <code>drawStar()</code> til å tegne stjerner på tilfeldige steder rundt på skjermen.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tegner en hvit stjerne der.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Kjør dette programmet. Skilpadden flyttes til en ny posisjon og tegner en hvit stjerne der.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-comment"># En funksjon for å tegne en stjerne med bestemt størrelse og farge</span>
@@ -199,12 +199,12 @@ done()
 
 </code></pre>
 </li>
-<li>
-<p>Vi bruker funksjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi bruker funksjonen <code>setpos(x, y)</code> til å flytte skilpadden til posisjonen (x,y) på skjermen. <code>setpos(200, 200)</code> flytter altså skilpadden til posisjonen (200, 200). Prøv å endre på tallene i denne funksjonen!</label></p>
 <p><figure><img src="sky-xy.png" alt=""></figure></p>
 </li>
-<li>
-<p>Vi skal nå flytte til en tilfeldig posisjon. Vi lager en ny funksjon som heter <code>moveToRandomLocation()</code>, denne flytter altså skilpadden til en tilfeldig posisjon.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi skal nå flytte til en tilfeldig posisjon. Vi lager en ny funksjon som heter <code>moveToRandomLocation()</code>, denne flytter altså skilpadden til en tilfeldig posisjon.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
@@ -249,9 +249,9 @@ Prøv å tegne flere stjerner i flere forskjellige størrelser og farger.</p>
 <p>Du kan skrive funksjoner som kjører andre funksjoner. Dette gjør det lettere å ha oversikt når man lager store programmer.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Det ville vært kult hvis vi kunne lage en galakse med små flerfargede stjerner i tegningen vår. Vi lager defor en funksjon som heter <code>drawGalaxy()</code> som bruker funksjonen <code>drawStar()</code> som vi laget tidligere.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Det ville vært kult hvis vi kunne lage en galakse med små flerfargede stjerner i tegningen vår. Vi lager defor en funksjon som heter <code>drawGalaxy()</code> som bruker funksjonen <code>drawStar()</code> som vi laget tidligere.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 
@@ -305,8 +305,8 @@ done()
 <p><figure><img src="sky-galaxies.png" alt="" title="Stjernehimmel med galakser"></figure></p>
 <p>Ved å kjøre <code>drawGalaxy(40)</code> 3 ganger for vi 3 nye galakser som hver inneholder 40 stjerner. For hver galakse kjøres <code>drawStar()</code> 40 ganger, mellom hver gang flyttes posisjonen til den neste stjernen litt. Ser du hvor i koden dette skjer?</p>
 </li>
-<li>
-<p>Du kan også tegne stjernebilder satt sammen av stjerner. Dette er ikke så vanskelig siden vi allerede har mange av funksjonene vi trenger.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Du kan også tegne stjernebilder satt sammen av stjerner. Dette er ikke så vanskelig siden vi allerede har mange av funksjonene vi trenger.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> *
 

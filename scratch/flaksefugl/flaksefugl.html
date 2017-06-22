@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Flaksefugl</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/flaksefugl/flaksefugl.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Flaksefugl</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/flaksefugl/flaksefugl.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Nå skal vi lage vår egen versjon av spillet <strong>Flappy Bird</strong>. Du styrer
 fuglen <strong>Flakse</strong> ved å trykke på mellomromtasten for å flakse med
@@ -18,24 +18,24 @@ vingene. Du må holde Flakse flyvende og prøve å styre mellom rørene!</p>
 <p><em>Vi begynner enkelt, ved å introdusere Flakse og få ham til å falle.</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt Scratch-prosjekt. Slett katten ved å høyreklikke den
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt Scratch-prosjekt. Slett katten ved å høyreklikke den
 og velge <code>Slett</code>. Alternativt kan du klikke på saksen i topplinjen,
-og deretter på katten.</p>
+og deretter på katten.</label></p>
 </li>
-<li>
-<p>Bytt ut bakgrunnen med et landskap. <code>Desert</code> er et bra valg.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Bytt ut bakgrunnen med et landskap. <code>Desert</code> er et bra valg.</label></p>
 </li>
-<li>
-<p>Legg til Flakse-figuren. Du trenger en figur med drakter for vinger
-opp og vinger ned. <code>Parrot</code> er et bra forslag.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg til Flakse-figuren. Du trenger en figur med drakter for vinger
+opp og vinger ned. <code>Parrot</code> er et bra forslag.</label></p>
 </li>
-<li>
-<p>Bytt navn på figuren til <code>Flakse</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Bytt navn på figuren til <code>Flakse</code>.</label></p>
 </li>
-<li>
-<p>Gi Flakse dette skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Gi Flakse dette skriptet:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-50) y: (0)
 for alltid
@@ -48,8 +48,8 @@ slutt
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>Starter Flakse midt på skjermen og faller mot bunnen?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Starter Flakse midt på skjermen og faller mot bunnen?</label></li>
 </ul>
 </section>
 </section>
@@ -58,13 +58,13 @@ slutt
 <p><em>Nå vil vi at Flakse skal fly oppover når du trykker mellomromtasten.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klikk på <code>Drakter</code> og gi de to draktene navnene <code>Vinger opp</code> og
-<code>Vinger ned</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Klikk på <code>Drakter</code> og gi de to draktene navnene <code>Vinger opp</code> og
+<code>Vinger ned</code>.</label></p>
 </li>
-<li>
-<p>Gå tilbake til <code>Skript</code> og legg til dette skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Gå tilbake til <code>Skript</code> og legg til dette skriptet:</label></p>
 <pre><code class="blocks">Når [mellomrom v] trykkes
 bytt drakt til [Vinger ned v]
 gjenta (10) ganger
@@ -81,14 +81,14 @@ slutt
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Klarer du å kontrollere Flakse med mellomromtasten?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Klarer du å kontrollere Flakse med mellomromtasten?</label></p>
 </li>
-<li>
-<p>La du merke til at om du trykker mellomrom flere ganger raskt
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> La du merke til at om du trykker mellomrom flere ganger raskt
 etterhverandre så flakser Flakse av og til bare en gang? Det er det
-neste vi skal fikse.</p>
+neste vi skal fikse.</label></p>
 </li>
 </ul>
 </section>
@@ -102,19 +102,19 @@ noe. For å løse dette problemet skal vi bruke en variabel til å telle
 hvor mange flaks vi trenger å gjøre.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny variabel og kall den <code class="blockdata">flaks</code>. Velg at den bare
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag en ny variabel og kall den <code class="blockdata">flaks</code>. Velg at den bare
 skal gjelde <code>For denne figuren</code>. Klikk <code>OK</code>. Skjul variabelen ved å
-ta vekk avhukingen foran variabelen.</p>
+ta vekk avhukingen foran variabelen.</label></p>
 </li>
-<li>
-<p>Vi skal nå gjøre om på skriptet som starter med <code class="blockevents">når mellomrom trykkes</code>. Dra i <code class="blocklooks">bytt drakt til Vinger ned</code>-klossen slik at den og klossene under løsner. Legg
-disse klossene til siden. Vi skal bruke dem igjen straks.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi skal nå gjøre om på skriptet som starter med <code class="blockevents">når mellomrom trykkes</code>. Dra i <code class="blocklooks">bytt drakt til Vinger ned</code>-klossen slik at den og klossene under løsner. Legg
+disse klossene til siden. Vi skal bruke dem igjen straks.</label></p>
 </li>
-<li>
-<p>Lag et nytt skript. Legg merke til at klossene du nettopp la til
-siden kan brukes igjen inne i <code class="blockcontrol">gjenta til flaks = 0</code>-løkken:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag et nytt skript. Legg merke til at klossene du nettopp la til
+siden kan brukes igjen inne i <code class="blockcontrol">gjenta til flaks = 0</code>-løkken:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [flaks v] til [0]
 bytt drakt til [Vinger opp v]
@@ -133,22 +133,22 @@ for alltid
 slutt
 </code></pre>
 </li>
-<li>
-<p>Til slutt, legg følgende skript på <code class="blockevents">når mellomrom trykkes</code>-klossen som ble til overs tidligere:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Til slutt, legg følgende skript på <code class="blockevents">når mellomrom trykkes</code>-klossen som ble til overs tidligere:</label></p>
 <pre><code class="blocks">når [mellomrom v] trykkes
 endre [flaks v] med (1)
 </code></pre>
 </li>
-<li>
-<p>Du skal nå ha tre forskjellige skript på Flakse.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Du skal nå ha tre forskjellige skript på Flakse.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>Flakser Flakse en gang for hver gang du trykker mellomromtasten?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Flakser Flakse en gang for hver gang du trykker mellomromtasten?</label></li>
 </ul>
 </section>
 </section>
@@ -157,34 +157,34 @@ endre [flaks v] med (1)
 <p><em>Vi vil legge til noen hindringer som Flakse kan fly igjennom.</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en ny figur ved å klikke på <em>Tegn ny figur</em>-knappen,
-<img src="../bilder/tegn-ny.png" alt="Tegn ny figur">.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Legg til en ny figur ved å klikke på <em>Tegn ny figur</em>-knappen,
+<img src="../bilder/tegn-ny.png" alt="Tegn ny figur">.</label></p>
 </li>
-<li>
-<p>Hvis det står <code>Punktgrafikk</code> nede til høyre, klikk på <code>Bytt til vektorgrafikk</code>-knappen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Hvis det står <code>Punktgrafikk</code> nede til høyre, klikk på <code>Bytt til vektorgrafikk</code>-knappen.</label></p>
 </li>
-<li>
-<p>Klikk på <code>Zoom -</code> så du kan se hele tegneområdet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Klikk på <code>Zoom -</code> så du kan se hele tegneområdet.</label></p>
 </li>
-<li>
-<p>Klikk på <code>Rektangel</code>, velg en farge og klikk på <code>Fylt rektangel</code>-knappen nederst til venstre.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Klikk på <code>Rektangel</code>, velg en farge og klikk på <code>Fylt rektangel</code>-knappen nederst til venstre.</label></p>
 </li>
-<li>
-<p>Klikk og dra to bokser, en fra toppen og en fra bunnen i midten av
-tegneflaten. Det skal se omtrent sånn ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Klikk og dra to bokser, en fra toppen og en fra bunnen i midten av
+tegneflaten. Det skal se omtrent sånn ut:</label></p>
 <p><figure><img src="pipe_design.png" alt=""></figure></p>
 </li>
-<li>
-<p>Du kan skyggelegge rørene ved å klikke på <code>Fyll farge</code> og klikke på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Du kan skyggelegge rørene ved å klikke på <code>Fyll farge</code> og klikke på
 en av skyggemetodene i firkantene nede til venstre. Velg to
 varianter av samme farge: en for forgrunnen og en for bakgrunnen.
 Når du klikker på en firkant med fylleverktøyet får du en fin
-effekt.</p>
+effekt.</label></p>
 </li>
-<li>
-<p>Gi den nye figuren navnet <code>Rør</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Gi den nye figuren navnet <code>Rør</code>.</label></p>
 </li>
 </ul>
 </section>
@@ -195,12 +195,12 @@ effekt.</p>
 at vi får en hinderløype til Flakse.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klikk på <code>Rør</code>-figuren og velg <code>Skript</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Klikk på <code>Rør</code>-figuren og velg <code>Skript</code>.</label></p>
 </li>
-<li>
-<p>Legg til disse to skriptene:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Legg til disse to skriptene:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 skjul
 sett størrelse til (200)%
@@ -223,17 +223,17 @@ slett denne klonen
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kommer det mange rør flygende mot Flakse?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Kommer det mange rør flygende mot Flakse?</label></p>
 </li>
-<li>
-<p>Har rørene åpninger til å fly gjennom?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Har rørene åpninger til å fly gjennom?</label></p>
 </li>
-<li>
-<p>Om du synes det er vanskelig å fly Flakse gjennom åpningene kan du
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Om du synes det er vanskelig å fly Flakse gjennom åpningene kan du
 for eksempel endre på åpningen mellom rørene med tegneverktøyet. En
-annen mulighet er å lage Flakse mindre.</p>
+annen mulighet er å lage Flakse mindre.</label></p>
 </li>
 </ul>
 </section>
@@ -246,22 +246,22 @@ av skjermen. Vi skal legge til noen klosser som merker om Flakse
 kræsjer.</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi legger til en lyd som vi kan spille når Flakse kræsjer. Klikk på
-<code>Flakse</code>-figuren og så på <code>Lyder</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Vi legger til en lyd som vi kan spille når Flakse kræsjer. Klikk på
+<code>Flakse</code>-figuren og så på <code>Lyder</code>.</label></p>
 </li>
-<li>
-<p>Klikk på <code>Velg lyd fra biblioteket</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Klikk på <code>Velg lyd fra biblioteket</code>.</label></p>
 </li>
-<li>
-<p>Velg en kræsjelyd for <code>Flakse</code>.  <code>Screech</code> er en kul lyd.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Velg en kræsjelyd for <code>Flakse</code>.  <code>Screech</code> er en kul lyd.</label></p>
 </li>
-<li>
-<p>Klikk deg tilbake til <code>Skript</code>-fanen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Klikk deg tilbake til <code>Skript</code>-fanen.</label></p>
 </li>
-<li>
-<p>Legg til dette skriptet på Flakse:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Legg til dette skriptet på Flakse:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vent til &lt;&lt;berører [kant v]?&gt; eller &lt;berører [Rør v]?&gt;&gt;
 spill lyden [screech v]
@@ -270,8 +270,8 @@ send melding [Tap v]
 stopp [andre skript i figuren v] :: control
 </code></pre>
 </li>
-<li>
-<p>Klikk så på <code>Rør</code>-figuren og legg til dette skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Klikk så på <code>Rør</code>-figuren og legg til dette skriptet:</label></p>
 <pre><code class="blocks">når jeg mottar [Tap v]
 stopp [andre skript i figuren v] :: control
 </code></pre>
@@ -281,9 +281,9 @@ stopp [andre skript i figuren v] :: control
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>Stopper spillet hvis Flakse kommer borti et rør eller kanten av
-brettet?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Stopper spillet hvis Flakse kommer borti et rør eller kanten av
+brettet?</label></li>
 </ul>
 </section>
 </section>
@@ -293,24 +293,24 @@ brettet?</li>
 røråpning.</em></p>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi legger til en lyd hver gang Flakse scorer ett poeng. Klikk på
-<code>Rør</code>-figuren og legg til en lyd. <code>Bird</code> er et lurt valg.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Vi legger til en lyd hver gang Flakse scorer ett poeng. Klikk på
+<code>Rør</code>-figuren og legg til en lyd. <code>Bird</code> er et lurt valg.</label></p>
 </li>
-<li>
-<p>Gå tilbake til <code>Skript</code>-fanen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Gå tilbake til <code>Skript</code>-fanen.</label></p>
 </li>
-<li>
-<p>Lag en ny variabel som skal gjelde <code>For alle figurer</code>. Kall den
-<code class="blockdata">poeng</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Lag en ny variabel som skal gjelde <code>For alle figurer</code>. Kall den
+<code class="blockdata">poeng</code>.</label></p>
 </li>
-<li>
-<p>Legg til et skript som setter poengene til 0 når det grønne flagget
-klikkes. Dette klarer du selv!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Legg til et skript som setter poengene til 0 når det grønne flagget
+klikkes. Dette klarer du selv!</label></p>
 </li>
-<li>
-<p>Legg så til dette skriptet på <code>Rør</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Legg så til dette skriptet på <code>Rør</code>:</label></p>
 <pre><code class="blocks">når jeg starter som klon
 vent til &lt;(x-posisjon) &lt; ([x-posisjon v] av [Flakse v])&gt;
 endre [poeng v] med (1)
@@ -322,12 +322,12 @@ spill lyden [bird v]
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Scorer du poeng når Flakse flyr forbi en åpning mellom rørene?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Scorer du poeng når Flakse flyr forbi en åpning mellom rørene?</label></p>
 </li>
-<li>
-<p>Hvordan kan du lage dette spillet lettere eller vanskeligere?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Hvordan kan du lage dette spillet lettere eller vanskeligere?</label></p>
 </li>
 </ul>
 </section>
@@ -341,13 +341,13 @@ Bird-spillet.</p>
 <h2 class="challenge" id="utfordring-1-legg-til-tyngdekraft">Utfordring 1: Legg til tyngdekraft</h2>
 <p>Når noe faller på grunn av tyngdekraft øker farten jo lenger fallet
 varer. Vi skal prøve å etterligne denne måten å falle på.</p>
-<ul>
-<li>
-<p>Legg til en ny variabel for <code>Flakse</code> som heter <code class="blockdata">løft</code>.
-Variablen skal gjelde for <code>For denne figuren</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Legg til en ny variabel for <code>Flakse</code> som heter <code class="blockdata">løft</code>.
+Variablen skal gjelde for <code>For denne figuren</code>.</label></p>
 </li>
-<li>
-<p>Endre Flakses falleskript:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Endre Flakses falleskript:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [løft v] til [0]
 gå til x: (-50) y: (0)
@@ -357,8 +357,8 @@ for alltid
 slutt
 </code></pre>
 </li>
-<li>
-<p>Deretter må vi endre Flakses flakseskript:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Deretter må vi endre Flakses flakseskript:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [flaks v] til [0]
 bytt drakt til [Vinger opp v]
@@ -379,21 +379,21 @@ slutt
 <section class="flag" id="test-prosjektet-7">
 <h2 class="flag" id="test-prosjektet-7">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>Faller Flakse fortere jo lenger han detter?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Faller Flakse fortere jo lenger han detter?</label></li>
 </ul>
 </section>
 <section class="challenge" id="utfordring-2-fall-ut-av-skjermen">
 <h2 class="challenge" id="utfordring-2-fall-ut-av-skjermen">Utfordring 2: Fall ut av skjermen</h2>
 <p>Når spilleren taper vil vi at Flakse faller ned og ut av skjermen.</p>
-<ul>
-<li>
-<p>Bytt ut <code class="blockevents">send meldingen Tap</code>-klossen med <code class="blockevents">send meldingen Fall</code> i skriptet som merker når Flakse
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> Bytt ut <code class="blockevents">send meldingen Tap</code>-klossen med <code class="blockevents">send meldingen Fall</code> i skriptet som merker når Flakse
 kræsjer i kanten eller i et rør. Slett
-<code class="blockcontrol">stopp</code>-klossen på slutten av skriptet.</p>
+<code class="blockcontrol">stopp</code>-klossen på slutten av skriptet.</label></p>
 </li>
-<li>
-<p>Legg til disse nye skriptene på <code>Flakse</code>-figuren:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Legg til disse nye skriptene på <code>Flakse</code>-figuren:</label></p>
 <pre><code class="blocks">når jeg mottar [Fall v]
 for alltid
     vend høyre (5) grader
@@ -409,33 +409,33 @@ send melding [Tap v]
 stopp [andre skript i figuren v] :: control
 </code></pre>
 </li>
-<li>
-<p>Du må også legge til en <code class="blocklooks">vis</code>-kloss samt sette Flakses
-retning når spillet starter på nytt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Du må også legge til en <code class="blocklooks">vis</code>-kloss samt sette Flakses
+retning når spillet starter på nytt.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-8">
 <h2 class="flag" id="test-prosjektet-8">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Faller Flakse ut av skjermen når han treffer et rør?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Faller Flakse ut av skjermen når han treffer et rør?</label></p>
 </li>
-<li>
-<p>Flyr Flakse riktig vei når spillet starter igjen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Flyr Flakse riktig vei når spillet starter igjen?</label></p>
 </li>
 </ul>
 </section>
 <section class="challenge" id="utfordring-3-legg-til-rekorder">
 <h2 class="challenge" id="utfordring-3-legg-til-rekorder">Utfordring 3: Legg til rekorder</h2>
-<ul>
-<li>
-<p>Lag en ny variabel og merk av <code>Nett variabel (lagret på nett)</code>-boksen. Kall variabelen <code class="blockdata">Rekord</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Lag en ny variabel og merk av <code>Nett variabel (lagret på nett)</code>-boksen. Kall variabelen <code class="blockdata">Rekord</code>.</label></p>
 </li>
-<li>
-<p>Når spillet er ferdig må vi sjekke om det er en ny rekord. Det gjør
-vi ved å endre <code>Tap</code>-skriptet på <code>Rør</code> slik:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Når spillet er ferdig må vi sjekke om det er en ny rekord. Det gjør
+vi ved å endre <code>Tap</code>-skriptet på <code>Rør</code> slik:</label></p>
 <pre><code class="blocks">når jeg mottar [Tap v]
 hvis &lt;(poeng) &gt; (Rekord)&gt;
     sett [Rekord v] til (poeng)
@@ -460,8 +460,8 @@ utfordringen.</p>
 <section class="flag" id="test-prosjektet-9">
 <h2 class="flag" id="test-prosjektet-9">Test prosjektet</h2>
 <p><strong>Klikk det grønne flagget.</strong></p>
-<ul>
-<li>Oppdaterer rekorden seg hver gang du setter ny rekord?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> Oppdaterer rekorden seg hver gang du setter ny rekord?</label></li>
 </ul>
 </section>
 <section class="save" id="lagre-prosjektet-ditt-2">

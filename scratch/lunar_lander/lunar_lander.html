@@ -21,18 +21,18 @@ Lander vil vi spesielt bruke litt tid på gjøre den fysiske
 modelleringen av romskipet ganske realistisk.</em></p>
 <section class="check" id="plan">
 <h2 class="check" id="plan">Plan</h2>
-<ul>
-<li>
-<p>Et flyvende romskip</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0">  Et flyvende romskip</label></p>
 </li>
-<li>
-<p>Vi ankommer månen</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Vi ankommer månen</label></p>
 </li>
-<li>
-<p>Klar for landing</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Klar for landing</label></p>
 </li>
-<li>
-<p>Begrenset drivstoff, flere landingsplasser og andre utfordringer</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Begrenset drivstoff, flere landingsplasser og andre utfordringer</label></p>
 </li>
 </ul>
 </section>
@@ -57,26 +57,26 @@ lang den vannrette streken er i forhold til den skrå streken.</p>
 <p><figure><img src="sinus_cosinus.png" alt=""></figure></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt. Slett kattefiguren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Start et nytt prosjekt. Slett kattefiguren.</label></p>
 </li>
-<li>
-<p>Legg til en romskip-figur. Du kan gjerne bruke <code>Romfart/Spaceship</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Legg til en romskip-figur. Du kan gjerne bruke <code>Romfart/Spaceship</code>.</label></p>
 </li>
-<li>
-<p>Lag romskipet ganske lite. Du kan for eksempel bruke</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lag romskipet ganske lite. Du kan for eksempel bruke</label></p>
 <pre><code class="blocks">sett størrelse til (20) %
 </code></pre>
 <p>rett etter at det grønne flagget er klikket.</p>
 </li>
-<li>
-<p>Lag to nye variable, <code class="blockdata">fartX</code> og <code class="blockdata">fartY</code>
-som gjelder kun for denne romskip-figuren.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Lag to nye variable, <code class="blockdata">fartX</code> og <code class="blockdata">fartY</code>
+som gjelder kun for denne romskip-figuren.</label></p>
 </li>
-<li>
-<p>Vi lager først hovedløkken som lar romskipet falle, kun påvirket av
-tyngdekraften. Skriv denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi lager først hovedløkken som lar romskipet falle, kun påvirket av
+tyngdekraften. Skriv denne koden:</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 gå til x: (0) y: (175)
 pek i retning (90 v)
@@ -96,20 +96,20 @@ nedover skjermen. Prøv å endre litt i klossen</p>
 her vil romskipet falle raskere eller tregere, eller det kan til
 og med falle oppover om du lar tyngdekraften være positiv.</p>
 </li>
-<li>
-<p>Vi vil nå programmere kontrollen av romskipet. Først og fremst vil
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Vi vil nå programmere kontrollen av romskipet. Først og fremst vil
 vi at romskipet vender seg når vi trykker på piltastene mot høyre og
-venstre.</p>
+venstre.</label></p>
 <p>Legg til to <code class="blockcontrol">hvis</code>-blokker inne i <code class="blockcontrol">for alltid</code>-løkken hvor du <code class="blockmotion">vender</code>
 romskipet for eksempel <code>5</code> grader mot høyre eller venstre avhengig
 av hvilken piltast som trykkes.</p>
 </li>
-<li>
-<p>Når pil opp-tasten trykkes vil vi at romskipet skal få litt ekstra
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Når pil opp-tasten trykkes vil vi at romskipet skal få litt ekstra
 fart i den retningen romskipet peker. Som vi snakket om tidligere
 kan vi bruke de matematiske funksjonene sinus og cosinus for å få
 til dette. Legg også til denne blokken inne i
-<code class="blockcontrol">for alltid</code>-løkken din.</p>
+<code class="blockcontrol">for alltid</code>-løkken din.</label></p>
 <pre><code class="blocks">hvis &lt;tast [pil opp v] trykket?&gt;
     endre [fartX v] med ((0) - ([cos v] av (retning)))
     endre [fartY v] med ([sin v] av (retning))
@@ -123,10 +123,10 @@ slutt
 Scratch måles motsatt vei av hvordan man måler vinkler i
 matematikk.</p>
 </li>
-<li>
-<p>Prøv spillet ditt. Kan du styre romskipet rundt på skjermen? Dersom
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Prøv spillet ditt. Kan du styre romskipet rundt på skjermen? Dersom
 du synes romskipet flyr for raskt eller sakte kan du justere
-<code class="blockdata">endre fart</code>-klossene, for eksempel slik,</p>
+<code class="blockdata">endre fart</code>-klossene, for eksempel slik,</label></p>
 <pre><code class="blocks">endre [fartX v] med ((0.3) * ((0) - ([cos v] av (retning))))
 endre [fartY v] med ((0.3) * ([sin v] av (retning)))
 </code></pre>
@@ -140,29 +140,29 @@ endre [fartY v] med ((0.3) * ([sin v] av (retning)))
 <p><em>Nå skal vi legge til et månelandskap hvor spilleren skal prøve å lande.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny bakgrunn, hvor du tegner et passende månelandskap. Gjør
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag en ny bakgrunn, hvor du tegner et passende månelandskap. Gjør
 det så lett eller vanskelig som du selv vil. Tegn også inn en eller
 flere landingsplasser hvor romskipet skal lande. Vi vil bruke
 <code class="blocksensing">berører fargen</code>-klosser for å sjekke landingen
 senere, så det enkleste er å bruke en farge for landskapet og en
-annen for landingsplassen.</p>
+annen for landingsplassen.</label></p>
 </li>
-<li>
-<p>For at romskipet skal slutte å fly når det treffer bakken kan du
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> For at romskipet skal slutte å fly når det treffer bakken kan du
 bytte ut <code class="blockcontrol">for alltid</code>-løkken med en
 <code class="blockcontrol">gjenta til</code>-løkke hvor du tester på om romskipet
 <code class="blocksensing">berører fargen</code> du har brukt på landskapet eller
-på landingsplassen.</p>
+på landingsplassen.</label></p>
 </li>
-<li>
-<p>Legg også til en <code class="b">send melding [Sjekk landing v]</code> rett etter
-<code class="blockcontrol">gjenta til</code>-løkken.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Legg også til en <code class="b">send melding [Sjekk landing v]</code> rett etter
+<code class="blockcontrol">gjenta til</code>-løkken.</label></p>
 </li>
-<li>
-<p>Prøv spillet ditt igjen. Du skal nå kunne fly rundt helt til
-romskipet kommer nær bakken.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Prøv spillet ditt igjen. Du skal nå kunne fly rundt helt til
+romskipet kommer nær bakken.</label></p>
 </li>
 </ul>
 </section>
@@ -172,10 +172,10 @@ romskipet kommer nær bakken.</p>
 <p><em>Vi vil til slutt sjekke hvor og hvordan romskipet landet.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Når vi sjekker landingen til romskipet vil vi skille mellom tre
-forskjellige tilfeller:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Når vi sjekker landingen til romskipet vil vi skille mellom tre
+forskjellige tilfeller:</label></p>
 <p><strong>1</strong>: Romskipet landet utenfor landingsplassen (kræsjet).</p>
 <p><strong>2</strong>: Romskipet landet på landingsplassen, men landet enten på
 skrå (eller opp-ned) eller for raskt.</p>
@@ -188,11 +188,11 @@ er perfekt dersom romskipet lander på landingsplassen,
 <code class="blockdata">fartY</code> er større enn <code>-1.5</code> og
 <code class="blockmotion">retning</code> er mellom <code>80</code> og <code>100</code>.</p>
 </li>
-<li>
-<p>Finn en måte å fortelle spilleren hvordan romskipet landet. Det
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Finn en måte å fortelle spilleren hvordan romskipet landet. Det
 enkleste er kanskje å bare bruke en <code class="blocklooks">si</code>-kloss. Men du
 kan også bruke lydeffekter, forskjellige drakter eller kanskje en
-tekstplakat som dukker opp.</p>
+tekstplakat som dukker opp.</label></p>
 </li>
 </ul>
 </section>
@@ -205,55 +205,55 @@ du vil jobbe videre, men nedenfor er noen ideer som kanskje kan være
 til inspirasjon?</em></p>
 <section class="check" id="ideer-til-videreutvikling">
 <h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
-<ul>
-<li>
-<p>Lag flere landingsplasser. Kanskje noen kan være vanskeligere enn
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Lag flere landingsplasser. Kanskje noen kan være vanskeligere enn
 andre å lande på (enten på grunn av terrenget eller fordi selve
-landingsplassen er mindre).</p>
+landingsplassen er mindre).</label></p>
 </li>
-<li>
-<p>Lag flere bakgrunner eller brett. Du kan enten la spilleren velge
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lag flere bakgrunner eller brett. Du kan enten la spilleren velge
 seg en bakgrunn å spille på i begynnelsen av spillet, eller gå
-videre fra brett til brett etterhvert som spilleren klarer å lande.</p>
+videre fra brett til brett etterhvert som spilleren klarer å lande.</label></p>
 </li>
-<li>
-<p>Du kan også bruke flere bakgrunner som et brett. Dersom romskipet
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Du kan også bruke flere bakgrunner som et brett. Dersom romskipet
 flyr ut av skjermen på høyre side kan du la det dukke opp igjen på
-venstre side av en annen bakgrunn, og motsatt.</p>
+venstre side av en annen bakgrunn, og motsatt.</label></p>
 </li>
-<li>
-<p>Prøv å animere bruken av motoren. For eksempel, kan du lage en kopi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Prøv å animere bruken av motoren. For eksempel, kan du lage en kopi
 av den flyvende romskip-drakten, og endre den som følger. Klikk
 først på romskipet, og deretter på den nye knappen som dukker opp
 nederst i knapperekka (markert med rødt i figuren til
 venstre). Denne vil dele opp romskip-figuren i mindre deler. Velg en
 passende flammefarge, og bruk malingsspannet til å fargelegge de tre
 finnene på romskipet slik at det ser ut som flammer som kommer fra
-motoren.</p>
+motoren.</label></p>
 <p><figure><img src="animer_romskip.png" alt=""></figure></p>
 </li>
-<li>
-<p>En av utfordringene i det originale Lunar Lander-spillet var at
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> En av utfordringene i det originale Lunar Lander-spillet var at
 spilleren bare hadde begrenset drivstoff tilgjengelig. Du kan legge
 til dette i ditt spill ved å lage en
 <code class="blockdata">Drivstoff</code>-variabel som du lar bli stadig mindre
 etterhvert som spilleren trykker på piltastene. Dersom romskipet går
 tomt for drivstoff kan du ignorere tastetrykkene fra spilleren og
-bare la romskipet sveve til det til slutt kræsjer.</p>
+bare la romskipet sveve til det til slutt kræsjer.</label></p>
 </li>
-<li>
-<p>Du kan lage forskjellige bonusting som spilleren kan plukke opp. For
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Du kan lage forskjellige bonusting som spilleren kan plukke opp. For
 å gjøre det litt utfordrende kan du la disse ligge på måneoverflaten
 slik at spilleren må manøvrere forsiktig for å få tak i
 dem. Eksempler på slike bonusting kan være ekstra drivstoff,
-bonuspoeng, større landingsplass og så videre.</p>
+bonuspoeng, større landingsplass og så videre.</label></p>
 </li>
-<li>
-<p>En større endring i spillet kan være at landingsplassen er skjult
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> En større endring i spillet kan være at landingsplassen er skjult
 under bakken når spillet begynner, og spilleren må grave denne frem
 ved å slippe bomber fra romskipet. Du kan implementere dette for
 eksempel ved bruk av noen av klossene under
-<code class="blockpen">Penn</code>-kategorien.</p>
+<code class="blockpen">Penn</code>-kategorien.</label></p>
 </li>
 </ul>
 </section>

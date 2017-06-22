@@ -75,9 +75,9 @@ mangekant fordeler seg jevnt langs omrisset av en sirkel. Derfor kan
 vi bruke formlene for katetene for å regne ut hvor hjørnene skal
 være. Opptegningen ellers er som for vanlige
 <a href="../mangekanter/mangekanter.html">mangekanter</a>.</p>
-<ul>
-<li>
-<p>Vi begynner med å tegne opp en regulær pentagon (femkant).</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Vi begynner med å tegne opp en regulær pentagon (femkant).</label></p>
 <pre><code class="processing"><span class="hljs-built_in">int</span> KANTER = <span class="hljs-number">5</span>;
 <span class="hljs-built_in">float</span> vinkel = <span class="hljs-number">360.0</span> / KANTER;
 
@@ -108,31 +108,31 @@ fra at en sirkel er 360°.</p>
 </li>
 </ul>
 <p><figure><img src="Femkant.png" alt="" title="Vinkelen mellom to nabohjørner og sentrum i en femkant er 360° / 5 = 72°."></figure></p>
-<ul>
-<li>
-<p>Hva er tallet <code>200</code> her? Hva skjer om du endrer det til noe annet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Hva er tallet <code>200</code> her? Hva skjer om du endrer det til noe annet?</label></p>
 </li>
-<li>
-<p>Hva med tallet <code>300</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Hva med tallet <code>300</code>?</label></p>
 </li>
-<li>
-<p>Kan du få snudd på femkanten sånn at hjørnet som nå peker rett til
-høyre, peker opp?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kan du få snudd på femkanten sånn at hjørnet som nå peker rett til
+høyre, peker opp?</label></p>
 </li>
 </ul>
 <p><figure><img src="FemkantRotering.png" alt="" title="Femkanten før og etter rotering."></figure></p>
-<ul>
-<li>Hvis du har fått femkanten til å peke opp, kan du legge til en
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Hvis du har fått femkanten til å peke opp, kan du legge til en
 variabel som du bruker til denne justeringen? Kan du bruke denne
-variabelen til å få femkanten til å snurre?</li>
+variabelen til å få femkanten til å snurre?</label></li>
 </ul>
 <p><figure><img src="FemkantSnurrer.gif" alt="" title="Femkanten snurrer rundt."></figure></p>
-<ul>
-<li>
-<p>Kan du styre hvilken vei femkanten peker med musa eller tastaturet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Kan du styre hvilken vei femkanten peker med musa eller tastaturet?</label></p>
 </li>
-<li>
-<p>Hva skjer hvis du endrer <code>KANTER</code> til en annen verdi enn <code>5</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Hva skjer hvis du endrer <code>KANTER</code> til en annen verdi enn <code>5</code>?</label></p>
 </li>
 </ul>
 </section>
@@ -144,26 +144,26 @@ variant av mangekanter. Hvis du har tegnet en femkantet stjerne før,
 har du kanskje lagt merke til at dette likner på en femkant, men at du
 hopper over et hjørne når du tegner streken mellom to spisser.</p>
 <p><figure><img src="Pentagram.png" alt="" title="Vinkelen mellom en spiss, sentrum og spissen etter nabospissen i en femkantet stjerne er 2 · 360° / 5 = 144°."></figure></p>
-<ul>
-<li>
-<p>Siden vi skal hoppe over et hjørne hver gang vi tegner opp neste
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Siden vi skal hoppe over et hjørne hver gang vi tegner opp neste
 spiss, trenger vi å gange vinkelen med <code>2</code>. Endre derfor kallet på
-<code>vertex</code> til:</p>
+<code>vertex</code> til:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">vertex</span>(<span class="hljs-number">300</span> + <span class="hljs-built_in">cos</span>(<span class="hljs-built_in">radians</span>(vinkel * hjorne * <span class="hljs-number">2</span>)) * <span class="hljs-number">200</span>,
        <span class="hljs-number">300</span> + <span class="hljs-built_in">sin</span>(<span class="hljs-built_in">radians</span>(vinkel * hjorne * <span class="hljs-number">2</span>)) * <span class="hljs-number">200</span>);
 </code></pre>
 <p>Kunne du ganget med <code>2</code> et annet sted i koden og fått den samme
 effekten?</p>
 </li>
-<li>
-<p>Kan du tegne en syvkantet stjerne? Eller en nikantet stjerne?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Kan du tegne en syvkantet stjerne? Eller en nikantet stjerne?</label></p>
 </li>
-<li>
-<p>Hvis du har en stjerne med flere kanter enn fem, kan du gange med
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hvis du har en stjerne med flere kanter enn fem, kan du gange med
 andre tall enn to og få andre varianter av mangekantede
 stjerner. Prøv forskjellige tall for syv-, ni- og ellevekantede
 stjerner. Hva skjer når du hopper over flere kanter enn halvparten
-av antallet spisser?</p>
+av antallet spisser?</label></p>
 </li>
 </ul>
 </section>
@@ -172,49 +172,49 @@ av antallet spisser?</p>
 <p>Stjerner med et likt antall spisser, kan tegnes som to regulære
 mangekanter med halvparten så mange hjørner som stjernen har
 spisser.</p>
-<ul>
-<li>
-<p>Fjern ganging med to om du nå tegner opp stjerner med odde antall
-spisser.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Fjern ganging med to om du nå tegner opp stjerner med odde antall
+spisser.</label></p>
 </li>
-<li>
-<p>Lag en kopi av løkken som tegner opp mangekanten, med <code>beginShape();</code>
-og <code>endShape(CLOSE);</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Lag en kopi av løkken som tegner opp mangekanten, med <code>beginShape();</code>
+og <code>endShape(CLOSE);</code>.</label></p>
 </li>
-<li>
-<p>I den nye løkken, endrer du <code>int hjorne = 0</code> til <code>int hjorne = 1</code>,
-slik at denne løkken tegner kantene mellom de odde hjørnene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> I den nye løkken, endrer du <code>int hjorne = 0</code> til <code>int hjorne = 1</code>,
+slik at denne løkken tegner kantene mellom de odde hjørnene.</label></p>
 </li>
-<li>
-<p>Endre <code>hjorne++</code> til <code>hjorne += 2</code> sånn at vi bare tegner kanter
-mellom annenhvert hjørne.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Endre <code>hjorne++</code> til <code>hjorne += 2</code> sånn at vi bare tegner kanter
+mellom annenhvert hjørne.</label></p>
 </li>
-<li>
-<p>Pass på at <code>KANTER</code> settes til et partall som er minst <code>6</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Pass på at <code>KANTER</code> settes til et partall som er minst <code>6</code>.</label></p>
 </li>
 </ul>
 <p><figure><img src="Oktagram.png" alt="" title="Vinkelen mellom en spiss, sentrum og spissen etter nabospissen i en åttekantet stjerne er 2 · 360° / 8 = 90°."></figure></p>
 <section class="try" id="utfordring">
 <h2 class="try" id="utfordring">Utfordring</h2>
-<ul>
-<li>
-<p>Nå ser det nok ut som om det mangler noen streker i stjernen
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Nå ser det nok ut som om det mangler noen streker i stjernen
 din. Kan du få tegnet opp de siste kantene ved å tegne opp den første
 av de to mangekantene på nytt og bruke
 <a href="https://processing.org/reference/noFill_.html"><code>noFill()</code></a>,
 <a href="https://processing.org/reference/noStroke_.html"><code>noStroke()</code></a> og
-<a href="https://processing.org/reference/stroke_.html"><code>stroke()</code></a>.</p>
+<a href="https://processing.org/reference/stroke_.html"><code>stroke()</code></a>.</label></p>
 </li>
-<li>
-<p>Kan du tegne opp flere mangekanter eller stjerner på skjermen
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Kan du tegne opp flere mangekanter eller stjerner på skjermen
 samtidig? For eksempel en femkantet, en syvkantet og en nikantet
-stjerne som vist under?</p>
+stjerne som vist under?</label></p>
 </li>
 </ul>
 <p><figure><img src="FlereStjerner.png" alt="" title="Flere stjerner samtidig."></figure></p>
-<ul>
-<li>Hvis stjernene dine ikke snurrer allerede, kan du få dem til å gjøre
-det?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Hvis stjernene dine ikke snurrer allerede, kan du få dem til å gjøre
+det?</label></li>
 </ul>
 <p><figure><img src="FlereStjernerSnurrer.gif" alt="" title="Tre stjerner som snurrer."></figure></p>
 </section>

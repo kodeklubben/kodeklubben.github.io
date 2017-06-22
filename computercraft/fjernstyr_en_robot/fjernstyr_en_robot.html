@@ -41,16 +41,16 @@ Windows finner du den altså på <code>AppData\Roaming\.minecraft\saves\Kodeklub
 <section>
 <h2 id="finn-filene-pa-mac">Finn filene på Mac</h2>
 <p>For å åpne filene på Mac kan du bruke Finder:</p>
-<ul>
-<li>Åpne Finder fra menyen</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Åpne Finder fra menyen</label></li>
 </ul>
 <p><figure><img src="finder.png" alt="Finn Finder i menyen"></figure></p>
-<ul>
-<li>Trykk på <code>Gå</code> og så <code>Gå til mappe</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Trykk på <code>Gå</code> og så <code>Gå til mappe</code></label></li>
 </ul>
 <p><figure><img src="gaatilmappe.png" alt="Gå til mappe"></figure></p>
-<ul>
-<li>Skriv inn filplasseringen (<code>~/Library/Application Support/.minecraft/saves/navn-på-din-save/computer/id</code>)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Skriv inn filplasseringen (<code>~/Library/Application Support/.minecraft/saves/navn-på-din-save/computer/id</code>)</label></li>
 </ul>
 <p><figure><img src="gaatilmappedialog.png" alt="Skriv inn filplasseringen"></figure></p>
 <p>Her finnes programmene du har skrevet som egne filer. Åpne så programmet ditt
@@ -93,9 +93,9 @@ på.</p>
 oversette disse til kommandoer og sende til roboten.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>Vi bygger først kontroller. Craft en <strong>Advanced Wireless Pocket Computer</strong>.
-Denne kan vi bruke mens vi går rundt, og er ikke bundet til én plass.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Vi bygger først kontroller. Craft en <strong>Advanced Wireless Pocket Computer</strong>.
+Denne kan vi bruke mens vi går rundt, og er ikke bundet til én plass.</label></li>
 </ul>
 </section>
 <section class="tip" id="filtyper">
@@ -118,14 +118,14 @@ Denne kan vi bruke mens vi går rundt, og er ikke bundet til én plass.</li>
 </section>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi kaller kontroller-programmet vårt <code>remote.lua</code></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Vi kaller kontroller-programmet vårt <code>remote.lua</code></label></p>
 <pre><code>edit remote<span class="hljs-selector-class">.lua</span>
 </code></pre>
 </li>
-<li>
-<p>La oss starte med å lese inn hva brukeren trykker på:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> La oss starte med å lese inn hva brukeren trykker på:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remoteMove</span><span class="hljs-params">()</span></span>
   <span class="hljs-keyword">local</span> action, keycode = os.pullEvent(<span class="hljs-string">'key'</span>)
   <span class="hljs-keyword">if</span> keycode == keys.w <span class="hljs-keyword">then</span>
@@ -149,17 +149,17 @@ Denne kan vi bruke mens vi går rundt, og er ikke bundet til én plass.</li>
 main()
 </code></pre>
 </li>
-<li>
-<p>Prøv! Hva skjer når du trykker på <code>w</code>? Hva skjer når du trykker på noe annet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Prøv! Hva skjer når du trykker på <code>w</code>? Hva skjer når du trykker på noe annet?</label></p>
 </li>
-<li>
-<p>Roboten vår skal gjerne kunne svinge og gå bakover i tillegg. Legg til
-if-setninger dersom brukeren trykker på <code>a</code>, <code>s</code> eller <code>d</code>!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Roboten vår skal gjerne kunne svinge og gå bakover i tillegg. Legg til
+if-setninger dersom brukeren trykker på <code>a</code>, <code>s</code> eller <code>d</code>!</label></p>
 </li>
-<li>
-<p>Roboten kan i tillegg fly opp og ned. I Minecraft brukes <code>space</code> for å fly
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Roboten kan i tillegg fly opp og ned. I Minecraft brukes <code>space</code> for å fly
 opp, og <code>shift</code> for å fly ned. Sjekk <a href="http://www.computercraft.info/wiki/Keys_%28API%29">ComputerCraft Wiki</a> for hvordan du bruker
-disse!</p>
+disse!</label></p>
 </li>
 </ul>
 <p>Nå kjenner vi igjen tastene for å bevege seg rundt. Neste steg er å sende disse
@@ -173,12 +173,12 @@ til roboten som skal bevege på seg.</p>
 <p>La oss først leke oss litt med en robot.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Pass på at roboten har nok kull!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Pass på at roboten har nok kull!</label></p>
 </li>
-<li>
-<p>Åpne lua-tolkeren, og lag en tabell:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Åpne lua-tolkeren, og lag en tabell:</label></p>
 <pre><code>&gt; <span class="hljs-keyword">lua</span>
 <span class="hljs-keyword">lua</span>&gt; tabell = {<span class="hljs-string">"hei"</span>, <span class="hljs-string">"på"</span>, <span class="hljs-string">"deg"</span>}
 <span class="hljs-keyword">lua</span>&gt; <span class="hljs-keyword">print</span>(tabell)
@@ -209,9 +209,9 @@ elementet med firkantklammer: <code>tabell[2]</code>.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <p>Nå skal vi se på to måter å styre en robot på.</p>
-<ul>
-<li>
-<p>Start <code>CraftOS</code> på en robot, og kjør først kommandoen på &quot;vanlig&quot; vis:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Start <code>CraftOS</code> på en robot, og kjør først kommandoen på &quot;vanlig&quot; vis:</label></p>
 <pre><code><span class="hljs-quote">&gt; go forward 5</span>
 <span class="hljs-quote">&gt; turn left</span>
 </code></pre>
@@ -219,9 +219,9 @@ elementet med firkantklammer: <code>tabell[2]</code>.</p>
 </ul>
 <p>... men vi vil da ikke løpe etter roboten og skrive inn nye kommandoer dagen
 lang! La oss programmere dette.</p>
-<ul>
-<li>
-<p>Åpne lua-tolkeren og lag tabeller for kommandoene over:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Åpne lua-tolkeren og lag tabeller for kommandoene over:</label></p>
 <pre><code class="lua">&gt; lua
 lua&gt; command1 = {<span class="hljs-string">"go"</span>, <span class="hljs-string">"forward"</span>, <span class="hljs-string">"5"</span>}
 lua&gt; command2 = {<span class="hljs-string">"turn"</span>, <span class="hljs-string">"left"</span>}
@@ -229,9 +229,9 @@ lua&gt; shell.run(<span class="hljs-built_in">unpack</span>(command1))  <span cl
 lua&gt; shell.run(<span class="hljs-built_in">unpack</span>(command2))
 </code></pre>
 </li>
-<li>
-<p>Hva gjør unpack? Hvordan kan vi bruke <code>shell.run()</code> til å gå frem <em>uten</em>
-<code>unpack()</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Hva gjør unpack? Hvordan kan vi bruke <code>shell.run()</code> til å gå frem <em>uten</em>
+<code>unpack()</code>?</label></p>
 </li>
 </ul>
 </section>
@@ -269,12 +269,12 @@ manyTimes(command1, <span class="hljs-number">7</span>)
 <p>Nå skal vi endre på koden på fjernkontrollen vår så den faktisk sender
 kommandoer til roboten. Hva er forskjellig fra koden over? Forklar til en annen
 programmerer eller voksen! Hva gjør programmet nå forskjellig?</p>
-<ul>
-<li>
-<p>Åpne igjen filen <code>remote.lua</code> på kontrolleren</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Åpne igjen filen <code>remote.lua</code> på kontrolleren</label></p>
 </li>
-<li>
-<p>Endre koden til:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Endre koden til:</label></p>
 <pre><code class="lua">workerId = <span class="hljs-number">5</span>  <span class="hljs-comment">-- Hvilket nummer er din robot? Hvordan finner du nummeret?</span>
 
 <span class="hljs-comment">-- OBS: Ny fuksjon som inneholder deler av gamle remoteMove!</span>
@@ -324,8 +324,8 @@ main()
 <p>Jepp, jeg er helt enig. La oss gjøre det!</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>Åpne <code>react.lua</code> på roboten</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Åpne <code>react.lua</code> på roboten</label></li>
 </ul>
 </section>
 <section class="tip" id="egne-filer">
@@ -343,9 +343,9 @@ Lag en tom fil i CraftOS for å få mappen til å dukke opp!</p>
 </section>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Fyll så på med koden!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Fyll så på med koden!</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
   <span class="hljs-comment">-- Hva sier pheripherals? Hvilken side er modemet på?</span>
   rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"left"</span>)
@@ -371,12 +371,12 @@ Java og Haskell.</p>
 </section>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>Hva brukes 99999 til?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Hva brukes 99999 til?</label></p>
 </li>
-<li>
-<p>Hvorfor bruker vi en <code>while</code>-løkke? Hva skjer om vi ikke har en while-løkke?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Hvorfor bruker vi en <code>while</code>-løkke? Hva skjer om vi ikke har en while-løkke?</label></p>
 </li>
 </ul>
 </section>
@@ -388,18 +388,18 @@ meningsfulle beskjeder over <code>rednet</code>! Vær stolt!</p>
 <p>Nå skal vi prøve det selv!</p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start <code>react.lua</code> på din robot</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Start <code>react.lua</code> på din robot</label></p>
 </li>
-<li>
-<p>Start <code>remote.lua</code> på din Portable Computer</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Start <code>remote.lua</code> på din Portable Computer</label></p>
 </li>
-<li>
-<p>Trykk <code>w</code> for å gå fremover!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Trykk <code>w</code> for å gå fremover!</label></p>
 </li>
-<li>
-<p>Legg til andre kommandoer du savner!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Legg til andre kommandoer du savner!</label></p>
 <p>Forslag:</p>
 <ul>
 <li>Angrip</li>
@@ -417,12 +417,12 @@ roboter du må styre. Da er det kjekt å kunne kjøre andre kommandoer på robot
 <p>Programmet vi har skrevet for å motta og kjøre kommandoer, <code>react.lua</code> kan
 kjøre andre kommandoer enn de vi har definert for å bevege seg rundt, for
 eksempel <code>excavate</code> og <code>dance</code>.</p>
-<ul>
-<li>
-<p>Åpne kontrolleren</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Åpne kontrolleren</label></p>
 </li>
-<li>
-<p>Endre følgende i <code>ssh.lua</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Endre følgende i <code>ssh.lua</code>:</label></p>
 <pre><code class="lua"><span class="hljs-comment">-- Starter jeg programmet sånn:</span>
 <span class="hljs-comment">-- &gt; ssh.lua 5</span>
 arguments = ...
@@ -454,11 +454,11 @@ remoteId = <span class="hljs-built_in">tonumber</span>(arguments)
 main()
 </code></pre>
 </li>
-<li>
-<p>Start <code>react.lua</code> på roboten</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Start <code>react.lua</code> på roboten</label></p>
 </li>
-<li>
-<p>Start <code>ssh.lua</code> på kontrolleren</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Start <code>ssh.lua</code> på kontrolleren</label></p>
 </li>
 </ul>
 <p>Fjernstyrt graverobot er nyttig! En graverobot kan craftes fra en annen turtle

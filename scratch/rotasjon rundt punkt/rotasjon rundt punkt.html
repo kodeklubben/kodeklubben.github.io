@@ -25,48 +25,48 @@ OBS! Har du allerede løst oppgaven med rotasjon rundt egen akse kan du hoppe ov
 Denne figuren er tilnærmet lik en likebeint trekant</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt.</label></p>
 </li>
-<li>
-<p>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</label></p>
 </li>
-<li>
-<p>Legg til en ny figur. Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen og velg trollmannshatten. Vi har brukt <code>Ting/Wizard Hat</code>-figuren.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg til en ny figur. Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen og velg trollmannshatten. Vi har brukt <code>Ting/Wizard Hat</code>-figuren.</label></p>
 </li>
-<li>
-<p>Gi den nye figuren navnet <code>Hattulf</code> ved å klikke på <code>i</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Gi den nye figuren navnet <code>Hattulf</code> ved å klikke på <code>i</code>.</label></p>
 </li>
-<li>
-<p>Før vi begynner med selve oppgaven, skal vi legge inn en liten hjelpefunksjon om noe uventet skulle skje:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Før vi begynner med selve oppgaven, skal vi legge inn en liten hjelpefunksjon om noe uventet skulle skje:</label></p>
 <pre><code class="blocks">når [n v] trykkes
 vis
 pek i retning [90 v]
 gå til x: (0) y: (0)
 </code></pre>
 </li>
-<li>
-<p>Skulle noe uventet skje nå, trenger du bare å trykke på tasten N på tastaturet, så vil Hattulf gå tilbake til utgangspunktet, slik at du kan prøve på nytt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Skulle noe uventet skje nå, trenger du bare å trykke på tasten N på tastaturet, så vil Hattulf gå tilbake til utgangspunktet, slik at du kan prøve på nytt.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
-<ul>
-<li>Bruk musepekeren og flytt Hattulf til et nytt sted i bildet.</li>
-<li>Trykk N på tastaturet ditt. Hopper Hattulf tilbake til midten av bildet? Hvis ja: Gå videre til steg 2. Hvis nei: Feilsøk koden din, fiks den, test på nytt.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Bruk musepekeren og flytt Hattulf til et nytt sted i bildet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Trykk N på tastaturet ditt. Hopper Hattulf tilbake til midten av bildet? Hvis ja: Gå videre til steg 2. Hvis nei: Feilsøk koden din, fiks den, test på nytt.</label></li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-2-rotasjon-i-et-koordinatsystem">
 <h1 class="activity" id="steg-2-rotasjon-i-et-koordinatsystem">Steg 2: Rotasjon i et koordinatsystem</h1>
-<ul>
-<li>
-<p>Importer bakgrunnen 'xy-grid'</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Importer bakgrunnen 'xy-grid'</label></p>
 </li>
-<li>
-<p>Velg Hattulf. I scriptet</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Velg Hattulf. I scriptet</label></p>
 <pre><code class="blocks">når [n v] trykkes
 vis
 pek i retning [90 v]
@@ -75,24 +75,24 @@ gå til x: (0) y: (0)
 </li>
 </ul>
 <p>endrer vi x-verdien til -100, og y-verdien til 100.</p>
-<ul>
-<li>Legg merke til punktet der x-aksen (vannrett) og y-aksen (loddrett) krysses. Det punktet kalles origo og er det stedet hvor både x = 0 og y = 0.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Legg merke til punktet der x-aksen (vannrett) og y-aksen (loddrett) krysses. Det punktet kalles origo og er det stedet hvor både x = 0 og y = 0.</label></li>
 </ul>
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
-<ul>
-<li>Trykk N på tastaturet. Hattulf skal havne akkurat der de to grå linjene for X = -100 og Y = 100 krysses.</li>
-<li>Hvis alt ser greit ut, fortsett til neste steg.</li>
-<li>Hvis noe ikke ser riktig ut, prøv å finne ut om du har gjort en feil i koden din og prøv å trykke N på nytt.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Trykk N på tastaturet. Hattulf skal havne akkurat der de to grå linjene for X = -100 og Y = 100 krysses.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Hvis alt ser greit ut, fortsett til neste steg.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Hvis noe ikke ser riktig ut, prøv å finne ut om du har gjort en feil i koden din og prøv å trykke N på nytt.</label></li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-3-hattulf-roteres-rundt-origo">
 <h1 class="activity" id="steg-3-hattulf-roteres-rundt-origo">Steg 3: Hattulf roteres rundt origo</h1>
 <p>Nå skal vi altså rotere Hattulf rundt origo på en ganske enkel måte.</p>
-<ul>
-<li>
-<p>Lag dette skriptet til Hattulf:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Lag dette skriptet til Hattulf:</label></p>
 <pre><code class="blocks">når [pil høyre v] trykkes
 gå (200) steg
 vend høyre (90) grader
@@ -101,27 +101,27 @@ vend høyre (90) grader
 </ul>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
-<ul>
-<li>Trykk tasten &quot;pil høyre&quot; på tastaturet. Hva skjer? Fortsett til Hattulf er tilbake ved startpunktet sitt.</li>
-<li>Hvis du studerer koden vi nettopp laget til Hattulf, ser du at vi ber Hattulf gå 200 steg. Hvorfor må vi gå så langt?</li>
-<li>Prøv å endre på antall steg Hattulf tar. Ender Hattulf opp på samme sted som han startet etter at du har trykket &quot;pil høyre&quot; fire ganger?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Trykk tasten &quot;pil høyre&quot; på tastaturet. Hva skjer? Fortsett til Hattulf er tilbake ved startpunktet sitt.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Hvis du studerer koden vi nettopp laget til Hattulf, ser du at vi ber Hattulf gå 200 steg. Hvorfor må vi gå så langt?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Prøv å endre på antall steg Hattulf tar. Ender Hattulf opp på samme sted som han startet etter at du har trykket &quot;pil høyre&quot; fire ganger?</label></li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-4-en-ny-venn">
 <h1 class="activity" id="steg-4-en-ny-venn">Steg 4: En ny venn!</h1>
-<ul>
-<li>
-<p>Legg til en ny figur. Denne gangen skal du få velge figur selv. Hvis den blir veldig stor i forhold til alt det andre, kan du krympe den ned til en passelig størrelse. Kall den nye figuren for &quot;Venn&quot;</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Legg til en ny figur. Denne gangen skal du få velge figur selv. Hvis den blir veldig stor i forhold til alt det andre, kan du krympe den ned til en passelig størrelse. Kall den nye figuren for &quot;Venn&quot;</label></p>
 </li>
-<li>
-<p>Lag en kopi av &quot;Når N trykkes&quot;-skriptet fra Hattulf til Venn, men endre y-verdien til 50.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lag en kopi av &quot;Når N trykkes&quot;-skriptet fra Hattulf til Venn, men endre y-verdien til 50.</label></p>
 </li>
-<li>
-<p>Kopier også over &quot;Når pil høyre trykkes&quot;-skriptet fra Hattulf, men halver både antall steg og antall grader i skriptet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Kopier også over &quot;Når pil høyre trykkes&quot;-skriptet fra Hattulf, men halver både antall steg og antall grader i skriptet.</label></p>
 </li>
-<li>
-<p>For litt mer moro kan du legge til en linje med kode som skrur på <code class="blockpen">pennen</code> for begge figurene. Øverste del av pil høyre-skriptet skal da se slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> For litt mer moro kan du legge til en linje med kode som skrur på <code class="blockpen">pennen</code> for begge figurene. Øverste del av pil høyre-skriptet skal da se slik ut:</label></p>
 <pre><code class="blocks">når [pil høyre v] trykkes
 penn på
 </code></pre>
@@ -129,11 +129,11 @@ penn på
 </ul>
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
-<ul>
-<li>Trykk pil høyre. Hva skjer?</li>
-<li>Trykk pil høyre slik at Hattulf kommer tilbake til utgangspunktet. Hvor langt har Venn kommet nå?</li>
-<li>Hvor mange ganger på du trykke for at Venn kommer tilbake til utgangspunktet?</li>
-<li>Klarer du å justere utgangspunktet til Venn, slik at figuren har like lang avstand til origo for hver gang du trykker pil høyre?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Trykk pil høyre. Hva skjer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Trykk pil høyre slik at Hattulf kommer tilbake til utgangspunktet. Hvor langt har Venn kommet nå?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Hvor mange ganger på du trykke for at Venn kommer tilbake til utgangspunktet?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Klarer du å justere utgangspunktet til Venn, slik at figuren har like lang avstand til origo for hver gang du trykker pil høyre?</label></li>
 </ul>
 </section>
 </section>

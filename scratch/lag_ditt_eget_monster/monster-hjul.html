@@ -8,10 +8,10 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Monster - Hjul</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/lag_ditt_eget_monster/monster-hjul.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å få et hjul til å bevege seg, kan vi <strong>rotere</strong> det litt av
-gangen og flytte det når vi mottar en <strong>flyttet melding</strong>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> For å få et hjul til å bevege seg, kan vi <strong>rotere</strong> det litt av
+gangen og flytte det når vi mottar en <strong>flyttet melding</strong>.</label></p>
 <pre><code class="blocks">når jeg mottar [flyttet venstre v]
 endre x med ((hastighet) * (-1))
 vend høyre (15) grader
@@ -21,10 +21,10 @@ endre x med (hastighet)
 vend venstre (15) grader
 </code></pre>
 </li>
-<li>
-<p>Hvis du vil, kan du erstatte verdiene med variabler som
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Hvis du vil, kan du erstatte verdiene med variabler som
 <code class="blockdata">hastighet</code>, slik at du kan kontrollere hastigheten i
-alle retninger fra ett sted.</p>
+alle retninger fra ett sted.</label></p>
 </li>
 </ul>
 <p><strong>(Merk at vi har multiplisert <code class="blockdata">hastighet</code> med -1 for å få

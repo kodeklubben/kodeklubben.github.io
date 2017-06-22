@@ -15,10 +15,10 @@ function relative (url) {
 <section class="activity" id="steg-1-vi-starter-fra-toppen">
 <h1 class="activity" id="steg-1-vi-starter-fra-toppen">Steg 1: Vi starter fra toppen</h1>
 <p>Før vi starter må vi ha en helt enkel HTML-side. Siden vi har lært å bruke HTML5-tagger, så bruker vi det i denne oppgaven.</p>
-<ul>
-<li>Last ned og pakk ut <a href="ressurser/layout.zip">layout.zip</a></li>
-<li>Åpne <code>index.html</code> i din favoritt teksteditor</li>
-<li>Legg nå til bildet <code>header.jpg</code> innenfor taggen <code>&lt;header&gt;</code> (husk å legge til <code>alt</code>-tekst)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Last ned og pakk ut <a href="ressurser/layout.zip">layout.zip</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Åpne <code>index.html</code> i din favoritt teksteditor</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg nå til bildet <code>header.jpg</code> innenfor taggen <code>&lt;header&gt;</code> (husk å legge til <code>alt</code>-tekst)</label></li>
 </ul>
 <toggle>
   <strong>Hint</strong>
@@ -62,8 +62,8 @@ function relative (url) {
 <h1 class="activity" id="steg-3-legg-til-meny">Steg 3: Legg til meny</h1>
 <p>Å legge til en meny er ikke bare bare. Vi skal nå gå gjennom steg for steg for å få menyen til å se fin og ordentlig ut.</p>
 <p>Det første vi må gjøre er å legge til lenker i menyen vår. Menyen vår skal ligge i <code>&lt;nav&gt;</code>-taggen.</p>
-<ul>
-<li>Lag en liste og legg til 3 liste elementer som skal ha hver sin link.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lag en liste og legg til 3 liste elementer som skal ha hver sin link.</label></li>
 </ul>
 <toggle>
   <strong>Hint</strong>
@@ -84,16 +84,16 @@ function relative (url) {
     <span class="hljs-attribute">list-style-type</span>: none;  <span class="hljs-comment">/* gjerner punktet foran liste-elementet */</span>
 }
 </code></pre>
-<ul>
-<li>Kan du tenke deg hvorfor det står <code>nav ul li</code>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Kan du tenke deg hvorfor det står <code>nav ul li</code>?</label></li>
 </ul>
 <p>Grunnen til at vi skriver <code>nav ul li</code> på denne er for å spesifisere at vi skal sette stil på <code>li</code> (List items) i den uordnede listen <code>ul</code> som ligger innenfor <code>nav</code>-taggen. På denne måten vil ikke andre lister bli påvirket av den stilen vi setter, kun den lista som ligger mellom <code>&lt;nav&gt;</code>-taggen. Nå ser nettsiden vår slik ut:</p>
 <p><figure><img src="ressurser/screenshot_2.png" alt="screenshot"></figure></p>
 <p>Nå ser vi at vi har fått liste-elementene våre til å legge seg mot høyre og har ikke lengre punkter bak seg. Nå skal vi sette stil på hele lista og ikke bare liste-elementene. For å gjøre dette må vi bruke <code>nav ul</code>. I koden under er det nokså kjente ting. Vi midtstiller alt, setter en høyde og bredde på listen og vi setter en kant rundt listen for å markere hvor menyen vår skal gå. Det siste, <code>padding: 0px</code>, er for å fjerne et standard inntrykk som du får når du bruker lister.</p>
-<ul>
-<li>Studer koden under</li>
-<li>Prøv å fjerne/kommentere ut en linje eller fler for å se hva de gjør.</li>
-<li>Forstår du hvorfor vi har <code>1072px</code> istedet for <code>1080px</code>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Studer koden under</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Prøv å fjerne/kommentere ut en linje eller fler for å se hva de gjør.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Forstår du hvorfor vi har <code>1072px</code> istedet for <code>1080px</code>?</label></li>
 </ul>
 <pre><code class="css"><span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span>{
     <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0px</span>;        <span class="hljs-comment">/* fjerner marger og midtstiller */</span>
@@ -107,12 +107,12 @@ function relative (url) {
 <p>Grunnen til at vi bruker <code>1072px</code> istedet for <code>1080px</code> er fordi vi har en hovedramme som er på <code>4px</code>og som er på både høyre og venstre siden, altså <code>2 * 4px = 8px</code>.</p>
 <p><figure><img src="ressurser/screenshot_4.png" alt="screenshot"></figure></p>
 <p>Siden vi skal ha en meny, så har vi lagt inn lenker(<code>&lt;a&gt;</code>) i liste-elementene. Vi må derfor legge til CSS for at disse skal vises på en skikkelig måte. Nå skal vi dele inn hovedrammen vi har laget slik at det ser ut som lenkene er knapper. I kodeblokken under ser du hvordan vi kan lage mellomrom mellom lenkene ved å bruke <code>padding</code>, legge til en strek på høyre side for at den skal se ut som en knapp, ta vekk understreker, gjøre skriften større og gjøre den grønn.</p>
-<ul>
-<li>Studer koden under</li>
-<li>Hva skjer om du fjerner <code>padding-left</code>og <code>padding-right</code>?</li>
-<li>Hva skjer om du fjerner <code>display: block</code>?</li>
-<li>Hva skjer om du fjerner <code>color: #3DD14B</code>?</li>
-<li>Prøv å endre på tallene og se hva som skjer.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Studer koden under</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hva skjer om du fjerner <code>padding-left</code>og <code>padding-right</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Hva skjer om du fjerner <code>display: block</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Hva skjer om du fjerner <code>color: #3DD14B</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Prøv å endre på tallene og se hva som skjer.</label></li>
 </ul>
 <pre><code class="css"><span class="hljs-selector-tag">nav</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> <span class="hljs-selector-tag">a</span>{
     <span class="hljs-attribute">display</span>: block;         <span class="hljs-comment">/* Gjør at kantene går helt opp til hovedrammen */</span>
@@ -133,9 +133,9 @@ function relative (url) {
 <section class="activity" id="steg-4-legge-til-innhold-pa-siden">
 <h1 class="activity" id="steg-4-legge-til-innhold-pa-siden">Steg 4: Legge til innhold på siden</h1>
 <p>Nå skal vi legge til en overskrift og litt tekst på siden vår. Dette gjør vi innenfor <code>&lt;section&gt;</code>-taggen.</p>
-<ul>
-<li>Legg til en overskrift. Husker du hvilken tag man bruker da?</li>
-<li>Legg til litt tekst, du kan også legge til et bilde hvis du ønsker det</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Legg til en overskrift. Husker du hvilken tag man bruker da?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Legg til litt tekst, du kan også legge til et bilde hvis du ønsker det</label></li>
 </ul>
 <toggle>
   <strong>Hint</strong>
@@ -147,13 +147,13 @@ function relative (url) {
 </code></pre>
   </hide>
 </toggle>
-<ul>
-<li>Legg til en passende bakgrunnsfarge på <code>section</code></li>
-<li>Legg til en høyde på <code>section</code> slik at siden blir seendes større og mer komplett ut</li>
-<li>Legg til en passende farge på overskriften din</li>
-<li>Bruk <code>padding</code> til å få flytte overskriften litt vekk fra kanten på venstre side</li>
-<li>Gjør det samme du gjorde med overskriften, med paragrafen du har laget</li>
-<li>Dersom du la inn et bilde, prøv å få det sentrert på siden</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Legg til en passende bakgrunnsfarge på <code>section</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Legg til en høyde på <code>section</code> slik at siden blir seendes større og mer komplett ut</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Legg til en passende farge på overskriften din</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Bruk <code>padding</code> til å få flytte overskriften litt vekk fra kanten på venstre side</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Gjør det samme du gjorde med overskriften, med paragrafen du har laget</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Dersom du la inn et bilde, prøv å få det sentrert på siden</label></li>
 </ul>
 <toggle>
   <strong>Hint</strong>
@@ -181,16 +181,16 @@ function relative (url) {
 <section class="activity" id="steg-5-legge-til-footer">
 <h1 class="activity" id="steg-5-legge-til-footer">Steg 5: Legge til footer</h1>
 <p>Nå skal vi legge til informasjon i <code>&lt;footer&gt;</code>. En <code>footer</code> er nederst på siden og viser gjerne kontaktinformasjon til de som har siden, om det er copyright på siden eller så er det også gjerne et <code>sitemap</code>. Et <code>sitemap</code> er en oversikt over hele nettsiden sånn at det skal være enkelt for brukeren å finne frem på siden. La oss nå bare legge litt en enkel tekst i <code>footeren</code>.</p>
-<ul>
-<li>Legg til en paragraf med navnet ditt og gjerne årstall eller datoen i dag.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Legg til en paragraf med navnet ditt og gjerne årstall eller datoen i dag.</label></li>
 </ul>
 <p>Vi vil gjerne vise at <code>footeren</code> faktisk er en footer sånn at den ikke blandes inn med <code>section</code>. Derfor kan det være lurt å legge til en <code>border</code> på toppen av <code>footeren</code>. La oss nå legge til litt CSS.</p>
-<ul>
-<li>Legg til en passe høyde på <code>footer</code></li>
-<li>Hvis du føler at vi trenger litt <code>padding</code>, så legg til det</li>
-<li>Legg til en passende bakgrunnsfarge</li>
-<li>Legg til en farge på teksten sånn at den syns bedre</li>
-<li>Legg til en <code>border-top</code> for å få en ramme øverst på <code>footeren</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Legg til en passe høyde på <code>footer</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Hvis du føler at vi trenger litt <code>padding</code>, så legg til det</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Legg til en passende bakgrunnsfarge</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Legg til en farge på teksten sånn at den syns bedre</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Legg til en <code>border-top</code> for å få en ramme øverst på <code>footeren</code>.</label></li>
 </ul>
 <section>
 <h3 id="na-ser-siden-slik-ut">Nå ser siden slik ut:</h3>
@@ -215,10 +215,10 @@ function relative (url) {
 <section class="activity" id="steg-6-koble-flere-sider-sammen">
 <h1 class="activity" id="steg-6-koble-flere-sider-sammen">Steg 6: Koble flere sider sammen</h1>
 <p>Nå skal vi lage 2 nye sider med samme stil slik at alle sidene blir koblet sammen. I <code>Steg 3: Legg til meny</code> lagde du meny og la til 2 lenker, nå skal vi lage disse sidene. Jeg har brukt <code>side2.html</code> og <code>side3.html</code>. Du kan kalle dem hva du vil.</p>
-<ul>
-<li>Kopier all kode fra <code>index.html</code> til 2 nye sider <code>side2.html</code> og <code>side3.html</code></li>
-<li>Nå skal du endre overskriften og teksten i <code>side2.html</code> og <code>side3.html</code> slik at du får 3 ulike sider</li>
-<li>Sørg for at de 2 sidene ligger i <code>nav</code> på alle sidene</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Kopier all kode fra <code>index.html</code> til 2 nye sider <code>side2.html</code> og <code>side3.html</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Nå skal du endre overskriften og teksten i <code>side2.html</code> og <code>side3.html</code> slik at du får 3 ulike sider</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Sørg for at de 2 sidene ligger i <code>nav</code> på alle sidene</label></li>
 </ul>
 <p><strong>Eksempel:</strong></p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
@@ -229,17 +229,17 @@ function relative (url) {
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Prøv å trykk deg til hver av sidene for å teste om lenkene fungerer. Fungerer de? Hvis ikke må du sjekke at alle filene ligger i samme mappe og er skrevet riktig.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Prøv å trykk deg til hver av sidene for å teste om lenkene fungerer. Fungerer de? Hvis ikke må du sjekke at alle filene ligger i samme mappe og er skrevet riktig.</label></li>
 </ul>
 <p><strong>TADA! Du har nå laget en flott nettside som du kan bygge videre på!</strong></p>
 <section class="try" id="ting-a-jobbe-videre-med">
 <h2 class="try" id="ting-a-jobbe-videre-med">Ting å jobbe videre med</h2>
-<ul>
-<li>Bruk <a href="http://www.w3schools.com/css/css_link.asp">w3schools.com/css/css_link.asp</a> til å legge til forandring på linkene når du holder over dem</li>
-<li>Legg til enda en side for eksempel &quot;Mitt favorittspill&quot;. Skriv om det, legg til bilder og videoer som er relatert til spillet.</li>
-<li>Legg teksten på siden i en <code>div</code>-er og sett forskjellig stil på dem</li>
-<li>Del inn <code>section</code> slik at du kan få forskjellige deler på siden, hent gjerne inspirasjon fra internett. Feks: <a href="http://vg.no">vg.no</a></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Bruk <a href="http://www.w3schools.com/css/css_link.asp">w3schools.com/css/css_link.asp</a> til å legge til forandring på linkene når du holder over dem</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Legg til enda en side for eksempel &quot;Mitt favorittspill&quot;. Skriv om det, legg til bilder og videoer som er relatert til spillet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Legg teksten på siden i en <code>div</code>-er og sett forskjellig stil på dem</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Del inn <code>section</code> slik at du kan få forskjellige deler på siden, hent gjerne inspirasjon fra internett. Feks: <a href="http://vg.no">vg.no</a></label></li>
 </ul>
 </section>
 </section>

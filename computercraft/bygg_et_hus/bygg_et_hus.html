@@ -27,13 +27,13 @@ roboter til å gjøre forskjellige ting. Spesielt bruker vi kommandoene</p>
 kan bruke <code>for</code>-løkker for å gjenta ting.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en robot, gi den fuel og legg en del byggemateriell i robotens
-inventory.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Lag en robot, gi den fuel og legg en del byggemateriell i robotens
+inventory.</label></p>
 </li>
-<li>
-<p>Lag et nytt program, <code>edit byggmitthus</code>, og skriv den følgende koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lag et nytt program, <code>edit byggmitthus</code>, og skriv den følgende koden:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
     turtle.back()
     turtle.place()
@@ -67,10 +67,10 @@ bruke <code>if</code>-tester for å sjekke hvor på huset roboten bygger.</p>
 </section>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Når du har laget et enkelt hus så vis det frem til de andre. Hvilke
-problemer fikk dere underveis?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Når du har laget et enkelt hus så vis det frem til de andre. Hvilke
+problemer fikk dere underveis?</label></p>
 <p>Ingen skriver programmer riktig første gangen, og det er veldig
 nyttig å diskutere både hvordan man løser en utfordring, og hvilke
 metoder som ikke virker.</p>
@@ -89,9 +89,9 @@ tenkt. Et eksempel på dette er i den følgende koden, hvor meningen var
 å bygge grunnmuren til et hus.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Skriv programmet <code>grunnmur</code> med koden</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Skriv programmet <code>grunnmur</code> med koden</label></p>
 <pre><code class="lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
         turtle.back()
@@ -102,13 +102,13 @@ tenkt. Et eksempel på dette er i den følgende koden, hvor meningen var
 </code></pre>
 <p>Lagre og kjør programmet? Ser du problemet?</p>
 </li>
-<li>
-<p>På slutten av byggingen av grunnmuren krasjer roboten inn i muren vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> På slutten av byggingen av grunnmuren krasjer roboten inn i muren vi
 allerede har bygd, slik at den ikke får bygd den siste klossen. En
 smart måte å unngå dette problemet på er å la roboten fly over
 bakken, mens den plasserer klosser under seg med
 <code>turtle.placeDown()</code>. Dette har den ekstra fordelen at vi kan la
-roboten gå fremover i stedet for bakover, som jo er mer logisk.</p>
+roboten gå fremover i stedet for bakover, som jo er mer logisk.</label></p>
 <p>Endre programmet som følger:</p>
 <pre><code class="lua">turtle.up()                                   <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
@@ -137,9 +137,9 @@ oss starte med det! Husk å teste at robotprogrammet ditt virker
 etterhvert som du skriver det inn.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag et nytt program <code>bygghus</code>. Vi begynner med en enkel stripe:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lag et nytt program <code>bygghus</code>. Vi begynner med en enkel stripe:</label></p>
 <pre><code class="lua">turtle.up()
 <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
     turtle.placeDown()
@@ -147,10 +147,10 @@ etterhvert som du skriver det inn.</p>
 <span class="hljs-keyword">end</span>
 </code></pre>
 </li>
-<li>
-<p>For å bygge en vegg vil vi bygge flere slike striper på toppen av
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> For å bygge en vegg vil vi bygge flere slike striper på toppen av
 hverandre. En enkel måte å gjøre dette på er å la roboten rygge
-tilbake med <code>turtle.back()</code> for å bygge neste stripe.</p>
+tilbake med <code>turtle.back()</code> for å bygge neste stripe.</label></p>
 <pre><code class="lua"><span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, <span class="hljs-number">3</span> <span class="hljs-keyword">do</span>                               <span class="hljs-comment">-- ny linje</span>
     turtle.up()
     <span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">5</span> <span class="hljs-keyword">do</span>
@@ -164,10 +164,10 @@ tilbake med <code>turtle.back()</code> for å bygge neste stripe.</p>
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span>
 </code></pre>
 </li>
-<li>
-<p>Før vi fortsetter med programmet vårt vil vi også introdusere et par
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Før vi fortsetter med programmet vårt vil vi også introdusere et par
 variabler som kan forklare hva tallene <code>3</code> og <code>5</code> betyr. Dette vil
-også gjøre det enklere for oss å endre størrelsen på veggen senere.</p>
+også gjøre det enklere for oss å endre størrelsen på veggen senere.</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> hoyde = <span class="hljs-number">3</span>                               <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">local</span> lengde = <span class="hljs-number">5</span>                              <span class="hljs-comment">-- ny linje</span>
 
@@ -205,10 +205,10 @@ kan bruke på samme måte som de innebygde kommandoene (som for eksempel
 <code>turtle.forward()</code>).</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi definerer en funksjon ved hjelp av den innebygde kommandoen
-<code>function</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi definerer en funksjon ved hjelp av den innebygde kommandoen
+<code>function</code>.</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">()</span></span>                           <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">local</span> hoyde = <span class="hljs-number">3</span>
     <span class="hljs-keyword">local</span> lengde = <span class="hljs-number">5</span>
@@ -227,22 +227,22 @@ kan bruke på samme måte som de innebygde kommandoene (som for eksempel
 <span class="hljs-keyword">end</span>                                           <span class="hljs-comment">-- ny linje</span>
 </code></pre>
 </li>
-<li>
-<p>Om du kjører programmet slik det er nå vil du se at roboten ikke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Om du kjører programmet slik det er nå vil du se at roboten ikke
 gjør noenting. Det er fordi vi bare har <em>definert</em> funksjonen, det
 vil si vi har fortalt roboten hvordan den kan bygge en vegg. Vi har
 ikke sagt til roboten at den faktisk skal bygge veggen. Legg til den
-følgende linjen helt nederst i programmet ditt.</p>
+følgende linjen helt nederst i programmet ditt.</label></p>
 <pre><code class="lua">byggVegg()
 </code></pre>
 <p>Nå sier vi at roboten også skal bygge veggen.</p>
 </li>
-<li>
-<p>En veldig nyttig ting med funksjoner er at vi kan la variablene være
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> En veldig nyttig ting med funksjoner er at vi kan la variablene være
 noe som heter parametre. I praksis betyr det at vi bestemmer verdien
 på variablene utenfor selve funksjonen. Endre programmet ditt slik
 at det ser ut som dette, pass på at du sletter de to linjene som
-pleide å gi verdi til <code>hoyde</code> og <code>lengde</code>.</p>
+pleide å gi verdi til <code>hoyde</code> og <code>lengde</code>.</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>              <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -274,11 +274,11 @@ forskjellig størrelse?</p>
 bygge et enkelt hus. La oss prøve å sette sammen fire vegger!</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner enkelt. La oss prøve å bygge en vegg, snu roboten, bygge
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi begynner enkelt. La oss prøve å bygge en vegg, snu roboten, bygge
 en ny vegg og så videre. Bytt ut den siste linjen <code>byggVegg(3, 5)</code> i
-programmet ditt med den følgende løkken:</p>
+programmet ditt med den følgende løkken:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">for</span> i = <span class="hljs-number">1</span>, <span class="hljs-number">4</span> <span class="hljs-keyword">do</span>
     byggVegg(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
     turtle.turnLeft()
@@ -287,10 +287,10 @@ programmet ditt med den følgende løkken:</p>
 <p>Hva skjer når du kjører programmet ditt?</p>
 <p><figure><img src="firevegger.png" alt=""></figure></p>
 </li>
-<li>
-<p>Hmm ... det ble jo litt stilig, men et hus er det definitivt
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Hmm ... det ble jo litt stilig, men et hus er det definitivt
 ikke. Problemet er at vi ikke har tenkt gjennom hvor roboten er
-etter at den er ferdig med å bygge en vegg.</p>
+etter at den er ferdig med å bygge en vegg.</label></p>
 <p>Vi burde legge til litt kode i <code>byggVegg()</code> slik at roboten er
 klar til å bygge neste vegg. Dette kan vi gjøre ved å gå nedover i
 stedet for bakover etter at vi har bygd ferdig veggen. Endre
@@ -316,11 +316,11 @@ funksjonen <code>byggVegg</code> slik at den ser slik ut:</p>
 <span class="hljs-keyword">end</span>
 </code></pre>
 </li>
-<li>
-<p>Programmet vårt klarer nesten å bygge et hus av fire vegger. Men
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Programmet vårt klarer nesten å bygge et hus av fire vegger. Men
 igjen får vi et lite problem med at roboten krasjer inn i ting den
 har bygd tidligere. Vi må rett og slett være litt mer forsiktige med
-at roboten ikke går mer enn den trenger.</p>
+at roboten ikke går mer enn den trenger.</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -360,11 +360,11 @@ vil den bare bruke en av dem. Ved hjelp av funksjonene
 <code>turtle</code>-biblioteket kan vi gjøre noe med dette.</p>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi vil nå lage en ny funksjon som sjekker at det er materiale
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi vil nå lage en ny funksjon som sjekker at det er materiale
 tilgjengelig før den plasserer det ut. Nedenfor har vi byttet ut
-<code>turtle.placeDown()</code> med et kall på vår egen funksjon <code>plasser()</code>:</p>
+<code>turtle.placeDown()</code> med et kall på vår egen funksjon <code>plasser()</code>:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde)</span></span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -418,10 +418,10 @@ Hvis dette ikke er den siste sloten (slot 16), bruker vi
 <code>turtle.select()</code> til å velge den neste sloten. Hvis vi allerede
 er på den siste sloten velger vi heller den første.</p>
 </li>
-<li>
-<p>Kjør programmet. Hva skjer når roboten går helt tom for
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Kjør programmet. Hva skjer når roboten går helt tom for
 byggemateriale? Den blir da bare stående å vente på at du skal fylle
-den opp med nytt materiale.</p>
+den opp med nytt materiale.</label></p>
 <p><figure><img src="flerefarger.png" alt=""></figure></p>
 </li>
 </ul>
@@ -438,12 +438,12 @@ for eksempel få roboten til å bygge et fargerikt hus!</p>
 <p>Nå er det på tide å lære roboten hvordan den bygger tak på huset vårt!</p>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>Før vi begynner å bygge taket vil vi flytte koden som bygger huset
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Før vi begynner å bygge taket vil vi flytte koden som bygger huset
 til en egen funksjon, på samme måte som vi gjorde med <code>byggVegg()</code>
 tidligere. Bytt den nederste løkken i koden din (den som faktisk
-bygger veggene dine) med den følgende koden:</p>
+bygger veggene dine) med den følgende koden:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span></span>
     byggVegg(hoyde, bredde - <span class="hljs-number">1</span>)
     turtle.turnLeft()
@@ -460,16 +460,16 @@ byggHus(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>, 
 <p>Ser du hvorfor vi bruker <code>bredde - 1</code> i stedet for <code>bredde</code>? Sjekk
 at huset ditt får riktig størrelse med denne koden!</p>
 </li>
-<li>
-<p>Nå kan vi lage en ny funksjon <code>byggTak()</code>. Legg først til denne
-linjen nederst i <code>byggHus()</code>-funksjonen din:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Nå kan vi lage en ny funksjon <code>byggTak()</code>. Legg først til denne
+linjen nederst i <code>byggHus()</code>-funksjonen din:</label></p>
 <pre><code class="lua">byggTak(bredde, dybde)
 </code></pre>
 </li>
-<li>
-<p>Selve funksjonen for å bygge taket kan være ganske lik funksjonen
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Selve funksjonen for å bygge taket kan være ganske lik funksjonen
 for å bygge en vegg. Forskjellen er at der veggen står oppover, vil
-taket ligge flatt. Legg til funksjonen <code>byggTak</code> i koden din:</p>
+taket ligge flatt. Legg til funksjonen <code>byggTak</code> i koden din:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggTak</span><span class="hljs-params">(bredde, dybde)</span></span>
     turtle.up()
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, dybde <span class="hljs-keyword">do</span>
@@ -497,13 +497,13 @@ taket ligge flatt. Legg til funksjonen <code>byggTak</code> i koden din:</p>
 dette ligner et skikkelig hus er dører og vinduer.</p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi velger en relativt enkel løsning denne gangen, og lar roboten
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Vi velger en relativt enkel løsning denne gangen, og lar roboten
 rett og slett lage hull der dørene og vinduene skal være. Siden vi
 ikke vil ha dører på alle veggene, og vil ha litt mulighet til å
 velge hvor vinduene skal være, lager vi to nye parametre til
-<code>byggVegg()</code>-funksjonen vår. Endre denne funksjonen som følger:</p>
+<code>byggVegg()</code>-funksjonen vår. Endre denne funksjonen som følger:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggVegg</span><span class="hljs-params">(hoyde, lengde, dor, vindu)</span></span>    <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">for</span> j = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>
         turtle.up()
@@ -533,9 +533,9 @@ velge hvor vinduene skal være, lager vi to nye parametre til
 <p>Med den nye <code>if</code>-testen lager vi en dør ved å ikke bygge de to
 nederste klossene, mens vinduene lages i høyde 2.</p>
 </li>
-<li>
-<p>Vi må til slutt også endre koden i <code>byggHus()</code> som kaller
-<code>byggVegg()</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Vi må til slutt også endre koden i <code>byggHus()</code> som kaller
+<code>byggVegg()</code>:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">byggHus</span><span class="hljs-params">(hoyde, bredde, dybde)</span></span>
     byggVegg(hoyde, bredde - <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-literal">nil</span>)
     turtle.turnLeft()
@@ -568,9 +568,9 @@ tungvint. Det vil være bedre om vi kan fortelle hvor stort huset skal
 være når vi starter programmet.</p>
 <section class="check" id="sjekkliste-10">
 <h2 class="check" id="sjekkliste-10">Sjekkliste</h2>
-<ul>
-<li>
-<p>Bytt ut linjen <code>byggHus(3, 5, 4)</code> med det følgende:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Bytt ut linjen <code>byggHus(3, 5, 4)</code> med det følgende:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> tArgs = { ... }
 <span class="hljs-keyword">if</span> #tArgs ~= <span class="hljs-number">3</span> <span class="hljs-keyword">then</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Skriv: bygghus &lt;høyde&gt; &lt;bredde&gt; &lt;dybde&gt;'</span>)
@@ -584,11 +584,11 @@ byggHus(<span class="hljs-built_in">tonumber</span>(tArgs[<span class="hljs-numb
 <p>Dette kan virke litt mystisk, og vi skal ikke forklare alt som
 skjer her nå. Vi vil komme tilbake til dette i senere leksjoner.</p>
 </li>
-<li>
-<p>Om du prøver å kjøre programmet ditt ved å bare skrive <code>bygghus</code> nå
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Om du prøver å kjøre programmet ditt ved å bare skrive <code>bygghus</code> nå
 vil du få en melding om at du også må oppgi høyde, bredde og dybde.
 Prøv for eksempel å skrive <code>bygghus 3 5 4</code> for å starte
-husbyggeroboten.</p>
+husbyggeroboten.</label></p>
 </li>
 </ul>
 </section>

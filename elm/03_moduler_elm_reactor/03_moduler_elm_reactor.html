@@ -18,21 +18,21 @@ i <a href="../02_funksjoner_elm_repl/02_funksjoner_elm_repl.html">oppgave 2</a>.
 <h1 class="activity" id="lag-din-egen-nettside">Lag din egen nettside!</h1>
 <section class="check" id="aktiviteter">
 <h2 class="check" id="aktiviteter">Aktiviteter</h2>
-<ul>
-<li>Åpne en <strong>teksteditor</strong>, for eksempel teksteditoren <a href="http://atom.io">Atom</a>, <a href="http://brackets.io/">Brackets</a>, NotePad eller <a href="https://notepad-plus-plus.org/">NotePad++</a>.</li>
-<li>Lag en ny fil.</li>
-<li>Fyll inn dette i filen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Åpne en <strong>teksteditor</strong>, for eksempel teksteditoren <a href="http://atom.io">Atom</a>, <a href="http://brackets.io/">Brackets</a>, NotePad eller <a href="https://notepad-plus-plus.org/">NotePad++</a>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lag en ny fil.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Fyll inn dette i filen:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Html
 
 <span class="hljs-title">main</span> = <span class="hljs-type">Html</span>.text <span class="hljs-string">"Hei, verden!"</span>
 </code></pre>
-<ul>
-<li>Lagre filen til filnavnet <code>hei.elm</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lagre filen til filnavnet <code>hei.elm</code>.</label></li>
 </ul>
 <p>For å se nettsiden i en nettleser, må vi først gjøre om nettsiden vår til HTML. HTML er språket som forteller en nettleser om hvordan en nettside skal se ut. Se <a href="../../web/index.html">web-kurset</a> for å lære mer om HTML og nettsider.</p>
-<ul>
-<li>Om du har gjort <a href="../02_funksjoner_elm_repl/02_funksjoner_elm_repl.html">oppgave 2</a>, kan du nå åpne kommandolinjen og skrive inn <code>elm reactor</code>:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Om du har gjort <a href="../02_funksjoner_elm_repl/02_funksjoner_elm_repl.html">oppgave 2</a>, kan du nå åpne kommandolinjen og skrive inn <code>elm reactor</code>:</label></li>
 </ul>
 <pre><code>elm-reactor <span class="hljs-number">0.18</span><span class="hljs-number">.0</span>
 Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">//localhost:8000/</span>
@@ -42,9 +42,9 @@ Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">/
 <p>Første gang du åpner filen, vil du få opp dette vinduet:</p>
 <p><figure><img src="building_project.png" alt=""></figure></p>
 <p>Nå leser Elm gjennom filen din og gjør den om til vanlig HTML!</p>
-<ul>
-<li>Hvordan ser nettsiden din ut?</li>
-<li>La oss gjøre en endring.
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Hvordan ser nettsiden din ut?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> La oss gjøre en endring.</label>
 <ul>
 <li>Endre <code>&quot;Hei, verden!&quot;</code> til <code>&quot;Hei, alle sammen!&quot;</code></li>
 <li>Lagre filen</li>
@@ -56,9 +56,9 @@ Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">/
 </section>
 <section class="try" id="ting-du-kan-prove">
 <h2 class="try" id="ting-du-kan-prove">Ting du kan prøve</h2>
-<ul>
-<li>For å åpne forskjellige programmer direkte fra nettsiden din, kan du skrive nettadressen slik: <code>localhost:8000/hei.elm</code>. Bare bytt ut filnavnet!</li>
-<li>Hva skjer når du åpner <code>hei.elm</code> direkte i nettleseren?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> For å åpne forskjellige programmer direkte fra nettsiden din, kan du skrive nettadressen slik: <code>localhost:8000/hei.elm</code>. Bare bytt ut filnavnet!</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Hva skjer når du åpner <code>hei.elm</code> direkte i nettleseren?</label></li>
 </ul>
 </section>
 </section>
@@ -87,22 +87,22 @@ Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">/
 </section>
 <section class="activity" id="del-nettsiden-opp-i-moduler">
 <h1 class="activity" id="del-nettsiden-opp-i-moduler">Del nettsiden opp i moduler</h1>
-<ul>
-<li>Lag en ny fil og kall den <code>Knapper.elm</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Lag en ny fil og kall den <code>Knapper.elm</code></label></li>
 </ul>
 <p>Denne filen er akkurat lik nettsiden vår i forrige oppgave. Men denne gangen vil vi at andre skal kunne bruke den på deres nettsider. Da må vi starte med å fortelle at denne filen skal være en <em>modul</em>.</p>
-<ul>
-<li>Skriv inn dette i starten av filen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv inn dette i starten av filen:</label></li>
 </ul>
 <pre><code class="elm">  <span class="hljs-keyword">module</span> Knapper <span class="hljs-keyword">exposing</span> (..)
 </code></pre>
 <p>Filen <code>Knapper.elm</code> inneholder nå en modul kalt <code>Knapper</code>!</p>
-<ul>
-<li>Prøv å åpne <code>localhost:8000/Knapper.elm</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Prøv å åpne <code>localhost:8000/Knapper.elm</code></label></li>
 </ul>
 <p>Dette gir oss en feilmelding. Modulen vår inneholder ingenting ennå!</p>
-<ul>
-<li>Legg til en knapp i modulen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Legg til en knapp i modulen:</label></li>
 </ul>
 <pre><code class="elm">  <span class="hljs-keyword">module</span> Knapper <span class="hljs-keyword">exposing</span> (..)
   <span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (button, text)
@@ -110,16 +110,16 @@ Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">/
   okKnapp = button [] [text <span class="hljs-string">"Ok!"</span>]
 </code></pre>
 <p><code>import Html exposing (button, text)</code> importerer <em>Html-modulen</em>, som gjør at vi kan bruke Html-elementer i modulen vår. Siden vi skal bruke elementene <code>button</code> for å lage en knapp og <code>text</code> for å legge tekst på knappen, må vi legge til <code>(button, text)</code> når vi importerer Html-modulen.</p>
-<ul>
-<li>Legg til den nye knappen i filen fra forrige oppgave</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Legg til den nye knappen i filen fra forrige oppgave</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Knapper
 
 <span class="hljs-title">main</span> = <span class="hljs-type">Knapper</span>.okKnapp
 </code></pre>
 <p>På samme måte som vi importerer Html-elementer med <code>import Html</code>, kan vi importere våre egne elementer med <code>import Knapper</code>. <code>okKnapp</code> er en del av modulen <code>Knapper</code>, på samme måte som at <code>text</code> er en del av Html-modulen. Så vi kan skrive <code>Knapper.okKnapp</code> for å lage en okKnapp.</p>
-<ul>
-<li>Legg til en ekstra stilig knapp</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Legg til en ekstra stilig knapp</label></li>
 </ul>
 <pre><code class="elm">  <span class="hljs-keyword">module</span> Knapper <span class="hljs-keyword">exposing</span> (..)
   <span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (button, text)
@@ -138,9 +138,9 @@ Listening <span class="hljs-keyword">on</span> http:<span class="hljs-comment">/
       , (<span class="hljs-string">"color"</span>, <span class="hljs-string">"blue"</span>)
       ]
 </code></pre>
-<ul>
-<li>Bytt ut <code>okKnapp</code> med <code>stiligKnapp</code> og se hva som skjer</li>
-<li>Legg til flere egne knapper i modulen</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut <code>okKnapp</code> med <code>stiligKnapp</code> og se hva som skjer</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Legg til flere egne knapper i modulen</label></li>
 </ul>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Elm: Elm reactor og moduler&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/elm/03_moduler_elm_reactor" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/elm/03_moduler_elm_reactor" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Alexander Perry</p>

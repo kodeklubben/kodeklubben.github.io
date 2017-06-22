@@ -29,10 +29,10 @@ dem i Python?</p>
 </code></pre>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Å tegne den første er lett. Som alltid er den første linjen <code>from turtle import *</code> så Python vet at vi vil tegne. Dette programmet tegner linjen,
-sjekk at du får det til</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Å tegne den første er lett. Som alltid er den første linjen <code>from turtle import *</code> så Python vet at vi vil tegne. Dette programmet tegner linjen,
+sjekk at du får det til</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span><span class="hljs-params">()</span>:</span>
@@ -44,8 +44,8 @@ first()
 kommer til å lage prosedyrer for alle formene, så la oss legge dem til i
 filen vi lager.</p>
 </li>
-<li>
-<p>Legg til litt kode så koden din blir slik som denne:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Legg til litt kode så koden din blir slik som denne:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span><span class="hljs-params">()</span>:</span>
@@ -63,8 +63,8 @@ filen vi lager.</p>
 second()
 </code></pre>
 </li>
-<li>
-<p>Kjør koden din og se hva den gjør, tegner den riktig figur? Det skal se slik ut</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Kjør koden din og se hva den gjør, tegner den riktig figur? Det skal se slik ut</label></p>
 <pre><code>            /<span class="hljs-string">\</span>
            /  <span class="hljs-string">\</span>
           /    <span class="hljs-string">\</span>
@@ -88,9 +88,9 @@ tegnet fire ganger.</p>
 <p>Du kan se at vi tegner den andre figuren (det enkle fjellet), deretter snur vi, tegner den igjen, snur, tegner igjen, snur og tegner den en siste gang.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Istedenfor å skrive alle bevegelsene, la oss tegne den tredje figuren ved å kalle <code>second</code></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Istedenfor å skrive alle bevegelsene, la oss tegne den tredje figuren ved å kalle <code>second</code></label></p>
 <pre><code>from turtle <span class="hljs-keyword">import</span> *
 
 def second():
@@ -124,9 +124,9 @@ third()
 <p>Vi får til dette ved å dele problemet i to: Det enkle problemet og spesialtilfellet av problemet. Det enkle problemet er enkelt: Det er bare <code>forward(100)</code>. Spesialtilfellet er litt vanskeligere, det vil si: Tegn spesialtilfellet, men en mindre enn i sted, helt til du kommer til det enkle tilfellet. Det er kanskje enklere å se på programmet enn å forklare.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny fil med koden under:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Lag en ny fil med koden under:</label></p>
 <pre><code>from turtle <span class="hljs-keyword">import</span> *
 
 def mountain(depth):<span class="hljs-type"></span>
@@ -146,8 +146,8 @@ mountain(<span class="hljs-number">3</span>)
 </code></pre>
 <p>Du kan se at vi har brukt kode som er veldig likt <code>first</code>, <code>second</code> og <code>third</code>. Vi bruker en <code>if</code>-setning for å finne ut om vi skal tegne det enkle tilfellet eller spesialtilfellet. I det spesielle tilfellet ber vi om å tegne et fjell, akkurat slik som <code>third</code> kalte <code>second</code>, men vi ber den om å tegne en enklere hver gang, med en ny verdi for <code>depth</code>, en mindre enn det vi startet med.</p>
 </li>
-<li>
-<p>Kjør det og se hva som skjer. Hva skjer om du prøver <code>mountain(1)</code>, <code>mountain(2)</code>, eller <code>mountain(4)</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Kjør det og se hva som skjer. Hva skjer om du prøver <code>mountain(1)</code>, <code>mountain(2)</code>, eller <code>mountain(4)</code>?</label></p>
 </li>
 </ul>
 </section>
@@ -156,9 +156,9 @@ mountain(<span class="hljs-number">3</span>)
 <h1 class="activity" id="steg-4-tegn-et-snoflak-av-fjell">Steg 4: Tegn et snøflak av fjell</h1>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>La oss bare legge til en siste ting til filen fra i sted, så den ser ut som under. Vi legger til en ny prosedyre <code>snowflake</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> La oss bare legge til en siste ting til filen fra i sted, så den ser ut som under. Vi legger til en ny prosedyre <code>snowflake</code>:</label></p>
 <pre><code class="python">
 <span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
@@ -188,8 +188,8 @@ snowflake(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 <p>Dette bildet heter Kochs snøflak. Hvis du vil kan du forsøke å endre på vinklene og se hva som skjer.</p>
 <p>Dette heter et fraktal, fordi de små bildene er laget av små versjoner av seg selv.</p>
 </li>
-<li>
-<p>Prøv å kjøre <code>snowflake(1, 50)</code>, <code>snowflake(2, 25)</code>, <code>snowflake(3, 20)</code>. Jo større dybde, jo lenger tar det å tegne, så husk å putte inn <code>speed(11)</code> så skilpadden går så fort den kan!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Prøv å kjøre <code>snowflake(1, 50)</code>, <code>snowflake(2, 25)</code>, <code>snowflake(3, 20)</code>. Jo større dybde, jo lenger tar det å tegne, så husk å putte inn <code>speed(11)</code> så skilpadden går så fort den kan!</label></p>
 </li>
 </ul>
 </section>
@@ -223,9 +223,9 @@ ___</span>|<span class="hljs-string"> </span>|<span class="hljs-string">__</span
 </section>
 <section class="check" id="sjekkliste-5">
 <h1 class="check" id="sjekkliste-5">Sjekkliste</h1>
-<ul>
-<li>
-<p>La oss åpne en ny fil og forsøke å tegne det andre bildet, som er det vi skal gjenta:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> La oss åpne en ny fil og forsøke å tegne det andre bildet, som er det vi skal gjenta:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 forward(<span class="hljs-number">30</span>)
@@ -239,8 +239,8 @@ left(<span class="hljs-number">90</span>)
 forward(<span class="hljs-number">30</span>)
 </code></pre>
 </li>
-<li>
-<p>Kjør det og sjekk at du får denne figuren:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Kjør det og sjekk at du får denne figuren:</label></p>
 <pre><code>
         ___________
         |<span class="hljs-string">         </span>|
@@ -257,9 +257,9 @@ ________|<span class="hljs-string">         </span>|________
 <h1 class="activity" id="steg-6-klumpete-firkanter">Steg 6: Klumpete firkanter</h1>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne en ny fil i IDLE og skriv inn følgende:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Åpne en ny fil i IDLE og skriv inn følgende:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">box</span><span class="hljs-params">(depth, length)</span>:</span>
@@ -287,8 +287,8 @@ ________|<span class="hljs-string">         </span>|________
 xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 </code></pre>
 </li>
-<li>
-<p>Vi har ikke skrevet inn spesialtilfellet, det har vi tenkt å la deg gjøre. Det er ganske likt som å programmere linjen vi hadde før, det burde holde å kalle <code>box(newdepth, length)</code> for å få det til. Koden burde se veldig lik ut som fjellet og snøflaket.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi har ikke skrevet inn spesialtilfellet, det har vi tenkt å la deg gjøre. Det er ganske likt som å programmere linjen vi hadde før, det burde holde å kalle <code>box(newdepth, length)</code> for å få det til. Koden burde se veldig lik ut som fjellet og snøflaket.</label></p>
 </li>
 </ul>
 </section>
@@ -327,9 +327,9 @@ xcurve(<span class="hljs-number">4</span>,<span class="hljs-number">5</span>)
 </code></pre>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny fil og prøv det!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag en ny fil og prøv det!</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">triforce</span><span class="hljs-params">(depth, length)</span>:</span>
@@ -368,11 +368,11 @@ triforce(<span class="hljs-number">7</span>, <span class="hljs-number">512</span
 </code></pre>
 <p>Du har kanskje lagt merke til at vi bruker en ny kommando <code>setpos</code> for å flytte skilpadden til hjørnet av skjermen.</p>
 </li>
-<li>
-<p>Kjør det og se hva som skjer. Vi kan se at det enkle tilfellet er bare å tegne en trekant, og at spesialtilfellet er å tegne tre små trekanter.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Kjør det og se hva som skjer. Vi kan se at det enkle tilfellet er bare å tegne en trekant, og at spesialtilfellet er å tegne tre små trekanter.</label></p>
 </li>
-<li>
-<p>Prøv å endre verdiene vi sender til <code>triforce()</code>, endre den siste linjen til <code>triforce(5, 300)</code>, hva gjør den?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Prøv å endre verdiene vi sender til <code>triforce()</code>, endre den siste linjen til <code>triforce(5, 300)</code>, hva gjør den?</label></p>
 </li>
 </ul>
 </section>
@@ -381,9 +381,9 @@ triforce(<span class="hljs-number">7</span>, <span class="hljs-number">512</span
 <h1 class="activity" id="steg-8-bobler">Steg 8: Bobler</h1>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>Hvis du vil kan du tegne med sirkler istedenfor trekanter! Åpne en ny fil og skriv inn følgende kode:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Hvis du vil kan du tegne med sirkler istedenfor trekanter! Åpne en ny fil og skriv inn følgende kode:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bubble</span><span class="hljs-params">(depth, length)</span>:</span>
@@ -412,11 +412,11 @@ setpos(<span class="hljs-number">-255</span>,<span class="hljs-number">-255</spa
 bubble(<span class="hljs-number">6</span>, <span class="hljs-number">512</span>)
 </code></pre>
 </li>
-<li>
-<p>Hva skjer? Hva ser det ut som? Vi har brukt <code>circle</code> kommandoen for å tegne en sirkel på skjermen, som tar en radius.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Hva skjer? Hva ser det ut som? Vi har brukt <code>circle</code> kommandoen for å tegne en sirkel på skjermen, som tar en radius.</label></p>
 </li>
-<li>
-<p>Forsøk å endre sirkelens radius, bytt ut <code>circle(length/2)</code> med <code>circle(length)</code>, dette tegner en større sirkel istedenfor.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Forsøk å endre sirkelens radius, bytt ut <code>circle(length/2)</code> med <code>circle(length)</code>, dette tegner en større sirkel istedenfor.</label></p>
 </li>
 </ul>
 </section>

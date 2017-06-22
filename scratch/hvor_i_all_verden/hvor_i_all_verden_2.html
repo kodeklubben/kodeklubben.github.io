@@ -25,13 +25,13 @@ mange reisemål. Vi vil også lage en skikkelig intro til spillet.</p>
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <p>Siden vi skal forandre og videreutvikle flere ting trenger ikke
 spillet du laget i del 1 være helt perfekt. Sjekk likevel at</p>
-<ul>
-<li>
-<p>du har et helikopter som du kan styre rundt på skjermen med
-piltastene, og</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> du har et helikopter som du kan styre rundt på skjermen med
+piltastene, og</label></p>
 </li>
-<li>
-<p>du har en stedfigur som kan bli funnet av helikopteret.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> du har en stedfigur som kan bli funnet av helikopteret.</label></p>
 </li>
 </ul>
 <p>Hvis ikke disse tingene fungerer så gå tilbake til del 1 og gjør dem
@@ -45,42 +45,42 @@ Scratch kan ikke flyttes. Vi må derfor &quot;jukse litt&quot;, og la bakgrunnen
 være en figur.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Slett <code>Europakart</code>-bakgrunnen din. En helt hvit bakgrunn vil passe
-bra nå.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Slett <code>Europakart</code>-bakgrunnen din. En helt hvit bakgrunn vil passe
+bra nå.</label></p>
 </li>
-<li>
-<p>Lag en ny figur ved å klikke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lag en ny figur ved å klikke
 <img src="../bilder/hent-fra-fil.png" alt="Last opp figur fra fil"> ved siden
 av <code>Ny figur</code>.  Velg filen <code>europakart.png</code> som du lastet ned
 forrige gang. Hvis du ikke har denne lett tilgjengelig kan du laste
-den ned på nytt fra <a href="europakart.png">europakart.png</a>.</p>
+den ned på nytt fra <a href="europakart.png">europakart.png</a>.</label></p>
 </li>
-<li>
-<p>Gi denne nye kartfiguren navnet <code>Kart</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Gi denne nye kartfiguren navnet <code>Kart</code>.</label></p>
 </li>
-<li>
-<p>For å være sikre på at denne figuren ligger bakerst som en bakgrunn
-kan vi starte med følgende kode:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> For å være sikre på at denne figuren ligger bakerst som en bakgrunn
+kan vi starte med følgende kode:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 flytt bakover (50) lag
 </code></pre>
 </li>
-<li>
-<p>Vi vil nå lage denne figuren så stor som mulig. Dessverre har
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Vi vil nå lage denne figuren så stor som mulig. Dessverre har
 Scratch en begrensning på hvor store figurer kan være. Du kan se
 dette om du først krysser av for at <code class="blocklooks">størrelse</code> skal
-vises på kart-figuren. Deretter kan du endre størrelsen med</p>
+vises på kart-figuren. Deretter kan du endre størrelsen med</label></p>
 <pre><code class="blocks">sett størrelse til (9999) %
 </code></pre>
 <p>Du vil se at størrelsen ikke blir satt til <code>9999</code>, men til et
 mindre tall. Legg på en kloss som setter så stor størrelse som
 mulig på kartet når det grønne flagget klikkes.</p>
 </li>
-<li>
-<p>Til bruk senere, når vi skal lage en intro til spillet, er det greit
-å <code class="blocklooks">skjule</code> kartfiguren når det grønne flagget klikkes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Til bruk senere, når vi skal lage en intro til spillet, er det greit
+å <code class="blocklooks">skjule</code> kartfiguren når det grønne flagget klikkes.</label></p>
 </li>
 </ul>
 </section>
@@ -112,15 +112,15 @@ og bakgrunnen.</p>
 <p><em>Vi vil først endre hva som skjer når vi trykker på piltastene.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag to nye variabler som gjelder for alle figurer. Disse skal hete
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Lag to nye variabler som gjelder for alle figurer. Disse skal hete
 <code>X</code> og <code>Y</code>, og vil beskrive hvor helikopteret er i forhold til
-kartet.</p>
+kartet.</label></p>
 </li>
-<li>
-<p>Vi skal nå endre hva som skjer når du trykker på piltastene. I
-stedet for at helikopteret skal</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Vi skal nå endre hva som skjer når du trykker på piltastene. I
+stedet for at helikopteret skal</label></p>
 <pre><code class="blocks">gå (hastighet) steg
 </code></pre>
 <p>vil vi endre <code class="blockdata">X</code> eller <code class="blockdata">Y</code> med
@@ -134,15 +134,15 @@ stedet for at helikopteret skal</p>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Helikopteret skal nå <strong>ikke</strong> flytte seg når du trykker på
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Helikopteret skal nå <strong>ikke</strong> flytte seg når du trykker på
 piltastene. Hvis helikopteret flytter seg må du slette
-<code class="blockmotion">gå</code>-klossene.</p>
+<code class="blockmotion">gå</code>-klossene.</label></p>
 </li>
-<li>
-<p>Helikopteret skal fortsatt snu seg til høyre eller venstre når du
-trykker på piltastene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Helikopteret skal fortsatt snu seg til høyre eller venstre når du
+trykker på piltastene.</label></p>
 </li>
 </ul>
 </section>
@@ -156,9 +156,9 @@ trykker på piltastene.</p>
 skal flytte kartet <strong>motsatt</strong> vei av hva helikopteret skal fly. For
 eksempel, om vi vil at det skal se ut som om helikopteret flytter seg
 oppover må vi flytte kartet nedover.</p>
-<ul>
-<li>
-<p>Legg til denne koden på kartet:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Legg til denne koden på kartet:</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 vis
 for alltid
@@ -171,17 +171,17 @@ slutt
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Ser det ut som om helikopteret flytter på seg når du trykker på
-piltastene?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Ser det ut som om helikopteret flytter på seg når du trykker på
+piltastene?</label></p>
 </li>
-<li>
-<p>Se nøye etter. Ser du at helikopteret faktisk står på samme sted
-hele tiden?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Se nøye etter. Ser du at helikopteret faktisk står på samme sted
+hele tiden?</label></p>
 </li>
-<li>
-<p>Hva skjer om du flyr ut av kartet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Hva skjer om du flyr ut av kartet?</label></p>
 </li>
 </ul>
 </section>
@@ -196,23 +196,23 @@ slik at helikopteret ikke kan fly ut av kartet?</p>
 <p><em>Vi må nå la reisemålet også flytte seg med kartet.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Det er litt vanskelig å teste når vi har gjort reisemålet
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Det er litt vanskelig å teste når vi har gjort reisemålet
 usynlig. Endre derfor på gjennomsiktigheten til sted-figuren. For
-eksempel kan du sette</p>
+eksempel kan du sette</label></p>
 <pre><code class="blocks">sett [gjennomsiktig v] effekt til (50)
 </code></pre>
 </li>
-<li>
-<p>For at det skal se ut som om stedet ligger i ro på kartet må faktisk
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> For at det skal se ut som om stedet ligger i ro på kartet må faktisk
 sted-figuren flytte seg sammen med kartet. Vi behøver da to
 variabler som holder rede på hvor stedet skal ligge i forhold til
 kartet. Lag to variabler som heter <code>stedX</code> og <code>stedY</code>. Begge disse
-skal gjelde kun for sted-figuren.</p>
+skal gjelde kun for sted-figuren.</label></p>
 </li>
-<li>
-<p>Bytt ut</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Bytt ut</label></p>
 <pre><code class="blocks">gå til x: (-98) y: (-120)
 </code></pre>
 <p>med kode som setter variablene i stedet:</p>
@@ -220,9 +220,9 @@ skal gjelde kun for sted-figuren.</p>
 sett [stedY v] til [-120]
 </code></pre>
 </li>
-<li>
-<p>Vi kan nå lage en helt ny blokk som flytter stedet rundt på
-skjermen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Vi kan nå lage en helt ny blokk som flytter stedet rundt på
+skjermen.</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 for alltid
     gå til x: ((stedX) - (X)) y: ((stedY) - (Y))
@@ -230,10 +230,10 @@ slutt
 </code></pre>
 <p>Prøv spillet. Flytter den røde prikken seg rundt på kartet?</p>
 </li>
-<li>
-<p>Du ser kanskje at den røde prikken ikke lenger ligger ved Barcelona?
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Du ser kanskje at den røde prikken ikke lenger ligger ved Barcelona?
 Det er fordi vi har laget et større kart. Da stemmer ikke lengre de
-gamle koordinatene.</p>
+gamle koordinatene.</label></p>
 <p>Endre verdiene for <code>X</code> og <code>Y</code> til det ser ut som om reisemålet
 ligger omtrent på riktig sted igjen.</p>
 </li>
@@ -254,23 +254,23 @@ bruke mye av den samme koden. Vi må bare endre navnet
 <code class="blockdata">Y</code>).</p>
 <p>Dette er et bra eksempel på når det kan lønne seg å bruke funksjoner,
 eller lage egne klosser som man gjør i Scratch.</p>
-<ul>
-<li>
-<p>Klikk på <code class="blockmoreblocks">Flere klosser</code> og lag en kloss som ser
-slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Klikk på <code class="blockmoreblocks">Flere klosser</code> og lag en kloss som ser
+slik ut:</label></p>
 <p><figure><img src="nykloss.png" alt=""></figure></p>
 <p>hvor <code>sted</code> er tekst, mens <code>x</code> og <code>y</code> er tallverdier:</p>
 </li>
-<li>
-<p>Etter at du klikker <code>OK</code> dukker det opp en ny kloss på skjermen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Etter at du klikker <code>OK</code> dukker det opp en ny kloss på skjermen:</label></p>
 <pre><code class="blocks">definer Reis til (sted) (x) (y)
 </code></pre>
 <p>Under denne klossen kan vi definere hva funksjonen vår skal gjøre.</p>
 </li>
-<li>
-<p>Flytt skriptet ditt fra <code class="blockevents">Nytt sted</code>-blokken til den nye
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Flytt skriptet ditt fra <code class="blockevents">Nytt sted</code>-blokken til den nye
 funksjonen, og endre litt - spesielt i variablene - slik at
-funksjonen din ser slik ut:</p>
+funksjonen din ser slik ut:</label></p>
 <pre><code class="blocks">definer Reis til (sted) (x) (y)
 sett [gjennomsiktig v] effekt til (100)
 sett [stedX v] til (x)
@@ -290,9 +290,9 @@ slutt
 si []
 </code></pre>
 </li>
-<li>
-<p>Til slutt kan vi endre på <code class="blockevents">Nytt spill</code>-blokken slik at
-vi bruker den nye funksjonen. For eksempel</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Til slutt kan vi endre på <code class="blockevents">Nytt spill</code>-blokken slik at
+vi bruker den nye funksjonen. For eksempel</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 vis
 Reis til [London] (-135) (-30) :: custom
@@ -300,12 +300,12 @@ Reis til [Oslo] (-30) (75) :: custom
 Reis til [Barcelona] (-135) (-175) :: custom
 </code></pre>
 </li>
-<li>
-<p>Om du prøver spillet nå vil du kanskje oppdage et lite
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Om du prøver spillet nå vil du kanskje oppdage et lite
 problem. Dersom du ikke flytter deg etter å ha funnet det første
 reisemålet, vil det neste reisemålet bli funnet automatisk. Det er
 fordi vi ikke rekker å flytte sirkelen før vi tester om den berører
-helikopteret.</p>
+helikopteret.</label></p>
 <p>Den enkleste måten å løse dette på er å legge på klossen</p>
 <pre><code class="blocks">vent til &lt;ikke &lt;berører [Helikopter v]?&gt;&gt;
 </code></pre>
@@ -316,16 +316,16 @@ helikopteret.</p>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Flyr helikopteret rundt på kartet på en naturlig måte?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Flyr helikopteret rundt på kartet på en naturlig måte?</label></p>
 </li>
-<li>
-<p>Fungerer reisemålene slik de skal? Ligger de omtrent der de skal
-ligge?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Fungerer reisemålene slik de skal? Ligger de omtrent der de skal
+ligge?</label></p>
 </li>
-<li>
-<p>Kan du reise til flere reisemål på rad?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Kan du reise til flere reisemål på rad?</label></p>
 </li>
 </ul>
 </section>
@@ -338,24 +338,24 @@ tilfeldig reiserute. Vi skal også se hvordan vi kan lage en intro til
 spillet, samt legge på en tidsbegrensning og poengsum.</p>
 <section class="try" id="prov-selv">
 <h2 class="try" id="prov-selv">Prøv selv</h2>
-<ul>
-<li>
-<p>Kan du legge til flere reisemål på egen hånd? Husk at det er lurt å
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Kan du legge til flere reisemål på egen hånd? Husk at det er lurt å
 gjøre reisemålet synlig mens du tester. Da blir det enklere å finne
-koordinatene til reisemålet!</p>
+koordinatene til reisemålet!</label></p>
 </li>
-<li>
-<p>Spillet blir morsommere hvis ikke reisemålene kommer i samme
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Spillet blir morsommere hvis ikke reisemålene kommer i samme
 rekkefølge hver gang du spiller. Hvordan kan du få reisemålene til å
-komme i tilfeldig rekkefølge? Prøv å lage kode som gjør dette!</p>
+komme i tilfeldig rekkefølge? Prøv å lage kode som gjør dette!</label></p>
 </li>
-<li>
-<p>Fortsatt er ikke kartet så veldig stort. En måte å komme seg rundt
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Fortsatt er ikke kartet så veldig stort. En måte å komme seg rundt
 begrensningen på figurstørrelse i Scratch er å la bakgrunnen bestå
 av flere deler. Filen <a href="europakart.zip">europakart.zip</a>
 inneholder 9 kartfliser du kan prøve å pusle sammen. Du må da laste
 inn hver av dem som en egen figur. Hver av dem trenger omtrent samme
-kode som kartet vi har brukt så langt. Du må bare endre litt i <code class="blockmotion">gå til</code>-klossene.</p>
+kode som kartet vi har brukt så langt. Du må bare endre litt i <code class="blockmotion">gå til</code>-klossene.</label></p>
 </li>
 </ul>
 </section>

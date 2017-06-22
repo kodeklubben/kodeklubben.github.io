@@ -8,20 +8,20 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Monster - Pratende Munn</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/lag_ditt_eget_monster/monster-munn.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å få monsteret til å snakke, kan du bruke en
-<code class="blocklooks">si</code>-kloss.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> For å få monsteret til å snakke, kan du bruke en
+<code class="blocklooks">si</code>-kloss.</label></p>
 <pre><code class="blocks">når [mellomrom v] trykkes
 si [Hallo!] i (2) sekunder
 </code></pre>
 </li>
-<li>
-<p>For å gjøre det litt mer imponerende, kan du få monsteret til å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> For å gjøre det litt mer imponerende, kan du få monsteret til å
 <strong>åpne</strong> og <strong>lukke munnen</strong> mens det prater. For å gjøre dette,
 rediger figuren som inneholder munnen - opprett en ny <code>drakt</code> som
 har lukket munn. Ved å bytte mellom de to, kan du animere at munnen
-åpner og lukker seg.</p>
+åpner og lukker seg.</label></p>
 <pre><code class="blocks">gjenta (8) ganger
     vent (0.1) sekunder
     bytt drakt til [munnLukket v]
@@ -30,10 +30,10 @@ har lukket munn. Ved å bytte mellom de to, kan du animere at munnen
 slutt
 </code></pre>
 </li>
-<li>
-<p>For å koble de to skriptene sammen, kan du få
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> For å koble de to skriptene sammen, kan du få
 <code class="blocklooks">si</code>-klossen til å sende en melding, som den andre
-blokken kan reagere på.</p>
+blokken kan reagere på.</label></p>
 <pre><code class="blocks">når [mellomrom v] trykkes
 send melding [snakk v]
 si [Hallo!] i (2) sekunder
@@ -47,10 +47,10 @@ gjenta (8) ganger
 slutt
 </code></pre>
 </li>
-<li>
-<p>For å gjøre det litt mer fleksibelt, bruk en variabel for å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> For å gjøre det litt mer fleksibelt, bruk en variabel for å
 kontrollere <code class="blockdata">snakketid</code>, hvor lenge monsteret sier noe,
-og for å kontrollere hvor mange ganger animasjonsløkken er gjentatt.</p>
+og for å kontrollere hvor mange ganger animasjonsløkken er gjentatt.</label></p>
 <pre><code class="blocks">når [mellomrom v] trykkes
 sett [snakketid v] til [2]
 send melding [snakk v]
@@ -73,10 +73,10 @@ slutt
 </ul>
 <p><strong>(Merk at vi multipliserer snakketid med 4 for å være sikre på at
 løkken gjentas nok ganger)</strong></p>
-<ul>
-<li>
-<p>Du kan også få monsteret ditt til å si lyder ved å bruke en av
-lydklossene. Husk å importere lydene under <code>Lyd</code>-fanen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Du kan også få monsteret ditt til å si lyder ved å bruke en av
+lydklossene. Husk å importere lydene under <code>Lyd</code>-fanen.</label></p>
 <pre><code class="blocks">når jeg mottar [snakk v]
 spill lyden [Screech v]
 </code></pre>

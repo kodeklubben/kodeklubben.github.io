@@ -14,10 +14,10 @@ function relative (url) {
 <section class="activity" id="legg-til-video-fra-youtube">
 <h1 class="activity" id="legg-til-video-fra-youtube">Legg til video fra YouTube</h1>
 <p>Å legge til enn video fra YouTube er veldig lett.</p>
-<ul>
-<li>Gå til videoen sin side på YouTube</li>
-<li>Under videospilleren finner du en <code>Del</code>/<code>Share</code> knapp. Trykk på den.</li>
-<li>For å få kode du kan bruke på nettsiden din, trykk <code>Embed</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Gå til videoen sin side på YouTube</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Under videospilleren finner du en <code>Del</code>/<code>Share</code> knapp. Trykk på den.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> For å få kode du kan bruke på nettsiden din, trykk <code>Embed</code>.</label></li>
 </ul>
 <p>Koden vil ligne på dette:</p>
 <pre><code>&lt;<span class="hljs-selector-tag">iframe</span> <span class="hljs-attribute">width</span>=<span class="hljs-string">"560"</span> height=<span class="hljs-string">"315"</span> src=<span class="hljs-string">"//www.youtube.com/embed/FjgQbPwkljQ"</span> frameborder=<span class="hljs-string">"0"</span> allowfullscreen&gt;&lt;/iframe&gt;
@@ -26,59 +26,61 @@ function relative (url) {
 </section>
 <section class="activity" id="legg-til-en-video-fra-vimeo">
 <h1 class="activity" id="legg-til-en-video-fra-vimeo">Legg til en video fra Vimeo.</h1>
-<ul>
-<li>Gå på videosiden på Vimeo.</li>
-<li>Klikk på <code>Del</code>/<code>Share</code> knappen i videospilleren.</li>
-<li>Nederst vises det en boks med <em>Embed</em>. Klikk på den og kopiere koden. Koden vil ligne på dette:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Gå på videosiden på Vimeo.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Klikk på <code>Del</code>/<code>Share</code> knappen i videospilleren.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Nederst vises det en boks med <em>Embed</em>. Klikk på den og kopiere koden. Koden vil ligne på dette:</label></li>
 </ul>
 <pre><code>&lt;<span class="hljs-selector-tag">iframe</span> src=<span class="hljs-string">"http://player.vimeo.com/video/44738167?title=0&amp;amp;byline=0&amp;amp;portrait=0&amp;amp;badge=0"</span> <span class="hljs-attribute">width</span>=<span class="hljs-string">"600"</span> height=<span class="hljs-string">"338"</span> frameborder=<span class="hljs-string">"0"</span> webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
 </code></pre>
-<ul>
-<li>Lim inn koden der du vil at videoen skal vises på siden. Legg merke til <code>width</code>(bredde) og <code>height</code>(høyde) attributtene. De gjør at du kan bestemme hvor stort videoen skal  vises på nettsiden. Forsøk gjerne å forandre på de.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lim inn koden der du vil at videoen skal vises på siden. Legg merke til <code>width</code>(bredde) og <code>height</code>(høyde) attributtene. De gjør at du kan bestemme hvor stort videoen skal  vises på nettsiden. Forsøk gjerne å forandre på de.</label></li>
 </ul>
 </section>
 <section class="activity" id="legge-til-en-video-fra-datamaskinen-din">
 <h1 class="activity" id="legge-til-en-video-fra-datamaskinen-din">Legge til en video fra datamaskinen din</h1>
 <p>Hvis du har en video du har laget kan du legge den til på siden din uten å laste den opp på YouTube eller Vimeo.</p>
-<ul>
-<li>For å legge til en video på siden din må du legge til en <code>video</code> tag. Akkurat som <code>img</code> taggen har også video en <code>src</code> attributt som peker på filen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> For å legge til en video på siden din må du legge til en <code>video</code> tag. Akkurat som <code>img</code> taggen har også video en <code>src</code> attributt som peker på filen:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.mp4"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
 <p>Det som er kjedelig når man legger til video er at ikke aller nettleserene klarer å spille av alle videoformatene. <code>.mp4</code> og <code>.ogv</code> fungere i de fleste nettleserene, så det kan lønne seg å lagre videoen din i et av de formatene.</p>
-<p>For å la nettleseren vite at vi har flere formater tilgjengelig, kan vi skrive følgende kode:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> For å la nettleseren vite at vi har flere formater tilgjengelig, kan vi skrive følgende kode:</label></li>
+</ul>
 <pre><code>  <span class="hljs-symbol">&lt;video&gt;</span>
     &lt;<span class="hljs-keyword">source</span> src=<span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"video/ogg"</span>&gt;
     &lt;<span class="hljs-keyword">source</span> src=<span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">"video/mp4"</span>&gt;
   &lt;/video&gt;
 </code></pre>
-<ul>
-<li>For å legge til et bilde som vises før videoen spilles av, kan du bruke 'poster' attributtet på videotaggen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> For å legge til et bilde som vises før videoen spilles av, kan du bruke 'poster' attributtet på videotaggen:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"romskip_landing.jpg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/ogg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/mp4"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Hvis du vil at videoen automatisk skal start å spilles av kan du legge til <code>autoplay</code> attributtet. Det gjøres på denne måten:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Hvis du vil at videoen automatisk skal start å spilles av kan du legge til <code>autoplay</code> attributtet. Det gjøres på denne måten:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"romskip_landing.jpg"</span> <span class="hljs-attr">autoplay</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/ogg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/mp4"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
-<ul>
-<li>For å vise knapper til å styre videoen med, sånn som spill av, pause, volum og så videre kan du legge til <code>controls</code> attributtet:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> For å vise knapper til å styre videoen med, sånn som spill av, pause, volum og så videre kan du legge til <code>controls</code> attributtet:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"romskip_landing.jpg"</span> <span class="hljs-attr">controls</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/ogg"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.mp4"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/mp4"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Du kan også styre størrelsen på videoen med <code>width</code>(bredde) og <code>height</code>(høyde) attributtene på følgende måte:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Du kan også styre størrelsen på videoen med <code>width</code>(bredde) og <code>height</code>(høyde) attributtene på følgende måte:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"romskip_landing.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"600"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"400"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip_landing.ogv"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"video/ogg"</span>&gt;</span>
@@ -89,8 +91,8 @@ function relative (url) {
 <section class="activity" id="legg-til-en-lydfil-fra-datamaskinen-din">
 <h1 class="activity" id="legg-til-en-lydfil-fra-datamaskinen-din">Legg til en lydfil fra datamaskinen din</h1>
 <p>Måten man legger lydfiler til på nettsiden din er ganske lik måten man legger til videoer på.</p>
-<ul>
-<li>For å legge til en lydfil kan du skrive dette:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> For å legge til en lydfil kan du skrive dette:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip.mp3"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
@@ -102,16 +104,16 @@ function relative (url) {
      &lt;<span class="hljs-keyword">source</span> src=<span class="hljs-string">"romskip.ogg"</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">'audio/ogg; codecs=vorbis'</span>&gt;
   &lt;/audio&gt;
 </code></pre>
-<ul>
-<li>For å legge til knapper for å styre lydavspillingen må du legge til <code>controls</code> attributtet:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> For å legge til knapper for å styre lydavspillingen må du legge til <code>controls</code> attributtet:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip.mp3"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'audio/mp3'</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip.ogg"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'audio/ogg; codecs=vorbis'</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Hvis du ønsker at lyden skal starte å spilles av med en gang man går inn på nettsiden kan du legge til <code>autoplay</code> attributten på denn måten:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Hvis du ønsker at lyden skal starte å spilles av med en gang man går inn på nettsiden kan du legge til <code>autoplay</code> attributten på denn måten:</label></li>
 </ul>
 <pre><code>  <span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">autoplay</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"romskip.mp3"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">'audio/mp3'</span>&gt;</span>

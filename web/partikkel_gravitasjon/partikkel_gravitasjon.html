@@ -56,9 +56,9 @@ function relative (url) {
 <section class="activity" id="steg-1-fa-partikkelet-til-a-falle">
 <h1 class="activity" id="steg-1-fa-partikkelet-til-a-falle">Steg 1: Få partikkelet til å falle</h1>
 <p>Det første vi skal gjøre er å få partikkelet til å falle, for å få det til å skje må du programmere følgende:</p>
-<ul>
-<li>Legg til to attributter i <code>particle</code> som skal holde styr på <code>gravitasjonen</code> og <code>hastigheten</code> den faller med. <code>Gravitasjons</code>-attributtet bør være et lite tall, som for eksempel <code>0.01</code>. <code>Hastigheten</code> bør være <code>0</code> fra starten av.</li>
-<li>Sett et passende startsted for <code>particle</code>, helst høyt oppe</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Legg til to attributter i <code>particle</code> som skal holde styr på <code>gravitasjonen</code> og <code>hastigheten</code> den faller med. <code>Gravitasjons</code>-attributtet bør være et lite tall, som for eksempel <code>0.01</code>. <code>Hastigheten</code> bør være <code>0</code> fra starten av.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Sett et passende startsted for <code>particle</code>, helst høyt oppe</label></li>
 </ul>
 <p>For hver gang <code>draw()</code> kjører, skal følgende skje:</p>
 <ul>
@@ -76,9 +76,9 @@ function relative (url) {
 <section class="activity" id="steg-2-stopp-nederst-pa-skjermen">
 <h1 class="activity" id="steg-2-stopp-nederst-pa-skjermen">Steg 2: Stopp nederst på skjermen</h1>
 <p>For at partikkelet vårt skal stoppe nederst på skjermen trenger vi enkelt og greit en sjekk hver gang vi kjører <code>draw()</code>:</p>
-<ul>
-<li>Lag en sjekk som sjekker om <code>particle</code> sin <code>y</code>-verdi er større enn høyden på <code>canvas</code>-objektet.
-OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du også ta hensyn til størrelsen på partikkel-objektet når du sjekker hvor langt ned den er.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lag en sjekk som sjekker om <code>particle</code> sin <code>y</code>-verdi er større enn høyden på <code>canvas</code>-objektet.
+OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du også ta hensyn til størrelsen på partikkel-objektet når du sjekker hvor langt ned den er.</label></li>
 </ul>
 <toggle>
     <strong> Hint </strong>
@@ -86,16 +86,16 @@ OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du 
     Lag en variabel som holder på verdien til canvas.heigh - particle.size.
     </hide>
 </toggle>
-<ul>
-<li>I sjekken må du stoppe partikkelet ved å sette <code>y</code>-verdien. Kan du tenke deg til hva <code>y</code>-verdien bør være?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> I sjekken må du stoppe partikkelet ved å sette <code>y</code>-verdien. Kan du tenke deg til hva <code>y</code>-verdien bør være?</label></li>
 </ul>
 <p>Nå har du et fallende objekt!</p>
 <section class="challenge" id="utfordringer">
 <h2 class="challenge" id="utfordringer">Utfordringer</h2>
-<ul>
-<li>Når partikkelet treffer kanten, snu gravitasjonen sånn at partikkelet går oppover</li>
-<li>Klarer du å få partikkelet til å gå til venster eller høyre også?</li>
-<li>&quot;Steng&quot; alle kantene i <code>canvas</code> ved hjelp av flere <code>if</code>-setninger</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Når partikkelet treffer kanten, snu gravitasjonen sånn at partikkelet går oppover</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Klarer du å få partikkelet til å gå til venster eller høyre også?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> &quot;Steng&quot; alle kantene i <code>canvas</code> ved hjelp av flere <code>if</code>-setninger</label></li>
 </ul>
 </section>
 </section>
@@ -111,8 +111,8 @@ OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du 
     }
 }
 </code></pre>
-<ul>
-<li>Bruk <a href="http://keycode.info">keycode.info</a> til å finne ut hvilke <code>knapp-kode</code> knappen du vil bruke har.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Bruk <a href="http://keycode.info">keycode.info</a> til å finne ut hvilke <code>knapp-kode</code> knappen du vil bruke har.</label></li>
 </ul>
 <section class="try" id="forklaring">
 <h2 class="try" id="forklaring">Forklaring</h2>
@@ -133,12 +133,12 @@ OBS! Du vil sikkert merke at den &quot;rister&quot; helt nederst, derfor må du 
 </section>
 <section>
 <h2 id=""></h2>
-<ul>
-<li>
-<p>For at du skal få gravitasjonen tilbake når du slipper knappen må du lage en funksjon for <code>window.onkeyup</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> For at du skal få gravitasjonen tilbake når du slipper knappen må du lage en funksjon for <code>window.onkeyup</code>.</label></p>
 </li>
-<li>
-<p>Les mer om <code>window.onkeyup</code> osv her: <a href="http://www.w3schools.com/jsref/event_onkeydown.asp">w3school</a></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Les mer om <code>window.onkeyup</code> osv her: <a href="http://www.w3schools.com/jsref/event_onkeydown.asp">w3school</a></label></p>
 </li>
 </ul>
 <p>Dersom du står bomfast: <a href="https://jsbin.com/sezumakiyo/edit?html,output">Forlag til kode</a></p>

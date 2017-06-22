@@ -42,30 +42,30 @@ gi datamaskinene to roller: server og klient.</p>
 <section class="check" id="steg-2-klar-til-a-motta-beskjed">
 <h2 class="check" id="steg-2-klar-til-a-motta-beskjed">Steg 2: Klar til å motta beskjed</h2>
 <p>Nå skal vi bruke <em>Sendulf</em> og <em>MaxMottak</em> til å sende beskjeder. Siden kontrolleren aktivt skal sende beskjeder, blir <em>Sendulf</em> klienten vår, mens <em>MaxMottak</em> er serveren.</p>
-<ul>
-<li>
-<p>Sjekk id på <em>MaxMottak</em>. Min <em>MaxMottak</em> svarte følgende:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Sjekk id på <em>MaxMottak</em>. Min <em>MaxMottak</em> svarte følgende:</label></p>
 <pre><code>&gt; <span class="hljs-built_in">id</span>
 This <span class="hljs-keyword">is</span> computer <span class="hljs-comment">#5</span>
 This computer <span class="hljs-keyword">is</span> labelled <span class="hljs-string">"MaxMottak"</span>
 </code></pre>
 </li>
-<li>
-<p>Sjekk plassering av modem på <em>MaxMottak</em>. Min svarte:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Sjekk plassering av modem på <em>MaxMottak</em>. Min svarte:</label></p>
 <pre><code>&gt; peripherals
 left (<span class="hljs-name">modem</span>)
 </code></pre>
 </li>
-<li>
-<p>Start lua-tolkeren:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Start lua-tolkeren:</label></p>
 <pre><code>&gt; lua
 Interactive Lua prompt.
 call <span class="hljs-keyword">exit</span>() to <span class="hljs-keyword">exit</span>.
 lua&gt;
 </code></pre>
 </li>
-<li>
-<p>Koble til <code>rednet</code> og vent på beskjed. Husker du hvor modemet var plassert?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Koble til <code>rednet</code> og vent på beskjed. Husker du hvor modemet var plassert?</label></p>
 <pre><code class="lua">lua&gt; rednet.<span class="hljs-built_in">open</span>(<span class="hljs-string">"left"</span>)
 lua&gt; rednet.receive(<span class="hljs-number">100</span>)
 </code></pre>
@@ -78,15 +78,15 @@ lua&gt; rednet.receive(<span class="hljs-number">100</span>)
 </section>
 <section>
 <h2 id="steg-3-send-beskjed">Steg 3: Send beskjed</h2>
-<ul>
-<li>
-<p>Sjekk hvor modemet var plassert på <em>Sendulf</em></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Sjekk hvor modemet var plassert på <em>Sendulf</em></label></p>
 </li>
-<li>
-<p>Start lua-tolkeren på <em>Sendulf</em>. Hvor var modemet? Må du kalle <code>rednet.open(&quot;left&quot;)</code>, <code>rednet.open(&quot;right&quot;)</code> eller <code>rednet.open(&quot;back&quot;)</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Start lua-tolkeren på <em>Sendulf</em>. Hvor var modemet? Må du kalle <code>rednet.open(&quot;left&quot;)</code>, <code>rednet.open(&quot;right&quot;)</code> eller <code>rednet.open(&quot;back&quot;)</code>?</label></p>
 </li>
-<li>
-<p>Hva var id-en til din <em>MaxMottak</em>? Denne trenger vi når vi skal sende informasjon. Min var 5. Jeg bruker derfor 5 når jeg sender beskjeden min:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Hva var id-en til din <em>MaxMottak</em>? Denne trenger vi når vi skal sende informasjon. Min var 5. Jeg bruker derfor 5 når jeg sender beskjeden min:</label></p>
 <pre><code class="lua">rednet.send(<span class="hljs-number">5</span>, <span class="hljs-string">"Hello, MaxMottak! Dette er Sendulf! Kan du høre meg?"</span>)
 </code></pre>
 <p><figure><img src="melding_sendulf.png" alt=""></figure></p>
@@ -96,10 +96,10 @@ lua&gt; rednet.receive(<span class="hljs-number">100</span>)
 </section>
 <section class="flag" id="test-selv">
 <h2 class="flag" id="test-selv">Test selv!</h2>
-<ul>
-<li>Ser du beskjeden du har sendt på <em>MaxMottak</em>?</li>
-<li>Hva må du gjøre for å sende flere beskjeder etter hverandre?</li>
-<li>Worker viser et tall i tillegg til beskjeden du sendte. Hva er tallet?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Ser du beskjeden du har sendt på <em>MaxMottak</em>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Hva må du gjøre for å sende flere beskjeder etter hverandre?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Worker viser et tall i tillegg til beskjeden du sendte. Hva er tallet?</label></li>
 </ul>
 </section>
 </section>

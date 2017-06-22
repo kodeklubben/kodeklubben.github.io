@@ -22,9 +22,9 @@ tegne former med kanter, mange kanter.</p>
 på datamaskinen.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start Processing og skriv dette:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start Processing og skriv dette:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span> x;
 <span class="hljs-built_in">float</span> y;
 <span class="hljs-built_in">float</span> xFart = <span class="hljs-number">1.5</span>;
@@ -63,34 +63,32 @@ på datamaskinen.</p>
 <p>Dette programmet er ganske likt det som ble lagd i siste oppgave
 om den sprettende ballen, men det er noen små forskjeller:</p>
 <ul>
-<li>
-<p>Vi har endret tallene brukt i <code>if</code>-setningene. Hvorfor tror du
+<li>Vi har endret tallene brukt i <code>if</code>-setningene. Hvorfor tror du
 dette er gjort? Hva skjer om du også tegner opp en sirkel med
-samme posisjon og størrelse som firkanten?</p>
-</li>
-<li>
-<p>Vi har også tatt i bruk <code>+=</code>. <code>x += 1;</code> gjør det samme som <code>x = x + 1;</code> Dette er bare en forkortelse for det siste. Altså øk <code>x</code>
-med det som står på høyresiden av <code>+=</code>.</p>
-</li>
+samme posisjon og størrelse som firkanten?</li>
+</ul>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Vi har også tatt i bruk <code>+=</code>. <code>x += 1;</code> gjør det samme som <code>x = x + 1;</code> Dette er bare en forkortelse for det siste. Altså øk <code>x</code>
+med det som står på høyresiden av <code>+=</code>.</label></li>
 </ul>
 </li>
-<li>
-<p>Kjør programmet ved å trykke på <strong>Ctrl + R</strong> eller knappen
-<img src="../play.png" alt="" title="Play - En knapp i verktøylinjen merket med pil"></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Kjør programmet ved å trykke på <strong>Ctrl + R</strong> eller knappen
+<img src="../play.png" alt="" title="Play - En knapp i verktøylinjen merket med pil"></label></p>
 </li>
 </ul>
 <p><figure><img src="SprettendeFirkant.gif" alt="" title="En hvit firkant spretter rundt på en svart bakgrunn."></figure></p>
-<ul>
-<li>Lagre programmet som Firkant ved å trykke på <strong>Ctrl+S</strong> eller
-velg <strong>File --&gt; Save</strong> i menyen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lagre programmet som Firkant ved å trykke på <strong>Ctrl+S</strong> eller
+velg <strong>File --&gt; Save</strong> i menyen.</label></li>
 </ul>
 </section>
 <section class="try" id="utfordringer">
 <h2 class="try" id="utfordringer">Utfordringer</h2>
-<ul>
-<li>Kan du lage et rektangel som ikke er kvadratisk, altså hvor bredden
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Kan du lage et rektangel som ikke er kvadratisk, altså hvor bredden
 og høyden er forskjellig? Husk at vi vil at den skal sprette idet
-den treffer kanten av vinduet.</li>
+den treffer kanten av vinduet.</label></li>
 </ul>
 </section>
 </section>
@@ -103,10 +101,10 @@ kontroll over hvordan trekanten så ut. Derfor må vi si for hvert
 hjørne befinner seg.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi skal nå bytte ut firkanten med en enkel trekant. Endre <code>draw</code> som
-vist under:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Vi skal nå bytte ut firkanten med en enkel trekant. Endre <code>draw</code> som
+vist under:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   x += xFart;
   y += yFart;
@@ -137,12 +135,12 @@ posisjonen til det første hjørnet øverst til venstre, <code>x + 100, y</code>
 er posisjonen til det øverste høyre hjørnet og <code>x + 50, y + 100</code>
 er det siste hjørnet nederst i midten.</p>
 </li>
-<li>
-<p>Lagre programmet som <em>Trekant</em> ved å velge <strong>File -&gt; Save as</strong> eller
-trykke <strong>Shift + Ctrl + S</strong>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lagre programmet som <em>Trekant</em> ved å velge <strong>File -&gt; Save as</strong> eller
+trykke <strong>Shift + Ctrl + S</strong>.</label></p>
 </li>
-<li>
-<p>Kjør programmet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Kjør programmet.</label></p>
 </li>
 </ul>
 <p><figure><img src="SprettendeTrekant1.gif" alt="" title="En hvit trekant som peker nedover, spretter rundt på en svart bakgrunn."></figure></p>
@@ -166,18 +164,18 @@ mellomrom den mener er overflødig.</p>
 </section>
 <section class="try" id="utfordringer-2">
 <h2 class="try" id="utfordringer-2">Utfordringer</h2>
-<ul>
-<li>Kan du tegne trekanten motsatt vei, sånn at den ser ut som en
-pil som peker oppover istedenfor nedover?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Kan du tegne trekanten motsatt vei, sånn at den ser ut som en
+pil som peker oppover istedenfor nedover?</label></li>
 </ul>
 <p><figure><img src="SprettendeTrekant2.gif" alt="" title="En hvit trekant som peker oppover, spretter rundt på en svart bakgrunn."></figure></p>
-<ul>
-<li>Kan du tegne to trekanter istedenfor en og lage en sekskantet
-stjerne?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Kan du tegne to trekanter istedenfor en og lage en sekskantet
+stjerne?</label></li>
 </ul>
 <p><figure><img src="SprettendeSekskantetStjerne.gif" alt="" title="En hvit sekskantet stjerne spretter rundt på en svart bakgrunn."></figure></p>
-<ul>
-<li><strong>Vanskelig</strong>: Trekanten i programmet er nesten likesidet, men den
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> <strong>Vanskelig</strong>: Trekanten i programmet er nesten likesidet, men den
 er litt for høy, så to av sidene er rundt 12 piksler for lange. Kan
 du endre regnestykket <code>y + 100</code> sånn at trekanten blir likesidet? Du
 kan bruke Pytagoras' læresetning, eller sinus-funksjonen,
@@ -185,7 +183,7 @@ kan bruke Pytagoras' læresetning, eller sinus-funksjonen,
 for å finne den riktige høyden. Funksjonen
 <a href="https://processing.org/reference/radians_.html"><code>radians</code></a> kan være
 til hjelp for å gjøre om grader til radianer hvis du vil bruke
-sinus-funksjonen.</li>
+sinus-funksjonen.</label></li>
 </ul>
 </section>
 </section>
@@ -203,9 +201,9 @@ det oversettes noen ganger til liste, vektor, rekke, tabell eller
 matrise.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner med å endre variablene til <em>arrays</em>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi begynner med å endre variablene til <em>arrays</em>:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span>[] x = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
 <span class="hljs-built_in">float</span>[] y = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
 <span class="hljs-built_in">float</span>[] xFart = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[<span class="hljs-number">3</span>];
@@ -217,9 +215,9 @@ matrise.</p>
 likhetstegnet ser vi også noe nytt <code>new float[3]</code> betyr at vi skal
 lage en ny <code>float</code>-<em>array</em> med tre tall i.</p>
 </li>
-<li>
-<p>Nå må vi endre startverdiene til disse tallene, ellers vil de bare
-være <code>0</code> alle sammen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Nå må vi endre startverdiene til disse tallene, ellers vil de bare
+være <code>0</code> alle sammen:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
 
@@ -248,9 +246,9 @@ plasseringen kalles <em>indeks</em>. Indeksen er alltid én lavere enn om
 vi skulle telle vanlig fordi vi begynner på <code>0</code>. Derfor er den
 siste indeksen én lavere enn størrelsen.</p>
 </li>
-<li>
-<p>Og til slutt må vi flytte rundt på hjørnene og tegne opp trekanten
-vår:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Og til slutt må vi flytte rundt på hjørnene og tegne opp trekanten
+vår:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; x.length; i++) {
     x[i] += xFart[i];
@@ -311,12 +309,12 @@ veldig glad for at man slipper å skrive den samme koden mange ganger.</p>
 </section>
 <section class="try" id="utfordringer-3">
 <h2 class="try" id="utfordringer-3">Utfordringer</h2>
-<ul>
-<li>Det går også an å lage firkanter hvor man plasserer hvert hjørne for
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Det går også an å lage firkanter hvor man plasserer hvert hjørne for
 seg. Da bruker man funksjonen <code>quad</code> istedenfor <code>rect</code>. Prøv å endre
 programmet til å lage en firkant med hjørner som spretter rundt på
 skjermen. Hvor mange flere variabler trenger du enn for trekanten?
-Hvor mange parametere tar <code>quad</code>?</li>
+Hvor mange parametere tar <code>quad</code>?</label></li>
 </ul>
 </section>
 </section>
@@ -327,10 +325,10 @@ et generelt navn for en form med flere kanter, som trekanter,
 firkanter, femkanter, osv.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner med å endre på størrelsen på <em>arrayene</em> i forrige
-oppgave:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Vi begynner med å endre på størrelsen på <em>arrayene</em> i forrige
+oppgave:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">int</span> KANTER = <span class="hljs-number">5</span>;
 <span class="hljs-built_in">float</span>[] x = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[KANTER];
 <span class="hljs-built_in">float</span>[] y = <span class="hljs-keyword">new</span> <span class="hljs-built_in">float</span>[KANTER];
@@ -342,11 +340,11 @@ hjelper leseligheten og gjør det enklere å endre antall kanter
 fordi vi bare trenger å endre tallet ett sted istedenfor fire
 steder.</p>
 </li>
-<li>
-<p>Posisjonene og hastighetene til hjørnene ble satt til faste verdier,
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Posisjonene og hastighetene til hjørnene ble satt til faste verdier,
 men hvis vi ikke vet nøyaktig hvor mange kanter det er fungerer ikke
 det så bra. Så vi endrer på <code>setup</code> til å bruke en løkke for å sette
-startverdiene:</p>
+startverdiene:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
 
@@ -366,11 +364,11 @@ får vi et tall mellom <code>0</code> og <code>1</code>. Hvis vi kaller den med 
 bruker to verdier, <code>random(-5, 5)</code>, får vi et tall mellom de to
 verdiene.</p>
 </li>
-<li>
-<p>Nå skal vi tegne opp mangekanten vår. Vi trenger ikke å endre på den
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Nå skal vi tegne opp mangekanten vår. Vi trenger ikke å endre på den
 første løkken i <code>draw</code>, men jeg synes vi skal bytte testen så den
 likner den over. Vi skal bytte ut kallet på <code>triangle</code> med en løkke
-som tegner hver kant:</p>
+som tegner hver kant:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; KANTER; i++) {
     x[i] += xFart[i];
@@ -414,10 +412,10 @@ uten <code>CLOSE</code>, blir ikke formen lukket og fylt.</p>
 </section>
 <section class="try" id="utfordringer-4">
 <h2 class="try" id="utfordringer-4">Utfordringer</h2>
-<ul>
-<li>
-<p>Kan du bruke <code>random</code> til å få hjørnene til å endre hastighet når de
-treffer kanten av vinduet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Kan du bruke <code>random</code> til å få hjørnene til å endre hastighet når de
+treffer kanten av vinduet?</label></p>
 <p>Pass på, om farten blir lavere enn den var, kan hjørnet bli
 sittende fast i kanten av vinduet. Det er fordi vi egentlig lar
 den bevege seg litt utenfor vinduet for så å snu. Sett <code>x</code> eller

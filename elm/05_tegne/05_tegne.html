@@ -48,8 +48,8 @@ er det helt greit.</p>
 <section class="activity" id="steg-1-sirkel-og-rektangel">
 <h1 class="activity" id="steg-1-sirkel-og-rektangel">Steg 1: sirkel og rektangel</h1>
 <p>Vi prøver først litt med <a href="http://elm-lang.org/try">Try Elm</a>.</p>
-<ul>
-<li>Lim inn dette i kodefeltet:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Lim inn dette i kodefeltet:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Svg <span class="hljs-keyword">exposing</span> (svg, circle, rect)
 <span class="hljs-keyword">import</span> Svg.Attributes <span class="hljs-keyword">exposing</span> (width, height, viewBox, cx, cy, r, fill, x, y, width, height)
@@ -59,7 +59,7 @@ er det helt greit.</p>
     svg
       [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 200 200"</span> ]
       [ circle [ cx <span class="hljs-string">"30"</span>, cy <span class="hljs-string">"50"</span>, r <span class="hljs-string">"50"</span>, fill <span class="hljs-string">"blue"</span> ] [  ]
-      , rect [ x <span class="hljs-string">"100"</span>, y <span class="hljs-string">"100"</span>, width <span class="hljs-string">"80"</span>, height <span class="hljs-string">"40"</span>, fill <span class="hljs-string">"red"</span> ] [ ]
+      , rect [ x <span class="hljs-string">"100"</span>, y <span class="hljs-string">"100"</span>, width <span class="hljs-string">"80"</span>, height <span class="hljs-string">"40"</span>, fill <span class="hljs-string">"red"</span> ] - [ ]
       ]
 </code></pre>
 <p>Da skal du se noe slikt:</p>
@@ -84,17 +84,17 @@ Potential problems could be:
   * Need to add a source directory or new dependency to elm-package.json
 </code></pre>
 <p>Da må vi installere pakken <code>svg</code>.</p>
-<ul>
-<li>
-<p>Åpne et kommandovindu i <strong>samme mappe som du har lagret Elm-programmet ditt</strong></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Åpne et kommandovindu i <strong>samme mappe som du har lagret Elm-programmet ditt</strong></label></p>
 <p>Hvis jeg har en mappe på skrivebordet mitt som heter Elm, skal jeg se
 følgende: <code>C:\Users\teodor\Desktop\Elm&gt;</code></p>
 </li>
-<li>
-<p>Kjør <code>elm package install elm-lang/svg</code></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Kjør <code>elm package install elm-lang/svg</code></label></p>
 </li>
-<li>
-<p>Start <code>elm reactor</code> på nytt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Start <code>elm reactor</code> på nytt.</label></p>
 </li>
 </ul>
 <p>Fungerer det nå?</p>
@@ -108,19 +108,19 @@ avsnitt og <code>h1</code> for overskrifter.</p>
 </code></pre>
 <p>Nå bruker vi pakken <strong>Svg</strong> og importerer funksjoner som <code>circle</code> for sirkel og
 <code>rect</code> for rektangler.</p>
-<ul>
-<li>Trykk på <code>circle</code>. Ser du teksten <code>Docs: Svg.circle</code> som dukket opp over?
-<code>Svg.circle</code> er en link til dokumentasjonen! Trykk på denne.</li>
-<li>Stemmer eksempelet for <code>circle</code> med koden vår? Hva er forskjellig?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Trykk på <code>circle</code>. Ser du teksten <code>Docs: Svg.circle</code> som dukket opp over?
+<code>Svg.circle</code> er en link til dokumentasjonen! Trykk på denne.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Stemmer eksempelet for <code>circle</code> med koden vår? Hva er forskjellig?</label></li>
 </ul>
 <p>Rect er det ikke (per februar 2017) noe eksempel for.</p>
-<ul>
-<li>
-<p>Gå til <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">Mozilla sin dokumentasjon for SVG-elementet <code>rect</code></a>.
-Hva står det under <strong>Specific attributes</strong>? Bruker vi noen av disse?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Gå til <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">Mozilla sin dokumentasjon for SVG-elementet <code>rect</code></a>.
+Hva står det under <strong>Specific attributes</strong>? Bruker vi noen av disse?</label></p>
 </li>
-<li>
-<p>Finner du <code>path</code> i dokumentasjonen til Elm?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Finner du <code>path</code> i dokumentasjonen til Elm?</label></p>
 </li>
 </ul>
 </section>
@@ -134,18 +134,18 @@ Hva står det under <strong>Specific attributes</strong>? Bruker vi noen av diss
 </code></pre>
 <p><code>width &quot;500&quot;</code> sier at vi skal bruke 500 pixler i bredden.</p>
 <p><code>height &quot;500&quot;</code> sier at vi skal bruke 500 pixler i høyden.</p>
-<ul>
-<li>
-<p>Sjekk at du får en 500x500 px boks i nettleseren din. Slik ser det ut når jeg
-sjekker:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Sjekk at du får en 500x500 px boks i nettleseren din. Slik ser det ut når jeg
+sjekker:</label></p>
 <p><figure><img src="inspect_svg.png" alt=""></figure></p>
 </li>
 </ul>
 <p><code>viewBox &quot;0 0 200 200&quot;</code> definerer koordinatsystemet vårt: x er fra 0 til 200 og
 y er fra 0 til 200.</p>
-<ul>
-<li>Inspiser sirkelen. Hvor mange pixler tar sirkelen?</li>
-<li>Inspiser rektangelet. Hvor stort er dette?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Inspiser sirkelen. Hvor mange pixler tar sirkelen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Inspiser rektangelet. Hvor stort er dette?</label></li>
 </ul>
 <p>Jeg har satt et koordinatsystem med &quot;bredde&quot; 200 til å passe til 500 pixler på
 skjermen. En 20x20 firkant blir 50px x 50 px stor på skjermen.</p>
@@ -157,7 +157,7 @@ til.</p>
 <p>Nå har vi sagt at vi vil bruke koordinater mellom 0 og 200 til å tegne på
 nettsiden vår. Nå kan vi bruke disse til å tegne:</p>
 <pre><code class="elm">      [ circle [ cx <span class="hljs-string">"30"</span>, cy <span class="hljs-string">"50"</span>, r <span class="hljs-string">"50"</span>, fill <span class="hljs-string">"blue"</span> ] [  ]
-      , rect [ x <span class="hljs-string">"100"</span>, y <span class="hljs-string">"100"</span>, width <span class="hljs-string">"80"</span>, height <span class="hljs-string">"40"</span>, fill <span class="hljs-string">"red"</span> ] [ ]
+      , rect [ x <span class="hljs-string">"100"</span>, y <span class="hljs-string">"100"</span>, width <span class="hljs-string">"80"</span>, height <span class="hljs-string">"40"</span>, fill <span class="hljs-string">"red"</span> ] - [ ]
 </code></pre>
 <p>Vi tar <code>circle</code> først:</p>
 <table>
@@ -203,11 +203,11 @@ vi starter å lese i <code>(0,0)</code>:</p>
   y
 </code></pre>
 <p>Din tur!</p>
-<ul>
-<li>Gjør sirkelen grønn</li>
-<li>Sett sentrum for sirkelen til &quot;helt i midten&quot;. Hvis koordinatsystemet er fra 0
-til 200, hva er i midten?</li>
-<li>Hva skjer om du tegner sirkelen utenfor koordinatsystemet?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Gjør sirkelen grønn</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Sett sentrum for sirkelen til &quot;helt i midten&quot;. Hvis koordinatsystemet er fra 0
+til 200, hva er i midten?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Hva skjer om du tegner sirkelen utenfor koordinatsystemet?</label></li>
 </ul>
 <p>Så er det <code>rect</code> sin tur:</p>
 <table>
@@ -247,14 +247,14 @@ til 200, hva er i midten?</li>
 </tbody>
 </table>
 <p>Din tur!</p>
-<ul>
-<li>Lag en firkant som fyller hele koordinatsystemet!</li>
-<li>Gjør den svart.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Lag en firkant som fyller hele koordinatsystemet!</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Gjør den svart.</label></li>
 </ul>
 <p>Nå ser du ikke sirkelen i det hele tatt.</p>
-<ul>
-<li>
-<p>Bytt rekkefølgen på sirkelen og rektangelet:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Bytt rekkefølgen på sirkelen og rektangelet:</label></p>
 <pre><code class="elm"><span class="hljs-comment">-- fra noe sånt:</span>
     [ circle <span class="hljs-comment">-- ...</span>
     , rect <span class="hljs-comment">-- ...</span>
@@ -266,8 +266,8 @@ til 200, hva er i midten?</li>
     ]
 </code></pre>
 </li>
-<li>
-<p>Ser du noe nå? Hva kommer øverst?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Ser du noe nå? Hva kommer øverst?</label></p>
 </li>
 </ul>
 </section>
@@ -279,9 +279,9 @@ kan tegne både rette kurver og myke kurver.</p>
 <p>En linje går mellom <em>to</em> punkter. Vi skal ha noe som går mellom <em>mange</em> punkter!</p>
 <section class="check" id="importere-funksjoner-for-a-tegne-kurve">
 <h2 class="check" id="importere-funksjoner-for-a-tegne-kurve">Importere funksjoner for å tegne kurve</h2>
-<ul>
-<li>Importer <code>path</code> fra <strong>Svg</strong>, og <code>stroke</code> og <code>d</code> fra <strong>Svg.Attributes</strong>. Husker
-du hvordan du importerer moduler?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Importer <code>path</code> fra <strong>Svg</strong>, og <code>stroke</code> og <code>d</code> fra <strong>Svg.Attributes</strong>. Husker
+du hvordan du importerer moduler?</label></li>
 </ul>
 </section>
 <section class="protip" id="hvordan-a-importere-funksjoner-fra-moduler">
@@ -305,9 +305,9 @@ funksjonene:</p>
 </section>
 <section class="check" id="tegne-skrastrek">
 <h2 class="check" id="tegne-skrastrek">Tegne skråstrek</h2>
-<ul>
-<li>
-<p>Legg til en skrå strek gjennom bildet:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Legg til en skrå strek gjennom bildet:</label></p>
 <pre><code class="elm">[circle [ <span class="hljs-comment">-- ...</span>
 , rect [ <span class="hljs-comment">-- ...</span>
 , path [ fill <span class="hljs-string">"none"</span>, stroke <span class="hljs-string">"black"</span>, d <span class="hljs-string">"M0,0 200,200"</span> ] []
@@ -337,14 +337,14 @@ funksjonene:</p>
 <pre><code class="elm"><span class="hljs-title">main</span> =
     svg
       [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 100 100"</span> ]
-      [ circle [ cx <span class="hljs-string">"5"</span>, cy <span class="hljs-string">"5"</span>, r <span class="hljs-string">"5"</span>, fill <span class="hljs-string">"yellow"</span> ] [ ]
+      [ circle [ cx <span class="hljs-string">"5"</span>, cy <span class="hljs-string">"5"</span>, r <span class="hljs-string">"5"</span>, fill <span class="hljs-string">"yellow"</span> ] - [ ]
       ]
 </code></pre>
 <p>Ånei! Den var ikke stor!</p>
-<ul>
-<li>Endre sentrum (<code>cx</code> og <code>cy</code>) så sirkelen er i midten.</li>
-<li>Endre radius (<code>r</code>) på sirkelen så sirkelen blir stor! Hvor stor kan du gjøre
-den uten at den kuttes av i kantene?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Endre sentrum (<code>cx</code> og <code>cy</code>) så sirkelen er i midten.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Endre radius (<code>r</code>) på sirkelen så sirkelen blir stor! Hvor stor kan du gjøre
+den uten at den kuttes av i kantene?</label></li>
 </ul>
 </section>
 <section class="protip" id="bezierkurver">
@@ -385,9 +385,9 @@ forskjellige typer bezierkurver:</p>
 </section>
 <section class="check" id="en-munn-som-bezierkurve">
 <h2 class="check" id="en-munn-som-bezierkurve">En munn som bezierkurve</h2>
-<ul>
-<li>Gå til <a href="https://www.jasondavies.com/animated-bezier/">https://www.jasondavies.com/animated-bezier/</a></li>
-<li>Du kan dra i punktene. Klarer du å lage en munn?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Gå til <a href="https://www.jasondavies.com/animated-bezier/">https://www.jasondavies.com/animated-bezier/</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Du kan dra i punktene. Klarer du å lage en munn?</label></li>
 </ul>
 <p>Her er en <code>path</code> med bezierkurve i Elm:</p>
 <pre><code class="elm"><span class="hljs-title">path</span> [ fill <span class="hljs-string">"none"</span>, stroke <span class="hljs-string">"black"</span>, d <span class="hljs-string">"M20,60 C 40,50 60,50 80,60 "</span> ] []
@@ -395,9 +395,9 @@ forskjellige typer bezierkurver:</p>
 <p>I strengen <code>&quot;M20,60 C 40,50 60,50 80,60 &quot;</code> dukker det opp to mystiske variabler.
 <code>C</code> står for &quot;Cubic&quot;, og <code>M</code> står for &quot;Move to&quot;; begynn her.</p>
 <p>Ånei! Det ble et surt fjes!</p>
-<ul>
-<li>Kan du gjøre munnen blid igjen?</li>
-<li>Hva skjer om du bytter ut <code>C</code> med <code>L</code> eller <code>Q</code>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Kan du gjøre munnen blid igjen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Hva skjer om du bytter ut <code>C</code> med <code>L</code> eller <code>Q</code>?</label></li>
 </ul>
 </section>
 <section class="protip" id="ellipser">
@@ -407,29 +407,29 @@ forskjellige typer bezierkurver:</p>
 <p>En sirkel har lik høyde og bredde. En ellipse kan være flat eller tynn; den kan
 ha forskjellig radius i x- og y-retning.</p>
 <p>Her er Elm-koden som lager den røde ellipsen:</p>
-<pre><code class="elm"><span class="hljs-title">ellipse</span> [ cx <span class="hljs-string">"30"</span>, cy <span class="hljs-string">"40"</span>, rx <span class="hljs-string">"5"</span>, ry <span class="hljs-string">"10"</span>, fill <span class="hljs-string">"red"</span> ] [ ]
+<pre><code class="elm"><span class="hljs-title">ellipse</span> [ cx <span class="hljs-string">"30"</span>, cy <span class="hljs-string">"40"</span>, rx <span class="hljs-string">"5"</span>, ry <span class="hljs-string">"10"</span>, fill <span class="hljs-string">"red"</span> ] - [ ]
 </code></pre>
 <p>Og denne lager den lilla ellipsen:</p>
-<pre><code class="elm"><span class="hljs-title">ellipse</span> [ cx <span class="hljs-string">"70"</span>, cy <span class="hljs-string">"40"</span>, rx <span class="hljs-string">"10"</span>, ry <span class="hljs-string">"5"</span>, fill <span class="hljs-string">"purple"</span> ] [ ]
+<pre><code class="elm"><span class="hljs-title">ellipse</span> [ cx <span class="hljs-string">"70"</span>, cy <span class="hljs-string">"40"</span>, rx <span class="hljs-string">"10"</span>, ry <span class="hljs-string">"5"</span>, fill <span class="hljs-string">"purple"</span> ] - [ ]
 </code></pre>
 <p>Du finner <code>ellipse</code> i <strong>Svg</strong>, og <code>cx</code> og <code>cy</code> i <strong>Svg.Attributes</strong>.</p>
 </section>
 <section class="check" id="oyne-som-ellipser">
 <h2 class="check" id="oyne-som-ellipser">Øyne som ellipser</h2>
-<ul>
-<li>Lag en ellipse for venstre øye</li>
-<li>Lag en ellipse for høyre øye. Hva er forskjellen mellom høyre og venstre øye?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Lag en ellipse for venstre øye</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Lag en ellipse for høyre øye. Hva er forskjellen mellom høyre og venstre øye?</label></li>
 </ul>
 <p>Her er sånn min ble seende ut:</p>
 <p><figure><img src="smiley.png" alt=""></figure></p>
-<ul>
-<li>
-<p>Hva skjer om du fyller en bezierkurve med en farge?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Hva skjer om du fyller en bezierkurve med en farge?</label></p>
 <p><code>path [ fill &quot;red&quot;, stroke &quot;black&quot;, d &quot;M20,60 C 40,80 60,80 80,60 &quot; ] []</code></p>
 </li>
-<li>
-<p>Hva skjer om du legger på <code>stroke</code> på den gule sirkelen?</p>
-<p><code>circle [ cx &quot;50&quot;, cy &quot;50&quot;, r &quot;50&quot;, stroke &quot;black&quot;, fill &quot;yellow&quot; ] [ ]</code></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Hva skjer om du legger på <code>stroke</code> på den gule sirkelen?</label></p>
+<p><code>circle [ cx &quot;50&quot;, cy &quot;50&quot;, r &quot;50&quot;, stroke &quot;black&quot;, fill &quot;yellow&quot; ] - [ ]</code></p>
 </li>
 </ul>
 </section>
@@ -448,7 +448,7 @@ ha forskjellig radius i x- og y-retning.</p>
     , svg
         [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 200 200"</span> ]
         [ circle [ cx <span class="hljs-string">"30"</span>, cy <span class="hljs-string">"50"</span>, r <span class="hljs-string">"50"</span>, fill <span class="hljs-string">"blue"</span> ] [  ]
-        , rect [ x <span class="hljs-string">"100"</span>, y <span class="hljs-string">"100"</span>, width <span class="hljs-string">"80"</span>, height <span class="hljs-string">"40"</span>, fill <span class="hljs-string">"red"</span> ] [ ]
+        , rect [ x <span class="hljs-string">"100"</span>, y <span class="hljs-string">"100"</span>, width <span class="hljs-string">"80"</span>, height <span class="hljs-string">"40"</span>, fill <span class="hljs-string">"red"</span> ] - [ ]
         ]
      , p [] [text <span class="hljs-string">"Her har jeg tegnet en firkant og en sirkel!"</span>]
      ]
@@ -456,9 +456,9 @@ ha forskjellig radius i x- og y-retning.</p>
 </code></pre>
 <section class="check" id="tegne-pa-din-egen-nettside">
 <h2 class="check" id="tegne-pa-din-egen-nettside">Tegne på din egen nettside</h2>
-<ul>
-<li>Gå tilbake til en av de tidligere oppgavene du har gjort. Vil du legge til en
-tegning noe sted?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Gå tilbake til en av de tidligere oppgavene du har gjort. Vil du legge til en
+tegning noe sted?</label></li>
 </ul>
 </section>
 </section>

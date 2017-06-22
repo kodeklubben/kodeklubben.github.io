@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Spøkelsesjakten</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/spokelsesjakten/spokelsesjakten.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Spøkelsesjakten</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/spokelsesjakten/spokelsesjakten.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Dette prosjektet er inspirert av tivolispillet <strong>Whack-a-mole</strong>, hvor
 man slår muldvarper ned igjen i hullene sine. I vårt spill er det
@@ -18,46 +18,46 @@ bort flest mulig i løpet av 30 sekunder.</p>
 <h1 class="activity" id="steg-1-lag-et-flyvende-spokelse">Steg 1: Lag et flyvende spøkelse</h1>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt Scratch-prosjekt.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt Scratch-prosjekt.</label></p>
 </li>
-<li>
-<p>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code></label></p>
 </li>
-<li>
-<p>Endre bakgrunnen til <code>Natur/woods</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Endre bakgrunnen til <code>Natur/woods</code>.</label></p>
 </li>
-<li>
-<p>For å legge til et spøkelse klikker du på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> For å legge til et spøkelse klikker du på
 <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen.
-Velg <code>Fantasi/Ghost1</code>-figuren.</p>
+Velg <code>Fantasi/Ghost1</code>-figuren.</label></p>
 </li>
-<li>
-<p>Gi spøkelset navnet <code>spøkelse1</code>, ved å klikke på <code class="blockmotion">i</code> på
-figuren.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Gi spøkelset navnet <code>spøkelse1</code>, ved å klikke på <code class="blockmotion">i</code> på
+figuren.</label></p>
 </li>
 </ul>
 <p>Du skal nå <strong>lage en variabel</strong> som styrer hvor fort spøkelset beveger
 seg. Denne kan vi senere bruke til å endre hastigheten når spillet er
 i gang.</p>
-<ul>
-<li>
-<p>Under <code class="blocklightgrey">Skript</code>, trykk på <code class="blockdata">Data</code> og så
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Under <code class="blocklightgrey">Skript</code>, trykk på <code class="blockdata">Data</code> og så
 <code>Lag en variabel</code>. Kall variabelen <code>hastighet</code>. Huk av der det står
-<code>For denne figuren</code>.</p>
+<code>For denne figuren</code>.</label></p>
 </li>
-<li>
-<p>På scenen skal variabelen hete <code>spøkelse1: hastighet</code>. Hvis den bare
-heter <code>hastighet</code>, så slett den og legg den til en gang til.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> På scenen skal variabelen hete <code>spøkelse1: hastighet</code>. Hvis den bare
+heter <code>hastighet</code>, så slett den og legg den til en gang til.</label></p>
 </li>
-<li>
-<p>Fjern avhukingen ved siden av variabelen, slik at den ikke vises på
-scenen: <img src="hastighet.png" alt=""></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Fjern avhukingen ved siden av variabelen, slik at den ikke vises på
+scenen: <img src="hastighet.png" alt=""></label></p>
 </li>
-<li>
-<p>Vi vil at spøkelset skal bevege seg når spillet starter. Det gjør vi
-ved å lage følgende skript:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi vil at spøkelset skal bevege seg når spillet starter. Det gjør vi
+ved å lage følgende skript:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [hastighet v] til [5]
 for alltid
@@ -70,21 +70,21 @@ slutt
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test Prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Flyr spøkelset over skjermen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Flyr spøkelset over skjermen?</label></p>
 </li>
-<li>
-<p>Hvorfor sitter spøkelset fast når det treffer kanten på skjermen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Hvorfor sitter spøkelset fast når det treffer kanten på skjermen?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å unngå at spøkelset sitter fast i kanten må vi få det til å snu
-når det treffer den. Dette gjøres ved å legge til klossen <code class="blockmotion">sprett tilbake ved kanten</code>. Skriptet ser da slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> For å unngå at spøkelset sitter fast i kanten må vi få det til å snu
+når det treffer den. Dette gjøres ved å legge til klossen <code class="blockmotion">sprett tilbake ved kanten</code>. Skriptet ser da slik ut:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [hastighet v] til [5]
 for alltid
@@ -93,36 +93,36 @@ for alltid
 slutt
 </code></pre>
 </li>
-<li>
-<p>For å hindre at spøkelset snur seg opp-ned, klikk på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> For å hindre at spøkelset snur seg opp-ned, klikk på
 <img src="../bilder/rotasjonsmate-hv.png" alt="venstre/høyre">-knappen i
-spøkelsets infoboks, <code class="blockmotion">i</code>.</p>
+spøkelsets infoboks, <code class="blockmotion">i</code>.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Flyr spøkelset fram og tilbake?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Flyr spøkelset fram og tilbake?</label></p>
 </li>
-<li>
-<p>Flyr spøkelset riktig vei?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Flyr spøkelset riktig vei?</label></p>
 </li>
 </ul>
 </section>
 <section class="try" id="ting-a-prove">
 <h2 class="try" id="ting-a-prove">Ting å prøve</h2>
-<ul>
-<li>
-<p><strong>Endre hastighetsvariabelen</strong>, slik at spøkelset går raskere eller
-saktere.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> <strong>Endre hastighetsvariabelen</strong>, slik at spøkelset går raskere eller
+saktere.</label></p>
 </li>
-<li>
-<p>Hvordan kan vi få spøkelset til å <strong>fly fortere jo lenger det
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Hvordan kan vi få spøkelset til å <strong>fly fortere jo lenger det
 flyr?</strong> (Dette er nokså vanskelig, så ikke vær bekymret hvis du ikke
-skjønner hvordan. Du vil få flere hint underveis.)</p>
+skjønner hvordan. Du vil få flere hint underveis.)</label></p>
 </li>
 </ul>
 </section>
@@ -133,13 +133,13 @@ skjønner hvordan. Du vil få flere hint underveis.)</p>
 forsvinne.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi lager et nytt skript, som skal kjøre samtidig med skriptet som
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Vi lager et nytt skript, som skal kjøre samtidig med skriptet som
 beveger på spøkelset. Det nye skriptet <strong>viser spøkelset en
 tilfeldig periode</strong> og <strong>gjemmer det deretter bort i en tilfeldig
 periode</strong>. Dette skal skje om og om igjen, frem til spillet er
-slutt. Slik lager du skriptet:</p>
+slutt. Slik lager du skriptet:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 for alltid
     vis
@@ -154,21 +154,21 @@ slutt
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Flytter spøkelset seg fra side til side?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Flytter spøkelset seg fra side til side?</label></p>
 </li>
-<li>
-<p>Forsvinner det og dukker opp igjen helt tilfeldig?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Forsvinner det og dukker opp igjen helt tilfeldig?</label></p>
 </li>
 </ul>
 </section>
 <section class="try" id="ting-a-prove-2">
 <h2 class="try" id="ting-a-prove-2">Ting å prøve</h2>
-<ul>
-<li>Prøv å <strong>endre tallene i koden</strong> der det står <code class="blockoperators">tilfeldig tall fra _ til _</code>. Hva skjer hvis du velger veldig store
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Prøv å <strong>endre tallene i koden</strong> der det står <code class="blockoperators">tilfeldig tall fra _ til _</code>. Hva skjer hvis du velger veldig store
 eller små tall? (Dette gir deg kanskje et nytt hint for hvordan vi
-skal få spøkelset til å gå fortere jo lenger man spiller.)</li>
+skal få spøkelset til å gå fortere jo lenger man spiller.)</label></li>
 </ul>
 </section>
 </section>
@@ -179,14 +179,14 @@ gjøre - for eksempel å klikke bort spøkelset. Når det skjer vil vi
 også at det skal komme en stilig tryllelyd!</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Hent lyden <code>Elektronisk/fairydust</code> fra
-<code class="blocklightgrey">Lyder</code>-fanen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Hent lyden <code>Elektronisk/fairydust</code> fra
+<code class="blocklightgrey">Lyder</code>-fanen.</label></p>
 </li>
-<li>
-<p>Lag skriptet som får <strong>spøkelset til å forsvinne</strong> når det blir
-klikket på:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Lag skriptet som får <strong>spøkelset til å forsvinne</strong> når det blir
+klikket på:</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 skjul
 spill lyden [fairydust v]
@@ -197,15 +197,15 @@ spill lyden [fairydust v]
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Forsvinner spøkelset med en tryllelyd når du klikker på det?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Forsvinner spøkelset med en tryllelyd når du klikker på det?</label></li>
 </ul>
 </section>
 <section class="try" id="ting-a-prove-3">
 <h2 class="try" id="ting-a-prove-3">Ting å prøve</h2>
-<ul>
-<li>Spør de voksne om du kan ta opp en egen lyd. Denne kan du bruke i
-stedet for tryllelyden.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Spør de voksne om du kan ta opp en egen lyd. Denne kan du bruke i
+stedet for tryllelyden.</label></li>
 </ul>
 </section>
 </section>
@@ -217,32 +217,32 @@ flest mulig poeng på denne tiden. Vi løser begge deler ved å bruke
 variabler.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny variabel som heter <code class="blockdata">Poeng</code>. Denne skal
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Lag en ny variabel som heter <code class="blockdata">Poeng</code>. Denne skal
 gjelde <code>For alle figurer</code>. Legg til en ny kloss som gjør at
 <code class="blockdata">Poeng</code>-variabelen økes med 1 poeng for hver gang
-spilleren klikker på spøkelset.</p>
+spilleren klikker på spøkelset.</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 skjul
 spill lyden [fairydust v]
 endre [Poeng v] med (1)
 </code></pre>
 </li>
-<li>
-<p>Klikk på <code>Scene</code> og lag en ny variabel som heter <code>Tid</code>. La variablen
-vises på skjermen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Klikk på <code>Scene</code> og lag en ny variabel som heter <code>Tid</code>. La variablen
+vises på skjermen.</label></p>
 </li>
-<li>
-<p>Lag et nytt skript som setter <code class="blockdata">Tid</code>-variabelen til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Lag et nytt skript som setter <code class="blockdata">Tid</code>-variabelen til
 <strong>30</strong> og <code>Poeng</code>-variablen til <strong>0</strong> når det grønne flagget
-klikkes.</p>
+klikkes.</label></p>
 </li>
-<li>
-<p>Bruk så en <code class="blockcontrol">gjenta til</code>-kloss for å vente i <strong>1</strong>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Bruk så en <code class="blockcontrol">gjenta til</code>-kloss for å vente i <strong>1</strong>
 sekund og deretter redusere tiden med 1 sekund. Denne skal kjøre
 fram til tiden er ute. Til slutt stopper du hele spillet med en
-<code class="blockcontrol">stopp alle</code>-kloss.</p>
+<code class="blockcontrol">stopp alle</code>-kloss.</label></p>
 <pre><code class="blocks">Når grønt flagg klikkes
 sett [Tid v] til [30]
 sett [Poeng v] til [0]
@@ -261,74 +261,74 @@ stopp [alle v] :: control
 </section>
 <section class="try" id="ting-a-prove-4">
 <h2 class="try" id="ting-a-prove-4">Ting å prøve</h2>
-<ul>
-<li>Hvordan kan du få spøkelset til å gå fortere etter at spillet er i
-gang?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Hvordan kan du få spøkelset til å gå fortere etter at spillet er i
+gang?</label></li>
 </ul>
 </section>
 <section class="save" id="lagre-prosjektet">
 <h2 class="save" id="lagre-prosjektet">Lagre prosjektet</h2>
-<ul>
-<li><strong>Bra jobba!</strong> Nå er du egentlig ferdig med spillet, men prøv deg
-gjerne på neste steg også.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> <strong>Bra jobba!</strong> Nå er du egentlig ferdig med spillet, men prøv deg
+gjerne på neste steg også.</label></li>
 </ul>
 </section>
 <section class="challenge" id="en-ekstra-utfordring-flere-spokelser">
 <h2 class="challenge" id="en-ekstra-utfordring-flere-spokelser">En ekstra utfordring: Flere spøkelser!</h2>
 <p><em>Hvis ett spøkelse er bra, må vel flere være enda bedre! La oss ha tre
 spøkelser flyvende rundt!</em></p>
-<ul>
-<li>
-<p><strong>Lag flere spøkelser</strong> ved å høyreklikke på det du allerede har, og
-så kopiere dette.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> <strong>Lag flere spøkelser</strong> ved å høyreklikke på det du allerede har, og
+så kopiere dette.</label></p>
 </li>
-<li>
-<p><strong>La spøkelsene få ulik størrelse</strong>. Dette gjør du ved å bruke én av
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> <strong>La spøkelsene få ulik størrelse</strong>. Dette gjør du ved å bruke én av
 knappene under. Den til venstre forstørrer figuren og den til høyre
-forminsker: <img src="endre-storrelse.png" alt=""></p>
+forminsker: <img src="endre-storrelse.png" alt=""></label></p>
 </li>
-<li>
-<p>Du kan også <strong>endre spøkelsenes flyvefart</strong>. Dette gjøres i
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Du kan også <strong>endre spøkelsenes flyvefart</strong>. Dette gjøres i
 <code class="blockdata">hastighet</code>-variabelen i det øverste skriptet for hver
-enkelt figur.</p>
+enkelt figur.</label></p>
 </li>
-<li>
-<p>Til slutt kan du <strong>spre spøkelsene</strong> litt bedre ut på scenen. Dette
-gjør du ved å klikke og dra figurene rundt i selve skjermbildet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Til slutt kan du <strong>spre spøkelsene</strong> litt bedre ut på scenen. Dette
+gjør du ved å klikke og dra figurene rundt i selve skjermbildet.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Har du nå tre spøkelser som flyr fra side til side?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Har du nå tre spøkelser som flyr fra side til side?</label></p>
 </li>
-<li>
-<p>Som plutselig forsvinner og dukker opp igjen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Som plutselig forsvinner og dukker opp igjen?</label></p>
 </li>
-<li>
-<p>Forsvinner de når du klikker på dem?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Forsvinner de når du klikker på dem?</label></p>
 </li>
 </ul>
 <p>Gratulerer! Da har du gjort alt riktig!</p>
 </section>
 <section class="try" id="ting-a-prove-5">
 <h2 class="try" id="ting-a-prove-5">Ting å prøve</h2>
-<ul>
-<li>
-<p>Hvor mange spøkelser synes du spillet fungerer best med? <strong>Legg til
-flere</strong> og prøv!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Hvor mange spøkelser synes du spillet fungerer best med? <strong>Legg til
+flere</strong> og prøv!</label></p>
 </li>
-<li>
-<p>Klarer du å få spøkelsene til <strong>å se forskjellige ut</strong>? Klikk på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Klarer du å få spøkelsene til <strong>å se forskjellige ut</strong>? Klikk på
 <code class="blocklightgrey">Drakter</code> og prøv deg frem. Du kan også velge noen
-av klossene under <code class="blocklooks">Utseende</code>.</p>
+av klossene under <code class="blocklooks">Utseende</code>.</label></p>
 </li>
-<li>
-<p>Kan du få spøkelsene til <strong>å bli verdt forskjellige antall poeng?</strong>
-Hva med å få den minste og raskeste til å gi 10 poeng?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Kan du få spøkelsene til <strong>å bli verdt forskjellige antall poeng?</strong>
+Hva med å få den minste og raskeste til å gi 10 poeng?</label></p>
 </li>
 </ul>
 </section>

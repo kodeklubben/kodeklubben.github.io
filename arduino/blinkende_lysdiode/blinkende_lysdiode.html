@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Blinkende lysdiode</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/blinkende_lysdiode/blinkende_lysdiode.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Blinkende lysdiode</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/blinkende_lysdiode/blinkende_lysdiode.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p><strong>Arduino</strong> er en mikrokontroller som kan programmeres til å styre elektroniske
 dingser og duppeditter. Ved hjelp av en Arduino kan du skru av og på
@@ -24,19 +24,19 @@ denne oppgaven trenger du en Arduino, som er vist på bildet.</p>
 Arduinoen. Vent med å koble til Arduinoen til etter du er ferdig med installasjonen.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Last ned Arduino-programvaren fra <a href="https://www.arduino.cc/en/Main/Software">Arduno.cc</a>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Last ned Arduino-programvaren fra <a href="https://www.arduino.cc/en/Main/Software">Arduno.cc</a>.</label></p>
 </li>
-<li>
-<p>Installer programmet. Er du usikker på hvordan man gjør dette, bør du snakke med en veileder.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Installer programmet. Er du usikker på hvordan man gjør dette, bør du snakke med en veileder.</label></p>
 </li>
-<li>
-<p>Åpne programmet. Ikonet ser ut som dette:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Åpne programmet. Ikonet ser ut som dette:</label></p>
 <img src="arduino.png" style="width: 100px">
 </li>
-<li>
-<p>Koble Arduinoen til datamasinen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Koble Arduinoen til datamasinen.</label></p>
 </li>
 </ul>
 </section>
@@ -48,13 +48,13 @@ Under ser du Arduino-brettet. Finn frem din Arduino og studer den!</p>
 <figure><img src="brett.png" style="width: 500px"></figure>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>På den ene siden har vi digitale inn- og utganger merket med <strong>DIGITAL (PWM ~ )</strong>.</li>
-<li>Fra nå av kaller vi inn/utganger for <em>port</em>.</li>
-<li>Den første digitale porten heter <strong>0</strong>.</li>
-<li>Den siste digitale porten heter <strong>13</strong>.</li>
-<li>Det er altså totalt 14 digitale porter.</li>
-<li><strong>GND</strong> er ground, jord på norsk.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> På den ene siden har vi digitale inn- og utganger merket med <strong>DIGITAL (PWM ~ )</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Fra nå av kaller vi inn/utganger for <em>port</em>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Den første digitale porten heter <strong>0</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Den siste digitale porten heter <strong>13</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Det er altså totalt 14 digitale porter.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> <strong>GND</strong> er ground, jord på norsk.</label></li>
 </ul>
 </section>
 </section>
@@ -63,34 +63,34 @@ Under ser du Arduino-brettet. Finn frem din Arduino og studer den!</p>
 <p><em>Nå skal vi lage vår første krets på en Arduino.</em></p>
 <section class="check" id="dette-trenger-du">
 <h2 class="check" id="dette-trenger-du">Dette trenger du</h2>
-<ul>
-<li>
-<p>2 ledninger</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> 2 ledninger</label></p>
 </li>
-<li>
-<p>1 LED</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> 1 LED</label></p>
 </li>
-<li>
-<p>1 Arduino Uno</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> 1 Arduino Uno</label></p>
 </li>
-<li>
-<p>1 breadboard</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> 1 breadboard</label></p>
 </li>
-<li>
-<p>1 motstand 220 Ohm (Fargekode: rød-rød-brun-gull)</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> 1 motstand 220 Ohm (Fargekode: rød-rød-brun-gull)</label></p>
 <p><figure><img src="komp.jpg" alt=""></figure></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Koble slik som vist i figuren:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Koble slik som vist i figuren:</label></p>
 <p><figure><img src="blinker.png" alt=""></figure></p>
 </li>
-<li>
-<p>Ingenting skjer, vi må skrive kode!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Ingenting skjer, vi må skrive kode!</label></p>
 </li>
 </ul>
 <section class="protip" id="om-koblingen">
@@ -118,12 +118,12 @@ slik at vi ikke ødelegger lysdioden.</p>
 Det første programmet skal blinke med lysdioden.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne Arduino-programmet om det ikke allerede er åpent.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Åpne Arduino-programmet om det ikke allerede er åpent.</label></p>
 </li>
-<li>
-<p>Arduino-programmet starter med denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Arduino-programmet starter med denne koden:</label></p>
 <pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
 
 }
@@ -133,8 +133,8 @@ Det første programmet skal blinke med lysdioden.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Skriv denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Skriv denne koden:</label></p>
 <pre><code class="cpp"><span class="hljs-keyword">int</span> led = <span class="hljs-number">8</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
@@ -149,12 +149,12 @@ Det første programmet skal blinke med lysdioden.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Trykk på <img src="upload.png" alt=""> for å laste opp koden. Denne sjekker først om koden
-er riktig, og så vil programmet ditt kjøre på arduinoen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Trykk på <img src="upload.png" alt=""> for å laste opp koden. Denne sjekker først om koden
+er riktig, og så vil programmet ditt kjøre på arduinoen.</label></p>
 </li>
-<li>
-<p>Blinker lysdioden?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Blinker lysdioden?</label></p>
 </li>
 </ul>
 <section class="protip" id="virker-det-ikke">
@@ -184,10 +184,10 @@ og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
 </section>
 <section class="challenge" id="utfordringer">
 <h3 class="challenge" id="utfordringer">Utfordringer</h3>
-<ul>
-<li>Klarer du å få lysdioden til å blinke raskt, med en lang pause mellom blinkene?</li>
-<li>Klarer du å lage ditt eget blinkemønster?</li>
-<li>Klarer du å endre utgangen til port 13? Hvilken ledning må du flytte?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Klarer du å få lysdioden til å blinke raskt, med en lang pause mellom blinkene?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Klarer du å lage ditt eget blinkemønster?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Klarer du å endre utgangen til port 13? Hvilken ledning må du flytte?</label></li>
 </ul>
 </section>
 <section class="protip" id="hva-er-void-setup-og-void-loop">
@@ -225,16 +225,16 @@ Vi har nå lært hvordan vi kan få en lampe til å blinke. Neste steg er derfor
 lampen av og på med en knapp!</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Finn tre ledninger til, og en knapp.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Finn tre ledninger til, og en knapp.</label></p>
 </li>
-<li>
-<p>Koble til knappen som på bildet under:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Koble til knappen som på bildet under:</label></p>
 <p><figure><img src="bryter.png" alt=""></figure></p>
 </li>
-<li>
-<p>Skriv denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Skriv denne koden:</label></p>
 <pre><code class="cpp"><span class="hljs-keyword">int</span> led = <span class="hljs-number">8</span>;
 <span class="hljs-keyword">int</span> knapp = <span class="hljs-number">7</span>;
 
@@ -252,33 +252,33 @@ lampen av og på med en knapp!</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Trykk på <img src="upload.png" alt=""> for å laste opp koden.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Trykk på <img src="upload.png" alt=""> for å laste opp koden.</label></p>
 </li>
-<li>
-<p>Lyser lysdioden når du trykker på knappen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Lyser lysdioden når du trykker på knappen?</label></p>
 </li>
 </ul>
 <p>Se der! Nå har du lært å lage enkle kretser med Arduino!</p>
 <section class="challenge" id="utfordringer-2">
 <h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
 <p>Her er noen nøtter du kan prøve deg på ved å endre koden.</p>
-<ul>
-<li>
-<p>Kan du få lysdioden til å blinke når knappen trykkes inn?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Kan du få lysdioden til å blinke når knappen trykkes inn?</label></p>
 </li>
-<li>
-<p>Kan du få lysdioden til å lyse svakt med <code>analogWrite(led, 50);</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Kan du få lysdioden til å lyse svakt med <code>analogWrite(led, 50);</code>?</label></p>
 <p>Hva skjer om <code>50</code> endres til et større tall?</p>
 <p><strong>Merk:</strong> Lysdioden må være tilkoblet en port som har <em>PWM</em> (port med følgende
 tegn: <em>~</em>) for at <code>analogWrite</code> skal fungere.</p>
 </li>
-<li>
-<p>Kan du få lysdioden til å skrus på av et kort trykk på knappen?
-Og deretter skru av lysdioden med et nytt kort trykk?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Kan du få lysdioden til å skrus på av et kort trykk på knappen?
+Og deretter skru av lysdioden med et nytt kort trykk?</label></p>
 </li>
-<li>
-<p>Kan du få til det samme med å bruke bare 3 ledninger?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Kan du få til det samme med å bruke bare 3 ledninger?</label></p>
 </li>
 </ul>
 </section>

@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Ørkenløp</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/orkenlop/orkenlop.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Ørkenløp</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/orkenlop/orkenlop.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Dette er et spill for to, der en papegøye og en løvinne kjemper om å
 komme først gjennom ørkenen. Hver spiller må trykke en tast så fort og
@@ -19,24 +19,24 @@ kanten av skjermen vinner.</p>
 <p><em>Vi begynner med å få på plass bakgrunnen og figurene.</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klikk på Scene og velg en ferdig bakgrunn,
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Klikk på Scene og velg en ferdig bakgrunn,
 <img src="../bilder/bakgrunn-fra-bibliotek.png" alt="velg en ferdig bakgrunn">. Velg
-<code>Natur/desert</code>.</p>
+<code>Natur/desert</code>.</label></p>
 </li>
-<li>
-<p>Fjern katten ved å høyreklikke på figuren og velg <code>slett</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Fjern katten ved å høyreklikke på figuren og velg <code>slett</code>.</label></p>
 </li>
-<li>
-<p>Legg til en ny figur ved å trykke på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg til en ny figur ved å trykke på
 <img src="../bilder/hent-fra-bibliotek.png" alt="velg figur fra biblioteket">. Velg
-<code>Dyr/Lionness</code>.</p>
+<code>Dyr/Lionness</code>.</label></p>
 </li>
-<li>
-<p>Legg så til enda en ny figur: velg <code>Dyr/Parrot</code>. Krymp figuren slik
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Legg så til enda en ny figur: velg <code>Dyr/Parrot</code>. Krymp figuren slik
 at den er omtrent like stor som løvinnen ved å bruke
-<img src="../bilder/krymp.png" alt="krymp">.</p>
+<img src="../bilder/krymp.png" alt="krymp">.</label></p>
 </li>
 </ul>
 </section>
@@ -46,17 +46,17 @@ at den er omtrent like stor som løvinnen ved å bruke
 <p><em>Vi vil at figurene skal bevege seg når du trykker på en knapp.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Velg først løvefiguren og få den til å <code class="blockmotion">gå 4 steg</code> når
-du trykker <code>L</code> tasten.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Velg først løvefiguren og få den til å <code class="blockmotion">gå 4 steg</code> når
+du trykker <code>L</code> tasten.</label></p>
 <pre><code class="blocks">når [l v] trykkes
 gå (4) steg
 </code></pre>
 </li>
-<li>
-<p>Velg så papegøyefiguren og la den <code class="blockmotion">gå 4 steg</code> når du
-trykker <code>A</code> tasten.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Velg så papegøyefiguren og la den <code class="blockmotion">gå 4 steg</code> når du
+trykker <code>A</code> tasten.</label></p>
 <pre><code class="blocks">når [a v] trykkes
 gå (4) steg
 </code></pre>
@@ -66,9 +66,9 @@ gå (4) steg
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Beveger løvinnen og papegøyen seg over skjermen når du trykker på
-<code>A</code> og <code>L</code> tastene?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Beveger løvinnen og papegøyen seg over skjermen når du trykker på
+<code>A</code> og <code>L</code> tastene?</label></li>
 </ul>
 </section>
 </section>
@@ -78,27 +78,27 @@ gå (4) steg
 lage startknapp.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en ny figur. Velg <code>Ting/Button3</code>. Flytt den til midten av
-scenen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Legg til en ny figur. Velg <code>Ting/Button3</code>. Flytt den til midten av
+scenen.</label></p>
 </li>
-<li>
-<p>Klikk på <code>Drakter</code>-fanen og verktøyet <code>T</code> for å legge til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Klikk på <code>Drakter</code>-fanen og verktøyet <code>T</code> for å legge til
 tekst. Trykk på venstre kant av knappen for å legge til et tekstfelt
 og skriv inn teksten <code>Start</code>. Du kan flytte på teksten ved å trykke
-en gang på den, og endre innhold ved å dobbeltklikke.</p>
+en gang på den, og endre innhold ved å dobbeltklikke.</label></p>
 </li>
-<li>
-<p>Legg nå til et skript som viser figuren når spillet starter:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Legg nå til et skript som viser figuren når spillet starter:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vis
 </code></pre>
 </li>
-<li>
-<p>I tillegg vil vi at knappen først teller ned fra 3, sier <code>LØP!</code> og
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> I tillegg vil vi at knappen først teller ned fra 3, sier <code>LØP!</code> og
 deretter blir skjult når den klikkes. Dette ordner du med følgende
-skript:</p>
+skript:</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 si [3] i (1) sekunder
 si [2] i (1) sekunder
@@ -112,15 +112,15 @@ skjul
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget, og deretter på startknappen.</strong></p>
-<ul>
-<li>
-<p>Teller knappen ned?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Teller knappen ned?</label></p>
 </li>
-<li>
-<p>Sier den <code>LØP!</code>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Sier den <code>LØP!</code>?</label></p>
 </li>
-<li>
-<p>Blir den borte?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Blir den borte?</label></p>
 </li>
 </ul>
 <p>Vi ønsker at figurene bare beveger seg etter at kappløpet er startet
@@ -128,48 +128,48 @@ og vi ønsker å vite når kappløpet er over.</p>
 </section>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å vite når kappløpet har startet og sluttet lager vi en variabel
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> For å vite når kappløpet har startet og sluttet lager vi en variabel
 med navnet <code class="blockdata">kappløp</code>. Variabelen skal være tilgjengelig
 <code>for alle figurer</code>. Fjern avhukingen foran variabelen, slik at den
-ikke vises på scenen.</p>
+ikke vises på scenen.</label></p>
 </li>
-<li>
-<p>Sett <code class="blockdata">kappløp</code> til 0 når spillet startes ved å forandre
-<code class="blockevents">når grønt flagg klikkes</code>-skriptet slik:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Sett <code class="blockdata">kappløp</code> til 0 når spillet startes ved å forandre
+<code class="blockevents">når grønt flagg klikkes</code>-skriptet slik:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vis
 sett [kappløp v] til [0]
 </code></pre>
 </li>
-<li>
-<p>Når nedtellingen er ferdig og løpet begynner, forandrer vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Når nedtellingen er ferdig og løpet begynner, forandrer vi
 <code class="blockdata">kappløp</code>-verdien til 1. Dette gjør du ved å legge til
-klossen <code class="blockdata">Sett kappløp til 1</code> under <code class="blocklooks">si 1 i 1 sekunder</code> i skriptet som starter med <code class="blockevents">når denne figuren klikkes</code>.</p>
+klossen <code class="blockdata">Sett kappløp til 1</code> under <code class="blocklooks">si 1 i 1 sekunder</code> i skriptet som starter med <code class="blockevents">når denne figuren klikkes</code>.</label></p>
 </li>
-<li>
-<p>Nå må vi lage en regel som sier at figurene bare får lov til å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Nå må vi lage en regel som sier at figurene bare får lov til å
 bevege seg etter at løpet har startet – det vil si når
 <code class="blockdata">kappløp</code> har verdien 1. Klikk først på papegøyen. Så
-endrer du:</p>
+endrer du:</label></p>
 <pre><code class="blocks">når [a v] trykkes
 hvis &lt;(kappløp) = [1]&gt;
     gå (4) steg
 slutt
 </code></pre>
 </li>
-<li>
-<p>Gjenta det samme for løvinnen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Gjenta det samme for løvinnen.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Kan løvinnen og papegøyen bare flytte seg når nedtellingen er
-ferdig?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Kan løvinnen og papegøyen bare flytte seg når nedtellingen er
+ferdig?</label></li>
 </ul>
 </section>
 </section>
@@ -179,9 +179,9 @@ ferdig?</li>
 klart for en ny runde.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en kloss i papegøyens skript som sier <code class="blockdata">sett kappløp til 0</code> hvis figuren berører kanten av skjermen:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Legg til en kloss i papegøyens skript som sier <code class="blockdata">sett kappløp til 0</code> hvis figuren berører kanten av skjermen:</label></p>
 <pre><code class="blocks">når [a v] trykkes
 hvis &lt;(kappløp) = [1]&gt;
     gå (4) steg
@@ -191,8 +191,8 @@ hvis &lt;(kappløp) = [1]&gt;
 slutt
 </code></pre>
 </li>
-<li>
-<p>Spill så inn en lyd som skal spilles av hvis papegøyen vinner.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Spill så inn en lyd som skal spilles av hvis papegøyen vinner.</label></p>
 <p>Trykk på <code>Lyder</code>-fanen og deretter mikrofon-ikonet og spill inn en
 morsom trudelutt! Opptaket starter når du har klikket på rundingen
 slik at den blir rød. Klikk stopp (firkanten) når du er ferdig, og
@@ -200,9 +200,9 @@ gi lyden et navn – for eksempel <code>Polly</code>. Noen nettlesere kan
 spørre om tillatelse til å spille inn lyd. Hvis du ikke ønsker
 dette, bruk lydene som følger med figurene.</p>
 </li>
-<li>
-<p>Deretter legger du til klossene som spiller lyden og lar papegøyen
-fortelle at den vant:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Deretter legger du til klossene som spiller lyden og lar papegøyen
+fortelle at den vant:</label></p>
 <pre><code class="blocks">når [a v] trykkes
 hvis &lt;(kappløp) = [1]&gt;
     gå (4) steg
@@ -214,21 +214,21 @@ hvis &lt;(kappløp) = [1]&gt;
 slutt
 </code></pre>
 </li>
-<li>
-<p>Gjør tilsvarende for løvinnen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Gjør tilsvarende for løvinnen.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kan du trykke på startknappen og deretter bevege dyrene med tastene
-<code>A</code> og <code>L</code>?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Kan du trykke på startknappen og deretter bevege dyrene med tastene
+<code>A</code> og <code>L</code>?</label></p>
 </li>
-<li>
-<p>Kommer riktig vinnerlyd og melding opp på skjermen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Kommer riktig vinnerlyd og melding opp på skjermen?</label></p>
 </li>
 </ul>
 </section>
@@ -239,10 +239,10 @@ slutt
 over og nullstille spillet, slik at er klart for en ny runde.</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klikk på papegøyefiguren og legg til en kloss som sender melding
-<code>Avslutt</code> etter at figuren sier den har vunnet.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Klikk på papegøyefiguren og legg til en kloss som sender melding
+<code>Avslutt</code> etter at figuren sier den har vunnet.</label></p>
 <pre><code class="blocks">når [a v] trykkes
 hvis &lt;(kappløp) = [1]&gt;
     gå (4) steg
@@ -255,30 +255,30 @@ hvis &lt;(kappløp) = [1]&gt;
 slutt
 </code></pre>
 </li>
-<li>
-<p>Vi trenger nå et nytt skript som lytter etter denne
-avslutningsmeldingen og flytter papegøyen tilbake til start.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Vi trenger nå et nytt skript som lytter etter denne
+avslutningsmeldingen og flytter papegøyen tilbake til start.</label></p>
 <pre><code class="blocks">når jeg mottar [Avslutt v]
 sett x til (-170)
 </code></pre>
 </li>
-<li>
-<p>Gjør det samme for løvinnen. Test forskjellige <code>x</code>-verdier for å
-være sikker på at løvinnen og papegøyen starter fra samme sted.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Gjør det samme for løvinnen. Test forskjellige <code>x</code>-verdier for å
+være sikker på at løvinnen og papegøyen starter fra samme sted.</label></p>
 </li>
-<li>
-<p>For at figurene skal stå på startstreken når kappløpet starter den
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> For at figurene skal stå på startstreken når kappløpet starter den
 aller første gangen må vi også legge til følgende klosser på begge
-figurene:</p>
+figurene:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett x til (-170)
 </code></pre>
 </li>
-<li>
-<p>For at spillerne skal kunne klikke i gang nye runder må vi passe på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> For at spillerne skal kunne klikke i gang nye runder må vi passe på
 at start-knappen kommer tilbake etter hver avsluttet runde. Klikk på
 startknapp-figuren og legg til et skript som viser knappen når
-avslutningsmeldingen blir mottatt.</p>
+avslutningsmeldingen blir mottatt.</label></p>
 <pre><code class="blocks">når jeg mottar [Avslutt v]
 vis
 </code></pre>
@@ -288,9 +288,9 @@ vis
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Kan du spille mot en venn? En av dere styrer papegøyen ved å trykke
-<code>A</code>, og den andre løvinnen ved å trykke <code>L</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Kan du spille mot en venn? En av dere styrer papegøyen ved å trykke
+<code>A</code>, og den andre løvinnen ved å trykke <code>L</code>.</label></li>
 </ul>
 </section>
 <section class="save" id="lagre-prosjektet">
@@ -302,17 +302,17 @@ spillet og gjøre det enda mer interessant.</p>
 </section>
 <section class="challenge" id="utfordring-1-legg-til-en-rakett">
 <h2 class="challenge" id="utfordring-1-legg-til-en-rakett">Utfordring 1: Legg til en rakett!</h2>
-<ul>
-<li>
-<p><strong>Legg til en rakett</strong> som kan brukes én gang per kappløp og som
-flytter papegøyen eller løvinnen <strong>30 steg på en gang.</strong></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> <strong>Legg til en rakett</strong> som kan brukes én gang per kappløp og som
+flytter papegøyen eller løvinnen <strong>30 steg på en gang.</strong></label></p>
 </li>
-<li>
-<p><strong>Legg til en ny drakt</strong> med ild som kommer ut bak figurene. La
-denne aktiveres når raketten avfyres.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> <strong>Legg til en ny drakt</strong> med ild som kommer ut bak figurene. La
+denne aktiveres når raketten avfyres.</label></p>
 </li>
-<li>
-<p><strong>Lag en lyd</strong> som figuren kan gi fra seg når raketten avfyres.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> <strong>Lag en lyd</strong> som figuren kan gi fra seg når raketten avfyres.</label></p>
 </li>
 </ul>
 <p>Nedenfor er et forslag til hvordan et rakett-skript kan se ut. Du må
@@ -336,15 +336,15 @@ slutt
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Fungerer raketten slik du hadde planlagt?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Fungerer raketten slik du hadde planlagt?</label></p>
 </li>
-<li>
-<p>Hva skjer om man forsøker å bruke raketten to ganger?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Hva skjer om man forsøker å bruke raketten to ganger?</label></p>
 </li>
-<li>
-<p>Hva skjer om man bruker raketten for å komme til mål?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Hva skjer om man bruker raketten for å komme til mål?</label></p>
 </li>
 </ul>
 </section>
@@ -355,30 +355,30 @@ for hver figur; når figuren beveger seg normalt og når den beveger seg
 med rakett.  Vi kan forenkle skriptet vårt ved å bruke en egendefinert
 kloss. Dette er en samling kode som brukes flere steder. Det er nesten
 som at vi lager vår egen Scratch-kodekloss!</p>
-<ul>
-<li>
-<p>Velg papegøyens skript.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Velg papegøyens skript.</label></p>
 </li>
-<li>
-<p>Velg <code class="blockmoreblocks">Flere klosser</code>-paletten og klikk så på <code>Lag en kloss</code>-knappen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Velg <code class="blockmoreblocks">Flere klosser</code>-paletten og klikk så på <code>Lag en kloss</code>-knappen.</label></p>
 </li>
-<li>
-<p>Kall klossen din <code>ferdig</code> og trykk OK.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Kall klossen din <code>ferdig</code> og trykk OK.</label></p>
 </li>
-<li>
-<p>Du vil nå få en <code class="blockmoreblocks">definer ferdig</code>-kloss i
-skriptvinduet ditt. Flytt den litt for seg selv.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Du vil nå få en <code class="blockmoreblocks">definer ferdig</code>-kloss i
+skriptvinduet ditt. Flytt den litt for seg selv.</label></p>
 </li>
-<li>
-<p>Løsriv hele <code class="blockcontrol">hvis</code><code class="blocksensing">berører kant?</code>-klossen og dra den til <code class="blockmoreblocks">definer ferdig</code>-klossen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Løsriv hele <code class="blockcontrol">hvis</code><code class="blocksensing">berører kant?</code>-klossen og dra den til <code class="blockmoreblocks">definer ferdig</code>-klossen.</label></p>
 </li>
-<li>
-<p>Kan du dra <code class="blockmoreblocks">ferdig</code>-klossen fra paletten og bruke
-den på samme måte som andre kodeklosser?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Kan du dra <code class="blockmoreblocks">ferdig</code>-klossen fra paletten og bruke
+den på samme måte som andre kodeklosser?</label></p>
 </li>
-<li>
-<p>Slett den andre <code class="blockcontrol">hvis</code><code class="blocksensing">berører kant?</code>-klossen fra skriptet ditt og erstatt også den
-med en <code class="blockmoreblocks">ferdig</code>-kloss.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Slett den andre <code class="blockcontrol">hvis</code><code class="blocksensing">berører kant?</code>-klossen fra skriptet ditt og erstatt også den
+med en <code class="blockmoreblocks">ferdig</code>-kloss.</label></p>
 <pre><code class="blocks">definer ferdig
 hvis &lt;berører [kant v]?&gt;
     sett [kappløp v] til [0]
@@ -401,9 +401,9 @@ hvis &lt;&lt;(kappløp) = [1]&gt; og &lt;(rakett_brukt) = [0]&gt;&gt;
     bytt drakt til [parrot-a v]
 </code></pre>
 </li>
-<li>
-<p>Gjør dette koden din enklere å lese? Kan du lage en tilsvarende
-egendefinert kloss for løvinnen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Gjør dette koden din enklere å lese? Kan du lage en tilsvarende
+egendefinert kloss for løvinnen?</label></p>
 </li>
 </ul>
 </section>

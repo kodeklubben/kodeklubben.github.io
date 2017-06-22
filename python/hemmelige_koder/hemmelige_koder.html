@@ -51,17 +51,17 @@ foran tekst som er inni <code>&quot;&quot;</code>. For eksempel blir alfabetet u
 <em>Unicode</em> som støtter alle norske bokstaver.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Først må vi lære python alfabetet. Åpne IDLE og lag en ny fil med koden
-under:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Først må vi lære python alfabetet. Åpne IDLE og lag en ny fil med koden
+under:</label></p>
 <pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 print(len(alphabet))
 </code></pre>
 </li>
-<li>
-<p>Når du kjører dette programmet skal det skrive ut 29. Pass på at du har med alle bokstavene, ellers kommer ikke den hemmelige koden din til å virke.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Når du kjører dette programmet skal det skrive ut 29. Pass på at du har med alle bokstavene, ellers kommer ikke den hemmelige koden din til å virke.</label></p>
 <p>Hvis du er fornøyd med alfabetet ditt kan vi begynne å kode en bokstav.</p>
 </li>
 </ul>
@@ -71,9 +71,9 @@ print(len(alphabet))
 <h1 class="activity" id="steg-2-kode-en-bokstav">Steg 2: Kode en bokstav</h1>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Akkurat som vi gjorde med hjulet ovenfor kan vi finne posisjonen til en bokstav ved å telle forover, og så bruke bokstaven vi ender opp med.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Akkurat som vi gjorde med hjulet ovenfor kan vi finne posisjonen til en bokstav ved å telle forover, og så bruke bokstaven vi ender opp med.</label></p>
 <p>Skriv inn koden under og kjør den:</p>
 <pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
@@ -93,11 +93,11 @@ print(secretletter)
 </code></pre>
 <p>Vi slår opp hvor &quot;a&quot; er i alfabetet og legger til det hemmelige tallet vårt for å telle fremover. Vi sjekker om vi har gått rundt, hvis vi har det må vi gå en hel runde tilbake igjen ved å trekke fra 29 (dette er litt som med gradene, å trekke fra 360 gjør at vi er akkurat der vi var). Så slår vi opp i alfabetet igjen for å se hvilken hemmelige bokstav vi fikk.</p>
 </li>
-<li>
-<p>Kjør koden og se hva som skjer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kjør koden og se hva som skjer.</label></p>
 </li>
-<li>
-<p>La oss ta en titt på koden igjen, men vi tar det sakte.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> La oss ta en titt på koden igjen, men vi tar det sakte.</label></p>
 <p>Du trenger ikke å skrive dette! Alt som står bak firkant-tegnet bryr python seg vanligvis ikke om, det er bare kommentarer til mennesker som skal lese koden.</p>
 <pre><code class="python"><span class="hljs-comment"># alphabet er navnet på teksten fra a til å</span>
 alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyz"</span>
@@ -137,9 +137,9 @@ print(secretletter)
 <p>Akkurat som i koden fra den forrige oppgaven skal vi finne posisjonen til bokstaven, men denne gangen skal vi gå bakover i alfabetet for å dekode.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Forsøk å skriv inn denne koden og kjør den:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Forsøk å skriv inn denne koden og kjør den:</label></p>
 <pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 secret = <span class="hljs-number">17</span>
@@ -167,9 +167,9 @@ print(letter)
 <p>For å få en funksjon til å sende tilbake en verdi bruker vi <code>return</code>. Dette gjør at vi kan lagre funksjonens resultat til en variabel og deretter bruke variabelen.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en fil som ser slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lag en fil som ser slik ut:</label></p>
 <pre><code class="python">alphabet = <span class="hljs-string">"abcdefghijklmnopqrstuvwxyzæøå"</span>
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">encode</span><span class="hljs-params">(letter, secret)</span>:</span>
@@ -198,8 +198,8 @@ print(decode(<span class="hljs-string">"r"</span>, <span class="hljs-number">17<
 </code></pre>
 <p>Husk at du kan bruke 'Tab' i IDLE for å få innrykk. Du kan også merke deler av koden og rykke alt inn på en gang.</p>
 </li>
-<li>
-<p>Prøv å kode og dekode noen bokstaver!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Prøv å kode og dekode noen bokstaver!</label></p>
 </li>
 </ul>
 </section>
@@ -209,9 +209,9 @@ print(decode(<span class="hljs-string">"r"</span>, <span class="hljs-number">17<
 <p>Nå har vi noen funksjoner, la oss bruke dem til å kode ord. Vi kommer til å gå igjennom hver bokstav i ordet og kode det hvis det finnes i alfabetet (vi hopper over tegn som punktum og mellomrom).</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Under de nye funksjonene fra forrige oppgave kan du skrive inn koden under (med andre ord: behold det du gjorde i oppgave 4, og legg til koden under).</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Under de nye funksjonene fra forrige oppgave kan du skrive inn koden under (med andre ord: behold det du gjorde i oppgave 4, og legg til koden under).</label></p>
 <pre><code class="python">secret = <span class="hljs-number">17</span>
 message = <span class="hljs-string">"hello world"</span>
 
@@ -239,8 +239,8 @@ output = <span class="hljs-string">""</span>
 print(output)
 </code></pre>
 </li>
-<li>
-<p>Kjør programmet og se hva som skjer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Kjør programmet og se hva som skjer.</label></p>
 <p>Den første delen av koden burde skrive ut &quot;yvååc kcfåu&quot;, som er den hemmelige versjonen av &quot;hello world&quot;. Den andre delen dekoder det igjen og skriver ut &quot;hello world&quot;</p>
 </li>
 </ul>

@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Norgestur</h1><div class="lesson-icons"><div class="level"><img title="Nivå 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/norgestur/norgestur.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Norgestur</h1><div class="lesson-icons"><div class="level"><img title="Nivå 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/norgestur/norgestur.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Bli med på en rundreise i Norge! Vi skal lage et spill hvor du styrer
 et helikopter rundt omkring et kart over Norge, mens du prøver å
@@ -19,28 +19,28 @@ raskest mulig finne steder og byer du blir bedt om å besøke.</p>
 senere bruke helikopteret til å besøke.</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi må først laste ned filen som inneholder kartet fra nettet. Hvis
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Vi må først laste ned filen som inneholder kartet fra nettet. Hvis
 du allerede har fått denne filen på datamaskinen din kan du hoppe
-over det neste punktet.</p>
+over det neste punktet.</label></p>
 </li>
-<li>
-<p>Høyreklikk på lenken <a href="norgeskart.png">norgeskart.png</a> og velg at den
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Høyreklikk på lenken <a href="norgeskart.png">norgeskart.png</a> og velg at den
 skal åpnes i en ny fane.  Klikk på den nye fanen som blir
 åpnet. Dette vil vise et bilde av et norgeskart. Høyreklikk på
 bildet, og velg <code>Lagre bildet som</code> eller noe som ligner. Lagre
-bildet et sted du finner det igjen, for eksempel på Skrivebordet.</p>
+bildet et sted du finner det igjen, for eksempel på Skrivebordet.</label></p>
 </li>
-<li>
-<p>Start et nytt Scratch-prosjekt. Slett kattefiguren, for eksempel ved
-å høyreklikke på den og velge <code>slett</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Start et nytt Scratch-prosjekt. Slett kattefiguren, for eksempel ved
+å høyreklikke på den og velge <code>slett</code>.</label></p>
 </li>
-<li>
-<p>Legg inn norgeskartet som bakgrunn ved å velge
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Legg inn norgeskartet som bakgrunn ved å velge
 <img src="../bilder/hent-fra-fil.png" alt="Last opp bakgrunn fra fil"> under
 <code>Ny bakgrunn</code> helt til venstre på skjermen. Velg filen
-<code>norgeskart.png</code> du lastet ned tidligere.</p>
+<code>norgeskart.png</code> du lastet ned tidligere.</label></p>
 </li>
 </ul>
 <section class="protip" id="norgeskart">
@@ -59,33 +59,33 @@ begynner med å programmere et skript som lar oss kontrollere
 helikopteret med piltastene.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en ny figur ved å klikke
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Legg til en ny figur ved å klikke
 <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">
 under <code>Figurer</code>. Vi har brukt <code>Transport/Helicopter</code>, men du kan
-eventuelt bruke en annen figur du vil reise rundt med.</p>
+eventuelt bruke en annen figur du vil reise rundt med.</label></p>
 </li>
-<li>
-<p>Klikk <code class="blockmotion">i</code> og skift navn på figuren til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Klikk <code class="blockmotion">i</code> og skift navn på figuren til
 <code>Helikopter</code>. Sett også rotasjonsmåten til
 <img src="../bilder/rotasjonsmate-hv.png" alt="vend sideveis"> for å unngå at
-helikopteret flyr opp-ned.</p>
+helikopteret flyr opp-ned.</label></p>
 </li>
-<li>
-<p>Vi begynner med å gjøre helikopteret mindre, samt sikre oss at det
-alltid starter på samme sted. Lag dette skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Vi begynner med å gjøre helikopteret mindre, samt sikre oss at det
+alltid starter på samme sted. Lag dette skriptet:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett størrelse til (25) %
 gå til x: (0) y: (0)
 </code></pre>
 </li>
-<li>
-<p>Vi skal nå programmere at helikopteret kontrolleres med
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi skal nå programmere at helikopteret kontrolleres med
 piltastene. Vi gjør dette ved å starte en løkke som vi gjentar for
 alltid. Inne i denne evige løkken tester vi om piltastene er trykket
 og i så fall flytter vi helikopteret. Først lager vi koden som
-flytter helikopteret oppover:</p>
+flytter helikopteret oppover:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett størrelse til (25) %
 gå til x: (0) y: (0)
@@ -102,30 +102,30 @@ slutt
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Starter en liten utgave av helikopteret omtrent midt på skjermen
-(litt nordvest for Trondheim)?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Starter en liten utgave av helikopteret omtrent midt på skjermen
+(litt nordvest for Trondheim)?</label></p>
 </li>
-<li>
-<p>Flytter helikopteret seg oppover når du trykker pil opp-tasten?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Flytter helikopteret seg oppover når du trykker pil opp-tasten?</label></p>
 </li>
-<li>
-<p>Skjer det noe når du trykker de andre piltastene?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skjer det noe når du trykker de andre piltastene?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <p>Vi skal nå programmere de andre piltastene også.</p>
-<ul>
-<li>
-<p>Koden for å flytte helikopteret med de andre piltastene er veldig
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Koden for å flytte helikopteret med de andre piltastene er veldig
 lik koden som flytter helikopteret oppover. Vi kan derfor kopiere
 denne! Høyreklikk på klossen <code class="blockcontrol">hvis</code><code class="blocksensing">tast pil opp trykket?</code>, og velg <code>lag en kopi</code>. Slipp disse
 klossene inn i <code class="blockcontrol">for alltid</code>-løkken. Gjenta til du har
 fire <code class="blockcontrol">hvis</code>-klosser. Endre på skriptet ditt slik at
-det ser ut som følger:</p>
+det ser ut som følger:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett størrelse til (25) %
 gå til x: (0) y: (0)
@@ -154,14 +154,14 @@ slutt
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kan du bruke alle fire piltastene til å flytte helikopteret?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Kan du bruke alle fire piltastene til å flytte helikopteret?</label></p>
 </li>
-<li>
-<p>Hva er det som bestemmer hvor fort helikopteret beveger seg? Prøv å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Hva er det som bestemmer hvor fort helikopteret beveger seg? Prøv å
 forandre på skriptet ditt slik at helikopteret flyr raskere eller
-saktere.</p>
+saktere.</label></p>
 </li>
 </ul>
 </section>
@@ -181,45 +181,45 @@ helikopteret beveger seg.</p>
 et mål med reisen.</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi skal nå tegne vår egen figur som vi vil bruke til å markere et
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi skal nå tegne vår egen figur som vi vil bruke til å markere et
 sted på kartet. Klikk <img src="../bilder/tegn-ny.png" alt="Tegn ny figur">
-under <code>Figurer</code>.</p>
+under <code>Figurer</code>.</label></p>
 </li>
-<li>
-<p>Vi trenger bare en ganske liten sirkel. Velg en passende farge, for
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Vi trenger bare en ganske liten sirkel. Velg en passende farge, for
 eksempel vil rød synes ganske godt på kartet. Velg deretter
 sirkelverktøyet, og marker den fyllte sirkelen (ellipsen) til
-venstre under tegnevinduet.</p>
+venstre under tegnevinduet.</label></p>
 </li>
-<li>
-<p>Før vi begynner å tegne kan du forstørre tegningen din ved å trykke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Før vi begynner å tegne kan du forstørre tegningen din ved å trykke
 på forstørrelsesglasset nederst til høyre. For eksempel vil 800%
 forstørrelse passe bra. Hold inne <code>skift</code>-knappen mens du drar ut en
 sirkel som er omtrent fire ruter stor. <code>skift</code>-knappen hjelper deg
-til å lage en helt rund sirkel.</p>
+til å lage en helt rund sirkel.</label></p>
 <p><figure><img src="sirkel.png" alt=""></figure></p>
 </li>
-<li>
-<p>Klikk på <code class="blockmotion">i</code> og gi denne nye figuren navnet <code>Sted</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Klikk på <code class="blockmotion">i</code> og gi denne nye figuren navnet <code>Sted</code>.</label></p>
 </li>
-<li>
-<p>Dra denne nye sted-figuren til et sted på kartet du vil at skal være
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Dra denne nye sted-figuren til et sted på kartet du vil at skal være
 første reisemål. Vi har brukt <code>Hønefoss</code> som første reisemål, men du
-kan velge et annet sted om du vil.</p>
+kan velge et annet sted om du vil.</label></p>
 </li>
-<li>
-<p>Vi trenger nå posisjonen til reisemålet vårt. Denne finner vi ved se
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Vi trenger nå posisjonen til reisemålet vårt. Denne finner vi ved se
 på figurinformasjonen etter tallene som står bak <code>x</code> og <code>y</code>. Disse
 tallene kalles koordinater. I eksempelet under er koordinatene <code>x: 6</code> og <code>y: -112</code>. Disse forteller hvor på kartet vi har lagt
-reisemålet.</p>
+reisemålet.</label></p>
 <p><figure><img src="reisemaal.png" alt=""></figure></p>
 </li>
-<li>
-<p>Klikk på <code class="blocklightgrey">Skript</code>-fanen. Vi skal nå lage koden som
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Klikk på <code class="blocklightgrey">Skript</code>-fanen. Vi skal nå lage koden som
 legger <code>Sted</code>-figuren på riktig sted, og senere oppdager om
-helikopteret reiser dit.</p>
+helikopteret reiser dit.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Sted: Hønefoss v]
 
@@ -237,13 +237,13 @@ eget reisemål må du bytte disse tallene med de du fant.</p>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Er <code>Sted</code>-figuren der den skal være på kartet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Er <code>Sted</code>-figuren der den skal være på kartet?</label></p>
 </li>
-<li>
-<p>Sier den <code>Fant Hønefoss!</code> (eller ditt reisemål) når helikopteret
-flyr til reisemålet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Sier den <code>Fant Hønefoss!</code> (eller ditt reisemål) når helikopteret
+flyr til reisemålet?</label></p>
 </li>
 </ul>
 </section>
@@ -254,16 +254,16 @@ flyr til reisemålet?</p>
 det første!</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Flytt <code>Sted</code>-figuren til et nytt sted på kartet. Vi bruker
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Flytt <code>Sted</code>-figuren til et nytt sted på kartet. Vi bruker
 <code>Tromsø</code>. Finn koordinatene til dette nye stedet på samme måte som
-sist.</p>
+sist.</label></p>
 </li>
-<li>
-<p>Legg til en melding nederst i <code>Hønefoss</code>-skriptet som kaller et nytt
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Legg til en melding nederst i <code>Hønefoss</code>-skriptet som kaller et nytt
 reisemål. Lag deretter et nytt skript for det nye stedet. Dette nye
-skriptet er veldig likt det første, så du bør høyreklikke på <code class="blockevents">når jeg mottar Sted: Hønefoss</code>-klossen og velge <code>lag en kopi</code>.</p>
+skriptet er veldig likt det første, så du bør høyreklikke på <code class="blockevents">når jeg mottar Sted: Hønefoss</code>-klossen og velge <code>lag en kopi</code>.</label></p>
 <pre><code class="blocks">når jeg mottar [Sted: Hønefoss v]
 gå til x: (6) y: (-112)
 vent til &lt;berører [Helikopter v]?&gt;
@@ -283,12 +283,12 @@ reisemålet.</p>
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Flytter reisemålet seg etter at du har funnet det første?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Flytter reisemålet seg etter at du har funnet det første?</label></p>
 </li>
-<li>
-<p>Oppdager også det andre reisemålet at du finner det?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Oppdager også det andre reisemålet at du finner det?</label></p>
 </li>
 </ul>
 </section>
@@ -302,19 +302,19 @@ spilleren til hvilket sted hun skal fly!</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <p>Vi vil først fortelle spilleren hvor han skal fly.</p>
-<ul>
-<li>
-<p>Lag en ny variabel, ved å klikke på <code class="blockdata">Data</code> og deretter
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Lag en ny variabel, ved å klikke på <code class="blockdata">Data</code> og deretter
 <code>Lag en variabel</code>. Kall variabelen <code class="blockdata">Reis til</code> og velg at
-den skal gjelde <code>For alle figurer</code>.</p>
+den skal gjelde <code>For alle figurer</code>.</label></p>
 </li>
-<li>
-<p>Legg merke til at det dukket opp en boks på kartet, <code class="blocklightgrey">Reis til</code><code class="blockdata">0</code>. Flytt denne boksen til et
-passende sted slik at den er lett å lese.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Legg merke til at det dukket opp en boks på kartet, <code class="blocklightgrey">Reis til</code><code class="blockdata">0</code>. Flytt denne boksen til et
+passende sted slik at den er lett å lese.</label></p>
 </li>
-<li>
-<p>Nå kan vi oppdatere koden til <code>Sted</code> slik at den setter denne <code class="blockdata">Reis til</code>-variabelen. Endre først <code>Hønefoss</code>-skriptet som
-følger:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Nå kan vi oppdatere koden til <code>Sted</code> slik at den setter denne <code class="blockdata">Reis til</code>-variabelen. Endre først <code>Hønefoss</code>-skriptet som
+følger:</label></p>
 <pre><code class="blocks">når jeg mottar [Sted: Hønefoss v]
 gå til x: (6) y: (-112)
 sett [Reis til v] til [Hønefoss]
@@ -323,8 +323,8 @@ si [Fant Hønefoss!] i (2) sekunder
 send melding [Sted: Tromsø v]
 </code></pre>
 </li>
-<li>
-<p>Endre også det andre reisemål-skriptet på samme måte:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Endre også det andre reisemål-skriptet på samme måte:</label></p>
 <pre><code class="blocks">når jeg mottar [Sted: Tromsø v]
 gå til x: (103) y: (121)
 sett [Reis til v] til [Tromsø]
@@ -337,12 +337,12 @@ si [Fant Tromsø!] i (2) sekunder
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Fungerer fortsatt spillet som tidligere?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Fungerer fortsatt spillet som tidligere?</label></p>
 </li>
-<li>
-<p>Oppdaterer <code class="blockdata">Reis til</code>-variabelen seg slik du forventet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Oppdaterer <code class="blockdata">Reis til</code>-variabelen seg slik du forventet?</label></p>
 </li>
 </ul>
 </section>
@@ -350,10 +350,10 @@ si [Fant Tromsø!] i (2) sekunder
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
 <p>Vi er nå klare til å skjule den røde sirkelen. Vi prøver først det
 enkleste og mest opplagte:</p>
-<ul>
-<li>
-<p>Legg til en <code class="blocklooks">skjul</code>-kloss i oppstartskriptet på
-<code>Sted</code>-figuren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Legg til en <code class="blocklooks">skjul</code>-kloss i oppstartskriptet på
+<code>Sted</code>-figuren.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 skjul
 send melding [Sted: Hønefoss v]
@@ -364,12 +364,12 @@ send melding [Sted: Hønefoss v]
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Blir den røde sirkelen borte?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Blir den røde sirkelen borte?</label></p>
 </li>
-<li>
-<p>Hva skjer om du reiser til Hønefoss?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Hva skjer om du reiser til Hønefoss?</label></p>
 </li>
 </ul>
 <p>Hmm ... spillet oppdager ikke lengre at vi reiser til Hønefoss.
@@ -379,10 +379,10 @@ usynlig på!</p>
 </section>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>I stedet for å skjule sirkelen helt vil vi heller gjøre den
-gjennomsiktig! Bytt ut <code class="blocklooks">skjul</code>-klossen med en <code class="blocklooks">sett effekt</code>-kloss.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> I stedet for å skjule sirkelen helt vil vi heller gjøre den
+gjennomsiktig! Bytt ut <code class="blocklooks">skjul</code>-klossen med en <code class="blocklooks">sett effekt</code>-kloss.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vis
 sett [gjennomsiktig v] effekt til (100)
@@ -397,12 +397,12 @@ den sikre siden (vi har jo oppdaget at spillet ikke virker om
 <section class="flag" id="test-prosjektet-7">
 <h2 class="flag" id="test-prosjektet-7">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Er fortsatt den røde sirkelen usynlig?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Er fortsatt den røde sirkelen usynlig?</label></p>
 </li>
-<li>
-<p>Hva skjer nå om du reiser til Hønefoss?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Hva skjer nå om du reiser til Hønefoss?</label></p>
 </li>
 </ul>
 </section>
@@ -413,12 +413,12 @@ den sikre siden (vi har jo oppdaget at spillet ikke virker om
 at hun har funnet det!</em></p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
-<ul>
-<li>
-<p>La oss lage en ny melding, <code>Fant sted</code>, som vi kan sende hver gang
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> La oss lage en ny melding, <code>Fant sted</code>, som vi kan sende hver gang
 spilleren finner et reisemål. Denne meldingen kan vi så bruke til å
 kjøre et skript hver gang vi finner et reisemål. Endre
-<code>Sted</code>-skriptene som følger:</p>
+<code>Sted</code>-skriptene som følger:</label></p>
 <pre><code class="blocks">når jeg mottar [Sted: Hønefoss v]
 gå til x: (6) y: (-112)
 sett [Reis til v] til [Hønefoss]
@@ -433,11 +433,11 @@ vent til &lt;berører [Helikopter v]?&gt;
 send melding [Fant sted v] og vent
 </code></pre>
 </li>
-<li>
-<p>Når vi mottar <code>Fant sted</code>-meldingen vil vi vise hvor reisemålet
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Når vi mottar <code>Fant sted</code>-meldingen vil vi vise hvor reisemålet
 faktisk ligger. Siden sirkelen snart flyttes videre kan vi ikke bare
 gjøre figuren synlig, vi må også <code class="blockpen">stemple avtrykk</code> av
-figuren på bakgrunnen. Legg til dette skriptet:</p>
+figuren på bakgrunnen. Legg til dette skriptet:</label></p>
 <pre><code class="blocks">når jeg mottar [Fant sted v]
 sett [gjennomsiktig v] effekt til (0)
 stemple avtrykk
@@ -449,23 +449,23 @@ sett [gjennomsiktig v] effekt til (100)
 <section class="flag" id="test-prosjektet-8">
 <h2 class="flag" id="test-prosjektet-8">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Dukker den røde sirkelen opp etterhvert som du finner reisemålene?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Dukker den røde sirkelen opp etterhvert som du finner reisemålene?</label></p>
 </li>
-<li>
-<p>Hva skjer om du starter spillet på nytt etter å ha funnet
-reisemålene?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Hva skjer om du starter spillet på nytt etter å ha funnet
+reisemålene?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-10">
 <h2 class="check" id="sjekkliste-10">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å være sikker på at avtrykkene (de røde sirklene) blir borte når
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> For å være sikker på at avtrykkene (de røde sirklene) blir borte når
 vi starter spillet på nytt kan vi bruke
-<code class="blockpen">slett</code>-klossen. Legg til en kloss på oppstart-skripet:</p>
+<code class="blockpen">slett</code>-klossen. Legg til en kloss på oppstart-skripet:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 slett
 vis
@@ -473,16 +473,16 @@ sett [gjennomsiktig v] effekt til (100)
 send melding [Sted: Hønefoss v]
 </code></pre>
 </li>
-<li>
-<p>La oss også legge på en enkel lydeffekt når spilleren finner et
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> La oss også legge på en enkel lydeffekt når spilleren finner et
 reisemål. Siden vi har meldingen <code>Fant sted</code> er dette enkelt. Klikk
 først på <code class="blocklightgrey">Lyder</code>-fanen og velg en ny lyd fra
 biblioteket. Vi bruker <code>Effekter/rattle</code>, men du kan gjerne bruke en
-annen lyd.</p>
+annen lyd.</label></p>
 </li>
-<li>
-<p>Spill lyden når et sted blir funnet. Klikk
-<code class="blocklightgrey">Skript</code>-fanen og legg til en <code class="blocksound">spill lyden</code>-kloss.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Spill lyden når et sted blir funnet. Klikk
+<code class="blocklightgrey">Skript</code>-fanen og legg til en <code class="blocksound">spill lyden</code>-kloss.</label></p>
 <pre><code class="blocks">når jeg mottar [Fant sted v]
 spill lyden [rattle v]
 sett [gjennomsiktig v] effekt til (0)
@@ -495,12 +495,12 @@ sett [gjennomsiktig v] effekt til (100)
 <section class="flag" id="test-prosjektet-9">
 <h2 class="flag" id="test-prosjektet-9">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Blir de røde sirklene slettet når du starter spillet på nytt?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> Blir de røde sirklene slettet når du starter spillet på nytt?</label></p>
 </li>
-<li>
-<p>Spilles det av en liten lyd når du finner et reisemål?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Spilles det av en liten lyd når du finner et reisemål?</label></p>
 </li>
 </ul>
 </section>
@@ -511,24 +511,24 @@ sett [gjennomsiktig v] effekt til (100)
 tidsbegrensning.</em></p>
 <section class="check" id="sjekkliste-11">
 <h2 class="check" id="sjekkliste-11">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klikk på <code>Scene</code> til venstre for figurene. Skript som skal gjelde
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Klikk på <code>Scene</code> til venstre for figurene. Skript som skal gjelde
 for hele spillet, og ikke en spesiell figur kan man legge på
 scenen. I dette tilfellet vil vi ha en variabel som teller ned hvor
 mye tid spilleren har til å reise rundt. Denne er et bra eksempel på
-noe som tilhører hele spillet.</p>
+noe som tilhører hele spillet.</label></p>
 </li>
-<li>
-<p>Velg <code class="blockdata">Data</code> og <code class="blocklightgrey">Lag en variabel</code>.  Kall
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Velg <code class="blockdata">Data</code> og <code class="blocklightgrey">Lag en variabel</code>.  Kall
 variabelen <code class="blockdata">Tid</code>. Legg merke til at siden vi lager
-variabelen på scenen må den gjelde for alle figurer.</p>
+variabelen på scenen må den gjelde for alle figurer.</label></p>
 </li>
-<li>
-<p>Når spillet starter vil vi gi spilleren litt tid. Dette gjør vi ved
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Når spillet starter vil vi gi spilleren litt tid. Dette gjør vi ved
 å sette <code class="blockdata">Tid</code> til for eksempel <code>30</code>, du kan selvsagt
 eksperimentere med andre tall. Deretter starter vi en løkke som
-teller ned hvert sekund.</p>
+teller ned hvert sekund.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [Tid v] til [30]
 gjenta til &lt;(Tid) = [0]&gt;
@@ -540,8 +540,8 @@ send melding [Avslutt v]
 <p>Legg merke til at vi også sender ut en ny melding <code>Avslutt</code> når
 tiden er ute. Denne bruker vi til å avslutte spillet.</p>
 </li>
-<li>
-<p>Lag et nytt skript på scenen som avslutter spillet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Lag et nytt skript på scenen som avslutter spillet.</label></p>
 <pre><code class="blocks">når jeg mottar [Avslutt v]
 stopp [alle v] :: control
 </code></pre>
@@ -551,16 +551,16 @@ stopp [alle v] :: control
 <section class="flag" id="test-prosjektet-10">
 <h2 class="flag" id="test-prosjektet-10">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Starter tiden på 30 når spillet begynner?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Starter tiden på 30 når spillet begynner?</label></p>
 </li>
-<li>
-<p>Telles tiden ned etterhvert?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> Telles tiden ned etterhvert?</label></p>
 </li>
-<li>
-<p>Avsluttes spillet (helikopteret kan ikke fly rundt lengre) når tiden
-løper ut?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Avsluttes spillet (helikopteret kan ikke fly rundt lengre) når tiden
+løper ut?</label></p>
 </li>
 </ul>
 </section>
@@ -568,9 +568,9 @@ løper ut?</p>
 <h2 class="check" id="sjekkliste-12">Sjekkliste</h2>
 <p>Som en bonus kan vi også gi spilleren litt ekstra tid hver gang han
 finner et reisemål.</p>
-<ul>
-<li>
-<p>Lag et nytt skript på scenen som reagerer på meldingen <code>Fant sted</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_55" disabled="true"><label for="cbx_55"> Lag et nytt skript på scenen som reagerer på meldingen <code>Fant sted</code>.</label></p>
 <pre><code class="blocks">når jeg mottar [Fant sted v]
 endre [Tid v] med (10)
 </code></pre>
@@ -587,30 +587,30 @@ spillet mer spennende!</em></p>
 <p>For å legge til nye steder må vi bare gjøre det samme som vi gjorde
 tidligere i oppgaven (under Steg 3 og 4). Det enkleste er å kopiere
 kodeklossene vi allerede har lagd, og deretter endre på dem.</p>
-<ul>
-<li>
-<p>Velg figuren <code>Sted</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_56" disabled="true"><label for="cbx_56"> Velg figuren <code>Sted</code>.</label></p>
 </li>
-<li>
-<p>Vi har gjort <code>Sted</code>-figuren helt gjennomsiktig. For å gjøre den
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_57" disabled="true"><label for="cbx_57"> Vi har gjort <code>Sted</code>-figuren helt gjennomsiktig. For å gjøre den
 synlig igjen, kan du bare klikke på (du trenger ikke legge den til i
 noe skript) klossen <code class="blocklooks">ta bort grafiske effekter</code> i
 <code class="blocklooks">Utseende</code>-kategorien. Det kan også være nyttig å
 klikke på <code class="blockpen">slett</code>-klossen i
-<code class="blockpen">Penn</code>-kategorien.</p>
+<code class="blockpen">Penn</code>-kategorien.</label></p>
 </li>
-<li>
-<p>Flytt den røde sirkelen til et nytt sted. Noter deg koordinatene ved
-å se på figurinformasjonen, <code class="blockmotion">i</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_58" disabled="true"><label for="cbx_58"> Flytt den røde sirkelen til et nytt sted. Noter deg koordinatene ved
+å se på figurinformasjonen, <code class="blockmotion">i</code>.</label></p>
 </li>
-<li>
-<p>Høyreklikk på skriptet som begynner <code class="blockevents">når jeg mottar Sted: Hønefoss</code> og velg <code>lag en kopi</code>. Oppdater denne kopien
-med navnet og koordinatene du fant ovenfor.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_59" disabled="true"><label for="cbx_59"> Høyreklikk på skriptet som begynner <code class="blockevents">når jeg mottar Sted: Hønefoss</code> og velg <code>lag en kopi</code>. Oppdater denne kopien
+med navnet og koordinatene du fant ovenfor.</label></p>
 </li>
-<li>
-<p>Nedenfor har vi lagt til tre nye steder (samt lagt til en melding
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_60" disabled="true"><label for="cbx_60"> Nedenfor har vi lagt til tre nye steder (samt lagt til en melding
 for å reise videre fra Tromsø). Dine skript bør ligne på disse, men
-kan gjerne inneholde andre navn og koordinater.</p>
+kan gjerne inneholde andre navn og koordinater.</label></p>
 <pre><code class="blocks">når jeg mottar [Sted: Hønefoss v]
 gå til x: (6) y: (-112)
 sett [Reis til v] til [Hønefoss]
@@ -652,12 +652,12 @@ send melding [Avslutt v]
 <section class="flag" id="test-prosjektet-11">
 <h2 class="flag" id="test-prosjektet-11">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kan du reise innom alle stedene?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_61" disabled="true"><label for="cbx_61"> Kan du reise innom alle stedene?</label></p>
 </li>
-<li>
-<p>Virker stedene å være riktig plassert på kartet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_62" disabled="true"><label for="cbx_62"> Virker stedene å være riktig plassert på kartet?</label></p>
 </li>
 </ul>
 </section>
@@ -701,10 +701,10 @@ tilfeldig?</p>
 vi i stedet kan gjøre er å tilfeldig bestemme om vi skal be spilleren
 reise til et reisemål, eller bare gå videre til neste reisemål uten å
 spørre.</p>
-<ul>
-<li>
-<p>Nedenfor er noen hint om hvordan dette kan gjøres. Vær oppmerksom på
-at skriptene bruker noen variable du selv må lage.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_63" disabled="true"><label for="cbx_63"> Nedenfor er noen hint om hvordan dette kan gjøres. Vær oppmerksom på
+at skriptene bruker noen variable du selv må lage.</label></p>
 <pre><code class="blocks">definer sjekk sted
 hvis &lt;&lt;(tilfeldig tall fra (1) til (Antall steder totalt)) &gt; [1]&gt; eller &lt;berører fargen [#ff0000]?&gt;&gt;
     sett [bruk sted v] til [nei]
@@ -726,17 +726,17 @@ send melding [Sted: Tromsø v]
 vi allerede har besøkt et reisemål. I såfall vil vi jo ha stemplet
 rødfarge på kartet.</p>
 </li>
-<li>
-<p>Siden dette vil hoppe over reisemål, er det viktig at det siste
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_64" disabled="true"><label for="cbx_64"> Siden dette vil hoppe over reisemål, er det viktig at det siste
 reisemålet sender melding om at vi skal besøke det første reisemålet
-igjen, i stedet for at spillet avsluttes etter det siste reisemålet.</p>
+igjen, i stedet for at spillet avsluttes etter det siste reisemålet.</label></p>
 </li>
-<li>
-<p>Det blir også vanskeligere å vite når spilleren har funnet alle
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_65" disabled="true"><label for="cbx_65"> Det blir også vanskeligere å vite når spilleren har funnet alle
 (eller mange nok) reisemål. En måte å gjøre dette på er å bruke en
 ny variabel, for eksempel <code class="blockdata">Antall steder funnet</code>, som
 teller hvor mange steder som er funnet. Når mange nok steder er
-funnet kan det sendes ut en <code>Avslutt</code>- (eller <code>Vant</code>-) melding.</p>
+funnet kan det sendes ut en <code>Avslutt</code>- (eller <code>Vant</code>-) melding.</label></p>
 </li>
 </ul>
 </section>
@@ -747,48 +747,48 @@ funnet kan det sendes ut en <code>Avslutt</code>- (eller <code>Vant</code>-) mel
 andre kart som du finner på internett.</em></p>
 <section class="check" id="sjekkliste-14">
 <h2 class="check" id="sjekkliste-14">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne nettleseren din og finn en søkemotor som for eksempel Google,
-Bing eller DuckDuckGo.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_66" disabled="true"><label for="cbx_66"> Åpne nettleseren din og finn en søkemotor som for eksempel Google,
+Bing eller DuckDuckGo.</label></p>
 </li>
-<li>
-<p>Søk etter et kart du er interessert i, for eksempel <code>Europakart</code>.
-Velg å bare se bilderesultatene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_67" disabled="true"><label for="cbx_67"> Søk etter et kart du er interessert i, for eksempel <code>Europakart</code>.
+Velg å bare se bilderesultatene.</label></p>
 </li>
-<li>
-<p>Når du finner et kart du synes ser bra ut, klikk på det slik at du
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_68" disabled="true"><label for="cbx_68"> Når du finner et kart du synes ser bra ut, klikk på det slik at du
 kommer til originalbildet. Deretter kan du prøve å høyreklikke på
-kartet, og velge Lagre bilde eller noe som ligner.</p>
+kartet, og velge Lagre bilde eller noe som ligner.</label></p>
 </li>
-<li>
-<p>Før du bruker kartet i et prosjekt du deler med andre, må du
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_69" disabled="true"><label for="cbx_69"> Før du bruker kartet i et prosjekt du deler med andre, må du
 undersøke om du har rettigheter til å bruke kartet. Noen ganger vil
 det stå på nettsiden du fant kartet på at du kan bruke det (et
 eksempel på dette kan du se på
 <a href="http://no.wikipedia.org/wiki/Fil:EUR_location_NOR.PNG">http://no.wikipedia.org/wiki/Fil:EUR_location_NOR.PNG</a>). Andre
 ganger må du ta kontakt med de som eier nettsiden (for eksempel ved
 å sende en e-post) for å undersøke om du kan bruke kartet. Se mer
-informasjon om opphavsrett nedenfor.</p>
+informasjon om opphavsrett nedenfor.</label></p>
 </li>
-<li>
-<p>Bakgrunner i Scratch skal helst ha oppløsningen 480 x 360
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_70" disabled="true"><label for="cbx_70"> Bakgrunner i Scratch skal helst ha oppløsningen 480 x 360
 bildepunkter. Som regel vil ikke kartene du finner på nettet ha
 denne oppløsningen. Det gjør som regel ingenting, fordi Scratch vil
 gjøre bildene mindre om de er for store. Om bildet er mindre enn 480
 x 360 vil Scratch fylle resten av bakgrunnen automatisk. Om du vil
 ha mer kontroll over denne konverteringen kan du endre oppløsningen
 selv i et bildebehandlingsprogram som for eksempel Paint, Gimp eller
-Photoshop (Elements).</p>
+Photoshop (Elements).</label></p>
 </li>
-<li>
-<p>Les inn det nye kartet i Scratchprosjektet ditt på samme måte som du
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_71" disabled="true"><label for="cbx_71"> Les inn det nye kartet i Scratchprosjektet ditt på samme måte som du
 leste inn det opprinnelige norgeskartet i Steg 1, ved å velge
 <img src="../bilder/hent-fra-fil.png" alt="Last opp bakgrunn fra fil"> under
-<code>Ny bakgrunn</code> helt til venstre på skjermen.</p>
+<code>Ny bakgrunn</code> helt til venstre på skjermen.</label></p>
 </li>
-<li>
-<p>Lag reisemål basert på det nye kartet!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_72" disabled="true"><label for="cbx_72"> Lag reisemål basert på det nye kartet!</label></p>
 </li>
 </ul>
 </section>

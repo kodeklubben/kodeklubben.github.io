@@ -39,11 +39,11 @@ dag, inkludert for eksempel <em>Scratch</em>, <em>Lua</em> og <em>Python</em>.</
 </section>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Det er på tide å lage vår første skilpadde. Start IDLE og åpne et
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Det er på tide å lage vår første skilpadde. Start IDLE og åpne et
 nytt programmeringsvindu. I dette nye vinduet kan du skrive inn
-følgende kode:</p>
+følgende kode:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -55,30 +55,30 @@ color(<span class="hljs-string">'yellow'</span>)
 få opp et nytt vindu med en gul skilpadde på en blå bakgrunn. Hvis
 dette ikke skjer kan du se i det opprinnelige <code>Python Shell</code>-vinduet om du har fått en feilmelding.</p>
 </li>
-<li>
-<p>La oss se litt nøyere på hva programmet gjør så langt. Det er en god
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> La oss se litt nøyere på hva programmet gjør så langt. Det er en god
 ide å prøve å endre på ting i programmet for å se effekten av
-endringene og bedre forstå hvordan ting virker.</p>
+endringene og bedre forstå hvordan ting virker.</label></p>
 </li>
-<li>
-<p>Linjen <code>shape('turtle')</code> sier at vi vil bruke en skilpaddefigur. I
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Linjen <code>shape('turtle')</code> sier at vi vil bruke en skilpaddefigur. I
 stedet for <code>turtle</code> kan du også prøve <code>arrow</code>, <code>circle</code>, <code>square</code>,
-<code>triangle</code> eller <code>classic</code>.</p>
+<code>triangle</code> eller <code>classic</code>.</label></p>
 </li>
-<li>
-<p>Med <code>shapesize(2)</code> forteller vi programmet hvor stor vi vil at
-skilpaddefiguren skal være. Prøv med andre tall!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Med <code>shapesize(2)</code> forteller vi programmet hvor stor vi vil at
+skilpaddefiguren skal være. Prøv med andre tall!</label></p>
 </li>
-<li>
-<p>Kommandoene <code>bgcolor</code> og <code>color</code> bestemmer fargene på henholdsvis
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Kommandoene <code>bgcolor</code> og <code>color</code> bestemmer fargene på henholdsvis
 bakgrunnen og på skilpaddefiguren. Python kjenner til veldig mange
 farger (men bare på engelsk), så prøv om du kan endre fargene til
-noe du liker.</p>
+noe du liker.</label></p>
 </li>
-<li>
-<p>I de senere programmene vil vi bruke disse linjene på toppen. Du kan
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> I de senere programmene vil vi bruke disse linjene på toppen. Du kan
 gjerne bruke en variant av farger og figur som du liker bedre i
-stedet.</p>
+stedet.</label></p>
 </li>
 </ul>
 </section>
@@ -90,10 +90,10 @@ steget vil vi bli kjent med noen enkle kommandoer som gjør skilpadden
 om til en kunstner.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en linje nederst i programmet ditt, slik at det ser slik
-ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Legg til en linje nederst i programmet ditt, slik at det ser slik
+ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -104,16 +104,16 @@ color(<span class="hljs-string">'yellow'</span>)
 forward(<span class="hljs-number">200</span>)
 </code></pre>
 </li>
-<li>
-<p>Når du kjører programmet vil du se at skilpadden har beveget seg
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Når du kjører programmet vil du se at skilpadden har beveget seg
 forover et lite stykke, og at den har tegnet en strek der den
-beveget seg.</p>
+beveget seg.</label></p>
 </li>
-<li>
-<p>I tillegg til <code>forward</code> kan vi også bruke kommandoene <code>backward</code> for
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> I tillegg til <code>forward</code> kan vi også bruke kommandoene <code>backward</code> for
 å gå bakover, <code>left</code> for å svinge mot venstre og <code>right</code> for å
 svinge mot høyre. Prøv for eksempel å endre programmet ditt til det
-følgende:</p>
+følgende:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -130,13 +130,13 @@ forward(<span class="hljs-number">100</span>)
 </code></pre>
 <p>Ser du at skilpadden utfører alle kommandoene du gir den?</p>
 </li>
-<li>
-<p>Hvis vi setter sammen kommandoene litt systematisk kan vi tegne noen
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hvis vi setter sammen kommandoene litt systematisk kan vi tegne noen
 grunnleggende geometriske figurer. For eksempel, om vi vil tegne en
 firkant kan vi først gå fremover, deretter svinge 90 grader (mot
 høyre eller venstre), deretter fremover igjen, så svinge, så
 fremover, så svinge og til slutt fremover en gang til. I Python kan
-vi skrive dette som</p>
+vi skrive dette som</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -155,10 +155,10 @@ right(<span class="hljs-number">90</span>)
 </code></pre>
 <p>Tegner skilpadden en firkant når du kjører dette programmet?</p>
 </li>
-<li>
-<p>Hva med en trekant? Hvordan må du forandre koden din for at
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Hva med en trekant? Hvordan må du forandre koden din for at
 skilpadden skal tegne en trekant i stedet for en firkant? Prøv selv
-å endre koden og kjør den, ble resultatet som du trodde?</p>
+å endre koden og kjør den, ble resultatet som du trodde?</label></p>
 </li>
 </ul>
 </section>
@@ -171,10 +171,10 @@ om og om igjen kan vi be Python gjenta deler av koden. Til dette
 bruker vi <strong>for-løkker</strong>.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Det følgende programmet tegner også en firkant, akkurat som det
-tidligere programmet vi lagde:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Det følgende programmet tegner også en firkant, akkurat som det
+tidligereprogrammet vi lagde:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -188,16 +188,16 @@ color(<span class="hljs-string">'yellow'</span>)
 </code></pre>
 <p>Endre koden din som over, og kjør programmet.</p>
 </li>
-<li>
-<p>Legg merke til at linjene som kommer etter <code>for</code> er skjøvet inn til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Legg merke til at linjene som kommer etter <code>for</code> er skjøvet inn til
 høyre. Dette er veldig viktig i Python, fordi det forteller hvor mye
 kode som skal gjentas i løkken. For å skyve koden inn på denne måten
 kan du bruke <code>Tab</code>-tasten i IDLE. For å trekke koden tilbake til
-venstre kan du trykke <code>Shift</code> og <code>Tab</code>.</p>
+venstre kan du trykke <code>Shift</code> og <code>Tab</code>.</label></p>
 </li>
-<li>
-<p>Prøv å trekk linjen <code>right(90)</code> til venstre, slik at for-løkken ser
-slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Prøv å trekk linjen <code>right(90)</code> til venstre, slik at for-løkken ser
+slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
     forward(<span class="hljs-number">100</span>)
 right(<span class="hljs-number">90</span>)
@@ -208,14 +208,14 @@ programmet for å se om du har rett!</p>
 høyre en gang til slutt. Det betyr at den vil tegne en rett linje
 i stedet for en firkant.</p>
 </li>
-<li>
-<p>Nå som vi bruker en for-løkke har det også blitt mye enklere å endre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Nå som vi bruker en for-løkke har det også blitt mye enklere å endre
 koden til å for eksempel tegne en trekant. Vi må endre 4 til 3 i
 for-løkken. I tillegg må vi endre vinkelen skilpadden snur ved hvert
 hjørne. For at skilpadden skal gå en runde rundt trekanten må den
 snu totalt 360 grader. Siden den snur tre ganger må den snu 120
 grader (360 delt på 3) i hvert hjørne. Programmet for å tegne en
-trekant blir dermed seende slik ut:</p>
+trekant blir dermed seende slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -228,10 +228,10 @@ color(<span class="hljs-string">'yellow'</span>)
     right(<span class="hljs-number">120</span>)
 </code></pre>
 </li>
-<li>
-<p>Prøv å endre programmet slik at det tegner andre mangekanter.
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Prøv å endre programmet slik at det tegner andre mangekanter.
 Hvordan kan du tegne for eksempel en femkant, åttekant eller kanskje
-en femtenkant.</p>
+en femtenkant.</label></p>
 </li>
 </ul>
 </section>
@@ -242,11 +242,11 @@ en femtenkant.</p>
 ting navn. Dette vil også gjøre det enklere å forstå hva koden gjør.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi innfører først variabler som sier hvor mange sider vi vil tegne,
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Vi innfører først variabler som sier hvor mange sider vi vil tegne,
 hvor lang hver side skal være og hvor mange grader vi skal snu ved
-hvert hjørne. Endre programmet ditt slik at det ser slik ut:</p>
+hvert hjørne. Endre programmet ditt slik at det ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -264,14 +264,14 @@ angle = <span class="hljs-number">90</span>
 </code></pre>
 <p>Tegner programmet fortsatt en firkant?</p>
 </li>
-<li>
-<p>Nå kan du få programmet til å tegne en trekant bare ved å endre
-verdiene på variablene dine. Prøv om du får det til?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Nå kan du få programmet til å tegne en trekant bare ved å endre
+verdiene på variablene dine. Prøv om du får det til?</label></p>
 </li>
-<li>
-<p>Vi kan gjøre programmet enda smartere. I stedet for at du selv må
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Vi kan gjøre programmet enda smartere. I stedet for at du selv må
 regne vinkelen kan programmet gjøre det. Bytt ut linjen <code>angle = 90</code>
-med</p>
+med</label></p>
 <pre><code class="python">angle = <span class="hljs-number">360</span> / sides
 </code></pre>
 <p>Nå kan du prøve å bare endre verdien av <code>sides</code> og kjøre om igjen.
@@ -286,11 +286,11 @@ Tegner programmet de riktige mangekantene?</p>
 funksjoner.  Dette er en annen måte vi kan unngå å gjenta oss selv på.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi skal nå lage en funksjon som tegner en mangekant. Dette gjør vi
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Vi skal nå lage en funksjon som tegner en mangekant. Dette gjør vi
 ved å bruke kommandoen <code>def</code> (def er en forkortelse for <em>define</em> som
-betyr definer). Endre programmet ditt slik at det ser ut som under:</p>
+betyr definer). Endre programmet ditt slik at det ser ut som under:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -309,10 +309,10 @@ polygon(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>
 </code></pre>
 <p>Kjør programmet. Kjenner du igjen firkanten?</p>
 </li>
-<li>
-<p>Nå som vi har laget <code>polygon</code>-funksjonen er det kjempelett å tegne
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Nå som vi har laget <code>polygon</code>-funksjonen er det kjempelett å tegne
 forskjellige mangekanter. Legg for eksempel til de følgende linjene
-nederst i programmet ditt:</p>
+nederst i programmet ditt:</label></p>
 <pre><code class="python">polygon(<span class="hljs-number">3</span>, <span class="hljs-number">100</span>)
 polygon(<span class="hljs-number">4</span>, <span class="hljs-number">100</span>)
 polygon(<span class="hljs-number">5</span>, <span class="hljs-number">100</span>)
@@ -332,12 +332,12 @@ polygon(<span class="hljs-number">7</span>, <span class="hljs-number">150</span>
 bare tegner kjedelige mangekanter.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi lager nå en ny funksjon <code>polylines</code> som ligner veldig mye på
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Vi lager nå en ny funksjon <code>polylines</code> som ligner veldig mye på
 <code>polygon</code>, men hvor vi også kan endre på vinklene slik at de ikke
 alltid summerer seg til 360. Dette gjør underverker for kunsten vår!
-Endre programmet ditt slik at det ser slik ut:</p>
+Endre programmet ditt slik at det ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -354,18 +354,18 @@ polylines(<span class="hljs-number">5</span>, <span class="hljs-number">100</spa
 </code></pre>
 <p>Kjør programmet. Hva tegner skilpadden nå?</p>
 </li>
-<li>
-<p>En annen variant kan være hvor vi tegner en litt skjev mangekant.
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> En annen variant kan være hvor vi tegner en litt skjev mangekant.
 For eksempel den følgende kommandoen vil tegne firkanter hvor
 vinklene er 91 grader i stedet for 90 grader. Dette blir
-overraskende stilig. Bytt ut <code>polylines</code>-kommandoen med</p>
+overraskende stilig. Bytt ut <code>polylines</code>-kommandoen med</label></p>
 <pre><code class="python">polylines(<span class="hljs-number">91</span>, <span class="hljs-number">200</span>, <span class="hljs-number">91</span>)
 </code></pre>
 </li>
-<li>
-<p>Vi kan også endre lengden av strekene etterhvert som vi tegner.
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Vi kan også endre lengden av strekene etterhvert som vi tegner.
 Dette skaper en fin spiraleffekt. Legg merke til hvor mye funksjonen
-<code>spiral</code> ligner på <code>polylines</code>:</p>
+<code>spiral</code> ligner på <code>polylines</code>:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 shape(<span class="hljs-string">'turtle'</span>)
@@ -387,10 +387,10 @@ color(<span class="hljs-string">'yellow'</span>)
 spiral(<span class="hljs-number">100</span>, <span class="hljs-number">5</span>, <span class="hljs-number">125</span>)
 </code></pre>
 </li>
-<li>
-<p>Prøv forskjellige verdier i stedet for 100, 5 og 125 når du kaller
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Prøv forskjellige verdier i stedet for 100, 5 og 125 når du kaller
 <code>spiral</code>. Finner du noen verdier som gir spesielt fine bilder synes
-du?</p>
+du?</label></p>
 </li>
 </ul>
 </section>

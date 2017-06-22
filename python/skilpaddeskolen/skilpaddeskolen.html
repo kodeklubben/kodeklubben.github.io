@@ -10,10 +10,10 @@ function relative (url) {
 <h1 class="activity" id="steg-1-flere-firkanter">Steg 1: Flere firkanter</h1>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne IDLE-editoren, og åpne en ny fil ved å trykke <code>File &gt; New File</code>,
-og la oss begynne.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Åpne IDLE-editoren, og åpne en ny fil ved å trykke <code>File &gt; New File</code>,
+og la oss begynne.</label></p>
 <p>Husk at du skal ha to vinduer åpne. Det ene er 'Python Shell' og det andre er for å skrive kode i.</p>
 <p>Som sist vil den første linjen alltid være <code>from turtle import *</code> for å fortelle Python at vi vil tegne ved hjelp av skilpadde-biblioteket!</p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
@@ -23,8 +23,8 @@ og la oss begynne.</p>
     right(<span class="hljs-number">90</span>)
 </code></pre>
 </li>
-<li>
-<p>Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lagre det som en ny fil, og kjør programmet fra menyen ved å trykke <code>Run &gt; Run Module</code>.</label></p>
 <p>Husk at <code>for n in range(4)</code> gjentar koden, og at koden må grupperes med mellomrom (innrykk) for å være en del av for-løkken. Bruk <em>tab</em> (knappen rett over <em>caps lock</em>) for å flytte kode.</p>
 </li>
 </ul>
@@ -35,9 +35,9 @@ og la oss begynne.</p>
 <p>La oss bruke variabler for å gjøre programmet vårt lettere å lese og lettere å endre, akkurat som vi gjorde i forrige modul.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Endre programmet så det ser slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Endre programmet så det ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 sides = <span class="hljs-number">4</span>
@@ -49,8 +49,8 @@ angle = <span class="hljs-number">360</span>/sides
     right(angle)
 </code></pre>
 </li>
-<li>
-<p>Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kjør det ved å trykke <code>Run &gt; Run Module</code> fra menyen. Får du den samme firkanten som før? Sjekk at det virker før du går videre.</label></p>
 </li>
 </ul>
 <p>Dette er et litt langt program, men nå kan vi endre det til å tegne hvilken figur vi vil. Problemet er bare at vi er nødt til å klippe og lime programmet for å få det til. Som tidligere kan vi skrive kode for å slippe å gjenta oss selv (programmerere anstrenger seg gjerne litt slik at de kan være late etterpå!). Denne gangen skal vi lage en <em>funksjon</em>. En funksjon er en enkel måte for å gjenbruke en kodeblokk (eller oppskrift om du vil) mange ganger. Funksjonen får et navn, og dette navnet kan vi senere bruke.</p>
@@ -60,9 +60,9 @@ angle = <span class="hljs-number">360</span>/sides
 <h1 class="activity" id="steg-3-vi-lager-en-funksjon">Steg 3: Vi lager en funksjon</h1>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi endrer koden og legger til <code>def poly():</code>. <code>def</code> betyr definer, altså å lage. Pass på at koden har riktig innrykk og bruk den nye funksjonen. For å få innrykk på flere linjer kan man merke linjene og deretter trykke <em>tab</em> (knappen rett over <em>caps lock</em>). Dersom du vil ha mindre innrykk, bruk <em>shift + tab</em>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Vi endrer koden og legger til <code>def poly():</code>. <code>def</code> betyr definer, altså å lage. Pass på at koden har riktig innrykk og bruk den nye funksjonen. For å få innrykk på flere linjer kan man merke linjene og deretter trykke <em>tab</em> (knappen rett over <em>caps lock</em>). Dersom du vil ha mindre innrykk, bruk <em>shift + tab</em>.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">()</span>:</span> <span class="hljs-comment"># vi lager funksjonen</span>
@@ -80,8 +80,8 @@ right(<span class="hljs-number">180</span>)
 poly()
 </code></pre>
 </li>
-<li>
-<p>Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Kjør programmet. Hvis det virker skal to røde firkanter bli tegnet.</label></p>
 </li>
 </ul>
 <p>Vi sparte litt tid ved å lage en ny funksjon i Python, og nå kan vi tegne en rød firkant to ganger, uten å skrive hele greia to ganger. Den nye funksjonen <code>poly()</code> er fin for å slippe å skrive så mye.</p>
@@ -92,9 +92,9 @@ poly()
 <p>Vi er ikke ferdige ennå - hva med å endre funksjonen så den kan tegne hvilken som helst form? Som med <code>forward</code> og <code>right</code>, kan vi sende verdier inn i funksjonen istedenfor å endre koden hver gang.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Endre koden så den ser slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Endre koden så den ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">poly</span><span class="hljs-params">(sides, length)</span>:</span>
@@ -111,8 +111,8 @@ pencolor(<span class="hljs-string">'blue'</span>)
 poly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
 </code></pre>
 </li>
-<li>
-<p>Kjør den og se hva som skjer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Kjør den og se hva som skjer.</label></p>
 <p>La oss ta dette litt sakte, for dette er ganske kule greier. Istedenfor å bestemme variablene i funksjonen, sier vi at funksjonen tar noen verdier som har navn, og så bruker vi verdiene der vi trenger dem.</p>
 <p>Vi flyttet noen verdier ut av funksjonen, og flyttet dem til den delen av koden som bruker dem. Nå kan vi, med en eneste funksjon, tegne <em>hvilken som helst</em> form, med <em>hvilken som helst farge</em>. Jeg vet ikke hva du tenker, men dette imponerer meg hver gang jeg tenker på det: Vi kan lære datamaskinen nye triks, og så få den til å gjøre triksene.</p>
 </li>
@@ -128,9 +128,9 @@ poly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
 <h1 class="activity" id="steg-5-skilpaddestreker">Steg 5: Skilpaddestreker</h1>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Selv om skilpadden er en liten robot som kan tegne, kan den også flytte seg uten å tegne. Husk at vi kan bruke <code>penup()</code> og <code>pendown()</code> for å slå av og på at skilpadden setter spor. Åpne en ny Python-fil, og skriv inn koden under:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Selv om skilpadden er en liten robot som kan tegne, kan den også flytte seg uten å tegne. Husk at vi kan bruke <code>penup()</code> og <code>pendown()</code> for å slå av og på at skilpadden setter spor. Åpne en ny Python-fil, og skriv inn koden under:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 
 length = <span class="hljs-number">200</span>
@@ -141,8 +141,8 @@ length = <span class="hljs-number">200</span>
     pendown()
 </code></pre>
 </li>
-<li>
-<p>Dette programmet tegner en stiplet linje over skjermen. Kjør det og sjekk!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Dette programmet tegner en stiplet linje over skjermen. Kjør det og sjekk!</label></p>
 </li>
 </ul>
 </section>
@@ -152,9 +152,9 @@ length = <span class="hljs-number">200</span>
 <p>Vi kan koble figur-programmet og stiplet-linje-programmet sammen ved å bytte ut funksjonen <code>forward</code> med koden vi har for stiplete linjer. Vi bruker koden for å tegne figurer ytterst, og inni der bruker vi koden for å lage stiplete linjer istedenfor hele streker.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Endre koden så den ser ut som følgende:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Endre koden så den ser ut som følgende:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 speed(<span class="hljs-number">11</span>)
 shape(<span class="hljs-string">"turtle"</span>)
@@ -177,8 +177,8 @@ pencolor(<span class="hljs-string">'blue'</span>)
 dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
 </code></pre>
 </li>
-<li>
-<p>Kjør koden og se hva den gjør.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Kjør koden og se hva den gjør.</label></p>
 <p>Vi har to for-løkker inni hverandre, en ytre og en indre. Den ytre løkken <code>for n in range(sides)</code> tegner hver kant av figuren, og hver gang kjører den indre løkken <code>for num in range(8)</code> som tegner stiplete linjer.</p>
 <p>Den ytre løkken bruker variabelen <code>n</code> for å holde styr på hvor mange ganger den har gjentatt seg selv, og den indre løkken bruker variabelen <code>num</code> på tilsvarende måte. Du må bruke forskjellige variabelnavn inni løkken, ellers roter du det bare til.</p>
 </li>
@@ -189,9 +189,9 @@ dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span
 <h1 class="activity" id="steg-7-byggeklosser-for-figurer">Steg 7: Byggeklosser for figurer</h1>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>La oss bruke funksjoner igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> La oss bruke funksjoner igjen for å rydde opp i koden. Endre koden fra steg 6 og la oss dele koden i biter.</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 speed(<span class="hljs-number">11</span>)
 shape(<span class="hljs-string">"turtle"</span>)
@@ -217,8 +217,8 @@ pencolor(<span class="hljs-string">'blue'</span>)
 dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span>)
 </code></pre>
 </li>
-<li>
-<p>Kjør koden og se at den gjør akkurat det samme som før.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Kjør koden og se at den gjør akkurat det samme som før.</label></p>
 </li>
 </ul>
 <section class="protip" id="tips-2">
@@ -232,9 +232,9 @@ dashpoly(<span class="hljs-number">3</span>, <span class="hljs-number">150</span
 <p>Hva om vi gjør litt tilfeldige sprell rett før vi er ferdige?  Vi kan be datamaskinen velge et tall for oss, eller velge en farge for oss, litt som om vi kaster terning. Scratch kan dette også, da brukte vi <code>pick</code>.</p>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>I en ny fil, skriv inn følgende:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> I en ny fil, skriv inn følgende:</label></p>
 <pre><code class="python"><span class="hljs-keyword">from</span> turtle <span class="hljs-keyword">import</span> *
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randrange, choice
 colors = [<span class="hljs-string">'red'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'green'</span>]
@@ -253,8 +253,8 @@ colors = [<span class="hljs-string">'red'</span>, <span class="hljs-string">'blu
     poly(randrange(<span class="hljs-number">3</span>,<span class="hljs-number">9</span>), randrange(<span class="hljs-number">10</span>,<span class="hljs-number">30</span>))
 </code></pre>
 </li>
-<li>
-<p>Lagre og kjør koden</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Lagre og kjør koden</label></p>
 <p>Programmet skal tegne ti figurer i forskjellige farger med forskjellig størrelse. Linjen  <code>from random import randrange, random</code> henter inn funksjonene <code>randrange()</code> og <code>choice()</code>.</p>
 <p><code>randrange()</code> plukker ut et tall mellom det laveste og det høyeste tallet vi gir inn, så <code>randrange(1, 10)</code> velger et tall mellom 1 og 9 (Python begynner med 1, og stopper rett før 10).</p>
 <p><code>choice()</code> velger en ting fra listen vi gir inn. En liste er en samling av verdier, for eksempel <code>[1, 2, 3]</code>. I koden ovenfor bruker vi listen <code>colors</code>, som har verdiene <code>'red'</code>, <code>'blue'</code>, and <code>'green'</code>.</p>

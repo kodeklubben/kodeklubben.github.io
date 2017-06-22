@@ -21,20 +21,20 @@ først introduserer vi <code>Læremester</code> som skal hjelpe oss med
 gangetabellen.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt og slett kattefiguren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt og slett kattefiguren.</label></p>
 </li>
-<li>
-<p>Legg til en ny figur ved å klikke på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Legg til en ny figur ved å klikke på
 <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">. Velg
 en av <em>Wizard</em>-figurene nesten nederst i <code>Mennesker</code>-kategorien.
-Kall figuren <code>Læremester</code>.</p>
+Kall figuren <code>Læremester</code>.</label></p>
 </li>
-<li>
-<p>Vi skal nå bruke <code class="blockoperators">tilfeldig tall</code>-klosser slik at
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Vi skal nå bruke <code class="blockoperators">tilfeldig tall</code>-klosser slik at
 <code>Læremester</code> kan spørre oss om tilfeldige gangestykker. Skriv dette
-skriptet:</p>
+skriptet:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 si (tilfeldig tall fra (2) til (10)) i (2) sekunder
 si [ganger] i (2) sekunder
@@ -46,18 +46,18 @@ si (tilfeldig tall fra (2) til (10)) i (2) sekunder
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Stiller <code>Læremester</code> deg et gangestykke?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Stiller <code>Læremester</code> deg et gangestykke?</label></p>
 </li>
-<li>
-<p>Vi skal etterhvert se hvordan vi kan få <code>Læremester</code> til å si hele
-teksten, i stedet for bare et ord om gangen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Vi skal etterhvert se hvordan vi kan få <code>Læremester</code> til å si hele
+teksten, i stedet for bare et ord om gangen.</label></p>
 </li>
-<li>
-<p>Foreløpig kan du ikke svare <code>Læremester</code> (ihvertfall ikke med
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Foreløpig kan du ikke svare <code>Læremester</code> (ihvertfall ikke med
 datamaskinen, prøv gjerne å regne ut svaret og si det til dem som
-sitter ved siden av deg).</p>
+sitter ved siden av deg).</label></p>
 </li>
 </ul>
 </section>
@@ -70,35 +70,35 @@ kalkulator. Det engelske ordet <em>computer</em> betyr til og med
 sammen tall.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>For å få Scratch til å regne bruker vi
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> For å få Scratch til å regne bruker vi
 <code class="blockoperators">Operatorer</code>-klosser. Prøv for eksempel å dra
 gangeklossen - med <code class="blockoperators">*</code>-tegnet - til skriptområdet
 på høyresiden. Skriv inn to tall og klikk på klossen. Scratch
-regner da ut svaret på gangestykket.</p>
+regner da ut svaret på gangestykket.</label></p>
 <p><figure><img src="gangeoperator.png" alt=""></figure></p>
 </li>
-<li>
-<p>Vi vil nå kombinere gangeklossen med <code class="blockoperators">tilfeldig tall</code>-klossen, men for å få dette til trenger vi en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi vil nå kombinere gangeklossen med <code class="blockoperators">tilfeldig tall</code>-klossen, men for å få dette til trenger vi en
 måte å huske de tilfeldige tallene: <strong>Variabler</strong>.  Gå til
 <code class="blockdata">Data</code>-kategorien og lag tre nye variabler:
-<code class="blockdata">tall1</code>, <code class="blockdata">tall2</code>, og <code class="blockdata">riktig svar</code>. La de gjelde for alle figurer.</p>
+<code class="blockdata">tall1</code>, <code class="blockdata">tall2</code>, og <code class="blockdata">riktig svar</code>. La de gjelde for alle figurer.</label></p>
 </li>
-<li>
-<p>Skriv nå et <strong>helt nytt skript</strong> (la det ligge ved siden av det
-skriptet du skrev i forrige steg).</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Skriv nå et <strong>helt nytt skript</strong> (la det ligge ved siden av det
+skriptet du skrev i forrige steg).</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spørsmål v]
 sett [tall1 v] til (tilfeldig tall fra (2) til (10))
 sett [tall2 v] til (tilfeldig tall fra (2) til (10))
 sett [riktig svar v] til ((tall1) * (tall2))
 </code></pre>
 </li>
-<li>
-<p>Prøv å klikke på skriptet for å teste det (siden det ikke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Prøv å klikke på skriptet for å teste det (siden det ikke
 starter med et grønt flagg kan vi ikke teste det på den vanlige
 måten). Om du ser på variablene på scenen skal de endre seg hver
-gang du klikker på skriptet. Er <code class="blockdata">riktig svar</code> rett?</p>
+gang du klikker på skriptet. Er <code class="blockdata">riktig svar</code> rett?</label></p>
 <p><figure><img src="variabler.png" alt=""></figure></p>
 </li>
 </ul>
@@ -109,14 +109,14 @@ gang du klikker på skriptet. Er <code class="blockdata">riktig svar</code> rett
 <p>La oss se om vi kan sette sammen disse tallene til et skikkelig spørsmål.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny variabel, <code class="blockdata">spørsmål</code>. Også denne skal gjelde
-for alle figurer.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag en ny variabel, <code class="blockdata">spørsmål</code>. Også denne skal gjelde
+for alle figurer.</label></p>
 </li>
-<li>
-<p>Klossen <code class="blockoperators">sett sammen</code> kan brukes for å sette sammen
-flere tall og ord. Vi skal nå bruke to <code class="blockoperators">sett sammen</code>-klosser på denne måten:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Klossen <code class="blockoperators">sett sammen</code> kan brukes for å sette sammen
+flere tall og ord. Vi skal nå bruke to <code class="blockoperators">sett sammen</code>-klosser på denne måten:</label></p>
 <pre><code class="blocks">sett sammen (sett sammen [] []) []
 </code></pre>
 <p>Dette gir oss plass til tre tall eller ord. Her kan vi putte inn
@@ -126,8 +126,8 @@ mellomrom før og etter <code>ganger</code>, det ser best ut da. Om du klikker p
 teksten blir.</p>
 <p><figure><img src="sett_sammen.png" alt=""></figure></p>
 </li>
-<li>
-<p>Legg denne klossen til nederst i <code>Nytt spørsmål</code>-skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Legg denne klossen til nederst i <code>Nytt spørsmål</code>-skriptet:</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spørsmål v]
 sett [tall1 v] til (tilfeldig tall fra (2) til (10))
 sett [tall2 v] til (tilfeldig tall fra (2) til (10))
@@ -135,10 +135,10 @@ sett [riktig svar v] til ((tall1) * (tall2))
 sett [spørsmål v] til (sett sammen (sett sammen (tall1) [ ganger ]) (tall2))
 </code></pre>
 </li>
-<li>
-<p>Nå skal vi få <code>Læremester</code> til å stille oss spørsmålet vi har
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Nå skal vi få <code>Læremester</code> til å stille oss spørsmålet vi har
 satt sammen. <strong>Bytt ut</strong> det første skriptet (med det grønne
-flagget) du skrev med dette:</p>
+flagget) du skrev med dette:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Nytt spørsmål v] og vent
 spør (spørsmål) og vent
@@ -149,16 +149,16 @@ spør (spørsmål) og vent
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Stiller <code>Læremester</code> deg et skikkelig spørsmål, for eksempel <code>9 ganger 6</code>?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Stiller <code>Læremester</code> deg et skikkelig spørsmål, for eksempel <code>9 ganger 6</code>?</label></p>
 </li>
-<li>
-<p>Er spørsmålene forskjellige hver gang?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Er spørsmålene forskjellige hver gang?</label></p>
 </li>
-<li>
-<p>Om du vil ha en liten utfordring kan du prøve å bruke flere <code class="blockoperators">sett sammen</code>-klosser slik at spørsmålet blir for
-eksempel <code>Hva er 9 ganger 6?</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Om du vil ha en liten utfordring kan du prøve å bruke flere <code class="blockoperators">sett sammen</code>-klosser slik at spørsmålet blir for
+eksempel <code>Hva er 9 ganger 6?</code>.</label></p>
 </li>
 </ul>
 </section>
@@ -168,16 +168,16 @@ eksempel <code>Hva er 9 ganger 6?</code>.</p>
 <p>Nå som vi kan svare på spørsmål vil vi også vite om vi svarer riktig.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Du ser kanskje at <code class="blockdata">riktig svar</code> vises på scenen? Da blir
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Du ser kanskje at <code class="blockdata">riktig svar</code> vises på scenen? Da blir
 det jo ikke særlig vanskelig! Ta bort alle variablene fra scenen ved
-å gå til <code>Data</code>-kategorien og fjern haken foran hver variabel.</p>
+å gå til <code>Data</code>-kategorien og fjern haken foran hver variabel.</label></p>
 </li>
-<li>
-<p>Nå skal vi bruke en <code class="blockcontrol">hvis ellers</code>-kloss for å gjøre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Nå skal vi bruke en <code class="blockcontrol">hvis ellers</code>-kloss for å gjøre
 forskjellige ting ettersom du svarer riktig eller feil på
-gangestykkene. <strong>Utvid</strong> det ene skriptet ditt på denne måten:</p>
+gangestykkene. <strong>Utvid</strong> det ene skriptet ditt på denne måten:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Nytt spørsmål v] og vent
 spør (spørsmål) og vent
@@ -195,13 +195,13 @@ slutt
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Hva skjer om du svarer riktig?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Hva skjer om du svarer riktig?</label></p>
 </li>
-<li>
-<p>Klikk det grønne flagget igjen for å få en ny oppgave. Hva skjer om
-du ikke svarer riktig?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Klikk det grønne flagget igjen for å få en ny oppgave. Hva skjer om
+du ikke svarer riktig?</label></p>
 </li>
 </ul>
 </section>
@@ -212,11 +212,11 @@ du ikke svarer riktig?</p>
 <code>Læremester</code> om å stille oss flere spørsmål!</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi bruker først en <code class="blockcontrol">gjenta</code>-kloss slik at vi kan få
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Vi bruker først en <code class="blockcontrol">gjenta</code>-kloss slik at vi kan få
 flere oppgaver. Legg merke til at vi også sender en <code class="blockevents">Nytt spørsmål</code>-melding hvis svaret er riktig. Hvis svaret
-er feil stiller vi det samme spørsmålet en gang til.</p>
+er feil stiller vi det samme spørsmålet en gang til.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Nytt spørsmål v] og vent
 gjenta (10) ganger
@@ -230,34 +230,34 @@ gjenta (10) ganger
 slutt
 </code></pre>
 </li>
-<li>
-<p>Vi kan også telle poeng hver gang du svarer riktig. For å gjøre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Vi kan også telle poeng hver gang du svarer riktig. For å gjøre
 dette trenger vi en ny variabel, <code class="blockdata">Poeng</code>. Denne skal
 gjelde for alle figurer, og denne lar vi være på scenen slik at vi
-ser den.</p>
+ser den.</label></p>
 </li>
-<li>
-<p>Legg til en kloss i skriptet som setter <code class="blockdata">Poeng</code> til <code>0</code>
-rett etter at det grønne flagget klikkes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Legg til en kloss i skriptet som setter <code class="blockdata">Poeng</code> til <code>0</code>
+rett etter at det grønne flagget klikkes.</label></p>
 </li>
-<li>
-<p>Legg også til en kloss som endrer <code class="blockdata">Poeng</code> med <code>1</code> hvis
-<code class="blocksensing">svar</code> er riktig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Legg også til en kloss som endrer <code class="blockdata">Poeng</code> med <code>1</code> hvis
+<code class="blocksensing">svar</code> er riktig.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Får du flere oppgaver uten at du må trykke på det grønne flagget?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Får du flere oppgaver uten at du må trykke på det grønne flagget?</label></p>
 </li>
-<li>
-<p>Får du et poeng hver gang du svarer riktig?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Får du et poeng hver gang du svarer riktig?</label></p>
 </li>
-<li>
-<p>Klarer du 10 poeng?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Klarer du 10 poeng?</label></p>
 </li>
 </ul>
 </section>
@@ -273,16 +273,16 @@ ganger 4</strong> som <strong>3</strong> rader med <strong>4</strong> elefanter 
 og finne ut at svaret er <strong>12</strong>.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en ny figur som vi kan få litt hjelp fra. Du kan velge
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Legg til en ny figur som vi kan få litt hjelp fra. Du kan velge
 hvilken figur du vil, men vi har brukt <code>Dyr/Elephant</code>. Gi figuren
-navnet <code>Hjelper</code>.</p>
+navnet <code>Hjelper</code>.</label></p>
 </li>
-<li>
-<p>For å tegne et rutenett med Hjelpere bruker vi to
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> For å tegne et rutenett med Hjelpere bruker vi to
 <code class="blockcontrol">gjenta</code>-klosser i tillegg til <code class="blockpen">stemple avtrykk</code> som tegner Hjelperne på skjermen. Skriv dette
-skriptet på <code>Hjelper</code>-figuren:</p>
+skriptet på <code>Hjelper</code>-figuren:</label></p>
 <pre><code class="blocks">når jeg mottar [Tegn hjelper v]
 slett
 sett størrelse til (20)%
@@ -302,10 +302,10 @@ skjul
 bruke noen andre tall i dette skriptet. Prøv i så fall først å
 forandre på <code class="blocklooks">sett størrelse til 20%</code>-klossen.</p>
 </li>
-<li>
-<p>Nå skal vi tegne dette rutenettet hver gang vi lager et nytt
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Nå skal vi tegne dette rutenettet hver gang vi lager et nytt
 spørsmål. Klikk på <code>Læremester</code>, og legg til en kloss nederst i
-<code>Nytt spørsmål</code>-skriptet:</p>
+<code>Nytt spørsmål</code>-skriptet:</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spørsmål v]
 sett [tall1 v] til (tilfeldig tall fra (2) til (10))
 sett [tall2 v] til (tilfeldig tall fra (2) til (10))
@@ -319,30 +319,30 @@ send melding [Tegn hjelper v]
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Tegnes det et rutenett av hjelpere til hver oppgave?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Tegnes det et rutenett av hjelpere til hver oppgave?</label></li>
 </ul>
 </section>
 <section class="challenge" id="flere-utfordringer">
 <h2 class="challenge" id="flere-utfordringer">Flere utfordringer</h2>
-<ul>
-<li>
-<p>Du kan forandre hvor vanskelige gangestykkene er ved å forandre
-tallene i <code class="blockoperators">tilfeldig tall</code>-klossene.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Du kan forandre hvor vanskelige gangestykkene er ved å forandre
+tallene i <code class="blockoperators">tilfeldig tall</code>-klossene.</label></p>
 </li>
-<li>
-<p>Om du gir <code>Hjelper</code> flere drakter kan du bruke en <code class="blocklooks">neste drakt</code>-kloss i <code>Tegn hjelper</code>-skriptet for å få litt
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Om du gir <code>Hjelper</code> flere drakter kan du bruke en <code class="blocklooks">neste drakt</code>-kloss i <code>Tegn hjelper</code>-skriptet for å få litt
 variasjon i hjelperfigurene. Om du gjør dette er det enklest om
-draktene er omtrent like store.</p>
+draktene er omtrent like store.</label></p>
 </li>
-<li>
-<p>Kanskje <code>Læremester</code> kan gi litt mer hjelp når man svarer feil?
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Kanskje <code>Læremester</code> kan gi litt mer hjelp når man svarer feil?
 Klarer du få henne til å si <code>Nei, det riktige svaret er større</code>
-eller <code>Nei, det riktige svaret er mindre</code>?</p>
+eller <code>Nei, det riktige svaret er mindre</code>?</label></p>
 </li>
-<li>
-<p><code>Læremester</code> kan mye rart! Kanskje hun kan lære bort andre ting enn
-gangestykker?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> <code>Læremester</code> kan mye rart! Kanskje hun kan lære bort andre ting enn
+gangestykker?</label></p>
 </li>
 </ul>
 </section>

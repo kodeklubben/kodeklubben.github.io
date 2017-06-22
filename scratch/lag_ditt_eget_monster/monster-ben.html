@@ -8,9 +8,9 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Monster - Ben</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/lag_ditt_eget_monster/monster-ben.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Ved å bruke to figurer til bein kan vi få monsteret vårt til å
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Ved å bruke to figurer til bein kan vi få monsteret vårt til å
 gå. For å gjøre dette lager vi en <strong>variabel</strong> som bytter mellom de
 to tilstandene, én for når beinet peker forover og en annen når
 beinet går bakover (vi bytter om på tilstandene for det andre
@@ -18,7 +18,7 @@ beinet). For å gjøre dette må vi først lage en <code class="blockdata">steg<
 variabel, så hver gang melding om bevegelse mottas, <strong>øker vi
 variabelen med 1</strong>. Hvis variablen går høyere enn 1 (vi kan teste
 dette med større enn operatøren <code class="blockoperators">_ &gt; _</code>) nullstiller vi
-den.</p>
+den.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [hastighet v] til [5]
 sett [steg v] til [0]
@@ -36,14 +36,14 @@ hvis &lt;(steg) &gt; [1]&gt;
 slutt
 </code></pre>
 </li>
-<li>
-<p>Nå kan vi sette beina i bevegelse ved å sjekke vår
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Nå kan vi sette beina i bevegelse ved å sjekke vår
 <code class="blockdata">steg</code>-variabel. <strong>Når variabelen blir satt til null</strong>
 kan vi bytte retning på beinet (her har vi brukt en fast
 <code class="blockmotion">retning</code> for å hindre at beinet går amok hvis
 variabelen og graden på vinkelen ikke stemmer, men kanskje vil du at
 monstret skal gjøre det!). Ikke glem å flytte beina langs kroppen
-ved å bruke <code class="blockdata">hastighet</code>-variabelen.</p>
+ved å bruke <code class="blockdata">hastighet</code>-variabelen.</label></p>
 <pre><code class="blocks">når jeg mottar [flyttet høyre v]
 endre x med (hastighet)
 hvis &lt;(steg) = [0]&gt;

@@ -22,9 +22,9 @@ bakgrunnsfarge. Dette vil bli grunnlaget for nesten alle programmer
 som du lager med Processing, så det er et fint sted å starte.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start Processing og skriv dette:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start Processing og skriv dette:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">640</span>, <span class="hljs-number">480</span>);
 }
@@ -34,11 +34,11 @@ som du lager med Processing, så det er et fint sted å starte.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Kjør programmet ved å trykke på pilen <img src="../play.png" alt="" title="spill av pil">.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Kjør programmet ved å trykke på pilen <img src="../play.png" alt="" title="spill av pil">.</label></p>
 </li>
-<li>
-<p>Lagre programmet som Ball ved å velge <strong>File --&gt; Save</strong> i menyen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lagre programmet som Ball ved å velge <strong>File --&gt; Save</strong> i menyen.</label></p>
 </li>
 </ul>
 <section class="protip" id="tips-hvordan-skrive-krollparenteser">
@@ -126,13 +126,13 @@ i Processing og andre programmeringsspråk.</p>
 <section class="try" id="utforsking">
 <h2 class="try" id="utforsking">Utforsking</h2>
 <p>Hva skjer hvis du:</p>
-<ul>
-<li>Endrer <code>640</code> i <code>size(640, 480);</code>?</li>
-<li>Endrer <code>480</code>?</li>
-<li>Hva om du endrer <code>0</code> i <code>background(0);</code>?</li>
-<li>Hva skjer hvis tallet er høyere enn <code>255</code>?</li>
-<li>Hva skjer hvis tallet er negativt?</li>
-<li>Før du går videre, fjern endringene du gjorde i utforskingen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Endrer <code>640</code> i <code>size(640, 480);</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Endrer <code>480</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Hva om du endrer <code>0</code> i <code>background(0);</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Hva skjer hvis tallet er høyere enn <code>255</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Hva skjer hvis tallet er negativt?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Før du går videre, fjern endringene du gjorde i utforskingen.</label></li>
 </ul>
 </section>
 <section class="protip" id="forklaring-av-koden">
@@ -189,20 +189,20 @@ forskjellige gråtoner. Senere skal vi se hvordan vi tegner farger.</p>
 begynner å tegne. La oss tegne en sirkel midt i vinduet.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>Endre <code>draw</code> til følgende uten å endre <code>setup</code>:<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Endre <code>draw</code> til følgende uten å endre <code>setup</code>:</label><pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
 }
 </code></pre>
 </li>
-<li>Lagre med <strong>Ctrl+S</strong> og kjør programmet med <strong>Ctrl+R</strong>. Du skal
-nå se en hvit sirkel midt i vinduet som i bildet under.</li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lagre med <strong>Ctrl+S</strong> og kjør programmet med <strong>Ctrl+R</strong>. Du skal
+nå se en hvit sirkel midt i vinduet som i bildet under.</label></li>
 </ul>
 <p><figure><img src="sirkel1.png" alt="" title="En hvit sirkel på svart bakgrunn midt i et vindu"></figure></p>
-<ul>
-<li>
-<p>Legg til en sirkel til og kjør programmet igjen:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Legg til en sirkel til og kjør programmet igjen:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
@@ -210,8 +210,8 @@ nå se en hvit sirkel midt i vinduet som i bildet under.</li>
 }
 </code></pre>
 </li>
-<li>
-<p>La oss legge til en siste sirkel og kjøre programmet enda en gang:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> La oss legge til en siste sirkel og kjøre programmet enda en gang:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-number">320</span>, <span class="hljs-number">240</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
@@ -265,9 +265,9 @@ som har blitt gitt et navn. Vi kan endre på verdien til variabelen, og det er
 derfor det heter variabel: <em>verdien kan variere</em>.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>La oss begynne med å endre størrelsen på vinduet i <code>setup</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> La oss begynne med å endre størrelsen på vinduet i <code>setup</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>() {
   <span class="hljs-built_in">size</span>(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>);
 }
@@ -277,10 +277,10 @@ og høyre bunn av vinduet.</p>
 <p><figure><img src="variabler1.png" alt="" title="De tre hvite sirklene er nå vist på en svart
  bilderamme som er større enn før."></figure></p>
 </li>
-<li>
-<p>Vi skal nå ta i bruk to variabler som heter <code>width</code> og <code>height</code>, altså bredde
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi skal nå ta i bruk to variabler som heter <code>width</code> og <code>height</code>, altså bredde
 og høyde. Disse variablene får verdien til størrelsen på vinduet når <code>size</code>
-kalles. Endre <code>draw</code> til å bruke <code>width</code> og <code>height</code>:</p>
+kalles. Endre <code>draw</code> til å bruke <code>width</code> og <code>height</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   <span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>);
   <span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">width</span> / <span class="hljs-number">2</span>, <span class="hljs-built_in">height</span> / <span class="hljs-number">2</span>, <span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
@@ -295,12 +295,12 @@ altså gir <code>width / 2</code> halvparten av bredden. Hva gir <code>height / 
 ganget med en halv. Noen ganger er det enklere med deling og andre ganger
 ganging.</p>
 </li>
-<li>
-<p>Lagre og kjør programmet, om du ikke har gjort det allerede.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Lagre og kjør programmet, om du ikke har gjort det allerede.</label></p>
 </li>
-<li>
-<p>La oss lage våre egne variabler, slik at vi kan få formene til å bevege
-på seg:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> La oss lage våre egne variabler, slik at vi kan få formene til å bevege
+på seg:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span> x;
 <span class="hljs-built_in">float</span> y;
 
@@ -314,9 +314,9 @@ på seg:</p>
 variablene er <code>float</code>, altså desimal eller flyttall. Inne i <code>setup</code> gir vi
 variablene verdier, som er de samme regnestykkene som vi brukte tidligere.</p>
 </li>
-<li>
-<p>Det er ikke nok å bare ha variabler, vi må bruke dem også. Endre <code>draw</code> til å
-bruke <code>x</code> og <code>y</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Det er ikke nok å bare ha variabler, vi må bruke dem også. Endre <code>draw</code> til å
+bruke <code>x</code> og <code>y</code>:</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   x = x + <span class="hljs-number">1</span>;
 
@@ -330,8 +330,8 @@ bruke <code>x</code> og <code>y</code>:</p>
 linjen <code>x = x + 1;</code> som sier at <code>x</code> skal øke med <code>1</code> for hver gang <code>draw</code>
 kjøres. Hva vil skje med den ene sirkelen når programmes kjøres?</p>
 </li>
-<li>
-<p>Lagre og kjør programmet, om du ikke har gjort det allerede.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Lagre og kjør programmet, om du ikke har gjort det allerede.</label></p>
 </li>
 </ul>
 <section class="protip" id="tips-lagre-som">
@@ -345,11 +345,11 @@ annet navn slik at du beholder de forskjellige variantene.</p>
 <section class="try" id="utforsking-2">
 <h2 class="try" id="utforsking-2">Utforsking</h2>
 <p>Kan du endre <code>x</code> og <code>y</code> inni <code>draw</code> slik at sirkelen beveger seg:</p>
-<ul>
-<li>Mot venstre istedenfor høyre?</li>
-<li>Opp istedenfor sidelengs?</li>
-<li>Ned istedenfor for opp?</li>
-<li>På skrå?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Mot venstre istedenfor høyre?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Opp istedenfor sidelengs?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Ned istedenfor for opp?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> På skrå?</label></li>
 </ul>
 </section>
 </section>
@@ -360,10 +360,10 @@ sirkelen til å snu når den treffer kanten av vinduet, slik en ball spretter
 tilbake hvis den kastes i en vegg.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi trenger et par nye variabler for å styre retningen til
-sirkelen. Legg til variablene <code>xFart</code> og <code>yFart</code> før <code>setup</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Vi trenger et par nye variabler for å styre retningen til
+sirkelen. Legg til variablene <code>xFart</code> og <code>yFart</code> før <code>setup</code>:</label></p>
 <pre><code class="processing"><span class="hljs-built_in">float</span> xFart = <span class="hljs-number">1.5</span>;
 <span class="hljs-built_in">float</span> yFart = <span class="hljs-number">2</span>;
 </code></pre>
@@ -377,9 +377,9 @@ mens vi tidligere ga dem verdier inni <code>setup</code>? Grunnen til dette er a
 og <code>height</code> kan ikke brukes før <code>size</code> er kjørt, så vi kunne ikke gi <code>x</code>
 og <code>y</code> verdier med en gang.</p>
 </li>
-<li>
-<p>Legg til koden under i <code>draw</code> for å få ballen til å snu. Merk at vi endrer
-setningen hvor vi øker <code>x</code> og fjerner to av sirklene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Legg til koden under i <code>draw</code> for å få ballen til å snu. Merk at vi endrer
+setningen hvor vi øker <code>x</code> og fjerner to av sirklene.</label></p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>() {
   x = x + xFart;
   y = y + yFart;
@@ -405,8 +405,8 @@ setningen hvor vi øker <code>x</code> og fjerner to av sirklene.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Lagre og kjør programmet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Lagre og kjør programmet.</label></p>
 </li>
 </ul>
 <section class="protip" id="forklaring">
@@ -427,22 +427,22 @@ minus, som er positiv (- - = +).</p>
 </section>
 <section class="try" id="utfordringer">
 <h2 class="try" id="utfordringer">Utfordringer</h2>
-<ul>
-<li>
-<p>Kan du kombinere to og to av <code>if</code>-setningene ved å bruke <code>||</code>?  <code>||</code> betyr
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Kan du kombinere to og to av <code>if</code>-setningene ved å bruke <code>||</code>?  <code>||</code> betyr
 eller. Her er et eksempel: <code>if (x &lt; 1 || x &gt; 10)</code>, hvis x er under 1 <em>eller</em>
-x er over 10.</p>
+x er over 10.</label></p>
 </li>
-<li>
-<p>Kan du få ballen til å sprette sideleng som dette?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Kan du få ballen til å sprette sideleng som dette?</label></p>
 <p><figure><img src="sidelengs_ball.gif" alt="" title="ball som spretter sidelengs"></figure></p>
 </li>
-<li>
-<p>Kan du få ballen til å endre form samtidig?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Kan du få ballen til å endre form samtidig?</label></p>
 <p><figure><img src="rar_ball.gif" alt="" title="ball som endrer form etter posisjon"></figure></p>
 </li>
-<li>
-<p>Kan du få ballen til å endre fart avhengig av posisjonen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Kan du få ballen til å endre fart avhengig av posisjonen?</label></p>
 <p><figure><img src="sprettende_ball.gif" alt="" title="ball som har større fart på bunn"></figure></p>
 </li>
 </ul>

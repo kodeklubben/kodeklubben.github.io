@@ -22,18 +22,18 @@ plattformer.</p>
 vil du lære hvordan du lager et enkelt plattform-spill i Scratch.</em></p>
 <section class="check" id="plan">
 <h2 class="check" id="plan">Plan</h2>
-<ul>
-<li>
-<p>Hvordan styre en plattform-helt som kan hoppe?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Hvordan styre en plattform-helt som kan hoppe?</label></p>
 </li>
-<li>
-<p>Plattformer og stiger</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Plattformer og stiger</label></p>
 </li>
-<li>
-<p>Donkey Kong og rullende ildkuler</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Donkey Kong og rullende ildkuler</label></p>
 </li>
-<li>
-<p>.. og andre utfordringer</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> .. og andre utfordringer</label></p>
 </li>
 </ul>
 </section>
@@ -47,25 +47,25 @@ heltefiguren, og spesielt hvordan vi får den til å hoppe og falle på
 en troverdig måte.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Start et nytt prosjekt.</label></p>
 </li>
-<li>
-<p>For å kunne teste at heltefiguren oppfører seg som vi vil trenger vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> For å kunne teste at heltefiguren oppfører seg som vi vil trenger vi
 en enkel plattform (vi skal tegne flere plattformer senere). Tegn en
 ny bakgrunn. Velg å tegne med <code>Vektorgrafikk</code>. Tegn en smal, lang
 boks nederst på skjermen. Fyll den med en farge forskjellig fra
-linjefargen.</p>
+linjefargen.</label></p>
 <p><figure><img src="plattform.png" alt=""></figure></p>
 </li>
-<li>
-<p>Velg eller lag deg en figur du ønsker å bruke som den hoppende
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Velg eller lag deg en figur du ønsker å bruke som den hoppende
 helten du skal styre. Om du ikke bruker Scratch-katten så slett
 denne. Kall figuren <code>Jumpman</code>. Sannsynligvis vil vi gjøre figuren
 mindre slik at vi får plass til flere plattformer på skjermen. Dette
 kan du gjøre med kode som kun kjører i det du starter spillet, for
-eksempel:</p>
+eksempel:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett størrelse til (40) %
 begrens rotasjon [vend sideveis v]
@@ -73,15 +73,15 @@ begrens rotasjon [vend sideveis v]
 <p>Vi har også lagt til en kloss som passer på at <code>Jumpman</code> bare snur
 seg mot høyre eller venstre.</p>
 </li>
-<li>
-<p>Vi trenger to variabler som vi skal bruke til å kontrollere
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi trenger to variabler som vi skal bruke til å kontrollere
 bevegelsen til <code>Jumpman</code>. Lag to variabler, <code class="b">(fartX)</code> og
-<code class="b">(fartY)</code>. Pass på at begge gjelder kun <em>for denne figuren</em>.</p>
+<code class="b">(fartY)</code>. Pass på at begge gjelder kun <em>for denne figuren</em>.</label></p>
 </li>
-<li>
-<p>I hovedløkken som styrer <code>Jumpman</code> vil vi først endre litt på disse
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> I hovedløkken som styrer <code>Jumpman</code> vil vi først endre litt på disse
 <code class="blockdata">fart</code>-variablene, og til slutt flytte selve figuren
-basert på dem.</p>
+basert på dem.</label></p>
 <p>Dersom ingenting påvirker figuren vår vil vi at <code class="b">(fartX)</code> skal
 gå mot 0 (farten bremses), mens vi vil at <code class="b">(fartY)</code> skal bli et
 stadig større negativt tall (figuren faller). Men om figuren står på
@@ -100,16 +100,16 @@ for alltid  // hovedløkken
 slutt
 </code></pre>
 </li>
-<li>
-<p>Om du prøver spillet ditt så langt (husk å legge til et skript på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Om du prøver spillet ditt så langt (husk å legge til et skript på
 bakgrunnen som sender en <code>nytt spill</code>-melding når det grønne flagget
 klikkes), vil du se at figuren din faller ned til plattformen. Men
-du kan ikke kontrollere den.</p>
+du kan ikke kontrollere den.</label></p>
 </li>
-<li>
-<p>For å styre <code>Jumpman</code> legger vi flere <code class="blockcontrol">hvis</code>-tester
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> For å styre <code>Jumpman</code> legger vi flere <code class="blockcontrol">hvis</code>-tester
 inn i hovedløkken. For eksempel kan du få figuren til å bevege seg
-mot venstre ved å legge til dette rett før <code class="b">endre x med (fartX)</code>:</p>
+mot venstre ved å legge til dette rett før <code class="b">endre x med (fartX)</code>:</label></p>
 <pre><code class="blocks">hvis &lt;tast [pil venstre v] trykket?&gt;
     pek i retning (-90 v)
     sett [fartX v] til [-5]
@@ -118,12 +118,12 @@ slutt
 </code></pre>
 <p>Lag også en tilsvarende blokk for å flytte figuren mot høyre.</p>
 </li>
-<li>
-<p>Vi vil også at <code>Jumpman</code> hopper når vi trykker på <code>pil opp</code>-tasten.
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi vil også at <code>Jumpman</code> hopper når vi trykker på <code>pil opp</code>-tasten.
 Her må vi være litt forsiktig, siden vi bare vil at figuren kan
 hoppe hvis den står på en plattform (ikke når den allerede
 hopper). En enkel måte å få til dette på er å legge <code>pil opp</code>-testen
-inne i testen for om figuren står på plattformen:</p>
+inne i testen for om figuren står på plattformen:</label></p>
 <pre><code class="blocks">hvis &lt;berører fargen [#0000ff]&gt;  // gammel kode: figuren står på plattformen
     sett [fartY v] til [0]
     hvis &lt;tast [pil opp v] trykket?&gt;  // ny kode: figuren hopper
@@ -138,11 +138,11 @@ som vi kan styre rundt, og som kan hoppe når vi vil det. Lek litt med
 <code>Jumpman</code> og tallene vi har brukt i <code class="b">sett [fartX v] til []</code>- og
 <code class="b">sett [fartY v] til []</code>-klossene slik at du får en bevegelse du
 synes virker naturlig.</p>
-<ul>
-<li>
-<p>Du har kanskje oppdaget at av og til faller <code>Jumpman</code> delvis
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Du har kanskje oppdaget at av og til faller <code>Jumpman</code> delvis
 <em>gjennom</em> plattformen? Hvis ikke, prøv å slipp ham fra toppen av
-skjermen. Den følgende testen fikser dette ganske greit:</p>
+skjermen. Den følgende testen fikser dette ganske greit:</label></p>
 <pre><code class="blocks">hvis &lt;berører fargen [#009900]&gt;
     endre y med (2)
 slutt
@@ -162,22 +162,22 @@ lage flere plattformer den kan leke seg på.</em></p>
 etter at vi har tegnet dem.</p>
 <section class="activity" id="sjekkliste-2">
 <h2 class="activity" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Før vi tegner flere plattformer skal vi lage stiger, som vil gjøre
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Før vi tegner flere plattformer skal vi lage stiger, som vil gjøre
 det enklere for helten vår å klatre opp eller ned. Som for
 plattformer skal vi kjenne igjen stiger ved hjelp av fargen. For å
 gjøre litt enkel testing, tegn først en strek rett opp fra
-plattformen (vi skal tegne en finere stige senere) i en ny farge:</p>
+plattformen (vi skal tegne en finere stige senere) i en ny farge:</label></p>
 <p><figure><img src="stige.png" alt=""></figure></p>
 <p>Bruke <strong>linje</strong>-verktøyet og hold inne <code>shift</code>-knappen mens du
 tegner for å få en helt rett linje.</p>
 </li>
-<li>
-<p>Hvordan skal helten vår klatre i en stige? Først og fremst vil han
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Hvordan skal helten vår klatre i en stige? Først og fremst vil han
 ikke falle nedover (på samme måte som når han står på en
 plattform). I tillegg vil vi kunne klatre opp og ned i stigen. Legg
-til denne testen på <code>Jumpman</code>:</p>
+til denne testen på <code>Jumpman</code>:</label></p>
 <pre><code class="blocks">hvis &lt;berører fargen [#ff0000]?&gt;
     sett [fartY v] til [0]
     hvis &lt;tast [pil opp v] trykket?&gt;
@@ -188,16 +188,16 @@ slutt
 <p>Med denne koden kan vi klatre opp stigen. Hvordan kommer vi oss ned
 igjen? Kan du legge til en <code class="b">hvis &lt;tast [pil ned v] trykket?&gt;</code>-test til slik at vi også kan klatre ned stigen?</p>
 </li>
-<li>
-<p>Tegn flere plattformer og stiger. Test underveis at det er mulig for
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Tegn flere plattformer og stiger. Test underveis at det er mulig for
 <code>Jumpman</code> å klatre eller hoppe mellom plattformene, men samtidig at
 han ikke klarer å hoppe mellom to plattformer når det ikke er
-meningen at det skal gå an.</p>
+meningen at det skal gå an.</label></p>
 </li>
-<li>
-<p>Når du er fornøyd med hvordan brettet ser ut kan du også tegne
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Når du er fornøyd med hvordan brettet ser ut kan du også tegne
 stigene litt finere. Om du vil kan du også vente med dette til etter
-at du har programmert Donkey Kong i neste steg.</p>
+at du har programmert Donkey Kong i neste steg.</label></p>
 <p><figure><img src="stige_med_plattform.png" alt=""></figure></p>
 </li>
 </ul>
@@ -209,33 +209,33 @@ at du har programmert Donkey Kong i neste steg.</p>
 å kaste rullende ildkuler mot oss.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en <code>Donkey Kong</code>-figur, og plasser den på en passende
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Lag en <code>Donkey Kong</code>-figur, og plasser den på en passende
 plattform. Denne vil ikke bevege seg i dette spillet, slik at den
 eneste koden vi egentlig trenger er for å kaste ildkuler. Vi skal
-lage denne koden snart.</p>
+lage denne koden snart.</label></p>
 </li>
-<li>
-<p>Lag også en ny <code>Ildkule</code>-figur. Dette kan være en sirkel du farger
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Lag også en ny <code>Ildkule</code>-figur. Dette kan være en sirkel du farger
 oransje, eller du kan prøve å tegne noe mer avansert. La figuren
-<code class="blocklooks">skjules</code> når det grønne flagget klikkes.</p>
+<code class="blocklooks">skjules</code> når det grønne flagget klikkes.</label></p>
 </li>
-<li>
-<p>Nå skal vi skrive koden på Donkey Kong. Den blir ganske enkel. Etter
-at <code>Donkey Kong</code> mottar <code>nytt spill</code> kan du la han gå inn i en <code class="blockcontrol">for alltid</code>-løkke hvor han <code class="blockcontrol">lager klon av Ildkule</code> og deretter <code class="blockcontrol">venter 3 sekunder</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Nå skal vi skrive koden på Donkey Kong. Den blir ganske enkel. Etter
+at <code>Donkey Kong</code> mottar <code>nytt spill</code> kan du la han gå inn i en <code class="blockcontrol">for alltid</code>-løkke hvor han <code class="blockcontrol">lager klon av Ildkule</code> og deretter <code class="blockcontrol">venter 3 sekunder</code>.</label></p>
 </li>
-<li>
-<p>Men nå må vi programmere hvordan ildkulene skal oppføre seg. Vi vil
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Men nå må vi programmere hvordan ildkulene skal oppføre seg. Vi vil
 holde styr på hvordan de beveger seg ved hjelp av <code class="b">(fartX)</code> og
 <code class="b">(fartY)</code> på samme måte som for <code>Jumpman</code>. Lag derfor disse to
 variablene også på <code>Ildkule</code>. Husk at de skal gjelde kun <em>for denne
-figuren</em>.</p>
+figuren</em>.</label></p>
 </li>
-<li>
-<p>Først bestemmer vi hvilken fart kula har når <code>Donkey Kong</code> kaster
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Først bestemmer vi hvilken fart kula har når <code>Donkey Kong</code> kaster
 den. Dette gjør vi ved å sette <code class="blockdata">fart</code>-variablene, for
-eksempel på denne måten:</p>
+eksempel på denne måten:</label></p>
 <pre><code class="blocks">når jeg starter som klon
 gå til [Donkey Kong v]
 sett [fartX v] til [3]
@@ -243,27 +243,27 @@ sett [fartY v] til (tilfeldig tall fra (0) til (5))
 vis
 </code></pre>
 </li>
-<li>
-<p>Videre bestemmer vi hvordan kulene oppfører seg ved å lage en
-hovedløkke på omtrent samme måte som for <code>Jumpman</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Videre bestemmer vi hvordan kulene oppfører seg ved å lage en
+hovedløkke på omtrent samme måte som for <code>Jumpman</code>.</label></p>
 <p>Legg en <code class="b">gjenta til &lt;(y-posisjon) &lt; [-170]&gt;</code>-kloss nederst i
 <code class="b">når jeg starter som klon</code>-skriptet, og fyll denne med kode som
 lar kulen falle, merker at ildkulen ligger på plattformen, og
 flytter selve figuren.</p>
 </li>
-<li>
-<p>Legg også til kode som gjør at ildkulene snur, <code class="b">sett [fartX v] til ((-1) * (fartX))</code>, når de <code class="blocksensing">berører kant</code>, og kode
-som sender en melding, <code>fanget Jumpman</code>, når de <code class="blocksensing">berører Jumpman</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Legg også til kode som gjør at ildkulene snur, <code class="b">sett [fartX v] til ((-1) * (fartX))</code>, når de <code class="blocksensing">berører kant</code>, og kode
+som sender en melding, <code>fanget Jumpman</code>, når de <code class="blocksensing">berører Jumpman</code>.</label></p>
 </li>
-<li>
-<p>Lag kode på <code>Jumpman</code> som mottar <code>fanget Jumpman</code>, og som kanskje
-<code class="blocksound">spiller en lyd</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Lag kode på <code>Jumpman</code> som mottar <code>fanget Jumpman</code>, og som kanskje
+<code class="blocksound">spiller en lyd</code>.</label></p>
 </li>
-<li>
-<p>Til slutt, lag en skatt som Jumpman skal redde. Dette blir en ny
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Til slutt, lag en skatt som Jumpman skal redde. Dette blir en ny
 figur som kan stå i ro til den <code>berører Jumpman</code> og deretter sende
 en melding <code>fant skatten</code>. Skriv kode som svarer på denne meldingen
-på passende måte.</p>
+på passende måte.</label></p>
 </li>
 </ul>
 </section>
@@ -276,31 +276,31 @@ du vil jobbe videre, men nedenfor er noen ideer som kanskje kan være
 til inspirasjon?</em></p>
 <section class="check" id="ideer-til-videreutvikling">
 <h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
-<ul>
-<li>
-<p>Legg gjerne til flere animasjoner og lyder. For eksempel kan Donkey
-Kong gjøre en kastebevegelse når han kaster ildkuler.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Legg gjerne til flere animasjoner og lyder. For eksempel kan Donkey
+Kong gjøre en kastebevegelse når han kaster ildkuler.</label></p>
 </li>
-<li>
-<p>Lag en forside og meny. Om du lager en forside som forteller litt om
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Lag en forside og meny. Om du lager en forside som forteller litt om
 hvordan man spiller spillet ditt blir det enklere for andre å spille
-det også!</p>
+det også!</label></p>
 </li>
-<li>
-<p>Vi har laget ett brett, men du kan enkelt tegne flere bakgrunner med
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Vi har laget ett brett, men du kan enkelt tegne flere bakgrunner med
 andre plattformer og hindringer. Prøv å lag flere brett hvor man
-kommer videre til neste nivå etter at man har funnet skatten.</p>
+kommer videre til neste nivå etter at man har funnet skatten.</label></p>
 </li>
-<li>
-<p>For å gi spillerene litt mer motivasjon kan det være lurt å telle
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> For å gi spillerene litt mer motivasjon kan det være lurt å telle
 poeng og liv. Til dette trenger du to nye variabler, <code class="b">(poeng)</code>
 og <code class="b">(liv)</code>. For å telle liv kan du bruke <code>fanget Jumpman</code>-meldingen. Før du teller poeng må du tenke på hva du vil at
-spillerene skal få poeng for?</p>
+spillerene skal få poeng for?</label></p>
 </li>
-<li>
-<p>Du kan legge til en tidsbegrensning om du vil gjøre spillet mer
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Du kan legge til en tidsbegrensning om du vil gjøre spillet mer
 utfordrende. Til dette bruker du en variabel <code class="b">(tid)</code> som du
-<code class="blockdata">endrer</code> og deretter <code class="blockcontrol">venter 1 sekund</code>.</p>
+<code class="blockdata">endrer</code> og deretter <code class="blockcontrol">venter 1 sekund</code>.</label></p>
 </li>
 </ul>
 </section>

@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Labyrint</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/labyrint/labyrint.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Labyrint</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/labyrint/labyrint.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>I dette spillet vil vi kontrollere en liten utforsker mens hun leter
 etter skatten gjemt inne i labyrinten. Dessverre er skatten beskyttet
@@ -22,28 +22,28 @@ piltastene. For å få til dette vil vi bruke
 tastaturet.</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt.</label></p>
 </li>
-<li>
-<p>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</label></p>
 </li>
-<li>
-<p>Legg til en ny figur. Klikk på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg til en ny figur. Klikk på
 <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen
 og velg en figur du har lyst til å styre rundt. Vi har brukt
-<code>Dyr/Beetle</code>-figuren.</p>
+<code>Dyr/Beetle</code>-figuren.</label></p>
 </li>
-<li>
-<p>Gi den nye figuren navnet <code>Utforsker</code> ved å klikke på <code class="blockmotion">i</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Gi den nye figuren navnet <code>Utforsker</code> ved å klikke på <code class="blockmotion">i</code>.</label></p>
 </li>
 </ul>
 <p>Vi begynner med å la figuren bevege seg oppover skjermen når vi
 trykker på <code>pil opp</code>-tasten.</p>
-<ul>
-<li>
-<p>Legg til følgende skript på <code>Utforsker</code>-figuren din.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Legg til følgende skript på <code>Utforsker</code>-figuren din.</label></p>
 <pre><code class="blocks">når [pil opp v] trykkes
 pek i retning (0 v)
 gå (5) steg
@@ -52,9 +52,9 @@ gå (5) steg
 oppover skjermen? Nå må vi lage lignende skript for de andre
 tastene.</p>
 </li>
-<li>
-<p>Legg også til disse skriptene, slik at <code>Utforsker</code> har totalt fire
-skript, ett for hver tast.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Legg også til disse skriptene, slik at <code>Utforsker</code> har totalt fire
+skript, ett for hver tast.</label></p>
 <pre><code class="blocks">når [pil ned v] trykkes
 pek i retning (180 v)
 gå (5) steg
@@ -73,12 +73,12 @@ gå (5) steg
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Beveger utforskeren din seg rundt slik du hadde forventet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Beveger utforskeren din seg rundt slik du hadde forventet?</label></p>
 </li>
-<li>
-<p>Kan du forandre hvor raskt utforskeren flytter seg?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Kan du forandre hvor raskt utforskeren flytter seg?</label></p>
 </li>
 </ul>
 <p>Tallet <code>5</code> i <code class="b">gå (5) steg</code>-klossene bestemmer hvor raskt
@@ -90,33 +90,33 @@ må vi bytte tallet i fire forskjellige skript. Det blir for mye jobb!</p>
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <p>Vi vil i stedet bruke en <strong>variabel</strong> som kan styre farten til
 <code>Utforsker</code>-figuren.</p>
-<ul>
-<li>
-<p>Lag en ny variabel ved å gå til <code class="blockdata">Data</code>-kategorien og
-klikk <code>Lag en Variabel</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Lag en ny variabel ved å gå til <code class="blockdata">Data</code>-kategorien og
+klikk <code>Lag en Variabel</code>.</label></p>
 </li>
-<li>
-<p>Kall variabelen <code>hastighet</code>, og velg at den bare skal gjelde <code>For denne figuren</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Kall variabelen <code>hastighet</code>, og velg at den bare skal gjelde <code>For denne figuren</code>.</label></p>
 </li>
-<li>
-<p>Til slutt, fjern avhukingen ved siden av den nye
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Til slutt, fjern avhukingen ved siden av den nye
 <code class="b">(hastighet)</code>-klossen for at variabelen ikke skal vises på
-scenen.</p>
+scenen.</label></p>
 </li>
 </ul>
 <p>Nå må vi endre i skriptene våre slik at bruker
 <code class="b">(hastighet)</code>-variabelen.</p>
-<ul>
-<li>
-<p>Lag først et nytt skript som setter verdien av <code class="b">(hastighet)</code> til
-<code>10</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Lag først et nytt skript som setter verdien av <code class="b">(hastighet)</code> til
+<code>10</code>.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [hastighet v] til [10]
 </code></pre>
 </li>
-<li>
-<p>Deretter endrer vi de fire skriptene vi allerede har laget slik at
-de bruker <code class="b">(hastighet)</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Deretter endrer vi de fire skriptene vi allerede har laget slik at
+de bruker <code class="b">(hastighet)</code>.</label></p>
 <pre><code class="blocks">når [pil opp v] trykkes
 pek i retning (0 v)
 gå (hastighet) steg
@@ -139,17 +139,17 @@ gå (hastighet) steg
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Beveger utforskeren din seg fortsatt rundt slik den gjorde
-tidligere?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Beveger utforskeren din seg fortsatt rundt slik den gjorde
+tidligere?</label></p>
 </li>
-<li>
-<p>Forandrer hastigheten til utforskeren seg hvis du endrer verdien av
-<code class="b">(hastighet)</code> og klikker på det grønne flagget igjen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Forandrer hastigheten til utforskeren seg hvis du endrer verdien av
+<code class="b">(hastighet)</code> og klikker på det grønne flagget igjen?</label></p>
 </li>
-<li>
-<p>Velg en hastighet du synes passer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Velg en hastighet du synes passer.</label></p>
 </li>
 </ul>
 </section>
@@ -161,20 +161,20 @@ vi gi henne en utfordring! Vi vil tegne en labyrint som hun kan
 bevege seg rundt inni.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Velg <img src="../bilder/tegn-ny.png" alt="Tegn ny bakgrunn"> nederst til
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Velg <img src="../bilder/tegn-ny.png" alt="Tegn ny bakgrunn"> nederst til
 venstre på skjermen for å tegne en ny bakgrunn. Pass på at du
-faktisk tegner en ny <strong>bakgrunn</strong>, og ikke en ny figur.</p>
+faktisk tegner en ny <strong>bakgrunn</strong>, og ikke en ny figur.</label></p>
 </li>
-<li>
-<p>Gi den nye bakgrunnen navnet <code>Labyrint</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Gi den nye bakgrunnen navnet <code>Labyrint</code>.</label></p>
 </li>
-<li>
-<p>Velg en farge du liker og tegn en liten labyrint. Det er viktig at
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Velg en farge du liker og tegn en liten labyrint. Det er viktig at
 alle veggene i labyrinten har samme farge (vi oppdager hvorfor
 snart). Du kan velge selv hvordan labyrinten skal se ut, den trenger
-ikke en gang å ha rette vegger!</p>
+ikke en gang å ha rette vegger!</label></p>
 <p><figure><img src="liten-labyrint.png" alt=""></figure></p>
 <p>Dette er et eksempel på en liten og enkel labyrint. Du kan selv
 velge hvordan din labyrint skal se ut! Men ikke bruk for lang tid
@@ -193,16 +193,16 @@ tillegg holde inne <code>shift</code>-knappen for at linjene skal bli helt rette
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kan du bevege utforskerfiguren din rundt inne i labyrinten?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Kan du bevege utforskerfiguren din rundt inne i labyrinten?</label></p>
 </li>
-<li>
-<p>Dersom figuren din er for stor kan du gjøre den mindre ved å trykke
-på <img src="../bilder/krymp.png" alt="krymp">-knappen på toppen av skjermen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Dersom figuren din er for stor kan du gjøre den mindre ved å trykke
+på <img src="../bilder/krymp.png" alt="krymp">-knappen på toppen av skjermen.</label></p>
 </li>
-<li>
-<p>Hva skjer dersom figuren din går på veggen i labyrinten?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Hva skjer dersom figuren din går på veggen i labyrinten?</label></p>
 </li>
 </ul>
 </section>
@@ -219,10 +219,10 @@ labyrinten vil vi bruke en <code class="b">&lt;berører fargen [#ffffff]&gt;</co
 Denne klossen merker om en figur kommer borti en spesiell farge.  Her
 er det viktig at vi har tegnet alle veggene i labyrinten i samme
 farge.</p>
-<ul>
-<li>
-<p>Vi legger <code class="b">&lt;berører fargen [#ffffff]&gt;</code>-klossen inn i skriptet vi
-allerede har laget som setter <code class="b">(hastighet)</code>-variabelen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Vi legger <code class="b">&lt;berører fargen [#ffffff]&gt;</code>-klossen inn i skriptet vi
+allerede har laget som setter <code class="b">(hastighet)</code>-variabelen.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [hastighet v] til [10]
 for alltid
@@ -234,24 +234,24 @@ for alltid
 slutt
 </code></pre>
 </li>
-<li>
-<p>For å få riktig farge i <code class="b">berører fargen [#cc0000]</code>-klossen klikker du
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> For å få riktig farge i <code class="b">berører fargen [#cc0000]</code>-klossen klikker du
 først på den lille firkanten hvor fargen vises. Deretter flytter du
 musepekeren slik at den peker på en vegg i labyrinten din. Da forandres fargen
-i den lille firkanten. Klikk igjen for å velge denne fargen.</p>
+i den lille firkanten. Klikk igjen for å velge denne fargen.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Blir utforskeren stoppet når hun prøver å gå gjennom veggen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Blir utforskeren stoppet når hun prøver å gå gjennom veggen?</label></p>
 </li>
-<li>
-<p>Skjønner du hvordan skriptet sier at utforskeren ikke kan gå gjennom
-veggen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Skjønner du hvordan skriptet sier at utforskeren ikke kan gå gjennom
+veggen?</label></p>
 </li>
 </ul>
 </section>
@@ -275,21 +275,21 @@ kjedelig om vi ikke har noe å gjøre inne i labyrinten. La oss se om
 vi kanskje finner en skatt!</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en ny figur. Du kan velge en figur fra biblioteket ved å
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Legg til en ny figur. Du kan velge en figur fra biblioteket ved å
 trykke
 <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">
 eller tegne en figur selv ved å trykke
 <img src="../bilder/tegn-ny.png" alt="Tegn ny figur">. Vi brukte figuren
-<code>Ting/Star1</code>.</p>
+<code>Ting/Star1</code>.</label></p>
 </li>
-<li>
-<p>Gi den nye figuren navnet <code>Skatt</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Gi den nye figuren navnet <code>Skatt</code>.</label></p>
 </li>
-<li>
-<p>Dra skatten rundt inne i labyrinten din, og gjem den et sted den er
-vanskelig å komme til.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Dra skatten rundt inne i labyrinten din, og gjem den et sted den er
+vanskelig å komme til.</label></p>
 </li>
 </ul>
 <p>Vi skal nå lage litt kode som oppdager når utforskeren finner
@@ -300,9 +300,9 @@ omvendt, vi kan lage et skript på <code>Skatt</code> som sjekker om den berøre
 <p>I dette tilfellet spiller det liten rolle hva vi velger, men om vi
 tenker oss at vi kanskje vil lage flere skatter senere kan det være
 litt enklere å lage skriptet på <code>Skatt</code>.</p>
-<ul>
-<li>
-<p>Pass på at figuren <code>Skatt</code> er markert, og skriv følgende kode:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Pass på at figuren <code>Skatt</code> er markert, og skriv følgende kode:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 for alltid
     hvis &lt;berører [Utforsker v]?&gt;
@@ -316,13 +316,13 @@ slutt
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Forsvinner skatten når utforskeren finner fram til den?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Forsvinner skatten når utforskeren finner fram til den?</label></p>
 </li>
-<li>
-<p>Hva skjer når du prøver å starte spillet på nytt etter å ha funnet
-skatten? Hvor har skatten blitt av?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Hva skjer når du prøver å starte spillet på nytt etter å ha funnet
+skatten? Hvor har skatten blitt av?</label></p>
 </li>
 </ul>
 </section>
@@ -330,10 +330,10 @@ skatten? Hvor har skatten blitt av?</p>
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <p>Det er et problem i spillet vårt. Etter at utforskeren har funnet
 skatten en gang, forblir skatten borte.</p>
-<ul>
-<li>
-<p>Vi må passe på at skatten vises på begynnelsen av spillet. Endre
-skriptet på <code>Skatt</code> ved å legge til <code class="b">vis</code> helt i begynnelsen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Vi må passe på at skatten vises på begynnelsen av spillet. Endre
+skriptet på <code>Skatt</code> ved å legge til <code class="b">vis</code> helt i begynnelsen.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vis
 for alltid
@@ -347,23 +347,23 @@ slutt
 <p>Vi har enda et problem: Når vi starter spillet på nytt står
 utforskeren fortsatt der den fant skatten sist. Det blir ikke veldig
 spennende.</p>
-<ul>
-<li>
-<p>Klikk på <code>Utforsker</code>-figuren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Klikk på <code>Utforsker</code>-figuren.</label></p>
 </li>
-<li>
-<p>Legg til en <code class="b">gå til x: () y: ()</code>-kloss rett etter <code class="b">sett [hastighet v] til (10)</code>-klossen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Legg til en <code class="b">gå til x: () y: ()</code>-kloss rett etter <code class="b">sett [hastighet v] til (10)</code>-klossen.</label></p>
 </li>
-<li>
-<p>For å finne ut hvilke tall vi vil bruke for <code>x</code> og <code>y</code> kan vi gjøre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> For å finne ut hvilke tall vi vil bruke for <code>x</code> og <code>y</code> kan vi gjøre
 følgende. Dra utforskeren til et sted det er fint å starte fra. Se
 øverst i høyre hjørne. Sammen med <code>Utforsker</code>-figuren står det <code>x</code>
 og <code>y</code> og to tall. Dette er posisjonen til figuren akkurat nå. Skriv
-disse to tallene inn i <code class="b">gå til x: () y: ()</code>-klossen.</p>
+disse to tallene inn i <code class="b">gå til x: () y: ()</code>-klossen.</label></p>
 </li>
-<li>
-<p>Hele skriptet vil nå se slik ut (dine tall for <code>x</code> og <code>y</code> vil være
-forskjellige):</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Hele skriptet vil nå se slik ut (dine tall for <code>x</code> og <code>y</code> vil være
+forskjellige):</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [hastighet v] til [10]
 gå til x: (-200) y: (0)
@@ -381,13 +381,13 @@ slutt
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Forsvinner fortsatt skatten når utforskeren finner fram til den?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Forsvinner fortsatt skatten når utforskeren finner fram til den?</label></p>
 </li>
-<li>
-<p>Virker spillet slik det skal når du starter det på nytt etter å ha
-funnet skatten?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Virker spillet slik det skal når du starter det på nytt etter å ha
+funnet skatten?</label></p>
 </li>
 </ul>
 </section>
@@ -398,21 +398,21 @@ funnet skatten?</p>
 labyrinten og passer på skatten.</em></p>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en ny figur. Vi brukte <code>Dyr/Frog</code>. Gi den navnet
-<code>Froskekonge</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Legg til en ny figur. Vi brukte <code>Dyr/Frog</code>. Gi den navnet
+<code>Froskekonge</code>.</label></p>
 </li>
-<li>
-<p>Plasser den nye figuren et sted i labyrinten. Gjør den mindre eller
-større om nødvendig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Plasser den nye figuren et sted i labyrinten. Gjør den mindre eller
+større om nødvendig.</label></p>
 </li>
 </ul>
 <p>Vi begynner med å la <code>Froskekonge</code> merke at den fanger utforskeren.
 Dette blir veldig likt hvordan <code>Skatt</code> merket at den ble funnet.</p>
-<ul>
-<li>
-<p>Legg til følgende kode:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Legg til følgende kode:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 for alltid
     hvis &lt;berører [Utforsker v]?&gt;
@@ -430,39 +430,39 @@ at vi har blitt tatt av <code>Froskekonge</code>.</p>
 <section class="flag" id="test-prosjektet-7">
 <h2 class="flag" id="test-prosjektet-7">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Hva skjer om utforskeren kommer borti froskekongen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Hva skjer om utforskeren kommer borti froskekongen?</label></p>
 </li>
-<li>
-<p>Hva skjer når du finner skatten etter å ha blitt tatt av
-froskekongen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Hva skjer når du finner skatten etter å ha blitt tatt av
+froskekongen?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
 <p>Til sist skal vi få froskekongen til å bevege seg rundt i labyrinten.</p>
-<ul>
-<li>
-<p>Start et nytt skript på <code>Froskekonge</code>-figuren. Igjen kan du bytte ut
-tallene for <code>x</code> og <code>y</code> med noe som passer for din labyrint.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Start et nytt skript på <code>Froskekonge</code>-figuren. Igjen kan du bytte ut
+tallene for <code>x</code> og <code>y</code> med noe som passer for din labyrint.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (50) y: (100)
 pek i retning (-90 v)
 </code></pre>
 </li>
-<li>
-<p>Før vi lar <code>Froskekonge</code> begynne å bevege seg lager vi en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Før vi lar <code>Froskekonge</code> begynne å bevege seg lager vi en
 <code class="b">(hastighet)</code>-variabel også for ham. Klikk på
 <code class="blockdata">Data</code>, og deretter <code>Lag en Variabel</code>. Kall variabelen
 <code>hastighet</code> og la den gjelde kun <code>For denne figuren</code>. Tilslutt,
-fjern avhukingen på variabelen.</p>
+fjern avhukingen på variabelen.</label></p>
 </li>
-<li>
-<p>Vi kan nå utvide skriptet slik at froskekongen går fram og
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> Vi kan nå utvide skriptet slik at froskekongen går fram og
 tilbake. Vi får ham til å snu når han treffer veggen på nesten samme
-måte som vi hindrer utforskeren i å gå gjennom veggen.</p>
+måte som vi hindrer utforskeren i å gå gjennom veggen.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (50) y: (100)
 pek i retning (-90 v)
@@ -479,9 +479,9 @@ slutt
 </ul>
 <p>Helt tilslutt kan vi gjøre det enda vanskeligere ved å la froskekongen
 av og til endre retning.</p>
-<ul>
-<li>
-<p>Legg til kode som lar <code>Froskekonge</code> snu seg tilfeldig rundt i labyrinten:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Legg til kode som lar <code>Froskekonge</code> snu seg tilfeldig rundt i labyrinten:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (50) y: (100)
 pek i retning (-90 v)
@@ -500,16 +500,16 @@ slutt
 </li>
 </ul>
 <p>Disse to siste klossene ser litt kompliserte ut. La oss se litt nøyere på dem.</p>
-<ul>
-<li>
-<p>Klossen <code class="b">hvis &lt;(tilfeldig tall fra (1) til (25)) = [1]&gt;</code> sier at
-vi skal gjøre <em>noe</em> cirka èn av 25 ganger.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Klossen <code class="b">hvis &lt;(tilfeldig tall fra (1) til (25)) = [1]&gt;</code> sier at
+vi skal gjøre <em>noe</em> cirka èn av 25 ganger.</label></p>
 </li>
-<li>
-<p>Dette <em>noe</em> er <code class="b">vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader</code>. Tegnet <code>*</code> betyr gange, slik at om vi velger
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Dette <em>noe</em> er <code class="b">vend høyre ((tilfeldig tall fra (-1) til (1)) * (90)) grader</code>. Tegnet <code>*</code> betyr gange, slik at om vi velger
 tilfeldig mellom tallene -1, 0 og 1, betyr det at froskekongen vil
 vende -90, 0 eller 90 grader. Det vil si at den svinger mot venstre,
-fortsetter rett frem eller svinger mot høyre.</p>
+fortsetter rett frem eller svinger mot høyre.</label></p>
 </li>
 </ul>
 </section>
@@ -525,20 +525,20 @@ til <code>Froskekonge</code> om du bruker <code>Dyr/Frog</code>-figuren).</p>
 <section class="flag" id="test-prosjektet-8">
 <h2 class="flag" id="test-prosjektet-8">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Klarer du å få tak i skatten?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Klarer du å få tak i skatten?</label></p>
 </li>
-<li>
-<p>Om du synes spillet er for lett eller vanskelig er det mange måter
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Om du synes spillet er for lett eller vanskelig er det mange måter
 du kan endre dette på! Prøv å lag froskekongen større eller
 mindre. Prøv å endre hastigheten på både utforskeren og
 froskekongen. Om du endrer tallet 25 i det siste skriptet vi laget
-for <code>Froskekonge</code> vil han endre retning oftere eller sjednere.</p>
+for <code>Froskekonge</code> vil han endre retning oftere eller sjednere.</label></p>
 </li>
-<li>
-<p>Du kan også prøve å lage flere skatter. Prøv å høyreklikk på
-<code>Skatt</code>-figuren og velg <code>Lag en kopi</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Du kan også prøve å lage flere skatter. Prøv å høyreklikk på
+<code>Skatt</code>-figuren og velg <code>Lag en kopi</code>.</label></p>
 </li>
 </ul>
 </section>

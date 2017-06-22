@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Bursdag i Antarktis</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/bursdag_i_antarktis/bursdag_i_antarktis.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Bursdag i Antarktis</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/bursdag_i_antarktis/bursdag_i_antarktis.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Bursdag i Antarktis er en interaktiv animasjon som forteller
 historien om en liten katt som har gått seg bort på bursdagen
@@ -22,41 +22,41 @@ møter dansende pingviner på bursdagen sin. Men som alltid er det greit
 å begynne med noe ganske enkelt, for deretter å bygge videre på det.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt. Gi kattefiguren navnet <code>Felix</code>, og sett
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt. Gi kattefiguren navnet <code>Felix</code>, og sett
 rotasjonsmåten hans til
-<img src="../bilder/rotasjonsmate-hv.png" alt="sideveis">.</p>
+<img src="../bilder/rotasjonsmate-hv.png" alt="sideveis">.</label></p>
 </li>
-<li>
-<p>Lag en ny bakgrunn ved å klikke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lag en ny bakgrunn ved å klikke
 <img src="../bilder/velg-bakgrunn.png" alt="velg en ferdig bakgrunn"> nede til
-venstre på skjermen. Velg <code>Holiday/winter</code>.</p>
+venstre på skjermen. Velg <code>Holiday/winter</code>.</label></p>
 </li>
-<li>
-<p>Legg også til bakgrunnen <code>Holiday/winter-lights</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg også til bakgrunnen <code>Holiday/winter-lights</code>.</label></p>
 </li>
-<li>
-<p>Vi begynner med et skript på scenen, som passer på at vi viser
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Vi begynner med et skript på scenen, som passer på at vi viser
 <code>winter</code>-bakgrunnen når animasjonen starter. Gå til
-<code class="blocklightgrey">Skript</code>-fanen og legg til</p>
+<code class="blocklightgrey">Skript</code>-fanen og legg til</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 bytt bakgrunn til [winter v]
 </code></pre>
 </li>
-<li>
-<p>Da kan vi få katten til å flytte på seg. Klikk på <code>Felix</code> og gi ham
-dette skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Da kan vi få katten til å flytte på seg. Klikk på <code>Felix</code> og gi ham
+dette skriptet:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-100) y: (-50)
 </code></pre>
 <p>Her kan du eksperimentere litt med tallene for <code>x</code> og <code>y</code> til du
 finner noe som du synes ser bra ut.</p>
 </li>
-<li>
-<p>La oss nå få Felix til å bevege seg over skjermen. Vi skifter mellom
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> La oss nå få Felix til å bevege seg over skjermen. Vi skifter mellom
 de to draktene hans for at det skal se ut som om han går. Utvid
-skriptet til Felix på denne måten:</p>
+skriptet til Felix på denne måten:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-100) y: (-50)
 pek i retning (100 v)
@@ -75,16 +75,16 @@ andre tall for å se effekten av dem.</p>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Vandrer Felix over skjermen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Vandrer Felix over skjermen?</label></p>
 </li>
-<li>
-<p>Stopper han når kommer til kanten på skjermen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Stopper han når kommer til kanten på skjermen?</label></p>
 </li>
-<li>
-<p>Starter han på nytt på venstre side av skjermen om du klikker på det
-grønne flagget igjen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Starter han på nytt på venstre side av skjermen om du klikker på det
+grønne flagget igjen?</label></p>
 </li>
 </ul>
 <section class="protip" id="antarktis">
@@ -99,17 +99,17 @@ mange pingviner der.</p>
 <p>Vi vil nå få bakgrunnen til å endre seg når katten kommer til enden av
 skjermen. Vi begynner med noe enkelt, men som dessverre ikke fungerer
 så veldig bra.</p>
-<ul>
-<li>
-<p>Lag et nytt skript på Scenen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Lag et nytt skript på Scenen.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vent (3) sekunder
 bytt bakgrunn til [winter-lights v]
 </code></pre>
 </li>
-<li>
-<p>Legg også til en kloss som flytter Felix inn til veien etter at
-bakgrunnen er byttet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Legg også til en kloss som flytter Felix inn til veien etter at
+bakgrunnen er byttet.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-100) y: (-50)
 pek i retning (100 v)
@@ -126,13 +126,13 @@ gå til x: (-20) y: (-100)
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Skifter bakgrunnen når Felix kommer til enden av skjermen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Skifter bakgrunnen når Felix kommer til enden av skjermen?</label></p>
 </li>
-<li>
-<p>Klarer du å endre tallet i klossen <code class="blockcontrol">vent 3 sekunder</code>
-slik at det ser bedre ut?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Klarer du å endre tallet i klossen <code class="blockcontrol">vent 3 sekunder</code>
+slik at det ser bedre ut?</label></p>
 </li>
 </ul>
 </section>
@@ -150,9 +150,9 @@ figurene kan sende til hverandre eller til scenen uten at de er
 synlige for oss som ser på.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>La katten sende en melding når han når kanten av skjermen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> La katten sende en melding når han når kanten av skjermen.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-100) y: (-50)
 pek i retning (100 v)
@@ -164,17 +164,17 @@ slutt
 send melding [Scene 2 v]
 </code></pre>
 </li>
-<li>
-<p>Vi kan nå slette det gamle skriptet på scenen som byttet bakgrunn
-til <code>winter-lights</code>, og heller bruke dette:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi kan nå slette det gamle skriptet på scenen som byttet bakgrunn
+til <code>winter-lights</code>, og heller bruke dette:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 2 v]
 bytt bakgrunn til [winter-lights v]
 </code></pre>
 </li>
-<li>
-<p>Felix kan også motta meldinger han sender selv. Vi kan bruke dette
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Felix kan også motta meldinger han sender selv. Vi kan bruke dette
 til å flytte ham inn på veien samtidig som vi bytter bakgrunn. Legg
-til følgende som et nytt skript på Felix:</p>
+til følgende som et nytt skript på Felix:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
 </code></pre>
@@ -184,14 +184,14 @@ gå til x: (-20) y: (-100)
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Går Felix fortsatt over skjermen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Går Felix fortsatt over skjermen?</label></p>
 </li>
-<li>
-<p>Hva skjer når han kommer til kanten av skjermen? Vi har laget to
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Hva skjer når han kommer til kanten av skjermen? Vi har laget to
 skript som sier at bakgrunnen skal endre seg og katten skal flytte
-til midten av skjermen. Skjer dette?</p>
+til midten av skjermen. Skjer dette?</label></p>
 </li>
 </ul>
 </section>
@@ -203,30 +203,30 @@ til midten av skjermen. Skjer dette?</p>
 mennesker.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt skript på Felix:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Start et nytt skript på Felix:</label></p>
 <pre><code class="blocks">når jeg mottar [Si hei v]
 si [Å nei! Hvor er jeg?] i (2) sekunder
 tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
 spør [Hvor gammel blir jeg igjen?] og vent
 </code></pre>
 </li>
-<li>
-<p>For å teste hvordan skriptet virker kan du bare klikke på for
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> For å teste hvordan skriptet virker kan du bare klikke på for
 eksempel klossen <code class="blockevents">når jeg mottar Si hei</code>. Snakker og
-tenker Felix?</p>
+tenker Felix?</label></p>
 </li>
-<li>
-<p>Når du svarer på Felix spørsmål blir svaret ditt tatt vare på i en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Når du svarer på Felix spørsmål blir svaret ditt tatt vare på i en
 variabel som heter <code class="blocksensing">svar</code>. Vi vil lage en ny
 variabel med et bedre navn som kan ta vare på dette svaret. Lag en
 ny variabel som heter <code class="blockdata">alder</code>. La denne variabelen
 gjelde for alle figurer, og fjern avhuking slik at variabelen ikke
-vises.</p>
+vises.</label></p>
 </li>
-<li>
-<p>Legg til en kloss nederst i skriptet:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Legg til en kloss nederst i skriptet:</label></p>
 <pre><code class="blocks">når jeg mottar [Si hei v]
 si [Å nei! Hvor er jeg?] i (2) sekunder
 tenk [Jeg har gått meg bort ... også på bursdagen min] i (2) sekunder
@@ -234,10 +234,10 @@ spør [Hvor gammel blir jeg igjen?] og vent
 sett [alder v] til (svar)
 </code></pre>
 </li>
-<li>
-<p>Nå vil vi at Felix skal si og gjøre alt dette før han vandrer
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Nå vil vi at Felix skal si og gjøre alt dette før han vandrer
 gjennom skogen. Legg til en <code class="blockevents">send melding</code>-kloss i det
-første skriptet til Felix:</p>
+første skriptet til Felix:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-100) y: (-50)
 pek i retning (100 v)
@@ -255,23 +255,23 @@ send melding [Scene 2 v]
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Snakker Felix som han skal?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Snakker Felix som han skal?</label></p>
 </li>
-<li>
-<p>Det er kanskje litt uhøflig at Felix bare springer av gårde mens han
-snakker med oss?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Det er kanskje litt uhøflig at Felix bare springer av gårde mens han
+snakker med oss?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi vil at Felix snakker ferdig før han begynner å gå. Dette er
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Vi vil at Felix snakker ferdig før han begynner å gå. Dette er
 heldigvis ganske enkelt. Hvis vi bytter ut <code class="blockevents">send melding</code>-klossen med en <code class="blockevents">send melding og vent</code>-kloss, vil ikke Felix begynne å gå før han er
-ferdig å snakke (og vi har svart på spørsmålet hans):</p>
+ferdig å snakke (og vi har svart på spørsmålet hans):</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (-100) y: (-50)
 pek i retning (100 v)
@@ -289,8 +289,8 @@ send melding [Scene 2 v]
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Venter Felix med å gå til du har svart på spørsmålet hans?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Venter Felix med å gå til du har svart på spørsmålet hans?</label></li>
 </ul>
 </section>
 </section>
@@ -303,19 +303,19 @@ ut som om han går oppover mot husene vil vi la han bli mindre og
 mindre mens han går.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi skal nå fortsette på skriptet til Felix som begynner med at han
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Vi skal nå fortsette på skriptet til Felix som begynner med at han
 mottar meldingen <code>Scene 2</code>. Legg til en liten
-<code class="blocklooks">si</code>-kloss først:</p>
+<code class="blocklooks">si</code>-kloss først:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
 si [Å! Der er det noen hus!] i (2) sekunder
 </code></pre>
 </li>
-<li>
-<p>Nå skal vi la Felix følge veien oppover. Prøv først med følgende
-skript:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Nå skal vi la Felix følge veien oppover. Prøv først med følgende
+skript:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
 si [Å! Der er det noen hus!] i (2) sekunder
@@ -328,19 +328,19 @@ gjenta (6) ganger
 slutt
 </code></pre>
 </li>
-<li>
-<p>Følger Felix veien oppover? Blir han mindre mens han går? Husk at om
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Følger Felix veien oppover? Blir han mindre mens han går? Husk at om
 du vil teste dette skriptet uten å se hele animasjonen kan du klikke
 på <code class="blockevents">når jeg mottar Scene 2</code>-klossen. Du bør også klikke
 på <code class="blocklooks">sett størrelse til 100%</code>-klossen i
 <code class="blocklooks">Utseende</code>-kategorien innimellom, slik at Felix får
-tilbake sin vanlige størrelse.</p>
+tilbake sin vanlige størrelse.</label></p>
 </li>
-<li>
-<p>Nå vil vi at Felix skal forandre retning slik at han følger
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Nå vil vi at Felix skal forandre retning slik at han følger
 veien. Et triks er at vi kan gange retningen hans med -1. Da blir
 det som om han snur seg rundt. Siden vi vil gjøre dette fire ganger
-lager vi også en ny <code class="blockcontrol">gjenta</code>-kloss:</p>
+lager vi også en ny <code class="blockcontrol">gjenta</code>-kloss:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
 si [Å! Der er det noen hus!] i (2) sekunder
@@ -361,8 +361,8 @@ slutt
 <section class="flag" id="test-prosjektet-6">
 <h2 class="flag" id="test-prosjektet-6">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Følger Felix veien oppover mot de to husene?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Følger Felix veien oppover mot de to husene?</label></li>
 </ul>
 <p>Hvis du ser litt nærmere på veien ser du at den flater ut. Dette kan
 vi etterligne for Felix med å gange med et tall som er litt
@@ -370,17 +370,17 @@ forskjellig fra -1 i retningen.</p>
 </section>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Endre <code>-1</code> i <code class="blockmotion">pek i retning</code>-klossen til <code>-1.5</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Endre <code>-1</code> i <code class="blockmotion">pek i retning</code>-klossen til <code>-1.5</code>.</label></p>
 </li>
-<li>
-<p>For å skjønne bedre hva som skjer kan du klikke på <code class="blockmotion">i</code>
-på Felix og følge med på <code>retning</code> mens skriptet kjører.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> For å skjønne bedre hva som skjer kan du klikke på <code class="blockmotion">i</code>
+på Felix og følge med på <code>retning</code> mens skriptet kjører.</label></p>
 </li>
-<li>
-<p>Når Felix kommer fram til huset kan vi skjule ham, og skifte til en
-ny scene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Når Felix kommer fram til huset kan vi skjule ham, og skifte til en
+ny scene.</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 2 v]
 gå til x: (-20) y: (-100)
 si [Å! Der er det noen hus!] i (2) sekunder
@@ -399,18 +399,18 @@ vent (1) sekunder
 send melding [Scene 3 v]
 </code></pre>
 </li>
-<li>
-<p>For den scenen trenger vi en ny bakgrunn. Klikk
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> For den scenen trenger vi en ny bakgrunn. Klikk
 <img src="../bilder/velg-bakgrunn.png" alt="velg en ferdig bakgrunn"> og legg
-til bakgrunnen <code>Holiday/gingerbread</code>. Gi scenen dette skriptet:</p>
+til bakgrunnen <code>Holiday/gingerbread</code>. Gi scenen dette skriptet:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 3 v]
 bytt bakgrunn til [gingerbread v]
 </code></pre>
 </li>
-<li>
-<p>I det vi skifter til den nye scenen vil vi også at Felix skal få
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> I det vi skifter til den nye scenen vil vi også at Felix skal få
 tilbake sin vanlige størrelse. Klikk på Felix og start et nytt
-skript:</p>
+skript:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 3 v]
 sett størrelse til (100)%
 gå til x: (-160) y: (-65)
@@ -422,20 +422,20 @@ vis
 <section class="flag" id="test-prosjektet-7">
 <h2 class="flag" id="test-prosjektet-7">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Har Felix blitt flinkere til å følge veien oppover mot de to husene?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Har Felix blitt flinkere til å følge veien oppover mot de to husene?</label></p>
 </li>
-<li>
-<p>Skifter bakgrunnen over til huset som det skal?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Skifter bakgrunnen over til huset som det skal?</label></p>
 </li>
-<li>
-<p>Får Felix riktig størrelse igjen på slutten av animasjonen? Og når
-du starter animasjonen på nytt?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Får Felix riktig størrelse igjen på slutten av animasjonen? Og når
+du starter animasjonen på nytt?</label></p>
 </li>
-<li>
-<p>Hvordan kan du sørge for at Felix alltid dukker opp i full størrelse
-når det grønne flagget klikkes på nytt?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Hvordan kan du sørge for at Felix alltid dukker opp i full størrelse
+når det grønne flagget klikkes på nytt?</label></p>
 </li>
 </ul>
 </section>
@@ -446,24 +446,24 @@ når det grønne flagget klikkes på nytt?</p>
 skal komme ut av huset og snakke litt med Felix</em></p>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag to nye figurer ved å trykke på
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Lag to nye figurer ved å trykke på
 <img src="../bilder/hent-fra-bibliotek.png" alt="velg figur fra biblioteket">. Velg
 <code>Dyr/Penguin1</code> og <code>Dyr/Penguin2</code>. Gi pingvinene navn du liker, vi
-har valgt å kalle dem <code>Pingu</code> og <code>Pappa Pingu</code>.</p>
+har valgt å kalle dem <code>Pingu</code> og <code>Pappa Pingu</code>.</label></p>
 </li>
-<li>
-<p>For at pingvinene først skal dukke opp i <code>Scene 3</code>, må vi skjule dem
-når animasjonen starter. Legg til følgende skript på begge figurene:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> For at pingvinene først skal dukke opp i <code>Scene 3</code>, må vi skjule dem
+når animasjonen starter. Legg til følgende skript på begge figurene:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 skjul
 </code></pre>
 </li>
-<li>
-<p>Først skal Felix spørre om det er noen hjemme, og så skal han sende
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Først skal Felix spørre om det er noen hjemme, og så skal han sende
 en melding hvor han ber pingvinene om å komme ut. Endre Felix sitt
-skript ved å legge til to klosser på slutten:</p>
+skript ved å legge til to klosser på slutten:</label></p>
 <pre><code class="blocks">når jeg mottar [Scene 3 v]
 sett størrelse til (100)%
 gå til x: (-160) y: (-65)
@@ -472,19 +472,19 @@ si [Oj, så flott hus! Er det noen hjemme?] i (2) sekunder
 send melding [Kom ut v]
 </code></pre>
 </li>
-<li>
-<p>Pingu skal nå komme ut av døra og gå litt til siden. Sjekk med
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Pingu skal nå komme ut av døra og gå litt til siden. Sjekk med
 musepekeren hva <code>x</code> og <code>y</code>-posisjonen til døren er. Legg til
-følgende skript på Pingu:</p>
+følgende skript på Pingu:</label></p>
 <pre><code class="blocks">når jeg mottar [Kom ut v]
 gå til x: (45) y: (-70)
 vis
 gli (1) sekunder til x: (150) y: (-100)
 </code></pre>
 </li>
-<li>
-<p>Pappa Pingu kommer ut litt senere, og stiller Felix et spørsmål.
-Legg til følgende script på Pappa Pingu:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Pappa Pingu kommer ut litt senere, og stiller Felix et spørsmål.
+Legg til følgende script på Pappa Pingu:</label></p>
 <pre><code class="blocks">når jeg mottar [Kom ut v]
 vent (2) sekunder
 gå til x: (45) y: (-70)
@@ -499,12 +499,12 @@ send melding [Navn1]
 <section class="flag" id="test-prosjektet-8">
 <h2 class="flag" id="test-prosjektet-8">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kommer pingvinene ut av huset som forventet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> Kommer pingvinene ut av huset som forventet?</label></p>
 </li>
-<li>
-<p>Hva tror du skjer med navnet du skrev inn?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Hva tror du skjer med navnet du skrev inn?</label></p>
 </li>
 </ul>
 </section>
@@ -515,22 +515,22 @@ send melding [Navn1]
 begynner den ene pingvinen å danse siden det er Felix sin bursdag.</em></p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
-<ul>
-<li>
-<p>Få Pappa Pingu til å sende en melding etter at han har spurt hva
-Felix heter. Kall for eksempel meldingen <code>Navn1</code></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Få Pappa Pingu til å sende en melding etter at han har spurt hva
+Felix heter. Kall for eksempel meldingen <code>Navn1</code></label></p>
 </li>
-<li>
-<p>Legg til følgende skript på Pingu</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Legg til følgende skript på Pingu</label></p>
 <pre><code class="blocks">når jeg mottar [Navn1 v]
 si (svar) i (2) sekunder
 si [Det er et rart navn!] i (2) sekunder
 send melding [Navn2 v]
 </code></pre>
 </li>
-<li>
-<p>Legg til følgende skript på Felix for å få ham til å svare og si at
-han har bursdag:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Legg til følgende skript på Felix for å få ham til å svare og si at
+han har bursdag:</label></p>
 <pre><code class="blocks">når jeg mottar [Navn2 v]
 si [Jeg har bursdag i dag!] i (2) sekunder
 si (sett sammen [Jeg blir ] (alder)) i (2) sekunder
@@ -541,17 +541,17 @@ send melding [Party v]
 <p>Legg merke til <code class="blockoperators">sett sammen</code>-klossen. Denne kan vi
 bruke for å sette sammen tekst. Pass på at du skriver et mellomrom
 etter ordet <code>blir</code>!</p>
-<ul>
-<li>
-<p>Nå skal vi få Pingu til å danse! Lag to nye drakter for Pingu ved å
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Nå skal vi få Pingu til å danse! Lag to nye drakter for Pingu ved å
 importere <code>Dyr/Penguin1</code> to ganger. Roter de to nye draktene litt i
 forhold til hverandre ved å klikke på draktene i tegnevinduet og
-rotere rundt med musen (du må kanskje bytte til vektorgrafikk).</p>
+rotere rundt med musen (du må kanskje bytte til vektorgrafikk).</label></p>
 <p><figure><img src="roter_pingu.png" alt=""></figure></p>
 </li>
-<li>
-<p>Legg til en lyd du liker under <code class="blocklightgrey">Lyder</code>, og lag
-følgende skript på Pingu (vi har brukt lyden <code>human beatbox1</code>):</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Legg til en lyd du liker under <code class="blocklightgrey">Lyder</code>, og lag
+følgende skript på Pingu (vi har brukt lyden <code>human beatbox1</code>):</label></p>
 <pre><code class="blocks">når jeg mottar [Party v]
 spill lyden [human beatbox1 v]
 gjenta (20) ganger
@@ -565,17 +565,17 @@ slutt
 <section class="flag" id="test-prosjektet-9">
 <h2 class="flag" id="test-prosjektet-9">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Danser pingvinen slik du forventet?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> Danser pingvinen slik du forventet?</label></p>
 </li>
-<li>
-<p>Hvorfor tror du det kan være lurt å spare på svaret Pappa Pingu får
-i en variabel?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Hvorfor tror du det kan være lurt å spare på svaret Pappa Pingu får
+i en variabel?</label></p>
 </li>
-<li>
-<p>Dukker Pingu opp i riktig drakt når du starter animasjonen på nytt
-igjen? Hvis ikke: finn ut hvordan du kan fikse det!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_55" disabled="true"><label for="cbx_55"> Dukker Pingu opp i riktig drakt når du starter animasjonen på nytt
+igjen? Hvis ikke: finn ut hvordan du kan fikse det!</label></p>
 </li>
 </ul>
 </section>

@@ -20,18 +20,18 @@ vil til og med se eksempler på kloner av kloner!</p>
 <p><em>Vi begynner spillet vårt ved å lage en veldig enkel bakgrunn.</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt, og slett kattefiguren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt, og slett kattefiguren.</label></p>
 </li>
-<li>
-<p>Tegn en ny bakgrunn som består av en ensfarget rett strek ganske
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Tegn en ny bakgrunn som består av en ensfarget rett strek ganske
 langt ned på skjermen. Bruk vektorgrafikk. Dette er bakken som vår
-helt skal løpe på.</p>
+helt skal løpe på.</label></p>
 </li>
-<li>
-<p>For å enklere legge på en tittel senere lager vi en
-<code>Nytt spill</code>-melding på scenen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> For å enklere legge på en tittel senere lager vi en
+<code>Nytt spill</code>-melding på scenen:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Nytt spill v]
 </code></pre>
@@ -44,23 +44,23 @@ send melding [Nytt spill v]
 <p><em>Nå skal vi introdusere hoppehelten.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Tegn en enkel liten strekfigur som ser ut som om han løper mot
-venstre. Gi figuren navnet <code>Helt 1</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Tegn en enkel liten strekfigur som ser ut som om han løper mot
+venstre. Gi figuren navnet <code>Helt 1</code>.</label></p>
 <p>Du kan senere lage flere drakter slik at spillet ser bedre ut, men
 vi vil ikke bruke tid på det nå.</p>
 </li>
-<li>
-<p>Lag en ny variabel som du kaller <code class="blockdata">sprett</code>. Det er viktig
-at denne gjelder kun for denne figuren.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Lag en ny variabel som du kaller <code class="blockdata">sprett</code>. Det er viktig
+at denne gjelder kun for denne figuren.</label></p>
 <p>Vi vil bruke <code class="blockdata">sprett</code>-variabelen til å beskrive
 heltens bevegelse når han hopper.</p>
 </li>
-<li>
-<p>I heltens hovedløkke lar vi gravitasjonen virke ved at vi stadig
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> I heltens hovedløkke lar vi gravitasjonen virke ved at vi stadig
 prøver å gjøre <code class="blockdata">sprett</code> mindre, samtidig som vi sier
-at dersom helten berører bakken skal han ikke falle.</p>
+at dersom helten berører bakken skal han ikke falle.</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 gå til x: (210) y: (-120)
 for alltid
@@ -75,28 +75,28 @@ slutt
 <p>Sett fargen i <code class="blocksensing">berører fargen</code>-klossen til samme
 farge som streken du tegnet på bakgrunnen i Steg 1.</p>
 </li>
-<li>
-<p>Prøv å endre startposisjonen til helten, spesielt y-koordinaten. Får
-du helten til å falle mot bakken?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Prøv å endre startposisjonen til helten, spesielt y-koordinaten. Får
+du helten til å falle mot bakken?</label></p>
 </li>
-<li>
-<p>Legg til en ny <code class="blockcontrol">hvis</code>-test inne i
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Legg til en ny <code class="blockcontrol">hvis</code>-test inne i
 <code class="blockcontrol">hvis</code>-testen du allerede har. Hvis tasten <code>m</code> trykkes
 setter du <code class="blockdata">sprett</code> til et positivt tall. Prøv deg fram
-slik at du finner en verdi som gjør at helten gjør passe store hopp.</p>
+slik at du finner en verdi som gjør at helten gjør passe store hopp.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Står eller løper helten på bakken? Figuren skal ikke bevege seg
-sidelengs.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Står eller løper helten på bakken? Figuren skal ikke bevege seg
+sidelengs.</label></p>
 </li>
-<li>
-<p>Hopper helten når du trykker på <code>m</code>-tasten?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hopper helten når du trykker på <code>m</code>-tasten?</label></p>
 </li>
 </ul>
 </section>
@@ -106,88 +106,88 @@ sidelengs.</p>
 <p><em>Vi skal nå lage noen bokser som helten kan hoppe over.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny figur ved å tegne en liten fargelagt boks som helten kan
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag en ny figur ved å tegne en liten fargelagt boks som helten kan
 hoppe over. Kall figuren <code>Boks</code>. Bruk
 <img src="../bilder/velg_senterpunkt.png" alt="Velg senterpunkt"> til å sette
-senterpunktet nederst til venstre på boksen.</p>
+senterpunktet nederst til venstre på boksen.</label></p>
 </li>
-<li>
-<p>Når boksen mottar meldingen <code>Nytt spill</code> vil vi at den plasserer seg
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Når boksen mottar meldingen <code>Nytt spill</code> vil vi at den plasserer seg
 på bakken helt til venstre på skjermen. Bruk en
 <code class="blockmotion">gå til</code>-kloss og lag dette skriptet selv. Pass på at boksen
-ikke berører kanten av skjermen.</p>
+ikke berører kanten av skjermen.</label></p>
 </li>
-<li>
-<p>Etter at du har funnet en bra plassering på boksen kan du utvide
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Etter at du har funnet en bra plassering på boksen kan du utvide
 skriptet ved å <code class="blocklooks">skjule</code> figuren, samt lage en løkke
-hvor boksen lager en klone av seg selv hvert andre sekund.</p>
+hvor boksen lager en klone av seg selv hvert andre sekund.</label></p>
 </li>
-<li>
-<p>Gå til scenen og lag en variabel du kaller
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Gå til scenen og lag en variabel du kaller
 <code class="blockdata">hastighet</code>. Lag et skript på scenen som setter denne
-variabelen til <code>3</code> når meldingen <code>Nytt spill</code> mottas.</p>
+variabelen til <code>3</code> når meldingen <code>Nytt spill</code> mottas.</label></p>
 </li>
-<li>
-<p>Gå tilbake til boksfiguren. Vi vil nå at boksklonene flytter seg mot
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Gå tilbake til boksfiguren. Vi vil nå at boksklonene flytter seg mot
 helten. Lag et nytt skript som begynner når boksen starter som
 klon. I dette skriptet må du <code class="blocklooks">vise</code> boksen. Deretter
 kan du starte en løkke som gjentas til boksen berører kanten. Inne i
 løkken vil du endre x med <code class="blockdata">hastighet</code>. Etter løkken
-kan du slette denne klonen.</p>
+kan du slette denne klonen.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Kommer det en jevn strøm av bokser mot helten?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Kommer det en jevn strøm av bokser mot helten?</label></p>
 </li>
-<li>
-<p>Kan du bruke <code>m</code> til å hoppe over boksene?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Kan du bruke <code>m</code> til å hoppe over boksene?</label></p>
 </li>
-<li>
-<p>Hva skjer om helten springer inn i en boks?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Hva skjer om helten springer inn i en boks?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi vil la spillet stoppe når helten springer inn i en boks. Gå til
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Vi vil la spillet stoppe når helten springer inn i en boks. Gå til
 <code>Helt 1</code>. Bytt nå ut <code class="blockcontrol">for alltid</code>-løkken med en
 <code class="blockcontrol">gjenta til</code>-løkke som du lar gjenta til helten
-berører <code>Boks</code>.</p>
+berører <code>Boks</code>.</label></p>
 </li>
-<li>
-<p>Etter den nye <code class="blockcontrol">gjenta til</code>-løkken kan du sende ut en
-ny melding <code>Spill slutt</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Etter den nye <code class="blockcontrol">gjenta til</code>-løkken kan du sende ut en
+ny melding <code>Spill slutt</code>.</label></p>
 </li>
-<li>
-<p>Klikk på boks-figuren. Legg til et skript som stopper andre skript i
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Klikk på boks-figuren. Legg til et skript som stopper andre skript i
 figuren, og deretter sletter denne klonen etter at <code>Spill slutt</code>
-mottas.</p>
+mottas.</label></p>
 <p>Prøv spillet ditt igjen. Hva skjer nå om helten springer inn i en
 boks?</p>
 </li>
-<li>
-<p>Vi kan spille en liten lyd hver gang vi har hoppet over en boks.
-Legg til en</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Vi kan spille en liten lyd hver gang vi har hoppet over en boks.
+Legg til en</label></p>
 <pre><code class="blocks">spill tone (60) i (0.5) takter
 </code></pre>
 <p>kloss etter løkken som flytter boksen, men før klonen
 slettes. Bruk gjerne <code class="blocksound">velg instrument</code>-klossen til å
 velge et passende instrument før spillet starter.</p>
 </li>
-<li>
-<p>Om du tester dette vil du se at boksene blir hengende litt mens
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Om du tester dette vil du se at boksene blir hengende litt mens
 lyden spilles. En enkel måte å unngå dette på er å legge til en
 <code class="blocklooks">skjul</code>-kloss rett før
-<code class="blocksound">spill tone</code>-klossen.</p>
+<code class="blocksound">spill tone</code>-klossen.</label></p>
 </li>
 </ul>
 </section>
@@ -222,25 +222,25 @@ gjerne en</p>
 med bokser.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Se på skriptene til <code>Boks</code>. Ser du at du har en <em>generator-løkke</em>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Se på skriptene til <code>Boks</code>. Ser du at du har en <em>generator-løkke</em>
 som lager nye bokser omtrent hvert annet sekund (du har kanskje lagt
 på en <code class="blockoperators">tilfeldig</code>-kloss i denne løkken). Videre
 har du en <em>flytte-løkke</em> som flytter boksene mot høyre, med
-eventuelle tilfeldige innstillinger på boksene.</p>
+eventuelle tilfeldige innstillinger på boksene.</label></p>
 <p>Riv løs begge disse to løkkene og legg dem til side. Vi skal bruke
 dem igjen straks, så ikke slett noe.</p>
 </li>
-<li>
-<p>Lag en ny variabel som du kaller <code class="blockdata">er generator</code>. Denne
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Lag en ny variabel som du kaller <code class="blockdata">er generator</code>. Denne
 må gjelde kun for denne figuren. Vi vil bruke denne variabelen til å
-identifisere generator-løkken.</p>
+identifisere generator-løkken.</label></p>
 </li>
-<li>
-<p>Vi legger nå nemlig på en ny løkke som lager tre uavhengige
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Vi legger nå nemlig på en ny løkke som lager tre uavhengige
 generator-løkker. Endre skriptet som kjøres for <code>Nytt spill</code> til
-dette:</p>
+dette:</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 gå til x: (-239) y: (-161)
 sett [er generator v] til [ja]
@@ -253,9 +253,9 @@ slutt
 <p>Bruk den samme utgangsposisjonen som tidligere. Dette vil lage tre
 <em>generator-kloner</em> med forskjellige y-verdier.</p>
 </li>
-<li>
-<p>Vi vil nå bygge opp igjen skriptet som kjører når en boks starter
-som klon. Lag først det følgende</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Vi vil nå bygge opp igjen skriptet som kjører når en boks starter
+som klon. Lag først det følgende</label></p>
 <pre><code class="blocks">når jeg starter som klon
 hvis &lt;(er generator) = [ja]&gt;
     sett [er generator v] til [nei]
@@ -263,34 +263,34 @@ ellers
 slutt
 </code></pre>
 </li>
-<li>
-<p>Flytt nå generator-løkken som du la til side tidligere inn i
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Flytt nå generator-løkken som du la til side tidligere inn i
 <code class="blockcontrol">hvis</code>-testen rett under
-<code class="blockdata">sett er generator</code>-klossen.</p>
+<code class="blockdata">sett er generator</code>-klossen.</label></p>
 </li>
-<li>
-<p>Tilsvarende legger du flytt-løkken fra tidligere inn i
-<code class="blockcontrol">ellers</code>-testen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Tilsvarende legger du flytt-løkken fra tidligere inn i
+<code class="blockcontrol">ellers</code>-testen.</label></p>
 </li>
 </ul>
 <p>Prøv spillet ditt. Du skal nå ha tre rader med bokser som flyttes over
 skjermen.</p>
-<ul>
-<li>Klikk på <code>Scene</code> helt til venstre på skjermen. Gå til
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Klikk på <code>Scene</code> helt til venstre på skjermen. Gå til
 <code class="blocklightgrey">Bakgrunner</code>. Tegn to nye streker i samme farge som
 den første. Test spillet og flytt strekene slik at boksene flytter
-seg naturlig på toppen av dem.</li>
+seg naturlig på toppen av dem.</label></li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Har du tre rader med bokser som kommer skliende over skjermen?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Har du tre rader med bokser som kommer skliende over skjermen?</label></p>
 </li>
-<li>
-<p>Det er foreløpig bare en hoppehelt på den nederste raden?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Det er foreløpig bare en hoppehelt på den nederste raden?</label></p>
 </li>
 </ul>
 </section>
@@ -300,32 +300,32 @@ seg naturlig på toppen av dem.</li>
 <p><em>Vi skal nå lage de siste to hoppeheltene!</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en kopi av <code>Helt 1</code>-figuren. Kopien blir automatisk hetende
-<code>Helt 2</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Lag en kopi av <code>Helt 1</code>-figuren. Kopien blir automatisk hetende
+<code>Helt 2</code>.</label></p>
 </li>
-<li>
-<p>Klikk på <code>Helt 2</code>. Det eneste vi trenger å endre på er y-posisjonen
-og tasten som brukes til å hoppe.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Klikk på <code>Helt 2</code>. Det eneste vi trenger å endre på er y-posisjonen
+og tasten som brukes til å hoppe.</label></p>
 <p>Endre y-posisjonen i <code class="blockmotion">gå til</code>-klossen med 110.</p>
 <p>Endre <code>m</code> til <code>k</code> i <code class="blocksensing">tast trykket</code>-testen.</p>
 </li>
 </ul>
 <p>Prøv spillet ditt igjen. Har du nå to hoppehelter? Virker de som de skal?</p>
-<ul>
-<li>Lag en ny kopi av <code>Helt 1</code>-figuren. Endre denne kopien slik at den
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Lag en ny kopi av <code>Helt 1</code>-figuren. Endre denne kopien slik at den
 har posisjon 110 høyere enn <code>Helt 2</code>, og slik at den hopper når du
-trykker på <code>o</code>.</li>
+trykker på <code>o</code>.</label></li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Du skal nå ha tre hoppehelter som alle må hoppe over boksene som
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Du skal nå ha tre hoppehelter som alle må hoppe over boksene som
 kommer! Dette har plutselig blitt et ganske vanskelig spill som
-krever konsentrasjon og koordinasjon!</li>
+krever konsentrasjon og koordinasjon!</label></li>
 </ul>
 </section>
 <section class="try" id="prov-selv-2">

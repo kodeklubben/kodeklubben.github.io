@@ -28,20 +28,20 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-1-opprette-app-pakke-app-klasse-og-fxml-fil">
 <h1 class="activity" id="steg-1-opprette-app-pakke-app-klasse-og-fxml-fil">Steg 1: Opprette app-pakke, app-klasse og FXML-fil</h1>
-<ul>
-<li>
-<p>Lag først en ny app-pakke og app-klasse som forklart i <a href="../helloworld/helloworld.html">Hello world-leksjonen</a>. Bruk <strong>fxmllogo</strong> som navn på pakken og <strong>FxmlLogoApp</strong> som navn på app-klassen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Lag først en ny app-pakke og app-klasse som forklart i <a href="../helloworld/helloworld.html">Hello world-leksjonen</a>. Bruk <strong>fxmllogo</strong> som navn på pakken og <strong>FxmlLogoApp</strong> som navn på app-klassen.</label></p>
 </li>
-<li>
-<p>Høyreklikk på <strong>fxmllogo</strong>-pakken og velg <code>New &gt; Other...</code> så du får opp en liste med såkalte <em>veivisere</em> (eng: <em>wizards</em>). Vi skal bruke den som heter <strong>New FXML Document</strong>. Det enkleste er å skrive inn 'fx' i søkefeltet, for å snevre inn utvalget:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Høyreklikk på <strong>fxmllogo</strong>-pakken og velg <code>New &gt; Other...</code> så du får opp en liste med såkalte <em>veivisere</em> (eng: <em>wizards</em>). Vi skal bruke den som heter <strong>New FXML Document</strong>. Det enkleste er å skrive inn 'fx' i søkefeltet, for å snevre inn utvalget:</label></p>
 <p><figure><img src="new-fxml-document.png" alt="" title="New FXML document"></figure></p>
 <p>Trykk <code>Next</code> for å velge veiviseren. Du vil da få opp følgende skjema:</p>
 <p><figure><img src="new-fxml-file-wizard.png" alt="" title="New FXML file"></figure></p>
 <p>Fyll inn <code>FxmlLogoApp</code> og trykk <code>Finish</code>. Du vil da få opp en FXML-editor med den nye FXML-fila:</p>
 <p><figure><img src="initial-FxmlLogoApp.fxml.png" alt="" title="Initial FxmlLogoApp.fxml"></figure></p>
 </li>
-<li>
-<p>Denne FXML-en gir bare et tomt panel (av typen <strong>AnchorPane</strong>), så for å få noe å jobbe med, så trenger vi  Rediger teksten slik at den blir som følger:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Denne FXML-en gir bare et tomt panel (av typen <strong>AnchorPane</strong>), så for å få noe å jobbe med, så trenger vi  Rediger teksten slik at den blir som følger:</label></p>
 <pre><code class="xml"></code></pre>
 </li>
 </ul>
@@ -65,9 +65,9 @@ function relative (url) {
 <p>FXML-editoren har samme type kode-komplettering som Java-editoren. Når du f.eks. har skrevet inn <code>&lt;Rect</code>, kan du trykk ctrl-mellomrom og editoren vil både fylle ut resten av <strong>Rectangle</strong>-navnet og legge til en import-setning øverst i fila (tilsvarende import-setningen i Java):</p>
 <p><code>&lt;?import javafx.scene.shape.Rectangle?&gt;</code></p>
 <p>(Hvis du ikke bruker kode-kompletteringsfunksjonen, så må du skrive inn import-setningen selv.) Tilsvarende kan du bruke kode-komplettering på attributt-navnene <strong>layoutX</strong>, <strong>layoutY</strong>, <strong>width</strong>, <strong>height</strong>, <strong>fill</strong> osv.</p>
-<ul>
-<li>
-<p>Mens du redigerer FXML-koden, så kan det være kjekt å se hvordan innholdet vil bli seende ut, når det lastes inn og vises frem. Eclipse har et eget panel kalt <strong>JavaFX preview</strong> som hele tiden laster inn FXML-koden du redigerer og viser frem innholdet. Dette åpnes ved å velge <code>Window &gt; Show View...</code> og så finne panelet i lista. Bruk søkefeltet for å filtrere lista (skriv 'pre', så panelet blir enklere å finne.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Mens du redigerer FXML-koden, så kan det være kjekt å se hvordan innholdet vil bli seende ut, når det lastes inn og vises frem. Eclipse har et eget panel kalt <strong>JavaFX preview</strong> som hele tiden laster inn FXML-koden du redigerer og viser frem innholdet. Dette åpnes ved å velge <code>Window &gt; Show View...</code> og så finne panelet i lista. Bruk søkefeltet for å filtrere lista (skriv 'pre', så panelet blir enklere å finne.</label></p>
 <p><figure><img src="fxml-editor-with-preview-pane.png" alt="" title="FXML-editor med preview-panel"></figure></p>
 <p>Som du ser så inneholder FXML-fila allerede mange av de grafiske elementene som trengs for å lage begge logoene, men ikke alle. Din jobb blir å justere på FXML-koden, så logoene blir omtrent som vist øverst i denne leksjonen.</p>
 </li>
@@ -98,9 +98,9 @@ pane.getChildren().add(circle);
 <section class="activity" id="steg-2-apne-og-redigere-fxml-fil-med-scenebuilder">
 <h1 class="activity" id="steg-2-apne-og-redigere-fxml-fil-med-scenebuilder">Steg 2: Åpne og redigere FXML-fil med SceneBuilder</h1>
 <p>Det går greit å bruke FXML-editoren for enkel redigering (eller mer kompliserte ting, når en får erfaring), men det finnes et enklere alternativ, nemlig en grafisk editor kalt <strong>SceneBuilder</strong>. En kan faktisk åpne og redigere FXML-fila direkte i JavaFX Scene Builder (ofte bare kalt SceneBuilder), siden den bruker FXML som lagringsformat.</p>
-<ul>
-<li>
-<p>Høyreklikk på FXML-fila og velg <code>Open with SceneBuilder</code></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Høyreklikk på FXML-fila og velg <code>Open with SceneBuilder</code></label></p>
 <p><figure><img src="open-with-scenebuilder.png" alt="" title="Åpne med SceneBuilder"></figure></p>
 <p>Hvis du har installer SceneBuilder riktig, så skal du etter litt venting få opp følgende</p>
 <p><figure><img src="scene-builder-FxmlLogoApp-1.png" alt="" title="FxmlLogoApp.fxml åpnet med SceneBuilder"></figure></p>
@@ -152,11 +152,11 @@ pane.getChildren().add(circle);
 <section class="activity" id="steg-3-fa-appen-til-a-vise-frem-innholdet-i-fxml-fila">
 <h1 class="activity" id="steg-3-fa-appen-til-a-vise-frem-innholdet-i-fxml-fila">Steg 3: Få appen til å vise frem innholdet i FXML-fila </h1>
 <p>Det siste trinnet i denne leksjonen er å få app-en til å vise frem det grafiske innholdet i app-vinduet. For å få dette til må du redigere koden i app-klassen din, som du laget i trinn én og heter <strong>FxmlLogoApp</strong>.</p>
-<ul>
-<li>Husk å lagre FXML-fila i SceneBuilder før du går tilbake til Eclipse.</li>
-<li>Klikk i FXML-editoren. Den skal da vise frem det nye innholdet, som er resultatet av all redigeringen du gjorde i SceneBuilder.</li>
-<li>Det er greit å gjøre endringer rett i FXML-koden i editor. Når du går tilbake til SceneBuilder, så sjekk om du ser de samme endringene der. Hvis ikke så må du kanskje lukke den og åpne den igjen med <code>Open with SceneBuilder</code>.</li>
-<li>Velg editoren med <strong>FxmlLogoApp</strong>-klassen i (eller åpne den ved å dobbel-klikke på <strong>FxmlLogoApp.java</strong>) og rediger slik at du får følgende kode:<pre><code class="java"><span class="hljs-keyword">package</span> fxmllogoapp;
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Husk å lagre FXML-fila i SceneBuilder før du går tilbake til Eclipse.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Klikk i FXML-editoren. Den skal da vise frem det nye innholdet, som er resultatet av all redigeringen du gjorde i SceneBuilder.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Det er greit å gjøre endringer rett i FXML-koden i editor. Når du går tilbake til SceneBuilder, så sjekk om du ser de samme endringene der. Hvis ikke så må du kanskje lukke den og åpne den igjen med <code>Open with SceneBuilder</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Velg editoren med <strong>FxmlLogoApp</strong>-klassen i (eller åpne den ved å dobbel-klikke på <strong>FxmlLogoApp.java</strong>) og rediger slik at du får følgende kode:</label><pre><code class="java"><span class="hljs-keyword">package</span> fxmllogoapp;
 
 <span class="hljs-keyword">import</span> java.io.IOException;
 
@@ -184,7 +184,7 @@ pane.getChildren().add(circle);
 </ul>
 <pre><code>
   Trikset her er å lage et **FXMLLoader**-objekt (første linje i start-metoden, og <span class="hljs-keyword">be </span>denne laste inn FXML-fila med load-metoden (<span class="hljs-keyword">andre </span>linje).
-+ Kjør app-en ved å høyre-klikke på fila eller i editoren og velge `Run as &gt; <span class="hljs-keyword">Java </span>Application`. Da skal det (etter litt venting) dukke opp et vindu som dette:
+- [ ] Kjør app-en ved å høyre-klikke på fila eller i editoren og velge `Run as &gt; <span class="hljs-keyword">Java </span>Application`. Da skal det (etter litt venting) dukke opp et vindu som dette:
 
   ![](run-FxmlLogoApp-as-<span class="hljs-keyword">java-application.png)
 </span>

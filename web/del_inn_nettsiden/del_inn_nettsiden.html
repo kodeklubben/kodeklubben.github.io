@@ -17,13 +17,13 @@ function relative (url) {
 <section class="activity" id="steg-1-divdiv">
 <h1 class="activity" id="steg-1-divdiv">Steg 1: <code>&lt;div&gt;&lt;/div&gt;</code></h1>
 <p><code>&lt;div&gt;</code>-taggen er en veldig mye brukt tag. <code>div</code> står for <code>division</code> eller seksjon. Vi bruker denne taggen for å organisere forskjellige deler av siden og brukes ofte sammen med CSS (utseende), som vi skal se på i en senere del av oppgaven. La oss se på et eksempel:</p>
-<ul>
-<li>Gå inn på <a href="http://kidsakoder.no">kidsakoder.no</a></li>
-<li>Trykk på <code>X-Ray Goggles</code> eller bruk utviklerverktøy (Chrome: Visning -&gt; Utvikler -&gt; Utviklingsverktøy, Firefox: bruk <a href="https://goggles.mozilla.org/">X-Ray Goggles</a>)</li>
-<li>Trykk på symbolet helt øverst til venstre i utviklervindu og holder over forskjellige elementer på siden. Se på koden i utviklervindu, ser du at det er mange <code>&lt;div&gt;</code>-tagger?</li>
-<li>Trykk på de forskjellige og se hvor på siden du finner dem.</li>
-<li>Finner du <code>&lt;div&gt;</code>-taggen til LKK-logoen og menyen?</li>
-<li>Finner du <code>&lt;div&gt;</code>-taggen til der hvor nyhetene er plassert?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Gå inn på <a href="http://kidsakoder.no">kidsakoder.no</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Trykk på <code>X-Ray Goggles</code> eller bruk utviklerverktøy (Chrome: Visning -&gt; Utvikler -&gt; Utviklingsverktøy, Firefox: bruk <a href="https://goggles.mozilla.org/">X-Ray Goggles</a>)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Trykk på symbolet helt øverst til venstre i utviklervindu og holder over forskjellige elementer på siden. Se på koden i utviklervindu, ser du at det er mange <code>&lt;div&gt;</code>-tagger?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Trykk på de forskjellige og se hvor på siden du finner dem.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Finner du <code>&lt;div&gt;</code>-taggen til LKK-logoen og menyen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Finner du <code>&lt;div&gt;</code>-taggen til der hvor nyhetene er plassert?</label></li>
 </ul>
 <p>Under ser du utviklingsverktøyet til Chrome til høyre og kidsakoder.no til venstre. I utviklervindu ser vi flere <code>&lt;div&gt;</code>-tagger inne i hverandre. Disse skal vi lære mer om.</p>
 <p><figure><img src="ressurser/html_del_inn_4.png" alt="screenshot"></figure></p>
@@ -42,21 +42,21 @@ function relative (url) {
  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <p>Husker du også at vi kan legge til metadata i <code>&lt;head&gt;</code> for å blant annet få tittel på nettsiden vår?</p>
-<ul>
-<li>Legg til din egen tittel</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Legg til din egen tittel</label></li>
 </ul>
 <p>Når vi skal lage en <code>&lt;div&gt;</code> på siden vår må vi legge denne inne i <code>&lt;body&gt;</code>-taggen vår.</p>
-<ul>
-<li>
-<p>Lage en <code>&lt;div&gt;</code>. Denne skal holde styr på det som er øverst på siden vår. Denne kalles ofte for en header (det er ikke det samme som <code>&lt;head&gt;</code>).</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Lage en <code>&lt;div&gt;</code>. Denne skal holde styr på det som er øverst på siden vår. Denne kalles ofte for en header (det er ikke det samme som <code>&lt;head&gt;</code>).</label></p>
 </li>
-<li>
-<p>Studer kidsakoder.no med utviklingsverktøyet og se om du finner <code>&lt;header&gt;</code>-taggen eller en <code>&lt;div&gt;</code> med <code>ID</code> som inneholder <em>header</em>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Studer kidsakoder.no med utviklingsverktøyet og se om du finner <code>&lt;header&gt;</code>-taggen eller en <code>&lt;div&gt;</code> med <code>ID</code> som inneholder <em>header</em>.</label></p>
 </li>
 </ul>
 <p>Fant du det? Det er en sånn vi prøver å lage, bare at vi skal forenkle det litt.</p>
-<ul>
-<li>Legg til en overskrift i <code>&lt;div&gt;</code>-taggen du akkurat lagde.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Legg til en overskrift i <code>&lt;div&gt;</code>-taggen du akkurat lagde.</label></li>
 </ul>
 <toggle>
 <strong>Se koden så langt</strong>
@@ -75,12 +75,12 @@ function relative (url) {
 </code></pre>
   </hide>
 </toggle>
-<ul>
-<li>
-<p>La oss lage en <code>&lt;div&gt;</code> som skal holde styr på navigasjonsmenyen vår. Legg denne under der den andre <code>&lt;div&gt;</code>-en ble avsluttet</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> La oss lage en <code>&lt;div&gt;</code> som skal holde styr på navigasjonsmenyen vår. Legg denne under der den andre <code>&lt;div&gt;</code>-en ble avsluttet</label></p>
 </li>
-<li>
-<p>La oss nå lage en liste med 3 elementer som skal være menyen vår. Du velger selv hva som skal være med i listen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> La oss nå lage en liste med 3 elementer som skal være menyen vår. Du velger selv hva som skal være med i listen.</label></p>
 </li>
 </ul>
 <toggle>
@@ -95,8 +95,8 @@ function relative (url) {
 </code></pre>
 </hide>
 </toggle>
-<ul>
-<li>Lage en ny <code>&lt;div&gt;</code> som skal ha innholdet på siden vår. Inni den kan vi skrive en overskrift og legge til litt tekst. Gjerne også et bilde hvis du vil det.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lage en ny <code>&lt;div&gt;</code> som skal ha innholdet på siden vår. Inni den kan vi skrive en overskrift og legge til litt tekst. Gjerne også et bilde hvis du vil det.</label></li>
 </ul>
 <toggle>
 <strong>Se koden så langt</strong>
@@ -133,8 +133,8 @@ function relative (url) {
 <p>La oss nå sette farge på de 3 <code>&lt;div&gt;</code>-ene vi har laget. For å gjøre det bruker vi attributtet <code>style=””</code>. I <code>style</code> kan vi legge til variabler som for eksempel <code>background-color: favoritt fargen din</code>.</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: red"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Prøv å legge til forskjellig farge på hver av <code>&lt;div&gt;</code>-ene og se hva som skjer.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Prøv å legge til forskjellig farge på hver av <code>&lt;div&gt;</code>-ene og se hva som skjer.</label></li>
 </ul>
 <toggle>
 <strong>Se et eksempel</strong>
@@ -150,8 +150,8 @@ function relative (url) {
 <p>ID lages ved å legge til attributte <code>id=””</code> som attributt i <code>&lt;div&gt;</code>-taggen.</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"navn_på_id-en"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Gi en passende <code>ID</code> til de 3 <code>&lt;div&gt;</code>-ene i steg 2.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Gi en passende <code>ID</code> til de 3 <code>&lt;div&gt;</code>-ene i steg 2.</label></li>
 </ul>
 <toggle>
 <strong>Se et forslag til løsning</strong>
@@ -190,8 +190,8 @@ function relative (url) {
   <span class="hljs-attribute">property</span>: value;
 }
 </code></pre>
-<ul>
-<li>Kan du finne knappene for ‘{‘ og ‘}’ på ditt tastatur? Hva med ‘:’ og ‘;’ ? Disse trenger vi får å skrive <strong>CSS</strong></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Kan du finne knappene for ‘{‘ og ‘}’ på ditt tastatur? Hva med ‘:’ og ‘;’ ? Disse trenger vi får å skrive <strong>CSS</strong></label></li>
 </ul>
 <p><code>Selektorer</code> er som regel HTML-tagger som <code>h1</code>, <code>p</code>, <code>img</code>, <code>a</code>. Men de kan også være IDer og klasser, som vi vil lære om senere.</p>
 <p><code>Property</code> kan være for eksempel <code>background-color</code> som vi har brukt. Flere <code>properties</code> finner du på <a href="http://w3schools.com/css">w3schools.com/css</a></p>
@@ -213,10 +213,10 @@ function relative (url) {
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 </code></pre>
-<ul>
-<li>Ta vekk <code>style</code>-attributtene i <code>&lt;div&gt;</code>-ene.</li>
-<li>Lagre og last inn siden. Forsvant bakgrunnsfargen?</li>
-<li>Legg til bakgrunnsfargen igjen ved å legge det i <em>CSS</em>-en i <code>&lt;head&gt;</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Ta vekk <code>style</code>-attributtene i <code>&lt;div&gt;</code>-ene.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Lagre og last inn siden. Forsvant bakgrunnsfargen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Legg til bakgrunnsfargen igjen ved å legge det i <em>CSS</em>-en i <code>&lt;head&gt;</code></label></li>
 </ul>
 <toggle>
 <strong>Se et eksempel</strong>
@@ -225,9 +225,9 @@ function relative (url) {
 </hide>
 </toggle>
 <p>Det finnes flere måter å skive farger i CSS på. Vi har nå brukt kjente ord som <code>red</code>, <code>blue</code>og <code>green</code>. Men vi kan faktisk lage 16 millioner forskjellige farger ved å bruke en annen metode. For å lage dise fargene skal vi bruke tall fra 0-9 og bokstaver fra A-Z. Vi setter disse sammen i en kombinasjon av 6 tall og/eller bokstaver. Siden det tar veldig lang tid å prøve ut alle kombinasjonene, så bruker vi litt hjelp for å finne de fargene vi vil ha:</p>
-<ul>
-<li>Gå inn på <a href="http://paletton.com">paletton.com</a> eller <a href="http://colorpicker.com">colorpicker.com</a> og velg og vrak i masse forskjellige farger.</li>
-<li>Erstatt de fargene du har med noen andre du liker ved å bruke <code>#</code> foran de 6 tall/bokstavene. Eksempel: <code>#338F33</code> gir en ganske fin grønnfarge.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Gå inn på <a href="http://paletton.com">paletton.com</a> eller <a href="http://colorpicker.com">colorpicker.com</a> og velg og vrak i masse forskjellige farger.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Erstatt de fargene du har med noen andre du liker ved å bruke <code>#</code> foran de 6 tall/bokstavene. Eksempel: <code>#338F33</code> gir en ganske fin grønnfarge.</label></li>
 </ul>
 <toggle>
 <strong>Se koden så langt</strong>
@@ -241,8 +241,8 @@ function relative (url) {
 <p>Vi skal se enda mer på CSS etter vi har lært litt mer HTML.</p>
 <section class="try" id="utfordring">
 <h2 class="try" id="utfordring">Utfordring</h2>
-<ul>
-<li>Gå inn på <a href="http://w3schools.com/css">w3schools.com/css</a> og se om du finner en flere “properties” du kan endre på.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Gå inn på <a href="http://w3schools.com/css">w3schools.com/css</a> og se om du finner en flere “properties” du kan endre på.</label></li>
 </ul>
 </section>
 </section>
@@ -257,11 +257,11 @@ function relative (url) {
 <p><code>&lt;article&gt;</code> - dersom man har en artikkel på nettsiden, kan man skrive den inne i denne taggen</p>
 <p>Du kan lese om flere her: <a href="http://www.w3schools.com/html/html5_new_elements.asp">http://www.w3schools.com/html/html5_new_elements.asp</a></p>
 <p>Disse taggene gjør det enklere for nettleseren å lese hva innholdet på siden er. Nå skal vi bytte ut <code>&lt;div&gt;</code>-taggene på siden vår med noen av taggene over.</p>
-<ul>
-<li>Kan du tenke deg hvilke taggen vi bør bruke istedet for <code>&lt;div&gt;</code>-ene?</li>
-<li>La oss starte med <code>&lt;div id=”header”&gt;</code>, bytt den ut med <code>&lt;header&gt;</code></li>
-<li>Gjør det samme med <code>&lt;div id=”nav”&gt;</code> og <code>&lt;div id=”innhold”&gt;</code>
-NB! Husk å fjerne <code>&lt;/div&gt;</code> og erstatte disse med <code>&lt;/header&gt;, &lt;/nav&gt;</code> og <code>&lt;/section&gt;</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Kan du tenke deg hvilke taggen vi bør bruke istedet for <code>&lt;div&gt;</code>-ene?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> La oss starte med <code>&lt;div id=”header”&gt;</code>, bytt den ut med <code>&lt;header&gt;</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Gjør det samme med <code>&lt;div id=”nav”&gt;</code> og <code>&lt;div id=”innhold”&gt;</code>
+NB! Husk å fjerne <code>&lt;/div&gt;</code> og erstatte disse med <code>&lt;/header&gt;, &lt;/nav&gt;</code> og <code>&lt;/section&gt;</code></label></li>
 </ul>
 <p>Nå vil <code>&lt;body&gt;</code>-en se noe sånt ut:</p>
 <pre><code class="html">    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -282,14 +282,14 @@ NB! Husk å fjerne <code>&lt;/div&gt;</code> og erstatte disse med <code>&lt;/he
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 
 </code></pre>
-<ul>
-<li>Lagre og kjør og se om du får opp akkurat det samme. Forsvant fargene?
-For å få fargene til å fungere igjen må vi endre CSSen. Siden vi ikke har en ID på taggene våre har vi 2 valg: enten sette en ID på dem eller så kan vi gjerne <code>#</code> i CSSen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Lagre og kjør og se om du får opp akkurat det samme. Forsvant fargene?
+For å få fargene til å fungere igjen må vi endre CSSen. Siden vi ikke har en ID på taggene våre har vi 2 valg: enten sette en ID på dem eller så kan vi gjerne <code>#</code> i CSSen.</label></li>
 </ul>
 <p><code>#nav</code> i CSS betyr at vi endrer stilen på en tag med ID <code>nav</code>. Hvis vi ikke har noe foran <code>nav</code> betyr dette: “for alle <code>&lt;nav&gt;</code>-tagger”. Så nå som vi bruker HTML5-taggene må vi også endre på CSSen vår.</p>
-<ul>
-<li>Fjern <code>#</code> i CSSen</li>
-<li>Legg til selektorene (taggene) du vil ha CSS på</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Fjern <code>#</code> i CSSen</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Legg til selektorene (taggene) du vil ha CSS på</label></li>
 </ul>
 <p>CSS-en bør se noe sånt ut: (Merk at jeg har sikkert andre farger enn deg)</p>
 <pre><code class="css">      <span class="hljs-selector-tag">header</span>{
@@ -304,8 +304,8 @@ For å få fargene til å fungere igjen må vi endre CSSen. Siden vi ikke har en
           <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#669999</span>;
       }
 </code></pre>
-<ul>
-<li>Legg til farge på bakgrunnen for hele siden ved å legge til CSS på <code>&lt;body&gt;</code>-taggen. Velg farge selv.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Legg til farge på bakgrunnen for hele siden ved å legge til CSS på <code>&lt;body&gt;</code>-taggen. Velg farge selv.</label></li>
 </ul>
 <p>Nå vil koden se noe sånt ut:</p>
 <p><figure><img src="ressurser/html_del_inn_6.png" alt="screenshot"></figure></p>

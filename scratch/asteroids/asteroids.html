@@ -25,18 +25,18 @@ du allerede gjort). I Asteroids vil vi spesielt se på noen av måtene
 man kan gjenbruke kode i Scratch.</em></p>
 <section class="check" id="plan">
 <h2 class="check" id="plan">Plan</h2>
-<ul>
-<li>
-<p>Enda et flyvende romskip</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Enda et flyvende romskip</label></p>
 </li>
-<li>
-<p>Romskipet kan skyte!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Romskipet kan skyte!</label></p>
 </li>
-<li>
-<p>Pass deg for asteroidene</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Pass deg for asteroidene</label></p>
 </li>
-<li>
-<p>.. og andre utfordringer</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> .. og andre utfordringer</label></p>
 </li>
 </ul>
 </section>
@@ -55,26 +55,26 @@ mellom forskjellige prosjekter. Vi vil derfor først kopiere romskipet
 vi laget i Lunar Lander.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne <a href="../lunar_lander/lunar_lander.html">Lunar Lander</a>-prosjektet
-ditt.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Åpne <a href="../lunar_lander/lunar_lander.html">Lunar Lander</a>-prosjektet
+ditt.</label></p>
 </li>
-<li>
-<p>Legg merke til at det står <code>Ryggsekk</code> helt nederst på skjermen.
-Klikk på <code>Ryggsekk</code> og et litt større felt skal åpne seg opp.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Legg merke til at det står <code>Ryggsekk</code> helt nederst på skjermen.
+Klikk på <code>Ryggsekk</code> og et litt større felt skal åpne seg opp.</label></p>
 </li>
-<li>
-<p>Dra hele romskip-figuren din til den åpne ryggsekken. En kopi av
-romskip-figuren blir værende i ryggsekken.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Dra hele romskip-figuren din til den åpne ryggsekken. En kopi av
+romskip-figuren blir værende i ryggsekken.</label></p>
 </li>
-<li>
-<p>Start et nytt prosjekt ved å velge <code>Ny</code> i <code>Fil</code>-menyen. Slett
-kattefiguren og legg på en stjernebakgrunn.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Start et nytt prosjekt ved å velge <code>Ny</code> i <code>Fil</code>-menyen. Slett
+kattefiguren og legg på en stjernebakgrunn.</label></p>
 </li>
-<li>
-<p>Du kan nå dra romskip-kopien ut fra ryggsekken, og til figurvinduet
-i det nye prosjektet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Du kan nå dra romskip-kopien ut fra ryggsekken, og til figurvinduet
+i det nye prosjektet.</label></p>
 <p><figure><img src="ryggsekk.png" alt=""></figure></p>
 <p>Du vil nå se at alle draktene, alle variablene og alle skriptene til
 romskipet er kopiert over. Du kan rydde opp litt ved å slette skript
@@ -82,22 +82,22 @@ som ikke har noe med kontrollen over romskipet å gjøre, for eksempel
 om du har et <code>Sjekk landing</code>-skript trenger vi ikke det i dette
 spillet.</p>
 </li>
-<li>
-<p>Legg et skript på scenen som sender en melding til romskipet om
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Legg et skript på scenen som sender en melding til romskipet om
 at det skal begynne å fly når det grønne flagget klikkes. Prøv
-spillet ditt. Kan du fly romskipet rundt omkring?</p>
+spillet ditt. Kan du fly romskipet rundt omkring?</label></p>
 </li>
-<li>
-<p>Vi skal gjøre en liten forandring i hvordan romskipet oppfører
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Vi skal gjøre en liten forandring i hvordan romskipet oppfører
 seg. Asteroids foregår langt ute i rommet hvor det ikke er noen
 merkbar tyngdekraft. Slett derfor klossen som modellerer
-tyngdekraften i <code class="blockcontrol">for alltid</code>-løkken din, <code class="b">endre [fartY v] med (-0.01)</code>.</p>
+tyngdekraften i <code class="blockcontrol">for alltid</code>-løkken din, <code class="b">endre [fartY v] med (-0.01)</code>.</label></p>
 </li>
-<li>
-<p>Vi skal også gjøre en litt større endring i spillet. Vi vil at
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi skal også gjøre en litt større endring i spillet. Vi vil at
 verdensrommet skal føles litt stort og uoversiktlig ved at når
 romskipet går ut av skjermen på den ene siden skal det dukke opp på
-andre siden av skjermen.</p>
+andre siden av skjermen.</label></p>
 <p>Dette gjør vi ved ganske enkle <code class="blockcontrol">hvis</code>-tester. Det vi
 må huske på er at <code>x</code>-koordinatene på skjermen går fra <code>-240</code> til
 <code>240</code>, mens <code>y</code>-koordinatene ligger mellom <code>-180</code> og <code>180</code>. Siden
@@ -129,58 +129,58 @@ slutt
 montere raketter som kan sprenge unna asteroidene.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny figur som du kaller <code>Skudd</code>. Denne tegner du greit selv.
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag en ny figur som du kaller <code>Skudd</code>. Denne tegner du greit selv.
 Eventuelt finnes det for eksempel noen ball-figurer som kan brukes
 som kuler. Bruk en <code class="blocklooks">sett størrelse</code>-kloss for at
 figuren skal bli passe stor. Legg også på en kloss for å
-<code class="blocklooks">skjule</code> figuren.</p>
+<code class="blocklooks">skjule</code> figuren.</label></p>
 </li>
-<li>
-<p>Vi vil bruke kloner slik at vi kan skyte flere skudd. Først trenger
-vi koden som lager en ny skuddklone når mellomromtasten trykkes:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Vi vil bruke kloner slik at vi kan skyte flere skudd. Først trenger
+vi koden som lager en ny skuddklone når mellomromtasten trykkes:</label></p>
 <p>Lag et skript på skudd-figuren som starter på <code>Nytt spill</code>-meldingen. Skriptet kan bestå av en <code class="blockcontrol">for alltid</code>-løkke, hvor du tester på om mellomromtasten
 er trykket. Dersom et skudd skal avfyres kan du først la skuddet <code class="blockmotion">gå til</code> romskipet og deretter peke i samme retning som
 romskipet. Dette siste kan du gjøre med en kombinasjon av <code class="blockmotion">pek i retning</code>, <code class="blocksensing">retning av</code> og
 <code class="blockmotion">vend</code>-klosser. Til slutt kan du <code class="blockcontrol">lage en klon</code> av figuren.</p>
 </li>
-<li>
-<p>For å passe på at bare en melding sendes ut hver gang
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> For å passe på at bare en melding sendes ut hver gang
 mellomromtasten trykkes kan vi starte <code class="blockcontrol">hvis</code>-testen
 med å vente til mellomromtasten er sluppet igjen. Dette trikset ser
-omtrent slik ut:</p>
+omtrent slik ut:</label></p>
 <pre><code class="blocks">hvis &lt;tast [mellomrom v] trykket?&gt;
     vent til &lt;ikke &lt;tast [mellomrom v] trykket?&gt;&gt;
     ...
 slutt
 </code></pre>
 </li>
-<li>
-<p>Nå skal vi kode oppførselen til skuddet etter at det er avfyrt. Det
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Nå skal vi kode oppførselen til skuddet etter at det er avfyrt. Det
 kan være ganske enkelt. Når skuddfiguren <code class="blockcontrol">starter som klon</code> må den <code class="blocklooks">vises</code>, og deretter kan
 den flyttes i en løkke før den til slutt slettes. Eksperimenter med
 hastigheten og rekkevidden på skuddet ved å endre på hvor mange
-ganger løkka gjentas og hvor mange steg figuren går inne i løkka.</p>
+ganger løkka gjentas og hvor mange steg figuren går inne i løkka.</label></p>
 </li>
-<li>
-<p>Til slutt vil vi at også skuddene skal kunne forsvinne ut på den ene
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Til slutt vil vi at også skuddene skal kunne forsvinne ut på den ene
 siden av skjermen og dukke opp igjen på den andre. Til dette vil vi
-bruke omtrent samme kode for romskipet.</p>
+bruke omtrent samme kode for romskipet.</label></p>
 <p>For å kopiere skript mellom figurer kan du bruke ryggsekken på samme
 måte som tidligere. En litt raskere metode er å bare dra skriptet du
 vil kopiere til den figuren du vil kopiere til.</p>
 <p>Kopier koden for å <em>warp'e</em> rundt skjermen fra romskipet til
 skudd-figuren.</p>
 </li>
-<li>
-<p>Vi kan nesten bruke denne koden som den er. Den eneste endringen vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Vi kan nesten bruke denne koden som den er. Den eneste endringen vi
 trenger å gjøre er at den skal starte på <code class="b">når jeg starter som klon</code> i stedet for på <code class="b">når jeg mottar [Nytt spill v]</code>, siden
-denne oppførselen skal gjelde for alle skuddklonene.</p>
+denne oppførselen skal gjelde for alle skuddklonene.</label></p>
 </li>
-<li>
-<p>Prøv spillet ditt. Nå skal du kunne fly rundt i verdensrommet mens
-du skyter.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Prøv spillet ditt. Nå skal du kunne fly rundt i verdensrommet mens
+du skyter.</label></p>
 </li>
 </ul>
 </section>
@@ -193,25 +193,25 @@ og man må fortsatt passe seg for og skyte disse mindre asteroidene.
 Vi vil kode dette ved å bruke kloner i forskjellige størrelser.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en asteroidefigur. En måte å gjøre dette på er å tegne en ny
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lag en asteroidefigur. En måte å gjøre dette på er å tegne en ny
 figur med vektorgrafikk. Start med en enkel firkant, og bruk
 deretter <code>Bøy</code>-verktøyet for å legge til flere hjørnepunkter og
-flytte dem rundt som i figuren under.</p>
+flytte dem rundt som i figuren under.</label></p>
 <p><figure><img src="flyttpunkt.png" alt=""></figure></p>
 </li>
-<li>
-<p>Også for asteroidene vil vi bruke kloner. Lag et skript som
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Også for asteroidene vil vi bruke kloner. Lag et skript som
 <code class="blocklooks">skjuler</code> figuren og lager et par asteroide-kloner
-tilfeldige steder på skjermen når det mottar <code>Nytt spill</code>-meldingen.</p>
+tilfeldige steder på skjermen når det mottar <code>Nytt spill</code>-meldingen.</label></p>
 </li>
-<li>
-<p>Når figuren <code class="blockcontrol">starter som klon</code> vil vi først at den
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Når figuren <code class="blockcontrol">starter som klon</code> vil vi først at den
 <code class="blockmotion">peker</code> i en tilfeldig retning og deretter
 <code class="blocklooks">vises</code>. Videre kan den gå inn i en løkke som <code class="blockcontrol">gjentas til</code> figuren <code class="blocksensing">berører romskipet</code>. Inne
 i løkken lar du først asteroiden <code class="blockmotion">gå noen steg</code>. Deretter må du teste om asteroiden <code class="blocksensing">berører et skudd</code>. Hvis den gjør det kan du lage asteroiden
-mindre med en kloss som ligner</p>
+mindre med en kloss som ligner</label></p>
 <pre><code class="blocks">sett størrelse til ((størrelse) / (2)) %
 </code></pre>
 <p><code class="blockcontrol">Hvis</code> <code class="blocklooks">størrelsen</code> fortsatt er større
@@ -219,22 +219,22 @@ enn for eksempel 10 kan du lage et par nye kloner av denne mindre
 asteroiden. Til slutt kan du <code class="blockcontrol">slette denne klonen</code>
 uansett hva størrelsen er.</p>
 </li>
-<li>
-<p>Legg på en melding eller en <code class="blockcontrol">stopp</code>-kloss slik at
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Legg på en melding eller en <code class="blockcontrol">stopp</code>-kloss slik at
 spillet kan avsluttes etter at <code class="blockcontrol">gjenta til</code>-løkken
-avsluttes, siden romskipet da har krasjet i en asteroide.</p>
+avsluttes, siden romskipet da har krasjet i en asteroide.</label></p>
 </li>
-<li>
-<p>Også asteroidene skal kunne fly ut av skjermen på en side og dukke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Også asteroidene skal kunne fly ut av skjermen på en side og dukke
 opp på en annen. Kopier derfor skriptet som fikser dette fra
-skudd-figuren på samme måte som tidligere.</p>
+skudd-figuren på samme måte som tidligere.</label></p>
 </li>
-<li>
-<p>Til slutt vil vi også slette skudd-klonene når de treffer
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Til slutt vil vi også slette skudd-klonene når de treffer
 asteroidene. Her må vi være litt forsiktig så vi ikke sletter
 skudd-klonene før asteroidene merker at de er truffet. Dette kan vi
 fikse ved å legge inn en ørliten forsinkelse. Du kan for eksempel
-legge inn kode som dette i løkka som flytter skudd-figuren:</p>
+legge inn kode som dette i løkka som flytter skudd-figuren:</label></p>
 <pre><code class="blocks">hvis &lt;berører [Asteroide v] ?&gt;
     vent (0.01) sekunder
     slett denne klonen
@@ -252,43 +252,43 @@ du vil jobbe videre, men nedenfor er noen ideer som kanskje kan være
 til inspirasjon?</em></p>
 <section class="check" id="ideer-til-videreutvikling">
 <h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
-<ul>
-<li>
-<p>Gi poeng når spilleren treffer en asteroide. Man burde kanskje få
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Gi poeng når spilleren treffer en asteroide. Man burde kanskje få
 flere poeng for å treffe de små asteroidene? Det kan du fikse med en
-utregning omtrent som</p>
+utregning omtrent som</label></p>
 <pre><code class="blocks">avrund ((100) / (størrelse))
 </code></pre>
 </li>
-<li>
-<p>Dersom du plasserer asteroidene helt tilfeldig når et nytt spill
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Dersom du plasserer asteroidene helt tilfeldig når et nytt spill
 starter er det ganske sannsynlig at romskipet krasjer i en asteroide
 allerede før spillet har begynt. Det er ikke noe moro. En måte å
 fikse det på vil være å først la asteroideklonen
 <code class="blockmotion">gå til romskipet</code>, men deretter peke i en tilfeldig
 retning og <code class="blockmotion">gå 100 til 200 steg</code> før det til slutt
-<code class="blocklooks">vises</code>.</p>
+<code class="blocklooks">vises</code>.</label></p>
 </li>
-<li>
-<p>Spillet ser litt kulere ut om du tegner flere asteroidedrakter, og
-velger en av dem tilfeldig når en klon lages.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Spillet ser litt kulere ut om du tegner flere asteroidedrakter, og
+velger en av dem tilfeldig når en klon lages.</label></p>
 </li>
-<li>
-<p>Dersom man klarer å skyte ned alle asteroidene burde man komme
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Dersom man klarer å skyte ned alle asteroidene burde man komme
 videre til et vanskeligere nivå. Kanskje med flere asteroider? Eller
 med asteroider som beveger seg raskere? Eller deler seg i flere
-deler når de blir skutt?</p>
+deler når de blir skutt?</label></p>
 <p>For å vite når du kan gå videre til et nytt nivå må du telle hvor
 mange asteroider som flyr rundt. Lag derfor en variabel <code class="blockdata">Antall asteroider</code> som du øker med 1 når en asteroide <code class="blockcontrol">starter som klon</code>. Deretter må variabelen minke med 1 når
 klonen slettes.</p>
 <p>Videre bruker du en <code class="blockdata">Nivå</code>-variabel som holder styr på
 hvilket nivå spilleren har kommet til.</p>
 </li>
-<li>
-<p>I det originale Asteroids-spillet dukket det også opp en flyvende
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> I det originale Asteroids-spillet dukket det også opp en flyvende
 tallerken (UFO) innimellom. Denne måtte man også passe seg for, men
 i motsetning til asteroidene kunne UFOen skyte tilbake. Prøv å legg
-til en slik UFO i spillet ditt!</p>
+til en slik UFO i spillet ditt!</label></p>
 </li>
 </ul>
 </section>

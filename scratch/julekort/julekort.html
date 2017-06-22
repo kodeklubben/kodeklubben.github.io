@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Julekort</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/julekort/julekort.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Julekort</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/julekort/julekort.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Vi skal lage et julekort i Scratch. Det skal ha noen enkle funksjoner
 og animasjoner. Når det er ferdig vil det se omtrent slik ut.</p>
@@ -19,20 +19,20 @@ på siden <a href="http://scratch.mit.edu/">http://scratch.mit.edu/</a>. Da komm
 <p><figure><img src="programmering.png" alt=""></figure></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klikk på scenen ved siden av kattefiguren <code>Sprite1</code> i vinduet for
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Klikk på scenen ved siden av kattefiguren <code>Sprite1</code> i vinduet for
 figurer. Trykk på <img src="../bilder/bakgrunn-fra-bibliotek.png" alt=""> for å
 importere en ferdig bakgrunn. Velg den bakgrunnen du vil. Slett
-deretter den tomme bakgrunnen som ligger der.</p>
+deretter den tomme bakgrunnen som ligger der.</label></p>
 <p><figure><img src="ny_bakgrunn.png" alt=""></figure></p>
 </li>
-<li>
-<p>Slett kattefiguren <code>Sprite1</code> ved å høyreklikke på ham og slette.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Slett kattefiguren <code>Sprite1</code> ved å høyreklikke på ham og slette.</label></p>
 </li>
-<li>
-<p>Velg nye figurer fra biblioteket. Legg til isbjørnen, snømannen og
-juletreet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Velg nye figurer fra biblioteket. Legg til isbjørnen, snømannen og
+juletreet.</label></p>
 <p><figure><img src="velg_figurer.png" alt=""></figure></p>
 </li>
 </ul>
@@ -43,11 +43,11 @@ juletreet.</p>
 <p>Nå skal vi få figurene til å gjøre ting når de blir klikket på.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Velg isbjørnen og fanen <code class="blocklightgrey">Skript</code> og lag denne
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Velg isbjørnen og fanen <code class="blocklightgrey">Skript</code> og lag denne
 koden. Når isbjørnen blir klikket på skal den si <code>God jul!</code>.
-Deretter skal den skifte utseende hvert sekund, 10 ganger.</p>
+Deretter skal den skifte utseende hvert sekund, 10 ganger.</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 si [God jul!] i (2) sekunder
 gjenta (10) ganger
@@ -61,22 +61,22 @@ slutt
 <section class="flag" id="test-prosjektet-ditt">
 <h2 class="flag" id="test-prosjektet-ditt">Test prosjektet ditt</h2>
 <p><strong>Klikk på isbjørnen og se om koden din virker.</strong></p>
-<ul>
-<li>
-<p>Sier isbjørnen <code>God jul!</code>?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Sier isbjørnen <code>God jul!</code>?</label></p>
 </li>
-<li>
-<p>Forandrer isbjørnen stilling?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Forandrer isbjørnen stilling?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Velg snømannen og fanen <code>Skript</code> og lag denne koden.  Snømannen skal
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Velg snømannen og fanen <code>Skript</code> og lag denne koden.  Snømannen skal
 spørre etter navnet ditt. Den setter svaret inn i en ny
-setning. Deretter skal den skifte farge.</p>
+setning. Deretter skal den skifte farge.</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 spør [Hva er navnet ditt?] og vent
 si (sett sammen [God jul ] (svar)) i (2) sekunder
@@ -90,24 +90,24 @@ slutt
 <section class="flag" id="test-prosjektet-ditt-2">
 <h2 class="flag" id="test-prosjektet-ditt-2">Test prosjektet ditt</h2>
 <p><strong>Klikk på snømannen og se om koden din virker.</strong></p>
-<ul>
-<li>
-<p>Spør snømannen om navnet ditt?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Spør snømannen om navnet ditt?</label></p>
 </li>
-<li>
-<p>Svarer snømannen med navnet ditt når du har skrevet det inn?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Svarer snømannen med navnet ditt når du har skrevet det inn?</label></p>
 </li>
-<li>
-<p>Forandrer snømannen farge?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Forandrer snømannen farge?</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Velg juletreet og fanen <code class="blocklightgrey">Skript</code> og lag denne
-koden.  Nå skal juletreet skifte farge og utseende.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Velg juletreet og fanen <code class="blocklightgrey">Skript</code> og lag denne
+koden.  Nå skal juletreet skifte farge og utseende.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 for alltid
     vent (0.3) sekunder
@@ -121,12 +121,12 @@ slutt
 <section class="flag" id="test-prosjektet-ditt-3">
 <h2 class="flag" id="test-prosjektet-ditt-3">Test prosjektet ditt</h2>
 <p><strong>Trykk på det grønne flagget og se om alt virker.</strong></p>
-<ul>
-<li>
-<p>Endrer treet farge?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Endrer treet farge?</label></p>
 </li>
-<li>
-<p>Danser treet fra side til side?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Danser treet fra side til side?</label></p>
 </li>
 </ul>
 </section>
@@ -136,10 +136,10 @@ slutt
 <p>Da har du jobbet godt! Om du fortsatt har ledig tid kan du:</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legge til din egen velkomsthilsen, for eksempel &quot;God jul&quot; eller du
-kan synge din egen julesang.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Legge til din egen velkomsthilsen, for eksempel &quot;God jul&quot; eller du
+kan synge din egen julesang.</label></p>
 <p>Klikk på <code>Scene</code>, og velg fanen <code class="blocklightgrey">Lyder</code>.</p>
 <p><figure><img src="lyder.png" alt=""></figure></p>
 <p>Ta op din egen lyd, og gi den et navn, for eksempel
@@ -149,10 +149,10 @@ legg inn følgende kode:</p>
 spill lyden [julehilsen v] til den er ferdig
 </code></pre>
 </li>
-<li>
-<p>Kanskje finne på noen andre morsomme animasjoner? Snømannen kan
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Kanskje finne på noen andre morsomme animasjoner? Snømannen kan
 danse eller turne litt? Kan vi ha snakkende eller hoppende gale
-julepresanger? Du bestemmer!</p>
+julepresanger? Du bestemmer!</label></p>
 </li>
 </ul>
 </section>

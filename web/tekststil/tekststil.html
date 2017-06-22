@@ -30,8 +30,8 @@ function relative (url) {
 <p>En font har en stil, de som blir oftest brukt er <code>sans serif</code> eller <code>serif</code>. Under kan du se forskjellen på <code>sans serif</code> og <code>serif</code>. Som du ser er det ikke store forskjellen, men det utgjør en liten forskjell for leseren, noen er lettere å lese enn andre.</p>
 <p><figure><img src="resursser/serif_sansserif.gif" alt="sans-serif_vs_serif"></figure></p>
 <p>La oss prøve å endre fonten på overskriften ved å bruke <code>font-family</code> egenskapene. Dersom du ikke har <code>index.html</code> fra <a href="../style_nettsider/style_nettsider.html">CSS: Style nettsider</a>, så kan du hente koden ved å kopiere den nederst i <em>CSS: Style nettsider</em>-oppgaven.</p>
-<ul>
-<li>Legg til <code>font-family</code> med en font du ønsker på overskriften på nettsiden din. Under har vi brukt fonten <code>impact</code> med <code>sans-serif</code>-stil, du kan godt velge en annen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Legg til <code>font-family</code> med en font du ønsker på overskriften på nettsiden din. Under har vi brukt fonten <code>impact</code> med <code>sans-serif</code>-stil, du kan godt velge en annen.</label></li>
 </ul>
 <p><strong>Merk!</strong> i CSS-en har vi <code>font-family: font, skriftstil</code>. Altså har vi navnet på fonten, etterfulgt av hvilken stil vi vil at den skal være, <code>sans-serif</code> eller <code>serif</code>.</p>
 <pre><code class="css"><span class="hljs-selector-tag">h1</span> {
@@ -44,8 +44,8 @@ function relative (url) {
   <span class="hljs-attribute">font-family</span>: impact, sans-serif;
 }
 </code></pre>
-<ul>
-<li>Nå skal du endre fonten for alle paragrafer (<code>&lt;p&gt;</code>).</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Nå skal du endre fonten for alle paragrafer (<code>&lt;p&gt;</code>).</label></li>
 </ul>
 <pre><code class="css"><span class="hljs-selector-tag">p</span> {
   <span class="hljs-attribute">font-family</span>: georgia, <span class="hljs-string">'times new roman'</span>, serif;
@@ -55,9 +55,9 @@ function relative (url) {
 <section class="save" id="lagre-og-se-det-i-nettleseren">
 <h2 class="save" id="lagre-og-se-det-i-nettleseren"><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
 <p>Prøv nå med forskjellige fonter og se hvilke du liker best. Legg merke til at hvis navnet på fonten består av flere ord så må navnet skrives inn i anførselstegn, som <code>&quot;times new roman&quot;</code>.</p>
-<ul>
-<li>Hvilken av fontene i listen over synes du er finest?</li>
-<li>Hvilken font og skrift-stil synes du er enklest å lese?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Hvilken av fontene i listen over synes du er finest?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Hvilken font og skrift-stil synes du er enklest å lese?</label></li>
 </ul>
 <p>Har du en annen font på din datamaskin som ikke er nevnt over? (Det har du helt sikkert). Prøv å åpne programmet Word eller Pages, der kan du se alle fontene du har på datamaskinen.</p>
 <p><figure><img src="fonts.png" alt="screenshot"></figure></p>
@@ -80,8 +80,8 @@ function relative (url) {
 </section>
 <section class="save" id="lagre-og-se-det-i-nettleseren-3">
 <h2 class="save" id="lagre-og-se-det-i-nettleseren-3"><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
-<ul>
-<li>Det er også en font-stil-verdi (<code>font-style</code>) som heter ‘oblique’. Hvordan ser den ut?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Det er også en font-stil-verdi (<code>font-style</code>) som heter ‘oblique’. Hvordan ser den ut?</label></li>
 </ul>
 <p>Vi kan til og med bestemme hvor fet skriften skal være ved å bruke egenskapen <code>font-weight</code>. Den bruker verdier som <code>normal</code>, <code>bold</code>, <code>bolder</code>, <code>lighter</code>. Du kan også bruke tall som 100, 200, 300, 400, 500, 600, 700, 800, og 900, hvor 100 er den tynneste og 900 er den tykkeste. Normal tekst er det samme som verdien 400, fet er det samme som 700. Derimot så har ikke alle fonter alle disse verdiene. Så for å være på den sikre siden, er det lurt å bruke <code>normal</code> eller <code>bold</code> osv. Overskrifter er normalt satt til fet skrift som standard. Men hvis du for eksempel ikke ønsker at <code>h2</code> ikke skal være fet, må vi skrive følgende:</p>
 <pre><code class="css"><span class="hljs-selector-tag">h2</span> {
@@ -105,17 +105,17 @@ function relative (url) {
 <p><code>border-style</code> er stilen på linjen, denne kan også være: <code>dashed</code>, <code>dotted</code>, <code>double</code>, <code>groove</code>, <code>ridge</code>, <code>inset</code>, <code>outset</code>.</p>
 <section class="save" id="lagre-og-se-det-i-nettleseren-4">
 <h2 class="save" id="lagre-og-se-det-i-nettleseren-4"><strong>Lagre</strong> og <strong>se</strong> det i nettleseren.</h2>
-<ul>
-<li>Prøv å forandre farge på rammen (her kan du godt bruke heksadesimaler som vi brukte i <a href="../style_nettsider/style_nettsider.html">CSS: Style nettsider</a>).</li>
-<li>Prøv å forandre bredden på rammen.</li>
-<li>Prøv å forandre linje-stil til rammen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Prøv å forandre farge på rammen (her kan du godt bruke heksadesimaler som vi brukte i <a href="../style_nettsider/style_nettsider.html">CSS: Style nettsider</a>).</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Prøv å forandre bredden på rammen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Prøv å forandre linje-stil til rammen.</label></li>
 </ul>
 <p><strong>Fant du en stil du liker?</strong></p>
 </section>
 <section class="try" id="ting-a-prove-ut">
 <h2 class="try" id="ting-a-prove-ut">Ting å prøve ut</h2>
-<ul>
-<li>Du kan sette på kantlinjer på alle slags elementer. Prøv å sett kantlinjer på de andre elementene på siden din.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Du kan sette på kantlinjer på alle slags elementer. Prøv å sett kantlinjer på de andre elementene på siden din.</label></li>
 </ul>
 </section>
 </section>
@@ -124,8 +124,8 @@ function relative (url) {
 <p>Vi ønsker å lage et kontaktavsnitt som er <strong>uthevet</strong>. Vi kan ikke bruke <code>&lt;p&gt;</code> tag fordi det vil endre alle andre paragrafer også. For å gjøre dette må vi legge til en stil for de paragrafene vi vil skal være <strong>uthevet</strong>. For å gjøre dette kan vi bruke noe som kalles <code>ID</code>. Denne IDen gjør at vi kun endrer stil på de taggene som har samme ID. Vi trenger da å endre HTML-koden vår sånn at den ser slik ut:</p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uthevet"</span>&gt;</span>Har du sett Felix? Vennligst kontakt eieren hans på <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:eierentilfelix@email.com"</span>&gt;</span>eierentilfelix@email.com<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
-<ul>
-<li>La oss gjøre den <strong>uthevet</strong> og sette en farge på teksten.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> La oss gjøre den <strong>uthevet</strong> og sette en farge på teksten.</label></li>
 </ul>
 <p>Ved å sette stil på en <code>ID</code> bruker vi <code>#</code> foran ID-navnet i CSS-en:</p>
 <pre><code class="css"><span class="hljs-selector-id">#uthevet</span> {
@@ -144,23 +144,23 @@ function relative (url) {
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
 }
 </code></pre>
-<ul>
-<li>Legg til en kant rundt klassen <code>.stor</code> og IDen <code>#uthevet</code>.</li>
-<li>Skift font og skrift-stil på klassen <code>.stor</code> og IDen <code>#uthevet</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Legg til en kant rundt klassen <code>.stor</code> og IDen <code>#uthevet</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Skift font og skrift-stil på klassen <code>.stor</code> og IDen <code>#uthevet</code>.</label></li>
 </ul>
 <p>Sammen kan du gjøre med <code>&lt;div&gt;</code>- og <code>HTML5</code>-taggene vi brukte i oppgaven <a href="../del_inn_nettsiden/del_inn_nettsiden.html">HTML: Del inn nettsiden</a>.</p>
 </section>
 <section class="try" id="ting-du-kan-prove">
 <h2 class="try" id="ting-du-kan-prove">Ting du kan prøve:</h2>
-<ul>
-<li>
-<p>Hvordan vil du endre siden for å få den til å se bedre ut? Hvorfor ikke prøve å bruke din favorittskrifttype, farge, osv? Bruk gjerne <a href="http://www.w3schools.com/css/">w3schools.com/css</a> for å utforske CSS-ens verden.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Hvordan vil du endre siden for å få den til å se bedre ut? Hvorfor ikke prøve å bruke din favorittskrifttype, farge, osv? Bruk gjerne <a href="http://www.w3schools.com/css/">w3schools.com/css</a> for å utforske CSS-ens verden.</label></p>
 </li>
-<li>
-<p>Hvis du er tidlig ferdig. Gå tilbake og legg på en stil i HTML dokumentet fra forrige leksjon.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Hvis du er tidlig ferdig. Gå tilbake og legg på en stil i HTML dokumentet fra forrige leksjon.</label></p>
 </li>
-<li>
-<p>Forresten, visste du at egenskapene for bakgrunn, ikke bare lar deg endre farger, men også legge til et bilde? (<a href="http://www.w3schools.com/cssref/pr_background-image.asp">Hint: w3schools.com/css - background-image</a>)</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Forresten, visste du at egenskapene for bakgrunn, ikke bare lar deg endre farger, men også legge til et bilde? (<a href="http://www.w3schools.com/cssref/pr_background-image.asp">Hint: w3schools.com/css - background-image</a>)</label></p>
 </li>
 </ul>
 </section>

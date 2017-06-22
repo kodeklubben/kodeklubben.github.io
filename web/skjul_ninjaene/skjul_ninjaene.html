@@ -15,33 +15,33 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-1-mot-ninjaene">
 <h1 class="activity" id="steg-1-mot-ninjaene">Steg 1: Møt ninjaene</h1>
-<ul>
-<li>
-<p>Last ned <a href="ninja.zip">ninja.zip</a> og pakk ut filene på din datamaskin.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Last ned <a href="ninja.zip">ninja.zip</a> og pakk ut filene på din datamaskin.</label></p>
 </li>
-<li>
-<p>Åpne filen kalt <code>ninjaer.html</code> i en teksteditor.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Åpne filen kalt <code>ninjaer.html</code> i en teksteditor.</label></p>
 </li>
-<li>
-<p>Åpne <code>ninjaer.html</code> i nettleseren for å se hvordan den ser ut.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Åpne <code>ninjaer.html</code> i nettleseren for å se hvordan den ser ut.</label></p>
 </li>
-<li>
-<p>Les gjennom koden. Kan du gjette hvilken del av koden som hører til delene i gatene? Legg merke til av vi bruker to språk her: <code>HTML</code> for å legge til elementene på siden, og <code>CSS</code> plassert mellom <code>&lt;style&gt;</code>-taggene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Les gjennom koden. Kan du gjette hvilken del av koden som hører til delene i gatene? Legg merke til av vi bruker to språk her: <code>HTML</code> for å legge til elementene på siden, og <code>CSS</code> plassert mellom <code>&lt;style&gt;</code>-taggene.</label></p>
 </li>
-<li>
-<p>Elementene vi skal leke med er bildene, <code>&lt;img&gt;</code>-taggen. Vi kan ta kontroll over deres plassering ved å bruke CSS.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Elementene vi skal leke med er bildene, <code>&lt;img&gt;</code>-taggen. Vi kan ta kontroll over deres plassering ved å bruke CSS.</label></p>
 </li>
 </ul>
 <p><strong>Kom igjen – La oss flytte en ninja!</strong></p>
 <p>Alle ninjaene har fått eget navn ved bruk av <code>id</code> attributtet. La oss flytte &quot;Alex The Ninja&quot; først.</p>
-<ul>
-<li>Finn Alex sin CSS-stil.</li>
-<li>Endre verdien på <code>left</code>(venstre) til <code>100px</code> og <code>top</code> til <code>320px</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Finn Alex sin CSS-stil.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Endre verdien på <code>left</code>(venstre) til <code>100px</code> og <code>top</code> til <code>320px</code>.</label></li>
 </ul>
 <p>Når <code>position</code> egenskapene er satt til <code>absolute</code> menes det at vi vil beskrive posisjonen i relasjon til foreldreelementet til ninjaen – I dette eksempelet <code>&lt;div&gt;</code> med <code>id</code> <code>gatehjoerne</code>.</p>
 <p><code>px</code> betyr <code>pixel</code>(punkter). <code>left</code> beskriver hvor langt fra venstrekanten ninjaen skal plasseres (antall pixler) og <code>top</code> forteller nettleseren hvor langt ninjaen skal flyttes ned fra toppen.</p>
-<ul>
-<li>Endre <code>left</code> til <code>right</code> og <code>top</code> til <code>bottom</code>. Nå vil koden fortelle nettleseren at den skal plassere ninjaen <code>100px</code> fra den høyre kanten og <code>320px</code> fra bunnen.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Endre <code>left</code> til <code>right</code> og <code>top</code> til <code>bottom</code>. Nå vil koden fortelle nettleseren at den skal plassere ninjaen <code>100px</code> fra den høyre kanten og <code>320px</code> fra bunnen.</label></li>
 </ul>
 <p>Pixel er en måleenhet som vi bruker til å forklare hvor stort et element skal være eller hvor det skal plasseres på siden. Hvis du endrer <code>right</code> fra <code>100px</code> til <code>101px</code>, så ser vi at den blir ikke flyttet veldig langt. Derfor gjør <code>pixler</code> det enklere for oss å designe nettsiden så detaljert vi vil.</p>
 </section>
@@ -54,12 +54,12 @@ function relative (url) {
   }
 </code></pre>
 <p><code>100%</code> beskriver hele bredden som er tilgjengelig på skjermen. Når vi plasserer ninjaer og andre objekter i forhold til <code>gatehjornet</code>, som er 600 pixler bred, så vil 100% være lik <code>600px</code> i vårt eksempel. Hvis vi hadde laget et større gatehjørne, f.eks. 800 pixler bredt, ville <code>100%</code> bety en bredde på <code>800px</code>. Avhengig av sammenhengen så kan størrelsen beskrevet i prosenter(<code>%</code>) har forskjellige betydninger.</p>
-<ul>
-<li>
-<p>Finn <code>soppelkasse</code>-elementet i CSSen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Finn <code>soppelkasse</code>-elementet i CSSen.</label></p>
 </li>
-<li>
-<p>Bytt ut verdiene <code>190px</code> og <code>460px</code> i <code>soppelkasse</code>-elementet med prosenter sånn at søppelkassen står på ca. samme sted som den gjør nå. Trenger ikke være helt nøyaktig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Bytt ut verdiene <code>190px</code> og <code>460px</code> i <code>soppelkasse</code>-elementet med prosenter sånn at søppelkassen står på ca. samme sted som den gjør nå. Trenger ikke være helt nøyaktig.</label></p>
 </li>
 </ul>
 </section>
@@ -67,25 +67,25 @@ function relative (url) {
 <h1 class="activity" id="steg-3-en-storrelsetype-til">Steg 3:  En størrelsetype til</h1>
 <p>Som om vi ikke har nok størrelse-typer nå, skal vi likevel prøve en til! Du vet nå hvordan man skal bruke pixler (<code>px</code>) og prosent(<code>%</code>). La oss nå prøve <code>em</code>.</p>
 <p><code>Em</code> er en måleenhet som vi låner fra typografi, som er handler om utsende på bokstaver og tekst. Én <code>em</code> er det samme som den gjeldende skriftstørrelsen. Legg merke til at på toppen av CSS-en, definerte vi <code>font-size</code> i <code>body</code>-taggen som <code>20px</code>, så én <code>em</code> vil være <code>20px</code>.</p>
-<ul>
-<li>La oss teste dette ut, finn <code>body</code> i CSSen. Endre <code>font-size</code> verdien til <code>30px</code>. Hva skjedde?</li>
-<li>Studer koden og får å finne elementene som skal flytte på seg når <code>font-size</code> endres.</li>
-<li>Flytter de riktige elementene på seg?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> La oss teste dette ut, finn <code>body</code> i CSSen. Endre <code>font-size</code> verdien til <code>30px</code>. Hva skjedde?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Studer koden og får å finne elementene som skal flytte på seg når <code>font-size</code> endres.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Flytter de riktige elementene på seg?</label></li>
 </ul>
 <p>Som dere ser når vi endre <code>em</code> til 30 pixler så endrer bredden og høyden seg til 30 pixels bred og 30 pixels høy på alle elementer som bruker denne verdien.</p>
 </section>
 <section class="activity" id="steg-4-flytt-figurer-fremover">
 <h1 class="activity" id="steg-4-flytt-figurer-fremover">Steg 4: Flytt figurer fremover</h1>
 <p>Før vi skal begynne å gjemme ninjaene, skal vi studere én ting til: <code>z-index</code>.</p>
-<ul>
-<li>Let gjennom CSS-en og se om du finner <code>z-index</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Let gjennom CSS-en og se om du finner <code>z-index</code>.</label></li>
 </ul>
 <p><code>Z-index</code> finner du to steder: i klassen <code>.ninja</code> og i id-en <code>#andre_gjenstander</code>. <code>Z-index</code> bestemmer hvilke element som ligger fremst på siden, altså hvilke element som skal ligge oppå de andre. Vi ser at <code>#andre_gjenstander</code> har en verdi på 200 og <code>.ninja</code> har en verdi på 1. Dette betyr at ninjaene vil legge seg bak elementene med høyere <code>z-index</code>-verdi.</p>
 <p>Her er et bilde som beskriver <code>z-index</code>:</p>
 <p><img src="zindex1.png" alt="z-index" width="30%"></p>
-<ul>
-<li>Prøv å endre på <code>z-index</code>-verdien og se hva som skjer</li>
-<li>Legg til <code>z-index</code> på et element og se om du kan få elementet til å legge seg bak eller foran et annet</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Prøv å endre på <code>z-index</code>-verdien og se hva som skjer</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Legg til <code>z-index</code> på et element og se om du kan få elementet til å legge seg bak eller foran et annet</label></li>
 </ul>
 <p><strong>Eksempel:</strong></p>
 <pre><code class="css">  <span class="hljs-selector-id">#andre_objekter</span>{
@@ -96,24 +96,24 @@ function relative (url) {
     <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
   }
 </code></pre>
-<ul>
-<li>Bytt tilbake og forbered deg på redde ninjaene!</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Bytt tilbake og forbered deg på redde ninjaene!</label></li>
 </ul>
 </section>
 <section class="activity" id="steg-5-fort-deg-skjul-ninjaene">
 <h1 class="activity" id="steg-5-fort-deg-skjul-ninjaene">Steg 5: Fort deg, skjul ninjaene! </h1>
-<ul>
-<li>Se gjennom koden, finn ut hvilke elementer du kan hjemme ninjaene bak!</li>
-<li>Bruk det du har lært til å gjemme ninjaene</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Se gjennom koden, finn ut hvilke elementer du kan hjemme ninjaene bak!</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Bruk det du har lært til å gjemme ninjaene</label></li>
 </ul>
 <p>Her finnes det ingen fasit, så du må legge til og endre kode sånn at du får gjemt ninjaene! Sitter du fast bør du enten lese oppgaven på nytt eller prøve å finne hjelp på <a href="http://www.w3schools.com/css/default.asp">w3schools.com</a>. Det ligger også et eksempel nederst i denne oppgaven.</p>
 <p><strong>LYKKE TIL!</strong></p>
 <section class="try" id="ting-du-kan-prove">
 <h2 class="try" id="ting-du-kan-prove">Ting du kan prøve:</h2>
-<ul>
-<li>Legg gjerne til <code>z-index</code> eller endre <code>position</code> i CSS-en på de elementene du føler trenger det</li>
-<li>Kan du finne ut hvordan du kan få ninjaene til å komme foran noen av gateobjektene? Hva skjer om du kopierer <code>&lt;img&gt;</code>-taggen for ninjaen etter <code>&lt;img&gt;</code>-taggen som viser objektet?</li>
-<li>Klarer du å legge til flere objekter på scenen? Du kan legge til bilder fra datamaskinen din, eller finne noen på internett.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Legg gjerne til <code>z-index</code> eller endre <code>position</code> i CSS-en på de elementene du føler trenger det</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Kan du finne ut hvordan du kan få ninjaene til å komme foran noen av gateobjektene? Hva skjer om du kopierer <code>&lt;img&gt;</code>-taggen for ninjaen etter <code>&lt;img&gt;</code>-taggen som viser objektet?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Klarer du å legge til flere objekter på scenen? Du kan legge til bilder fra datamaskinen din, eller finne noen på internett.</label></li>
 </ul>
 </section>
 <section>

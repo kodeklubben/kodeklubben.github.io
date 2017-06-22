@@ -16,18 +16,18 @@ function relative (url) {
 <p>I dette spillet skal vi lage et grafisk brukergrensesnitt (et GUI). Til dette bruker vi et bibliotek som heter <code>tkinter</code>. Vi trenger også hjelp for å generere tilfeldige tall.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne IDLE, og lag en ny fil.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Åpne IDLE, og lag en ny fil.</label></p>
 </li>
-<li>
-<p>La oss importere bibliotekene. Skriv inn følgende kode:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> La oss importere bibliotekene. Skriv inn følgende kode:</label></p>
 <pre><code class="python"><span class="hljs-keyword">import</span> tkinter
 <span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint
 </code></pre>
 </li>
-<li>
-<p>Vi vil etterhvert bruke boxtaver som <em>æøå</em>. For å gjøre dette må vi legge til noe øverst i koden vår. Gjør om koden din slik at den ser slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Vi vil etterhvert bruke boxtaver som <em>æøå</em>. For å gjøre dette må vi legge til noe øverst i koden vår. Gjør om koden din slik at den ser slik ut:</label></p>
 <pre><code class="python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
@@ -47,9 +47,9 @@ function relative (url) {
 <p>Nå skal vi begynne på GUI. Les kommentarene for å forstå hva som skjer.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi skal begynne med å lage hovedvinduet. Dette kaller vi <code>root</code> Vi tilkaller funksjoner fra <code>tkinter</code> biblioteket for å hjelpe oss med dette. Legg til dette nederst i koden:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Vi skal begynne med å lage hovedvinduet. Dette kaller vi <code>root</code> Vi tilkaller funksjoner fra <code>tkinter</code> biblioteket for å hjelpe oss med dette. Legg til dette nederst i koden:</label></p>
 <pre><code class="python">root = tkinter.Tk()
 
 root.title(<span class="hljs-string">"Fargespill"</span>)
@@ -58,8 +58,8 @@ root.geometry(<span class="hljs-string">"475x300"</span>)
 root.mainloop()
 </code></pre>
 </li>
-<li>
-<p>Nå har vi laget hovedvinduet. La oss legge til noen felter med tekst. Vi kommer tilbake til hva disse skal fylles med etterhvert, nå skal vi bare definere områdene. Gjør om koden din slik at den ser ut som dette:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Nå har vi laget hovedvinduet. La oss legge til noen felter med tekst. Vi kommer tilbake til hva disse skal fylles med etterhvert, nå skal vi bare definere områdene. Gjør om koden din slik at den ser ut som dette:</label></p>
 <pre><code class="python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
@@ -98,10 +98,10 @@ root.mainloop()
 </section>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
-<ul>
-<li>Kjør koden</li>
-<li>Viser den et vindu?</li>
-<li>Det er fortsatt ganske lite som skjer, la oss gå videre.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Kjør koden</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Viser den et vindu?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Det er fortsatt ganske lite som skjer, la oss gå videre.</label></li>
 </ul>
 </section>
 </section>
@@ -109,9 +109,9 @@ root.mainloop()
 <h1 class="activity" id="steg-3-vi-lager-tidskontroll">Steg 3: Vi lager tidskontroll</h1>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi skal nå få programmet vårt til å telle 30 sekunder. Vi lager en funksjon <code>countdown()</code> som tar seg av dette. Legg til dette i programmet ditt:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi skal nå få programmet vårt til å telle 30 sekunder. Vi lager en funksjon <code>countdown()</code> som tar seg av dette. Legg til dette i programmet ditt:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">countdown</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">global</span> time_left
 
@@ -128,8 +128,8 @@ root.mainloop()
         box.pack_forget()
 </code></pre>
 </li>
-<li>
-<p>Denne funksjonen jobber på en global variabel <code>time_left</code>, vi må lage den. Programmet ditt skal nå se slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Denne funksjonen jobber på en global variabel <code>time_left</code>, vi må lage den. Programmet ditt skal nå se slik ut:</label></p>
 <pre><code class="python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
@@ -183,56 +183,56 @@ root.mainloop()
 <p>Nå må vi definere fargene som programmet skal bruke.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Fargene legger vi til som en liste. Legg til denne koden under <code>from random import randint</code></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Fargene legger vi til som en liste. Legg til denne koden under <code>from random import randint</code></label></p>
 <pre><code class="python">colours_eng = [<span class="hljs-string">'Red'</span>, <span class="hljs-string">'Blue'</span>, <span class="hljs-string">'Green'</span>, <span class="hljs-string">'Pink'</span>, <span class="hljs-string">'Black'</span>,
                <span class="hljs-string">'Yellow'</span>, <span class="hljs-string">'Orange'</span>, <span class="hljs-string">'Purple'</span>, <span class="hljs-string">'Brown'</span>]
 </code></pre>
 </li>
-<li>
-<p>Siden vi vil at programmet vårt skal skrive ut de norske ordene, lager vi en liste til, med de norske navnene. Legg til dette rett under den andre listen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Siden vi vil at programmet vårt skal skrive ut de norske ordene, lager vi en liste til, med de norske navnene. Legg til dette rett under den andre listen.</label></p>
 <pre><code class="python">colours = [<span class="hljs-string">'Rød'</span>, <span class="hljs-string">'Blå'</span>, <span class="hljs-string">'Grønn'</span>, <span class="hljs-string">'Rosa'</span>, <span class="hljs-string">'Svart'</span>,
            <span class="hljs-string">'Gul'</span>, <span class="hljs-string">'Oransje'</span>, <span class="hljs-string">'Lilla'</span>, <span class="hljs-string">'Brun'</span>]
 </code></pre>
 </li>
-<li>
-<p>Vi må også lage en variabel for å holde orden på hvor mange poeng spilleren har. Samt en variabel for å holde nummeret på  fargene som skal vises. Disse settes til tilfeldig tall etterpå. Legg til disse over <code>time_left</code>-variabelen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Vi må også lage en variabel for å holde orden på hvor mange poeng spilleren har. Samt en variabel for å holde nummeret på  fargene som skal vises. Disse settes til tilfeldig tall etterpå. Legg til disse over <code>time_left</code>-variabelen.</label></p>
 <pre><code class="python"><span class="hljs-comment"># Brukes til å velge tilfeldig farge</span>
 colour = <span class="hljs-number">0</span>
 points = <span class="hljs-number">0</span>
 
 </code></pre>
 </li>
-<li>
-<p>Nå må vi lage funksjonen som genererer en tilfeldig farge og viser denne til spilleren. Her er det mye som skjer, så vi skal ta det stegvis. Først definerer vi funksjonen og legger til variablene. Legg denne funksjonen over <code>countdown()</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Nå må vi lage funksjonen som genererer en tilfeldig farge og viser denne til spilleren. Her er det mye som skjer, så vi skal ta det stegvis. Først definerer vi funksjonen og legger til variablene. Legg denne funksjonen over <code>countdown()</code>:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-comment"># Henter inn globale variabler:</span>
     <span class="hljs-keyword">global</span> points
     <span class="hljs-keyword">global</span> colour
 </code></pre>
 </li>
-<li>
-<p>Så skal vi sette tekstboxen brukeren kan skrive i aktiv hvis det er tid igjen på klokka. Legg til denne inne i <code>next_color()</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Så skal vi sette tekstboxen brukeren kan skrive i aktiv hvis det er tid igjen på klokka. Legg til denne inne i <code>next_color()</code>:</label></p>
 <pre><code class="python"><span class="hljs-keyword">if</span> time_left &gt; <span class="hljs-number">0</span>:
     box.focus_set()
 </code></pre>
 </li>
-<li>
-<p>Så vil vi sammenligne det brukeren skriver inn i boxen med den norske fargelisten vår. <code>.lower()</code> gjør om alt til små bokstaver, slik at man ikke får feil om man skriver &quot;Rød&quot; i steden for &quot;rød&quot;. Legg til dette under:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Så vil vi sammenligne det brukeren skriver inn i boxen med den norske fargelisten vår. <code>.lower()</code> gjør om alt til små bokstaver, slik at man ikke får feil om man skriver &quot;Rød&quot; i steden for &quot;rød&quot;. Legg til dette under:</label></p>
 <pre><code class="python"><span class="hljs-comment"># Hvis det spilleren skrev er riktig farge.</span>
 <span class="hljs-keyword">if</span> box.get().lower() == colours[colour].lower():
     <span class="hljs-comment"># Pluss på ett points</span>
     points = points + <span class="hljs-number">1</span>
 </code></pre>
 </li>
-<li>
-<p>Nå vil vi slette det som brukeren skrev inn. Slik at alt er klart for neste runde. Legg til dette under <code>points = points + 1</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Nå vil vi slette det som brukeren skrev inn. Slik at alt er klart for neste runde. Legg til dette under <code>points = points + 1</code>:</label></p>
 <pre><code class="python">box.delete(<span class="hljs-number">0</span>, tkinter.END)
 </code></pre>
 </li>
-<li>
-<p>Nå skal vi få tkinter til å displaye farge og tekst. Til dette bruker vi <code>randint()</code> funksjonen. Den lager et tilfeldig tall mellom to ytterpunkter. Lag denne under <code>box.delete(0, tkinter.END)</code></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Nå skal vi få tkinter til å displaye farge og tekst. Til dette bruker vi <code>randint()</code> funksjonen. Den lager et tilfeldig tall mellom to ytterpunkter. Lag denne under <code>box.delete(0, tkinter.END)</code></label></p>
 <pre><code class="python"><span class="hljs-comment"># Lager tilfeldig tall mellom 0 og 8</span>
 colour = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
 
@@ -240,8 +240,8 @@ colour = randint(<span class="hljs-number">0</span>, len(colours)<span class="hl
 text = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs-number">-1</span>)
 </code></pre>
 </li>
-<li>
-<p>Nå gjenstår det bare å vise teksten og fargen i vinduet. Vi oppdaterer feltene, og legger til en poenglabel.  Funksjonen skal nå se slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Nå gjenstår det bare å vise teksten og fargen i vinduet. Vi oppdaterer feltene, og legger til en poenglabel.  Funksjonen skal nå se slik ut:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">next_color</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">global</span> points
     <span class="hljs-keyword">global</span> colour
@@ -266,9 +266,9 @@ text = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs
 </section>
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
-<ul>
-<li>Kjør koden, får du noen feilmeldinger?</li>
-<li>Hvis du får feilmeldinger prøv å se etter hvor de er og fiks de.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Kjør koden, får du noen feilmeldinger?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Hvis du får feilmeldinger prøv å se etter hvor de er og fiks de.</label></li>
 </ul>
 </section>
 </section>
@@ -277,25 +277,25 @@ text = randint(<span class="hljs-number">0</span>, len(colours)<span class="hljs
 <p>Det skjer fortsatt lite i spillet vårt, men det er fordi vi ikke har startet selve spilldelen. Det skal vi gjøre nå!</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi lager en funksjon som starter spillet. Legg til denne funksjonen i programmet:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Vi lager en funksjon som starter spillet. Legg til denne funksjonen i programmet:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_game</span><span class="hljs-params">(event)</span>:</span>
     <span class="hljs-keyword">if</span> time_left == <span class="hljs-number">30</span>:
         countdown()
     next_color()
 </code></pre>
 </li>
-<li>
-<p>Siste steg er å kjøre denne funksjonen når spilleren trykker <em>enter</em>. Legg til dette rett over <code>root.mainloop</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Siste steg er å kjøre denne funksjonen når spilleren trykker <em>enter</em>. Legg til dette rett over <code>root.mainloop</code>:</label></p>
 <pre><code class="python"><span class="hljs-comment"># Kjører funksjonen start_game() når enter trykkes</span>
 root.bind(<span class="hljs-string">'&lt;Return&gt;'</span>, start_game)
 box.pack()
 box.focus_set()
 </code></pre>
 </li>
-<li>
-<p>Programmet ditt skal nå se slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Programmet ditt skal nå se slik ut:</label></p>
 <pre><code class="python"><span class="hljs-comment">#!/usr/bin/python</span>
 <span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
 
@@ -388,11 +388,11 @@ root.mainloop()
 </section>
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
-<ul>
-<li>Starter spillet og countdownen når du trykker enter?</li>
-<li>Får du ny farge etter du har skrevet inn svar?</li>
-<li>Får du +1 points når du skriver riktig farge på ordet?</li>
-<li>Slutter programmet etter 30 sek?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Starter spillet og countdownen når du trykker enter?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Får du ny farge etter du har skrevet inn svar?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Får du +1 points når du skriver riktig farge på ordet?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Slutter programmet etter 30 sek?</label></li>
 </ul>
 </section>
 </section>

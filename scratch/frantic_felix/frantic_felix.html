@@ -49,27 +49,27 @@ oppdage ting. Vi bruker <strong>svart</strong> for gulvet og <strong>grønn</str
 hinder. Vi bruker <strong>rød</strong> for berøringssensorene.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p><strong>Åpne et nytt prosjekt</strong>. Legg til <strong>frantic-felix/testlevel</strong>
-bakgrunnen og slett den hvite <strong>background1</strong>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> <strong>Åpne et nytt prosjekt</strong>. Legg til <strong>frantic-felix/testlevel</strong>
+bakgrunnen og slett den hvite <strong>background1</strong>.</label></p>
 </li>
-<li>
-<p><strong>Endre navn på figur Sprite1 til Felix</strong>. Kontroller at drakten bare kan flippe venstre-høyre.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> <strong>Endre navn på figur Sprite1 til Felix</strong>. Kontroller at drakten bare kan flippe venstre-høyre.</label></p>
 </li>
-<li>
-<p>Lag fire nye figurer fra bildene (be om hjelp hvis du ikke har
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lag fire nye figurer fra bildene (be om hjelp hvis du ikke har
 disse) <strong>frantic-felix/top</strong>, <strong>frantic-felix/bottom</strong>,
 <strong>frantic-felix/left</strong>, og <strong>frantic-felix/right</strong>. Disse figurene
 skal bli berøringssensor. Gi de nye figurene navnene <strong>topp</strong>,
 <strong>bunn</strong>, <strong>venstre</strong>, og <strong>høyre</strong>. Kontroller at draktene deres
-ikke kan flippes eller roteres.</p>
+ikke kan flippes eller roteres.</label></p>
 </li>
-<li>
-<p>Lag fire variabler (for hver av figurene): <code class="blockdata">blokkert topp</code>, <code class="blockdata">blokkert bunn</code>, <code class="blockdata">blokkert høyre</code> og <code class="blockdata">blokkert venstre</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lag fire variabler (for hver av figurene): <code class="blockdata">blokkert topp</code>, <code class="blockdata">blokkert bunn</code>, <code class="blockdata">blokkert høyre</code> og <code class="blockdata">blokkert venstre</code>.</label></p>
 </li>
-<li>
-<p>Lag dette skriptet for hver av sensorene:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Lag dette skriptet for hver av sensorene:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes // eksempel for høyre sensor
 for alltid
   gå til [Felix v]
@@ -81,10 +81,10 @@ for alltid
 slutt
 </code></pre>
 </li>
-<li>
-<p>Endre variablene for hver av sensorene. Den nederste sensoren
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Endre variablene for hver av sensorene. Den nederste sensoren
 trenger en <strong>eller</strong> kloss slik at den setter <strong>blokkert bunn</strong> hvis
-den berører grønn eller svart.</p>
+den berører grønn eller svart.</label></p>
 </li>
 </ul>
 <p><strong>Tips</strong>: Det er enklere å velge fargene i én figur, for så å kopiere
@@ -106,32 +106,32 @@ gjennom plattformene og grønne hindre. Det skal vi fikse nå.</p>
 <h1 class="activity" id="steg-2-bevegelse-gulv-og-falling">Steg 2: Bevegelse, gulv og falling</h1>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Neste steg er å få Felix til å gå. Vi bruker <strong>venstre</strong> og <strong>høre
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Neste steg er å få Felix til å gå. Vi bruker <strong>venstre</strong> og <strong>høre
 piltast</strong> for å flytte ham til venstre og høyre. Hvis han ikke står
 på et gulv, faller han ned (vi fikser hopping etterpå). Vi vil at
 når man trykker på venstre piltast, så skal Felix peke til venstre
 og flytter seg litt. Men vi vil ikke at han skal flytte seg hvis det
-er en hindring i veien.</p>
+er en hindring i veien.</label></p>
 </li>
-<li>
-<p>Vi kunne brukt <code class="blockevents">når tast trykkes</code> for å flytte Felix,
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi kunne brukt <code class="blockevents">når tast trykkes</code> for å flytte Felix,
 men det gir en hakkete bevegelse. Det blir en mykere bevegelse hvis
 du bruker <code class="blockcontrol">hvis</code><code class="blocksensing">tast pil venstre trykket?</code>-klosser i en <code class="blockcontrol">for alltid</code>-løkke.  Berøringssensorer betyr at vi må
 teste <strong>blokkert venstre</strong> variabelen i <code class="blockcontrol">hvis</code>, og
 bruke en <strong>og kloss</strong> slik at Felix bare beveger seg til venstre når
 man trykker på en tast og <strong>blokkert venstre</strong> er 0. Vi må gjøre
-tilsvarende for bevegelse til høyre.</p>
+tilsvarende for bevegelse til høyre.</label></p>
 </li>
-<li>
-<p>Vi kunne animere Felix sine bein i samme kloss, men da beveger de
-seg for raskt. Gjør animasjonen i en egen <code class="blockcontrol">for alltid</code>-løkke under en annen <code class="blockevents">når grønt flagg klikkes</code>-hatt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi kunne animere Felix sine bein i samme kloss, men da beveger de
+seg for raskt. Gjør animasjonen i en egen <code class="blockcontrol">for alltid</code>-løkke under en annen <code class="blockevents">når grønt flagg klikkes</code>-hatt.</label></p>
 </li>
-<li>
-<p>Det siste vi må gjøre er å ordne <strong>falling</strong>. Hvis Felix ikke står
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Det siste vi må gjøre er å ordne <strong>falling</strong>. Hvis Felix ikke står
 på fast grunn vil vi at han skal falle ned. Det ordner vi med en
-<code class="blockcontrol">for alltid</code>-løkke under en <code class="blockevents">når grønt flagg klikkes</code>-hatt.</p>
+<code class="blockcontrol">for alltid</code>-løkke under en <code class="blockevents">når grønt flagg klikkes</code>-hatt.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes // håndter flytting
 for alltid
     hvis &lt; &lt;tast [pil venstre v] trykket?&gt; og ((blokkert venstre)=(0))&gt;
@@ -169,12 +169,12 @@ grønne flagget</strong>. Hvis Felix hopper til muspekeren, må du fjerne det
 skriptet!  Du bør kunne bruke venstre og høyre knapper for å få Felix
 til å gå fra side til side. Hvis han ikke står på gulvet, bør han
 falle sakte nedover.</p>
-<ul>
-<li>Vi vil også at berøringssensorene ikke skal vises. Det er ikke mulig
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Vi vil også at berøringssensorene ikke skal vises. Det er ikke mulig
 å bruke en skjult blokk, for da vil ingen berøringer bli
 oppdaget. Istedet, legg til en <code class="blocklooks">sett gjennomsiktig effekt til 100</code>-kloss rett under den grønn flag hatt'en i hver
 kollisjonssensor. Dette gjør figuren gjennomsiktig, uten å å skjule
-den.</li>
+den.</label></li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-ditt-2">
@@ -211,41 +211,41 @@ blir litt for enkelt hvis Felix kan hoppe fra løse luften.</p>
 </ul>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Det som gjenstår nå, er å få Felix til å hoppe. La oss bruke
-<strong>mellomromstasten</strong> for å få Felix til å hoppe.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Det som gjenstår nå, er å få Felix til å hoppe. La oss bruke
+<strong>mellomromstasten</strong> for å få Felix til å hoppe.</label></p>
 </li>
-<li>
-<p>For å kontrollere hoppet, bruker vi en ny variabel,
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> For å kontrollere hoppet, bruker vi en ny variabel,
 <code class="blockdata">hopphøyde</code>. Hvis denne er høyere enn 0, er Felix på vei
-opp. Hvis den er 0, faller han (eller har falt), som beskrevet over.</p>
+opp. Hvis den er 0, faller han (eller har falt), som beskrevet over.</label></p>
 </li>
-<li>
-<p>Vi vil at Felix skal hoppe opp til <strong>100 pixler</strong>. Legg til en ny
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Vi vil at Felix skal hoppe opp til <strong>100 pixler</strong>. Legg til en ny
 <code class="blockcontrol">hvis</code>-kloss inni <code class="blockcontrol">for alltid</code>-klossen
 som håndterer tastetrykk. Hvis vi trykker <strong>mellomromstasten</strong> og
 Felix står på gulvet (variablen <code class="blockdata">blokkert under</code> er satt
-til 1, så setter vi <code class="blockdata">hopphøyde</code> til 100.</p>
+til 1, så setter vi <code class="blockdata">hopphøyde</code> til 100.</label></p>
 </li>
-<li>
-<p>Vi må endre falle-skriptet. I <code class="blockcontrol">for alltid</code>, trenger
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi må endre falle-skriptet. I <code class="blockcontrol">for alltid</code>, trenger
 vi en <code class="blockcontrol">hvis-ellers</code>-kloss som oppdater hvis Felix
 hopper opp eller ikke. Kravet for denne
 <code class="blockcontrol">hvis-ellers</code>-klossen er at hvis
 <code class="blockdata">hopphøyde</code> er <strong>større enn 0</strong>. Den eksisterende faller
 ned <code class="blockcontrol">hvis</code>-klossen går inn i ellers-delen av den nye
-<code class="blockcontrol">hvis-ellers</code>-klossen.</p>
+<code class="blockcontrol">hvis-ellers</code>-klossen.</label></p>
 </li>
-<li>
-<p>Når vi vet at Felix hopper opp, må vi sjekke om hodet hans treffer
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Når vi vet at Felix hopper opp, må vi sjekke om hodet hans treffer
 noe. Hvis <code class="blockdata">blokkert topp</code> er <strong>1</strong>, sett
 <code class="blockdata">hopphøyde</code> til <strong>0</strong>. (Dette gjør at Felix ikke kan
 hoppe inn i hindringer). <strong>Ellers, flytt Felix opp 10 og reduser
-hopphøyde med 10.</strong></p>
+hopphøyde med 10.</strong></label></p>
 </li>
-<li>
-<p>Du ender opp med noe tilsvarende dette:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Du ender opp med noe tilsvarende dette:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes // håndtere falling
 for alltid
   hvis &lt;(hopphøyde)=(0)&gt;
@@ -281,32 +281,32 @@ få han til å klare ett nivå</strong>.</p>
 <p>Vi plasserer tre nøkler rundt i hulen. Felix kan plukke dem opp ved å
 gå til dem. Når han har samlet alle tre, kan han klatre til en
 redningskapsel og redde seg selv ut av hulen.</p>
-<ul>
-<li>
-<p>Vi lager en ny variabel, <code class="blockdata">nøkler igjen</code>, som holder
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Vi lager en ny variabel, <code class="blockdata">nøkler igjen</code>, som holder
 orden på hvor mange nøkler som gjenstår. Et nytt skript på
 <strong>scenen</strong> skal sette denne til <strong>3</strong> når det <strong>grønne flagget</strong>
-klikkes.</p>
+klikkes.</label></p>
 </li>
-<li>
-<p>Både nøklene og redningskapselen må være figurer. (Bruk
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Både nøklene og redningskapselen må være figurer. (Bruk
 <strong>frantic-felix/key</strong> for nøklene og <strong>frantic-felix/escape-pod</strong>
-for kapselen.)</p>
+for kapselen.)</label></p>
 </li>
-<li>
-<p>Hver nøkkel trenger <strong>to skript</strong>: det første plasserer nøklen på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Hver nøkkel trenger <strong>to skript</strong>: det første plasserer nøklen på
 riktig sted, med størrelse og vinkel, og en <code class="blockcontrol">for alltid</code>-løkke for å endre fargen (som gjør det
 enklere å se den på skjermen). Det andre skriptet er en <code class="blockcontrol">for alltid</code>-løkke som venter til Felix kommer bort til
 nøkkelen. Når dette skjer, skjuler skiptet nøkkelen og reduserer
-antall nøkler.</p>
+antall nøkler.</label></p>
 </li>
-<li>
-<p>Redningskapselen er et litt vanskeligere skript. Den bruker en <code class="blockcontrol">for alltid</code>-løkke for å vente på at <code class="blockdata">nøkler igjen</code> blir <strong>0</strong>. Med en gang dette skjer, begynner
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Redningskapselen er et litt vanskeligere skript. Den bruker en <code class="blockcontrol">for alltid</code>-løkke for å vente på at <code class="blockdata">nøkler igjen</code> blir <strong>0</strong>. Med en gang dette skjer, begynner
 kapselen å blinke (for å vise spilleren at de kan komme seg ut). Så
 kan vi bruke en annen <code class="blockcontrol">hvis</code> for å oppdage når Felix
 berører den blinkende redningskapselen. Så snart han gjør det,
 sender kapselen en <code>seier</code>-melding og sier “Du vant!”. Felix svarer
-på meldingen ved å gjemme seg.</p>
+på meldingen ved å gjemme seg.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x:(220) y:(-125)
 for alltid
@@ -336,21 +336,21 @@ er farlige ting i bakgrunnen.</p>
 sti.</strong></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p><strong>Lag en ny figur</strong>, bruk hvilken som helst drakt. Den bør være
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> <strong>Lag en ny figur</strong>, bruk hvilken som helst drakt. Den bør være
 samme størrelse som Felix (Vi brukte <strong>things/flower-vase</strong> drakt,
 og gjorde den fire steg mindre). Slemmingen trenger bare et enkelt
-skript som beveger den og oppdager om den berører Felix.</p>
+skript som beveger den og oppdager om den berører Felix.</label></p>
 </li>
-<li>
-<p>Lag tre <code class="blockcontrol">hvis</code>-klosser inni en <code class="blockcontrol">for alltid</code>-løkke. Den første sjekker om en slemming
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Lag tre <code class="blockcontrol">hvis</code>-klosser inni en <code class="blockcontrol">for alltid</code>-løkke. Den første sjekker om en slemming
 berører Felix; hvis den gjør det, sender den en <code>tap</code>-melding. De to
 andre <code class="blockcontrol">hvis</code>-klossene sjekker om slemmingen har nådd
 slutten av stien; hvis den har det, snur slemmingen. Tilslutt, tar
 slemmingen to steg. (Ved å bruke <code class="blockmotion">gå</code> isteden for
 <code class="blockmotion">gli</code> -klosser blir det enklere å kontrollere hvor
-raskt slemmingen går.)</p>
+raskt slemmingen går.)</label></p>
 <p><strong>Vi trenger ikke å bruke kollisjonssensor her, da vi ikke bryr
 oss om på hvilken side Felix berører slemmingen.</strong></p>
 <pre><code class="blocks">når grønt flagg klikkes
@@ -370,10 +370,10 @@ for alltid
 slutt
 </code></pre>
 </li>
-<li>
-<p>Legg skript til både Felix og redningskapselen slik at den svarer på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Legg skript til både Felix og redningskapselen slik at den svarer på
 <code>tap</code>-meldingen. Felix skal bare skjule seg selv.  Kapselen skal si
-&quot;Du tapte!&quot;.</p>
+&quot;Du tapte!&quot;.</label></p>
 </li>
 </ul>
 </section>
@@ -383,12 +383,12 @@ slutt
 snur ved kanten? Hva skjer når Felix går inn i den? Hva skjer hvis
 Felix hopper på den, fra oversiden eller undersiden? Forsvinner Felix?
 Sier kapselen ifra når du har tapt? Kan du forstatt vinne spillet?</p>
-<ul>
-<li>
-<p><strong>Neste, farlige ting!</strong> La oss si at alt som er lyseblå er dødlig
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> <strong>Neste, farlige ting!</strong> La oss si at alt som er lyseblå er dødlig
 for Felix. Last inn bakgrunnen <strong>frantic-felix/level2</strong>, som har en
 blå rose på det øverste nivået. Legg til enda et skript på Felix,
-under et grønt flagg hatt:</p>
+under et grønt flagg hatt:</label></p>
 <pre><code class="blocks">for alltid
     hvis &lt;berører fargen [blå v]?&gt;
         send melding [spill slutt v]

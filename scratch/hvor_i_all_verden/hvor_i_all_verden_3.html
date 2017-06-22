@@ -21,16 +21,16 @@ lage en skikkelig intro til spillet.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <p>Sjekk spesielt at</p>
-<ul>
-<li>
-<p>du har et helikopter som du kan styre over en rullende bakgrunn med
-piltastene,</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> du har et helikopter som du kan styre over en rullende bakgrunn med
+piltastene,</label></p>
 </li>
-<li>
-<p>du har en stedfigur som kan bli funnet av helikopteret,</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> du har en stedfigur som kan bli funnet av helikopteret,</label></p>
 </li>
-<li>
-<p>du har laget en ny kloss (funksjon) som heter <code class="blockmoreblocks">Reis til</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> du har laget en ny kloss (funksjon) som heter <code class="blockmoreblocks">Reis til</code>.</label></p>
 </li>
 </ul>
 </section>
@@ -42,21 +42,21 @@ enklere både å legge til flere reisemål, og å velge reisemål
 tilfeldig.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Velg sted-figuren, og klikk på <code class="blockdata">Data</code>-kategorien. Lag
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Velg sted-figuren, og klikk på <code class="blockdata">Data</code>-kategorien. Lag
 en liste som du kaller <code>steder</code> og lar gjelde bare for denne
-figuren.</p>
+figuren.</label></p>
 </li>
-<li>
-<p>Det dukker nå opp en grå boks på scenen som heter <code>Sted: steder</code>. Vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Det dukker nå opp en grå boks på scenen som heter <code>Sted: steder</code>. Vi
 kan la denne ligge på scenen inntil videre. Du vil også se at det
 har kommet noen nye klosser som gjør ting med lister. Skjønner du
-hva noen av disse klossene gjør?</p>
+hva noen av disse klossene gjør?</label></p>
 </li>
-<li>
-<p>La oss fylle opp listen! Vi starter med en ny melding, og
-deretter kan vi legge til ting i listen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> La oss fylle opp listen! Vi starter med en ny melding, og
+deretter kan vi legge til ting i listen.</label></p>
 <pre><code class="blocks">når jeg mottar [Lag lister v]
 legg [London] til [steder v]
 legg [Oslo] til [steder v]
@@ -64,14 +64,14 @@ legg [Barcelona] til [steder v]
 </code></pre>
 <p>Bruk gjerne de samme reisemålene som du allerede har.</p>
 </li>
-<li>
-<p>Klikk på blokken du laget over slik at den kjører. Blir den grå
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Klikk på blokken du laget over slik at den kjører. Blir den grå
 boksen på scenen fyllt med steder? Hva skjer om du klikker flere
-ganger?</p>
+ganger?</label></p>
 </li>
-<li>
-<p>Vi kan sikre oss at hvert sted bare ligger en gang i listen ved å
-tømme listen før vi fyller den opp. Legg til</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Vi kan sikre oss at hvert sted bare ligger en gang i listen ved å
+tømme listen før vi fyller den opp. Legg til</label></p>
 <pre><code class="blocks">slett (alle v) i [steder v]
 </code></pre>
 <p>i koden før du legger til det første reisemålet.</p>
@@ -81,14 +81,14 @@ tømme listen før vi fyller den opp. Legg til</p>
 verdier. For eksempel stedsnavn i dette tilfellet. Men for reisemålene
 må vi holde styr på tre ting: Stedsnavnet og de to koordinatene som
 sier hvor stedet ligger. En måte å gjøre dette på er å bruke tre lister.</p>
-<ul>
-<li>
-<p>Lag to nye lister, <code>stederX</code> og <code>stederY</code> som også gjelder kun for
-stedfiguren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Lag to nye lister, <code>stederX</code> og <code>stederY</code> som også gjelder kun for
+stedfiguren.</label></p>
 </li>
-<li>
-<p>Vi vil nå utvide <code>Lag lister</code>-blokken slik at vi fyller opp alle tre
-listene. Bruk dine egne reisemål og koordinater her om du vil:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Vi vil nå utvide <code>Lag lister</code>-blokken slik at vi fyller opp alle tre
+listene. Bruk dine egne reisemål og koordinater her om du vil:</label></p>
 <pre><code class="blocks">når jeg mottar [Lag lister v]
 slett (alle v) i [steder v]
 slett (alle v) i [stederX v]
@@ -115,40 +115,40 @@ samme reisemål som står for eksempel øverst i hver liste.</p>
 tilfeldig.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Først vil vi lage listene våre når spillet begynner.  Endre på koden
-for <code class="blockevents">Nytt spill</code> slik,</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Først vil vi lage listene våre når spillet begynner.  Endre på koden
+for <code class="blockevents">Nytt spill</code> slik,</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 send melding [Lag lister v]
 vis
 send melding [Nytt sted v] og vent
 </code></pre>
 </li>
-<li>
-<p>Lag en ny variabel som heter <code class="blockdata">sted</code> og som gjelder kun
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Lag en ny variabel som heter <code class="blockdata">sted</code> og som gjelder kun
 for sted-figuren. Denne variabelen vil være et tall som
 identifiserer hvilken posisjon i listene det gjeldende reisemålet
-har.</p>
+har.</label></p>
 </li>
-<li>
-<p>Koden for <code class="blockevents">Nytt sted</code> blir helt ny. Nå skal vi bruke
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Koden for <code class="blockevents">Nytt sted</code> blir helt ny. Nå skal vi bruke
 både listene våre og den nye <code class="blockmoreblocks">Reis til</code>-klossen vi
-lagde forrige gang.</p>
+lagde forrige gang.</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt sted v]
 sett [sted v] til (tilfeldig tall fra (1) til (lengden av [steder v]))
 Reis til (element (sted) av [steder v]) (element (sted) av [stederX v]) (element (sted) av [stederY v]) :: custom
 </code></pre>
 </li>
-<li>
-<p>Prøv å kjør spillet flere ganger. Virker det som om reisemålet blir
-valgt tilfeldig?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Prøv å kjør spillet flere ganger. Virker det som om reisemålet blir
+valgt tilfeldig?</label></p>
 </li>
-<li>
-<p>For å få flere reiseoppgaver i hvert spill kan vi bare legge en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> For å få flere reiseoppgaver i hvert spill kan vi bare legge en
 <code class="blockcontrol">gjenta _ ganger</code>-løkke rundt sendingen av meldingen
 <code>Nytt sted</code> i <code class="blockevents">Nytt spill</code>-blokken. Hvor mange ganger
-vil du gjenta meldingen?</p>
+vil du gjenta meldingen?</label></p>
 </li>
 </ul>
 </section>
@@ -160,19 +160,19 @@ flere ganger etter hverandre. Dette kan vi enkelt unngå ved å fjerne
 reisemål fra listene etterhvert som vi finner dem.</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste </h2>
-<ul>
-<li>
-<p>For å unngå å bli spurt om å reise til samme sted flere ganger på
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> For å unngå å bli spurt om å reise til samme sted flere ganger på
 rad vil vi slette reisemål fra listene etterhvert som vi finner dem.
-Legg til slettekommandoer helt nederst i <code class="blockevents">Nytt sted</code>-blokken,</p>
+Legg til slettekommandoer helt nederst i <code class="blockevents">Nytt sted</code>-blokken,</label></p>
 <pre><code class="blocks">slett (sted) i [steder v]
 slett (sted) i [stederX v]
 slett (sted) i [stederY v]
 </code></pre>
 </li>
-<li>
-<p>Hva skjer om du prøver å gi flere oppgaver enn det er reisemål? Prøv
-selv!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Hva skjer om du prøver å gi flere oppgaver enn det er reisemål? Prøv
+selv!</label></p>
 <p>Den enkleste måten å unngå dette problemet på er å gi færre
 oppgaver eller legge inn flere reisemål i listene!</p>
 <p>Alternativt kan du øverst i <code>Nytt sted</code>-blokken legge inn en
@@ -190,12 +190,12 @@ kalles programflyten slik at vi får en startmeny, og slik at vi kan
 spille flere ganger.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny bakgrunn som kan brukes på startskjermen. Vi har tegnet en
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Lag en ny bakgrunn som kan brukes på startskjermen. Vi har tegnet en
 ny bakgrunn selv ved å bruke vektorgrafikk, sette sammen to store
 firkanter og fylle dem med fargeoverganger. Deretter skrev vi litt
-tekst på denne bakgrunnen.</p>
+tekst på denne bakgrunnen.</label></p>
 <p><figure><img src="meny.png" alt=""></figure></p>
 <p>Kall denne bakgrunnen for <code>meny</code>.</p>
 </li>
@@ -206,10 +206,10 @@ vi at et nytt spill starter når vi trykker mellomrom-tasten. Når
 spillet er slutt vil vi at menyen skal vises igjen. Vi kan tegne
 programflyten omtrent som dette:</p>
 <p><figure><img src="programflyt.png" alt=""></figure></p>
-<ul>
-<li>
-<p>For å lage denne programflyten kan vi stort sett bruke skript på
-scenen. Lag de følgende enkle skriptene:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> For å lage denne programflyten kan vi stort sett bruke skript på
+scenen. Lag de følgende enkle skriptene:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 send melding [Vis meny v]
 
@@ -230,9 +230,9 @@ send melding [Vis meny v]
 <p>Sammenlign disse skriptene med programflyten over. Ser du hvordan
 de henger sammen?</p>
 </li>
-<li>
-<p>Vi må sende melding når spillet er slutt. Hvordan vet vi at spillet
-er slutt?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Vi må sende melding når spillet er slutt. Hvordan vet vi at spillet
+er slutt?</label></p>
 <p>Spillet slutter etter at vi har besøkt reisemålene. Det betyr at
 vi må sende en melding <code>Spill slutt</code> etter
 <code class="blockcontrol">gjenta</code>-blokken på sted-figuren.</p>
@@ -240,10 +240,10 @@ vi må sende en melding <code>Spill slutt</code> etter
 programflyten? Starter spillet når du trykker mellomrom? Kommer du
 tilbake til menyen når spillet er slutt?</p>
 </li>
-<li>
-<p>Et problem er at helikopteret, stedet og kartet blir liggende over
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Et problem er at helikopteret, stedet og kartet blir liggende over
 menyen når spillet er slutt. Vi må passe på at disse skjules. Legg
-følgende kode på alle de tre figurene:</p>
+følgende kode på alle de tre figurene:</label></p>
 <pre><code class="blocks">når jeg mottar [Spill slutt v]
 skjul
 stopp [andre skript i figuren v] :: control
@@ -256,14 +256,14 @@ stopper når spillet er slutt.</p>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Fungerer programflyten som den skal? Starter spillet når du trykker
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Fungerer programflyten som den skal? Starter spillet når du trykker
 på mellomrom-tasten? Kommer du tilbake til menyen når spillet er
-slutt?</p>
+slutt?</label></p>
 </li>
-<li>
-<p>Skjules og vises alle figurene når de skal?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Skjules og vises alle figurene når de skal?</label></p>
 </li>
 </ul>
 </section>
@@ -274,40 +274,40 @@ slutt?</p>
 spilleren begrenset tid til å finne reisemålene.</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny variabel, <code class="blockdata">Tid</code>, som gjelder for alle
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Lag en ny variabel, <code class="blockdata">Tid</code>, som gjelder for alle
 figurer. Det ser ganske bra ut om du høyreklikker på
-<code class="blockgrey">Tid</code>-boksen på scenen og velger <code>stor</code>.</p>
+<code class="blockgrey">Tid</code>-boksen på scenen og velger <code>stor</code>.</label></p>
 </li>
-<li>
-<p>På scenen, sett <code class="blockdata">Tid</code> til for eksempel 30 (sekunder)
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> På scenen, sett <code class="blockdata">Tid</code> til for eksempel 30 (sekunder)
 etter <code class="blockevents">Nytt spill</code> mottas. Lag så en løkke som gjentas
 til <code class="blockdata">Tid</code> er 0. Inne i løkken kan du endre
 <code class="blockdata">Tid</code> med -1, og deretter vente 1 sekund. Avslutt med å
-sende ut meldingen <code>Spill slutt</code> etter løkken.</p>
+sende ut meldingen <code>Spill slutt</code> etter løkken.</label></p>
 </li>
-<li>
-<p>Kanskje du kan gi spilleren litt ekstra tid hver gang han finner et
-sted?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Kanskje du kan gi spilleren litt ekstra tid hver gang han finner et
+sted?</label></p>
 </li>
-<li>
-<p>Til slutt må du legge på en <code class="blockcontrol">stopp</code>-kloss også på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Til slutt må du legge på en <code class="blockcontrol">stopp</code>-kloss også på
 scenen når spillet er slutt for at tiden skal stoppe når spilleren
-har funnet alle reisemålene.</p>
+har funnet alle reisemålene.</label></p>
 </li>
 </ul>
 </section>
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Fungerer tidtakingen? Telles tiden nedover mot 0?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Fungerer tidtakingen? Telles tiden nedover mot 0?</label></p>
 </li>
-<li>
-<p>Avsluttes spillet når du har funnet alle reisemålene? Avsluttes
-spillet når tiden går ut?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Avsluttes spillet når du har funnet alle reisemålene? Avsluttes
+spillet når tiden går ut?</label></p>
 </li>
 </ul>
 </section>
@@ -319,11 +319,11 @@ og venner ved å trykke <code>Legg ut</code> øverst til høyre på skjermen.</p
 </section>
 <section class="try" id="prov-selv">
 <h2 class="try" id="prov-selv">Prøv selv</h2>
-<ul>
-<li>
-<p>Selv om leksjonene er ferdige betyr ikke det at du ikke kan
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Selv om leksjonene er ferdige betyr ikke det at du ikke kan
 videreutvikle spillet ditt. En enkel utvidelse er å legge på flere
-reisemål. Her er for eksempel to steder du kan legge til,</p>
+reisemål. Her er for eksempel to steder du kan legge til,</label></p>
 <pre><code class="blocks">legg [Reykjavik] til [steder v]
 legg [-215] til [stederX v]
 legg [210] til [stederY v]
@@ -335,23 +335,23 @@ legg [-180] til [stederY v]
 trenger ikke bare være byer, det kan også være fjell, sjøer eller
 kanskje land!</p>
 </li>
-<li>
-<p>En måte å gjøre spillet ganske forskjellig på, og samtidig ganske
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> En måte å gjøre spillet ganske forskjellig på, og samtidig ganske
 likt, er å bytte ut kartet over Europa med et kart over et annet
-område. Det finnes mange kart på nettet. Prøv deg fram!</p>
+område. Det finnes mange kart på nettet. Prøv deg fram!</label></p>
 </li>
-<li>
-<p>Om spillet kjennes litt vanskelig kan man gi spilleren et hint ved å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Om spillet kjennes litt vanskelig kan man gi spilleren et hint ved å
 la den sirkelen sakte komme til syne mens han leter etter
 reisemålet. Om du lager en løkke som starter når <code class="blockevents">Nytt spill</code> mottas, og som sakte endrer den gjennomsiktige
 effekten ned mot 0 vil spilleren enklere kunne finne de vanskelige
-reisemålene.</p>
+reisemålene.</label></p>
 </li>
-<li>
-<p>Du kan også lage flere nivåer, for eksempel lett og vanskelig, ved å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Du kan også lage flere nivåer, for eksempel lett og vanskelig, ved å
 lage forskjellige lister avhengig av hvilket nivå spilleren velger
 (for eksempel ved å trykke <code>1</code> eller <code>2</code> i stedet for mellomrom når
-spillet starter).</p>
+spillet starter).</label></p>
 </li>
 </ul>
 <p>Helt til slutt, husk at dette er ditt spill som du har laget! Du

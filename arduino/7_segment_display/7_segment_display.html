@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">7-Segment Display</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/7_segment_display/7_segment_display.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">7-Segment Display</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/7_segment_display/7_segment_display.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>La oss se på å få et display til å telle.</p>
 </section>
@@ -14,12 +14,12 @@ function relative (url) {
 <h1 class="activity" id="steg-1-finn-frem-utstyr">Steg 1: Finn frem utstyr</h1>
 <section class="check" id="til-denne-oppgaven-trenger-du">
 <h2 class="check" id="til-denne-oppgaven-trenger-du">Til denne oppgaven trenger du</h2>
-<ul>
-<li>1 Arduino Uno</li>
-<li>1 breadboard</li>
-<li>2 motstander 1k Ohm (Fargekode: brun-svart-rød-gull)</li>
-<li>11 ledninger</li>
-<li>1 7-segment display</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> 1 Arduino Uno</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> 1 breadboard</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> 2 motstander 1k Ohm (Fargekode: brun-svart-rød-gull)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> 11 ledninger</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> 1 7-segment display</label></li>
 </ul>
 <p><figure><img src="utstyr.jpg" alt="utstyr"></figure></p>
 </section>
@@ -30,10 +30,10 @@ function relative (url) {
 se hvilke pinner som lyser opp hvilken del av displayet.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>Motstand fra de to midterste pinnene på displayet.</li>
-<li>Ledning fra andre enden av motstandene til ground.</li>
-<li>Ledning fra pin 13 på Arduino til pinnen nederst til høyre på displayet.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Motstand fra de to midterste pinnene på displayet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Ledning fra andre enden av motstandene til ground.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Ledning fra pin 13 på Arduino til pinnen nederst til høyre på displayet.</label></li>
 </ul>
 <p><figure><img src="utforskning.jpg" alt="utforskning"></figure></p>
 <pre><code class="cpp">
@@ -62,10 +62,10 @@ lage den fulle kretsen.</p>
 <p><figure><img src="fullkrets.jpg" alt="fullkrets"></figure></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>Motstand fra de to midterste pinnene på displayet.</li>
-<li>Ledning fra andre enden av motstandene til ground.</li>
-<li>Koble resten av ledningene som vist på bildet over.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Motstand fra de to midterste pinnene på displayet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Ledning fra andre enden av motstandene til ground.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Koble resten av ledningene som vist på bildet over.</label></li>
 </ul>
 </section>
 <section class="activity" id="skriv-kode">
@@ -141,10 +141,10 @@ nytt og på nytt.</p>
 </section>
 <section class="challenge" id="utfordringer">
 <h3 class="challenge" id="utfordringer">Utfordringer</h3>
-<ul>
-<li>Klarer du å få displayet til å telle fra 0 til 9?</li>
-<li>Klarer du å få punktumet til å blinke mens vi teller?</li>
-<li>Klarer du å få punktumet til å blinke dobbelt så fort som vi teller?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Klarer du å få displayet til å telle fra 0 til 9?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Klarer du å få punktumet til å blinke mens vi teller?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Klarer du å få punktumet til å blinke dobbelt så fort som vi teller?</label></li>
 </ul>
 </section>
 </section>
@@ -230,13 +230,13 @@ tegne 0. Dette er grunnen til at vi begynner på igjen på 0 etter vi har telt t
 </section>
 <section class="challenge" id="utfordringer-2">
 <h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
-<ul>
-<li>Klarer du å utvide til å telle til '9'?</li>
-<li>Klarer du å hindre at vi &quot;går rundt&quot; i tellingen, slik at å trykke på knappen
-når du allerede er på '9' ikke gjør noe?</li>
-<li>Klarer du å få punktumet til å lyse når du trykker inn knappen?</li>
-<li>Klarer du å legge til en ekstra knapp som teller nedover, så én knapp teller
-oppover, og den andre nedover?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Klarer du å utvide til å telle til '9'?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Klarer du å hindre at vi &quot;går rundt&quot; i tellingen, slik at å trykke på knappen
+når du allerede er på '9' ikke gjør noe?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Klarer du å få punktumet til å lyse når du trykker inn knappen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Klarer du å legge til en ekstra knapp som teller nedover, så én knapp teller
+oppover, og den andre nedover?</label></li>
 </ul>
 </section>
 </section>

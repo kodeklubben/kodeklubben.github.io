@@ -19,17 +19,17 @@ lære en hel del om meldinger i programmering.</p>
 og søppelet som vi skal kaste.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt. Legg til en ny figur, enten fra biblioteket,
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt. Legg til en ny figur, enten fra biblioteket,
 slik vi har gjort, eller tegn din helt egen hjelper! Vi valgte figuren
-<code>nano</code>, da han har flere drakter som vi tenker å bruke i utfordrings-delene.</p>
+<code>nano</code>, da han har flere drakter som vi tenker å bruke i utfordrings-delene.</label></p>
 <p><figure><img src="ronny.png" alt=""></figure></p>
 </li>
-<li>
-<p>Målet med spillet er å få all søppelet i bøttene de hører til. Hver gang
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Målet med spillet er å få all søppelet i bøttene de hører til. Hver gang
 vi fjerner en søppel-figur så får vi et poeng. Målet vårt er å få så mange
-poeng som det er søppel-biter.</p>
+poeng som det er søppel-biter.</label></p>
 <p>I første omgang vet ikke Ronny om noe av søppelet, så vi lar Ronny sette
 både poeng og mål til null. For å legge til variabler trykker vi på
 <code class="blockdata">Data</code>-kategorien og trykk på <code>Lag en Variabel</code>.</p>
@@ -38,11 +38,11 @@ sett [Mål v] til [0]
 sett [Poeng v] til [0]
 </code></pre>
 </li>
-<li>
-<p>Legg til seks figurer som representerer søppel. Her kan du igjen velge
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg til seks figurer som representerer søppel. Her kan du igjen velge
 eksisterende figurer fra biblioteket, tegne dine egne, eller finne
 noen bilder på nettet du syns passer. Selv valgte vi noen bananer, et eple,
-en ballong, et hellikopter, en melkekartong, og en avis.</p>
+en ballong, et hellikopter, en melkekartong, og en avis.</label></p>
 <style>
 figure.inline > img {
   width: 100px;
@@ -58,15 +58,15 @@ figure.inline > img {
   <img src="avis.png" />
 </figure>
 </li>
-<li>
-<p>Velg så en bakgrunn som vi kan plassere figurene våre rundt i. Vi valgte
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Velg så en bakgrunn som vi kan plassere figurene våre rundt i. Vi valgte
 kjøkken fra biblioteket, men tegn gjerne noe eget eller finn et annet bilde du
-heller har lyst til å bruke.</p>
+heller har lyst til å bruke.</label></p>
 <p><figure><img src="kitchen.png" alt=""></figure></p>
 </li>
-<li>
-<p>Vi kommer til å flytte rundt på søppel-figurene, så det er viktig at vi
-plasserer dem på nytt hver gang vi starter spillet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Vi kommer til å flytte rundt på søppel-figurene, så det er viktig at vi
+plasserer dem på nytt hver gang vi starter spillet.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gå til x: (78) y: (5)
 </code></pre>
@@ -77,9 +77,9 @@ y-koordinater for hver av dem.</p>
 </section>
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
-<ul>
-<li>Om du flytter rundt på søppel-bitene, blir de satt tilbake når du trykker
-på det grønne flagget?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Om du flytter rundt på søppel-bitene, blir de satt tilbake når du trykker
+på det grønne flagget?</label></li>
 </ul>
 </section>
 </section>
@@ -89,27 +89,27 @@ på det grønne flagget?</li>
 det, så ber vi om hjelp fra søppel-figurene selv.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Ronny kan kommunisere med søppelet ved hjelp av meldinger. Start med å sende meldingen
-<code>Forbered spill</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Ronny kan kommunisere med søppelet ved hjelp av meldinger. Start med å sende meldingen
+<code>Forbered spill</code>.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [Mål v] til [0]
 sett [Poeng v] til [0]
 send melding [Forbered spill v]
 </code></pre>
 </li>
-<li>
-<p>Hver av søppel-bitene må nå svare på beskjeden ved å øke <code>Mål</code> med en.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Hver av søppel-bitene må nå svare på beskjeden ved å øke <code>Mål</code> med en.</label></p>
 <pre><code class="blocks">når jeg mottar [Forbered spill v]
 endre [Mål v] med (1)
 </code></pre>
 </li>
-<li>
-<p>Før spillet kan starte må vi gi Ronny litt tid til å kommunisere
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Før spillet kan starte må vi gi Ronny litt tid til å kommunisere
 og la søppelet telle opp målet vi skal nå. En ting vi kan gjøre er å la
 Ronny snakke litt. Når Ronny er ferdig med å prate, så kan vi starte
-spillet.</p>
+spillet.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [Mål v] til [0]
 sett [Poeng v] til [0]
@@ -124,12 +124,12 @@ si [Vi må sortere avfallet til hver sin kilde, kan du hjelpe meg med det?] i (3
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Blir mål satt til riktig antall søppel-biter? I vårt tilfelle skal det bli seks.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Blir mål satt til riktig antall søppel-biter? I vårt tilfelle skal det bli seks.</label></p>
 </li>
-<li>
-<p>Snakker Ronny?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Snakker Ronny?</label></p>
 </li>
 </ul>
 </section>
@@ -155,18 +155,18 @@ og tilbake når han er ferdig med å snakke?</p>
 <p>Nå som vi vet antall poeng vi skal nå, kan vi sette opp bøttene våre.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Tegn en ny figur for hver av bøttene <code>Mat</code>, <code>Plast</code> og <code>Papir</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Tegn en ny figur for hver av bøttene <code>Mat</code>, <code>Plast</code> og <code>Papir</code>.</label></p>
 <figure class="inline">
   <img src="mat.png" />
   <img src="plast.png" />
   <img src="papir.png" />
 </figure>
 </li>
-<li>
-<p>Vi ønsker ikke å vise bøttene før spillet er i gang. For å få til dette kan vi
-benytte oss av <code>Start spill</code>-meldingen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Vi ønsker ikke å vise bøttene før spillet er i gang. For å få til dette kan vi
+benytte oss av <code>Start spill</code>-meldingen.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 skjul
 </code></pre>
@@ -174,9 +174,9 @@ skjul
 vis
 </code></pre>
 </li>
-<li>
-<p>Dette trikset kan vi også gjøre for søppelet, som også er greit å skjule før
-spillet er i gang.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Dette trikset kan vi også gjøre for søppelet, som også er greit å skjule før
+spillet er i gang.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 skjul
 gå til x: (78) y: (5)
@@ -190,12 +190,12 @@ vis
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>
-<p>Skjules bøttene i starten? Blir de vist når Ronny er ferdig å snakke?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Skjules bøttene i starten? Blir de vist når Ronny er ferdig å snakke?</label></p>
 </li>
-<li>
-<p>Skjer det samme med søppel-bitene?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Skjer det samme med søppel-bitene?</label></p>
 </li>
 </ul>
 </section>
@@ -205,19 +205,19 @@ vis
 <p>Nå må vi få til poeng-giving når vi flytter søppel-bitene opp i bøttene.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Måten vi flytter på søppel-bitene er at vi lar dem bevege seg etter musepekeren
-til de er flyttet til sin passende bøtte.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Måten vi flytter på søppel-bitene er at vi lar dem bevege seg etter musepekeren
+til de er flyttet til sin passende bøtte.</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 gjenta til &lt;berører [Mat v] ?&gt;
   gå til [musepeker v]
 slutt
 </code></pre>
 </li>
-<li>
-<p>Når søppelet er lagt i sin passende bøtte, trenger vi å legge til ett poeng og skjule
-søppelet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Når søppelet er lagt i sin passende bøtte, trenger vi å legge til ett poeng og skjule
+søppelet.</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 gjenta til &lt;berører [Mat v] ?&gt;
   gå til [musepeker v]
@@ -231,10 +231,10 @@ skjul
 <section class="flag" id="test-prosjektet-4">
 <h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Når du trykker på en søppel-bit, følger den etter musepekeren? Forsvinner søppelbiten
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Når du trykker på en søppel-bit, følger den etter musepekeren? Forsvinner søppelbiten
 når den går i den riktige bøtten? Husk at ikke alt skal i <code>Mat</code>, noe skal også
-i <code>Plast</code> eller <code>Papir</code>.</li>
+i <code>Plast</code> eller <code>Papir</code>.</label></li>
 </ul>
 </section>
 <section class="challenge" id="utfordring-2">
@@ -253,10 +253,10 @@ med få Ronny sur hvis feil bøtte brukes?</p>
 <p>Når vi har fått alt søppelet på plass, må vi avslutte spillet.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p><code>Ronny</code> trenger å vite når spillet er over. Det kan vi gjøre ved å legge til
-<code>vent til</code>-blokk i skriptet hans.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> <code>Ronny</code> trenger å vite når spillet er over. Det kan vi gjøre ved å legge til
+<code>vent til</code>-blokk i skriptet hans.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 sett [Mål v] til [0]
 sett [Poeng v] til [0]
@@ -268,25 +268,25 @@ send melding [Spill ferdig v]
 si [Takk for at du hjelper meg med å redde verden!]
 </code></pre>
 </li>
-<li>
-<p>I tillegg til at Ronny takker oss for at vi kildesorterte alt avfallet, så ber vi han også
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> I tillegg til at Ronny takker oss for at vi kildesorterte alt avfallet, så ber vi han også
 sende meldingen <code>Spill ferdig</code>. Dette gjør at vi kan fortelle de andre figurene at spillet
-er ferdig.</p>
+er ferdig.</label></p>
 <p>Da kan vi for eksempel fortelle bøttene at de skal skjule seg selv når spillet er ferdig.</p>
 <pre><code class="blocks">når jeg mottar [Spill ferdig v]
 skjul
 </code></pre>
 </li>
-<li>
-<p>Til slutt kan vi forandre bakgrunnen når spillet avsluttes, for å gjøre avslutningen enda
-litt finere. Trykk på <code>Scene</code> og legg til en bakgrunn.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Til slutt kan vi forandre bakgrunnen når spillet avsluttes, for å gjøre avslutningen enda
+litt finere. Trykk på <code>Scene</code> og legg til en bakgrunn.</label></p>
 <p>Vi valgte <code>water and rocks</code> fra biblioteket, men det er bare å velge noe du syns er finere,
 evt lage noe selv.</p>
 <p><figure><img src="finale.png" alt=""></figure></p>
 </li>
-<li>
-<p>Til slutt trenger vi å fortelle når bakgrunnen skal skiftes. Du kan gjøre det ved å legge
-til følgende på skriptet til <code>Scene</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Til slutt trenger vi å fortelle når bakgrunnen skal skiftes. Du kan gjøre det ved å legge
+til følgende på skriptet til <code>Scene</code>.</label></p>
 <pre><code class="blocks">når jeg mottar [Spill ferdig v]
 bytt bakgrunn til [water and rocks v]
 </code></pre>
@@ -296,8 +296,8 @@ bytt bakgrunn til [water and rocks v]
 <section class="flag" id="test-prosjektet-5">
 <h2 class="flag" id="test-prosjektet-5">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Når alt søppelet er sortert, blir bakgrunnen byttet og Ronny takker for hjelpen?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Når alt søppelet er sortert, blir bakgrunnen byttet og Ronny takker for hjelpen?</label></li>
 </ul>
 </section>
 <section class="challenge" id="utfordring-3">

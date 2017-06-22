@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Buzzer</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/buzzer/buzzer.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Arduino</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Buzzer</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Arduino</span></a><div class="pdf"><a href="/arduino/buzzer/buzzer.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Nå som vi har sett litt på hvordan vi kan kontrollere en lysdiode på
 forskjellige måter, kan vi gå over til å lage litt lyd!</p>
@@ -17,12 +17,12 @@ forskjellige måter, kan vi gå over til å lage litt lyd!</p>
 I denne oppgaven trenger vi i hovedsak en buzzer.</p>
 <section class="check" id="dette-trenger-du">
 <h2 class="check" id="dette-trenger-du">Dette trenger du</h2>
-<ul>
-<li>1 Arduino Uno</li>
-<li>1 breadboard</li>
-<li>2 ledninger</li>
-<li>1 buzzer</li>
-<li>1 motstand 270 Ohm (rød-lilla-brun-gull)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> 1 Arduino Uno</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> 1 breadboard</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> 2 ledninger</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> 1 buzzer</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> 1 motstand 270 Ohm (rød-lilla-brun-gull)</label></li>
 </ul>
 <figure><img src="buz.jpg" style="width: 900px"></figure>
 </section>
@@ -35,10 +35,10 @@ under.</p>
 <figure><img src="krets.png" style="width: 900px"></figure>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>Ledning fra GND på Arduinoen til den negative lederen på buzzeren</li>
-<li>Ledning fra 11~ på Arduinoen til motstand</li>
-<li>Motstand til den positive lederen på buzzeren</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Ledning fra GND på Arduinoen til den negative lederen på buzzeren</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Ledning fra 11~ på Arduinoen til motstand</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Motstand til den positive lederen på buzzeren</label></li>
 </ul>
 </section>
 <section class="protip" id="porter-merket-med">
@@ -53,12 +53,12 @@ og kan blant annet brukes for å spille lyder.</p>
 <p><em>Nå skal vi lage vår første tone med Arduinoen.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne Arduino-programmet om det ikke allerede er åpent.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Åpne Arduino-programmet om det ikke allerede er åpent.</label></p>
 </li>
-<li>
-<p>Arduino-programmet starter med denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Arduino-programmet starter med denne koden:</label></p>
 <pre><code class="cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
 
 }
@@ -68,8 +68,8 @@ og kan blant annet brukes for å spille lyder.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Skriv denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv denne koden:</label></p>
 <pre><code class="cpp"><span class="hljs-keyword">int</span> lyd = <span class="hljs-number">11</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
@@ -81,12 +81,12 @@ og kan blant annet brukes for å spille lyder.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Trykk på <img src="upload.png" alt=""> for å laste opp koden. Denne sjekker først om koden
-er riktig, og så vil programmet ditt kjøre på arduinoen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Trykk på <img src="upload.png" alt=""> for å laste opp koden. Denne sjekker først om koden
+er riktig, og så vil programmet ditt kjøre på arduinoen.</label></p>
 </li>
-<li>
-<p>Lager den lyd?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lager den lyd?</label></p>
 </li>
 </ul>
 <section class="protip" id="virker-det-ikke">
@@ -110,8 +110,8 @@ og/eller <strong>brett</strong>. Da kan du sjekke disse to tingene:</p>
 </section>
 <section class="challenge" id="utfordringer">
 <h3 class="challenge" id="utfordringer">Utfordringer</h3>
-<ul>
-<li>Hva skjer hvis du endrer tallet 880 til et annet?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Hva skjer hvis du endrer tallet 880 til et annet?</label></li>
 </ul>
 </section>
 </section>
@@ -126,11 +126,11 @@ og følg sjekklisten!</p>
 <figure><img src="ldr.png" style="width: 900px"></figure>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>La alle de andre komponentene være som før</li>
-<li>Ledning fra en fot på lysfølsom motstanden til A5 på arduinoen</li>
-<li>Ledning fra fot på lysfølsom motstand til GND</li>
-<li>Skriv  koden under:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> La alle de andre komponentene være som før</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Ledning fra en fot på lysfølsom motstanden til A5 på arduinoen</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Ledning fra fot på lysfølsom motstand til GND</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Skriv  koden under:</label></li>
 </ul>
 <pre><code class="cpp"><span class="hljs-keyword">int</span> lyd = <span class="hljs-number">11</span>;
 <span class="hljs-keyword">int</span> lys = A5;
@@ -150,10 +150,10 @@ og følg sjekklisten!</p>
 <section class="challenge" id="utfordringer-2">
 <h3 class="challenge" id="utfordringer-2">Utfordringer</h3>
 <p>Her er noen nøtter du kan prøve deg på ved å endre koden.</p>
-<ul>
-<li>Hva skjer hvis du endrer verdien til delay?</li>
-<li>Kan du få en lysdiode til å lyse med forskjellig intensitet gitt forskjellige toner?</li>
-<li>Klarer du å bruke knapper for å spille forksjellige toner?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Hva skjer hvis du endrer verdien til delay?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Kan du få en lysdiode til å lyse med forskjellig intensitet gitt forskjellige toner?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Klarer du å bruke knapper for å spille forksjellige toner?</label></li>
 </ul>
 </section>
 <section class="protip" id="map">
@@ -168,8 +168,8 @@ og en lysstyrke på 512 gir 1500.</p>
 </section>
 <section class="challenge" id="utfording-vanskelig">
 <h3 class="challenge" id="utfording-vanskelig">Utfording (Vanskelig)</h3>
-<ul>
-<li>Kan du bytte ut <code>analogRead(lys)*3.2</code> til å bruke map?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Kan du bytte ut <code>analogRead(lys)*3.2</code> til å bruke map?</label></li>
 </ul>
 </section>
 </section>

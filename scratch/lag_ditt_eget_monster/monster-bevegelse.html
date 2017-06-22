@@ -8,14 +8,14 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Monster - Bevegelse</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/lag_ditt_eget_monster/monster-bevegelse.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Etterhvert vil monsteret ditt bestå av en mengde figurer og det vil
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Etterhvert vil monsteret ditt bestå av en mengde figurer og det vil
 bli nødvendig å sørge for at alle figurene flyttes sammen. I stedet
 for å legge til flyttkommandoer på alle figurer, kan du rett og
 slett legge til kontroller på kroppsfiguren og bruke en <code class="blockevents">send melding</code> for å kontrollere andre figurer.  Når vår
 tentakkelfigur (eller en hvilken som helst annen figur!) mottar en
-<code>flyttet høyre</code>-melding, kan vi flytte den også til høyre.</p>
+<code>flyttet høyre</code>-melding, kan vi flytte den også til høyre.</label></p>
 <pre><code class="blocks">// på spøkelseskroppen
 når [pil høyre v] trykkes
 endre x med (hastighet)
@@ -33,10 +33,10 @@ når jeg mottar [flyttet venstre v]
 endre x med ((hastighet) * (-1))
 </code></pre>
 </li>
-<li>
-<p>Ved å bruke en <code class="blockevents">send melding</code> kan vi også endre
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Ved å bruke en <code class="blockevents">send melding</code> kan vi også endre
 hvordan bevegelseskommandoen virker, ved å bare endre et
-skript. <strong>Ta en titt på dette eksempelet:</strong></p>
+skript. <strong>Ta en titt på dette eksempelet:</strong></label></p>
 <pre><code class="blocks">// på spøkelseskroppen
 når [pil høyre v] trykkes
 endre x med (hastighet)
@@ -57,8 +57,8 @@ hvis &lt;ikke &lt;berører [kant v]?&gt;&gt;
 slutt
 </code></pre>
 </li>
-<li>
-<p>Her forteller vi at kroppen skal gå i den retningen den beveger seg
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Her forteller vi at kroppen skal gå i den retningen den beveger seg
 i (husk å sette figur orienteringen til <strong>“venstre-høyre”</strong>) og for
 å stoppe og at den snur hvis den kolliderer med
 skjermkanten. Kanskje har du også lagt merke til at vi har lagt
@@ -68,11 +68,11 @@ skjermen. <strong>Hvis du bestemmer deg for å legge til animasjon på
 bevegelsen, må du huske på at tilhørende bevegelser vil ta like lang
 tid. f. eks hvis å bevege et bein til venstre tar 1 sekund, må alle
 andre venstrebevegelser ta et sekund også (bruk en
-<code class="blockcontrol">vent</code>-kloss for å sørge at de er i samme steg).</strong></p>
+<code class="blockcontrol">vent</code>-kloss for å sørge at de er i samme steg).</strong></label></p>
 </li>
-<li>
-<p>Du kan også animere kroppsfiguren ved å bruke <code class="blocklooks">neste drakt</code>, som kan aktiveres hver gang en
-bevegelsesmelding mottas.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Du kan også animere kroppsfiguren ved å bruke <code class="blocklooks">neste drakt</code>, som kan aktiveres hver gang en
+bevegelsesmelding mottas.</label></p>
 <pre><code class="blocks">når jeg mottar [flyttet høyre v]
 neste drakt
 </code></pre>

@@ -15,21 +15,27 @@ tilbake</a> og raskt repetere.</p>
 </section>
 <section class="activity" id="steg-1-hoyde-og-bredde">
 <h1 class="activity" id="steg-1-hoyde-og-bredde">Steg 1: Høyde og bredde</h1>
-<p>Lag et nytt python-program med følgende kode:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Lag et nytt python-program med følgende kode:</label></li>
+</ul>
 <pre><code class="python">HEIGHT = <span class="hljs-number">400</span>
 WIDTH = <span class="hljs-number">600</span>
 </code></pre>
-<p>Kjør programmet, og se hva som skjer. Du skal nå se et svart vindu som er 400
-piksler høyt, og 600 piksler bredt.</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Kjør programmet, og se hva som skjer. Du skal nå se et svart vindu som er 400
+piksler høyt, og 600 piksler bredt.</label></li>
+</ul>
 <p>En <strong>piksel</strong> er et lyspunkt på skjermen og nøyaktig hvor stort dette
 lyspunktet er avhenger av hvilken skjerm du har - dermed kan det være at
 vinduet får ulik størrelse på andre datamaskiner enn din egen.</p>
 </section>
 <section class="activity" id="steg-2-lag-en-ball">
 <h1 class="activity" id="steg-2-lag-en-ball">Steg 2: Lag en ball!</h1>
-<p>Vi skal nå lage en ball som vi kan vise på skjermen. Vi begynner med å lage en
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Vi skal nå lage en ball som vi kan vise på skjermen. Vi begynner med å lage en
 <code>Ball</code>-klasse, som har variablene <code>radius</code> og <code>color</code>, samt en posisjon
-bestående av <code>x</code> og <code>y</code>.</p>
+bestående av <code>x</code> og <code>y</code>.</label></li>
+</ul>
 <pre><code class="python">COLORS = {
     <span class="hljs-string">'red'</span>: (<span class="hljs-number">255</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
     <span class="hljs-string">'green'</span>: (<span class="hljs-number">0</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>),
@@ -47,9 +53,11 @@ bestående av <code>x</code> og <code>y</code>.</p>
 <p>Vi har her valgt å ha en rød ball, men du kan velge en annen farge fra
 <code>COLORS</code>-ordboka om du vil det. Husk at <code>//</code> betyr 'heltallsdivisjon', dvs at
 svaret rundes av nedover, slik at vi får et helt tall som svar.</p>
-<p>Vi må i tillegg ha en funksjon som kan tegne ballen vår. Denne skal vi kalle
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Vi må i tillegg ha en funksjon som kan tegne ballen vår. Denne skal vi kalle
 for <code>draw()</code>. Husk på at funksjonene som skal være en del av klassen må ha et
-innrykk. Vi må dermed endre på klassen, slik at den ser slik ut:</p>
+innrykk. Vi må dermed endre på klassen, slik at den ser slik ut:</label></li>
+</ul>
 <pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     radius = <span class="hljs-number">20</span>
     color = COLORS[<span class="hljs-string">'red'</span>]
@@ -78,11 +86,17 @@ vinduet.</p>
 </section>
 <section class="activity" id="steg-3-bevegelse">
 <h1 class="activity" id="steg-3-bevegelse">Steg 3: Bevegelse</h1>
-<p>Vi vil at ballen vår skal bevege seg. Hvordan skal vi få til dette? Vi lager
-funksjonen <code>update()</code>.</p>
-<p>Først må vi legge til et par variabler som bestemmer farten på ballen. Vi skal
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Vi vil at ballen vår skal bevege seg. Hvordan skal vi få til dette? Vi lager
+funksjonen <code>update()</code>.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Først må vi legge til et par variabler som bestemmer farten på ballen. Vi skal
 her ha en variabel for farten i y-retning, og en variabel for farten i
-x-retning.</p>
+x-retning.</label></p>
+</li>
+</ul>
 <pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     radius =  <span class="hljs-number">20</span>
     color = COLORS[<span class="hljs-string">'red'</span>]
@@ -91,9 +105,11 @@ x-retning.</p>
     speed_x = <span class="hljs-number">3</span>
     speed_y = <span class="hljs-number">3</span>
 </code></pre>
-<p>Så må vi lage en en funksjon <code>update()</code> som er en del av <code>Ball</code>. Denne sørger
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Så må vi lage en en funksjon <code>update()</code> som er en del av <code>Ball</code>. Denne sørger
 for at ballen beveger seg <code>speed_x</code> piksler i x-retningen, og <code>speed_y</code> i
-y-retningen.</p>
+y-retningen.</label></li>
+</ul>
 <pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     <span class="hljs-comment"># ...</span>
 
@@ -101,7 +117,9 @@ y-retningen.</p>
         self.x += self.speed_x
         self.y += self.speed_y
 </code></pre>
-<p>I tillegg må vi ha en global funksjon <code>update()</code> som kaller <code>ball1.update()</code>:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> I tillegg må vi ha en global funksjon <code>update()</code> som kaller <code>ball1.update()</code>:</label></li>
+</ul>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">()</span>:</span>
     ball1.update()
 </code></pre>
@@ -122,7 +140,9 @@ til når vi skal oppdage om ballen treffer veggen. Når ballen treffer den
 øverste eller den nederste veggen ønsker vi at farten reverseres i y-retning,
 det samme gjelder for farten i x-retning når vi treffer høyre eller venstre
 vegg.</p>
-<p>Vi må endre <code>update()</code>-funksjonen i <code>Ball</code>-klassen:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi må endre <code>update()</code>-funksjonen i <code>Ball</code>-klassen:</label></li>
+</ul>
 <pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     <span class="hljs-comment"># ...</span>
 
@@ -151,7 +171,9 @@ brukeren trykker på 'Pil opp' skal ballen gå raskere oppover (evt. mindre fort
 nedover), det motsatte skal skje om brukeren trykker 'Pil ned'. Det samme skal
 skje om brukeren trykker på 'Pil høyre' eller 'Pil venstre', men da skal
 fartsendringa skje i x-retning.</p>
-<p>For å få til dette skal vi lage en <code>on_key_down()</code>-funksjon i <code>Ball</code>-klassen:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> For å få til dette skal vi lage en <code>on_key_down()</code>-funksjon i <code>Ball</code>-klassen:</label></li>
+</ul>
 <pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ball</span>:</span>
     <span class="hljs-comment"># ...</span>
 
@@ -167,8 +189,10 @@ fartsendringa skje i x-retning.</p>
 </code></pre>
 <p>Legg merke til at funksjonen har et parameter, <code>key</code>, som brukes til å avgjøre
 hvilken tast brukeren trykket på.</p>
-<p>Vi trenger også en global <code>on_key_down()</code>-funksjon. Denne har også en
-<code>key</code>-parameter, som sendes videre til <code>ball1.on_key_down()</code>.</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Vi trenger også en global <code>on_key_down()</code>-funksjon. Denne har også en
+<code>key</code>-parameter, som sendes videre til <code>ball1.on_key_down()</code>.</label></li>
+</ul>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_down</span><span class="hljs-params">(key)</span>:</span>
     ball1.on_key_down(key)
 </code></pre>

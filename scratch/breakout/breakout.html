@@ -26,18 +26,18 @@ vil derfor fokusere på boksene i dette prosjektet, og spesielt
 diskutere hvordan man kan bruke kloner på en effektiv måte.</em></p>
 <section class="check" id="plan">
 <h2 class="check" id="plan">Plan</h2>
-<ul>
-<li>
-<p>Bokser ... Mange bokser!</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Bokser ... Mange bokser!</label></p>
 </li>
-<li>
-<p>En sprettende ball og en enkel racket</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> En sprettende ball og en enkel racket</label></p>
 </li>
-<li>
-<p>Boksene forsvinner ...</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Boksene forsvinner ...</label></p>
 </li>
-<li>
-<p>Fallende bokser, bonuser, flere brett og andre utfordringer</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Fallende bokser, bonuser, flere brett og andre utfordringer</label></p>
 </li>
 </ul>
 </section>
@@ -52,21 +52,21 @@ figur, både av utseendet og oppførselen. Her vil vi derfor først lage
 en boks, og deretter lage mange kopier av denne.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt. Slett kattefiguren.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Start et nytt prosjekt. Slett kattefiguren.</label></p>
 </li>
-<li>
-<p>Lag en boksfigur. Denne kan du tegne selv eller bruke <code>Button3</code> i
-biblioteket.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lag en boksfigur. Denne kan du tegne selv eller bruke <code>Button3</code> i
+biblioteket.</label></p>
 </li>
-<li>
-<p>Vi vil nå klone denne ene boksen mange ganger. For å lage flere
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Vi vil nå klone denne ene boksen mange ganger. For å lage flere
 rekker med bokser bruker vi to løkker. Vi trenger også å vite hvor
 mange bokser vi har slik at vi senere kan sjekke om vi har skutt ned
 alle. Lag derfor en variabel <code class="blockdata">Antall bokser</code> som gjelder
 for alle figurer. I denne koden må du kanskje endre de forskjellige
-tallene litt, slik at de passer størrelsen på din boks.</p>
+tallene litt, slik at de passer størrelsen på din boks.</label></p>
 <pre><code class="blocks">når jeg mottar [Nytt spill v]
 skjul
 sett [Antall bokser v] til [0]
@@ -82,11 +82,11 @@ gjenta (5) ganger
 slutt
 </code></pre>
 </li>
-<li>
-<p>Selve oppførselen til hver boks kan vi så kode i et eget skript som
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Selve oppførselen til hver boks kan vi så kode i et eget skript som
 starter når klonen lages. Siden vi enda ikke har en ball, lager vi
 et enkelt skript hvor hver boks (det vil her si alle boksene) blir
-borte når mellomrom trykkes.</p>
+borte når mellomrom trykkes.</label></p>
 <pre><code class="blocks">når jeg starter som klon
 vis
 vent til &lt;tast [mellomrom v] trykket?&gt;
@@ -110,29 +110,29 @@ blir som du hadde tenkt nesten med en gang.</em></p>
 en racket som kan ta i mot ballen.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en racket-figur. Tegn gjerne en selv, ellers kan du bruke for
-eksempel <code>Paddle</code> fra biblioteket.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Lag en racket-figur. Tegn gjerne en selv, ellers kan du bruke for
+eksempel <code>Paddle</code> fra biblioteket.</label></p>
 </li>
-<li>
-<p>Lag et skript som starter når det mottar <code>Nytt spill</code>. Dette
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Lag et skript som starter når det mottar <code>Nytt spill</code>. Dette
 skriptet må plassere racketen et passende sted nederst på
 skjermen. Deretter kan det gå inn i en løkke hvor racketen alltid
 flyttes sidelengs når <code>Pil venstre</code>- eller <code>Pil høyre</code>-tastene
-trykkes.</p>
+trykkes.</label></p>
 </li>
-<li>
-<p>Lag en ball-figur. Du kan enten finne en i biblioteket, eller
-tegne en selv.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag en ball-figur. Du kan enten finne en i biblioteket, eller
+tegne en selv.</label></p>
 </li>
-<li>
-<p>Vi vil ha muligheten til senere enkelt å endre hastigheten til
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi vil ha muligheten til senere enkelt å endre hastigheten til
 ballen. Lag derfor en ny variabel <code class="blockdata">hastighet</code> som
-gjelder for ball-figuren.</p>
+gjelder for ball-figuren.</label></p>
 </li>
-<li>
-<p>Lag et skript som starter på <code>Nytt spill</code>-meldingen. Først i
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag et skript som starter på <code>Nytt spill</code>-meldingen. Først i
 skriptet vil du plassere ballen slik at den hviler på racketen, og
 gi den en tilfeldig retning oppover (for eksempel mellom -45 og 45
 grader). Deretter kan ballen gå inn i en løkke som gjentas helt til
@@ -140,16 +140,16 @@ grader). Deretter kan ballen gå inn i en løkke som gjentas helt til
 et bra utgangspunkt, men dette vil variere avhengig av hvor du
 plasserer racketen og hvor stor ballen er). Inne i denne løkken vil
 du flytte ballen <code class="blockdata">hastighet</code> steg, og la den
-<code class="blockmotion">sprette tilbake ved kanten</code>.</p>
+<code class="blockmotion">sprette tilbake ved kanten</code>.</label></p>
 </li>
-<li>
-<p>Vi vil nå la ballen sprette på racketen. I løkken til racketen kan
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Vi vil nå la ballen sprette på racketen. I løkken til racketen kan
 du legge til en <code class="blockcontrol">hvis</code>-test hvor du sender en
-<code>Sprett horisontalt</code>-melding når ballen berører racketen.</p>
+<code>Sprett horisontalt</code>-melding når ballen berører racketen.</label></p>
 </li>
-<li>
-<p>Ballen må svare på denne meldingen ved å endre retning, for eksempel
-med kode som ser omtrent ut som følger:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Ballen må svare på denne meldingen ved å endre retning, for eksempel
+med kode som ser omtrent ut som følger:</label></p>
 <pre><code class="blocks">når jeg mottar [Sprett horisontalt v]
 pek i retning ((180) - (retning))
 </code></pre>
@@ -164,42 +164,42 @@ når de blir truffet av ballen. Samtidig skal ballen sprette når den
 treffer en boks.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi har jo allerede laget kode som får boksene til å forsvinne. Men
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Vi har jo allerede laget kode som får boksene til å forsvinne. Men
 inntil nå har boksene forsvunnet når vi trykker
 mellomrom-tasten. Endre denne koden slik at boksene i stedet
-forsvinner når de berører ballen.</p>
+forsvinner når de berører ballen.</label></p>
 </li>
-<li>
-<p>La også boksene sende ut en <code>Sprett horisontalt</code>--melding etter at
-de har berørt ballen, men før de (klonene) slettes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> La også boksene sende ut en <code>Sprett horisontalt</code>--melding etter at
+de har berørt ballen, men før de (klonene) slettes.</label></p>
 </li>
 </ul>
 <p>Prøv spillet ditt. Grunnmekanismene skal nå fungere.</p>
-<ul>
-<li>
-<p>For at spillet skal se litt bedre ut, kan du legge på en startmeny,
-kanskje med en stilig forside eller intro-animasjon?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> For at spillet skal se litt bedre ut, kan du legge på en startmeny,
+kanskje med en stilig forside eller intro-animasjon?</label></p>
 </li>
-<li>
-<p>Legg på passende lyd-effekter. Du bør ihvertfall spille av lyder når
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Legg på passende lyd-effekter. Du bør ihvertfall spille av lyder når
 ballen spretter på boksene, men tenk også over om det er andre
-hendelser hvor det passer å spille enkle lyder?</p>
+hendelser hvor det passer å spille enkle lyder?</label></p>
 </li>
-<li>
-<p>La også noe skje når du taper spillet. Det vil si når
-<code class="blockcontrol">gjenta til</code>-løkken på ballen er ferdig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> La også noe skje når du taper spillet. Det vil si når
+<code class="blockcontrol">gjenta til</code>-løkken på ballen er ferdig.</label></p>
 </li>
-<li>
-<p>Ved hjelp av <code class="blockdata">Antall bokser</code>-variabelen kan du også
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Ved hjelp av <code class="blockdata">Antall bokser</code>-variabelen kan du også
 sjekke om spilleren har klart å fjerne alle boksene og vinne
-spillet. Gi spilleren beskjed om at hun har vunnet!</p>
+spillet. Gi spilleren beskjed om at hun har vunnet!</label></p>
 </li>
-<li>
-<p>Tenk litt på hvordan du har lyst til å utvikle spillet
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Tenk litt på hvordan du har lyst til å utvikle spillet
 videre. Hvordan kan du gjøre det enda morsommere for deg og dine
-venner? I neste del finnes noen ideer.</p>
+venner? I neste del finnes noen ideer.</label></p>
 </li>
 </ul>
 </section>
@@ -211,44 +211,44 @@ men her er noen ideer som kan gjøre spillet enda morsommere å
 spille:</em></p>
 <section class="check" id="ideer-til-videreutvikling">
 <h2 class="check" id="ideer-til-videreutvikling">Ideer til videreutvikling</h2>
-<ul>
-<li>
-<p>Legg til en poeng-teller. Du må først bestemme hva spilleren skal få
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Legg til en poeng-teller. Du må først bestemme hva spilleren skal få
 poeng for, for eksempel at ballen treffer en boks. Deretter lager du
-en <code class="blockdata">Poeng</code>-variabel som du endrer etterhvert.</p>
+en <code class="blockdata">Poeng</code>-variabel som du endrer etterhvert.</label></p>
 </li>
-<li>
-<p>La hastigheten øke etterhvert i spillet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> La hastigheten øke etterhvert i spillet.</label></p>
 </li>
-<li>
-<p>En morsommere, og mer naturlig, sprett på racketen kan du få ved å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> En morsommere, og mer naturlig, sprett på racketen kan du få ved å
 ta hensyn til hvor på racketen ballen treffer. Dette kan du gjøre
 for eksempel ved å sammenligne <code>x</code>-posisjonen til ballen og
-racketen.</p>
+racketen.</label></p>
 </li>
-<li>
-<p>Hvis ballen treffer på siden av en boks burde den sprette på en
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Hvis ballen treffer på siden av en boks burde den sprette på en
 vertikal (stående) vegg i stedet for en horisontal (liggende). For å
 kode dette kan du lage en ny melding tilsvarende
 <code>Sprett horisontalt</code>. Tallet <code>180</code> i koden må byttes ut. Med hvilket
-tall da?</p>
+tall da?</label></p>
 </li>
-<li>
-<p>Kanskje du kan videreutvikle hele konseptet, slik at det er mulig å
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Kanskje du kan videreutvikle hele konseptet, slik at det er mulig å
 plukke opp power-ups etterhvert som man spiller. For eksempel noe
 som endrer hastigheten på ballen, endrer størrelsen på racketen, gir
-ekstra poeng eller kanskje lager litt skru på ballen.</p>
+ekstra poeng eller kanskje lager litt skru på ballen.</label></p>
 </li>
-<li>
-<p>I stedet for at boksene bare forsvinner når ballen treffer dem, kan
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> I stedet for at boksene bare forsvinner når ballen treffer dem, kan
 du la dem løsne og falle nedover. Videre kan spilleren få ekstra
 poeng eller bonuser om hun klarer å fange de fallende boksene med
-racketen.</p>
+racketen.</label></p>
 </li>
-<li>
-<p>Bruk forskjellige farger på boksene. På denne måten kan du lage
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Bruk forskjellige farger på boksene. På denne måten kan du lage
 brett som ser forskjellige ut. Du kan også la de forskjellige
-boksene gi forskjellige poeng eller bonuser.</p>
+boksene gi forskjellige poeng eller bonuser.</label></p>
 <p>En måte å designe slike brett på kan være ved å først lage de
 forskjellige boksene som forskjellige drakter. Deretter kan du
 lage en <code class="blockdata">brett</code>-variabel som lister opp hvilken

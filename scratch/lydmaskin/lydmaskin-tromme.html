@@ -8,13 +8,13 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Lydmaskin - Tromme</h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/lydmaskin/lydmaskin-tromme.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Importer en ny figur ved å velge <code>Ting/Drum1</code>. Gi den navnet <code>Tromme</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Importer en ny figur ved å velge <code>Ting/Drum1</code>. Gi den navnet <code>Tromme</code>.</label></p>
 </li>
-<li>
-<p>Vi vil at trommen skal lage lyd når vi klikker på den eller trykker
-på <code>mellomromstasten</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Vi vil at trommen skal lage lyd når vi klikker på den eller trykker
+på <code>mellomromstasten</code>.</label></p>
 <pre><code class="blocks">når denne figuren klikkes
 send melding [tromme v]
 
@@ -22,16 +22,16 @@ når [mellomrom v] trykkes
 send melding [tromme v]
 </code></pre>
 </li>
-<li>
-<p>Nå må vi lage lyd når den mottar <code>tromme</code>. Ved å endre tallet, kan
-du endre lyden trommen lager.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Nå må vi lage lyd når den mottar <code>tromme</code>. Ved å endre tallet, kan
+du endre lyden trommen lager.</label></p>
 <pre><code class="blocks">når jeg mottar [tromme v]
 trommeslag (48 v) som varer (0.2) takter
 </code></pre>
 </li>
-<li>
-<p>Prøv å endre utseende slik at man ser hvilket instrument som
-spiller.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Prøv å endre utseende slik at man ser hvilket instrument som
+spiller.</label></p>
 <pre><code class="blocks">når jeg mottar [tromme v]
 trommeslag (48 v) som varer (0.2) takter
 sett størrelse til (110) %

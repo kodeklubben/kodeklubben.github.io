@@ -14,8 +14,8 @@ function relative (url) {
 <h1 class="activity" id="hente-tekst-fra-brukeren">Hente tekst fra brukeren</h1>
 <section class="check" id="moduler-og-program">
 <h2 class="check" id="moduler-og-program">Moduler og program</h2>
-<ul>
-<li>Øverst i koden vår må vi si hvilke <em>moduler</em> vi skal bruke</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Øverst i koden vår må vi si hvilke <em>moduler</em> vi skal bruke</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input, button)
 <span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
@@ -25,19 +25,19 @@ function relative (url) {
 </section>
 <section class="check" id="modell-meldinger-og-oppdatering">
 <h2 class="check" id="modell-meldinger-og-oppdatering">Modell, meldinger og oppdatering</h2>
-<ul>
-<li>Vi oppretter programmet vårt med en <em>modell</em> som inneholder data (<code>model</code>), et <em>brukergrensesnitt</em> hvor vi viser frem data (<code>view</code>) og en funksjon for <em>oppdatering</em> av data (<code>update</code>). Vi kommer tilbake til hvordan vi oppretter disse, skriv inn følgende i koden:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Vi oppretter programmet vårt med en <em>modell</em> som inneholder data (<code>model</code>), et <em>brukergrensesnitt</em> hvor vi viser frem data (<code>view</code>) og en funksjon for <em>oppdatering</em> av data (<code>update</code>). Vi kommer tilbake til hvordan vi oppretter disse, skriv inn følgende i koden:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-title">main</span> =
   beginnerProgram { model = <span class="hljs-string">""</span>, view = view, update = update }
 </code></pre>
-<ul>
-<li>Så trenger vi å si hva slags <em>meldinger</em> (<code>Msg</code>) vi skal sende i programmet. Til å begynne med har vi bare én meldingstype, og det er meldingen som sendes når brukeren endrer teksten i input-feltet, her kaller vi den for <code>Endre</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Så trenger vi å si hva slags <em>meldinger</em> (<code>Msg</code>) vi skal sende i programmet. Til å begynne med har vi bare én meldingstype, og det er meldingen som sendes når brukeren endrer teksten i input-feltet, her kaller vi den for <code>Endre</code>.</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">type</span> <span class="hljs-type">Msg</span> = <span class="hljs-type">Endre</span> <span class="hljs-type">String</span>
 </code></pre>
-<ul>
-<li>Etter det må vi skrive hva som skal skje når teksten oppdateres med en <em>update</em>-funksjon:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Etter det må vi skrive hva som skal skje når teksten oppdateres med en <em>update</em>-funksjon:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-title">update</span> msg model =
   <span class="hljs-keyword">case</span> msg <span class="hljs-keyword">of</span>
@@ -49,13 +49,13 @@ function relative (url) {
 </section>
 <section class="check" id="skriv-ut-teksten">
 <h2 class="check" id="skriv-ut-teksten">Skriv ut teksten</h2>
-<ul>
-<li>Til slutt må vi ha et sted som viser teksten, da bruker vi et <em>view</em>:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Til slutt må vi ha et sted som viser teksten, da bruker vi et <em>view</em>:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-title">view</span> model =
   div []
     [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
-    , div [ ] [ text model ]
+    , div - [ ] [ text model ]
     ]
 </code></pre>
 <p><code>input [ placeholder &quot;Baklengstekst&quot;, onInput Endre ] []</code> er det som blir til et input-felt. Teksten etter <code>placeholder</code> sier hva som skal stå i feltet før brukeren skriver inn noe. <code>onInput</code> sier hva som skal skje når brukeren skriver inn tekst. I vårt tilfelle sender vi en <code>Endre</code>-melding som hentes inn i <code>update</code>-funksjonen. Når brukeren skriver inn &quot;Teodor&quot;, sendes en melding av typen <code>Endre &quot;Teodor&quot;</code> inn i <code>update</code>-funksjonen.</p>
@@ -85,7 +85,7 @@ function relative (url) {
 <span class="hljs-title">view</span> model =
   div []
     [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
-    , div [ ] [ text model ]
+    , div - [ ] [ text model ]
     ]
 </code></pre>
 <section class="protip" id="kommentarer">
@@ -141,8 +141,8 @@ function relative (url) {
   div []
     [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
     , button [ onClick (<span class="hljs-type">LeggTil</span> model.tekst) ] [ text <span class="hljs-string">"Legg til"</span> ]
-    , div [ ] [ text model.tekst ]
-    , div [ ] [ text model.setning ]
+    , div - [ ] [ text model.tekst ]
+    , div - [ ] [ text model.setning ]
     ]
 </code></pre>
 <p><code>onClick</code> bestemmer hva som skal skje når brukeren trykker på knappen. Her <em>kaller</em> vi funksjonen <code>LeggTil</code> og sender med teksten som ligger i modellen vi lagde tidligere.</p>
@@ -181,17 +181,17 @@ function relative (url) {
   div []
     [ input [ placeholder <span class="hljs-string">"Baklengstekst"</span>, onInput <span class="hljs-type">Endre</span> ] []
     , button [ onClick (<span class="hljs-type">LeggTil</span> model.tekst) ] [ text <span class="hljs-string">"Legg til"</span> ]
-    , div [ ] [ text model.tekst ]
-    , div [ ] [ text model.setning ]
+    , div - [ ] [ text model.tekst ]
+    , div - [ ] [ text model.setning ]
     ]
 </code></pre>
 </section>
 <section class="try" id="ting-du-kan-prove">
 <h2 class="try" id="ting-du-kan-prove">Ting du kan prøve</h2>
-<ul>
-<li>Utvid nettsiden med en knapp som snur alle ordene i setningen tilbake til rett vei</li>
-<li>Tekst kan manipuleres med mange forskjellige innebygde funksjoner som <code>String.repeat</code> (gjenta en tekst), <code>String.toUpper</code> (gjør alle BOKSTAVENE TIL STORE BOKSTAVER)</li>
-<li>Se full liste av hva man kan gjøre med tekst <a href="http://package.elm-lang.org/packages/elm-lang/core/5.1.1/String">i dokumentasjonen (på engelsk)</a></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Utvid nettsiden med en knapp som snur alle ordene i setningen tilbake til rett vei</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Tekst kan manipuleres med mange forskjellige innebygde funksjoner som <code>String.repeat</code> (gjenta en tekst), <code>String.toUpper</code> (gjør alle BOKSTAVENE TIL STORE BOKSTAVER)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Se full liste av hva man kan gjøre med tekst <a href="http://package.elm-lang.org/packages/elm-lang/core/5.1.1/String">i dokumentasjonen (på engelsk)</a></label></li>
 </ul>
 </section>
 </section>
@@ -199,8 +199,8 @@ function relative (url) {
 <h1 class="activity" id="fargevelger">Fargevelger</h1>
 <p>Det finnes mange forskjellige type input-felter. Til nå har vi sett på tekst-input, men vi har også muligheten til å bare ta inn tall. I denne oppgaven skal vi lage en fargevelger. Farger på nettsider defineres som oftest i grader av rød, grønn og blå. Hver farge har en verdi fra 0 til 255.</p>
 <p>Vi skal lagre tre verdier i modellen vår, rød, grønn og blå i feltene <code>rod</code>, <code>gronn</code> og <code>blaa</code>.</p>
-<ul>
-<li>Legg til det første feltet i modellen vår, <code>rod</code>:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Legg til det første feltet i modellen vår, <code>rod</code>:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)
 <span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
@@ -216,14 +216,14 @@ function relative (url) {
     rod = <span class="hljs-string">""</span>
   }
 </code></pre>
-<ul>
-<li>Lagre rødstyrken fra en input, men begrens rekkevidden fra 0 til 255 med <code>Html.Attributes.min</code> og <code>Html.Attributes.max</code>:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Lagre rødstyrken fra en input, men begrens rekkevidden fra 0 til 255 med <code>Html.Attributes.min</code> og <code>Html.Attributes.max</code>:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-title">input</span> [ type_ "number", <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.min "0", <span class="hljs-type">Html</span>.<span class="hljs-type">Attributes</span>.max "255" ] []
 </code></pre>
 <p>Vi trenger også å håndtere bruker-input, slik som i forrige oppgave</p>
-<ul>
-<li>Legg til koden som mangler:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Legg til koden som mangler:</label></li>
 </ul>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (<span class="hljs-type">Html</span>, <span class="hljs-type">Attribute</span>, beginnerProgram, text, div, input)
 <span class="hljs-keyword">import</span> Html.Attributes <span class="hljs-keyword">exposing</span> (..)
@@ -255,18 +255,18 @@ function relative (url) {
     , div [] [ text model.rod ]
     ]
 </code></pre>
-<ul>
-<li>Legg til input-felter for de to andre fargene, og meldingene <code>EndreGronn</code> og <code>EndreBlaa</code></li>
-<li>Oppdater <code>rgb(255, 255, 255)</code> slik at den bruker verdiene for rød, grønn og blå fra modellen vår (hint: slå sammen tekst)</li>
-<li>Bytt ut number-input med <code>range</code>, og se hva som skjer!</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Legg til input-felter for de to andre fargene, og meldingene <code>EndreGronn</code> og <code>EndreBlaa</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Oppdater <code>rgb(255, 255, 255)</code> slik at den bruker verdiene for rød, grønn og blå fra modellen vår (hint: slå sammen tekst)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Bytt ut number-input med <code>range</code>, og se hva som skjer!</label></li>
 </ul>
 <section class="check" id="innebygd-fargevelger">
 <h2 class="check" id="innebygd-fargevelger">Innebygd fargevelger</h2>
 <p><figure><img src="colors.gif" alt=""></figure></p>
 <p>Chrome, Edge, Firefox og Opera er nettlesere som kommer med innebygd fargevelger. Fargevelger er også en type input-felt.</p>
-<ul>
-<li>Lag en ny type input på nettsiden, som bruker fargevelger-type istedenfor <code>range</code> (hint: på engelsk er farge <code>color</code>)</li>
-<li>Bytt ut verdien for <code>background</code> med fargen fra fargevelgeren (husk å legge til fargen i modellen og i <code>update</code>)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Lag en ny type input på nettsiden, som bruker fargevelger-type istedenfor <code>range</code> (hint: på engelsk er farge <code>color</code>)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut verdien for <code>background</code> med fargen fra fargevelgeren (husk å legge til fargen i modellen og i <code>update</code>)</label></li>
 </ul>
 </section>
 </section>

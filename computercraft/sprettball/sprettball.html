@@ -20,21 +20,21 @@ reklamebannere?</p>
 datamaskin og se om vi får til å skrive noe på skjermen.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Bygg en <strong>Computer</strong>. Du kan også bruke en <strong>Advanced Computer</strong> om
-du foretrekker det.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Bygg en <strong>Computer</strong>. Du kan også bruke en <strong>Advanced Computer</strong> om
+du foretrekker det.</label></p>
 </li>
-<li>
-<p>Bygg så en <strong>Monitor</strong> inntil datamaskinen du nettopp bygget,
-omtrent som på bildet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Bygg så en <strong>Monitor</strong> inntil datamaskinen du nettopp bygget,
+omtrent som på bildet.</label></p>
 <p><figure><img src="enkelskjerm.png" alt=""></figure></p>
 </li>
-<li>
-<p>Start datamaskinen. Den enkleste måten å skrive noe til skjermen er
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Start datamaskinen. Den enkleste måten å skrive noe til skjermen er
 ved hjelp av programmet <code>monitor</code>. Om du skriver <code>help monitor</code> vil
 du kunne lese at <code>monitor</code> kan kjøre andre programmer på en
-tilkoblet skjerm.</p>
+tilkoblet skjerm.</label></p>
 <p>La oss for eksempel prøve programmet <code>hello</code>. Dette er et enkelt
 program som vi såvidt har sett litt på tidligere. Det skriver bare
 teksten <em>Hello World!</em>. Kjør først programmet på datamaskinen:</p>
@@ -50,18 +50,18 @@ over) skriver vi bare</p>
 skjermen. Står det <em>Hello World!</em>?</p>
 <p><figure><img src="helloworld_liten.png" alt=""></figure></p>
 </li>
-<li>
-<p>Kult! Da er vi igang med skjermene! Men - det ble jo veldig dårlig
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kult! Da er vi igang med skjermene! Men - det ble jo veldig dårlig
 plass på den skjermen! Det er det heldigvis lett å gjøre noe med. Om
 du setter en <strong>Monitor</strong> ved siden av den du allerede har vil de to
 skjermene smelte sammen til en større skjerm. På denne måten kan du
 lage en stor skjerm! Prøv å kjør <code>hello</code>-programmet på den store
-skjermen.</p>
+skjermen.</label></p>
 <p><figure><img src="helloworld_stor.png" alt=""></figure></p>
 </li>
-<li>
-<p>Trikset med <code>monitor</code> fungerer selvsagt også med programmer vi
-skriver selv. La oss lage et enkelt program som vi kaller <code>ku</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Trikset med <code>monitor</code> fungerer selvsagt også med programmer vi
+skriver selv. La oss lage et enkelt program som vi kaller <code>ku</code>:</label></p>
 <pre><code class="lua"><span class="hljs-built_in">print</span>(<span class="hljs-string">"^__^"</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">"(oo)_______"</span>)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">"(__)       )"</span>)
@@ -72,8 +72,8 @@ skriver selv. La oss lage et enkelt program som vi kaller <code>ku</code>:</p>
 kan også gjerne tegne noe helt annet. Vi vil bare teste at også
 vårt eget program kan skrives på skjemen.</p>
 </li>
-<li>
-<p>Nå kan vi kjøre programmet: <code>monitor right ku</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Nå kan vi kjøre programmet: <code>monitor right ku</code>.</label></p>
 <p><figure><img src="ku.png" alt=""></figure></p>
 </li>
 </ul>
@@ -95,30 +95,30 @@ lager. Dette er ganske enkelt med et bibliotek som heter <code>peripheral</code>
 et tillegg til datamaskinen).</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag et enkelt program som heter <code>skjerm</code> og ser slik ut:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lag et enkelt program som heter <code>skjerm</code> og ser slik ut:</label></p>
 <pre><code class="lua">skjerm = peripheral.<span class="hljs-built_in">wrap</span>(<span class="hljs-string">"right"</span>)
 skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"Heisann!"</span>)
 </code></pre>
 <p>Som vanlig kan du bytte ut <em>right</em> med for eksempel <em>left</em> eller
 <em>top</em> om du har plassert skjermen annerledes.</p>
 </li>
-<li>
-<p>Kjør programmet ditt ved å skrive <code>skjerm</code>. Selv uten <code>monitor</code> skal
-programmet skrive til skjermen ved siden av datamaskinen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Kjør programmet ditt ved å skrive <code>skjerm</code>. Selv uten <code>monitor</code> skal
+programmet skrive til skjermen ved siden av datamaskinen.</label></p>
 </li>
-<li>
-<p>I stedet for <code>peripheral.wrap</code> kan vi bruke <code>peripheral.find</code>. Da
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> I stedet for <code>peripheral.wrap</code> kan vi bruke <code>peripheral.find</code>. Da
 trenger vi ikke å spesifisere hvilken side av datamaskinen skjermen
-er på. Endre programmet ditt som følger:</p>
+er på. Endre programmet ditt som følger:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)     <span class="hljs-comment">-- endret linje</span>
 skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"Heisann!"</span>)
 </code></pre>
 </li>
-<li>
-<p>Vi kan også sjekke om det er noen skjerm koblet til. Dette gjør vi
-enkelt i en <em>if</em>-test:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Vi kan også sjekke om det er noen skjerm koblet til. Dette gjør vi
+enkelt i en <em>if</em>-test:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>                                <span class="hljs-comment">-- ny linje</span>
@@ -140,12 +140,12 @@ er koblet til når du prøver å kjøre programmet ditt?</p>
 <p>Vi skal nå begynne på en enkel animasjon som vi kan kjøre på skjermen.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag et nytt program som heter <code>sprettball</code>. Det begynner ganske likt
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag et nytt program som heter <code>sprettball</code>. Det begynner ganske likt
 programmet vi jobbet med tidligere, så om du vil kan du kopiere det
 ved å skrive <code>copy skjerm sprettball</code>. Programmet <code>sprettball</code> skal
-se ut som følger:</p>
+se ut som følger:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
@@ -157,9 +157,9 @@ se ut som følger:</p>
 </code></pre>
 <p>Dette skal tegne en ball øverst på skjermen.</p>
 </li>
-<li>
-<p>Vi kan nå bruke en enkel <em>for</em>-løkke til å animere ballen. Endre
-koden din:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi kan nå bruke en enkel <em>for</em>-løkke til å animere ballen. Endre
+koden din:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
@@ -177,12 +177,12 @@ koden din:</p>
 <code>sleep</code>-kommando som bare venter litt (1-tallet betyr 1 sekund)
 mellom hver gang ballen flyttes.</p>
 </li>
-<li>
-<p>Dette er ikke så spennende enda, men før vi lager noe mer avansert
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Dette er ikke så spennende enda, men før vi lager noe mer avansert
 vil vi gjøre en liten omstrukturering av koden, som gjør det enklere
 for oss å holde oversikten senere. Vi flytter alt som har med
 animering av ballen inn i en egen funksjon <code>tegnBall</code>. Flytt
-kodelinjene rundt slik at de blir som dette:</p>
+kodelinjene rundt slik at de blir som dette:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>                     <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, <span class="hljs-number">10</span> <span class="hljs-keyword">do</span>                        <span class="hljs-comment">-- flyttet linje</span>
         skjerm.clear()                        <span class="hljs-comment">-- flyttet linje</span>
@@ -213,11 +213,11 @@ slik at du får en veldig høy skjerm vil ikke ballen i
 kan vi løse ved å bruke funksjonen <code>getSize</code>.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Funksjonen <code>getSize</code> forteller oss hvor bred og hvor høy skjermen
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Funksjonen <code>getSize</code> forteller oss hvor bred og hvor høy skjermen
 er. Endre funksjonen <code>tegnBall</code> slik at ballen faller over hele
-skjermen:</p>
+skjermen:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()    <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">for</span> rad = <span class="hljs-number">1</span>, hoyde <span class="hljs-keyword">do</span>                     <span class="hljs-comment">-- endret linje</span>
@@ -229,13 +229,13 @@ skjermen:</p>
 <span class="hljs-keyword">end</span>
 </code></pre>
 </li>
-<li>
-<p>Prøv å lag skjermen høyere eller lavere. Faller ballen hele veien
-ned når du kjører programmet ditt?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Prøv å lag skjermen høyere eller lavere. Faller ballen hele veien
+ned når du kjører programmet ditt?</label></p>
 </li>
-<li>
-<p>Klarer du å sentrere ballen, slik at den faller nedover midt på
-skjermen uansett hvor stor skjermen er? Prøv selv!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Klarer du å sentrere ballen, slik at den faller nedover midt på
+skjermen uansett hvor stor skjermen er? Prøv selv!</label></p>
 </li>
 </ul>
 </section>
@@ -248,11 +248,11 @@ betegne hvor ballen er, mens <code>fartX</code> og <code>fartY</code> forteller 
 ballen flytter på seg.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>I tillegg til de nye variablene bytter vi ut <em>for</em>-løkken med en
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> I tillegg til de nye variablene bytter vi ut <em>for</em>-løkken med en
 <em>while</em>-løkke. Denne gjør at ballen skal sprette for alltid. Husk at
-du bruker <code>Ctrl-T</code> for å avslutte programmet.</p>
+du bruker <code>Ctrl-T</code> for å avslutte programmet.</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
     <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>                         <span class="hljs-comment">-- ny linje</span>
@@ -264,17 +264,17 @@ du bruker <code>Ctrl-T</code> for å avslutte programmet.</p>
         skjerm.<span class="hljs-built_in">write</span>(<span class="hljs-string">"O"</span>)
         sleep(<span class="hljs-number">1</span>)
 
-        X = X + fartX                         <span class="hljs-comment">-- ny linje</span>
-        Y = Y + fartY                         <span class="hljs-comment">-- ny linje</span>
+        X = X - [ ] fartX                         <span class="hljs-comment">-- ny linje</span>
+        Y = Y - [ ] fartY                         <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
 <p>Ballen vil nå bevege seg på skrå over skjermen. Ser du hvorfor?</p>
 </li>
-<li>
-<p>Vi vil nå la ballen sprette når den treffer kanten. Dette gjør vi
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Vi vil nå la ballen sprette når den treffer kanten. Dette gjør vi
 ved å &quot;snu farten&quot; når vi beveger oss ut av skjermen. Legg til et
-par tester nederst i funksjonen din:</p>
+par tester nederst i funksjonen din:</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
     <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
@@ -303,11 +303,11 @@ gjerne en ganske stor skjerm. Du kan også endre pausen mellom hver
 gang ballen flytter seg. For eksempel bytt ut <code>sleep(1)</code> med
 <code>sleep(0.1)</code>.</p>
 </li>
-<li>
-<p>Tilslutt kan vi lage en mer naturlig sprettball-bevegelse ved å ta
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Tilslutt kan vi lage en mer naturlig sprettball-bevegelse ved å ta
 med en variabel for gravitasjon. Vi kan tenke at gravitasjonen gjør
 at ballen faller stadig raskere ned mot bakken, altså den øker
-<code>fartY</code>.</p>
+<code>fartY</code>.</label></p>
 <pre><code class="lua"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegnBall</span><span class="hljs-params">(skjerm)</span></span>
     <span class="hljs-keyword">local</span> bredde, hoyde = skjerm.getSize()
     <span class="hljs-keyword">local</span> X, Y = <span class="hljs-number">1</span>, <span class="hljs-number">2</span>
@@ -347,10 +347,10 @@ kan bruke skjermene til å lage enkle tekstplakater eller
 reklamebannere.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag et nytt program som du kaller <code>reklame</code>. Vi begynner helt enkelt
-med kommandoer du allerede kjenner:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lag et nytt program som du kaller <code>reklame</code>. Vi begynner helt enkelt
+med kommandoer du allerede kjenner:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
 <span class="hljs-keyword">if</span> skjerm <span class="hljs-keyword">then</span>
@@ -363,10 +363,10 @@ med kommandoer du allerede kjenner:</p>
 </code></pre>
 <p>Kjør programmet. Skriver det til skjermen som det skal?</p>
 </li>
-<li>
-<p>Et problem hvis dette skal være et reklamebanner er at teksten er
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Et problem hvis dette skal være et reklamebanner er at teksten er
 alt for liten! Du må jo nesten gå helt fram til skjermen for å kunne
-lese den.</p>
+lese den.</label></p>
 <p>For skjermer kan vi bruke <code>setTextScale</code> for å endre
 tekststørrelsen.  Legg til linjen</p>
 <pre><code class="lua">skjerm.setTextScale(<span class="hljs-number">3</span>)
@@ -379,15 +379,15 @@ teksten. Her kan vi bruke tall mellom 0.5 og 5, hvor 5 gir oss den
 største mulige teksten. Etter at vi har brukt <code>setTextScale</code> må vi
 bruke <code>clear</code> før tekststørrelsen blir oppdatert.</p>
 </li>
-<li>
-<p>Prøv å endre verdien i <code>setTextScale</code>. Forandrer størrelsen på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Prøv å endre verdien i <code>setTextScale</code>. Forandrer størrelsen på
 teksten seg? Hva skjer hvis du bruker et tall større enn 5? Eller
-mindre enn 0.5?</p>
+mindre enn 0.5?</label></p>
 </li>
-<li>
-<p>Vi vil nå la programmet selv bestemme tekststørrelsen. Siden vi vil
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Vi vil nå la programmet selv bestemme tekststørrelsen. Siden vi vil
 at dette skal være en reklameplakat ønsker vi at teksten skal være
-så stor som mulig.</p>
+så stor som mulig.</label></p>
 <p>En måte å gjøre dette på er å lage en løkke hvor vi tester alle
 tekststørrelsene fra størst til minst, helt til vi finner en
 størrelse hvor all teksten får plass på skjermen.</p>
@@ -420,20 +420,20 @@ tekststørrelser når vi finner en som passer. Tidligere har vi
 brukt <code>break</code> for å for eksempel avslutte <code>skattejakt</code> når man
 fant skatten.</p>
 </li>
-<li>
-<p>Nå vil vi bruke denne funksjonen for å sette tekststørrelsen. Prøv
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Nå vil vi bruke denne funksjonen for å sette tekststørrelsen. Prøv
 selv om du finner ut hvor og hvordan funksjonen bør kalles! Skal
 noen av de opprinnelige linjene slettes? Sjekk om programmet ditt
 virker ved å endre størrelsen på skjermen (bygg eller ødelegg noen
-enkeltskjermer) og kjøre det på nytt.</p>
+enkeltskjermer) og kjøre det på nytt.</label></p>
 </li>
-<li>
-<p>En ting du kanskje ser er at du må skrive teksten som skal stå på
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> En ting du kanskje ser er at du må skrive teksten som skal stå på
 skjermen to ganger? Først for at <code>brukStorTekst</code> trenger den for å
 finne riktig størrelse på skjermen, og deretter for at
 <code>skjerm.write</code> skal skrive den til skjermen. Da er det lurt å i
 stedet lage en variabel. Med denne variabelen vil koden din (under
-funksjonen <code>brukStorTekst</code>) se omtrent slik ut:</p>
+funksjonen <code>brukStorTekst</code>) se omtrent slik ut:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"ComputerCraft"</span>
 <span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
@@ -471,10 +471,10 @@ animerer teksten slik at den ruller over skjermen.</p>
 </section>
 <section class="check" id="sjekkliste-7">
 <h1 class="check" id="sjekkliste-7">Sjekkliste</h1>
-<ul>
-<li>
-<p>Lag et nytt program som heter <code>ticker</code>. Vi begynner programmet på en
-velkjent måte:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Lag et nytt program som heter <code>ticker</code>. Vi begynner programmet på en
+velkjent måte:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
 <span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
@@ -492,12 +492,12 @@ velkjent måte:</p>
 vil bruke så stor tekst som mulig. Hva skjer når du kjører dette
 programmet?</p>
 </li>
-<li>
-<p>I stedet for å prøve å skrive hele teksten til skjermen vil vi nå
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> I stedet for å prøve å skrive hele teksten til skjermen vil vi nå
 bare skrive så mye tekst som faktisk får plass. Da bruker vi igjen
 <code>skjerm.getSize()</code> for å finne ut hvor stor skjermen er. Videre vil
 vi bruke funksjonen <code>string.sub</code> i <code>string</code>-biblioteket (<em>sub</em> betyr
-i denne sammenhengen <em>del</em>, den brukes til å finne deltekster).</p>
+i denne sammenhengen <em>del</em>, den brukes til å finne deltekster).</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
 <span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
@@ -518,8 +518,8 @@ deltekst fra <code>tekst</code> fra tegn nummer <code>1</code> til tegn nummer
 <code>bredde</code>. Prøv å endre på disse tallene for å se effekten, slik at
 du skjønner hvordan denne funksjonen virker.</p>
 </li>
-<li>
-<p>Vi kan nå animere teksten ved hjelp av en <em>for</em>-løkke.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Vi kan nå animere teksten ved hjelp av en <em>for</em>-løkke.</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> tekst = <span class="hljs-string">"Jeg er en lang tekst. Bytt meg gjerne ut!"</span>
 <span class="hljs-keyword">local</span> skjerm = peripheral.find(<span class="hljs-string">"monitor"</span>)
 
@@ -543,22 +543,22 @@ du skjønner hvordan denne funksjonen virker.</p>
 <p>Skjønner du hvordan tellevariabelen <code>i</code> virker? Enkelt sagt teller
 den hvor langt fra det første tegnet i teksten vi har kommet.</p>
 </li>
-<li>
-<p>Kjør programmet. Ser du animasjonen? Hvis du bare ser slutten av
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Kjør programmet. Ser du animasjonen? Hvis du bare ser slutten av
 teksten på skjermen er det fordi datamaskinen animerer for
 raskt. Prøv å legg inn en <code>sleep</code>-kommando nederst i
-<em>for</em>-løkken. Ble det bedre nå?</p>
+<em>for</em>-løkken. Ble det bedre nå?</label></p>
 </li>
-<li>
-<p>Hvis dette skal være en ticker som står og går vil vi at teksten
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Hvis dette skal være en ticker som står og går vil vi at teksten
 skal rullere hele tiden, ikke bare en gang. Prøv også å lag en
 <code>while true do</code>-løkke rundt <em>for</em>-løkken. Gjentas animasjonen? Husk
-at du kan bruke <code>Ctrl-T</code> for å stoppe programmet ditt.</p>
+at du kan bruke <code>Ctrl-T</code> for å stoppe programmet ditt.</label></p>
 </li>
-<li>
-<p>Når animasjonen kommer til slutten av teksten, bare hopper den rett
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Når animasjonen kommer til slutten av teksten, bare hopper den rett
 til begynnelsen igjen. Dette ser ikke så bra ut. Vi kan forbedre
-dette ved å legge på litt luft før og etter teksten.</p>
+dette ved å legge på litt luft før og etter teksten.</label></p>
 <p>Hvor mye luft vi legger på vil ideelt sett avhenge av hvor stor
 skjermen er. Til dette kan vi bruke <code>string.rep</code> som kan repetere
 tekststrenger. For eksempel er <code>string.rep(&quot;Hei&quot;, 4)</code> det samme

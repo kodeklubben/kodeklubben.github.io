@@ -24,35 +24,35 @@ function relative (url) {
 Denne figuren er tilnærmet lik en likebeint trekant</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Start et nytt prosjekt.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt prosjekt.</label></p>
 </li>
-<li>
-<p>Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Slett kattefiguren ved å høyreklikke på den og velge <code>slett</code>.</label></p>
 </li>
-<li>
-<p>Legg til en ny figur. Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen og velg trollmannshatten. Vi har brukt <code>Ting/Wizard Hat</code>-figuren.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Legg til en ny figur. Klikk på <img src="../bilder/hent-fra-bibliotek.png" alt="Velg figur fra biblioteket">-knappen og velg trollmannshatten. Vi har brukt <code>Ting/Wizard Hat</code>-figuren.</label></p>
 </li>
-<li>
-<p>Gi den nye figuren navnet <code>Hattulf</code> ved å klikke på <code>i</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Gi den nye figuren navnet <code>Hattulf</code> ved å klikke på <code>i</code>.</label></p>
 </li>
-<li>
-<p>Før vi begynner med selve oppgaven, skal vi legge inn en liten hjelpefunksjon om noe uventet skulle skje:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Før vi begynner med selve oppgaven, skal vi legge inn en liten hjelpefunksjon om noe uventet skulle skje:</label></p>
 <pre><code class="blocks">når [n v] trykkes
 vis
 pek i retning [90 v]
 gå til x: (0) y: (0)
 </code></pre>
 </li>
-<li>
-<p>Skulle noe uventet skje nå, trenger du bare å trykke på tasten N på tastaturet, så vil Hattulf gå tilbake til utgangspunktet, slik at du kan prøve på nytt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Skulle noe uventet skje nå, trenger du bare å trykke på tasten N på tastaturet, så vil Hattulf gå tilbake til utgangspunktet, slik at du kan prøve på nytt.</label></p>
 </li>
 </ul>
 <p>Vi skal nå gi Scratch beskjed om å <code class="blockmotion">rotere</code> hatten 90 grader.</p>
-<ul>
-<li>
-<p>Legg til følgende skript på <code>Hattulf</code>-figuren din.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Legg til følgende skript på <code>Hattulf</code>-figuren din.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vend høyre (90) grader
 </code></pre>
@@ -62,19 +62,19 @@ vend høyre (90) grader
 <section class="flag" id="test-prosjektet">
 <h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Hva skjer når du trykker på det grønne flagget?</li>
-<li>Roterer hatten som forventet?</li>
-<li>Hva tror du skjer om du trykker på det grønne flagget en gang til? I hvilken retning vil toppen av hatten peke?</li>
-<li>Hvor mange ganger må du be hatten om å rotere før den er tilbake til utgangspunktet?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Hva skjer når du trykker på det grønne flagget?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Roterer hatten som forventet?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hva tror du skjer om du trykker på det grønne flagget en gang til? I hvilken retning vil toppen av hatten peke?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Hvor mange ganger må du be hatten om å rotere før den er tilbake til utgangspunktet?</label></li>
 </ul>
 </section>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <p>Rotasjon er jo gøy! Men at ting roterer med 90 grader av gangen er jo litt kjedelig, og litt unaturlig.</p>
-<ul>
-<li>
-<p>Halver antall grader hatten skal rotere per gang:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Halver antall grader hatten skal rotere per gang:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 vend høyre (45) grader
 </code></pre>
@@ -84,9 +84,9 @@ vend høyre (45) grader
 <section class="flag" id="test-prosjektet-2">
 <h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
 <p><strong>Klikk på det grønne flagget.</strong></p>
-<ul>
-<li>Hvor mange ganger må du trykke på hatten for at den skal rotere hele veien rundt nå?</li>
-<li>Fortsett å halvere antall grader hatten skal rotere. Prøv å finne en sammenheng mellom hvor mange grader den roteres, og hvor mange ganger du må trykke på det grønne flagget for at den skal roteres helt rundt.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Hvor mange ganger må du trykke på hatten for at den skal rotere hele veien rundt nå?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Fortsett å halvere antall grader hatten skal rotere. Prøv å finne en sammenheng mellom hvor mange grader den roteres, og hvor mange ganger du må trykke på det grønne flagget for at den skal roteres helt rundt.</label></li>
 </ul>
 <p>Du oppdager kanskje at det begynner å bli veldig mange klikk etterhvert?</p>
 </section>
@@ -96,26 +96,26 @@ vend høyre (45) grader
 <p>Heldigvis kan vi ved hjelp av litt programmeringsmagi få datamaskinen til å gjøre jobben for oss!</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi legger til en <code class="blockcontrol">styring</code>-kloss som ber hatten om å rotere et bestemt antall ganger:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vi legger til en <code class="blockcontrol">styring</code>-kloss som ber hatten om å rotere et bestemt antall ganger:</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gjenta (8) ganger
 vend høyre (45) grader
 </code></pre>
 </li>
-<li>
-<p>Tips: For hver gang du halverer vinkelen, må du doble antall repetisjoner for at hatten skal snurre like langt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Tips: For hver gang du halverer vinkelen, må du doble antall repetisjoner for at hatten skal snurre like langt.</label></p>
 </li>
 </ul>
 </section>
 </section>
 <section class="activity" id="steg-3-the-final-countdown">
 <h1 class="activity" id="steg-3-the-final-countdown">Steg 3: The final countdown</h1>
-<ul>
-<li>
-<p>Du vet kanskje at vi vanligvis omtaler en sirkel som 360 grader. Hvis du fortsetter å halvere antall grader forbi 1,40625, vil du oppdage at gradene blir mindre enn 1, og vi må gjenta roteringen 512 ganger. Selv om dette selvfølgelig er mulig, og absolutt nødvendig i enkelte sammenhenger, er det ikke nøvendig for oss nå.
-Vi tar derfor en snarvei her, og røper at Hattulf skal rotere 1 grad 360 ganger.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Du vet kanskje at vi vanligvis omtaler en sirkel som 360 grader. Hvis du fortsetter å halvere antall grader forbi 1,40625, vil du oppdage at gradene blir mindre enn 1, og vi må gjenta roteringen 512 ganger. Selv om dette selvfølgelig er mulig, og absolutt nødvendig i enkelte sammenhenger, er det ikke nøvendig for oss nå.
+Vi tar derfor en snarvei her, og røper at Hattulf skal rotere 1 grad 360 ganger.</label></p>
 <pre><code class="blocks">når grønt flagg klikkes
 gjenta (360) ganger
 vend høyre (1) grader
@@ -125,15 +125,15 @@ vend høyre (1) grader
 <section class="flag" id="test-prosjektet-3">
 <h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
 <p><strong>Klikk på det grønnet flagget.</strong></p>
-<ul>
-<li>Roterer hatten hele veien rundt seg selv når du trykker på grønt flagg?</li>
-<li>Ved å sette antall grader du roterer pr gang til 1, hvor mange ganger må du rotere <code>Hattulf</code> for at han skal gjøre to fulle roteringer? Hva med tre og en halv rotasjon? Ser disse tallene kjent ut?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Roterer hatten hele veien rundt seg selv når du trykker på grønt flagg?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Ved å sette antall grader du roterer pr gang til 1, hvor mange ganger må du rotere <code>Hattulf</code> for at han skal gjøre to fulle roteringer? Hva med tre og en halv rotasjon? Ser disse tallene kjent ut?</label></li>
 </ul>
 </section>
 <section>
 <h2 id="avslutning">Avslutning</h2>
-<ul>
-<li>Lagre prosjektet ved å gi det et navn, for eksempel &quot;Geometri 1&quot;</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lagre prosjektet ved å gi det et navn, for eksempel &quot;Geometri 1&quot;</label></li>
 </ul>
 </section>
 </section>

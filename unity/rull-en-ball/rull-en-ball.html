@@ -26,42 +26,42 @@ spillobjekter med tastaturet, og kollisjon mellom objekter.</p>
 </section>
 <section class="check" id="oppsett-av-spillet">
 <h2 class="check" id="oppsett-av-spillet"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/set-up?playlist=17141">Oppsett av spillet</a></h2>
-<ul>
-<li>Start med å lage et nytt 3D-prosjekt.</li>
-<li>Lagre Scenen, <strong>File &gt; Save Scene</strong>, legg den i en ny mappe <code>Assets/_Scenes</code> og
-kall den <code>Minigame</code>.</li>
-<li>Lag brettet vi skal spille på. Dette er et 3D-plan. Du finner den i hierarkiet under <strong>Create &gt; 3D Objekt &gt; Plane</strong>. Kall dette objektet <code>Ground</code>.</li>
-<li>Flytt brettet til origo, <code>(0, 0, 0)</code>, ved å trykke på tannhjulet i
-Transform-komponenten og velge <strong>Reset</strong>.</li>
-<li>Skru av Grid-lines på Scenen. Dette finner du under <strong>Gizmos &gt; Show Grid</strong>.</li>
-<li>Lag bakken litt større. Dette kan du gjøre med å dra på pilene eller skrive
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start med å lage et nytt 3D-prosjekt.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lagre Scenen, <strong>File &gt; Save Scene</strong>, legg den i en ny mappe <code>Assets/_Scenes</code> og
+kall den <code>Minigame</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lag brettet vi skal spille på. Dette er et 3D-plan. Du finner den i hierarkiet under <strong>Create &gt; 3D Objekt &gt; Plane</strong>. Kall dette objektet <code>Ground</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Flytt brettet til origo, <code>(0, 0, 0)</code>, ved å trykke på tannhjulet i
+Transform-komponenten og velge <strong>Reset</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Skru av Grid-lines på Scenen. Dette finner du under <strong>Gizmos &gt; Show Grid</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lag bakken litt større. Dette kan du gjøre med å dra på pilene eller skrive
 det manuelt inn på høyresida. Vi setter Scale til <code>2</code> på <code>x</code>, <code>1</code> på <code>y</code> og
-<code>2</code> på <code>z</code>.</li>
-<li>Lag en spiller! Fra hierarkiet <strong>Create &gt; 3D Object &gt; Sphere</strong> og gi den
-navnet <code>Player</code>. Tilbakestill posisjonen på samme måte som vi gjorde med planet.</li>
-<li>Flytt ballen opp <code>0.5</code> enhet slik at vi får den til å ligge på planet. Husk at
-ballen er 1 høy og 1 bred. Husk at det er y-posisjonen vi endrer med <code>0.5</code>.</li>
-<li>La oss bytte farge på brettet. Vi lager en ny mappe i Assets-mappa vår og gir
+<code>2</code> på <code>z</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lag en spiller! Fra hierarkiet <strong>Create &gt; 3D Object &gt; Sphere</strong> og gi den
+navnet <code>Player</code>. Tilbakestill posisjonen på samme måte som vi gjorde med planet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Flytt ballen opp <code>0.5</code> enhet slik at vi får den til å ligge på planet. Husk at
+ballen er 1 høy og 1 bred. Husk at det er y-posisjonen vi endrer med <code>0.5</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> La oss bytte farge på brettet. Vi lager en ny mappe i Assets-mappa vår og gir
 den navnet <code>Materials</code>. Velg denne mappa og lag et nytt material og kall den
 <code>Background</code>. Endre farge ved å trykke på den hvite boksen til høyre for
-<code>Albedo</code>-feltet og velg en fin blåfarge. Du kan bruke RGB-verdien <code>(0, 32, 64)</code>.</li>
-<li>Lag brettet blått ved å dra <code>Background</code>-materialet til brettet i Scenen.</li>
-<li>For å få bedre lys i spillet kan vi endre rotasjonen på lyset i
-hierarkiet vårt. Endre rotasjon på y-aksen til <code>60</code>.</li>
+<code>Albedo</code>-feltet og velg en fin blåfarge. Du kan bruke RGB-verdien <code>(0, 32, 64)</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Lag brettet blått ved å dra <code>Background</code>-materialet til brettet i Scenen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> For å få bedre lys i spillet kan vi endre rotasjonen på lyset i
+hierarkiet vårt. Endre rotasjon på y-aksen til <code>60</code>.</label></li>
 </ul>
 </section>
 <section class="check" id="bevege-spilleren">
 <h2 class="check" id="bevege-spilleren"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/moving-the-player?playlist=17141">Bevege spilleren</a></h2>
-<ul>
-<li>
-<p>Siden vi vil at ballen skal rulle rundt på brettet, kollidere i vegger og treffe
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Siden vi vil at ballen skal rulle rundt på brettet, kollidere i vegger og treffe
 forskjellige objekter for å samle poeng trenger vi litt fysikk. Dette får vi
 ved å legge til en Rigidbody-komponent på <code>Player</code>-objektet. Trykk på <strong>Add
-Component</strong> når du har valgt spilleren og velg <strong>Physics &gt; Rigidbody</strong>.</p>
+Component</strong> når du har valgt spilleren og velg <strong>Physics &gt; Rigidbody</strong>.</label></p>
 </li>
-<li>
-<p>Lag en ny mappe <code>Assets/Scripts</code> og et nytt C#-script som vi kaller
-<code>PlayerController</code>. Koden vi skal legge inn der er det best å skrive selv.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag en ny mappe <code>Assets/Scripts</code> og et nytt C#-script som vi kaller
+<code>PlayerController</code>. Koden vi skal legge inn der er det best å skrive selv.</label></p>
 <p>Siden noen av dere jobber hjemmefra legger vi inn hele kodesnutten under. Ikke
 kopier den, men skriv inn alle linjene!</p>
 <p><strong>PlayerController.cs</strong></p>
@@ -92,8 +92,8 @@ kopier den, men skriv inn alle linjene!</p>
 
 </code></pre>
 </li>
-<li>
-<p>Siden vi vil at scriptet skal styre ballen må vi dra det inn på <code>Player</code>-objektet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Siden vi vil at scriptet skal styre ballen må vi dra det inn på <code>Player</code>-objektet.</label></p>
 </li>
 </ul>
 </section>
@@ -110,28 +110,28 @@ kopier den, men skriv inn alle linjene!</p>
 <h1 class="activity" id="steg-2-kamera-og-spilleomrade">Steg 2: Kamera og spilleområde</h1>
 <section class="check" id="flytte-kameraet">
 <h2 class="check" id="flytte-kameraet"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/moving-the-camera?playlist=17141"> Flytte kameraet</a></h2>
-<ul>
-<li>
-<p>Flytt først kameraet opp 10 enheter (på y-aksen) og vipp det ned med 45
-grader (x-aksen).</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Flytt først kameraet opp 10 enheter (på y-aksen) og vipp det ned med 45
+grader (x-aksen).</label></p>
 </li>
-<li>
-<p>Flytt kameraet til et <em>barn</em> av <code>Player</code>-objektet, dette vil gjøre at kameraet
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Flytt kameraet til et <em>barn</em> av <code>Player</code>-objektet, dette vil gjøre at kameraet
 følger etter spilleren. Et <em>barn</em> er et programmeringsbegrep som betyr at noe
 er <em>under</em> noe annet, f.eks. en undermappe. Du gjør kameraet til et <em>barn</em> av
 <code>Player</code>-objektet ved å dra det og slippe det på <code>Player</code>-objektet i hierarkiet.
-Se at kameraet (nesten) flytter seg med spilleren.</p>
+Se at kameraet (nesten) flytter seg med spilleren.</label></p>
 </li>
-<li>
-<p>Test spillet og se hva som skjer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Test spillet og se hva som skjer.</label></p>
 </li>
-<li>
-<p>Siden ikke alt gikk etter planen må vi lage et script for å flytte kameraet.
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Siden ikke alt gikk etter planen må vi lage et script for å flytte kameraet.
 Flytt kameraet tilbake ut av <code>Player</code>-objektet slik at det ikke snurrer rundt
-lengre.</p>
+lengre.</label></p>
 </li>
-<li>
-<p>Lag et nytt C#-script som du kaller <code>CameraController</code> og legg til koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Lag et nytt C#-script som du kaller <code>CameraController</code> og legg til koden:</label></p>
 <p><strong>CameraController.cs</strong></p>
 <pre><code class="csharp"><span class="hljs-keyword">using</span> UnityEngine;
 <span class="hljs-keyword">using</span> System.Collections;
@@ -155,9 +155,9 @@ lengre.</p>
 
 </code></pre>
 </li>
-<li>
-<p>Dra scriptet over til kameraet og med kameraet valgt dra <code>Player</code>-objektet til
-Player-referansen på høyresida.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Dra scriptet over til kameraet og med kameraet valgt dra <code>Player</code>-objektet til
+Player-referansen på høyresida.</label></p>
 </li>
 </ul>
 </section>
@@ -170,22 +170,22 @@ Player-referansen på høyresida.</p>
 </section>
 <section class="check" id="sette-opp-spilleomradet">
 <h2 class="check" id="sette-opp-spilleomradet"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/setting-up-the-play-area?playlist=17141">Sette opp spilleområdet</a></h2>
-<ul>
-<li>La oss lage noen vegger! Lag et nytt tomt objekt som du kaller <code>Walls</code>.
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> La oss lage noen vegger! Lag et nytt tomt objekt som du kaller <code>Walls</code>.
 <strong>Create &gt; Create Empty</strong>. Dette blir en mappe for alle veggene. Tilbakestill
-posisjonen til Walls til <code>(0, 0, 0)</code>.</li>
-<li>Lag første vegg. <strong>Create &gt; 3D Object &gt; Cube</strong> og tilbakestill posisjonen til
+posisjonen til Walls til <code>(0, 0, 0)</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Lag første vegg. <strong>Create &gt; 3D Object &gt; Cube</strong> og tilbakestill posisjonen til
 denne. Sjekk at ballen havner oppi denne kuben. Legg denne som et barn av
-Walls og kall den <code>West Wall</code>.</li>
-<li>Lag veggen lang og tynn. Under Scale setter vi <code>0.5</code>, <code>2</code> og <code>20.5</code>.</li>
-<li>Flytt veggen til siden ved å sette <code>x</code> til <code>-10</code>.</li>
-<li>Dupliser veggen vi har og kall den <code>East Wall</code>. Endre x-posisjon til <code>10</code> og
-se at den kommer på plass.</li>
-<li>Dupliser <code>East Wall</code> og kall den <code>North Wall</code>. Tilbakestill posisjonen og sett
+Walls og kall den <code>West Wall</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Lag veggen lang og tynn. Under Scale setter vi <code>0.5</code>, <code>2</code> og <code>20.5</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Flytt veggen til siden ved å sette <code>x</code> til <code>-10</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Dupliser veggen vi har og kall den <code>East Wall</code>. Endre x-posisjon til <code>10</code> og
+se at den kommer på plass.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Dupliser <code>East Wall</code> og kall den <code>North Wall</code>. Tilbakestill posisjonen og sett
 scale til <code>20.5</code>, <code>2</code>, <code>0.5</code>. Sett posisjon på z-aksen til <code>10</code> for å se at
-den kommer på riktig plass.</li>
-<li>Dipliser <code>North Wall</code> og kall den <code>South Wall</code>. Sett posisjon på z-aksen til
-<code>-10</code>.</li>
+den kommer på riktig plass.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Dipliser <code>North Wall</code> og kall den <code>South Wall</code>. Sett posisjon på z-aksen til
+<code>-10</code>.</label></li>
 </ul>
 </section>
 <section class="flag" id="test-spillet-3">
@@ -200,23 +200,23 @@ den kommer på riktig plass.</li>
 <h1 class="activity" id="steg-3-samle-objekter-og-poeng">Steg 3: Samle objekter og poeng</h1>
 <section class="check" id="lag-objekter-vi-kan-samle-inn">
 <h2 class="check" id="lag-objekter-vi-kan-samle-inn"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/creating-collectables?playlist=17141">Lag objekter vi kan samle inn</a></h2>
-<ul>
-<li>
-<p>Lag en kube vi kan samle inn. <strong>Create &gt; 3D Object &gt; Cube</strong> og kall den
-<code>Pick Up</code>.  Tilbakestill posisjonen og se at ballen havner inni denne kuben.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Lag en kube vi kan samle inn. <strong>Create &gt; 3D Object &gt; Cube</strong> og kall den
+<code>Pick Up</code>.  Tilbakestill posisjonen og se at ballen havner inni denne kuben.</label></p>
 </li>
-<li>
-<p>Deaktiver <code>Player</code>-objektet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Deaktiver <code>Player</code>-objektet.</label></p>
 </li>
-<li>
-<p>Flytt opp kuben med 0.5 enheter og sett scale til 0.5 i alle aksene. La oss
-tippe den litt over. Endre rotasjon til 45 på alle aksene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Flytt opp kuben med 0.5 enheter og sett scale til 0.5 i alle aksene. La oss
+tippe den litt over. Endre rotasjon til 45 på alle aksene.</label></p>
 </li>
-<li>
-<p>La oss få kuben til å snurre litt for å tiltrekke oppmerksomhet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> La oss få kuben til å snurre litt for å tiltrekke oppmerksomhet.</label></p>
 </li>
-<li>
-<p>Lag et nytt C#-script og kall det <code>Rotator</code>. Legg til koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Lag et nytt C#-script og kall det <code>Rotator</code>. Legg til koden:</label></p>
 <p><strong>Rotator.cs</strong></p>
 <pre><code class="csharp">
 <span class="hljs-keyword">using</span> UnityEngine;
@@ -232,32 +232,32 @@ tippe den litt over. Endre rotasjon til 45 på alle aksene.</p>
 
 </code></pre>
 </li>
-<li>
-<p>Start spillet og se at kuben snurrer rundt. Husk å legge til scriptet i
-<code>Pick Up</code>-objektet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Start spillet og se at kuben snurrer rundt. Husk å legge til scriptet i
+<code>Pick Up</code>-objektet.</label></p>
 </li>
-<li>
-<p>Siden vi trenger mange kuber må vi gjøre <code>Pick Up</code>-objektet om til en <em>Prefab</em>.
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Siden vi trenger mange kuber må vi gjøre <code>Pick Up</code>-objektet om til en <em>Prefab</em>.
 En Prefab er en slags skisse for hvordan et spillobjekt skal se ut og oppføre
-seg.</p>
+seg.</label></p>
 </li>
-<li>
-<p>Lag en ny mappe og kall den <code>Prefabs</code>. Dra <code>Pick Up</code>-objektet inn i denne mappa.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Lag en ny mappe og kall den <code>Prefabs</code>. Dra <code>Pick Up</code>-objektet inn i denne mappa.</label></p>
 </li>
-<li>
-<p>Lag en nytt tomt objekt for å organisere objektene våre. Kall dette <code>Pick Ups</code>
-og legg <code>Pick Up</code> til her.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Lag en nytt tomt objekt for å organisere objektene våre. Kall dette <code>Pick Ups</code>
+og legg <code>Pick Up</code> til her.</label></p>
 </li>
-<li>
-<p>Endre synsvinkel til rett over spillebrettet og lag 10 nye kuber ved å
-duplisere <code>Pick Up</code>-objektet vi har. Legg kubene rundt omkring på brettet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Endre synsvinkel til rett over spillebrettet og lag 10 nye kuber ved å
+duplisere <code>Pick Up</code>-objektet vi har. Legg kubene rundt omkring på brettet.</label></p>
 </li>
-<li>
-<p>Start spillet og se at alle kubene snurrer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Start spillet og se at alle kubene snurrer.</label></p>
 </li>
-<li>
-<p>La oss endre fargen på kubene! Dupliser <code>Background</code>-materialet og kall det
-<code>Pick Up</code>. velg en fin gulfarge under Albedo og dra den ned på <code>Pick Up</code>-prefaben.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> La oss endre fargen på kubene! Dupliser <code>Background</code>-materialet og kall det
+<code>Pick Up</code>. velg en fin gulfarge under Albedo og dra den ned på <code>Pick Up</code>-prefaben.</label></p>
 </li>
 </ul>
 </section>
@@ -270,17 +270,17 @@ duplisere <code>Pick Up</code>-objektet vi har. Legg kubene rundt omkring på br
 </section>
 <section class="check" id="samle-inn-objekter">
 <h2 class="check" id="samle-inn-objekter"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/collecting-pick-up-objects?playlist=17141">Samle inn objekter</a></h2>
-<ul>
-<li>
-<p>Vis spilleren igjen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Vis spilleren igjen.</label></p>
 </li>
-<li>
-<p>Legg merke til at <code>Player</code>-objektet har en Sphere Collider-komponent. Denne skal vi bruke
-til å sjekke kollisjon mot <code>Pick Up</code>-objektene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Legg merke til at <code>Player</code>-objektet har en Sphere Collider-komponent. Denne skal vi bruke
+til å sjekke kollisjon mot <code>Pick Up</code>-objektene.</label></p>
 </li>
-<li>
-<p>Åpne <code>PlayerController</code>-scriptet igjen og legg til funksjonen under i
-PlayerController-klassen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Åpne <code>PlayerController</code>-scriptet igjen og legg til funksjonen under i
+PlayerController-klassen:</label></p>
 <pre><code class="csharp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OnTriggerEnter</span>(<span class="hljs-params">Collider other</span>)
 </span>{
     <span class="hljs-keyword">if</span> (other.gameObject.CompareTag (<span class="hljs-string">"Pick Up"</span>))
@@ -290,39 +290,39 @@ PlayerController-klassen:</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Velg <code>Pick Up</code>-prefaben og legg til en ny <strong>Tag</strong> vi kaller <code>Pick Up</code>. Det er
-veldig viktig at den heter <code>Pick Up</code>. <strong>Husk store bokstaver på P og U!</strong></p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Velg <code>Pick Up</code>-prefaben og legg til en ny <strong>Tag</strong> vi kaller <code>Pick Up</code>. Det er
+veldig viktig at den heter <code>Pick Up</code>. <strong>Husk store bokstaver på P og U!</strong></label></p>
 </li>
-<li>
-<p>Prøv spillet og se hva som skjer.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Prøv spillet og se hva som skjer.</label></p>
 </li>
-<li>
-<p>For å hindre at Unity lager en kollisjon mellom ballen og kubene må vi krysse
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> For å hindre at Unity lager en kollisjon mellom ballen og kubene må vi krysse
 for <strong>Is trigger?</strong> på <code>Box Collider</code>-komponenten til <code>Pick Up</code>-prefaben.
 Dette gjør at Unity registrerer at de to objektene har kollidert, men den
-flytter ikke på noen av objektene.</p>
+flytter ikke på noen av objektene.</label></p>
 </li>
-<li>
-<p>Test spillet og se at alt er som det skal!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Test spillet og se at alt er som det skal!</label></p>
 </li>
-<li>
-<p>(BONUS) For å gjøre en liten optimisering kan vi legge til en Rigidbody-komponent
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> (BONUS) For å gjøre en liten optimisering kan vi legge til en Rigidbody-komponent
 til kubene. Prøv å spille spillet nå. Se at alle kubene faller gjennom gulvet.
 Dette er fordi vi har satt en <code>Trigger-collider</code> til kubene. Sett <strong>Is Kinematic</strong>
-for å fikse dette. Les mer om dette på <a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/collecting-pick-up-objects?playlist=17141">tutorialen</a>.</p>
+for å fikse dette. Les mer om dette på <a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/collecting-pick-up-objects?playlist=17141">tutorialen</a>.</label></p>
 </li>
 </ul>
 </section>
 <section class="check" id="vis-poengscore">
 <h2 class="check" id="vis-poengscore"><a href="http://unity3d.com/learn/tutorials/projects/roll-a-ball/displaying-text?playlist=17141">Vis poengscore</a> </h2>
-<ul>
-<li>
-<p>Vi trenger noen variabler for å holde styr på hvor mange objekter vi har
-samlet inn.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Vi trenger noen variabler for å holde styr på hvor mange objekter vi har
+samlet inn.</label></p>
 </li>
-<li>
-<p>Åpne <code>PlayerController</code> og endre det til å være som følger:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Åpne <code>PlayerController</code> og endre det til å være som følger:</label></p>
 <p><strong>PlayerController.cs</strong></p>
 <pre><code class="csharp"><span class="hljs-keyword">using</span> UnityEngine;
 <span class="hljs-keyword">using</span> System.Collections;
@@ -362,27 +362,27 @@ samlet inn.</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Sjekk at <code>count</code> endres når vi treffer kubene.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Sjekk at <code>count</code> endres når vi treffer kubene.</label></p>
 </li>
-<li>
-<p>Vi trenger noe på skjermen som viser poengene våre. Under hierarkiet, lag et
-nytt <code>Text</code>-objekt (<strong>Create &gt; UI &gt; Text</strong>). Gi objektet navnet <code>CountText</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Vi trenger noe på skjermen som viser poengene våre. Under hierarkiet, lag et
+nytt <code>Text</code>-objekt (<strong>Create &gt; UI &gt; Text</strong>). Gi objektet navnet <code>CountText</code>.</label></p>
 </li>
-<li>
-<p>Endre farge på teksten til hvit og endre posisjon til <code>(0, 0, 0)</code>. Størrelsen til
-CountText skal være 160 bred og 30 høy. Endre teksten som står der til <code>Count Text</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Endre farge på teksten til hvit og endre posisjon til <code>(0, 0, 0)</code>. Størrelsen til
+CountText skal være 160 bred og 30 høy. Endre teksten som står der til <code>Count Text</code>.</label></p>
 </li>
-<li>
-<p>Flytt teksten øverst til venstre. Trykk på firkanten inne i Rect Transform og
-velg <strong>top left</strong> mens du holder inne <strong>shift</strong> og <strong>alt</strong>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Flytt teksten øverst til venstre. Trykk på firkanten inne i Rect Transform og
+velg <strong>top left</strong> mens du holder inne <strong>shift</strong> og <strong>alt</strong>.</label></p>
 </li>
-<li>
-<p>Endre Pos X og Pos Y til <code>10</code> og <code>-10</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> Endre Pos X og Pos Y til <code>10</code> og <code>-10</code>.</label></p>
 </li>
-<li>
-<p>Nå vil vi endre denne teksten med <code>PlayerController</code>-scriptet. Åpne det opp og
-endre det til:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Nå vil vi endre denne teksten med <code>PlayerController</code>-scriptet. Åpne det opp og
+endre det til:</label></p>
 <p><strong>PlayerController.cs</strong></p>
 <pre><code class="csharp"><span class="hljs-keyword">using</span> UnityEngine;
 <span class="hljs-keyword">using</span> UnityEngine.UI;                                   <span class="hljs-comment">// Ny linje</span>
@@ -430,23 +430,23 @@ endre det til:</p>
 }
 </code></pre>
 </li>
-<li>
-<p>Dra CountText inn i Count Text-referansen til <code>Player</code>-objektet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_55" disabled="true"><label for="cbx_55"> Dra CountText inn i Count Text-referansen til <code>Player</code>-objektet.</label></p>
 </li>
-<li>
-<p>Lagre og test spillet!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_56" disabled="true"><label for="cbx_56"> Lagre og test spillet!</label></p>
 </li>
-<li>
-<p>Lag et nytt UI Text-ojekt og kall det Win Text. Lag teksten hvit, sett
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_57" disabled="true"><label for="cbx_57"> Lag et nytt UI Text-ojekt og kall det Win Text. Lag teksten hvit, sett
 skriftstørrelse til 24 og sett den sentrert i midten. Sett teksten til å være
-<code>Win Text</code> og flytt den litt opp. Pos X skal være 0 og pos Y skal være 10.</p>
+<code>Win Text</code> og flytt den litt opp. Pos X skal være 0 og pos Y skal være 10.</label></p>
 </li>
-<li>
-<p>Lagre og gå tilbake til <code>PlayerController</code>-scriptet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_58" disabled="true"><label for="cbx_58"> Lagre og gå tilbake til <code>PlayerController</code>-scriptet.</label></p>
 </li>
-<li>
-<p>Lag en ny variabel <code>winText</code>, initialiser den i <code>Start</code> og endre den i <code>SetCountText</code>.
-Når du har kodet ferdig skal det se slik ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_59" disabled="true"><label for="cbx_59"> Lag en ny variabel <code>winText</code>, initialiser den i <code>Start</code> og endre den i <code>SetCountText</code>.
+Når du har kodet ferdig skal det se slik ut:</label></p>
 <p><strong>PlayerController.cs</strong></p>
 <pre><code class="csharp"><span class="hljs-keyword">using</span> UnityEngine;
 <span class="hljs-keyword">using</span> UnityEngine.UI;

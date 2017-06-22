@@ -16,18 +16,18 @@ function relative (url) {
 <p>Begynn med å lage en fil som kan kjøres med Pygame Zero.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en ny fil <code>run_stickman.py</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Lag en ny fil <code>run_stickman.py</code>.</label></p>
 </li>
-<li>
-<p>Du starter med å bestemme hvor stort vindu vi skal bruke:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Du starter med å bestemme hvor stort vindu vi skal bruke:</label></p>
 <pre><code class="python">WIDTH = <span class="hljs-number">550</span>
 HEIGHT = <span class="hljs-number">250</span>
 </code></pre>
 </li>
-<li>
-<p>Lagre og kjør programmet med <code>pgzrun run_stickman.py</code>. Se til at du får opp et vindu.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lagre og kjør programmet med <code>pgzrun run_stickman.py</code>. Se til at du får opp et vindu.</label></p>
 </li>
 </ul>
 </section>
@@ -37,10 +37,10 @@ HEIGHT = <span class="hljs-number">250</span>
 <p>Du skal nå lage boksene som strekmannen løper mot. Dette skal gjøres ved hjelp av en klasse.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Klassen skal hete Box og skal ha egenskapene: <code>height</code>, <code>width</code>, <code>color</code>,
-<code>x</code>, <code>y</code> og en funkson som heter <code>draw()</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Klassen skal hete Box og skal ha egenskapene: <code>height</code>, <code>width</code>, <code>color</code>,
+<code>x</code>, <code>y</code> og en funkson som heter <code>draw()</code>:</label></p>
 <pre><code class="python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>:</span>
     <span class="hljs-comment"># Skriv egenskaper her</span>
 
@@ -56,16 +56,16 @@ boks som er 50 piksler bred og høy tegnes i venstre topp med:</p>
 <pre><code class="python">screen.draw.filled_rect( Rect(WIDTH<span class="hljs-number">-50</span>, HEIGHT<span class="hljs-number">-50</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>) , (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">255</span>) )
 </code></pre>
 </li>
-<li>
-<p>Opprett en boks ved å legge til denne linjen i koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Opprett en boks ved å legge til denne linjen i koden:</label></p>
 <pre><code class="python">box = Box()
 </code></pre>
 </li>
-<li>
-<p>Lagre og kjør programmet for å sjekke at du ikke får noen feilmeldinger.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lagre og kjør programmet for å sjekke at du ikke får noen feilmeldinger.</label></p>
 </li>
-<li>
-<p>Hvis du vil se boksen i vinduet må du tegne den med:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Hvis du vil se boksen i vinduet må du tegne den med:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span>:</span>
     box.draw()
 </code></pre>
@@ -78,26 +78,26 @@ boks som er 50 piksler bred og høy tegnes i venstre topp med:</p>
 <p>Du skal nå lage en strekmann som vi skal kalle <code>stick_man</code>.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en strekmann (<code>stick_man</code>) fra klassen <a href="https://pygame-zero.readthedocs.org/en/latest/builtins.html?highlight=actor#actor"><code>Actor</code></a> som bruker bildet
-<code>running_man</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Lag en strekmann (<code>stick_man</code>) fra klassen <a href="https://pygame-zero.readthedocs.org/en/latest/builtins.html?highlight=actor#actor"><code>Actor</code></a> som bruker bildet
+<code>running_man</code>.</label></p>
 <pre><code class="python">stick_man = Actor(<span class="hljs-string">'running_man'</span>)
 </code></pre>
 </li>
-<li>
-<p>Sett posisjonen til strekmannens venstre bunn til å være <code>50, HEIGHT</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Sett posisjonen til strekmannens venstre bunn til å være <code>50, HEIGHT</code>.</label></p>
 <pre><code class="python">stick_man.bottomleft = <span class="hljs-number">50</span>, HEIGHT
 </code></pre>
 </li>
-<li>
-<p>For at koden skal kjøre må du lagre bildet av strekmannen under som <code>running_man.png</code> i mappen <code>images</code> der du har lagret <code>run_stickman.py</code>.</p>
-</li>
+</ul>
+<ul>
+<li>For at koden skal kjøre må du lagre bildet av strekmannen under som <code>running_man.png</code> i mappen <code>images</code> der du har lagret <code>run_stickman.py</code>.</li>
 </ul>
 <p><figure><img src="running_man.png" alt="" title="Strekmann"></figure></p>
-<ul>
-<li>
-<p>Mappen din skal nå se ut som dette:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Mappen din skal nå se ut som dette:</label></p>
 <p><figure><img src="mappestruktur.png" alt="" title="Mappestruktur"></figure></p>
 </li>
 </ul>
@@ -110,9 +110,9 @@ Draw-funksjonen sørger for at spillvinduet blir tegnet og update-funksjonen
 gjør endringer i spillet før de tegnes med <code>draw()</code>.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag <code>draw()</code> med koden i blokken under. Forstår du hva koden gjør?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag <code>draw()</code> med koden i blokken under. Forstår du hva koden gjør?</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">draw</span><span class="hljs-params">()</span>:</span>
         screen.clear()
         screen.fill((<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>))
@@ -120,8 +120,8 @@ gjør endringer i spillet før de tegnes med <code>draw()</code>.</p>
         box.draw()
 </code></pre>
 </li>
-<li>
-<p>Du må nå lage <code>update()</code>. Du trenger følgende:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Du må nå lage <code>update()</code>. Du trenger følgende:</label></p>
 <ul>
 <li>Få boksen til å flytte seg mot venstre.</li>
 <li>Hvis boksen er ute av bildet på venstre side, flytt den til høyre side av
@@ -170,25 +170,25 @@ du også sjekke i if-setningen.</p>
 <p>Du skal nå gjøre det mulig for strekmannen å hoppe med &quot;space&quot; tasten.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag funksjonen <code>on_key_down(key)</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Lag funksjonen <code>on_key_down(key)</code>.</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">on_key_down</span><span class="hljs-params">(key)</span>:</span>
     <span class="hljs-comment">#(Din kode)</span>
 </code></pre>
 <p><a href="https://pygame-zero.readthedocs.org/en/latest/hooks.html?highlight=on_key_down#on_key_down"><code>on_key_down()</code></a> kjøres hver gang spilleren trykker på en tast. Hvilken
 tast som trykkes sendes til funksjonen som <code>key</code>.</p>
 </li>
-<li>
-<p>Lag en <code>if</code>-setning som sjekker at det er tasten &quot;space&quot; (<code>keys.SPACE</code>) som
-trykkes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Lag en <code>if</code>-setning som sjekker at det er tasten &quot;space&quot; (<code>keys.SPACE</code>) som
+trykkes.</label></p>
 </li>
-<li>
-<p>Sjekk i samme <code>if</code>-setning om strekmannen er på bakken, det skal kun være lov
-å hoppe da.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Sjekk i samme <code>if</code>-setning om strekmannen er på bakken, det skal kun være lov
+å hoppe da.</label></p>
 </li>
-<li>
-<p>For å få strekmannen til å hoppe, bruk <a href="https://pygame-zero.readthedocs.org/en/latest/builtins.html?highlight=rect#animations"><code>animate()</code></a>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> For å få strekmannen til å hoppe, bruk <a href="https://pygame-zero.readthedocs.org/en/latest/builtins.html?highlight=rect#animations"><code>animate()</code></a>:</label></p>
 <pre><code class="python">jump_up = animate(stick_man, <span class="hljs-string">'decelerate'</span>, duration=<span class="hljs-number">0.4</span>, bottom=(HEIGHT - box.height*<span class="hljs-number">1.5</span>))
 </code></pre>
 <p>Koden forteller at:</p>
@@ -202,20 +202,20 @@ deretter saktere og saktere.</li>
 <li>Animasjonen gis navnet <code>jump_up</code>.</li>
 </ul>
 </li>
-<li>
-<p>Prøv programmet. Hopper strekmannen?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Prøv programmet. Hopper strekmannen?</label></p>
 </li>
-<li>
-<p>Vi trenger nå en animasjon som gjør at strekmannen kommer ned til bakken
-igjen. Lag funksjonen <code>back_down()</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Vi trenger nå en animasjon som gjør at strekmannen kommer ned til bakken
+igjen. Lag funksjonen <code>back_down()</code>:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">back_down</span><span class="hljs-params">()</span>:</span>
     animate(stick_man, <span class="hljs-string">'accelerate'</span>, duration=<span class="hljs-number">0.4</span>, bottom=HEIGHT)
 </code></pre>
 <p>Forstår du hva koden skal animere?</p>
 </li>
-<li>
-<p>Sett verdien <code>jump_up.on_finished</code> til <code>back_down</code>. <code>back_down()</code> vil da kjøres
-når opp-animasjonen er ferdig:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Sett verdien <code>jump_up.on_finished</code> til <code>back_down</code>. <code>back_down()</code> vil da kjøres
+når opp-animasjonen er ferdig:</label></p>
 <pre><code class="python">jump_up.on_finished = back_down
 </code></pre>
 </li>
@@ -242,32 +242,32 @@ trenger to variabler, en for poeng og en for å huske om strekmannen har blitt
 truffet av boksen.</p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en variabel som heter <code>SCORE</code> og gi den verdien <code>0</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lag en variabel som heter <code>SCORE</code> og gi den verdien <code>0</code>.</label></p>
 </li>
-<li>
-<p>Lag variabelen <code>stick_man.hit</code> og gi den verdien <code>False</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Lag variabelen <code>stick_man.hit</code> og gi den verdien <code>False</code>.</label></p>
 </li>
-<li>
-<p>Inne i <code>update()</code>, bestem at av du skal bruke den globale variablen <code>SCORE</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Inne i <code>update()</code>, bestem at av du skal bruke den globale variablen <code>SCORE</code>:</label></p>
 <pre><code class="python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span><span class="hljs-params">()</span>:</span>
     <span class="hljs-keyword">global</span> SCORE
     <span class="hljs-comment"># resten av din kode</span>
 </code></pre>
 </li>
-<li>
-<p>Hvis strekmannen blir truffet, sett <code>SCORE = 0</code> og <code>stick_man.hit = True</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Hvis strekmannen blir truffet, sett <code>SCORE = 0</code> og <code>stick_man.hit = True</code>.</label></p>
 </li>
-<li>
-<p>Øk poengsummen med 10 poeng hvis boksen er ute av bildet og strekmannen ikke
-er truffet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Øk poengsummen med 10 poeng hvis boksen er ute av bildet og strekmannen ikke
+er truffet.</label></p>
 </li>
-<li>
-<p>Før boksen flyttes til høyre side, nullstill <code>stick_man.hit</code> til <code>False</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Før boksen flyttes til høyre side, nullstill <code>stick_man.hit</code> til <code>False</code>.</label></p>
 </li>
-<li>
-<p>Tegn poengsummen på skjermen inni <code>draw()</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Tegn poengsummen på skjermen inni <code>draw()</code>:</label></p>
 <pre><code class="python">screen.draw.text(<span class="hljs-string">"Poeng: "</span> + str(SCORE), (<span class="hljs-number">400</span>, <span class="hljs-number">30</span>), color = (<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
 </code></pre>
 </li>
@@ -278,40 +278,40 @@ er truffet.</p>
 </section>
 <section class="challenge" id="utfordringer">
 <h2 class="challenge" id="utfordringer">Utfordringer:</h2>
-<ul>
-<li>
-<p>Endre hastigheten på boksen.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Endre hastigheten på boksen.</label></p>
 </li>
-<li>
-<p>Endre høyden på hoppet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Endre høyden på hoppet.</label></p>
 </li>
-<li>
-<p>Endre hvor lang tid et hopp tar.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Endre hvor lang tid et hopp tar.</label></p>
 </li>
-<li>
-<p>Finn en kombinasjon av boksens hastighet og strekmannens hopp slik at spillet
-er akkurat passe vanskelig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Finn en kombinasjon av boksens hastighet og strekmannens hopp slik at spillet
+er akkurat passe vanskelig.</label></p>
 </li>
-<li>
-<p>Øk hastigheten på boksen når man har fått 100 poeng.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Øk hastigheten på boksen når man har fått 100 poeng.</label></p>
 </li>
-<li>
-<p>Øk poengsummen med 20 når man har fått 100 poeng.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Øk poengsummen med 20 når man har fått 100 poeng.</label></p>
 </li>
-<li>
-<p>Gi boksen forskjellig høyde for hver gang.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Gi boksen forskjellig høyde for hver gang.</label></p>
 </li>
-<li>
-<p>Gi boksen forskjellig bredde for hver gang.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Gi boksen forskjellig bredde for hver gang.</label></p>
 </li>
-<li>
-<p>Send flere bokser inn på skjermen samtidig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Send flere bokser inn på skjermen samtidig.</label></p>
 </li>
-<li>
-<p>Send flere bokser med ulik hastighet inn på skjermen samtidig.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Send flere bokser med ulik hastighet inn på skjermen samtidig.</label></p>
 </li>
-<li>
-<p>Dine egne ideer?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Dine egne ideer?</label></p>
 </li>
 </ul>
 </section>

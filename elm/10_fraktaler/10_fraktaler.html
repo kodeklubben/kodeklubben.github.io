@@ -29,10 +29,10 @@ streker? Gjenta for hver strek.</li>
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <p>Gå til <a href="https://en.wikipedia.org/wiki/Sierpinski_carpet">Wikipedia-artikkelen</a>
 til Sierpinski-teppet. Se på animasjonen.</p>
-<ul>
-<li>Hvordan er teppet før det begynner å bli fargelagt? Dette er <strong>startregelen</strong>.</li>
-<li>Hva tegner vi i hver firkant? Dette er <strong>tegneregelen</strong>.</li>
-<li>Hvordan gjentas regelen? Dette er <strong>rekursjonsregelen</strong>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Hvordan er teppet før det begynner å bli fargelagt? Dette er <strong>startregelen</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Hva tegner vi i hver firkant? Dette er <strong>tegneregelen</strong>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Hvordan gjentas regelen? Dette er <strong>rekursjonsregelen</strong>.</label></li>
 </ul>
 <p>Se på figurene under avsnittet <strong>Process</strong>. Ser du at noe gjentar seg?</p>
 </section>
@@ -49,19 +49,19 @@ til Sierpinski-teppet. Se på animasjonen.</p>
 <span class="hljs-title">main</span> =
     svg
       [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 27 27"</span> ]
-      [ rect [ x <span class="hljs-string">"0"</span>, y <span class="hljs-string">"0"</span>, width <span class="hljs-string">"27"</span>, height <span class="hljs-string">"27"</span>, fill <span class="hljs-string">"blue"</span> ] [ ]
-      , rect [ x <span class="hljs-string">"9"</span>, y <span class="hljs-string">"9"</span>, width <span class="hljs-string">"9"</span>, height <span class="hljs-string">"9"</span>, fill <span class="hljs-string">"green"</span> ] [ ]
+      [ rect [ x <span class="hljs-string">"0"</span>, y <span class="hljs-string">"0"</span>, width <span class="hljs-string">"27"</span>, height <span class="hljs-string">"27"</span>, fill <span class="hljs-string">"blue"</span> ] - [ ]
+      , rect [ x <span class="hljs-string">"9"</span>, y <span class="hljs-string">"9"</span>, width <span class="hljs-string">"9"</span>, height <span class="hljs-string">"9"</span>, fill <span class="hljs-string">"green"</span> ] - [ ]
       ]
 </code></pre>
 <p><svg width="500" height="500" viewBox="0 0 27 27"><rect x="0" y="0" width="27" height="27" fill="blue"></rect><rect x="9" y="9" width="9" height="9" fill="green"></rect></svg></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>Hvordan kan vi da tegne mange kvadrater?</li>
-<li>Hva bestemmer posisjonen til tallene?</li>
-<li>Hvor mange store grønne kvadrater har du tegnet?</li>
-<li>Hvor mange små grønne kvadrater har du tegnet?</li>
-<li><strong>Utvid koden til å tegne mange kvadrater</strong>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Hvordan kan vi da tegne mange kvadrater?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Hva bestemmer posisjonen til tallene?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Hvor mange store grønne kvadrater har du tegnet?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Hvor mange små grønne kvadrater har du tegnet?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> <strong>Utvid koden til å tegne mange kvadrater</strong>.</label></li>
 </ul>
 </section>
 </section>
@@ -75,9 +75,9 @@ egne typer</em>. Vi kommer til å lage en type for punkter og en type for kvadra
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <p>Nå skal du få prøve å lese Elm sine egne læreressurser.</p>
-<ul>
-<li>Gå til <a href="http://elm-lang.org/docs/records">Elm-dokumentasjonen for records</a>.
-Finner du eksempelet for et punkt?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Gå til <a href="http://elm-lang.org/docs/records">Elm-dokumentasjonen for records</a>.
+Finner du eksempelet for et punkt?</label></li>
 </ul>
 <p>Vi legger til en liten snutt i programmet vårt:</p>
 <pre><code class="elm"><span class="hljs-keyword">import</span> Html <span class="hljs-keyword">exposing</span> (div, text, h1)
@@ -95,8 +95,8 @@ Finner du eksempelet for et punkt?</li>
       [ h1 [] [ text (toString myPoint) ]
       , svg
         [ width <span class="hljs-string">"500"</span>, height <span class="hljs-string">"500"</span>, viewBox <span class="hljs-string">"0 0 27 27"</span> ]
-        [ rect [ x <span class="hljs-string">"0"</span>, y <span class="hljs-string">"0"</span>, width <span class="hljs-string">"27"</span>, height <span class="hljs-string">"27"</span>, fill <span class="hljs-string">"blue"</span> ] [ ]
-        , rect [ x <span class="hljs-string">"3"</span>, y <span class="hljs-string">"3"</span>, width <span class="hljs-string">"3"</span>, height <span class="hljs-string">"3"</span>, fill <span class="hljs-string">"green"</span> ] [ ]
+        [ rect [ x <span class="hljs-string">"0"</span>, y <span class="hljs-string">"0"</span>, width <span class="hljs-string">"27"</span>, height <span class="hljs-string">"27"</span>, fill <span class="hljs-string">"blue"</span> ] - [ ]
+        , rect [ x <span class="hljs-string">"3"</span>, y <span class="hljs-string">"3"</span>, width <span class="hljs-string">"3"</span>, height <span class="hljs-string">"3"</span>, fill <span class="hljs-string">"green"</span> ] - [ ]
         ]
       ]
 </code></pre>
@@ -104,26 +104,26 @@ Finner du eksempelet for et punkt?</li>
 </section>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>Skriv ut kun <code>x</code>-attributten til <code>myPoint</code></li>
-<li>Lag et annet punkt, <code>yourPoint</code>. Velg koordinater og skriv ut dette i stedet.</li>
-<li>Lag et tredje punkt, <code>theirPoint</code>. Dette skal du lage <em>ut ifra <code>myPoint</code></em>, men
-du skal bytte ut x-verdien med <code>0</code>. Se avsnittet <strong>Updating Records</strong> i guiden.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Skriv ut kun <code>x</code>-attributten til <code>myPoint</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Lag et annet punkt, <code>yourPoint</code>. Velg koordinater og skriv ut dette i stedet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Lag et tredje punkt, <code>theirPoint</code>. Dette skal du lage <em>ut ifra <code>myPoint</code></em>, men
+du skal bytte ut x-verdien med <code>0</code>. Se avsnittet <strong>Updating Records</strong> i guiden.</label></li>
 </ul>
 <p>Nå skal vi ta steget videre og lage våre egne punkter.</p>
 <p><strong>Husk!</strong> Du kan bruke linjen <code>[ h1 [] [ text (toString yz) ]</code> til å teste
 verdier.</p>
-<ul>
-<li>Les de to første eksemplene i avsnittet <strong>Record types</strong>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Les de to første eksemplene i avsnittet <strong>Record types</strong>.</label></li>
 </ul>
 <p>Her finnes det allerede en <code>Point</code>-type vi kan bruke. Har du definert <code>myPoint</code>
 og <code>yourPoint</code> på samme måte som det gjøres i guiden?</p>
-<ul>
-<li>
-<p>Skriv inn <code>Point</code>-typen i programmet ditt</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Skriv inn <code>Point</code>-typen i programmet ditt</label></p>
 </li>
-<li>
-<p>Spesifiser at punktene dine skal være av typen <code>Point</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Spesifiser at punktene dine skal være av typen <code>Point</code>:</label></p>
 <pre><code class="elm"><span class="hljs-comment">-- myPoint : Point betyr at myPoint skal være av type Point</span>
 <span class="hljs-title">myPoint</span> : <span class="hljs-type">Point</span>
 <span class="hljs-title">myPoint</span> = <span class="hljs-comment">-- din tidligere løsning</span>
@@ -136,11 +136,11 @@ og <code>yourPoint</code> på samme måte som det gjøres i guiden?</p>
 </ul>
 <p>Klager kompilatoren? Hvorfor/hvorfor ikke? Om den klager betyr det ikke at du
 har gjort noe feil. Det bare at du og guiden lagde punkter på forskjellig måte.</p>
-<ul>
-<li>Utvid punktene dine med en z-verdi. Hva skjer når du kopilerer? Klarer du tyde
-feilmeldingen?</li>
-<li>Lag en ny type: <code>Point3D</code> som også har Z-verdi, og spesifiser at punktene dine
-skal være av denne typen:<pre><code class="elm"><span class="hljs-title">myPoint</span> : <span class="hljs-type">Point3D</span>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Utvid punktene dine med en z-verdi. Hva skjer når du kopilerer? Klarer du tyde
+feilmeldingen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Lag en ny type: <code>Point3D</code> som også har Z-verdi, og spesifiser at punktene dine
+skal være av denne typen:</label><pre><code class="elm"><span class="hljs-title">myPoint</span> : <span class="hljs-type">Point3D</span>
 <span class="hljs-comment">-- ...</span>
 </code></pre>
 </li>
@@ -164,15 +164,15 @@ kan også lage veldig store tall, som 1000 * 1000 * 1000 * 1000 * 10000</p>
 </section>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>Hva må vi vite om et kvadrat for at vi skal kunne tegne det?</li>
-<li>Lag typen kvadrat: <code>type alias Square = -- ...</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Hva må vi vite om et kvadrat for at vi skal kunne tegne det?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Lag typen kvadrat: <code>type alias Square = -- ...</code></label></li>
 </ul>
 <p>Nå skal vi tegne kvadratet!</p>
 <pre><code class="elm"><span class="hljs-title">viewSquare</span> square = <span class="hljs-comment">-- ...</span>
 </code></pre>
-<ul>
-<li>Lag funksjonen <code>viewSquare</code>. Bruk <code>rect</code> fra SVG som du har brukt tidligere.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Lag funksjonen <code>viewSquare</code>. Bruk <code>rect</code> fra SVG som du har brukt tidligere.</label></li>
 </ul>
 <p><strong>Obs!</strong> Når vi tegner kvadrater må vi bruke en farge. En måte å løse det på er
 å ha en <code>color : String</code>-attributt på <code>Square</code>.</p>
@@ -226,17 +226,17 @@ kan også lage veldig store tall, som 1000 * 1000 * 1000 * 1000 * 10000</p>
 </code></pre>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>Lag funksjonen <code>describeDoubleAge</code>. Hva skal denne gjøre?</li>
-<li>Les overskriften <strong>Let expressions</strong>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Lag funksjonen <code>describeDoubleAge</code>. Hva skal denne gjøre?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Les overskriften <strong>Let expressions</strong>
 i <a href="http://elm-lang.org/docs/syntax">syntaxguiden</a>. Her er det noen eksempler.
-Prøv selv!</li>
+Prøv selv!</label></li>
 </ul>
 <p>Nå skal vi tilbake til fraktalene våre, vi skal lage den grønne firkanten i
 sentrum. Denne gangen med kode!</p>
-<ul>
-<li>Lag funksjonen <code>centerSquare</code>. Denne skal ta inn et kvadrat og returnere
-kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Lag funksjonen <code>centerSquare</code>. Denne skal ta inn et kvadrat og returnere
+kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</label></li>
 </ul>
 <p>Her er en start:</p>
 <pre><code class="elm"><span class="hljs-title">centerSquare</span> : <span class="hljs-type">Square</span> -&gt; <span class="hljs-type">Square</span>
@@ -284,9 +284,9 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 </code></pre>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>Les avnsitet om <code>List.map</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/List#map">dokumentasjonen til List</a>.</li>
-<li>Bruk <code>List.map</code> til å lage listen <code>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;]</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Les avnsitet om <code>List.map</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/List#map">dokumentasjonen til List</a>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Bruk <code>List.map</code> til å lage listen <code>[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;]</code></label></li>
 </ul>
 <p><code>List.range</code> kan lage en liste med tall. Eksempel:</p>
 <pre><code>&gt; <span class="hljs-keyword">List</span>.map <span class="hljs-keyword">toString</span> (<span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 1 4)
@@ -296,9 +296,9 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 &gt; <span class="hljs-keyword">List</span>.<span class="hljs-keyword">range</span> 0 3
 [0,1,2,3] : <span class="hljs-keyword">List</span> Int
 </code></pre>
-<ul>
-<li>Les avsnittet om <code>List.range</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/List#range">dokumentasjonen til List</a></li>
-<li>Bruk <code>List.map</code> og <code>List.range</code> til å lage denne store listen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Les avsnittet om <code>List.range</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/List#range">dokumentasjonen til List</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Bruk <code>List.map</code> og <code>List.range</code> til å lage denne store listen:</label></li>
 </ul>
 <pre><code class="elm">[<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>,<span class="hljs-string">"5"</span>,<span class="hljs-string">"6"</span>,<span class="hljs-string">"7"</span>,<span class="hljs-string">"8"</span>,<span class="hljs-string">"9"</span>,<span class="hljs-string">"10"</span>,<span class="hljs-string">"11"</span>,<span class="hljs-string">"12"</span>,<span class="hljs-string">"13"</span>,<span class="hljs-string">"14"</span>
 ,<span class="hljs-string">"15"</span>,<span class="hljs-string">"16"</span>,<span class="hljs-string">"17"</span>,<span class="hljs-string">"18"</span>,<span class="hljs-string">"19"</span>,<span class="hljs-string">"20"</span>,<span class="hljs-string">"21"</span>,<span class="hljs-string">"22"</span>,<span class="hljs-string">"23"</span>,<span class="hljs-string">"24"</span>,<span class="hljs-string">"25"</span>,<span class="hljs-string">"26"</span>,<span class="hljs-string">"27"</span>
@@ -306,9 +306,9 @@ kvadratet i sentrum av det forrige. Hvilken farge skal det ha?</li>
 </code></pre>
 <p>Vi innfører enda en nyttig funksjon: <code>String.join</code>. Denne bygger opp tekst fra
 en liste.</p>
-<ul>
-<li>Les dokumentasjonen til <code>String.join</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/String#join">dokumentasjonen til String</a></li>
-<li>Lag funksjonen <code>sayTo</code>. Den skal kunne brukes slik:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Les dokumentasjonen til <code>String.join</code> i <a href="http://package.elm-lang.org/packages/elm-lang/core/latest/String#join">dokumentasjonen til String</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Lag funksjonen <code>sayTo</code>. Den skal kunne brukes slik:</label></li>
 </ul>
 <pre><code>&gt; sayTo 10
 "1 og<span class="hljs-number"> 2 </span>og<span class="hljs-number"> 3 </span>og<span class="hljs-number"> 4 </span>og<span class="hljs-number"> 5 </span>og<span class="hljs-number"> 6 </span>og<span class="hljs-number"> 7 </span>og<span class="hljs-number"> 8 </span>og<span class="hljs-number"> 9 </span>og 10" : String
@@ -325,8 +325,8 @@ en liste.</p>
 <p><strong>Obs!</strong> Denne er en utfording. Ta deg god tid.</p>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>Lag funksjonen <code>borderSquares</code>. Denne skal vi kunne bruke slik:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Lag funksjonen <code>borderSquares</code>. Denne skal vi kunne bruke slik:</label></li>
 </ul>
 <pre><code>&gt; start
 { <span class="hljs-attr">color</span> = <span class="hljs-string">"green"</span>, <span class="hljs-attr">width</span> = <span class="hljs-number">729</span>, <span class="hljs-attr">corner</span> = { <span class="hljs-attr">x</span> = <span class="hljs-number">0</span>, <span class="hljs-attr">y</span> = <span class="hljs-number">0</span> } } : Utils.Square
@@ -386,14 +386,14 @@ firkanter.</p>
 <p>I nivå 2 lager vi <strong>8</strong> nye firkanter.</p>
 <p>I nivå 3 lager vi <strong>8 * 8 = 64</strong> nye firkanter.</p>
 <p>Bruk <code>elm repl</code> til å regne ut disse:</p>
-<ul>
-<li>Hvor mange nye firkanter lager vi i nivå <strong>4</strong>?</li>
-<li>Hvor mange nye firkanter lager vi i nivå <strong>5</strong>?</li>
-<li>Hvor mange nye firkanter lager vi i nivå <strong>6</strong>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Hvor mange nye firkanter lager vi i nivå <strong>4</strong>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Hvor mange nye firkanter lager vi i nivå <strong>5</strong>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Hvor mange nye firkanter lager vi i nivå <strong>6</strong>?</label></li>
 </ul>
 <p>Klarer du å se et mønster?</p>
-<ul>
-<li>Hvor mange nye firkanter lager vi i nivå <strong>x</strong>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Hvor mange nye firkanter lager vi i nivå <strong>x</strong>?</label></li>
 </ul>
 </section>
 <section class="activity" id="steg-8-concat-og-map">
@@ -401,19 +401,19 @@ firkanter.</p>
 <p>Vi skal trene litt før vi går videre.</p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag filen Tall.elm. Legg inn dette i toppen:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Lag filen Tall.elm. Legg inn dette i toppen:</label></p>
 <pre><code class="elm"><span class="hljs-keyword">module</span> Tall <span class="hljs-keyword">exposing</span> (..)
 
 <span class="hljs-title">hei</span> = <span class="hljs-string">"Hei!"</span>
 </code></pre>
 </li>
-<li>
-<p>Start <code>elm repl</code> fra kommandovindu i samme mappe</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Start <code>elm repl</code> fra kommandovindu i samme mappe</label></p>
 </li>
-<li>
-<p>Importer alle funksjonene fra <code>Tall.elm</code> fra <code>elm repl</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Importer alle funksjonene fra <code>Tall.elm</code> fra <code>elm repl</code>:</label></p>
 <pre><code class="text">---- elm-repl 0.18.0 -----------------------------------------------------------
 :help for help, :exit to exit, more at &lt;https://github.com/elm-lang/elm-repl&gt;
 --------------------------------------------------------------------------------
@@ -443,9 +443,9 @@ antall desimaler i starten.</p>
 </section>
 <section class="check" id="sjekkliste-10">
 <h2 class="check" id="sjekkliste-10">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag <code>sifre</code> for å spare på 0-9:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Lag <code>sifre</code> for å spare på 0-9:</label></p>
 <pre><code class="elm">&gt; sifre
 [<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>,<span class="hljs-string">"2"</span>,<span class="hljs-string">"3"</span>,<span class="hljs-string">"4"</span>,<span class="hljs-string">"5"</span>,<span class="hljs-string">"6"</span>,<span class="hljs-string">"7"</span>,<span class="hljs-string">"8"</span>,<span class="hljs-string">"9"</span>] : <span class="hljs-type">List</span> <span class="hljs-type">String</span>
 </code></pre>
@@ -457,10 +457,10 @@ antall desimaler i starten.</p>
     <span class="hljs-keyword">let</span> nullTilNi = <span class="hljs-type">List</span>.range <span class="hljs-number">0</span> <span class="hljs-number">9</span>
     <span class="hljs-keyword">in</span> <span class="hljs-type">List</span>.map toString nullTilNi
 </code></pre>
-<ul>
-<li>
-<p>Lag <code>ettSifferBak</code> som tar inn starten på tallet og legger på sifrene 0-9
-på slutten:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Lag <code>ettSifferBak</code> som tar inn starten på tallet og legger på sifrene 0-9
+på slutten:</label></p>
 <pre><code class="elm">&gt; ettSifferBak
 &lt;function&gt; : <span class="hljs-type">String</span> -&gt; <span class="hljs-type">List</span> <span class="hljs-type">String</span>
 &gt; ettSifferBak <span class="hljs-string">"0."</span>
@@ -478,9 +478,9 @@ på slutten:</p>
 </code></pre>
 <p>Nå kommer trikset for å gå dypere: For hver mulige begynnelse må vi lage alle
 løsninger, og slå sammen disse.</p>
-<ul>
-<li>Lag <code>sifreAvLengde</code> som tar inn hvor mange sifre som skal legges på og
-begynnelsen, og gir tilbake alle mulighetene.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Lag <code>sifreAvLengde</code> som tar inn hvor mange sifre som skal legges på og
+begynnelsen, og gir tilbake alle mulighetene.</label></li>
 </ul>
 <pre><code class="elm">&gt; sifreAvLengde <span class="hljs-number">0</span> <span class="hljs-string">""</span>
 [<span class="hljs-string">""</span>] : <span class="hljs-type">List</span> <span class="hljs-type">String</span>
@@ -514,8 +514,8 @@ begynnelsen, og gir tilbake alle mulighetene.</li>
         <span class="hljs-comment">-- Slår sammen fortsettelsene i én liste</span>
         <span class="hljs-keyword">in</span> <span class="hljs-type">List</span>.concat fortsettelser
 </code></pre>
-<ul>
-<li>Bruk <code>sifreAvLengde</code> til å lage <code>desimaler</code>:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Bruk <code>sifreAvLengde</code> til å lage <code>desimaler</code>:</label></li>
 </ul>
 <pre><code class="elm">&gt; desimaler <span class="hljs-number">0</span>
 [<span class="hljs-string">"0."</span>] : <span class="hljs-type">List</span> <span class="hljs-type">String</span>
@@ -563,12 +563,12 @@ Da kan vi korte ned litt til:</p>
         <span class="hljs-comment">-- Slår sammen fortsettelsene i én liste</span>
         <span class="hljs-keyword">in</span> <span class="hljs-type">List</span>.concatMap fortsett starter
 </code></pre>
-<ul>
-<li>
-<p>Hvor lange tall kan du skrive ut før PC-en din begynner å gå tregt?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Hvor lange tall kan du skrive ut før PC-en din begynner å gå tregt?</label></p>
 </li>
-<li>
-<p>Hvor mange desimaltall finner du da?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Hvor mange desimaltall finner du da?</label></p>
 </li>
 </ul>
 <p>Hint: 0.0-0.9 blir 10 tall. 0.00 til 0.99 blir ...? Hva med 0.00000 til 0.99999?</p>
@@ -590,8 +590,8 @@ Da kan vi korte ned litt til:</p>
 <p>Nå skal vi bruke teknikken fra Steg 8 til å komme til bunns i fraktalen vår.</p>
 <section class="check" id="sjekkliste-11">
 <h2 class="check" id="sjekkliste-11">Sjekkliste</h2>
-<ul>
-<li>Lag <code>generateCenterSquares</code>. Denne skal kunne fungere slik:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Lag <code>generateCenterSquares</code>. Denne skal kunne fungere slik:</label></li>
 </ul>
 <pre><code class="text">---- elm-repl 0.18.0 -----------------------------------------------------------
  :help for help, :exit to exit, more at &lt;https://github.com/elm-lang/elm-repl&gt;

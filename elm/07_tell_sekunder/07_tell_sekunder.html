@@ -205,10 +205,10 @@ til <code>0</code>.</p>
 verden. Det bruker vi ikke ennå! Derfor er <code>Cmd</code> litt i veien for oss, men når
 vi er over på <code>Html.program</code>, må vi ha den med. Hvis du ser rundt i koden finner
 du <code>Cmd.none</code>, som betyr &quot;gjør ingenting&quot;.</p>
-<ul>
-<li>Endre <code>count</code> i funksjonen <code>start</code>. Hva gjør programmet nå?</li>
-<li>Hva skjer om <code>count</code> blir veldig stor?</li>
-<li>Kan <code>count</code> være mindre enn null?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Endre <code>count</code> i funksjonen <code>start</code>. Hva gjør programmet nå?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Hva skjer om <code>count</code> blir veldig stor?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Kan <code>count</code> være mindre enn null?</label></li>
 </ul>
 </section>
 <section class="activity" id="oppdatere-telleren">
@@ -232,14 +232,14 @@ du <code>Cmd.none</code>, som betyr &quot;gjør ingenting&quot;.</p>
 <p>Beskjeden vår (<code>Msg</code>) kan nå bare være én ting: <strong>det har gått tid siden sist</strong>.</p>
 <p>Hvert sekund, kjører vi modellen vår gjennom funksjonen <code>bump</code>. Den &quot;dytter&quot;
 (&quot;bump&quot; på engelsk) modellen vår ett sekund fram i tid.</p>
-<ul>
-<li>Kan du få timeren vår til å telle baklengs?</li>
-<li>Kan du få timeren vår til å telle ned fra 10 til 0? Obs! Her må du også endre
-<code>start</code>!</li>
-<li>Kan du få timeren vår til å telle fortere?</li>
-<li>Utfordring: Timeren får ikke telle til høyere enn 10. Når den kommer til 10,
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Kan du få timeren vår til å telle baklengs?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Kan du få timeren vår til å telle ned fra 10 til 0? Obs! Her må du også endre
+<code>start</code>!</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Kan du få timeren vår til å telle fortere?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Utfordring: Timeren får ikke telle til høyere enn 10. Når den kommer til 10,
 skal den begynne fra start igjen! Tips: bruk
-et <a href="http://elm-lang.org/examples/if">if-uttrykk</a>.</li>
+et <a href="http://elm-lang.org/examples/if">if-uttrykk</a>.</label></li>
 </ul>
 </section>
 <section class="activity" id="ga-fort-ga-sakte">
@@ -251,22 +251,22 @@ et <a href="http://elm-lang.org/examples/if">if-uttrykk</a>.</li>
   <span class="hljs-type">Time</span>.every second <span class="hljs-type">Tick</span>
 </code></pre>
 <p>Her abonnerer vi på sekunder. Verdien <code>second</code> kommer fra modulen <code>Time</code>.</p>
-<ul>
-<li>Finn <code>second</code>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Finn <code>second</code>
 i
-<a href="http://package.elm-lang.org/packages/elm-lang/core/latest/Time">modulen <code>Time</code></a>.</li>
-<li>Hva skjer om du abonnerer på timer i stedet for sekunder?</li>
-<li>Hva skjer om du abonnerer på millisekunder?</li>
+<a href="http://package.elm-lang.org/packages/elm-lang/core/latest/Time">modulen <code>Time</code></a>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Hva skjer om du abonnerer på timer i stedet for sekunder?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hva skjer om du abonnerer på millisekunder?</label></li>
 </ul>
 <p>Øverst i <code>Time-modulen</code> finner vi:</p>
 <pre><code class="elm"><span class="hljs-keyword">type</span> <span class="hljs-keyword">alias</span> <span class="hljs-type">Time</span> =
     <span class="hljs-type">Float</span>
 </code></pre>
 <p>Dette betyr at tid bare er et tall. Disse kan vi plusse og dele!</p>
-<ul>
-<li>Klarer du å abonnere på annenhvert sekund? Hva må du da sende inn i stedet for
-<code>second</code>?</li>
-<li>Klarer du å abonnere på tidels sekunder?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Klarer du å abonnere på annenhvert sekund? Hva må du da sende inn i stedet for
+<code>second</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Klarer du å abonnere på tidels sekunder?</label></li>
 </ul>
 <p>Hint: hva er <code>second * 2</code>?</p>
 </section>
@@ -292,8 +292,8 @@ i
     ]
 </code></pre>
 <p>Husk å importere de nye funksjonene!</p>
-<ul>
-<li>I hvilke moduler finner vi <code>div</code> og <code>style</code>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> I hvilke moduler finner vi <code>div</code> og <code>style</code>?</label></li>
 </ul>
 <p>Men nå ble det jo alltid rødt! Dårlig blinking. En måte å få til blinking er å
 sette oddetall til rød og partall til grønn.</p>
@@ -326,10 +326,10 @@ en hel firer, og <strong>1</strong> ekstra.</p>
 &gt; rem <span class="hljs-number">9</span> <span class="hljs-number">2</span>
 <span class="hljs-number">1</span> : <span class="hljs-type">Int</span>
 </code></pre>
-<ul>
-<li>Ser du mønsteret? Hva skjer når vi deler oddetall på 2? Hva skjer når vi deler
-partall på 2?</li>
-<li>Skriv funksjonen isEven. Denne skal fungere slik:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Ser du mønsteret? Hva skjer når vi deler oddetall på 2? Hva skjer når vi deler
+partall på 2?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Skriv funksjonen isEven. Denne skal fungere slik:</label></li>
 </ul>
 <pre><code class="elm">&gt; isEven <span class="hljs-number">0</span>
 <span class="hljs-type">True</span> : <span class="hljs-type">Bool</span>
@@ -352,8 +352,8 @@ partall på 2?</li>
 &gt; isEven <span class="hljs-number">9</span>
 <span class="hljs-type">False</span> : <span class="hljs-type">Bool</span>
 </code></pre>
-<ul>
-<li>Bruk funksjonen <code>isEven</code> til å bestemme om du skal ha <code>(&quot;backgroundColor&quot;, &quot;red&quot;)</code> eller <code>(&quot;backgroundColor&quot;, &quot;green&quot;)</code>!</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bruk funksjonen <code>isEven</code> til å bestemme om du skal ha <code>(&quot;backgroundColor&quot;, &quot;red&quot;)</code> eller <code>(&quot;backgroundColor&quot;, &quot;green&quot;)</code>!</label></li>
 </ul>
 <p>... Stopp her for å prøve selv!</p>
 <p>Her lager jeg med vilje litt avstand ...</p>
@@ -381,8 +381,8 @@ partall på 2?</li>
     [ text (toString model.count)
     ]
 </code></pre>
-<ul>
-<li>Kan du få det til å blinke <em>og</em> gå fort? Obs! Mange farger!</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Kan du få det til å blinke <em>og</em> gå fort? Obs! Mange farger!</label></li>
 </ul>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Elm: Tell sekunder&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/elm/07_tell_sekunder" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/elm/07_tell_sekunder" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Teodor Heggelund</p>

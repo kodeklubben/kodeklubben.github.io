@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">JS: Trykkomania</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/trykkomania/trykkomania.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">JS: Trykkomania</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/trykkomania/trykkomania.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
 <p>Denne oppgaven viser deg hvordan du kan lage et spill med JavaScript og dele det med vennene dine. Spillet kalles <em>Trykkomania</em> fordi det handler om å trykke på en ball flest mulig ganger før tiden renner ut.</p>
 <p>Før du starter på denne oppgaven bør du har endel erfaring med variabler, funksjoner og eventListeners i JavaScript. Dersom du ikke har det, så anbefaler vi å gjøre noen av de enklere oppgavene først.</p>
@@ -17,22 +17,22 @@ function relative (url) {
 <p>Vi skal bruke JS Bin (<a href="http://jsbin.com">http://jsbin.com</a>) for å lage spillet. Hvis du aldri har brukt JS Bin før, ta en titt på oppgaven <a href="../hei_js/hei_js.html">Hei JavaScript</a>. Dersom du heller vil lage spillet i en egen fil på PCen din, så er det bare å åpne din favoritt teksteditor og hoppe til steg 2.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
-<ul>
-<li>
-<p>Åpne adressen <a href="http://jsbin.com">jsbin.com</a> i ett eget vindu.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Åpne adressen <a href="http://jsbin.com">jsbin.com</a> i ett eget vindu.</label></p>
 </li>
-<li>
-<p>Velg å vise <strong>JavaScript</strong> og <strong>Output</strong>. Skjul de andre fanene ved å trykke på de.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Velg å vise <strong>JavaScript</strong> og <strong>Output</strong>. Skjul de andre fanene ved å trykke på de.</label></p>
 <p><figure><img src="faner.png" alt=""></figure></p>
 </li>
-<li>
-<p>I <strong>JavaScript</strong> skriver vi koden.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> I <strong>JavaScript</strong> skriver vi koden.</label></p>
 </li>
-<li>
-<p>I <strong>Output</strong> vises websiden.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> I <strong>Output</strong> vises websiden.</label></p>
 </li>
-<li>
-<p>Når du starter er begge fanene tomme.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Når du starter er begge fanene tomme.</label></p>
 </li>
 </ul>
 </section>
@@ -42,26 +42,26 @@ function relative (url) {
 <p>Vi skal bruke JavaScript til å lage innholdet på websiden. Dette betyr at vi skal bruke JavaScript til å lage <em>HTML</em>. Du trenger ikke kunne noe spesielt om HTML, men om du ønsker lære om HTML, se <a href="../introduksjon_til_web/introduksjon_til_web.html">oppgaven Introduksjon til web</a>.</p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
-<ul>
-<li>
-<p>Vi begynner med å lage en funksjon som heter <code>Ball</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Vi begynner med å lage en funksjon som heter <code>Ball</code>:</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
 
 }
 </code></pre>
 </li>
-<li>
-<p>Inni funksjonen lager vi ett nytt <code>div</code>-element:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Inni funksjonen lager vi ett nytt <code>div</code>-element:</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
 }
 </code></pre>
 </li>
-<li>
-<p><code>var el</code> betyr at elementet får navn <code>el</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> <code>var el</code> betyr at elementet får navn <code>el</code>.</label></p>
 </li>
-<li>
-<p>Vi kan nå gi elementet en stil:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Vi kan nå gi elementet en stil:</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
   el.style.backgroundColor = <span class="hljs-string">'black'</span>;
@@ -70,17 +70,17 @@ function relative (url) {
 }
 </code></pre>
 </li>
-<li>
-<p><code>el.style.backgroundColor = 'black'</code> gjør ballen svart.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> <code>el.style.backgroundColor = 'black'</code> gjør ballen svart.</label></p>
 </li>
-<li>
-<p><code>el.style.width = '60px'</code> gjør ballen 60 <a href="https://no.wikipedia.org/wiki/Piksel">piksler</a> bred.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> <code>el.style.width = '60px'</code> gjør ballen 60 <a href="https://no.wikipedia.org/wiki/Piksel">piksler</a> bred.</label></p>
 </li>
-<li>
-<p><code>el.style.height = '60px'</code> gjør ballen 60 piksler høy.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> <code>el.style.height = '60px'</code> gjør ballen 60 piksler høy.</label></p>
 </li>
-<li>
-<p>La oss legge ballen til siden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> La oss legge ballen til siden:</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
   el.style.backgroundColor = <span class="hljs-string">'black'</span>;
@@ -90,25 +90,25 @@ function relative (url) {
 }
 </code></pre>
 </li>
-<li>
-<p>For at ballen skal vises, må vi kjøre funksjonen ved hjelp av denne koden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> For at ballen skal vises, må vi kjøre funksjonen ved hjelp av denne koden:</label></p>
 <pre><code class="js">Ball();
 </code></pre>
 </li>
-<li>
-<p>Vises en &quot;ball&quot; i <strong>Output</strong>?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Vises en &quot;ball&quot; i <strong>Output</strong>?</label></p>
 <p><figure><img src="firkantet_ball.png" alt=""></figure></p>
 </li>
 </ul>
 <p>Ok, så den var ikke akkurat rund. Vi kan bruke <code>el.style.borderRadius</code> for å runde av hjørnene. Siden ballen er <code>60px</code> bred og høy, så avrunder vi kantene med <code>30px</code>, altså halvparten av 60.</p>
-<ul>
-<li>
-<p>Legg koden under de andre <code>el.style</code>-setningene:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Legg koden under de andre <code>el.style</code>-setningene:</label></p>
 <pre><code class="js">el.style.borderRadius = <span class="hljs-string">'30px'</span>;
 </code></pre>
 </li>
-<li>
-<p>Fikk du en rund ball?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Fikk du en rund ball?</label></p>
 </li>
 </ul>
 </section>
@@ -127,26 +127,26 @@ function relative (url) {
 <p>Vi bruker <code>el.style.position = 'fixed'</code> for å fortelle at vi ønsker plassere ballen i forhold til kantene i vinduet. 50% fra toppen blir da <code>el.style.top = '50%'</code>.</p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til en posisjon for ballen:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Legg til en posisjon for ballen:</label></p>
 <pre><code class="js">el.style.position = <span class="hljs-string">'fixed'</span>;
 el.style.top = <span class="hljs-string">'80%'</span>;
 </code></pre>
 </li>
-<li>
-<p>Flyttet ballen seg ned?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Flyttet ballen seg ned?</label></p>
 </li>
-<li>
-<p>Flytt ballen ut fra venstre kant:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Flytt ballen ut fra venstre kant:</label></p>
 <pre><code class="js">el.style.left = <span class="hljs-string">'30%'</span>;
 </code></pre>
 </li>
-<li>
-<p>Prøv andre verdier mellom <code>0%</code> og <code>100%</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Prøv andre verdier mellom <code>0%</code> og <code>100%</code>.</label></p>
 </li>
-<li>
-<p>Klarer du å finne ut når ballen forsvinner ut av vinduet?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Klarer du å finne ut når ballen forsvinner ut av vinduet?</label></p>
 </li>
 </ul>
 </section>
@@ -160,9 +160,9 @@ el.style.top = <span class="hljs-string">'80%'</span>;
 <p>Ettersom vi ønsker at ballen skal flytte seg underveis i spillet, skal vi lage en funksjon som flytter ballen.</p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
-<ul>
-<li>
-<p>Inni <code>Ball</code>, lag en funksjon som heter <code>el.posisjon</code>. Denne funksjonen skal ta inn en x- og en y-verdi, plassere elementet og returnere elementet.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Inni <code>Ball</code>, lag en funksjon som heter <code>el.posisjon</code>. Denne funksjonen skal ta inn en x- og en y-verdi, plassere elementet og returnere elementet.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
   ...
   el.posisjon = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x, y</span>) </span>{
@@ -171,16 +171,16 @@ el.style.top = <span class="hljs-string">'80%'</span>;
 }
 </code></pre>
 </li>
-<li>
-<p>Funksjonen skal bestemme <code>el.style.top</code> og <code>el.style.left</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Funksjonen skal bestemme <code>el.style.top</code> og <code>el.style.left</code>.</label></p>
 <pre><code class="js">el.posisjon = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x, y</span>) </span>{
   el.style.left = x;
   el.style.top = y;
 };
 </code></pre>
 </li>
-<li>
-<p>Returner <code>el</code>, slik at vi kan bruke funksjonene til ballen. Når elementet <code>el</code> returneres så vil <code>el</code> oppdateres med ny plassering.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Returner <code>el</code>, slik at vi kan bruke funksjonene til ballen. Når elementet <code>el</code> returneres så vil <code>el</code> oppdateres med ny plassering.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
   ...
   el.posisjon = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x, y</span>) </span>{
@@ -192,8 +192,8 @@ el.style.top = <span class="hljs-string">'80%'</span>;
 }
 </code></pre>
 </li>
-<li>
-<p>Du kan nå flytte ballen slik som dette:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Du kan nå flytte ballen slik som dette:</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> ball = Ball();  <span class="hljs-comment">// lager ballen</span>
 ball.posisjon(<span class="hljs-string">'10%'</span>, <span class="hljs-string">'20%'</span>);  <span class="hljs-comment">// flytter til x = 10% og y = 20%</span>
 </code></pre>
@@ -210,33 +210,33 @@ ball.posisjon(<span class="hljs-string">'10%'</span>, <span class="hljs-string">
 <p>I JavaScript kan vi bruke <code>Math.random()</code> for å få en tilfeldig verdi mellom 0 og 1. La oss bruke denne slik at ballen blir plassert på et tilfeldig sted.</p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
-<ul>
-<li>
-<p>Trykk på fanen <strong>Console</strong>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Trykk på fanen <strong>Console</strong>.</label></p>
 </li>
-<li>
-<p>Skriv inn <code>Math.random()</code> og trykk enter.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Skriv inn <code>Math.random()</code> og trykk enter.</label></p>
 <p><figure><img src="tilfeldig.png" alt=""></figure></p>
 </li>
-<li>
-<p>Fikk du et tall mellom 0 og 1?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Fikk du et tall mellom 0 og 1?</label></p>
 </li>
-<li>
-<p>Vi kan gjøre dette tallet om til prosent ved å gange med 100, prøv det ut:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Vi kan gjøre dette tallet om til prosent ved å gange med 100, prøv det ut:</label></p>
 <p><figure><img src="prosent1.png" alt=""></figure></p>
 </li>
-<li>
-<p>Vi kan legge til prosenttegnet med <code>+ '%'</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Vi kan legge til prosenttegnet med <code>+ '%'</code>:</label></p>
 <p><figure><img src="prosent2.png" alt=""></figure></p>
 </li>
-<li>
-<p>Legg merke til at hver gang kommandoen kjøres, får vi nye tall. Det er dette som kalles <em>tilfeldig</em>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Legg merke til at hver gang kommandoen kjøres, får vi nye tall. Det er dette som kalles <em>tilfeldig</em>.</label></p>
 </li>
-<li>
-<p>Lukk <strong>Console</strong> ved å trykke på den.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Lukk <strong>Console</strong> ved å trykke på den.</label></p>
 </li>
-<li>
-<p>La oss bruke <code>Math.random</code> til å plassere ballen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> La oss bruke <code>Math.random</code> til å plassere ballen:</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> x = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span> + <span class="hljs-string">'%'</span>;
 <span class="hljs-keyword">var</span> y = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span> + <span class="hljs-string">'%'</span>;
 ball.posisjon(x, y);
@@ -244,25 +244,25 @@ ball.posisjon(x, y);
 </li>
 </ul>
 <p>Her har vi laget 2 variabler <code>x</code> og <code>y</code> som begge holder på hvert sitt tilfeldige tall. Dette tallet sendes inn i funksjonen <code>posisjon(x,y)</code> som vi lagde i sted.</p>
-<ul>
-<li>
-<p>Hvis du trykker på knappen <button>Run with JS</button>, flytter ballen på seg?</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Hvis du trykker på knappen <button>Run with JS</button>, flytter ballen på seg?</label></p>
 <p><figure><img src="tilfeldig_plassering.gif" alt=""></figure></p>
 </li>
-<li>
-<p>Hvis du har haket av <strong>Auto-run JS</strong> vil også koden kjøres hver gang du endrer koden.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Hvis du har haket av <strong>Auto-run JS</strong> vil også koden kjøres hver gang du endrer koden.</label></p>
 </li>
-<li>
-<p>Trykker du nok antall ganger, legger du merke til at ballen noen ganger kommer utenfor bunnen og høyre side.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Trykker du nok antall ganger, legger du merke til at ballen noen ganger kommer utenfor bunnen og høyre side.</label></p>
 </li>
-<li>
-<p>For å unngå dette kan vi begrense forflytningen til 80%:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> For å unngå dette kan vi begrense forflytningen til 80%:</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> x = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">80</span> + <span class="hljs-string">'%'</span>;
 <span class="hljs-keyword">var</span> y = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">80</span> + <span class="hljs-string">'%'</span>;
 </code></pre>
 </li>
-<li>
-<p>Siden <code>Math.random()</code> maksimalt er 1 og vi ganger med 80, vil aldri ballen flytte seg lenger ut fra toppen eller venstre side enn 80%.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Siden <code>Math.random()</code> maksimalt er 1 og vi ganger med 80, vil aldri ballen flytte seg lenger ut fra toppen eller venstre side enn 80%.</label></p>
 </li>
 </ul>
 </section>
@@ -280,9 +280,9 @@ ball.posisjon(x, y);
 </code></pre>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
-<ul>
-<li>
-<p>Bruk <code>setInterval</code> til å flytte ballen hvert andre sekund:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Bruk <code>setInterval</code> til å flytte ballen hvert andre sekund:</label></p>
 <pre><code class="js">setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> x = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">80</span> + <span class="hljs-string">'%'</span>;
   <span class="hljs-keyword">var</span> y = <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">80</span> + <span class="hljs-string">'%'</span>;
@@ -290,11 +290,11 @@ ball.posisjon(x, y);
 }, <span class="hljs-number">2000</span>);
 </code></pre>
 </li>
-<li>
-<p><code>setInterval(function ..., 2000)</code> betyr kjør <code>function</code> hvert <code>2000</code> millisekund.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> <code>setInterval(function ..., 2000)</code> betyr kjør <code>function</code> hvert <code>2000</code> millisekund.</label></p>
 </li>
-<li>
-<p>2000 millisekund er 2 sekunder, altså tegnes ballen på et nytt sted hvert andre sekund.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> 2000 millisekund er 2 sekunder, altså tegnes ballen på et nytt sted hvert andre sekund.</label></p>
 </li>
 </ul>
 </section>
@@ -308,9 +308,9 @@ ball.posisjon(x, y);
 <p>Nå har du en ball som spretter rundt. La oss legge til poeng. Vi har laget en poeng-komponent som du kan bruke, så kommer du raskere i gang. <code>Poeng</code> er bygd opp likt som <code>Ball</code>, så du må gjerne lese gjennom og se om du forstår den.</p>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til koden for komponenten <code>Poeng</code>:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Legg til koden for komponenten <code>Poeng</code>:</label></p>
 <pre><code class="js"><span class="hljs-comment">/**
  * Poeng - viser poengsum nede i venstre hjørne.
  *
@@ -350,20 +350,20 @@ ball.posisjon(x, y);
 }
 </code></pre>
 </li>
-<li>
-<p>For at poengsummen skal vises, må vi kjøre <code>Poeng()</code> en gang, slik vi også gjorde med <code>Ball()</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> For at poengsummen skal vises, må vi kjøre <code>Poeng()</code> en gang, slik vi også gjorde med <code>Ball()</code>.</label></p>
 </li>
-<li>
-<p>Legg denne linjen over <code>Ball()</code>:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Legg denne linjen over <code>Ball()</code>:</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> poeng = Poeng();
 <span class="hljs-keyword">var</span> ball = Ball();
 </code></pre>
 </li>
-<li>
-<p>Vises &quot;<strong>Poeng 0</strong>&quot;?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Vises &quot;<strong>Poeng 0</strong>&quot;?</label></p>
 </li>
-<li>
-<p>For å holde orden på programmet er det lurt å ha det som skjer i toppen. Funksjoner kan brukes likevel om de ikke står først, så flytt <code>function Ball</code> og <code>function Poeng</code> ned til bunnen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> For å holde orden på programmet er det lurt å ha det som skjer i toppen. Funksjoner kan brukes likevel om de ikke står først, så flytt <code>function Ball</code> og <code>function Poeng</code> ned til bunnen.</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> poeng = Poeng();
 <span class="hljs-keyword">var</span> ball = Ball();
 setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -380,25 +380,25 @@ setInterval(<span class="hljs-function"><span class="hljs-keyword">function</spa
 }
 </code></pre>
 </li>
-<li>
-<p>Nå står det som skjer i toppen:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Nå står det som skjer i toppen:</label></p>
 <ul>
 <li>Vis poengene: <code>var poeng = Poeng()</code></li>
 <li>Vis ballen: <code>var ball = Ball()</code></li>
 <li>Flytt ballen hvert andre sekund: <code>setInterval(..., 2000)</code></li>
 </ul>
 </li>
-<li>
-<p>Vi velger nå å kjøre funksjonen <code>poeng.øk</code> hver gang ballen trykkes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Vi velger nå å kjøre funksjonen <code>poeng.øk</code> hver gang ballen trykkes.</label></p>
 <pre><code class="js">ball.onclick = poeng.øk;
 </code></pre>
 <p><strong>Obs:</strong> Det skal <strong>ikke</strong> være <code>()</code> på slutten av <code>poeng.øk</code>. Dette er fordi funksjonen ikke kjøres her, men hver gang noen klikker på ballen.</p>
 </li>
-<li>
-<p><code>ball.onclick = poeng.øk;</code> betyr at funksjonen <code>poeng.øk()</code> kjøres når noen klikker på ballen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> <code>ball.onclick = poeng.øk;</code> betyr at funksjonen <code>poeng.øk()</code> kjøres når noen klikker på ballen.</label></p>
 </li>
-<li>
-<p>Sjekk at du får poeng når du treffer ballen med et klikk.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Sjekk at du får poeng når du treffer ballen med et klikk.</label></p>
 <p><figure><img src="poeng.gif" alt=""></figure></p>
 </li>
 </ul>
@@ -413,39 +413,39 @@ setInterval(<span class="hljs-function"><span class="hljs-keyword">function</spa
 </section>
 <section class="check" id="sjekkliste-8">
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
-<ul>
-<li>
-<p>Noen mobiltelefoner zoomer når en dobbeltklikker på skjermen, derfor skal vi slå av zooming.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Noen mobiltelefoner zoomer når en dobbeltklikker på skjermen, derfor skal vi slå av zooming.</label></p>
 </li>
-<li>
-<p>Åpne fanen <strong>HTML</strong> ved å trykke på den.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Åpne fanen <strong>HTML</strong> ved å trykke på den.</label></p>
 </li>
-<li>
-<p>Finn linjen med <code>&lt;meta name=&quot;viewport&quot; ...</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> Finn linjen med <code>&lt;meta name=&quot;viewport&quot; ...</code>.</label></p>
 </li>
-<li>
-<p>Endre linjen til:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Endre linjen til:</label></p>
 <pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, user-scalable=no"</span>&gt;</span>
 </code></pre>
 </li>
-<li>
-<p>Lukk fanen <strong>HTML</strong> ved å trykke på den.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_55" disabled="true"><label for="cbx_55"> Lukk fanen <strong>HTML</strong> ved å trykke på den.</label></p>
 </li>
-<li>
-<p>Øverst i nettleseren din står adressen til siden.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_56" disabled="true"><label for="cbx_56"> Øverst i nettleseren din står adressen til siden.</label></p>
 <p><figure><img src="adresse.png" alt=""></figure></p>
 </li>
-<li>
-<p>Adressen du trenger å taste inn på mobilen er det <em>før</em> <code>/edit?js,output</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_57" disabled="true"><label for="cbx_57"> Adressen du trenger å taste inn på mobilen er det <em>før</em> <code>/edit?js,output</code>.</label></p>
 </li>
-<li>
-<p>I eksempelet over er adressen <code>jsbin.com/dutebe</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_58" disabled="true"><label for="cbx_58"> I eksempelet over er adressen <code>jsbin.com/dutebe</code>.</label></p>
 </li>
-<li>
-<p>Tast <em>din</em> adresse inn på mobiltelefonen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_59" disabled="true"><label for="cbx_59"> Tast <em>din</em> adresse inn på mobiltelefonen.</label></p>
 </li>
-<li>
-<p>Spill!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_60" disabled="true"><label for="cbx_60"> Spill!</label></p>
 </li>
 </ul>
 </section>
@@ -455,9 +455,9 @@ setInterval(<span class="hljs-function"><span class="hljs-keyword">function</spa
 <p>Akkurat nå er det ubegrenset tid i spillet. La oss legge til en nedtelling av tid, slik at man kan konkurrere om hvem som klarer flest klikk på 10 sekunder.</p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
-<ul>
-<li>
-<p>Legg til koden for nedtelling i bunnen av programmet.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_61" disabled="true"><label for="cbx_61"> Legg til koden for nedtelling i bunnen av programmet.</label></p>
 <pre><code class="js"><span class="hljs-comment">/**
  * Nedtelling - En linje som viser at tiden renner ut.
  *
@@ -504,30 +504,30 @@ setInterval(<span class="hljs-function"><span class="hljs-keyword">function</spa
 }
 </code></pre>
 </li>
-<li>
-<p>I toppen starter vi nedtellingen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_62" disabled="true"><label for="cbx_62"> I toppen starter vi nedtellingen.</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> nedtelling = Nedtelling();
 nedtelling.tellNed(<span class="hljs-number">10</span>);
 </code></pre>
 </li>
-<li>
-<p>Dette lager en nedtelling på 10 sekunder.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_63" disabled="true"><label for="cbx_63"> Dette lager en nedtelling på 10 sekunder.</label></p>
 </li>
-<li>
-<p>Hvis du trykker på <button>Run with JS</button> ser du nedtellingen, men ingenting skjer når tiden er ute.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_64" disabled="true"><label for="cbx_64"> Hvis du trykker på <button>Run with JS</button> ser du nedtellingen, men ingenting skjer når tiden er ute.</label></p>
 </li>
-<li>
-<p>Lag funksjonen <code>stopp</code> som forteller hva som skal skje når tiden er ute.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_65" disabled="true"><label for="cbx_65"> Lag funksjonen <code>stopp</code> som forteller hva som skal skje når tiden er ute.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">stopp</span>(<span class="hljs-params"></span>) </span>{
   ball.skjul();
 }
 </code></pre>
 </li>
-<li>
-<p>Vi har ikke laget funksjonen <code>ball.skjul</code> enda. Vi trenger <code>ball.vis</code> også.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_66" disabled="true"><label for="cbx_66"> Vi har ikke laget funksjonen <code>ball.skjul</code> enda. Vi trenger <code>ball.vis</code> også.</label></p>
 </li>
-<li>
-<p>Lag <code>ball.skjul</code> og <code>ball.vis</code> inni <code>function Ball</code>.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_67" disabled="true"><label for="cbx_67"> Lag <code>ball.skjul</code> og <code>ball.vis</code> inni <code>function Ball</code>.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Ball</span>(<span class="hljs-params"></span>) </span>{
   ...
   el.skjul = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -541,16 +541,16 @@ nedtelling.tellNed(<span class="hljs-number">10</span>);
 }
 </code></pre>
 </li>
-<li>
-<p>Nå kan vi fortelle nedtellingen at den skal kjøre <code>stopp()</code> når tiden er ute.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_68" disabled="true"><label for="cbx_68"> Nå kan vi fortelle nedtellingen at den skal kjøre <code>stopp()</code> når tiden er ute.</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> nedtelling = Nedtelling(stopp);
 </code></pre>
 </li>
-<li>
-<p>Forsvinner ballen når tiden er ute?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_69" disabled="true"><label for="cbx_69"> Forsvinner ballen når tiden er ute?</label></p>
 </li>
-<li>
-<p>Hvor mange poeng klarer du på mobiltelefonen innen tiden?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_70" disabled="true"><label for="cbx_70"> Hvor mange poeng klarer du på mobiltelefonen innen tiden?</label></p>
 </li>
 </ul>
 </section>
@@ -564,16 +564,16 @@ nedtelling.tellNed(<span class="hljs-number">10</span>);
 <p>Så langt kan spillet omstartes ved å oppdatere nettleseren. Er det ikke stiligere med en knapp som starter spillet?</p>
 <section class="check" id="sjekkliste-10">
 <h2 class="check" id="sjekkliste-10">Sjekkliste</h2>
-<ul>
-<li>
-<p>Lag en funksjon <code>start</code>.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_71" disabled="true"><label for="cbx_71"> Lag en funksjon <code>start</code>.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
 
 }
 </code></pre>
 </li>
-<li>
-<p>Funksjonen skal bestemme hva som skjer når spillet skal starte. Vi må nullstille poengsummen, vise nedtellingen og vise ballen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_72" disabled="true"><label for="cbx_72"> Funksjonen skal bestemme hva som skjer når spillet skal starte. Vi må nullstille poengsummen, vise nedtellingen og vise ballen.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
   poeng.nullstill();
   nedtelling.tellNed(<span class="hljs-number">10</span>);
@@ -581,11 +581,11 @@ nedtelling.tellNed(<span class="hljs-number">10</span>);
 }
 </code></pre>
 </li>
-<li>
-<p><code>start</code> skal kjøres hver gang en knapp klikkes, så vi trenger en knapp.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_73" disabled="true"><label for="cbx_73"> <code>start</code> skal kjøres hver gang en knapp klikkes, så vi trenger en knapp.</label></p>
 </li>
-<li>
-<p>Legg til koden for knappen i bunnen av programmet.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_74" disabled="true"><label for="cbx_74"> Legg til koden for knappen i bunnen av programmet.</label></p>
 <pre><code class="js"><span class="hljs-comment">/**
  * En knapp som ligger midt på siden.
  *
@@ -622,39 +622,39 @@ nedtelling.tellNed(<span class="hljs-number">10</span>);
 }
 </code></pre>
 </li>
-<li>
-<p>I toppen legger vi til knappen.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_75" disabled="true"><label for="cbx_75"> I toppen legger vi til knappen.</label></p>
 <pre><code class="js"><span class="hljs-keyword">var</span> knapp = Knapp(<span class="hljs-string">'Prøv en gang til'</span>);
 knapp.onclick = start;
 </code></pre>
 </li>
-<li>
-<p><code>knapp.onclick</code> bestemmer hva som skal skje når knappen klikkes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_76" disabled="true"><label for="cbx_76"> <code>knapp.onclick</code> bestemmer hva som skal skje når knappen klikkes.</label></p>
 </li>
-<li>
-<p>Knappen vises ikke, så vi må bestemme at den skal vises når spillet er slutt.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_77" disabled="true"><label for="cbx_77"> Knappen vises ikke, så vi må bestemme at den skal vises når spillet er slutt.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">stopp</span>(<span class="hljs-params"></span>) </span>{
   ...
   knapp.vis();
 }
 </code></pre>
 </li>
-<li>
-<p>Vises knappen når spillet er ferdig?</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_78" disabled="true"><label for="cbx_78"> Vises knappen når spillet er ferdig?</label></p>
 </li>
-<li>
-<p>Du legger kanskje merke til at vi har en bug nå? Vi må jo skjule knappen når spillet startes også!</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_79" disabled="true"><label for="cbx_79"> Du legger kanskje merke til at vi har en bug nå? Vi må jo skjule knappen når spillet startes også!</label></p>
 </li>
-<li>
-<p>Skjul knappen når spillet startes.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_80" disabled="true"><label for="cbx_80"> Skjul knappen når spillet startes.</label></p>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
   ...
   knapp.skjul();
 }
 </code></pre>
 </li>
-<li>
-<p>Spillet er nå ferdig! Del adressen med dine venner og se hvem som klarer flest poeng.</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_81" disabled="true"><label for="cbx_81"> Spillet er nå ferdig! Del adressen med dine venner og se hvem som klarer flest poeng.</label></p>
 </li>
 </ul>
 </section>
@@ -665,13 +665,13 @@ knapp.onclick = start;
 <section class="challenge" id="utfordringer">
 <h2 class="challenge" id="utfordringer">Utfordringer</h2>
 <p>Her er noen utfordringer:</p>
-<ul>
-<li>Endre størrelsen på ballen, slik at spillet blir vanskeligere.</li>
-<li>Endre hvor lang tid man har på seg.</li>
-<li>Endre fargen på ballen.</li>
-<li>Øk poengsummen med 1000 istedenfor 100.</li>
-<li>Klarer du å få ballen til å endre til forskjellig størrelse hver gang den kommer til syne?</li>
-<li>Klarer du å få frem flere enn én ball?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_82" disabled="true"><label for="cbx_82"> Endre størrelsen på ballen, slik at spillet blir vanskeligere.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_83" disabled="true"><label for="cbx_83"> Endre hvor lang tid man har på seg.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_84" disabled="true"><label for="cbx_84"> Endre fargen på ballen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_85" disabled="true"><label for="cbx_85"> Øk poengsummen med 1000 istedenfor 100.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_86" disabled="true"><label for="cbx_86"> Klarer du å få ballen til å endre til forskjellig størrelse hver gang den kommer til syne?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_87" disabled="true"><label for="cbx_87"> Klarer du å få frem flere enn én ball?</label></li>
 </ul>
 </section>
 </section>

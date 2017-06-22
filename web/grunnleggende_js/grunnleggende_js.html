@@ -25,9 +25,9 @@ function relative (url) {
 <span class="hljs-keyword">var</span> variabel = tall; <span class="hljs-comment">// "variabel" vil nå ha samme verdi som tall, selv når tall endres</span>
 </code></pre>
 <p><strong>La oss prøve oss litt frem!</strong></p>
-<ul>
-<li>Gå inn på <a href="https://jsbin.com/?js,console">JSbin.com</a> og sørg for at fanene <code>JavaScript</code> og <code>Console</code> er markert. Dette gjør du ved å trykke på dem.</li>
-<li>I <code>JavaScript</code>-vindu skriver du følgende:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Gå inn på <a href="https://jsbin.com/?js,console">JSbin.com</a> og sørg for at fanene <code>JavaScript</code> og <code>Console</code> er markert. Dette gjør du ved å trykke på dem.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> I <code>JavaScript</code>-vindu skriver du følgende:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> tall = <span class="hljs-number">9</span>;
 <span class="hljs-keyword">var</span> tekst = <span class="hljs-string">"Hei på deg!"</span>;
@@ -42,31 +42,31 @@ function relative (url) {
 <pre><code class="js"><span class="hljs-keyword">var</span> tekst = <span class="hljs-string">"Hei på deg!"</span>;
 <span class="hljs-built_in">console</span>.log(tekst);
 </code></pre>
-<ul>
-<li>Trykk på <code>Run</code></li>
-<li>Vises teskten?</li>
-<li>La oss prøve oss på litt variabel-morro. Lag følgende variabler, du kan godt slette det du allerede har:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Trykk på <code>Run</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Vises teskten?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> La oss prøve oss på litt variabel-morro. Lag følgende variabler, du kan godt slette det du allerede har:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> tall1 = <span class="hljs-number">4</span>;
 <span class="hljs-keyword">var</span> tall2 = <span class="hljs-number">7</span>; 
 </code></pre>
-<ul>
-<li>Nå skal vi ta de to variablene og plusse dem sammen:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Nå skal vi ta de to variablene og plusse dem sammen:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-built_in">console</span>.log(tall1 + tall2);
 </code></pre>
-<ul>
-<li>Trykk <code>Run</code>. Fikk du 11?</li>
-<li>Nå som vi vet at vi kan få JavaScript til å regne for oss, ta å bytt ut <code>+</code> med de andre regneartene vi har og se om JavaScript klarer å regne ut med dem.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Trykk <code>Run</code>. Fikk du 11?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Nå som vi vet at vi kan få JavaScript til å regne for oss, ta å bytt ut <code>+</code> med de andre regneartene vi har og se om JavaScript klarer å regne ut med dem.</label></li>
 </ul>
 <p>La oss nå se på hvordan vi kan la en variabel være en annen:</p>
-<ul>
-<li>Legg til enda en variabel:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Legg til enda en variabel:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> tall3 = tall2;
 </code></pre>
-<ul>
-<li>Hva blir skriver <code>console.log(tall3 * tall2)</code> ut?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Hva blir skriver <code>console.log(tall3 * tall2)</code> ut?</label></li>
 </ul>
 <toggle>
     <strong>Svar</strong>
@@ -74,16 +74,16 @@ function relative (url) {
         49. Fordi 7 * 7 = 49.
     </hide>
 </toggle>
-<ul>
-<li>Skriv ut <code>tall3</code> og <code>tall2</code> til <code>console</code></li>
-<li>Prøv å endre på <code>tall2</code>, hva skjer med <code>tall3</code>?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv ut <code>tall3</code> og <code>tall2</code> til <code>console</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Prøv å endre på <code>tall2</code>, hva skjer med <code>tall3</code>?</label></li>
 </ul>
 <p><code>tall3</code> er jo satt til å være det samme som <code>tall2</code> og derfor blir den endret når <code>tall2</code> blir endret.</p>
 <p>Vi kan også legge til ekstra verdier til en variabel:</p>
 <pre><code class="js"><span class="hljs-keyword">var</span> tall4 = tall3 + tall1 + <span class="hljs-number">5</span>; 
 </code></pre>
-<ul>
-<li>Bruk <code>console.log</code> til å skrive ut <code>tall4</code>.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Bruk <code>console.log</code> til å skrive ut <code>tall4</code>.</label></li>
 </ul>
 <p>Nå har vi fått prøvd ut litt forskjellige variabeler, da skal vi bruke dette sammen med <code>if-setninger</code> for å sjekke om noe er sant eller ikke.</p>
 </section>
@@ -98,8 +98,8 @@ function relative (url) {
 }
 </code></pre>
 <p>Når vi bruker <code>if/else</code> sjekker vi en betingelse og basert på om betingelsen er sann eller usann, så kjører vi en gitt kode. La oss se på et eksempel med tall.</p>
-<ul>
-<li>Skriv dette inn i JSBin:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Skriv dette inn i JSBin:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> tall = <span class="hljs-number">5</span>;
 
@@ -118,8 +118,8 @@ function relative (url) {
 </section>
 <section>
 <h2 id="-2"></h2>
-<ul>
-<li>La oss lage sjekk på om du kan ta sertifikatet til bil eller moped:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> La oss lage sjekk på om du kan ta sertifikatet til bil eller moped:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> alder = <span class="hljs-number">0</span>;
 
@@ -142,25 +142,25 @@ function relative (url) {
 </section>
 <section>
 <h2 id="-3"></h2>
-<ul>
-<li>
-<p>Prøv å endre <code>alder</code> slik at du får testet om <code>if/else</code>-setningene fungerer.</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Prøv å endre <code>alder</code> slik at du får testet om <code>if/else</code>-setningene fungerer.</label></p>
 </li>
-<li>
-<p>La oss legge til noe som heter <code>prompt</code>, dette gjør at du kan ta inn <code>input</code> fra brukeren av nettsiden:</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> La oss legge til noe som heter <code>prompt</code>, dette gjør at du kan ta inn <code>input</code> fra brukeren av nettsiden:</label></p>
 </li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> alder = prompt(<span class="hljs-string">"Hvor gammel er du?"</span>);
 </code></pre>
 <p>Nå skal vi ta dette opp ett hakk hvor vi skal sjekke hva klokken er og skrive en melding ut i fra det. Da bruker vi noe som heter <code>Date</code> i JavaScript, denne inneholder informasjon om dagen i dag. Dette er en klasse, hva det vil si skal vi ikke fokusere på nå.</p>
-<ul>
-<li>Vi lager to variabler, en som er en <code>Date</code>-klasse og en annen som henter timen vi er i nå:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Vi lager to variabler, en som er en <code>Date</code>-klasse og en annen som henter timen vi er i nå:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> dato = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(); <span class="hljs-comment">// Henter informasjon om dagen i dag</span>
 <span class="hljs-keyword">var</span> tid = dato.getHours(); <span class="hljs-comment">// Henter timen (klokka) vi er i nå</span>
 </code></pre>
-<ul>
-<li>Bruk <code>console.log</code> til å sjekke hva variabelen <code>tid</code> inneholder.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Bruk <code>console.log</code> til å sjekke hva variabelen <code>tid</code> inneholder.</label></li>
 </ul>
 <p>Før du skal få en oppgave må vi gå igjennom noen verktøy vi kan bruke i <code>if/else</code>:</p>
 </section>
@@ -213,8 +213,8 @@ funksjonsNavn(paramenter1, parameter2); <span class="hljs-comment">// Gjør at f
 navn(); <span class="hljs-comment">//for å kjøre funksjonen</span>
 </code></pre>
 <p>En funksjon kalles ofte for en <code>metode</code>. Videre kommer vi til å bruke <code>funksjon</code> og <code>metode</code> litt om hverandre.</p>
-<ul>
-<li>Ta nå koden som har med alder å gjøre, og legg den inn i en funksjon. Kall funksjonen for <code>sjekkAlder</code></li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Ta nå koden som har med alder å gjøre, og legg den inn i en funksjon. Kall funksjonen for <code>sjekkAlder</code></label></li>
 </ul>
 <toggle>
     <strong>Hint</strong>
@@ -233,8 +233,8 @@ navn(); <span class="hljs-comment">//for å kjøre funksjonen</span>
 </code></pre>
 </hide>
 </toggle>
-<ul>
-<li>Legg på kode for at <code>sjekkAlder</code> skal kjøre.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Legg på kode for at <code>sjekkAlder</code> skal kjøre.</label></li>
 </ul>
 <toggle>
     <strong> Hint </strong>
@@ -244,9 +244,9 @@ navn(); <span class="hljs-comment">//for å kjøre funksjonen</span>
 </toggle>
 <p>La oss nå se på et annet eksempel på bruk av funksjoner. Vi skal nå lage en funksjon som skal ta inn et <code>paramenter</code> og <code>returnere</code> en verdi.</p>
 <p>Vi lager en funksjon som konverterer <code>fahrenheit</code>(tempratur mål i USA) til <code>Celsius</code>.</p>
-<ul>
-<li>Slett det du har i JSBin eller åpne et nytt vindu i JSBin (File -&gt; New)</li>
-<li>Lag følgende funksjon:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Slett det du har i JSBin eller åpne et nytt vindu i JSBin (File -&gt; New)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Lag følgende funksjon:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fahrenheitTilCelsius</span>(<span class="hljs-params">fahrenheit</span>) </span>{
     <span class="hljs-keyword">return</span> (<span class="hljs-number">5</span>/<span class="hljs-number">9</span>) * (fahrenheit - <span class="hljs-number">32</span>);
@@ -320,10 +320,10 @@ Eksempel:</li>
 </section>
 <section class="check" id="prov-selv">
 <h2 class="check" id="prov-selv">Prøv selv!</h2>
-<ul>
-<li>Åpne ny side i JSBin</li>
-<li>Prøv å skriv ut tallene fra 1 - 100 ved hjelp av en <code>for</code>-løkke</li>
-<li>Bytt på telleren <code>i++</code> slik at alle partall mellom 1 og 100 skrives ut</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Åpne ny side i JSBin</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Prøv å skriv ut tallene fra 1 - 100 ved hjelp av en <code>for</code>-løkke</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Bytt på telleren <code>i++</code> slik at alle partall mellom 1 og 100 skrives ut</label></li>
 </ul>
 <toggle>
     <strong>Hint</strong>
@@ -331,14 +331,14 @@ Eksempel:</li>
         Bytt ut i++ med i+=2
     </hide>
 </toggle>
-<ul>
-<li>Klarer du å skrive ut alle oddetallene også?</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Klarer du å skrive ut alle oddetallene også?</label></li>
 </ul>
 <p><strong>Bra! La oss se på lister.</strong></p>
-<ul>
-<li>Lag nå en liste over dine favoritt spill</li>
-<li>Skriv ut alle ved hjelp av en <code>for</code>-løkke</li>
-<li>Skriv ut annen hvert element i lista (hint: bruk samme metode som med partall)</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Lag nå en liste over dine favoritt spill</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Skriv ut alle ved hjelp av en <code>for</code>-løkke</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Skriv ut annen hvert element i lista (hint: bruk samme metode som med partall)</label></li>
 </ul>
 </section>
 <section class="tip" id="while-lokke">
@@ -367,27 +367,27 @@ Eksempel:</li>
 </section>
 <section class="check" id="prov-selv-2">
 <h2 class="check" id="prov-selv-2">Prøv selv</h2>
-<ul>
-<li>
-<p>Skriv om <code>while</code>-løkken til å skrive ut alle tallene fra 1-100</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Skriv om <code>while</code>-løkken til å skrive ut alle tallene fra 1-100</label></p>
 </li>
-<li>
-<p>Skriv om løkken slik at du skriver ut alle partallene fra 1-100</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Skriv om løkken slik at du skriver ut alle partallene fra 1-100</label></p>
 </li>
-<li>
-<p>Bruk listen din over favorittspill og skriv ut alle elementene ved hjelp av <code>while</code>-løkken</p>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Bruk listen din over favorittspill og skriv ut alle elementene ved hjelp av <code>while</code>-løkken</label></p>
 </li>
 </ul>
 <p><strong>La oss nå lage et enkelt <code>Kron eller mynt</code>-spill ved hjelp av <code>while</code>.</strong></p>
-<ul>
-<li>Åpne en ny <a href="https://jsbin.com/?js,console">JSbin.com</a></li>
-<li>Lag en variabel, <code>krone</code>, som skal være enten 0 eller 1, dette skal være tilfeldig:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Åpne en ny <a href="https://jsbin.com/?js,console">JSbin.com</a></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Lag en variabel, <code>krone</code>, som skal være enten 0 eller 1, dette skal være tilfeldig:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">var</span> krone = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">2</span>);
 </code></pre>
 <p><code>Math.floor()</code> runder ned tallet du får fra <code>Math.random()</code>. <code>Math.random()</code> henter et tall mellom 0 og 1, derfor bruker vi <code>*2</code> for at tallet blir mellom 0-2.</p>
-<ul>
-<li>Lag en <code>while</code>-løkke som skal kjøre helt til du får <code>mynt</code>. Vi sier nå at <code>kron</code> er <code>1</code> og <code>mynt</code> er <code>0</code>:</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Lag en <code>while</code>-løkke som skal kjøre helt til du får <code>mynt</code>. Vi sier nå at <code>kron</code> er <code>1</code> og <code>mynt</code> er <code>0</code>:</label></li>
 </ul>
 <pre><code class="js"><span class="hljs-keyword">while</span>(krone === <span class="hljs-number">0</span>) {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Kron! Vi flipper igjen..."</span>);
@@ -399,9 +399,9 @@ Eksempel:</li>
 </section>
 <section class="challenge" id="utfordring">
 <h2 class="challenge" id="utfordring">Utfordring</h2>
-<ul>
-<li>Bruk <code>prompt</code> til å ta inn et valg fra brukeren sånn at du selv kan bestemme om du vil ha <code>Kron</code> eller <code>Mynt</code>.</li>
-<li>Klarer du å gjøre det samme med terninger? Da må du ha tallene fra 0-6 og ikke bare fra 0-2.</li>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Bruk <code>prompt</code> til å ta inn et valg fra brukeren sånn at du selv kan bestemme om du vil ha <code>Kron</code> eller <code>Mynt</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Klarer du å gjøre det samme med terninger? Da må du ha tallene fra 0-6 og ikke bare fra 0-2.</label></li>
 </ul>
 </section>
 </section>
