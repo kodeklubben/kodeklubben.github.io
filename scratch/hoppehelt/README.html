@@ -1,0 +1,107 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>undefined | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Scratch</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title"></h1><div class="lesson-icons"><a href=".." class="course"><img src="../logo-white.png"/><span>Scratch</span></a><div class="pdf"><a href="/scratch/hoppehelt/README.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><hr>
+<section>
+<h2 id="title-laererveiledning-hoppeheltlevel-4language-nb">title: Lærerveiledning - Hoppehelt
+level: 4
+language: nb</h2>
+</section>
+<section class="activity" id="om-oppgaven">
+<h1 class="activity" id="om-oppgaven">Om oppgaven</h1>
+<p>Hoppehelt er litt inspirert av musikkspillet Guitar Hero. I Hoppehelt
+skal man kontrollere flere helter samtidig mens de hopper over fargede
+bokser som lager lyd.  Gjennom spillet Hoppehelt vil vi se litt
+nærmere på hvordan kloner brukes når man programmerer i Scratch. Vi
+vil til og med se eksempler på kloner av kloner!</p>
+<p><figure><img src="hoppehelt.png" alt=""></figure></p>
+<section class="check" id="oppgaven-passer-til">
+<h2 class="check" id="oppgaven-passer-til">Oppgaven passer til:</h2>
+<p><strong>Fag</strong>: Kunst og håndtverk, matematikk, programmering.
+<strong>Anbefalte trinn</strong>: 5.-10. trinn.
+<strong>Tema</strong>: Geometriske grunnformer, koordinatsystem, brukerinteraksjon.
+<strong>Tidsbruk</strong>: Dobbelttime eller mer.</p>
+</section>
+<section class="challenge" id="kompetansemal">
+<h2 class="challenge" id="kompetansemal">Kompetansemål</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> <strong>Kunst og håndtverk, 2. trinn</strong>: bygge med enkle geometriske grunnformer</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> <strong>Kunst og håndtverk, 4. trinn</strong>: eksperimentere med enkle geometriske former i konstruksjon og som dekorative formelementer</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> <strong>Matematikk, 4. trinn</strong>: lese av, plassere og beskrive posisjoner i rutenett, på kart og i koordinatsystemer, både med og uten digitale verktøy</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> <strong>Matematikk, 7. trinn</strong>: beskrive plassering og flytting i rutenett, på kart og i koordinatsystem, med og uten digitale hjelpemidler, og bruke koordinater til å beregne avstander parallelt med aksene i et koordinatsystem</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> <strong>Musikk, 2. trinn</strong>: sette sammen musikalske grunnelementer som klang, rytme, dynamikk og melodiske motiver til små komposisjoner</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> <strong>Programmering, 10. trinn</strong>: bruke grunnleggende prinsipper i programmering, slik som løkker, tester, variabler, funksjoner og enkel brukerinteraksjon</label></li>
+</ul>
+</section>
+<section class="challenge" id="forslag-til-laeringsmal">
+<h2 class="challenge" id="forslag-til-laeringsmal">Forslag til læringsmål</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Elevene kan bruke enkle geometriske grunnformer som elementer i et spill.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Elevene kan plassere elementer i bestemte posisjoner i et koordinatsystem.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Elevene kan flytte elementer i en bestemt retning i et koordinatsystem.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Elevene kan sette sammen lyder og lytte etter mønstre i sin egen komposisjon.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Elevene kan bruke løkker til å gjenta en handling i et spill.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Elevene kan lage et spill med kontinuerlig brukerinteraksjon.</label></li>
+</ul>
+</section>
+<section class="challenge" id="forslag-til-vurderingskriterier">
+<h2 class="challenge" id="forslag-til-vurderingskriterier">Forslag til vurderingskriterier</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Eleven viser middels måloppnåelse ved å fullføre oppgaven.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Eleven viser høy måloppnåelse ved å videreutvikle egen kode basert på oppgaven, for eksempel ved å gjøre en eller flere av variasjonene nedenfor.</label></li>
+</ul>
+</section>
+<section class="challenge" id="forutsetninger-og-utstyr">
+<h2 class="challenge" id="forutsetninger-og-utstyr">Forutsetninger og utstyr</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> <strong>Forutsetninger</strong>: Elevene må ha god kunnskap i Scratch. De bør ha gjort flere prosjekter på erfaren-nivået før de begynner med denne oppgaven.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> <strong>Utstyr</strong>: Datamaskiner med Scratch installert. Eventuelt kan elevene bruke Scratch i nettleseren dersom de har en bruker (eller registrerer seg) på <a href="http://scratch.mit.edu/" target="_blank">scratch.mit.edu/</a>.</label></li>
+</ul>
+</section>
+</section>
+<section>
+<h1 id="fremgangsmate">Fremgangsmåte</h1>
+<p><a href="../hoppehelt/hoppehelt.html" target="_blank">Klikk her for å se oppgaveteksten.</a>
+<em>Vi har dessverre ikke noen tips, erfaringer eller utfordringer tilknyttet denne oppgaven enda.</em></p>
+<section class="challenge" id="variasjoner">
+<h2 class="challenge" id="variasjoner">Variasjoner</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Elevene kan lage en variabel som teller poeng.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Elevene kan lage ulike toner for de ulike heltene.</label></li>
+</ul>
+</section>
+<section class="challenge" id="eksterne-ressurser">
+<h2 class="challenge" id="eksterne-ressurser">Eksterne ressurser</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Foreløpig ingen eksterne ressurser...</label></li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Scratch: undefined&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/hoppehelt" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/scratch/hoppehelt" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>// bind shim for phantomJS
+Function.prototype.bind = Function.prototype.bind || function (thisp) {
+  var fn = this;
+  var args = Array.prototype.slice.call(arguments, 1);
+  return function () {
+    return fn.apply(thisp, args);
+  };
+};
+$(document).ready(function(){
+  $('pre').has('code.blocks').addClass('blocks');
+  scratchblocks.renderMatching('code.blocks', {
+    languages: ['nb', 'en']
+  });
+  scratchblocks.renderMatching('code.b', {
+    languages: ['nb', 'en'],
+    inline: true
+  });
+});</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
