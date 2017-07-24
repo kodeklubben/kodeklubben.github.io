@@ -1,0 +1,114 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>PXT: Gangespill | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Micro:bit</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">PXT: Gangespill</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Micro:bit</span></a><div class="pdf"><a href="/microbit/pxt_gangespill/gangespill.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Dette er et enkelt og modifiserbart gangespill for micro:bit. Det fungerer slik at når en rister micro:biten så vil en få presentert et gangestykke. En svarer ved å trykke på A-knappen for antall tiere i svaret og B-knappen for antall enere. Når man har svart så trykker man på A+B. Dersom man svarer korrekt så vil en få opp et smilefjes, hvis ikke kommer et surt fjes.</p>
+</section>
+<section class="activity" id="steg-1-nar-microbit-ristes">
+<h1 class="activity" id="steg-1-nar-microbit-ristes">Steg 1: Når microbit ristes</h1>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start et nytt PXT-prosjekt, for eksempel ved å gå til
+<a href="https://makecode.microbit.org/?lang=no">makecode.microbit.org</a>.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Vi vil at noe skal skje når vi rister på micro:biten. Til dette kan vi
+bruke <code>når ristes</code>-klossen som finnes i kategorien <code>Inndata</code>.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Når micro:bit ristes skal det vises et gangestykke på skjermen. Vi må opprette en del <code>variabler</code> til å ta vare på verdiene vi skal bruke underveis: <code>tiere</code> tar vare på antall tiere i svaret, <code>enere</code> tar vare på antall enere i svaret, <code>svar</code> er summen av variablene <code>tiere</code> og <code>enere</code>, mens <code>produkt</code> er svaret som micro:bit regner seg fram til.</label></p>
+<p><figure><img src="ristes.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Deretter trenger vi to <code>faktorer</code>, som er selve gangestykket. En kan selv velge hvor langt opp i gangetabellene en ønsker å komme, ved å endre grensense for de tilfeldige tallene.</label></p>
+<p><figure><img src="tilfeldig_tall.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Deretter må vi sette sammen faktorene til gangestykket som skal vises på skjermen. Vi bruker her <code>join</code> funksjonen som finnes under tekst, og som kan tilpasses til så mange elementer en ønsker. Man må klikke på <code>tannhjulet</code> for å utvide blokken.</label></p>
+<p><figure><img src="vis_tekst.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Vi regner til slutt ut <code>produktet</code> av de to <code>faktorene</code>, som vi skal kontrollere mot svaret som blir avgitt.</label></p>
+<p><figure><img src="produkt.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<p>Det er to forskjellige måter vi kan teste micro:bit-programmer på:</p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Til venstre på skjermen er det et bilde av en micro:bit. Dette er faktisk
+en simulator som kan kjøre programmet vi nettopp laget:</label></p>
+<p>Siden vår kode skal reagere når man rister på micro:biten kan du simulere
+dette ved å klikke på den hvite prikken til venstre for teksten <code>SHAKE</code> på
+micro:bit-simulatoren.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Enda morsommere er det å teste programmet på micro:biten din! Koble
+micro:biten din til datamaskinen med en USB-kabel. Klikk deretter på knappen
+<code>Last ned</code> nede til venstre på skjermen.</label></p>
+<p>Det lastes nå ned en fil som heter <code>microbit-Uten-navn.hex</code> til datamaskinen
+din. Samtidig dukker det opp et vindu som sier at du må flytte denne filen
+til MICROBIT-disken på datamaskinen din.</p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-registrere-svar">
+<h1 class="activity" id="steg-2-registrere-svar">Steg 2: Registrere svar</h1>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> <code>Knapp A</code> skal registrere <code>tiere</code>, så ved hvert trykk skal den øke med 1.</label></p>
+<p><figure><img src="knapp_a.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> <code>Knapp B</code> skal registrere <code>enere</code>, så ved hvert trykk skal den øke med 1.</label></p>
+<p><figure><img src="knapp_b.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-kontrollere-svar">
+<h1 class="activity" id="steg-3-kontrollere-svar">Steg 3: Kontrollere svar</h1>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Når <code>A+B – knappene</code> trykkes samtidig, skal den kontrollere om en har regnet korrekt. Da er det viktig å huske at en tier har 10 ganger høyere verdi enn enere når vi setter sammen svaret.</label></p>
+<p><figure><img src="knapp_a_b.png" alt=""></figure></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi kontrollerer deretter om <code>svar</code> og <code>produkt</code> er likt. Dersom det er rett, viser den smilefjes. Dersom det er galt, viser den trist fjes.</label></p>
+<p><figure><img src="glad_trist.png" alt=""></figure></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-muligheter-for-endringer">
+<h1 class="activity" id="steg-4-muligheter-for-endringer">Steg 4: Muligheter for endringer</h1>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> En kan lage andre varianter av drilloppgaver til addisjon og subtraksjon.
+De som er lysten på en utfordring kan prøve seg på et divisjonsspill.</label></li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Micro:bit: PXT: Gangespill&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/pxt_gangespill" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/pxt_gangespill" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Espen Clausen og Tjerand Silde</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

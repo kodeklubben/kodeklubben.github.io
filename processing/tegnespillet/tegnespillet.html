@@ -1,0 +1,212 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Tegnespillet | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Processing</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Tegnespillet</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Processing</span></a><div class="pdf"><a href="/processing/tegnespillet/tegnespillet.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon:</h1>
+<p>Denne oppgava går ut på å lage et tegnespill, målet er å skrive kode, slik at du greier å tegne tre forskjellige tegninger som ligner på disse:</p>
+<p><figure><img src="Gulsol.png" alt=""></figure></p>
+<p><figure><img src="gronttre.png" alt=""></figure></p>
+<p><figure><img src="tofjes.png" alt=""></figure></p>
+<p>Oppgava er lagt opp slik at du leser og gjør det som står i oppgaveteksen, så på slutten av hvert steg, kan du dobbelsjekke koden din med en eksempelkode vi har lagt ved.</p>
+</section>
+<section class="activity" id="steg-1-lag-ett-vindu-som-skal-vaere-tegnebrettet">
+<h1 class="activity" id="steg-1-lag-ett-vindu-som-skal-vaere-tegnebrettet">Steg 1: Lag ett vindu, som skal være tegnebrettet</h1>
+<p>Nå skal vi lage ett vindu med en enkel bakgrunnsfarge. Det er noe vi gjør til nesten alle programmer vi lager i Processing.</p>
+<section class="check" id="gjor-dette">
+<h2 class="check" id="gjor-dette">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Start Processing og skriv dette:</label></li>
+</ul>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>(){
+	<span class="hljs-built_in">size</span>(<span class="hljs-number">640</span>, <span class="hljs-number">420</span>);
+	<span class="hljs-built_in">background</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+}
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Nå kan du starte programmet med å trykke <code>CTRL</code> + <code>R</code>, eller trykke <code>play</code> pilen øverst.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Lagre programmet med å trykke <code>CTRL</code> + <code>S</code>, eller med å trykke <code>File</code>, så <code>Save</code> i menyen øverst.</label></li>
+</ul>
+<section class="protip" id="tips-hvordan-skrive-krollparenteser">
+<h3 class="protip" id="tips-hvordan-skrive-krollparenteser">Tips: Hvordan skrive krøllparenteser { }</h3>
+<p>Her er en oversikt over hvordan man skriver tegn som ofte brukes
+i Processing og andre programmeringsspråk.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Tegn</th>
+<th>Windows/Linux</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">;</td>
+<td>Shift + ,</td>
+<td>Shift + ,</td>
+</tr>
+<tr>
+<td style="text-align:center">&quot;</td>
+<td>Shift + 2</td>
+<td>Shift + 2</td>
+</tr>
+<tr>
+<td style="text-align:center">'</td>
+<td>' (til høyre for Æ)</td>
+<td>' (til venstre for 1)</td>
+</tr>
+<tr>
+<td style="text-align:center">|</td>
+<td>| (til venstre for 1)</td>
+<td>Alt + 7</td>
+</tr>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td>Shift + 6</td>
+<td>Shift + 6</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td>+ (til høyre for 0)</td>
+<td>+ (til høyre for 0)</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td>- (til høyre for .)</td>
+<td>- (til høyre for .)</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>Shift + '</td>
+<td>Shift + @ (til høyre for Æ)</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td>Shift + 7</td>
+<td>Shift + 7</td>
+</tr>
+<tr>
+<td style="text-align:center">[</td>
+<td>Alt Gr + 8</td>
+<td>Alt + 8</td>
+</tr>
+<tr>
+<td style="text-align:center">]</td>
+<td>Alt Gr + 9</td>
+<td>Alt + 9</td>
+</tr>
+<tr>
+<td style="text-align:center">{</td>
+<td>Alt Gr + 7</td>
+<td>Shift + Alt + 8</td>
+</tr>
+<tr>
+<td style="text-align:center">}</td>
+<td>Alt Gr + 0</td>
+<td>Shift + Alt + 9</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section class="check" id="prov-dette">
+<h2 class="check" id="prov-dette">Prøv dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Prøv å endre <code>0</code> i <code>background(0, 0, 0,);</code> til andre tall.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Se hva som skjer dersom du endrer ett av tallene til <code>255</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Hva skjer når du setter tallet til å være høyere enn <code>255</code> eller lavere enn <code>0</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Forsøk å endre størrelsen på vinduet ved endre på tallene i <code>size</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Finn en bakgrunnsfarge du liker og beholde den til neste del av oppgaven.</label></li>
+</ul>
+</section>
+<section class="protip" id="forklaring-av-koden">
+<h2 class="protip" id="forklaring-av-koden">Forklaring av koden</h2>
+<p>Lurer du på hvordan koden du har skrevet fungerer?</p>
+<ul>
+<li><code>void setup() {</code> er en metode som heter <code>setup</code>, du kan bare ha en metode med hvert navn! <code>setup</code> er en spesiell metode fordi den blir kjøres bare en gang helt først når du starter programmet ditt. Noen metoder gir tilbake informasjon, det gjør ikke <code>setup</code>, det viser vi ved å skrive <code>void</code> forran <code>setup</code>.</li>
+<li><code>size(640, 420);</code> er det som bestemmer hvor stort vinduet ditt er, den er inni <code>void setup(){</code> metoden fordi vi må bestemme størrelsen på vinduet bare en gang når vi starter.</li>
+<li>Vi har også <code>background(0, 0, 0)</code> som bestemmer bakgrunsfargen fargen i vinduet, <code>0</code> betyr at det ikke er farge, da blir det svart. Dersom vi skriver 255 setter vi på full farge styrke på den lille pæra som sitter i pc-skjermen. Det betyr at dersom vi skriver <code>background(255, 255, 255)</code> så blir det hvitt, 255 er det høyeste tallet vi kan velge. De forskjellige tallene står for <code>background(RØD, GRØNN, BLÅ)</code> og når vi endrer verdiene her, så blander vi fargene.</li>
+<li>På linje 1 og 4 har vi <code>{</code> og <code>}</code> disse krøllparentesene åpner og lukker metoden. Metoden inneholder all kode vi skriver mellom disse.</li>
+</ul>
+</section>
+</section>
+<section>
+<h1 id=""></h1>
+<p>Slik skal koden din se ut så langt, husk at tallene inni parentesene ikke nødvendigvis er like de du har, det betyr bare at du har annen størrelse på vinduet ditt, eller en annen bakgrunsfarge.</p>
+<p><figure><img src="steg1.png" alt=""></figure></p>
+</section>
+<section class="activity}" id="steg-2-tegne-med-sirkel">
+<h1 class="activity}" id="steg-2-tegne-med-sirkel">Steg 2: Tegne med sirkel!</h1>
+<p>Vi lager en ny metode som vi kaller <code>draw</code>, denne skal også være <code>void</code>.</p>
+<section class="check" id="gjor-dette-2">
+<h2 class="check" id="gjor-dette-2">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Skriv denne koden:</label></li>
+</ul>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>(){
+  
+}
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Start programmet og set at det kjører. Det skal ikke skje noe nytt, men dersom programmet ikke kjører, så har du skrivefeil i den nye koden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv denne koden inn i <code>draw</code> metoden for å få noe å tegne med!</label></li>
+</ul>
+<pre><code class="processing">	<span class="hljs-built_in">fill</span>(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">255</span>);
+	<span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">mouseX</span>, <span class="hljs-built_in">mouseY</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Start programmet og tegn litt.</label></li>
+</ul>
+</section>
+<section class="check" id="prov-dette-2">
+<h2 class="check" id="prov-dette-2">Prøv dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Bytt fargen du tegner med, det gjør du ved å endre tallene inni <code>fill(100, 100, 255);</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Se om du får til å tegne grønt.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Se om du får til å tegne blått.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut det første <code>50</code> tallet med <code>200</code> som står i paretesen bak <code>ellipse</code> og se hva som skjer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Kan du få <code>ellipse</code> til å bli like høy som vinduet ditt?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Prøv det du har lyst til.</label></li>
+</ul>
+<p>Når du har prøvd litt forskjellig, så har vi laga til ei oppgave, forsøk å bytte bakgrunnsfarge, størrelse på vinduet, og fargen du tegner med slik at du også kan lage tegninger som ligner på de vi har laget under. Det kan være vanskelig å finne nøyaktig samme farge og størrelse, men en som ligner er godt nok!</p>
+<p><figure><img src="Gulsol.png" alt=""></figure></p>
+<p><figure><img src="gronttre.png" alt=""></figure></p>
+<p><figure><img src="tofjes.png" alt=""></figure></p>
+</section>
+<section class="protip" id="forklaring-av-koden-2">
+<h2 class="protip" id="forklaring-av-koden-2">Forklaring av koden</h2>
+<p>Lurer du på hvordan koden du har skrevet fungerer?</p>
+<ul>
+<li>
+<p><code>void draw(){</code> er en ny metode, slik som <code>void setup(){</code> men med nytt
+navn og nytt innhold.</p>
+</li>
+<li>
+<p>ellipse betyr at du lager en sirkel, og <code>mouseX, mouseY</code> bestemmer at den skal følge
+etter musepekeren når du flytter på datamusa. Tallene <code>50, 50</code> bestemmer størrelsen
+til sirkelen.</p>
+</li>
+<li>
+<p><code>fill(100, 100, 255);</code> bestemmer hvilke farge sirkelen skal ha, her er det
+likt som før, der de står for <code>(RØD, GRØNN, BLÅ)</code> og kan blandes slik som du
+har prøvd før.</p>
+</li>
+</ul>
+</section>
+</section>
+<section>
+<h1 id="-2"></h1>
+<p>Til sist har vi lagt til et bilde av hele koden vår, så kan du se om din kode ligner på den vi har. Husk at tallene inni parentesene sikkert er litt forskjellige fra de du har i din kode.</p>
+<p><figure><img src="helekoden.png" alt=""></figure></p>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Processing: Tegnespillet&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/processing/tegnespillet" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/processing/tegnespillet" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Kine Gjerstad Eide og Ruben Gjerstad Eide</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

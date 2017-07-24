@@ -322,7 +322,7 @@ ball.posisjon(x, y);
  */</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Poeng</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
-  
+
   <span class="hljs-comment">// CSS til "el"</span>
   el.style.position = <span class="hljs-string">'fixed'</span>;
   el.style.bottom = <span class="hljs-string">'5px'</span>;
@@ -330,7 +330,7 @@ ball.posisjon(x, y);
   el.style.padding = <span class="hljs-string">'5px'</span>;
   el.style.backgroundColor = <span class="hljs-string">'black'</span>;
   el.style.color = <span class="hljs-string">'white'</span>;
-  
+
   <span class="hljs-comment">// Viser poengsum på skjermen, samt lager variabelen "_poeng"</span>
   <span class="hljs-keyword">var</span> _poeng = <span class="hljs-number">0</span>;
   el.innerHTML = _poeng + <span class="hljs-string">' poeng'</span>;
@@ -468,7 +468,7 @@ setInterval(<span class="hljs-function"><span class="hljs-keyword">function</spa
  */</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Nedtelling</span> (<span class="hljs-params">ferdig</span>) </span>{
   <span class="hljs-keyword">var</span> el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'div'</span>);
-  
+
   <span class="hljs-comment">// CSSen til elementet "el"</span>
   el.style.position = <span class="hljs-string">'fixed'</span>;
   el.style.left = <span class="hljs-string">'0'</span>;
@@ -482,12 +482,12 @@ setInterval(<span class="hljs-function"><span class="hljs-keyword">function</spa
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prosent</span> (<span class="hljs-params">slutt, tid</span>) </span>{
     <span class="hljs-keyword">return</span> (slutt - <span class="hljs-built_in">Date</span>.now()) / tid / <span class="hljs-number">10</span>;
   }
-  
+
   <span class="hljs-comment">// Funksjon som teller ned og stopper når den har kommet til null</span>
   el.tellNed = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">tid</span>) </span>{
     <span class="hljs-keyword">var</span> slutt = <span class="hljs-built_in">Date</span>.now() + tid * <span class="hljs-number">1000</span>;
     <span class="hljs-keyword">var</span> intervall = setInterval(tegn, <span class="hljs-number">20</span>);
-    
+
     <span class="hljs-comment">// Tegner streken på venstre side til tiden er ute</span>
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">tegn</span> (<span class="hljs-params"></span>) </span>{
       <span class="hljs-keyword">var</span> p = prosent(slutt, tid);

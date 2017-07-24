@@ -1,0 +1,472 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Verden - Del 2 | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Processing</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Verden - Del 2</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Processing</span></a><div class="pdf"><a href="/processing/verden_del2/verden_del2.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="intro">
+<h1 class="intro" id="intro">Intro</h1>
+<p>Denne oppgava bygger på oppgava med samme navn som ligger på introduksjonsnivå her i Processingoppgavene. <a href="../verden_del1/verden_del1.html" target="_blank">Klikk her for å gå til introduksjonsoppgava av verden</a>.</p>
+<p>I denne oppgava skal vi fortsette med verdenspillet! Nå skal vi komme så langt på spillet at det skal dukke opp navnet på en verdensdel i vinduet, og så er det om å gjøre å trykke på verdensdelen.</p>
+<p>Slik skal oppgava se ut når vi er ferdig å kode alt sammen:</p>
+<p><figure><img src="previewAvSpillet.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-0-oppsummering-fra-intro-oppgava">
+<h1 class="activity" id="steg-0-oppsummering-fra-intro-oppgava">Steg 0: Oppsummering fra intro oppgava</h1>
+<p>Her er koden vi gjorde i introduksjonsoppgava:</p>
+<p><figure><img src="steg0.png" alt=""></figure></p>
+<p>Hittil har vi fått det til å dukke opp &quot;EUROPA&quot; på skjermen når datamusa holdes over verdensdelen Europa på kartet.</p>
+<p>Dette ble gjort ved å først si at Europa er firkanta. Deretter ble koordinatene til datamusa vist som tekst i vinduet og så holdt vi datamusa nøyaktig på grensene som var tegna opp, slik at vi kunne se hva koordinatene var og bruke disse for å lage if-setninger til å sjekke med.</p>
+<p>Vi lagde en if-setning for hver side i firkanten som utgjorde grensa til Europa. Disse fant vi ut at måtte skrives inni hverandre slik at man sjekket om man var innenfor alle fire grensene samtidig.</p>
+<p>Under har vi laga ei sjekkliste, dersom du får til alle punktene i lista, så er det ikke noe problem for deg å gjøre resten av denne oppgava. Dersom du synes sjekklista er vanskelig, så anbefaler vi at du forsøker deg på introduksjonsdelen av oppgava før du går videre.</p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Skriv inn koden som ble gjort i introduksjonsdelen av oppgava og få det til å kjøre.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Flytt teksten som viser koordinatene ned til høyre hjørne av skjermen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Få teksten &quot;EUROPA ER 10 180 000 KVADRATMETER&quot; til å vises på skjermen i stede for bare &quot;EUROPA&quot; når du holder datamusa over Europa.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Bytt størrelsen på vinduet, slik at det når fra toppen til bunnen av skjermen din.</label></li>
+</ul>
+<p>Fikk du til alle punktene? Still tilbake alt sammen før du går videre.</p>
+</section>
+</section>
+<section class="activity" id="steg-1-legg-til-asia">
+<h1 class="activity" id="steg-1-legg-til-asia">Steg 1: Legg til Asia</h1>
+<p>Du lærte i introduksjonsdelen hvordan du la til Europa, så nå skal du få legge til Asia på samme måte. Vi har delt opp dette i mindre deler for deg. Under har vi laga ei sjekkliste som du må følge. Dersom noen av punktene er vanskelig, så husk at du kan sjekke med introduksjonsoppgava.</p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Last ned dette bilde og få det til å vise i vinduet i stedet for det du har nå:
+<img src="mapAsia.png" alt=""></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Finn ut hvor grensene til Asia er og lagre dem som kommentarer i koden din. Kommentarer lages ved å sette to skråstreker først, slik som dette: <code>//</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Skriv if-setningen for den føstre grensa og sjekk at det fungerer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Gjør et metodekall på <code>text();</code> inni if-setningen hvor det første parameteret er &quot;ASIA&quot;. De to neste parameterne kan være det samme som de to siste i metodekallet som får &quot;EUROPA&quot; til å vises på skjermen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Skriv if-setningen for den andre grensa og sjekk at det fungerer. Husk at alle if-setningene må stå inni hverandre.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Skriv if-setningen for den tredje grensa og sjekk at det fungerer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv if-setningen for den fjerde grensa og sjekk at det fungerer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Bytt tilbake til bilde av verdenskartet uten firkanta grenser på.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Test at alt fungerer, nå skal &quot;ASIA&quot; vises i vinduet når du holder datamusa over Asia, mens &quot;EUROPA&quot; skal vises i vinduet når du holder datamusa over Europa.</label></li>
+</ul>
+<p>Her er koden så langt.</p>
+<p><figure><img src="steg1.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-2-sla-sammen-if-setninger">
+<h1 class="activity" id="steg-2-sla-sammen-if-setninger">Steg 2: Slå sammen if-setninger</h1>
+<p>Nå som du har vært gjennom hvordan du setter opp if-setninger inne hverandre, så er det på tide å vise hvordan du kan slå if-setninger sammen. Når du if-setninger settes inni hver andre så kan det leses muntlig som dette:</p>
+<pre><code class="processing">Dersom datamusa er innenfor venstre grense
+    og dersom datamusa er innenfor høyre grense
+        og dersom datamusa er innenfor nedre grense
+            og dersom datamusa er innenfor øvre grense,
+                så skal vi vise <span class="hljs-string">"EUROPA"</span> på skjermen.
+</code></pre>
+<p>Gjør vi dette om til litt mer vanlig tale, så ville vi sagt:</p>
+<pre><code class="processing">Dersom datamusa er innenfor venstre grense og datamusa er innenfor høyre grense og datamusa er innenfor nedre grense og datamusa er innenfor øvre grense,
+    så skal vi vise <span class="hljs-string">"EUROPA"</span> på skjermen.
+</code></pre>
+<p>Dette har vi lov å gjøre når vi koder også. La oss bytte ut det vi har så langt med kode i setningen over, da får vi dette:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; <span class="hljs-number">365</span> og <span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span> og <span class="hljs-built_in">mouseY</span> &lt; <span class="hljs-number">455</span> og <span class="hljs-built_in">mouseY</span> &gt; <span class="hljs-number">33</span>)]{
+    <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+}
+</code></pre>
+<p>Så langt har vi ikke lagt til noe ny kode. Vi har bare satt alle testene på samme linje med <code>og</code> mellom. Vi har ikke lov å bruke <code>og</code>, men vi har lov å bruke <code>&amp;&amp;</code> som betyr akkurat det samme. La oss sette inn <code>&amp;&amp;</code> der hvor vi har <code>og</code>, da får vi:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; <span class="hljs-number">365</span> &amp;&amp; <span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span> &amp;&amp; <span class="hljs-built_in">mouseY</span> &lt; <span class="hljs-number">455</span> &amp;&amp; <span class="hljs-built_in">mouseY</span> &gt; <span class="hljs-number">33</span>)]{
+    <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+}
+</code></pre>
+<p>Dette blir en ganske lang if-setning som kanskje er litt vanskelig å lese, men det sparer mye plass i koden.</p>
+<section class="check" id="gjor-dette">
+<h2 class="check" id="gjor-dette">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Dersom du ikke har gjort det allerede, så må du nå slå sammen de fire if-setningene som sjekker grensene til Europa til å være bare en if-setning.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Sjekk at koden fungerer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Skriv om if-setningene for Asia, slik at du sjekker alle grensene i en if-setning.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Sjekk at koden fungerer.</label></li>
+</ul>
+<p>Her er bilde av koden så langt.</p>
+<p><figure><img src="steg2.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-3-sjekk-afrika-med-to-if-setninger">
+<h1 class="activity" id="steg-3-sjekk-afrika-med-to-if-setninger">Steg 3: Sjekk Afrika med to if-setninger</h1>
+<p>Nå skal vi legge til Afrika, dette skal gjøres i en if-setning. Nå kan du velge om du vil følge sjekklista under bilde for å sette opp koden som trengs, eller om du vil forsøke å skrive den alene. Her er bilde av grensa til Afrika:</p>
+<p><figure><img src="mapAfrika1.png" alt=""></figure></p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Bytt ut verdenskartbilde med bildet over.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Finn koordinatene på de fire grensene til Afrika og skriv dem inn som kommentarer i koden din.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Kall på <code>text();</code> og bruk &quot;AFRIKA&quot; som første parameter.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Skriv koden til den første grensa.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Sjekk at koden fungerer og at if-setningen gjør det den skal.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Skriv <code>&amp;&amp;</code> og legg til testen for den andre grensa til Afrika i samme if-setning, muntlig blir dette:</label></li>
+</ul>
+<pre><code class="processing"><span class="hljs-keyword">if</span>(er datamusa innenfor den første grensa &amp;&amp; er datamusa innenfor den andre grensa){
+    vis teksten <span class="hljs-string">"AFRIKA"</span> i vinduet.
+}
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Test at koden fungerer som den skal.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Skriv <code>&amp;&amp;</code> og legg til testen for den tredje grensa til Afrika i samme if-setning.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Test at dette fungerer som det skal.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Skriv <code>&amp;&amp;</code> og legg til testen for den fjerde grensa til Afrika i samme if-setning.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Test at koden fungerer og at &quot;AFRIKA&quot; vises i vinduet når du holder datamusa over Afrika.</label></li>
+</ul>
+<p>Nå som Afrika også fungerer, så skal vi legge til en liten rute til, fordi som du ser på kartet, så er ikke Madagaskar, Somalia, halve Ethiopia og Djibouti tatt med i firkanten, så når vi holder datamusa over disse landene, så kommer ikke &quot;AFRIKA&quot; opp på skjermen. Det må vi fikse.</p>
+<p>Vi har laga en ny firkant som bare inkluderer disse landene. Nå har du skrevet så mange if-setninger at denne tror vi du greier uten en sjekkliste. Dersom det er vanskelig, så er det bare å bruke sjekklista over, det er akkurat det samme som skal gjøres, bare med nye koordinater på grensene.</p>
+</section>
+<section class="check" id="gjor-dette-2">
+<h2 class="check" id="gjor-dette-2">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Lag en ny if-setning som sjekker grensene til den nye firkanten. Her er bildet:
+<img src="mapAfrika.png" alt=""></label></li>
+</ul>
+<p>Her er koden vår så langt. Nå begynner det å bli en del if-setninger!</p>
+<p><figure><img src="steg3.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-4-lag-en-metode-i-steden-for-alle-if-setningene">
+<h1 class="activity" id="steg-4-lag-en-metode-i-steden-for-alle-if-setningene">Steg 4: Lag en metode i steden for alle if-setningene</h1>
+<p>Nå skal vi gjøre koden vår enda mindre. Det er fordi vi skal legge til mange flere if-setninger og da vil vi skrive kode som er så enkel som mulig.</p>
+<p>Når du ser etter på if-setningene, så er de nesten helt like. Det er bare selve grenseverdien som er forskjellig. Når vi oppdager at vi kommer til å måtte skrive mye kode som ligner veldig, så kan man ofte putte det som er likt over i en metode og så foreta metodekall i stede for å skrive samme kode på nytt og på nytt.</p>
+<p><code>setup</code> og <code>draw</code> er metoder vi har skrevet, mens <code>text();</code> er en metode vi har kalt på. Når du trykker på play, så gjøres det automatisk et kall på <code>setup</code>, det skjer bare en gang. Deretter kalles <code>draw</code> på nytt og på nytt helt til programmet slås av.</p>
+<p>La oss skrive en ny metode, den plasseres unden <code>draw</code>. Vi har valgt å gi metoden navnet <code>sjekkVerdensdel</code>. Da blir det slik:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> sjekkVerdensdel(){
+
+
+}
+</code></pre>
+<p>Inni krøllparentesene skal vi skrive den koden vår som blir gjentatt, altså de lange if-setningene.</p>
+<p>La oss starte med å putte inn en av if-setningene. Vi har valgt å kopiere inn if-setningen som sjekker om datamusa er innenfor Europa sin grense, så nå ser metoden slik ut:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> sjekkVerdensdel(){
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; <span class="hljs-number">365</span> &amp;&amp; <span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span> &amp;&amp; <span class="hljs-built_in">mouseY</span> &lt; <span class="hljs-number">455</span> &amp;&amp; <span class="hljs-built_in">mouseY</span> &gt; <span class="hljs-number">33</span>)]{
+        <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+    }
+}
+</code></pre>
+<p>Vi har ikke lyst å skriv inn en if-setning for hver verdensdel i den nye metoden. For å bare ha en if-sentning, så bytter vi ut alle de tallene som er forskjellig fra verdensdel til verdensdel med variabler. Vi gir variabelnavn som er logiske, da er det lettere å lese koden senere. En variabel kan endres mens programmet kjører, men tall som er skrevet direkte inn kan ikke endres mens programmet kjører. I den første testen sjekker vi om datamusa er innenfor den første grensa, altså den grensa som er til høyre. Vi har ikke lov å bruke <code>æ</code>, <code>ø</code> eller <code>å</code>, så da skriver vi <code>høyre</code> med <code>o</code>, altså <code>hoyreGrense</code>. Vi putter dette inn i stede for tallet <code>365</code> og får:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> sjekkVerdensdel(){
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; hoyreGrense &amp;&amp; <span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span> &amp;&amp; <span class="hljs-built_in">mouseY</span> &lt; <span class="hljs-number">455</span> &amp;&amp; <span class="hljs-built_in">mouseY</span> &gt; <span class="hljs-number">33</span>)]{
+        <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+    }
+}
+</code></pre>
+<p>Vi gjør det samme med de andre tre grensene også.</p>
+<section class="check" id="gjor-dette-3">
+<h2 class="check" id="gjor-dette-3">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Finn passende navn til de andre grensene også og bytt ut tallene i if-setningen med de navna du har funnet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Kjør programmet, hva skjer?</label></li>
+</ul>
+<p>Nå fikk vi en feilmelding som ser slik ut:</p>
+<p><figure><img src="errorVariabel.png" alt=""></figure></p>
+<p>Programmet sier at <code>hoyreGrense</code> ikke kan bli en variabel. Det er fordi vi ikke har skrevet kode som forteller programmet at <code>hoyreGrense</code> er en variabel. Forløpig tror programmet at vi har gjort en skrivefeil. Programmet vet at vi skal sammenligne datamusa sin koordinat med et eller annet tall, men akkurat nå er ikke <code>hoyreGrense</code> noe tall, det er bare noen bokstaver.</p>
+<p>Vi må gjøre om <code>hoyreGrense</code> til en variabel av typen <code>int</code>, det betyr heltall. Det heter å deklarere variabelen. Vi kan deklarere variabelen flere steder, inni den nye metoden, utenfor alle metodene, eller inni parentesene til metoden. Hvor vi velger å deklarere variabelen avhenger av hvordan vi skal bruke metoden.</p>
+<p>Ettersom vi ønsker å sjekke forskjellige grenser hver gang vi kaller metoden, så er det lurt å deklarere variabelen <code>hoyreGrense</code> inni parentesene til den nye metoden. Når deklarasjonen er plassert her, så må vi legge ved grenseverdien som parameter hver gang vi kaller på metoden.</p>
+<p>Metoden ser slik ut:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> sjekkVerdensdel(<span class="hljs-built_in">int</span> hoyreGrense, <span class="hljs-built_in">int</span> ...., <span class="hljs-built_in">int</span> ...., <span class="hljs-built_in">int</span> .... ){
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; hoyreGrense &amp;&amp; <span class="hljs-built_in">mouseX</span> &lt; .... &amp;&amp; <span class="hljs-built_in">mouseY</span> &lt; .... &amp;&amp; <span class="hljs-built_in">mouseY</span> &gt; ....)]{
+        <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+    }
+}
+</code></pre>
+<p>I stede for punktum så skal det være de navna du har valgt for de forskjellige grensene.</p>
+</section>
+<section class="check" id="gjor-dette-4">
+<h2 class="check" id="gjor-dette-4">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Deklarer alle de fire variablene dine inni parentesen til den nye metoden din.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Sjekk om programmet kjører.</label></li>
+</ul>
+<p>Nå er det en ting som mangler. Det er navnet på verdensdelen. Alle verdensdelene skal ikke hete &quot;EUROPA&quot;. Da må vi gjøre denne om til en <code>String</code>, det betyr en tekst.</p>
+</section>
+<section class="check" id="gjor-dette-5">
+<h2 class="check" id="gjor-dette-5">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Bytt ut det første parameteret inni metodekallet på <code>text();</code> inni if-setningen som er inni den nye metoden og skriv heller <code>verdensdel</code> (du kan velge et annet navn enn <code>verdensdel</code>).</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Kjør programmet, hva skjer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Deklarer <code>verdensdel</code> til å være en <code>String</code> inni parentesene til den nye metoden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Kjør programmet, hva skjer?</label></li>
+</ul>
+<p>Nå har vi laget en ny metode, men vi har ikke kalt på den nye metoden noe sted. Så forløpig så kjører programmet vårt en gang gjennom <code>setup</code> og deretter på nytt og på nytt gjennom <code>draw</code> uten å gå til den nye metoden.</p>
+<p>Her er koden så langt, husk at vi sikkert har valgt litt forskjellige variabelnavn for de forskjellige grensene. Så lenge programmet kjører er ikke det noe problem. Det kan være greit om deklarasjonene på de forskjellige grensene, samt navnet på verdensdelen ligger i samme rekkefølge, men det er bare for å gjøre det lettere å feilsøke i koden seinere.</p>
+<p><figure><img src="steg4.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-5-bruk-den-nye-metoden">
+<h1 class="activity" id="steg-5-bruk-den-nye-metoden">Steg 5: Bruk den nye metoden</h1>
+<p>For å bruke den nye metoden må vi gjøre et metodekall på den. På samme måte som at vi har gjort et metodekall på <code>text();</code> og <code>size();</code>, så skal vi nå gjøre et metodekall på <code>sjekkVerdensdel();</code>. Dette gjør vi inni <code>draw</code> metoden.</p>
+<section class="check" id="gjor-dette-6">
+<h2 class="check" id="gjor-dette-6">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Gjør et metodekall på <code>sjekkVerdensdel();</code> inni <code>draw</code> metoden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Kjør koden, hva skjer, forstår du hva feilmeldingen betyr?
+<img src="errorParameter.png" alt=""></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Gjør metodekallet om til en kommentar ved å sette to skråstreker først på linja.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Ta bort parameterne inni ett av metodekallene på <code>text();</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Kjør programmet, hva sker, forstår du feilmeldingen?
+<img src="errortext.png" alt=""></label></li>
+</ul>
+<p>Det mangler rett og slett parameter i metodekallene. For metodekallet på <code>text();</code> trengs det først en <code>char</code> og deretter to <code>float</code>. Det betyr først den teksten som skal vises i vinduet, deretter to tall som bestemmer hvor teksten skal vises.</p>
+<p>For metodekallet på <code>sjekkVerdensdel();</code> så trengs det først en <code>String</code>, som sier hvilken verdensdel vi sjekker om datamusa er i, deretter fire <code>int</code>, som forteller hvor de fire grensene til verdensdelen er.</p>
+<p>Da må vi putte inn parameter i metodekallet.</p>
+</section>
+<section class="check" id="gjor-dette-7">
+<h2 class="check" id="gjor-dette-7">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Sett inn igjen parameterne i metodekallet på <code>text();</code></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Start med Europa. Det første parameteret skal da være <code>&quot;EUROPA&quot;</code>, husk fnuttene, ellers vet ikke programmet at det er en tekst. Skill hver av parameterne med komma. Det neste parameteret er den første grensa, altså 365. Så kommer den andre grensa, altså den på venstre side av firkanten vi har brukt, som er 694. Nå er det den nedre grensa sin tur, den fant vi ut var 455 og til slutt må vi ha den øvre grensa til Europa, som vi fant ut at var 33.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Kjør programmet, hva skjer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_45" disabled="true"><label for="cbx_45"> Nå vil &quot;EUROPA&quot; vises på skjermen dobbelt opp, fordi nå sjekker vi om datamusa er over Europa først i if-setningen inni <code>draw</code> metoden og deretter i det nye metodekallet vårt. Ta derfor bort if-setningen som er skrevet inni <code>draw</code> og som sjekker Europa.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> Kjør programmet på nytt, fungerer det fremdeles som det skal?</label></li>
+</ul>
+<p>Her er bilde av koden, vi har bare tatt med metodene <code>draw</code> og <code>sjekkVerdensdel</code>, ettersom det bare er der det er gjort endringer. Det er viktig at du har fjernet riktig if-setning og at du har brukt riktige parametre inni metodekallet på <code>sjekkVerdensdel();</code>.</p>
+<p><figure><img src="drawOgSjekk.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-6-bruk-sjekkverdensdel-metoden-til-alle-verdensdelene">
+<h1 class="activity" id="steg-6-bruk-sjekkverdensdel-metoden-til-alle-verdensdelene">Steg 6: Bruk <code>sjekkVerdensdel</code> metoden til alle verdensdelene</h1>
+<p>Nå skal du få bruke metoden <code>sjekkVerdensdel();</code> til å sjekke Asia og Afrika. Siden du allerede har funnet ut hva koordinatene er akkurat på grensa, så trenger du ikke å gjøre det på nytt.</p>
+<section class="check" id="gjor-dette-8">
+<h2 class="check" id="gjor-dette-8">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Gjør et metodekall på <code>sjekkVerdensdel();</code> hvor de forskjellige parameterne er de du har funnet for Asia.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Fjern if-setningen som sjekker om datamusa holder over Asia.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Kjør koden og sjekk at &quot;ASIA&quot; kommer opp når du holder datamusa innen for grensene til Asia.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Gjør to metodekall på <code>sjekkVerdensdel();</code> og få den til å sjekke om datamusa er innenfor Afrika.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Fjern de to if-setningene som sjekker om datamusa er innenfor Afrika.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Sjekk at koden fungerer.</label></li>
+</ul>
+<p>Her er koden vår så langt.</p>
+<p><figure><img src="alleVerdensdelene.png" alt=""></figure></p>
+<p>Nå må vi legge til de siste verdensdelene. Her har vi et kart hvor vi har vist alle sammen. Nå skal vi gjøre metodekall på <code>sjekkVerdensdel();</code> og legge til grenseverdiene til Nord-Amerika, Sør-Amerika og Oseania. Kartet vårt mangler verdensdelen Antartika, men det får vi ta en annen gang.</p>
+</section>
+<section class="check" id="gjor-dette-9">
+<h2 class="check" id="gjor-dette-9">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> Bytt ut slik at dette bilde vises:
+<img src="heleVerden.png" alt=""></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Gjør et metodekall på <code>sjekkVerdensdel();</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_55" disabled="true"><label for="cbx_55"> Sett inn det første parameteret til metoden som er <code>&quot;OSEANIA&quot;</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_56" disabled="true"><label for="cbx_56"> Finn grenseverdiene til Oseania og skriv disse rett inn som parameter i metodekallet i stede for å skrive dem som kommentarer i koden først. Start med den venstre grensa, så den høyre, deretter den nedre grensa og til slutt den øvre.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_57" disabled="true"><label for="cbx_57"> Sjekk at koden fungerer. Nå skal &quot;OSEANIA&quot; vises på skjermen når du holder datamusa over Oseania. Dersom det ikke fungerte som det skulle, så forsøk å skrive grensene til Oseania som kommentarer først, slik at du er helt sikker på hva som er hva av tallene. Sjekk også at rekkefølgen på parameterne er riktig.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_58" disabled="true"><label for="cbx_58"> Gjør et nytt metodekall på <code>sjekkVerdensdel();</code> og putt inn parameterne for Nord-Amerika. Siden du akkurat har gjort det for Oseania, så er det bare å gjøre det samme her.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_59" disabled="true"><label for="cbx_59"> Test at koden fungerer, nå skal alle verdensdelene bortsett fra Sør-Amerika dukke opp på skjermen når du holder datamusa over dem.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_60" disabled="true"><label for="cbx_60"> Skriv kode slik at Sør-Amerika også vises på skjermen når du holder datamuda over verdensdelen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_61" disabled="true"><label for="cbx_61"> Test at koden fungerer.</label></li>
+</ul>
+<p>Her er koden vår så langt.</p>
+<p><figure><img src="steg6.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-7-trekk-en-tilfeldig-verdensdel">
+<h1 class="activity" id="steg-7-trekk-en-tilfeldig-verdensdel">Steg 7: Trekk en tilfeldig verdensdel</h1>
+<p>Nå har vi fått alle verdensdelene til å vises når vi holder datamusa over dem, da er det på tide å få dette til å bli mer som et spill. Vi ønsker at det skal dukke opp navnet på en tilfeldig verdensdel på skjermen og så skal vi få poeng dersom vi greier å trykke på riktig verdensdel.</p>
+<p>Det vi trenger for å få dette til å skje, er en liste med alle verdensdelene og deretter noe kode for å trekke tilfeldig fra lista.</p>
+<p>Vi starter med lista. Denne skal inneholde ordene &quot;AFRIKA&quot;, &quot;ASIA&quot;, &quot;EUROPA&quot;, &quot;SØR-AMERIKA&quot;, &quot;NORD-AMERIKA&quot; og &quot;OSEANIA&quot;. Dette er tekst, så da bruker vi en liste for å lage tekst. Da vi oppretta metoden <code>sjekkVerdensdel</code>, så brukte vi <code>String</code> inni parentesen for å ta i mot en tekst, men dette var bare ett ord, eller en tekst. Nå trenger vi noe som kan inneholde mange separate tekster. Det er ganske enkelt, alt vi trenger å gjøre er å sette <code>[]</code> bak <code>String</code> og så vet programmet at det er en liste med tekster vi skal ha. Vi vet nøyaktig hva lista skal inneholde, så vi fyller den opp samtidig som vi deklarerer den.</p>
+<p>Vi deklarerer lista vår helt i toppen av programmet, utenfor alle metodene. Vi kan gi lista hvilket navn vi vil. Her har vi valgt <code>alleVerdensdelene</code>, så kodelinja ser slik ut:</p>
+<pre><code class="processing"> <span class="hljs-keyword">String</span>[] alleVerdensdelene = {<span class="hljs-string">"ASIA"</span>, <span class="hljs-string">"EUROPA"</span>, <span class="hljs-string">"NORD-AMERIKA"</span>, <span class="hljs-string">"SØR-AMERIKA"</span>, <span class="hljs-string">"OSEANIA"</span>, <span class="hljs-string">"AFRIKA"</span>};
+</code></pre>
+<p>Dette er alt vi trenger for å lage lista, denne typen liste heter <code>String array</code>.</p>
+<section class="check" id="gjor-dette-10">
+<h2 class="check" id="gjor-dette-10">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_62" disabled="true"><label for="cbx_62"> Deklarer et <code>String array</code>. Du kan gi det hvilket navn du vil, men vi anbefaler <code>alleVerdensdelene</code>, slik at det er lettere å sammenligne din kode med vår.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_63" disabled="true"><label for="cbx_63"> Kjør programmet og se at det kjører som det skal.</label></li>
+</ul>
+<p><code>random();</code> er en metode som vi kan kalle på for å få et tilfeldig tall. Til forskjell fra <code>text();</code> og <code>size();</code>, så gjør ikke <code>random();</code> noe med vinduet vårt, det som skjer når vi bruker random er at vi får tibake ett tall og det tallet må vi putte i en variabel, slik at vi kan bruke det.</p>
+<p>La oss derfor først deklarere en variabel. <code>random();</code> gir oss et tall av typen <code>float</code>, derfor skulle egentlig variabelen vært av typen <code>float</code>, men når vi skal bruke tallet senere må det være av typen <code>int</code>. Derfor skal vi gjøre noe som heter å <code>caste</code> til <code>int</code>. Det betyr rett og slett bare at vi gjør verdien fra <code>random();</code> om til en <code>int</code>. Navnet til variabelen kan vi bestemme selv, her har vi valg at den skal hete <code>tilfeldigTall</code>. Denne deklarasjonen skal skje øverst i koden, enten rett over eller rett under deklarasjonen av lista. Kodelinja blir slik:</p>
+<pre><code class="processing"><span class="hljs-built_in">int</span> tilfeldigTall;
+</code></pre>
+<p>Nå må vi få <code>tilfeldigTall</code> til å inneholde et tilfeldig tall, det gjør vi inni <code>setup</code> metoden. Vi starter med muntlig kode:</p>
+<pre><code class="processing">    variabelen tilfeldigTall skal være ett tilfeldig tall;
+</code></pre>
+<p>Nå bruker vi <code>random();</code> med casting til <code>int</code>, da blir det:</p>
+<pre><code class="processing">    tilfeldigTall = (<span class="hljs-built_in">int</span>)<span class="hljs-built_in">random</span>(<span class="hljs-number">6</span>);
+</code></pre>
+<p>Parameteret til <code>random();</code> forteller hvor hvilke tall det skal velges tilfeldig mellom. Siden vi har 6 forskjellige verdensdeler med i lista, så vil vi at <code>random();</code> skal gi oss ett tall mellom 0 og 6. Derfor skriver vi 6 som parameter.</p>
+</section>
+<section class="check" id="gjor-dette-11">
+<h2 class="check" id="gjor-dette-11">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_64" disabled="true"><label for="cbx_64"> Deklarer en variabel av typen <code>int</code>, gi variabelen et passende navn, vi anbefaler <code>tilfeldigTall</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_65" disabled="true"><label for="cbx_65"> Sjekk at koden kjører.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_66" disabled="true"><label for="cbx_66"> Sett variabelen til å bli et tilfeldig tall mellom 0 og 6, ved å gjøre et metodekall på <code>random();</code> og cast <code>int</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_67" disabled="true"><label for="cbx_67"> Sjekk at koden kjører.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_68" disabled="true"><label for="cbx_68"> Gjør et metodekall på <code>text();</code> der første parameter er: <code>&quot;Variabelen tilfeldigTall er: &quot; + tilfeldigTall</code>. De to neste parameterne bestemmer du selv. Nå skal vi bare sjekke hvilke tall <code>tilfeldigTall</code> er blitt til.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_69" disabled="true"><label for="cbx_69"> Kjør programmet noen ganger og sjekk at det variabelen <code>tilfeldigTall</code> blir forskjellige tall.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_70" disabled="true"><label for="cbx_70"> Gjør et nytt metodekall på <code>text();</code> der det første parameteret er: <code>&quot;Trykk på: &quot; + alleVerdensdelene[tilfeldigTall]</code>. De to neste parameterne bestemmer du selv. <code>alleVerdensdelene</code> er lista med verdensdeler, så det vi gjør her er å si at vi skal vise verdensdelen som er på plassen til det tallet som variabelen <code>tilfeldigTall</code> inneholder.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_71" disabled="true"><label for="cbx_71"> Sjekk at koden kjører. Start programmet flere ganger og sjekka at forskjellige verdensdeler blir valgt.</label></li>
+</ul>
+<p>Når vi skal velge noe fra et String array, så må vi skrive navnet på arrayet, så <code>[]</code>. Alt som ligger i lista er nummerert i den rekkefølgen vi har skrevet lista. Inni <code>[]</code> skriver vi nummeret på den tingen i lista vi vil ha, dette nummeret må være av typen <code>int</code>. Dette er grunnen til at vi caster til <code>int</code> når vi gjør metodekall på <code>random();</code>. Sjekk at tallene stemmer ved å sammenligne tallet som <code>tilfeldigTall</code> er med hvilken plass i lista verdensdelen som vises på skjermen er.</p>
+<p>Før vi går videre er det på tide å fjerne litt kode unødvendig kode.</p>
+</section>
+<section class="check" id="gjor-dette-12">
+<h2 class="check" id="gjor-dette-12">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_72" disabled="true"><label for="cbx_72"> Fjern de to metodekallene på <code>text();</code> som viser oss hva datamusas X og Y koordinat er.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_73" disabled="true"><label for="cbx_73"> Fjern metodekallet på <code>text();</code> som vi har skrevet inni if-setningen inni <code>sjekkVerdensdeler</code> metoden. I neste steg putter vi inn en helt annen kode her.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_74" disabled="true"><label for="cbx_74"> Fjern metodekallet på <code>text()</code> som viser hvilket tall <code>tilfeldigTall</code> er.</label></li>
+</ul>
+<p>Her er koden så langt.</p>
+<p><figure><img src="steg7.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-8-sjekk-om-man-trykker-pa-riktig-verdensdel">
+<h1 class="activity" id="steg-8-sjekk-om-man-trykker-pa-riktig-verdensdel">Steg 8: Sjekk om man trykker på riktig verdensdel</h1>
+<p>Nå skal vi sjekke om den som spiller trykker på riktig verdensdel. Da starter vi med å sjekke om spilleren trykker på knappen på datamusa.</p>
+<p>På samme måte som at vi kan bruke <code>mouseX</code> og <code>mousY</code>, så kan vi også bruke <code>mousePressed</code>. Forskjellen er at mens <code>mouseX</code> og <code>mousY</code> hele tiden oppdateres med tall som forteller oss hvor i vinduet datamusa er, så er mousePressed en bolsk variabel, det betyr at den enten er <code>true</code> eller <code>false</code>, derfor kan vi bruke den direkte i en if-setning.</p>
+<p>Muntlig skal vi gjøre dette:</p>
+<pre><code class="processing"> Dersom datamusa er klikka på,
+    så skal vi sjekke om datamusa er over en og en verdensdel
+</code></pre>
+<p>Det å sjekke om datamusa er over en og en av verdensdelene har vi allerede gjort inni <code>draw</code> metoden ved å kalle på <code>sjekkVerdensdel();</code> mange ganger. Da gjenstår bare å putte alle disse inni en if-setning.</p>
+<section class="check" id="gjor-dette-13">
+<h2 class="check" id="gjor-dette-13">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_75" disabled="true"><label for="cbx_75"> Skriv en if-setning hvor du sjekker om datamusa er trykka på. Nå skal bare <code>mousePressed</code> stå inni parentesen til if-setningen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_76" disabled="true"><label for="cbx_76"> Putt alle metodekallene <code>sjekkVerdensdel();</code> inn i if-setningen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_77" disabled="true"><label for="cbx_77"> Sjekk at koden kjører. Ingenting nytt skal skje.</label></li>
+</ul>
+<p>Neste steg nå er å sjekke om spilleren har trykke på riktig verdensdel. Dette gjør vi inni if-setningen som er inni metoden <code>sjekkVerdensdel</code>. Nå skal vi sjekke om verdensdelen fra Stringen som blir sendt inn til metoden er lik som den verdensdelen som er trekt tilfeldig. Muntlig blir dette:</p>
+<pre><code class="processing">Dersom verdensdelen som er trekt tilfeldig er lik verdelsdelen fra Stringen,
+    så viser vi teksten <span class="hljs-string">"RIKTIG"</span> i vinduet.
+</code></pre>
+<p>Vi putter inn de tingene vi har, da blir if-setningen slik:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span>(alleVerdensdelene[tilfeldigTall] er lik verdensdel){
+    <span class="hljs-built_in">text</span>(<span class="hljs-string">"RIKTIG"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+}
+</code></pre>
+<p>Nå skal vi sjekke om en tekst er lik en annen tekst. Da må vi bruke en metode som hører til klassen <code>String</code>, metoden heter <code>equals();</code> og som parameter tar den det ordet vi skal sjekke. Når vi skal bruke en metode som hører til en klasse trenger vi bare sette punktum i mellom. Koden blir slik:</p>
+<pre><code class="processing"><span class="hljs-keyword">if</span>(alleVerdensdelene[tilfeldigTall].equals(verdensdel)){
+    <span class="hljs-built_in">text</span>(<span class="hljs-string">"RIKTIG"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
+}
+</code></pre>
+</section>
+<section class="check" id="gjor-dette-14">
+<h2 class="check" id="gjor-dette-14">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_78" disabled="true"><label for="cbx_78"> Skriv inn if-setningen som nettopp ble forklart.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_79" disabled="true"><label for="cbx_79"> Sjekk at koden fungerer. Nå skal teksten &quot;RIKTIG&quot; vises på skjermen når du trykker på riktig verdensdel.</label></li>
+</ul>
+<p>Her er koden så langt.</p>
+<p><figure><img src="steg8.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-9-fa-ny-verdensdel-a-trykke-pa">
+<h1 class="activity" id="steg-9-fa-ny-verdensdel-a-trykke-pa">Steg 9: Få ny verdensdel å trykke på</h1>
+<p>Det er kjipt å starte programmet på nytt hver gang spilleren har trykka på riktig verdensdel. Derfor må vi velge ett nytt tilfeldig tall inni if-setningen som sjekker om riktig verdensdel er trykka på.</p>
+<p>Da gjør vi akkurat det samme som vi gjorde i <code>setup</code> metoden da vi satt <code>tilfeldigTall</code>  til å være ett tilfeldig tall.</p>
+<section class="check" id="gjor-dette-15">
+<h2 class="check" id="gjor-dette-15">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_80" disabled="true"><label for="cbx_80"> Sett <code>tilfeldigTall</code> til å bli et nytt tilfeldig tall inni if-setningen som sjekker om spilleren har trykka på riktig verdensdel.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_81" disabled="true"><label for="cbx_81"> Kjør koden og se at det fungerer. Nå skal du få opp en ny verdensdel hver gang du trykker på riktig verdensdel.</label></li>
+</ul>
+<p>Her er koden så langt. Siden vi bare har lagt til en kodelinje inni metoden <code>sjekkVerdensdel</code> så viser vi bare den metoden:</p>
+<p><figure><img src="steg9.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-10-fa-poeng">
+<h1 class="activity" id="steg-10-fa-poeng">Steg 10: Få poeng</h1>
+<p>Til sist skal vi gi spilleren poeng hver gang riktig verdensdel blir trykka på. Siden vi hele tiden ønsker å få mer og mer poeng, så må vi lage en variabel som vi kan oppdatere når riktig verdensdel blir trykka på.</p>
+<p>Variabelen skal være av typen <code>int</code> og kan for eksempel hete <code>poeng</code>.</p>
+<section class="check" id="gjor-dette-16">
+<h2 class="check" id="gjor-dette-16">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_82" disabled="true"><label for="cbx_82"> Deklarer en variabel av typen <code>int</code> med navnet <code>poeng</code> sammen med de andre deklarasjonene du har skrevet i toppen av koden. Husk at du også her kan gi variabelen et annet navn dersom du vil.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_83" disabled="true"><label for="cbx_83"> Sett variabelen til å være <code>0</code>. Det gjør du ved å skrive denne kodelinja inni <code>setup</code> metoden:</label></li>
+</ul>
+<pre><code class="processing">    poeng = <span class="hljs-number">0</span>;
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_84" disabled="true"><label for="cbx_84"> Få poengene til å vises i vinduet ved å gjøre et metodekall på <code>text();</code>. Det første parameteret skal være først en passende tekst inni fnuttene og deretter <code>+ poeng</code>. De to neste bestemmer du selv.</label></li>
+<li>[] ] Test at koden fungerer så langt. Nå skal poengene vises på skjermen, men du vil forløpig ikke få mer poeng selv om du trykker på riktig verdensdel.</li>
+<li class="task-list-item"><input type="checkbox" id="cbx_85" disabled="true"><label for="cbx_85"> Forsøk å skrive den neste kodelinja der du tror den skal være. Den gjør at hver gang programmet leser den, så bli verdien til <code>poeng</code> en større. Her er kodelinja:</label></li>
+</ul>
+<pre><code class="processing">    poeng = poeng + <span class="hljs-number">1</span>;
+</code></pre>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_86" disabled="true"><label for="cbx_86"> Test om koden fungerer, dersom du har skrevet kodelinja på riktig plass, så skal du nå få poeng hver gang du trykker på riktig verdensdel.</label></li>
+</ul>
+<p>Nå gjenstår bare å få minuspoeng når man trykker på feil verdensdel. Muntlig blir koden slik:</p>
+<pre><code class="processing">Dersom verdensdelen som er trekt tilfeldig er lik verdelsdelen fra stringen,
+    Så viser vi teksten <span class="hljs-string">"RIKTIG"</span> i vinduet.
+    trekk et nytt tilfeldig tall
+    få et poeng
+ellers
+    så skal vi få minus ett poeng
+</code></pre>
+<p>Vi har allerede de if-setningen som utfører sjekken, og vi har alt som skjer dersom vi trykker på riktig verdensdel. Det eneste som mangler er hva som skjer fra <code>ellers</code> og nedover.</p>
+<p>Når vi skriver en if-setning, så kan vi alltid legge til en <code>ellers</code>, på engelsk <code>else</code>. Dersom vi legger til en <code>else</code> etter en if-setning, så vil koden inni <code>else</code> skje dersom testen i if-setningen er usann. Så dersom man trykker på riktig verdensdel, så får man poeng, ellers får man minuspoeng.</p>
+<p>En <code>else</code> åpnes og stenges på samme måte som en if-setning, altså med krøllparenteser <code>{</code> og <code>}</code>.</p>
+</section>
+<section class="check" id="gjor-dette-17">
+<h2 class="check" id="gjor-dette-17">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_87" disabled="true"><label for="cbx_87"> Legg til en <code>else</code> rett etter at if-setningen som sjekker om verdensdelene er like er avslutta.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_88" disabled="true"><label for="cbx_88"> Kodelinja som du brukte for å legge til ett poeng, skal du nå bruke for å trekke fra ett poeng. Alt du trenger å gjøre er å skrive <code>-</code> i steden for <code>+</code>. Skriv denne kodelinja inni <code>else</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_89" disabled="true"><label for="cbx_89"> Sjekk at koden kjører. Hva skjer? Får du ett minuspoeng hver gang du trykker på feil verdensdel? Hva skjer når du trykker på riktig verdensdel, får du riktig poeng?</label></li>
+</ul>
+<p>Grunnen til at du får for mange minuspoeng er at du ikke rekker å slippe knappen på datamusa før programmet har endre hvilken verdensdel du skal trykke på. Programmet kjører gjennom all koden din ca. 30 eller ca. 60 ganger i sekundet. Det betyr at du må trykke veldig raskt for å ikke få minuspoeng for hver gang du trykker, selv om du trykker på riktig verdensdel. Du kan sjekke hvor raskt koden blir kjørt ved å gjøre et metodekall på <code>text();</code> og så sette det første parameteret til å være <code>frameRate</code>, tallet som vises på skjermen er antall ganger koden blir kjørt i sekundet.</p>
+<p>Vi kan fikse alle minuspoengene ved å gjøre et metodekall på <code>delay();</code>, denne tar som parameter antall millisekunder koden skal ta pause. Et sekund er det samme som 1000 millisekunder. Du må være veldig forsiktig med å bruke <code>delay();</code> i andre sammenhenger, fordi den pauser hele programmet, det betyr at absolutt ingenting blir sjekker så lenge programmet står og har pause.</p>
+</section>
+<section class="check" id="gjor-dette-18">
+<h2 class="check" id="gjor-dette-18">Gjør dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_90" disabled="true"><label for="cbx_90"> Gjør et metodekall på <code>delay();</code> rett etter at du har avslutta <code>else</code>. La den ta 50 millisekunder som parameter.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_91" disabled="true"><label for="cbx_91"> Test at koden kjører.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_92" disabled="true"><label for="cbx_92"> Bytt til 5000 millisekunder og test programmet igjen. Hva skjer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_93" disabled="true"><label for="cbx_93"> Forsøk med litt forskjellige millisekunder og finn ut hva du synes er best.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_94" disabled="true"><label for="cbx_94"> Dersom du ikke har gjort det allerede, så må du bytte bilde av verdenskartet tilbake til bilde uten firkanta grenser på.</label></li>
+</ul>
+<p>Det var det! Nå har du et lite spill. Utvid spillet som du selv ønsker. Det er mange muligheter. Under finner du noen ekstra oppgaver som du kan gjøre dersom du har lyst.</p>
+<p>Her er koden så langt. Husk at vår kode og din kode kan være forskjellig  dersom du har valgt andre variabelnavn eller andre verdier enn det vi har. Det viktigste er at den fungerer!</p>
+<p><figure><img src="steg10.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-11-ekstra">
+<h1 class="activity" id="steg-11-ekstra">Steg 11: Ekstra</h1>
+<p>Dette er ekstraoppgaver som du kan gjøre dersom du vil.</p>
+<section class="check" id="prov-dette">
+<h2 class="check" id="prov-dette">Prøv dette:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_95" disabled="true"><label for="cbx_95"> Legg inn igjen tekst som viser hva koordinatene på datamusa er.</label></li>
+</ul>
+</section>
+<section class="check" id="forbedre-verdenskartet">
+<h2 class="check" id="forbedre-verdenskartet">Forbedre verdenskartet:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_96" disabled="true"><label for="cbx_96"> Finn koordinatene for tuppen av India og Sri Lanka og skriv kode som gjør at dette også blir rekna med som Asia.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_97" disabled="true"><label for="cbx_97"> Finn ut nøyaktig hvilke av øyene mellom Oseania og Asia som høyrer til hvor og fiks grensen mellom de to verdensdelene slik at den blir mer riktig.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_98" disabled="true"><label for="cbx_98"> Skriv kode som gjør at Nord-Amerika ikke inkluderer den vestlige biten av Grønland, men fremdeles inkluderer alt av Nord-Amerika.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_99" disabled="true"><label for="cbx_99"> Fiks koden slik at hele Grønland hører til Europa.</label></li>
+</ul>
+</section>
+<section class="check" id="fylker-i-norge">
+<h2 class="check" id="fylker-i-norge">Fylker i Norge:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_100" disabled="true"><label for="cbx_100"> Bytt ut kartet over verden med et kart over Norge.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_101" disabled="true"><label for="cbx_101"> Lag firkanter som du bruker til å skille fylkene i Norge.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_102" disabled="true"><label for="cbx_102"> Skriv kode som sjekker om datamusa er innenfor fylkene i Norge.</label></li>
+</ul>
+</section>
+<section class="check" id="helg-andre-oppgaver">
+<h2 class="check" id="helg-andre-oppgaver">Helg andre oppgaver:</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_103" disabled="true"><label for="cbx_103"> Finn et kartet for Game of Thrones og lag spill hvor folk kan gjette hvor de forskjellige folka hører hjemme.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_104" disabled="true"><label for="cbx_104"> Finn et bilde av forskjellige dyr, lag en liste med navna på dyrene på engelsk, eller et helt annet språk. Lag grenser rundt dyrene og la folk gjette hva de forskjellige dyrene heter på forskjellige språk.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_105" disabled="true"><label for="cbx_105"> Finn et bilde av en menneskekropp som er laga for undervisning, slik at man kan se hva som er inni, slik som hjertet, lungene, nyrene, ribbein, og lignende. Lag grenser rundt de forskjellige tingene og la folk gjette hvor de er.</label></li>
+</ul>
+<p>Du har kanskje andre ideer som er bedre. I så fall er det bare å sende dem inn til oss så skal vi ta en vurdering på om de passer inn i oppgava.</p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Processing: Verden - Del 2&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/processing/verden_del2" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/processing/verden_del2" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Kine Gjerstad Eide</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

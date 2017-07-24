@@ -1,0 +1,260 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Python: Lage musikk med micro:bit | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Micro:bit</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Python: Lage musikk med micro:bit</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Micro:bit</span></a><div class="pdf"><a href="/microbit/python_musikk/python_musikk.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Vi skal lage et lite program hvor vi får micro:biten til å spille
+musikk dersom vi kobler til hodetelefoner eller en høytaler. I
+denne veiledningen viser vi hvordan du kan spille melodien &quot;Twinkle twinkle
+little star&quot;, og med dette som utgangspunkt kan du spille av hvilken
+som helst sang du vil.</p>
+</section>
+<section class="activity" id="steg-1-sjekk-at-du-har-riktig-utstyr">
+<h1 class="activity" id="steg-1-sjekk-at-du-har-riktig-utstyr">Steg 1: Sjekk at du har riktig utstyr</h1>
+<p><em>Det er viktig at du har alt utstyr og tilbehør for å kunne gjøre denne oppgaven.</em></p>
+<section class="check" id="sjekkliste">
+<h2 class="check" id="sjekkliste">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> En micro:bit med en micro-usb-kabel.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> To ledninger med krokodilleklemmer.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Hodetelefoner eller en høytaler.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> En datamaskin med Internett eller en <a href="https://codewith.mu/">installert micro-python editor</a>.</label></p>
+</li>
+</ul>
+<p><em>Her ser du et bilde av utstyr du kan bruke:</em></p>
+<p><img src="utstyr.png" alt="" ="" width="75%" =""></p>
+</section>
+</section>
+<section class="activity" id="steg-2-klargjore-utstyret">
+<h1 class="activity" id="steg-2-klargjore-utstyret">Steg 2: Klargjøre utstyret</h1>
+<p><em>Først kobler vi sammen utstyret før vi begynner å programmere.</em></p>
+<section class="check" id="sjekkliste-2">
+<h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Koble usb-kabelen til micro:biten og en usb-port på datamaskinen.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Koble den ene krokodilleklemmen til porten hvor det står GND på micro:biten.
+Den andre enden kobler du til innerst på stikket til hodetelefonene/høytaleren.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Koble den andre krokodilleklemmen til porten hvor det står 0 på micro:biten.
+Den andre enden kobler du til ytterst på stikket til hodetelefonene/høytaleren.</label></p>
+</li>
+</ul>
+<p><em>Her ser du to bilder av hvordan utstyret bør kobles:</em></p>
+<p><img src="kobling_microbit.png" alt="" ="" width="45%" =""> <img src="kobling_hoytaler.png" alt="" ="" width="45%" =""></p>
+</section>
+</section>
+<section class="activity" id="steg-3-start-a-kode">
+<h1 class="activity" id="steg-3-start-a-kode">Steg 3: Start å kode</h1>
+<p><em>Først starter vi med å skrive kode for å spille toner.</em></p>
+<section class="check" id="sjekkliste-3">
+<h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Gå til <a href="http://python.microbit.org" target="_blank">python.microbit.org</a>
+eller din micro-python-editor for å åpne en editor som vi kan skrive kode i.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Fjern all kode som står der i fra tidligere.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Vi starter med å importere et musikk-bibliotek. Dette gjør at vi
+kan bruke kode som er laget av noen andre for å spille av musikk.
+Skriv inn følgende kode i editoren:</label></p>
+<pre><code class="python"><span class="hljs-keyword">from</span> music <span class="hljs-keyword">import</span> *
+</code></pre>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> For å teste at alt funker som det skal så prøver vi å spille av en
+innebygget meldodi, som har navn <em>NYAN</em>. Denne melodien kan vi spille
+av ved å bruke en funkson som heter <em>play()</em>. Legg til kodesnutten:</label></p>
+<pre><code class="python">play(NYAN)
+</code></pre>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Til slutt må vi overføre programmet vårt over til micro:biten. Trykk på
+<strong>Download</strong> i menyen, da lastes programmet ned til datamaskinen din.
+Så overfører du filen <em>microbit.hex</em> til micro:biten du koblet til.
+Dersom du bruker en lokal editor så kan du trykke på <strong>Flash</strong> for å
+overføre filen til micro:biten.</label></p>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet">
+<h2 class="flag" id="test-prosjektet">Test prosjektet</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Spilles melodien på micro:biten når du har overført programmet ditt?</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Test ut noen andre innebygde melodier også. Du finner en hel liste av de <a href="https://microbit-micropython.readthedocs.io/en/latest/music.html#built-in-melodies">her</a>.</label></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-4-lag-en-tone-selv">
+<h1 class="activity" id="steg-4-lag-en-tone-selv">Steg 4: Lag en tone selv</h1>
+<p><em>Det er kulere å lage sin egen tone, enn å bare spille av en innebygget. Det skal vi gjøre nå.</em></p>
+<section class="check" id="sjekkliste-4">
+<h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Først så fjerner vi linjen hvor vi spiller av musikk,
+men beholder linjen hvor vi importerte musikk-biblioteket.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Så lager vi en ny variabel som heter <em>tone</em> og setter den lik en tom liste.
+Skriv inn følgende kodelinje:</label></p>
+<pre><code class="python">tone = []
+</code></pre>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Når vi oppretter toner så har de en viss form. Tonene er en tekststreng, og består av tre ulike deler.
+Først har vi en note, så en oktav og så lengden til tonen. Noter beskrives med bokstaver,
+for eksempel en <strong>C</strong> eller en <strong>D</strong>, eller <strong>R</strong> for pause. Oktaver er et tall mellom <strong>0</strong> og <strong>8</strong>
+(som er det høyeste et menneske kan høre), mens lengden er antall <em>ticks</em> tonen skal spilles.
+Uten å gå for mye inn i detaljer, så er 4 ticks det samme som 125 millisekunder.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Endre kodesnutten din til å inkludere en tone, for eksempel slik:</label></p>
+<pre><code class="python">tone = [<span class="hljs-string">"C4:4"</span>]
+</code></pre>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> For å spille av tonen vår så må vi igjen bruke <em>play</em>. Legg til denne kodelinjen nederst:</label></p>
+<pre><code class="python">play(tone)
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-2">
+<h2 class="flag" id="test-prosjektet-2">Test prosjektet</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Spilles tonen på micro:biten når du har overført programmet ditt?</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Trykk <em>restart</em>-knappen på micro:biten for å spille den av på nytt.</label></p>
+</li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-5-programmere-melodien">
+<h1 class="activity" id="steg-5-programmere-melodien">Steg 5: Programmere melodien</h1>
+<p><em>Nå skal vi erstatte tonen vår med melodien til &quot;Twinkle twinkle little star&quot;.</em></p>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Erstatt variabelen <em>tone</em> med <em>melodi</em>, og spill av. Da ser koden din slik ut:</label></p>
+<pre><code class="python"><span class="hljs-keyword">from</span> music <span class="hljs-keyword">import</span> *
+
+melodi = [<span class="hljs-string">"C4:4"</span>, <span class="hljs-string">"C"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"G:8"</span>, <span class="hljs-string">"F:4"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D"</span>, <span class="hljs-string">"D"</span>, <span class="hljs-string">"C:8"</span>,
+<span class="hljs-string">"G:4"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D:8"</span>, <span class="hljs-string">"G:4"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D:8"</span>, <span class="hljs-string">"C4:4"</span>, 
+<span class="hljs-string">"C"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"G:8"</span>, <span class="hljs-string">"F:4"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D"</span>, <span class="hljs-string">"D"</span>,<span class="hljs-string">"C:8"</span>]
+
+play(melodi)
+</code></pre>
+</li>
+</ul>
+<section class="flag" id="test-prosjektet-3">
+<h2 class="flag" id="test-prosjektet-3">Test prosjektet</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Spiller micro:biten &quot;Twinkle twinkle little star&quot;?</label></li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-5-legg-til-knapp-for-a-styre-musikken">
+<h1 class="activity" id="steg-5-legg-til-knapp-for-a-styre-musikken">Steg 5: Legg til knapp for å styre musikken</h1>
+<p><em>Nå spilles bare melodinen akkurat når vi overførere den eller trykker restart.
+Vi legger til en knapp for å styre musikken.</em></p>
+<section class="check" id="sjekkliste-5">
+<h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Først må vi importere enda et bibliotek. Legg til følgende linje helt øverst:</label></p>
+<pre><code class="python"><span class="hljs-keyword">from</span> microbit <span class="hljs-keyword">import</span> * 
+</code></pre>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Så legger vi til en løkke som kjøres for alltid, også sjekker vi om knapp
+<strong>A</strong> er trykket. Da ser programmet ditt slik ut:</label></p>
+<pre><code class="python"><span class="hljs-keyword">from</span> microbit <span class="hljs-keyword">import</span> *
+<span class="hljs-keyword">from</span> music <span class="hljs-keyword">import</span>*
+
+melodi = [<span class="hljs-string">"C4:4"</span>, <span class="hljs-string">"C"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"G:8"</span>, <span class="hljs-string">"F:4"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D"</span>, <span class="hljs-string">"D"</span>, <span class="hljs-string">"C:8"</span>,
+<span class="hljs-string">"G:4"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D:8"</span>, <span class="hljs-string">"G:4"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D:8"</span>, <span class="hljs-string">"C4:4"</span>, 
+<span class="hljs-string">"C"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"G"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"G:8"</span>, <span class="hljs-string">"F:4"</span>, <span class="hljs-string">"F"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"E"</span>, <span class="hljs-string">"D"</span>, <span class="hljs-string">"D"</span>,<span class="hljs-string">"C:8"</span>]
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+	<span class="hljs-keyword">if</span> button_a.is_pressed():
+		play(melodi)  
+</code></pre>
+</li>
+</ul>
+</section>
+<section class="flag" id="test-prosjektet-4">
+<h2 class="flag" id="test-prosjektet-4">Test prosjektet</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Sjekk om melodinen kun spilles når man trykker på knapp <strong>A</strong>.</label></li>
+</ul>
+</section>
+<section class="challenge" id="utfordring-legge-til-egne-melodier">
+<h2 class="challenge" id="utfordring-legge-til-egne-melodier">Utfordring : Legge til egne melodier</h2>
+<ul>
+<li>
+<p>Klarer du å komponere din egen melodi?</p>
+</li>
+<li>
+<p>Klarer du å finne en melodi på Internett og lage en liste med toner som du kan spille av?</p>
+</li>
+</ul>
+</section>
+<section class="protip" id="forklaring-av-koden">
+<h2 class="protip" id="forklaring-av-koden">Forklaring av koden</h2>
+<ul>
+<li>
+<p>Vi pleier alltid importere biblioteket som heter <em>microbit</em> når vi
+programmer en micro:bit, for at vi skal kunne bruke de forskjellige
+sensorene som er innebygget i micro:biten. I dette tilfellet bruker
+vi bibliteket til å sjekke om vi har trykket på knapp <strong>A</strong>.</p>
+</li>
+<li>
+<p>Vi må importere biblioteket som heter <em>musikk</em> for at vi skal kunne
+bruke funksjonen som heter <em>play()</em>, som spiller av musikken vi lager.</p>
+</li>
+<li>
+<p>Når vi oppretter en tone så har den flere forskjellige deler. Det første
+man kan se er at vi har to klammeparanteser <code>[</code> og <code>]</code>. De bruker vi til å
+opprette en liste som vi kan ha tonene våre i. Hver tone består av tre deler,
+først hvilken note vi skal spille og hvilken oktav noten skal være i, og så
+hvor lenge tonen skal spilles. <code>&quot;C4:4&quot;</code> betyr at vi skal spille en <strong>C</strong> i oktav
+<strong>fire</strong> i <strong>fire</strong> ticks, som i dette tilfellet er 125 millisekunder.</p>
+</li>
+<li>
+<p>Sjekk ut <a href="https://microbit-micropython.readthedocs.io/en/latest/music.html">dokumentasjonen</a>
+for å se hvilke muligheter som finnes med musikk-programmering på micro:biten.</p>
+</li>
+</ul>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Micro:bit: Python: Lage musikk med micro:bit&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/python_musikk" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/python_musikk" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Asta Aker og Tjerand Silde</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>
