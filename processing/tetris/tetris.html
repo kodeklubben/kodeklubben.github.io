@@ -1,0 +1,224 @@
+<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Tetris | Kodeklubben</title><link href="../../assets/style.min.css" rel="stylesheet"/><script type="text/javascript">// convert url relative to current file
+// ex: python/index.html -> ../python/index.html
+function relative (url) {
+  var urlRoot = '../..';
+  if (urlRoot !== '') {
+    return urlRoot + '/' + url;
+  }
+  return url;
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Processing</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Tetris</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Processing</span></a><div class="pdf"><a href="/processing/tetris/tetris.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
+<h1 class="intro" id="introduksjon">Introduksjon</h1>
+<p>Lag starten på ditt eget tetris spill!</p>
+<p>Det du skal gjøre i denne oppgava er først å sette opp bakgrunnen til spillet og så rett og slett å få firkanter til å falle over skjermen.</p>
+<p>Slik vil det se ut når du er ferdig med oppgava:</p>
+<p><figure><img src="preview.png" alt=""></figure></p>
+</section>
+<section class="activity" id="steg-1-lag-dine-forste-to-metoder">
+<h1 class="activity" id="steg-1-lag-dine-forste-to-metoder">Steg 1: Lag dine første to metoder</h1>
+<p>For hvert steg kommer det forklaring med eksempel og på slutten av steget kommer et bilde av hele koden. Bruk bildet av koden dersom du trenger det, men forsøk å skriv koden på egenhånd ved hjelp av forklaringen først.</p>
+<section class="check" id="forste-gjoremal">
+<h2 class="check" id="forste-gjoremal">Første gjøremål</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> La oss starte med å sette opp et vanlig vindu, dersom du ikke har åpna Processing, så må du gjøre det nå.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Lagre programmet ditt, dette gjør du ved å velge <code>File</code> og deretter <code>Save As</code>.</label></p>
+</li>
+</ul>
+<p>Det anbefales at du gir koden din et navn som har noe med spillet å gjøre, slik at det er lett å finne igjen. Det er også lurt å lagre koden på et sted som er lett å huske.</p>
+<p>Processing er en kodeeditor, det betyr at du kan skrive kode i den. Den første koden du skal skrive er en kodesnutt med to metoder. En metode ser ut slik som dette:</p>
+<pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>(){
+
+}
+</code></pre>
+<p>Denne metoden heter <code>setup</code>. Alt som skrives inni metoden med navn <code>setup</code> skjer én gang når programmet starter, mens det som står inni <code>draw</code> skjer på nytt og på nytt helt til programmet avsluttes.</p>
+</section>
+<section class="check" id="prov-selv">
+<h2 class="check" id="prov-selv">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Forsøk å skrive begge metodene selv. De to metodene skal være helt like bortsett fra navnet.</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Nå må du kjøre koden for å sjekke at metodene fungerer. For å kjøre koden trykker du på <strong>play</strong>-knappen <img src="../play.png" alt=""> opp til venstre i Proccesing programmet.</label></p>
+</li>
+</ul>
+<p>Dersom all koden din er riktig skal du få opp et lite vindu som ser slik ut:</p>
+<p><figure><img src="steg0vin.png" alt=""></figure></p>
+<p>Her er hele koden slik den skal se ut nå:</p>
+<p><figure><img src="steg0.png" alt=""></figure></p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Dobbelsjekk at du har skrevet alt riktig før du går videre.</label></li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-2-vindustorrelse">
+<h1 class="activity" id="steg-2-vindustorrelse">Steg 2: Vindustørrelse</h1>
+<p>Nå skal du bestemme størrelsen på vinduet, det gjør du ved å bruke en metode som noen allerede har skrevet ferdig. Når vi bruker en metode, så skriver vi navnet på metoden, deretter må vi ha parenteser, og til sist legger vi til semikolon. Når man bruker en metode som allerede er ferdigskrevet, så sier man at man <em>kaller på en metode</em>.</p>
+<p>Her er et eksempel som kaller på metoden med navn <code>size</code>:</p>
+<pre><code class="processing"><span class="hljs-built_in">size</span>();
+</code></pre>
+<p>Mellom parentesene må man ofte sette inn informasjon, dette kalles parameter. Parameterne som må oppgis når man setter størrelsen på et vindu er rett og slett hvor stort vinduet skal være. Hvis metoden trenger flere parametre, bruker man komma <code>,</code> for å skille de:</p>
+<pre><code class="processing"><span class="hljs-built_in">size</span>(<span class="hljs-number">100</span>, <span class="hljs-number">200</span>);
+</code></pre>
+<p>I eksempelet over er <code>100</code> og <code>200</code> parametre.</p>
+<p>Parametrene som bestemmer størrelsen på vinduet er oppgitt i piksler, så det kommer litt ann på skjermen din hvor mange piksler du ønsker at vinduet skal være. Prøv for eksempel med 600 og 900, og så kan du endre ett og ett tall helt til du får et vindu som du synes har riktig størrelse.</p>
+<p>Slik kaller du på metoden som bestemmer størrelsen på vinduet:</p>
+<pre><code class="processing"><span class="hljs-built_in">size</span>(<span class="hljs-number">600</span>, <span class="hljs-number">900</span>);
+</code></pre>
+<p>Denne kodelinja må skrives inni <code>setup</code>, det betyr mellom de to krøllparentesene <code>{</code> og <code>}</code> som står etter <code>setup()</code>.</p>
+<section class="protip" id="hvor-mange-parametre">
+<h3 class="protip" id="hvor-mange-parametre">Hvor mange parametre?</h3>
+<p>Når man kaller på en metode er det ikke alltid man vet nøyaktig hvilke parametre som skal legges ved. Da kan man enten se i <a href="https://processing.org/reference/">manualen</a>, søke etter svaret på internett, eller gjøre et metodekall uten parametre. Gjør du sistnevnte, vil du få opp en feilmelding nederst på skjermen. Feilmeldingen forteller hvor mange og hvilken type parametre som skal skrives mellom parentesene <code>(</code> og <code>)</code>. Hvert parameter skilles av kommategn.</p>
+</section>
+<section class="check" id="prov-selv-2">
+<h2 class="check" id="prov-selv-2">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Lag et vindu som er kvadratisk (like høyt som bredt).</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Lag et vindu som når helt fra høyre til venstre side av skjermen din.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Lag et vindu som er ca. like stort som et russekort.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Lag et vindu som du synes er passelig for å spille tetris i.</label></li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-3-bakgrunnsfarge">
+<h1 class="activity" id="steg-3-bakgrunnsfarge">Steg 3: Bakgrunnsfarge</h1>
+<p>På samme måte som <code>size</code> så er det også en ferdigskrevet metode som kan bestemme bakgrunnsfarge. Denne heter <code>background</code> og trenger enten ett eller tre parametre for å fungere. Alle parameterne må være heltall, eller <code>int</code> som det heter når man programerer. Tallene som brukes i <code>background</code> må være mellom 0 og 255. Tallene bestemmer hvor sterk lyspærene inni pc-skjermen skal lyse.</p>
+<section class="protip" id="hvorfor-heter-det-int">
+<h3 class="protip" id="hvorfor-heter-det-int">Hvorfor heter  det int?</h3>
+<p>Heltall er tall som skrives uten komma, slik som 3, 110 og 77. Heltall heter på engelsk <em>integer</em>. <code>int</code> er altså en forkortelse for <em>integer</em> som betyr heltall.</p>
+</section>
+<section>
+<h3 id=""></h3>
+<p>Dersom man bare har en parameter, så får man hvit farge ved å skrive 255, svart ved å skrive 0. Hva tror du det blir for 128? Hva med 200? Her er et eksempel:</p>
+<pre><code class="processing"><span class="hljs-built_in">background</span>(<span class="hljs-number">70</span>);
+</code></pre>
+<p>Når du bruker tre tall, kaller vi det RGB-farger. RGB står for rød, grønn og blå. Her er et eksempel:</p>
+<pre><code class="processing"><span class="hljs-built_in">background</span>(<span class="hljs-number">20</span>, <span class="hljs-number">255</span>, <span class="hljs-number">170</span>);
+</code></pre>
+<p>Det betyr at det første tallet <code>20</code> bestemmer styrken på det røde lyset, det andre <code>255</code> på det grønne og det siste <code>170</code> på det blå. Ved å endre RGB-tallene kan man blande akkurat den fargen man ønsker.</p>
+<p>Husk å avslutt linjen med semikolon. <code>background</code> skal slik som <code>size</code> også inni <code>setup</code>-metoden.</p>
+</section>
+<section class="check" id="prov-selv-3">
+<h2 class="check" id="prov-selv-3">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Test med å først bare ha ett tall inni parentesen og endre på tallet, hva får du? Endre tallet minst 4 ganger og sjekk hvilken farge du får.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Få bakgrunnsfargen til å bli svart.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Få bakgrunnsfargen til å bli helt lysegrå.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Få bakgrunnsfargen til å bli hvit.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Prøv å sett inn tre forskjellige tall, og så endrer du på ett og ett av disse, hva skjer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Hvilken farge får du dersom alle parametrene til <code>background</code> er 0?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Hvilken farge får du dersom alle parametrene til <code>background</code> er 255?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Få bakgrunnsfargen til å bli rød.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Få bakgrunnsfargen til å bli gul.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Prøv tilfeldige tall og se hvilken farge du får.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Finn en bakgrunnsfarge du liker og gå til neste steg.</label></li>
+</ul>
+<p>Her er et bilde av hvordan koden din skal se ut nå. Husk at du sikkert har funnet litt andre tall enn vi har.</p>
+<p><figure><img src="steg2.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-4-lag-en-firkant">
+<h1 class="activity" id="steg-4-lag-en-firkant">Steg 4: Lag en firkant</h1>
+<p>Nå skal du lage firkanten som senere skal falle over skjermen. For å lage en firkant bruker vi metodekallet <code>rect</code>. Dette trenger fire parameter, som bestemmer hvor firkanten skal plasseres og hvor stor den skal være. Metodekallet på <code>rect</code> skal du skrive inni <code>draw</code>-metoden.</p>
+<p>Start for eksempel med disse tallene:</p>
+<pre><code class="processing"><span class="hljs-built_in">rect</span>(<span class="hljs-number">275</span>, <span class="hljs-number">10</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+</code></pre>
+<section class="check" id="prov-selv-4">
+<h2 class="check" id="prov-selv-4">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Endre de forskjellige tallene slik at du finner ut hva de står for.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Endre plassering og størrelse til firkanten slik at den når fra toppen til bunnen av vinduet ditt.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Tegn firkanten slik at den står midt i vinduet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> La firkanten dekke hele vinduet. Hint: Du kan bruke minus foran tallene.</label></li>
+</ul>
+</section>
+</section>
+<section class="activity" id="steg-5-gi-firkanten-farge">
+<h1 class="activity" id="steg-5-gi-firkanten-farge">Steg 5: Gi firkanten farge</h1>
+<p>Nå skal du sette en farge på firkanten ved å gjøre et metodekall på <code>fill</code>. <code>fill</code> tar tre parameter, slik som background, men den fargelegger figurer i stedet for hele bakgrunnen. Denne må skrives inni <code>draw</code> og den må stå på linja over firkanten.</p>
+<section class="check" id="prov-selv-5">
+<h2 class="check" id="prov-selv-5">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Førsøk å gjøre firkanten lilla.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Gi firkanten en farge du liker.</label></li>
+</ul>
+<p>Her er vår kode så langt, husk at du sikkert har valgt andre parametre.</p>
+<p><figure><img src="steg3.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-6-lag-en-variabel">
+<h1 class="activity" id="steg-6-lag-en-variabel">Steg 6: Lag en variabel</h1>
+<p>For å få firkanten til å falle må vi gjøre to ting. Vi må opprette en variabel som endrer seg og så må vi bruke variabelen i firkanten.</p>
+<section class="protip" id="forklaring-av-variabel">
+<h3 class="protip" id="forklaring-av-variabel">Forklaring av variabel</h3>
+<p>En variabel er noe som kan endre seg. Vi vil jo gjerne at firkanten skal bevege seg nedover skjermen, altså at firkanten skal endre posisjonen. Dette gjør vi ved å putte inn en variabel i stedet for tallet som bestemmer posisjonen til firkanten.</p>
+<p>I den virkelige verden finnes det også variabler som man må endre og så har vi andre tall som alltid er de samme. For eksempel i en håndballkamp har man mange tall. Alle spillerne har sitt eget nummer på drakta. Ingen av spillerne skal bytte nummer under kampen, så derfor er nummeret trykt rett på skjorta. Det er også tall som viser hva stillingen i kampen er. Dette er ofte vist på ei svær tavle. Her endres tallene. Det hadde ikke fungert å trykke stillingen på ei skjorte før kampen. Derfor har de laget tavler, slik at stillingen kan oppdateres etterhvert som lagene får poeng. På samme måte, så lager vi variabler i programmering, slik at vi kan oppdatere de etterhvert som noe skjer i programmet. Alle variabler har sitt eget navn, slik som <code>poeng</code>, <code>liv</code>, <code>fart</code> eller lignende. Når de skal oppdateres, skriver vi for eksempel: <code>liv = 2</code>.</p>
+<p>For å lage en variabel, må vi først sette av plass i minnet til PC-en, slik at den tar vare på et tall. Da trenger ikke PC-en å vite hva tallet er, men den har satt av plassen slik at det er ledig når vi begynner å bruke det.</p>
+<p>Når vi skal lage en variabel i Processing, så må vi si hvilken datatype variabelen skal inneholde. Eksempler på datatyper kan være <code>int</code> for heltall, <code>float</code> for desimaltall, eller <code>String</code> for tekst.</p>
+</section>
+<section>
+<h3 id="-2"></h3>
+<p>Vi starter med å sette av plass i minnet, det heter å deklarere, eller opprette variabelen. Typen skal være <code>int</code>. Vi må gi et navn til variabelen, vi har valgt <code>posisjonY</code>, men du kan velge hvilket navn du ønsker. Kodelinja ser slik ut og skal stå over <code>setup</code>-metoden:</p>
+<pre><code class="processing"><span class="hljs-built_in">int</span> posisjonY;
+</code></pre>
+<p>Så skal vi bestemme hva <code>posisjonY</code> skal være når vi starter programmet, det skriver vi inni <code>setup</code>-metoden. Kodelinja skal se slik ut (husk at dersom du må bruke samme navn som på forrige kodelinje):</p>
+<pre><code class="processing">posisjonY = <span class="hljs-number">20</span>;
+</code></pre>
+<p>Så putter vi variabelen inn i firkanten vår. Det er argument nummer to som må byttes ut, og kodelinja hvor vi skriver firkanten ser slik ut:</p>
+<pre><code class="processing"><span class="hljs-built_in">rect</span>(<span class="hljs-number">275</span>, posisjonY, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
+</code></pre>
+<p>Prøv selv og sjekk at dette fungerer før du fortsetter med steg 7 under.</p>
+</section>
+<section class="check" id="prov-selv-6">
+<h2 class="check" id="prov-selv-6">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Bytt ut <code>20</code> med for eksempen <code>200</code> i <code>setup</code>-metoden der du skriver hva <code>posisjonY</code> skal være. Hva skjer?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Sett <code>posisjonY</code> til tallet som får firkanten til å bli plassert helt på bunn av vinduet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Plasser firkanten så langt opp at du bare ser bunnen av firkanten. Hint: Du kan bruke negative tall.</label></li>
+</ul>
+<p>Her er koden så langt.</p>
+<p><figure><img src="steg4.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-7-beveg-firkanten">
+<h1 class="activity" id="steg-7-beveg-firkanten">Steg 7: Beveg firkanten</h1>
+<p>Nå må vi få firkanten til å bevege seg. Som vi skrev helt til å begynne med, så fungerer <code>draw</code> metoden slik at den repeteres. All koden inni <code>draw</code> blir lest gjennom fra toppen og til bunn. Når programmet er kommet til bunn av <code>draw</code>, da bare hopper det opp til starten og leser gjennom koden en gang til. Dette skjer helt til vi avslutter programmet.</p>
+<p>For å få firkanten til å endre seg, så må vi oppdatere <code>posisjonY</code>. Det gjør vi ved å skrive dette inni <code>draw</code>-metoden:</p>
+<pre><code class="processing">posisjonY = posisjonY + <span class="hljs-number">1</span>;
+</code></pre>
+<p>For hver gang programmet leser denne linja, så endrer den posisjon til å bli det samme som det den allerede er, pluss en. Det betyr at dersom posisjonen er 20, så vil den bli til 20 + 1 = 21 neste gang, og så 21 + 1 = 22 gangen etter og slik fortsetter det. Når man bruker ett <code>=</code> tegn i koding, så betyr det at man gir noe en verdi, ikke at tallene på begge sider av <code>=</code> tenget er det samme.</p>
+<p>Kjør programmet og sjekk at firkanten faller.</p>
+<section class="check" id="prov-selv-7">
+<h2 class="check" id="prov-selv-7">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Hvorfor tror du det blir tegna en stripe over skjermen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Hva skjer om du setter <code>+ 10</code> i stedet for <code>+ 1</code> når du endrer <code>posisjonY</code>?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> La endringen i <code>posisjonY</code> være større en høyden på firkanten. Hva skjer da?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Finn en fart firkanten kan falle i som du synes er passelig.</label></li>
+</ul>
+<p>Her er hele koden så langt:</p>
+<p><figure><img src="steg5.png" alt=""></figure></p>
+</section>
+</section>
+<section class="activity" id="steg-8-fjerne-stripa-som-firkanten-lager">
+<h1 class="activity" id="steg-8-fjerne-stripa-som-firkanten-lager">Steg 8: Fjerne stripa som firkanten lager</h1>
+<p>Grunnen til at det blir tegna en stripe over skjermen er fordi bakgrunnsfargen i vinduet bare blir tegna en gang i <code>setup</code>-metoden. For å få det til å se ut som firkanten faller må metodekallet <code>background</code> bli flytta inn i <code>draw</code> metoden. Det er vanlig å kalle på <code>background</code> helt først i <code>draw</code> metoden.</p>
+<section class="check" id="prov-selv-8">
+<h2 class="check" id="prov-selv-8">Prøv selv</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Flytt kallet på <code>background</code> frem og tilbake fra <code>draw</code> til <code>setup</code> noen ganger og vær sikker på at du forstår hva som skjer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Kall på <code>background</code> øverst i <code>draw</code>-metoden.</label></li>
+</ul>
+<p>Her er hele koden:</p>
+<p><figure><img src="steg6.png" alt=""></figure></p>
+</section>
+</section>
+</div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Processing: Tetris&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/processing/tetris" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/processing/tetris" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Kine Gjerstad Eide</p>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-67775835-1', 'auto');
+ga('send', 'pageview');</script></body></html>

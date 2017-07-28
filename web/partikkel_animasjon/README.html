@@ -6,14 +6,14 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body class="teacher"><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Lærerveiledning - JS: Partikkel-animasjon</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/partikkel_animasjon/README.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="lesson-link"><a href="partikkel_animasjon.html"><span class="icon"></span><span class="text">Oppgave</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="activity" id="om-oppgaven">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Web</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Lærerveiledning - JS: Partikkel-animasjon</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Web</span></a><div class="pdf"><a href="/web/partikkel_animasjon/README.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="activity" id="om-oppgaven">
 <h1 class="activity" id="om-oppgaven">Om oppgaven</h1>
 <p>I denne oppgaven skal vi bruke JavaScript til å få figurer vi å bevege seg. Vi skal altså lære å animere ved hjelp av JavaScript og noe som heter <code>Canvas</code>. Under ser du animasjonen vi kommer til å lage.</p>
 <p>Denne oppgaven er den første i en liten serie av andre <code>partikkel</code>-oppgaver, derfor er det viktig å forstå det som skjer i denne oppgaven.</p>
 <section class="check" id="oppgaven-passer-til">
 <h2 class="check" id="oppgaven-passer-til">Oppgaven passer til:</h2>
-<p><strong>Fag</strong>: Matematikk, programmering</p>
-<p><strong>Anbefalte trinn</strong>: 7.-10. trinn</p>
+<p><strong>Fag</strong>: Matematikk, Programmering, Informasjonsteknologi 2</p>
+<p><strong>Anbefalte trinn</strong>: 7. trinn - VG3</p>
 <p><strong>Tema</strong>: JavaScript, HTML, CSS, web, objektorientering, variabler, canvas, funksjoner</p>
 <p><strong>Tidsbruk</strong>: Dobbeltime eller mer.</p>
 </section>
@@ -33,41 +33,53 @@ function relative (url) {
 <p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> <strong>Matematikk, 7. trinn</strong>: beskrive plassering og flytting i rutenett, på kart og i koordinatsystem, med og uten digitale hjelpemidler, og bruke koordinater til å beregne avstander parallelt med aksene i et koordinatsystem</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> <strong>Programmering, valgfag</strong>: dokumentere og forklare programkode gjennom å skrive hensiktsmessige kommentarer og ved å presentere egen og andres kode</label></p>
+<p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> <strong>Programmering, 10. trinn</strong>: dokumentere og forklare programkode gjennom å skrive hensiktsmessige kommentarer og ved å presentere egen og andres kode</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> <strong>Programmering, valgfag</strong>: bruke flere programmeringsspråk der minst ett er tekstbasert</label></p>
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> <strong>Programmering, 10. trinn</strong>: bruke flere programmeringsspråk der minst ett er tekstbasert</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> <strong>Programmering, valgfag</strong>: bruke grunnleggende prinsipper i programmering, slik som løkker, tester, variabler, funksjoner og enkel brukerinteraksjon</label></p>
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> <strong>Programmering, 10. trinn</strong>: bruke grunnleggende prinsipper i programmering, slik som løkker, tester, variabler, funksjoner og enkel brukerinteraksjon</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> <strong>Informasjonsteknologi 2, VG3</strong>: lage egne og bruke egne og andres funksjoner eller metoder med parametere</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> <strong>Informasjonsteknologi 2, VG3</strong>: planlegge og utvikle multimedieapplikasjoner ved å kombinere egne og andres multimedieelementer av typene tekst, bilde, lyd, video og animasjoner</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> <strong>Informasjonsteknologi 2, VG3</strong>: bruke programmeringsspråk i multimedieapplikasjoner</label></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> <strong>Informasjonsteknologi 2, VG3</strong>: programmere med valg og gjentakelser</label></p>
 </li>
 </ul>
 </section>
 <section class="challenge" id="forslag-til-laeringsmal">
 <h2 class="challenge" id="forslag-til-laeringsmal">Forslag til læringsmål</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Eleven kan tegne et kvadrat ved hjelp av canvas</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Eleven kan bruke HTML, CSS og JavaScript sammen til å vise kvadratet</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Eleven kan bruke JavaScript til å lage et objekt</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Eleven kan bruke JavaScript til å bevege et objekt horisontalt, vertikalt og diagonalt ved hjelp av canvas</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Eleven kan bruke JavaScript til å gjenta en hendelse</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Eleven kan tegne et kvadrat ved hjelp av canvas</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Eleven kan bruke HTML, CSS og JavaScript sammen til å vise kvadratet</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Eleven kan bruke JavaScript til å lage et objekt</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Eleven kan bruke JavaScript til å bevege et objekt horisontalt, vertikalt og diagonalt ved hjelp av canvas</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Eleven kan bruke JavaScript til å gjenta en hendelse</label></li>
 </ul>
 </section>
 <section class="challenge" id="forslag-til-vurderingskriterier">
 <h2 class="challenge" id="forslag-til-vurderingskriterier">Forslag til vurderingskriterier</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Eleven oppnår middels måloppnåelse ved å fullføre oppgaven.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Eleven oppnår høy måloppnåelse ved å videreutvikle egen kode basert på oppgaven, for eksempel ved å gjøre en eller flere av variasjonene nedenfor.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Eleven oppnår middels måloppnåelse ved å fullføre oppgaven.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Eleven oppnår høy måloppnåelse ved å videreutvikle egen kode basert på oppgaven, for eksempel ved å gjøre en eller flere av variasjonene nedenfor.</label></li>
 </ul>
 </section>
 <section class="challenge" id="forutsetninger-og-utstyr">
 <h2 class="challenge" id="forutsetninger-og-utstyr">Forutsetninger og utstyr</h2>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14">  <strong>Forutsetninger</strong>: Bør ha gjort <a href="../grunnleggende_js/grunnleggende_js.html" target="_blank">JS: Grunnleggende JavaScript</a> og ha kjennskap til grunnleggende HTML og CSS.</label></p>
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18">  <strong>Forutsetninger</strong>: Bør ha gjort <a href="../grunnleggende_js/grunnleggende_js.html" target="_blank">JS: Grunnleggende JavaScript</a> og ha kjennskap til grunnleggende HTML og CSS.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15">  <strong>Utstyr</strong>: Datamaskiner med internett og tekstbehandlingsverktøy.</label></p>
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19">  <strong>Utstyr</strong>: Datamaskiner med internett og tekstbehandlingsverktøy.</label></p>
 </li>
 </ul>
 </section>
@@ -79,22 +91,22 @@ function relative (url) {
 <section class="activity" id="generelt">
 <h1 class="activity" id="generelt">Generelt </h1>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16">  Bruk forklaringene under hvert steg i oppgaven. Disse forklarer de sentrale temaene og begrepene som blir brukt i oppgaven.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Pass på at syntaxen i JavaScript blir riktig underveis i oppgaven.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20">  Bruk forklaringene under hvert steg i oppgaven. Disse forklarer de sentrale temaene og begrepene som blir brukt i oppgaven.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Pass på at syntaxen i JavaScript blir riktig underveis i oppgaven.</label></li>
 </ul>
 <section class="challenge" id="variasjoner">
 <h2 class="challenge" id="variasjoner">Variasjoner</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Få partikkelet til å bevege seg på andre måter enn bare diagonalt.</label>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Få partikkelet til å bevege seg på andre måter enn bare diagonalt.</label>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Prøve å få partikkelet til å gå rett frem</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Få partikkelet til å gå rett ned</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Få partikkelet til å gå baklengs</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Prøve å få partikkelet til å gå rett frem</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Få partikkelet til å gå rett ned</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Få partikkelet til å gå baklengs</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Får du til at partikkelet bytter til en tilfeldig farge hver gang den bytter posisjon?</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Legg til flere partikler.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Bruk egen kreativitet til å lage en ny partikkel-animasjon</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Får du til at partikkelet bytter til en tilfeldig farge hver gang den bytter posisjon?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Legg til flere partikler.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Bruk egen kreativitet til å lage en ny partikkel-animasjon</label></li>
 </ul>
 </section>
 </section>
