@@ -6,7 +6,7 @@ function relative (url) {
     return urlRoot + '/' + url;
   }
   return url;
-}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Python</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Huskespill</h1><div class="lesson-icons"><div class="level"><img title="Nivå 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Python</span></a><div class="pdf"><a href="/python/huskespill/huskespill.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="huskespill">
+}</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Python</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Huskespill</h1><div class="lesson-icons"><div class="level"><img title="Nivå 3" src="../../assets/img/level3.png"/><span>Erfaren</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Python</span></a><div class="pdf"><a href="/python/huskespill/huskespill.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div><div class="readme"><a href="README.html"><span class="icon"></span><span class="text">Lærerveiledning</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="huskespill">
 <h1 class="intro" id="huskespill">Huskespill</h1>
 <p>I denne oppgaven skal du lage et huskespill hvor spilleren skal huske flest mulig ord i riktig rekkefølge. Spilleren skal få opp en liste med ord, deretter skal listen forsvinne og spilleren skal så skrive inn ordene i riktig rekkefølge. Skrives ordene inn i riktig rekkefølge, vil listen utvides med et nytt ord som må huskes. Programmet holder på slik helt til spilleren gjetter feil. Når spillet er ferdig får spilleren vite hvor mange ord han eller hun klarte å huske etter hverandre.</p>
 <p>Vi vil bygge programmet gradvis steg for steg. I hvert steg vil det gis viktige tips som ligner på slik en bør løse steget.</p>
@@ -63,10 +63,10 @@ print(tilfeldig)
 <section class="activity" id="steg-2-hent-inn-tekst-og-lag-liste-av-den">
 <h1 class="activity" id="steg-2-hent-inn-tekst-og-lag-liste-av-den">Steg 2: Hent inn tekst og lag liste av den</h1>
 <ul class="task-list">
-<li>[ ]Lag en funksjon som tar inn tekst og lager en liste av den.</li>
-<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Teksten som tas inn skal splittes ved <code>-</code>.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Funksjonen skal returnere listen.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> <strong>Før du går videre til steg 3, sjekk at funksjonen din fungerer som den skal.</strong></label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Lag en funksjon som tar inn tekst og lager en liste av den.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Teksten som tas inn skal splittes ved <code>-</code>.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Funksjonen skal returnere listen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Før du går videre til steg 3, sjekk at funksjonen din fungerer som den skal.</label></li>
 </ul>
 <section class="protip" id="tips-hente-innputt">
 <h2 class="protip" id="tips-hente-innputt">Tips: Hente innputt</h2>
@@ -91,17 +91,17 @@ print(liste)
 <section class="activity" id="steg-3-lag-spillet">
 <h1 class="activity" id="steg-3-lag-spillet">Steg 3: Lag spillet</h1>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Bruk funksjonene fra steg 1 og 2 til å lage programmet.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Programmet skal benytte to lister. En som utvides for hver runde, og en som lages ved hjelp av ordene som brukeren skriver inn.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Så lenge listene er like skal programmet kjøre.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Når programmet er ferdig, skriv ut hvor mange ord spilleren klarte å huske.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Bruk funksjonene fra steg 1 og 2 til å lage programmet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Programmet skal benytte to lister. En som utvides for hver runde, og en som lages ved hjelp av ordene som brukeren skriver inn.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Så lenge listene er like skal programmet kjøre.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Når programmet er ferdig, skriv ut hvor mange ord spilleren klarte å huske.</label></li>
 </ul>
 <section class="check" id="sjekkliste-for-oppgaven">
 <h2 class="check" id="sjekkliste-for-oppgaven">Sjekkliste for oppgaven</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Avsluttes spillet når det huskes feil?</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Får spilleren vite hvor mange han eller hun husket riktig?</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Blir lista som skal huskes usynlig for spilleren? (Tips: Skriv ut tomrom mange ganger.)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Avsluttes spillet når det huskes feil?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Får spilleren vite hvor mange han eller hun husket riktig?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Blir lista som skal huskes usynlig for spilleren? (Tips: Skriv ut tomrom mange ganger.)</label></li>
 </ul>
 </section>
 </section>
