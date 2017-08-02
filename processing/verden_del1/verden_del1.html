@@ -8,57 +8,57 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Processing</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Verden</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Processing</span></a><div class="pdf"><a href="/processing/verden_del1/verden_del1.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>Velkommen til verdensspillet! Her skal vi lage begynnelsen av et spill hvor man skal gjette hvilken verdensdeler som er hvor. Så kan man utvide oppgava til å heller gjelde for land, hav, fjell, eller noe annet man finner på! Denne oppgava viser deg hvordan du kan skrive kode som gjør at navnet på verdensdeler dukker opp når man holder datamusa over dem.</p>
-<p>Slik skal spillet se ut når vi er ferdig med denne oppgava. Oppe i høyre hjørnet sere dere det står &quot;EUROPA&quot;, det skal det bare stå når datamusa holdes over Europa på kartet.</p>
+<p>Velkommen til verdensspillet! Her skal vi lage begynnelsen av et spill hvor man skal gjette hvilke verdensdeler som er hvor. Så kan du utvide oppgava til å heller gjelde for land, hav, fjell, eller noe annet du finner på! Denne oppgava viser deg hvordan du kan skrive kode som gjør at navnet på verdensdeler dukker opp når man holder datamusa over dem.</p>
+<p>Slik skal spillet se ut når vi er ferdig med denne oppgaven. Oppe i høyre hjørnet ser du det står &quot;EUROPA&quot;, det skal det bare stå når datamusa holdes over Europa på kartet.</p>
 <p><figure><img src="PreviewGame.png" alt=""></figure></p>
 </section>
 <section class="activity" id="steg-1-vinduet">
 <h1 class="activity" id="steg-1-vinduet">Steg 1: Vinduet</h1>
-<p>Aller først må du starte Processing. Når du har åpna programmet så har du en tom tekst editor forran deg, denne skal du fylle med kode! Det er to metoder som er vanlige å bruke i processing, disse er <code>setup</code> og <code>draw</code>. Så nå kan du starte med å skrive først <code>setup</code> på ei linje og så <code>draw</code> på neste linje. Forsøk å trykke på playknappen, altså denne:</p>
+<p>Aller først må du starte Processing. Når du har åpna programmet så har du en tom teksteditor foran deg, denne skal du fylle med kode! Det er to metoder som er vanlige å bruke i processing, disse er <code>setup</code> og <code>draw</code>. Så nå kan du starte med å skrive først <code>setup</code> på ei linje og så <code>draw</code> på neste linje. Forsøk å trykke på playknappen, altså denne:</p>
 <p><figure><img src="playKnapp.png" alt=""></figure></p>
-<p>Nå får du opp en feilmelding nederst i programmet. Det er den linja som er rød med hvit skrift. Det kommer litt ann på hvilken utgave av Processing du har, men feilmeldingen kommer til å se noe slik ut som dette:</p>
+<p>Nå får du opp en feilmelding nederst i programmet. Det er den linja som er rød med hvit skrift. Det kommer litt an på hvilken utgave av Processing du har, men feilmeldingen kommer til å se ut som dette:</p>
 <p><figure><img src="syntaxError.png" alt=""></figure></p>
-<p><code>Syntax error, maybe a missing semicolon?</code> her foreslår Processing at vi kanskje mangler et semikolon, i tillegg så har den markert linje 2 med gult, det betyr at det er linje to som kanskje mangler et semikolon.</p>
-<p>Veldig ofte så er det semikolon som mangler, men akkurat nå er det mye mer. For at programmet vårt skal forstå at vi forsøker å skrive to metoder, så må vi skrive ordet <code>void</code> forran metodenavnene, slik som dette:</p>
+<p><code>Syntax error, maybe a missing semicolon?</code> her foreslår Processing at vi kanskje mangler et semikolon, i tillegg så har den markert linje 2 med gult. Det betyr at det er linje 2 som kanskje mangler et semikolon.</p>
+<p>Veldig ofte er det semikolon som mangler, men akkurat nå er det mye mer. For at programmet vårt skal forstå at vi forsøker å skrive to metoder, så må vi skrive ordet <code>void</code> foran metodenavnene, slik som dette:</p>
 <p><figure><img src="void.png" alt=""></figure></p>
 <p>Det er fremdeles en rød linje under både <code>setup</code> og <code>draw</code>, så det mangler fremdeles en del, men ordet <code>void</code> fikk fargen blå og det betyr at Processing kjenner igjen ordet og vet hvordan det skal brukes.</p>
-<p>Neste steg for å lage metoder er at de må ha parenteser rett etter navnet sitt. Når vi legger det til, vil koden se slik ut:</p>
+<p>Neste steg for å lage metoder er at de må ha parenteser rett etter navnet sitt. Når vi legger til disse vil koden se slik ut:</p>
 <p><figure><img src="parenteser.png" alt=""></figure></p>
 <p>Nå begynner det å ligne på noe, både <code>setup</code> og <code>draw</code> ble blå. Det betyr at Processing kjenner igjen de to ordene også. Forsøk å kjøre programmet ved å trykke på playknappen nå, hva skjer? Nok en feilmelding! Nå er vi veldig nære til å få Processing til å forstå at vi skal lage to metoder. Det eneste vi mangler er å åpne og å stenge metodene. Vi åpner metoden med dette tegnet: <code>{</code> og så stenger vi metoden med dette tegnet: <code>}</code>, så da bli koden slik:</p>
 <p><figure><img src="stenge.png" alt=""></figure></p>
 <p>Nå kan du førsøke å kjøre programmet igjen. Hva skjer?</p>
 <p>Nå som vi endelig får opp et lite vindu må vi fikse litt innhold, dette gjør vi inni metodene. Det betyr at vi skal skrive kode mellom tegnet som åpner og tegnet som stenger metoden.</p>
-<p>Vinduet er ganske lite. Vi kan bestemme størrelsen på vinduet ved å kalle på en metode, det betyr at vi bruker en metode som noen allerede har skrevet ferdig for oss. Når vi kaller en metode skriver vi metodenavnet etterfulgt av parenteser og til sist ett semikolon, slik som dette:</p>
+<p>Vinduet er ganske lite. Vi kan bestemme størrelsen på vinduet ved å kalle på en metode, det betyr at vi bruker en metode som noen allerede har skrevet ferdig for oss. Når vi kaller en metode skriver vi metodenavnet etterfulgt av parenteser og til sist et semikolon, slik som dette:</p>
 <pre><code class="processing">    <span class="hljs-built_in">size</span>(<span class="hljs-number">1200</span>, <span class="hljs-number">850</span>);
 </code></pre>
-<p>Som du ser har vi putta tall inni parentesene, disse bestemmer størrelsen på vinduet som dukker opp når du trykker på play og programmet kjøres. Kjør programmet og se at det fungerer.</p>
+<p>Som du ser har vi satt tall inne i parentesene, disse bestemmer størrelsen på vinduet som dukker opp når du trykker på play og programmet kjøres. Kjør programmet og se at det fungerer.</p>
 <section class="check" id="prov-dette">
 <h2 class="check" id="prov-dette">Prøv dette</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Gjør vinduet høyt og smalt.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Få vinduet til å strekke seg fra venstre til høyre side av skjermen.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Sett vinduet tilbake til å være 1200 piksel bredt og 850 piksel høyt.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lagre spillet, når du gjør det opprettes en mappe som heter det samme som spillet ditt. Denne må du huske hvor plasseres, for den skal vi bruke videre.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Lagre spillet, når du gjør det opprettes en mappe som heter det samme som spillet ditt. Du må huske hvor denne plasseres, for den skal vi bruke videre.</label></li>
 </ul>
-<p>Her er koden så langt, se over at det ser likt ut i din kode som her. <code>size</code> er et stykke inn på linja fordi det er slik det er vanlig å skrive kode. Det gjør det lettere å lese.</p>
+<p>Her er koden så langt, se over at din kode ser lik ut. <code>size</code> er et stykke inn på linja fordi det er slik det er vanlig å skrive kode. Det gjør det lettere å lese.</p>
 <p><figure><img src="steg1.png" alt=""></figure></p>
 </section>
 </section>
 <section class="activity" id="steg-2-vis-verdenskartet">
 <h1 class="activity" id="steg-2-vis-verdenskartet">Steg 2: Vis verdenskartet</h1>
 <p>Nå skal vi få på plass verdenskartet. Her er kartet, last det ned og plasser det i samme mappe som programmet ditt ligger.</p>
-<p><figure><img src="world-map.png" alt="" title="Høyreklikk på bilde og velg 'Lagre bilde som', eller 'save image as'."></figure></p>
-<p>For å få bilde til å vise må vi deklarere bilde, det vil si å gi pcen beskjed om at vi skal bruke et bilde. Deklarasjoner skjer helt øverst i programmet, før de to metodene våre.</p>
-<p>Vi har valgt å kalle bilde for <code>verdenskartet</code>, og kodelinja ser slik ut:</p>
+<p><figure><img src="world-map.png" alt="" title="Høyreklikk på bildet og velg 'Lagre bilde som', eller 'Save image as'."></figure></p>
+<p>For å få bildet til å vise må vi deklarere bildet, det vil si å gi PC-en beskjed om at vi skal bruke et bilde. Deklarasjoner skjer helt øverst i programmet, før de to metodene våre.</p>
+<p>Vi har valgt å kalle bildet for <code>verdenskartet</code>, og kodelinja ser slik ut:</p>
 <pre><code class="processing"><span class="hljs-keyword">PImage</span> verdenskartet;
 </code></pre>
 <p>Sjekk at programmet fremdeles kjører. Ingenting nytt skal skje, men du får feilmelding dersom du har skrivefeil på den nye kodelinja.</p>
-<p>Nå må vi laste bilde opp i programmet, det gjør vi bare en gang og derfor putter vi denne kodelinja i <code>setup</code>, kodelinja ser slik ut:</p>
+<p>Nå må vi laste bildet opp i programmet, det gjør vi bare én gang, og derfor putter vi denne kodelinja i <code>setup</code>. Kodelinja ser slik ut:</p>
 <pre><code class="processing">    verdenskartet = <span class="hljs-built_in">loadImage</span>(<span class="hljs-string">"world-map.png"</span>);
 </code></pre>
 <p>Sjekk at programmet fremdeles kjører, det er ikke noe nytt som vil skje.</p>
-<p>Nå er det viktig å skille på at <code>verdenskartet</code> er navnet vi har valgt å kalle bildet vårt i koden vår, mens <code>world-map.png</code> er navnet på selve bilde når det ligger som en fil i mappa på pcen din.</p>
-<p>Nå må vi få vist bilde i vinduet ditt, da skal vi skrive en kodelinje i <code>draw</code> metoden. Kodelinja vi trenger ser slik ut:</p>
+<p>Nå er det viktig å skille på at <code>verdenskartet</code> er navnet vi har valgt å kalle bildet vårt i koden vår, mens <code>world-map.png</code> er navnet på selve bildet når det ligger som en fil i mappa på PC-en din.</p>
+<p>Nå må vi få vist bildet i vinduet ditt, da skal vi skrive en kodelinje i <code>draw</code> metoden. Kodelinja vi trenger ser slik ut:</p>
 <pre><code class="processing">    <span class="hljs-built_in">image</span>(verdenskartet, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
 </code></pre>
 <p><figure><img src="steg2.png" alt=""></figure></p>
@@ -66,15 +66,15 @@ function relative (url) {
 <section class="activity" id="steg-3-hva-er-datamusas-plassering">
 <h1 class="activity" id="steg-3-hva-er-datamusas-plassering">Steg 3: Hva er datamusas plassering</h1>
 <p>For å finne ut hvor i vinduet de forskjellige verdensdelene er plassert må vi vite hva koordinatene på grensa mellom de forskjellige verdensdelene er. Vi starter med å vise koordinatene til datamusa på skjermen, slik at det er lettere å forstå hva koordinater er og hvordan de fungerer i Processing.</p>
-<p>Vi trenger bare to kodelinje for å få dette til og de må skrives inni <code>draw</code> metoden. Vi vil ha en tekst som oppdaterer seg etter hvor på skjermen datamusa er, da trenger vi denne kodelinja:</p>
+<p>Vi trenger bare to kodelinjer for å få til dette, og de må skrives inni <code>draw</code>-metoden. Vi vil ha en tekst som oppdaterer seg etter hvor på skjermen datamusa er, da trenger vi denne kodelinja:</p>
 <pre><code class="processing">    <span class="hljs-built_in">text</span>(<span class="hljs-string">"X: "</span> + <span class="hljs-built_in">mouseX</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);  
     <span class="hljs-built_in">text</span>(<span class="hljs-string">"Y: "</span> + <span class="hljs-built_in">mouseY</span>, <span class="hljs-number">50</span>, <span class="hljs-number">100</span>);
 </code></pre>
 <p>Test at programmet kjører, nå skal du få opp noen tall som endrer seg når du beveger datamusa over vinduet.</p>
 <section class="protip" id="forklaring-av-koden">
 <h2 class="protip" id="forklaring-av-koden">Forklaring av koden</h2>
-<p>Det som skjer i denne kodelinja er at vi bruker metoden <code>text();</code> som allerede er ferdig skrevet for oss. Inni parentesen har vi tre parametre, disse er skilt ved hjelp av kommategn. I det første parameteret gir vi beskjed om hva som skal skrives ut. Det to siste parameterne bestemmer hvor i vinduet det skal skrives ut.</p>
-<p>Teksten vi skal skrive ut er koordinatene til datamusa. Disse er lagret i to forskjellige variabler som heter <code>mouseX</code> og <code>mouseY</code>. Det betyr at når det første parameteret vårt i text ser slik ut: <code>&quot;X: &quot; + mouseX</code>,så vil programmet først lese <code>&quot;X: &quot;</code> som vanlig tekst og ikke gjøre noe annet enn å vise teksten på skjermen. For <code>+ mouseX</code> derimot, så forstår programmet at dette er en variabel og da viser programmet oss verdien til variabelen i stede for å skrive ut navnet til variabelen.</p>
+<p>Det som skjer i denne kodelinja er at vi bruker metoden <code>text();</code> som allerede er ferdig skrevet for oss. Inni parentesen har vi tre parametre, disse er skilt ved hjelp av kommategn. I den første parameteren gir vi beskjed om hva som skal skrives ut. Det to siste parameterne bestemmer hvor i vinduet det skal skrives ut.</p>
+<p>Teksten vi skal skrive ut er koordinatene til datamusa. Disse er lagret i to forskjellige variabler som heter <code>mouseX</code> og <code>mouseY</code>. Det betyr at når den første parameteren vårt i text ser slik ut: <code>&quot;X: &quot; + mouseX</code>,så vil programmet først lese <code>&quot;X: &quot;</code> som vanlig tekst og ikke gjøre noe annet enn å vise teksten på skjermen. For <code>+ mouseX</code> derimot, så forstår programmet at dette er en variabel og da viser programmet oss verdien til variabelen i stedet for å skrive ut navnet til variabelen.</p>
 </section>
 <section class="check" id="prov-dette-2">
 <h2 class="check" id="prov-dette-2">Prøv dette</h2>
@@ -83,7 +83,7 @@ function relative (url) {
 <li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Flytt kodelinjen med mouseX, slik at den står ca. på midten nederst på skjermen.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Finn ut hvor i vinduet X er minst.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Finn ut hvor i vinduet Y er høyest.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Hvilken X og Y verdi vises når du holder datamusa over Island.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Hvilken X og Y verdi vises når du holder datamusa over Island?</label></li>
 </ul>
 <p>Her er koden så langt.</p>
 <p><figure><img src="steg3.png" alt=""></figure></p>
@@ -94,27 +94,27 @@ function relative (url) {
 <p>Nå skal vi få ordet <code>Europa</code> til å dukke opp på skjermen når vi holder datamusa over verdensdelen.</p>
 <p>Da må vi først finne ut hvor grensa til Europa egentlig er. Nå gjør vi en veldig forenkla utgave av grensa til Europa, la oss si at Europa er helt firkanta, og at denne firkanten er grensa til Europa:</p>
 <p><figure><img src="mapEuropa3.png" alt=""></figure></p>
-<p>For å gjøre kodingen enklere, så bytter vi ut bilde vi har av verden med dette bilde. Last ned bilde og lagre det på samme sted som det forrige verdenskartet. Vi trenger bare å endre den ene kodelinja som forteller programmet hvilket bilde det skal laste inn. Det gjore vi i <code>setup</code> metoden. Da blir kodelinja slik etter at den er endra:</p>
+<p>For å gjøre kodingen enklere, så bytter vi ut bildet vi har av verden med dette bildet. Last ned bildet og lagre det på samme sted som det forrige verdenskartet. Vi trenger bare å endre den ene kodelinja som forteller programmet hvilket bilde det skal laste inn. Det gjorde vi i <code>setup</code>-metoden. Da blir kodelinja slik etter at den er endra:</p>
 <pre><code class="processing">verdenskartet = <span class="hljs-built_in">loadImage</span>(<span class="hljs-string">"mapEuropa3.png"</span>);
 </code></pre>
 <section class="check" id="gjor-dette-for-du-gar-videre">
 <h2 class="check" id="gjor-dette-for-du-gar-videre">Gjør dette før du går videre:</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Start programmet</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Forsøk å skrive en kommentar i koden din, alle kommentarer starter med to stråstreker, slik som dette: <code>//</code>. Alt som skrives bak skråstrekene bli grått og det betyr at programmet ikke leser det. Dette kan brukes som egne notater i koden, slik at man kan notere hva som skjer eller lignende. Test at du får til å skrive en kommentar i kode. Når du gjør de neste punktene skal du notere svaret du får som kommentarer i koden din. Gå gjennom de neste tre punktene fire ganger, en gang for hver av sidene i firkanten som vi har laga som grensa til Europa.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Beveg musepekeren langs grensa (frem og tilbake, eller opp og ned) noen ganger og finn ut hvilken av X og Y koordinatene som nesten ikke endrer seg. Bare den koordinaten som nesten ikke endrer seg når du begever datamusa langs grensa skal brukes i de neste punktene.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Forsøk å skrive en kommentar i koden din. Alle kommentarer starter med to stråstreker, slik som dette: <code>//</code>. Alt som skrives bak skråstrekene blir grått og det betyr at programmet ikke leser det. Dette kan brukes som egne notater i koden, slik at man kan notere hva som skjer eller lignende. Test at du får til å skrive en kommentar i kode. Når du gjør de neste punktene skal du notere svaret du får som kommentarer i koden din. Gå gjennom de neste tre punktene fire ganger, en gang for hver av sidene i firkanten som vi har laga som grensa til Europa.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Beveg musepekeren langs grensa (frem og tilbake, eller opp og ned) noen ganger og finn ut hvilken av X- og Y-koordinatene som nesten ikke endrer seg. Bare den koordinaten som nesten ikke endrer seg når du begever datamusa langs grensa skal brukes i de neste punktene.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Skriv ned tallet som koordinaten har når den er akkurat på grensa.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Beveg musa ut og inn over grensa, finn ut om verdien på koordinaten er større eller mindre på innsiden enn på utsiden av grensa og skriv dette ned.</label></li>
 </ul>
 <p>Har du funnet svare på alt? Her er svarene vi kom frem til:</p>
 <p><figure><img src="grense.png" alt=""></figure></p>
-<p>Nå skal vi sjekke om datamusa er innenfor en og en av kantene, da må vi bruke if setninger. De fungerer slik at man skriver en test, dersom det man tester stemmer, eller er sant, så blir en bestemt kode gjenomført. La oss starte med grense nummer 1.</p>
-<p>Først skriver vi if setningen med vanlig ord og så gjør vi det om til kode. Nå skal vi bruke tallene og resultatet av det vi fant.</p>
+<p>Nå skal vi sjekke om musepekeren er innenfor en og en av kantene, da må vi bruke <code>if</code>-setninger. De fungerer slik at man skriver en test, dersom det man tester stemmer, eller er sant, så blir en bestemt kode gjenomført. La oss starte med grense nummer 1.</p>
+<p>Først skriver vi <code>if</code>-setningen med vanlig ord og så gjør vi det om til kode. Nå skal vi bruke tallene og resultatet av det vi fant.</p>
 <pre><code class="processing">Dersom musepekeren er innenfor grense nummer <span class="hljs-number">1</span>,
     så skal teksten <span class="hljs-string">"Europa"</span> vises på skjermen
 </code></pre>
-<p>Vi vet at X koordinaten akkurat på grense nummer 1 er 367, i tillegg vet vi at X koordinaten er større innenfor grense 1 enn utenfor grense 1, la oss putte dette inn:</p>
-<pre><code class="processing">Dersom datamusa <span class="hljs-built_in">sin</span> X koordinat er større enn <span class="hljs-number">367</span>,
+<p>Vi vet at X-koordinaten akkurat på grense nummer 1 er 367, i tillegg vet vi at X-koordinaten er større innenfor grense 1 enn utenfor grense 1, la oss putte dette inn:</p>
+<pre><code class="processing">Dersom musepekeren <span class="hljs-built_in">sin</span> X-koordinat er større enn <span class="hljs-number">367</span>,
     så vis teksten <span class="hljs-string">"EUROPA"</span> på skjermen
 </code></pre>
 <p>Nå kan vi gjøre dette om til kode, da ser det slik ut:</p>
@@ -126,20 +126,20 @@ function relative (url) {
 <section class="check" id="gjor-dette">
 <h2 class="check" id="gjor-dette">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Skriv if setningen inn i <code>draw</code> metoden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Skriv <code>if</code>-setningen inn i <code>draw</code>-metoden.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Sjekk at koden kjører.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Se at du får opp <code>EUROPA</code> opp til høyre i vinduet når datamusa er innenfor grense nummer 1.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Se at du får opp <code>EUROPA</code> opp til høyre i vinduet når musepekeren er innenfor grense nummer 1.</label></li>
 </ul>
-<p>Legg merke til at <code>EUROPA</code> dukker opp på skjermen selv om du holder datamusa over selve Europa på kartet, eller om du holder den over Madagaskar. Dette er fordi vi bare har en if setning, vi må legge til de tre andre også for at <code>EUROPA</code> bare skal dukke opp når vi er innenfor alle fire grensene. Akkurat nå vises <code>EUROPA</code> uansett hvor datamusa er i det grå området.</p>
+<p>Legg merke til at <code>EUROPA</code> dukker opp på skjermen selv om du holder musepekeren over selve Europa på kartet, eller om du holder den over Madagaskar. Dette er fordi vi bare har én <code>if</code>-setning, vi må legge til de tre andre også for at <code>EUROPA</code> bare skal dukke opp når vi er innenfor alle fire grensene. Akkurat nå vises <code>EUROPA</code> uansett hvor musepekeren er i det grå området.</p>
 <p><figure><img src="mapEuropa4.png" alt=""></figure></p>
 <p>La oss legge til kode for grense nummer to, da er målet at <code>EUROPA</code> skal vises i det grå området her:</p>
 <p><figure><img src="mapEuropa5.png" alt=""></figure></p>
-<p>Forsøk å skriv if setningen for å få dette til med vanlige ord før du går videre.</p>
-<p>Her er vårt forslag til hvordan if setningen for grense 2 kan skrives:</p>
-<pre><code class="processing">Dersom datamusa <span class="hljs-built_in">sin</span> X koordinat er innenfor grense <span class="hljs-number">2</span>,
+<p>Forsøk å skriv <code>if</code>-setningen for å få dette til med vanlige ord før du går videre.</p>
+<p>Her er vårt forslag til hvordan <code>if</code>-setningen for grense 2 kan skrives:</p>
+<pre><code class="processing">Dersom musepekeren <span class="hljs-built_in">sin</span> X-koordinat er innenfor grense <span class="hljs-number">2</span>,
     så skal teksten <span class="hljs-string">"EUROPA"</span> vises
 </code></pre>
-<p>Vi har sjekka at grenseverdien er 649 og vi vet at X koordinaten er mindre innenfor grensa enn utenfor grensa. Vi går videre og skriver if setningen i kode:</p>
+<p>Vi har sjekka at grenseverdien er 649 og vi vet at X-koordinaten er mindre innenfor grensa enn utenfor grensa. Vi går videre og skriver <code>if</code>-setningen i kode:</p>
 <pre><code class="processing">    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span>){
         <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
     }
@@ -148,41 +148,41 @@ function relative (url) {
 <section class="check" id="gjor-dette-2">
 <h2 class="check" id="gjor-dette-2">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Skriv if setningen inn i <code>draw</code> metoden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Skriv <code>if</code>-setningen inn i <code>draw</code> metoden.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Sjekk at koden kjører.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Hva skjer når du beveger datamusa rundt på skjermen?</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Hva skjer når du beveger musepekeren rundt på skjermen?</label></li>
 </ul>
 <p>Nå står det <code>EUROPA</code> på skjermen hele tiden, det er jo feil, la oss feilsøke!</p>
 </section>
 <section class="check" id="gjor-dette-3">
 <h2 class="check" id="gjor-dette-3">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Bytt ut plasseringen av teksten i den siste if setninge. Dette gjør vi ved å skrive <code>100</code> i stede for <code>50</code> som det siste parameteret inni parentesen bak <code>text</code> (du kan også ).</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Bytt ut plasseringen av teksten i den siste <code>if</code>-setningen. Dette gjør vi ved å skrive <code>100</code> i stedet for <code>50</code> som den siste parameteren inni parentesen bak <code>text</code> (du kan også ).</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Kjør koden igjen, nå skal den nye teksten dukke opp litt under den første.</label></li>
 </ul>
-<p>Nå ser vi at <code>EUROPA</code> vises på skjermen to steder, oppe og nede. Oppe, står det <code>EUROPA</code> uansett hvor datamusa er så lenge den er til høyre for grense 1. Nede står det <code>EUROPA</code> uansett hvor datamusa er så lenge den er til venstre for grense 2. De to if setningene gjør det de skal, men de gjør det hver for seg. Nå har kan koden sees på som bilde under. I sted var område på høyre side markert med grått, nå har vi markert venstre sida også. Vi må skrive om koden, slik at vi får sjekka om datamusa er innenfor grense 1 og grense 2 samtidig ikke hver for seg.</p>
+<p>Nå ser vi at <code>EUROPA</code> vises på skjermen to steder, oppe og nede. Oppe, står det <code>EUROPA</code> uansett hvor musepekeren er, så lenge den er til høyre for grense 1. Nede står det <code>EUROPA</code> uansett hvor datamusa er så lenge den er til venstre for grense 2. De to <code>if</code>-setningene gjør det de skal, men de gjør det hver for seg. Nå har kan koden sees på som bildet under. I sted var område på høyre side markert med grått, nå har vi markert venstre sida også. Vi må skrive om koden, slik at vi får sjekka om musepekeren er innenfor grense 1 og grense 2 samtidig ikke hver for seg.</p>
 <p><figure><img src="mapEuropa8.png" alt=""></figure></p>
-<p>Vi må koble sammen if setningene, det er enkelt, vi skriver de inni hverandre! Slik blir if setningene da:</p>
+<p>Vi må koble sammen <code>if</code>-setningene, det er enkelt, vi skriver de inni hverandre! Slik blir <code>if</code>-setningene da:</p>
 <pre><code class="processing">    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; <span class="hljs-number">365</span>){
         <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span>){
             <span class="hljs-built_in">text</span>(<span class="hljs-string">"EUROPA"</span>, <span class="hljs-number">950</span>, <span class="hljs-number">50</span>);
         }
     }
 </code></pre>
-<p>Nå vil vi bare få skrive ut <code>EUROPA</code> i vinduet dersom begge if setningene er sanne.</p>
+<p>Nå vil vi bare få skrive ut <code>EUROPA</code> i vinduet dersom begge <code>if</code>-setningene er sanne.</p>
 </section>
 <section class="check" id="gjor-dette-4">
 <h2 class="check" id="gjor-dette-4">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Skriv om koden din, slik at if setningene står inni hverandre, slik som koden over viser.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Skriv om koden din, slik at <code>if</code>-setningene står inni hverandre, slik som koden over viser.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Test koden og se om det fungerer.</label></li>
 </ul>
-<p>Nå skal vi skrive de to siste if setninene som skal sjekke om datamusa er innenfor grense 3 og 4. De må skrives inni de to if setningene vi allrede har. Vi kommer til å få en if setning inni en if setning inni en if setning inni en if setning.</p>
-<p>Nå er det på tide med grense nummer 3. Nå hjelper vi deg bare med å skrive if setningen med nesten helt vanlige ord, så må du skrive nesten all koden selv:</p>
-<pre><code class="prcessing">Dersom datamusa sin Y koordinat er mindre enn grense 3,
+<p>Nå skal vi skrive de to siste <code>if</code>-setningene som skal sjekke om musepekeren er innenfor grense 3 og 4. De må skrives inni de to <code>if</code>-setningene vi allrede har. Vi kommer til å få en <code>if</code>-setning inni en <code>if</code>-setning inni en <code>if</code>-setning inni en <code>if</code>-setning.</p>
+<p>Nå er det på tide med grense nummer 3. Nå hjelper vi deg bare med å skrive <code>if</code>-setningen med nesten helt vanlige ord, så må du skrive nesten all koden selv:</p>
+<pre><code class="prcessing">Dersom musepekeren sin Y-koordinat er mindre enn grense 3,
     så skal teksten &quot;EUROPA&quot; vises
 </code></pre>
-<p>Her er litt av koden fyll ut resten selv:</p>
+<p>Her er litt av koden, fyll ut resten selv:</p>
 <pre><code class="processing">    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &gt; <span class="hljs-number">365</span>){
         <span class="hljs-keyword">if</span>(<span class="hljs-built_in">mouseX</span> &lt; <span class="hljs-number">694</span>){
             <span class="hljs-keyword">if</span>(               ){
@@ -196,21 +196,21 @@ function relative (url) {
 <h2 class="check" id="gjor-dette-5">Gjør dette:</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Skriv koden du tror er riktig.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Test om koden fungerer. Dersom den gjør det, så skal <code>EUROPA</code> vises når datamusa er innenfor det grå området:</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Test om koden fungerer. Dersom den gjør det, så skal <code>EUROPA</code> vises når musepekeren er innenfor det grå området:</label></li>
 </ul>
 <p><figure><img src="mapEuropa6.png" alt=""></figure></p>
-<p>Nå må du forsøke deg på koden til den siste if setningen helt selv!</p>
+<p>Nå må du forsøke deg på koden til den siste <code>if</code>-setningen helt selv!</p>
 </section>
 <section class="check" id="gjor-dette-6">
 <h2 class="check" id="gjor-dette-6">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Skriv den siste if setningen med vanlig tekst.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Skriv inn koden for den siste if setningen inni de andre if setningene.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Skriv den siste <code>if</code>-setningen med vanlig tekst.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Skriv inn koden for den siste <code>if</code>-setningen inni de andre <code>if</code>-setningene.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Kjør programmet og se at det fungerer. Når alt er i orden skal <code>EUROPA</code> vises bare når du er innenfor den firkanta grensa til Europa som vi har laga.</label></li>
 </ul>
 <p>Her har du bilde av koden, så kan du dobbelsjekke alt dersom det er noe som ikke fungerer helt som det skal.</p>
 <p><figure><img src="steg4.png" alt=""></figure></p>
-<p>Husk å bytte bildet tilbake bilde av verdenskartet som ikke har grensa til Europa tegna inn!</p>
+<p>Husk å bytte bildet tilbake til bildet av verdenskartet som ikke har grensa til Europa tegna inn!</p>
 </section>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Processing: Verden&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/processing/verden_del1" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/processing/verden_del1" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Kine Gjerstad Eide og Ruben Gjerstad Eide</p>

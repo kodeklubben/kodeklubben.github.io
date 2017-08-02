@@ -8,13 +8,13 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Processing</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">ToPlayer</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Processing</span></a><div class="pdf"><a href="/processing/to_player/to_player.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon:</h1>
-<p>Nå skal vi lage ett spill hvor to personer skal spille mot hverandre. Vi har kalt det ToPlayer, men du kan kalle det hva du vil. Målet er å dytte en figur, eller en spillbrikke ut av vinduet på motstanderen sin side. Spillet ser ganske enkelt ut, men du kan etterhvert pimpe det opp som du vil. Når du har kommet deg gjennom hele denne oppgava skal spillet ligne på bilde under. Du får bestemme farger og litt annet selv, så det kommer jo ann på hva du liker.</p>
+<p>Nå skal vi lage et spill som to personer kan spille mot hverandre. Vi har kalt det ToPlayer, men du kan kalle det hva du vil. Målet er å dytte en figur, eller en spillebrikke ut av vinduet på motstanderen sin side. Spillet ser ganske enkelt ut, men du kan etter hvert pimpe det opp som du vil. Når du har kommet deg gjennom hele denne oppgaven skal spillet ligne på bildet under. Du får bestemme farger og litt annet selv, så det vil avhenge av hva du liker.</p>
 <p><figure><img src="preview.png" alt=""></figure></p>
 </section>
 <section class="activity" id="steg-1-kom-i-gang-med-metodene-setup-og-draw">
 <h1 class="activity" id="steg-1-kom-i-gang-med-metodene-setup-og-draw">Steg 1: Kom i gang med metodene <code>setup</code> og <code>draw</code></h1>
-<p>Start med å åpne Processing. Når det er gjort, så må du skrive to metoder. Alle metoder har sitt eget navn,og to metoder kan ikke hete det samme. De to metodene du skal skrive er <code>setup</code> og <code>draw</code>. Bortsett fra metodenavnet, så skrives de på akkurat samme måte. Derfor viser vi deg hvordan du skal skrive <code>setup</code> metoden, og så må du selv forsøke å skrive <code>draw</code> metoden.</p>
-<p>Slik ser <code>setup</code> metoden ut:</p>
+<p>Start med å åpne Processing. Når det er gjort, så må du skrive to metoder. Alle metoder har sitt eget navn, og to metoder kan ikke hete det samme. De to metodene du skal skrive er <code>setup</code> og <code>draw</code>. Bortsett fra metodenavnet, så skrives de på akkurat samme måte. Derfor viser vi deg hvordan du skal skrive <code>setup</code>-metoden, og så må du selv forsøke å skrive <code>draw</code>-metoden.</p>
+<p>Slik ser <code>setup</code>-metoden ut:</p>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span>(){
 
 }
@@ -22,44 +22,41 @@ function relative (url) {
 <section class="check" id="gjor-dette">
 <h2 class="check" id="gjor-dette">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Skriv <code>draw</code> metoden under <code>setup</code> metoden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> Skriv <code>draw</code>-metoden under <code>setup</code>-metoden.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Sjekk at metodene fungerer ved å kjøre programmet. Klikk på pilen oppe til venstre for å gjøre det.</label></li>
 </ul>
 <p><figure><img src="play.png" alt=""></figure></p>
-<p>Dersom programmet kjører og alt er i orden så vil det dukke opp et nytt bitte lite vindu på skjermen din. Dersom du fikk opp vinduet, så er det bare å gå videre til steg 2, dersom ikke, så har vi tatt ett bilde av koden så langt, sjekk at du har husket alle detaljene.</p>
+<p>Dersom programmet kjører og alt er i orden så vil det dukke opp et nytt bitte lite vindu på skjermen din. Dersom du fikk opp vinduet, så er det bare å gå videre til steg 2. Dersom ikke, så kan du sjekke at du har fått med alle detaljene i koden din, ved å sammenligne med bildet under.</p>
 <p><figure><img src="steg1.png" alt=""></figure></p>
 <p>Lagre koden din før du går videre.</p>
 </section>
 <section class="protip" id="forklaring-av-setup-og-draw">
 <h2 class="protip" id="forklaring-av-setup-og-draw">Forklaring av setup og draw</h2>
-<p>Alt innholdet i <code>setup</code> skjer en gang når programmet starter, deretter går programmet videre til <code>draw</code>. Alt innholdet i <code>draw</code> skjer på nytt og på nytt helt til programmet stopper.</p>
+<p>Alt innholdet i <code>setup</code> skjer én gang når programmet starter, deretter går programmet videre til <code>draw</code>. Alt innholdet i <code>draw</code> skjer på nytt og på nytt helt til programmet stopper.</p>
 </section>
-</section>
-<section>
-<h1 id=""></h1>
 </section>
 <section>
 <h1 id="steg-2-bestem-storrelse-og-bakgrunnsfarge-pa-vinduet">Steg 2: Bestem størrelse og bakgrunnsfarge på vinduet</h1>
-<p>Nå er det størrelsen på vinduet og bakgrunnsfargen som skal kodes. For å gjøre det, trengs bare to kodelinjer. Begge skal skrives inn i <code>setup</code> metoden. Å skrive kode inni en metoden vil si at vi skriver mellom krøllparentesene, altså disse to tegna: <code>{</code> og <code>}</code>.</p>
+<p>Nå er det størrelsen på vinduet og bakgrunnsfargen som skal kodes. For å gjøre det, trengs bare to kodelinjer. Begge skal skrives inn i <code>setup</code>-metoden. Å skrive kode inni en metode vil si at vi skriver mellom krøllparentesene, altså mellom disse to: <code>{</code> og <code>}</code>.</p>
 <p>Størrelsen bestemmes ved å skrive denne kodelinja:</p>
 <pre><code class="processing">	<span class="hljs-built_in">size</span>(<span class="hljs-number">200</span>, <span class="hljs-number">600</span>);
 </code></pre>
-<p>Tallene inni parentesene bestemmer størrelsen på vinduet.</p>
-<p>Koden som bestemmer bakgrunsfargen ser slik ut:</p>
+<p>Tallene mellom parentesene bestemmer størrelsen på vinduet.</p>
+<p>Koden som bestemmer bakgrunnsfargen ser slik ut:</p>
 <pre><code class="processing">	<span class="hljs-built_in">background</span>(<span class="hljs-number">40</span>, <span class="hljs-number">150</span>, <span class="hljs-number">255</span>);
 </code></pre>
-<p>Talla inni parentesene bestemmer fargen.</p>
-<p>Her er en sjekkliste med ting du må gjøre, for hvert punkt må du starte programmet og se hva som endrer seg i koden. Det er viktig at du har forståelse for koden din når du er ferdig med sjekklista.</p>
+<p>Tallene inni parentesene bestemmer fargen.</p>
+<p>Her er en sjekkliste med ting du kan gjøre for å sjekke at du forstår koden din. For hvert punkt må du starte programmet og se hva som endrer seg. Det er viktig at du har forståelse for koden din før du går videre til neste steg.</p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Gjør det første tallet i parentesene til <code>size</code> dobbel så stor.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" disabled="true"><label for="cbx_2"> Gjør det første tallet i parentesene til <code>size</code> dobbelt så stort.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Forsøk å få vinduet til å dekke hele skjermen din.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Sett tallene inni parentesene til background til å være dette: (255, 0, 0)</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Sett tallene inni parentesene til background til å være dette: (0, 255, 0)</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Sett tallene inni parentesene til background til å være dette: (0, 0, 255)</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Sett tallene inni parentesene til background til å være dette: (0, 255, 255)</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Sett alle tallene inni parentesene til background til å være 0.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Sett tallene inni parentesene til <code>background</code> til å være dette: (255, 0, 0)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Sett tallene inni parentesene til <code>background</code> til å være dette: (0, 255, 0)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Sett tallene inni parentesene til <code>background</code> til å være dette: (0, 0, 255)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Sett tallene inni parentesene til <code>background</code> til å være dette: (0, 255, 255)</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Sett alle tallene inni parentesene til <code>background</code> til å være 0.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Forsøk å få bakgrunnen til å bli hvit.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Forsøk å få bakgrunnen til å bli lilla.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Finn en størrelse du liker på vinduet ditt.</label></li>
@@ -79,18 +76,18 @@ function relative (url) {
 <section class="check" id="gjor-dette-2">
 <h2 class="check" id="gjor-dette-2">Gjør dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Skriv inn de to kodelinjene i <code>draw</code> metoden og test at programmet kjører.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Bytt ut ett og ett av tallene inni parentesen til <code>ellipse();</code> og finn ut hva de gjør.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut ett og ett av tallene inni parentesen til <code>fill();</code> og finn ut hva de gjør.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Skriv inn de to kodelinjene i <code>draw</code>-metoden og test at programmet kjører.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Bytt ut ett og ett av tallene inni parentesen til <code>ellipse</code> og finn ut hva de gjør.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut ett og ett av tallene inni parentesen til <code>fill</code> og finn ut hva de gjør.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Forsøk å få spillbrikka til å bli rosa.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Forsøk å få spillbrikka til å bli så svær at den dekker hele vinduet.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Forsøk å få spillbrikka til å bli så stor at den dekker hele vinduet.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Still tilbake størrelsen på spillbrikka og velg en farge du liker.</label></li>
 </ul>
-<p>Nå skal vi gjøre slik at ellipsa er klar til å bevege seg sidelengs. Som du sikkert har funnet ut, så bestemmer det første tallet i parentesen hvor ellipsa står plassert sidelengs. Vi ønsker å gjøre dette tallet til en variabel, altså til et tall som kan variere.</p>
-<p>For å får det til, så deklarerer vi variabelen helt i toppen av programmet vårt (utenfor <code>setup</code> og <code>draw</code> metodene). Dette gjør vi ved å skrive denne kodelinja:</p>
+<p>Nå skal vi gjøre slik at ellipsen er klar til å bevege seg sidelengs. Som du sikkert har funnet ut, så bestemmer det første tallet i parentesen hvor ellipsen står plassert sidelengs. Vi ønsker å gjøre dette tallet til en variabel, altså til et tall som kan variere.</p>
+<p>For å får det til, så deklarerer vi variabelen helt i toppen av programmet vårt (utenfor <code>setup</code>- og <code>draw</code>-metodene). Dette gjør vi ved å skrive denne kodelinja:</p>
 <pre><code class="processing">	<span class="hljs-built_in">int</span> x;
 </code></pre>
-<p>Denne lille koden er ganske enkel, <code>int</code> forteller pcen at vi skal ha et heltall, mens <code>x</code> er navnet vi har valgt å gi tallet vårt. Vi kunne kalt tallet noe helt annet som <code>pute</code> eller <code>boks</code>.</p>
+<p>Denne lille koden er ganske enkel, <code>int</code> forteller PC-en at vi skal ha et heltall, og <code>x</code> er navnet vi har valgt å gi tallet vårt. Vi kunne kalt tallet noe helt annet som <code>pute</code> eller <code>boks</code>.</p>
 <p>Vi må gi <code>x</code> en verdi som den har til å begynne med, det gjør vi inni <code>setup</code> metoden. Alt vi trenger å skrive er dette:</p>
 <pre><code class="processing">	x = <span class="hljs-number">90</span>;
 </code></pre>
@@ -102,10 +99,10 @@ function relative (url) {
 <h2 class="check" id="gjor-dette-3">Gjør dette:</h2>
 <ul class="task-list">
 <li class="task-list-item"><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Skriv inn de tre kodelinjene som ble forklart over, pass på at du plasserer dem på riktig plass i koden..</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Test at programmet ditt kjører, ingenting nytt skal skje, bortsett fra at spillbrikka kanskje har flytta litt på seg.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Test at programmet ditt kjører, ingenting nytt skal skje, bortsett fra at spillebrikken kanskje har flytta litt på seg.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Bytt ut verdien til <code>x</code> med for eksempel <code>180</code> og se at ellipsa flytter seg.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Se om du får til å plassere ellipsa så lagt ut til den høyre sida av vinduet at du bare kan se halve ellipsa.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Plasser ellipse midt på skjermen sideveis.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Se om du får til å plassere ellipsen så lagt ut til den høyre sida av vinduet at du bare kan se halve ellipsen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Plasser ellipsen midt på skjermen sideveis.</label></li>
 </ul>
 <p>Her er koden vi har laga så langt.</p>
 <p><figure><img src="steg3.png" alt=""></figure></p>
@@ -113,35 +110,35 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-4-lag-kontrollere">
 <h1 class="activity" id="steg-4-lag-kontrollere">Steg 4: Lag kontrollere!</h1>
-<p>Nå skal vi lage en <code>if</code> setning som registrerer om du trykker på en knapp.</p>
-<p>Skriv denne koden inni <code>draw</code> metoden etter ellipsa:</p>
+<p>Nå skal vi lage en <code>if</code>-setning som registrerer om du trykker på en knapp.</p>
+<p>Skriv denne koden inni <code>draw</code>-metoden etter ellipsa:</p>
 <pre><code class="processing"><span class="hljs-keyword">if</span>(<span class="hljs-built_in">keyPressed</span> &amp;&amp; <span class="hljs-built_in">key</span> == <span class="hljs-string">'a'</span>){
 	x+=<span class="hljs-number">10</span>;
 }
 </code></pre>
-<p>Denne koden skal gjøre slik at dersom man har trykka på en knapp og den knappen er <code>a</code>, så skal <code>x</code>, altså plasseringen til ellipsa vår, flytte seg 10 piksel lenger til høyre.</p>
+<p>Denne koden skal gjøre slik at dersom man har trykka på en knapp og den knappen er <code>a</code>, så skal <code>x</code>, altså plasseringen til ellipsa vår, flytte seg 10 piksler til høyre.</p>
 <section class="protip" id="forklaring-av-if">
 <h2 class="protip" id="forklaring-av-if">Forklaring av if</h2>
-<p>En <code>if</code> setning sjekker om noe er sant. Dersom det er sant, så skjer det som står inni if-setningen. En if-setning er bygd opp av en test og så noe som blir utført:</p>
+<p>En <code>if</code>-setning sjekker om noe er sant. Dersom det er sant, så skjer det som står inni <code>if</code>-setningen. En <code>if</code>-setning er bygd opp av en test og så noe som blir utført:</p>
 <pre><code class="processing"><span class="hljs-keyword">if</span>(test){
-	her utføres noe bare testen testen er sann.
+	her utføres noe bare dersom testen er sann.
 }
 </code></pre>
-<p>If tester er lette å sette opp som muntlige setninger og så gjøre dem om til kode etter på, vi skriver det på samme måte som en ordentlig if-setning, slik at det er lett å gjøre om til kode. Inni if-setningen har vi kommet men noen eksempler.</p>
+<p><code>If</code>-tester er lette å sette opp som muntlige setninger og så gjøre dem om til kode etterpå. Vi skriver det på samme måte som en ordentlig <code>if</code>-setning, slik at det er lett å gjøre om til kode. Inni <code>if</code>-setningen har vi kommet med noen eksempler.</p>
 <pre><code class="processing">Dersom ( et eller annet er sant) så skal dette skje{
 	vi får mer liv
-	vi hopper, 
-	noe flytter på seg, 
+	vi hopper,
+	noe flytter på seg,
 }
 </code></pre>
-<p>Noe som er vanlig å sjekke i en if-setning er om man har trykka på en spesiell knapp, eller om datamuda er innenfor et bestemt område. Eller man kan sjekke hvor mange liv man har igjen, dersom det er 0, så kan man skrive &quot;GAME OVER&quot;.</p>
+<p>Noe som er vanlig å sjekke i en <code>if</code>-setning er om man har trykka på en spesiell knapp, eller om datamusa er innenfor et bestemt område. Eller man kan sjekke hvor mange liv man har igjen, og dersom det er 0 så kan man skrive &quot;GAME OVER&quot;.</p>
 </section>
 </section>
 <section>
-<h1 id="-2"></h1>
+<h1 id=""></h1>
 <p>Når vi skriver if-setningen vår med ord blir det slik:</p>
 <pre><code class="processing">Dersom (man trykker en knapp og knappen er <span class="hljs-string">'a'</span>) så skal dette skje{
-	ellipsa skal begeve seg til høyre;
+	ellipsen skal bevege seg til høyre;
 }
 </code></pre>
 <p>Vi forsøker å gjøre setningen mer lik kode:</p>
@@ -157,23 +154,23 @@ function relative (url) {
 <section class="check" id="prov-dette">
 <h2 class="check" id="prov-dette">Prøv dette</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Skriv inn if-setningen i <code>draw</code> metoden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Skriv inn if-setningen i <code>draw</code>-metoden.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_25" disabled="true"><label for="cbx_25"> Kjør programmet, trykk på <code>a</code>, hva skjer?</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Flytt kodelinja som setter bakgrunsfargen fra <code>setup</code> metoden til <code>draw</code> metoden. Putt den øverst inni draw.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Flytt kodelinja som setter bakgrunsfargen fra <code>setup</code>-metoden til <code>draw</code>metoden. Putt den øverst inni <code>draw</code>.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Kjør programmet på nytt og se hva som skjer.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Bytt ut 10 tallet med ett annet tall.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Bytt ut 10-tallet med ett annet tall.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Bytt ut <code>a</code> med en annen bokstav.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Flytt kodelinja som setter bakgrunnsfargen frem og tilbake mellom <code>setup</code> og <code>draw</code> noen ganger og se om du forstår hva som skjer.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Forsøk nå å skrive en if-setning til. Denne skal stå under den forrige, og nå kan du velge en annen bokstav. I stede for at <code>x</code> blir større, så må du skrive koden slik at <code>x</code> blir mindre. Dersom det  er litt vanskelig, så kan du forsøke å sette opp if-setningen som en vanlig setning slik vi har vist i forklaringen over.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Bytt ut tallet inni den nye if-setningen, slik at du får ellipsa til å gå dobbelt så raskt til venstre.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Forsøk nå å skrive en <code>if</code>-setning til. Denne skal stå under den forrige, og nå kan du velge en annen bokstav. I stede for at <code>x</code> blir større, så må du skrive koden slik at <code>x</code> blir mindre. Dersom det er litt vanskelig, så kan du forsøke å sette opp <code>if</code>-setningen som en vanlig setning slik vi har vist i forklaringen over.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_32" disabled="true"><label for="cbx_32"> Bytt ut tallet inni den nye <code>if</code>-setningen, slik at du får ellipsen til å gå dobbelt så raskt til venstre.</label></li>
 </ul>
 <p>Dersom ikke koden din fungerer helt som den skal, så kan du sjekke her hva som er feil.</p>
 <p><figure><img src="steg4.png" alt=""></figure></p>
 </section>
 <section class="activity" id="steg-5-vi-trenger-en-vinner">
 <h2 class="activity" id="steg-5-vi-trenger-en-vinner">Steg 5: Vi trenger en vinner!</h2>
-<p>Vi trenger flere if-setninger, disse skal skrive en beskjed på skjermen hvis en spiller vinner. Man vinner med å dytte ellipsen ut av skjermen.</p>
-<p>Her er if-setningen som trengs for å sjekke om venstre spiller har vunnet. Denne skal skrives under de to forrige if-setningene:</p>
+<p>Vi trenger flere <code>if</code>-setninger, disse skal skrive en beskjed på skjermen hvis en spiller vinner. Man vinner med å dytte ellipsen ut av skjermen.</p>
+<p>Her er <code>if</code>-setningen som trengs for å sjekke om venstre spiller har vunnet. Denne skal skrives under de to forrige <code>if</code>-setningene:</p>
 <pre><code class="processing">	<span class="hljs-keyword">if</span>(x &gt; <span class="hljs-number">800</span>){
 		<span class="hljs-built_in">text</span>(<span class="hljs-string">"Venstre spiller vant!"</span>, <span class="hljs-number">350</span>, <span class="hljs-number">200</span>);
 	}
@@ -182,15 +179,15 @@ function relative (url) {
 <section class="check" id="prov-dette-2">
 <h2 class="check" id="prov-dette-2">Prøv dette</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Skriv inn den nye if-setningen.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Sjekk at programmet fungerer ved å få ellipsa ut av skjermen på høyre side. Da skal teksten vises.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Skriv inn den nye <code>if</code>-setningen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Sjekk at programmet fungerer ved å få ellipsen ut av skjermen på høyre side. Da skal teksten vises.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Hva tror du skjer hvis du forandrer <code>800</code> tallet som står inni <code>(x &gt; 800)</code> til ett annet tall?</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Bytt ut <code>800</code> med noe mye mindre og vær sikker på at du forstår dette.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Hva skjer hvis du forandrer teksten &quot;Høyre spiller har vunnet&quot;</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Bytt ut <code>800</code> med noe mye mindre og finn ut hva som skjer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Hva skjer hvis du forandrer teksten til &quot;Høyre spiller har vunnet&quot;?</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Finn ut hva tallene som står inni parentesene til <code>text</code> gjør ved å bytte dem ut.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Gjør størrelsen på vinduet ditt større og se hvordan det påvirker if-setningen.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Still tilbake alle tallene, slik at teksten dukker opp på skjermen bare når spillbrikka er utav skjermen.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Lag en ny if-setning som gjør nesten akkurat det samme, men som heller sjekker om ellipsa går ut av skjermen på venstre side.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_39" disabled="true"><label for="cbx_39"> Gjør størrelsen på vinduet ditt større og se hvordan det påvirker <code>if</code>-setningen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Still tilbake alle tallene, slik at teksten dukker opp på skjermen bare når spillbrikka er ute av skjermen.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Lag en ny <code>if</code>-setning som gjør nesten akkurat det samme, men som heller sjekker om ellipsen går ut av skjermen på venstre side.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Test at koden din fungerer.</label></li>
 </ul>
 <p>Her er hele koden, sjekk om din er lik.</p>

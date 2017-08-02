@@ -8,15 +8,15 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Processing</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">Tegnespillet</h1><div class="lesson-icons"><div class="level"><img title="Nivå 1" src="../../assets/img/level1.png"/><span>Introduksjon</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Processing</span></a><div class="pdf"><a href="/processing/tegnespillet/tegnespillet.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon:</h1>
-<p>Denne oppgava går ut på å lage et tegnespill, målet er å skrive kode, slik at du greier å tegne tre forskjellige tegninger som ligner på disse:</p>
+<p>Denne oppgaven går ut på å lage et tegnespill, målet er å skrive kode, slik at du kan å tegne tegninger som ligner på disse:</p>
 <p><figure><img src="Gulsol.png" alt=""></figure></p>
 <p><figure><img src="gronttre.png" alt=""></figure></p>
 <p><figure><img src="tofjes.png" alt=""></figure></p>
-<p>Oppgava er lagt opp slik at du leser og gjør det som står i oppgaveteksen, så på slutten av hvert steg, kan du dobbelsjekke koden din med en eksempelkode vi har lagt ved.</p>
+<p>Oppgaven er lagt opp slik at du leser og gjør det som står i oppgaveteksen, så på slutten av hvert steg, kan du dobbelsjekke koden din med en eksempelkode vi har lagt ved.</p>
 </section>
 <section class="activity" id="steg-1-lag-ett-vindu-som-skal-vaere-tegnebrettet">
 <h1 class="activity" id="steg-1-lag-ett-vindu-som-skal-vaere-tegnebrettet">Steg 1: Lag ett vindu, som skal være tegnebrettet</h1>
-<p>Nå skal vi lage ett vindu med en enkel bakgrunnsfarge. Det er noe vi gjør til nesten alle programmer vi lager i Processing.</p>
+<p>Nå skal vi lage et vindu med en enkel bakgrunnsfarge. Det er noe vi gjør til nesten alle programmer vi lager i Processing.</p>
 <section class="check" id="gjor-dette">
 <h2 class="check" id="gjor-dette">Gjør dette:</h2>
 <ul class="task-list">
@@ -116,7 +116,7 @@ i Processing og andre programmeringsspråk.</p>
 <section class="check" id="prov-dette">
 <h2 class="check" id="prov-dette">Prøv dette:</h2>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Prøv å endre <code>0</code> i <code>background(0, 0, 0,);</code> til andre tall.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Prøv å endre <code>0</code> i <code>background(0, 0, 0);</code> til andre tall.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Se hva som skjer dersom du endrer ett av tallene til <code>255</code>.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Hva skjer når du setter tallet til å være høyere enn <code>255</code> eller lavere enn <code>0</code>?</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Forsøk å endre størrelsen på vinduet ved endre på tallene i <code>size</code>.</label></li>
@@ -127,9 +127,9 @@ i Processing og andre programmeringsspråk.</p>
 <h2 class="protip" id="forklaring-av-koden">Forklaring av koden</h2>
 <p>Lurer du på hvordan koden du har skrevet fungerer?</p>
 <ul>
-<li><code>void setup() {</code> er en metode som heter <code>setup</code>, du kan bare ha en metode med hvert navn! <code>setup</code> er en spesiell metode fordi den blir kjøres bare en gang helt først når du starter programmet ditt. Noen metoder gir tilbake informasjon, det gjør ikke <code>setup</code>, det viser vi ved å skrive <code>void</code> forran <code>setup</code>.</li>
-<li><code>size(640, 420);</code> er det som bestemmer hvor stort vinduet ditt er, den er inni <code>void setup(){</code> metoden fordi vi må bestemme størrelsen på vinduet bare en gang når vi starter.</li>
-<li>Vi har også <code>background(0, 0, 0)</code> som bestemmer bakgrunsfargen fargen i vinduet, <code>0</code> betyr at det ikke er farge, da blir det svart. Dersom vi skriver 255 setter vi på full farge styrke på den lille pæra som sitter i pc-skjermen. Det betyr at dersom vi skriver <code>background(255, 255, 255)</code> så blir det hvitt, 255 er det høyeste tallet vi kan velge. De forskjellige tallene står for <code>background(RØD, GRØNN, BLÅ)</code> og når vi endrer verdiene her, så blander vi fargene.</li>
+<li><code>void setup() {</code> er en metode som heter <code>setup</code>. Merk at du bare kan ha én metode med hvert navn! <code>setup</code> er en spesiell metode fordi den blir kjøres bare én gang helt først når du starter programmet ditt. Noen metoder gir tilbake informasjon, det gjør ikke <code>setup</code>, og det viser vi ved å skrive <code>void</code> foran <code>setup</code>.</li>
+<li><code>size(640, 420);</code> er det som bestemmer hvor stort vinduet ditt er. Denne er inni <code>void setup(){</code>-metoden fordi vi må bestemme størrelsen på vinduet bare en gang når vi starter.</li>
+<li>Vi har også <code>background(0, 0, 0);</code> som bestemmer bakgrunnsfargen i vinduet. <code>0</code> betyr at det ikke er farge, da blir det svart. Dersom vi skriver 255 (det høyeste tallet vi kan velge) setter vi på full fargestyrke på den lille pæra som sitter i PC-skjermen. Det betyr at dersom vi skriver <code>background(255, 255, 255)</code> så blir det hvitt. De forskjellige tallene står for <code>background(RØD, GRØNN, BLÅ)</code> og når vi endrer verdiene her, så blander vi fargene.</li>
 <li>På linje 1 og 4 har vi <code>{</code> og <code>}</code> disse krøllparentesene åpner og lukker metoden. Metoden inneholder all kode vi skriver mellom disse.</li>
 </ul>
 </section>
@@ -148,12 +148,12 @@ i Processing og andre programmeringsspråk.</p>
 <li class="task-list-item"><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Skriv denne koden:</label></li>
 </ul>
 <pre><code class="processing"><span class="hljs-keyword">void</span> <span class="hljs-title">draw</span>(){
-  
+
 }
 </code></pre>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Start programmet og set at det kjører. Det skal ikke skje noe nytt, men dersom programmet ikke kjører, så har du skrivefeil i den nye koden.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv denne koden inn i <code>draw</code> metoden for å få noe å tegne med!</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Start programmet og se at det kjører. Det skal ikke skje noe nytt, men dersom programmet ikke kjører, så har du skrivefeil i den nye koden.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Skriv denne koden inn i <code>draw</code>-metoden for å få noe å tegne med!</label></li>
 </ul>
 <pre><code class="processing">	<span class="hljs-built_in">fill</span>(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>, <span class="hljs-number">255</span>);
 	<span class="hljs-built_in">ellipse</span>(<span class="hljs-built_in">mouseX</span>, <span class="hljs-built_in">mouseY</span>, <span class="hljs-number">50</span>, <span class="hljs-number">50</span>);
@@ -168,7 +168,7 @@ i Processing og andre programmeringsspråk.</p>
 <li class="task-list-item"><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Bytt fargen du tegner med, det gjør du ved å endre tallene inni <code>fill(100, 100, 255);</code>.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Se om du får til å tegne grønt.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Se om du får til å tegne blått.</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut det første <code>50</code> tallet med <code>200</code> som står i paretesen bak <code>ellipse</code> og se hva som skjer.</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Bytt ut det første <code>50</code> tallet med <code>200</code> som står i parentesen bak <code>ellipse</code> og se hva som skjer.</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Kan du få <code>ellipse</code> til å bli like høy som vinduet ditt?</label></li>
 <li class="task-list-item"><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Prøv det du har lyst til.</label></li>
 </ul>
@@ -182,7 +182,7 @@ i Processing og andre programmeringsspråk.</p>
 <p>Lurer du på hvordan koden du har skrevet fungerer?</p>
 <ul>
 <li>
-<p><code>void draw(){</code> er en ny metode, slik som <code>void setup(){</code> men med nytt
+<p><code>void draw(){</code> er en ny metode, slik som <code>void setup(){</code>, men med nytt
 navn og nytt innhold.</p>
 </li>
 <li>
