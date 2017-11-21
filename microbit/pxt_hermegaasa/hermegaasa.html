@@ -8,13 +8,22 @@ function relative (url) {
   return url;
 }</script></head><body><div class="container"><div class="row"><div class="col-xs-12"><div class="top-menu"><div class="navigation"><a href="../../index.html"><span aria-hidden="true" class="glyphicon glyphicon-home"></span><span>&nbsp;</span><span>Forside</span></a><span>&nbsp;/&nbsp;</span><img src="../logo-black.png"/><a href="..">Micro:bit</a></div><a title="Ta en omvisning på siden" data-placement="bottom" href="#" class="intro"><span class="icon"></span><span class="text">Intro</span></a><form class="search"><input type="text" placeholder="Søk" class="form-control"/></form></div></div><div class="search"><h1>Søkeresultat</h1><div class="results"></div></div><div class="col-xs-12"><header class="clearfix"><img src="../logo-black.png" class="logo hidden-xs"/><h1 class="title">PXT: Hermegåsa</h1><div class="lesson-icons"><div class="level"><img title="Nivå 2" src="../../assets/img/level2.png"/><span>Nybegynner</span></div><a href=".." class="course"><img src="../logo-white.png"/><span>Micro:bit</span></a><div class="pdf"><a href="/microbit/pxt_hermegaasa/hermegaasa.pdf" title="Last ned PDF"><span class="icon"></span><span class="text">PDF</span></a></div></div></header></div><div class="col-xs-12"><div class="content"><section class="intro" id="introduksjon">
 <h1 class="intro" id="introduksjon">Introduksjon</h1>
-<p>Hermegåsa er et spill der en person er <em>spilleder</em>, og går ut på at han utfører instruksjoner på micro:biten sin som de andre spillerene skal gjenta, altså herme etter, på sin micro:bit. Dette er et multiplayer-spill, og det er om å gjøre å være den raskeste spilleren til å herme etter spillederen. Spillederen har oversikt på skjermen sin over poengene til de ulike spillerene, og spillet avsluttes når en spiller har vunnet 5 ganger.</p>
+<p>Hermegåsa er et spill der en person er <em>spilleder</em>, og går ut på at han utfører
+instruksjoner på micro:biten sin som de andre spillerene skal gjenta, altså
+herme etter, på sin micro:bit. Dette er et multiplayer-spill, og det er om å
+gjøre å være den raskeste spilleren til å herme etter spillederen. Spillederen
+har oversikt på skjermen sin over poengene til de ulike spillerene, og spillet
+avsluttes når en spiller har vunnet 5 ganger.</p>
 <p><figure><img src="hermegaasa.png" alt=""></figure></p>
-<p>På bildet ser du at spillederen er i midten og har poengsummen til spiller 1 og spiller 2 på skjermen sin. På sidene har spillerne fått beskjed om hva de skal gjøre, i form av en pil på skjermen. Førstemann som vipper micro:biten sin sammen vei som pilen vinner.</p>
+<p>På bildet ser du at spillederen er i midten og har poengsummen til spiller 1 og
+spiller 2 på skjermen sin. På sidene har spillerne fått beskjed om hva de skal
+gjøre, i form av en pil på skjermen. Førstemann som vipper micro:biten sin
+sammen vei som pilen vinner.</p>
 </section>
 <section class="activity" id="steg-1-sjekk-at-du-har-riktig-utstyr">
 <h1 class="activity" id="steg-1-sjekk-at-du-har-riktig-utstyr">Steg 1: Sjekk at du har riktig utstyr</h1>
-<p><em>Det er viktig at du har alt utstyr og tilbehør for å kunne gjøre denne oppgaven.</em></p>
+<p><em>Det er viktig at du har alt utstyr og tilbehør for å kunne gjøre denne
+oppgaven.</em></p>
 <section class="check" id="sjekkliste">
 <h2 class="check" id="sjekkliste">Sjekkliste</h2>
 <ul class="task-list">
@@ -66,28 +75,37 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-2-programmere-spillederen">
 <h1 class="activity" id="steg-2-programmere-spillederen">Steg 2: Programmere spillederen</h1>
-<p><em>Når spillet skal starte så må vi sørge for at alle micro:bitene kan kommunisere med hverandre, og da må vi bestemme et gruppe-nummer som alle deltagere bruker når man sender informasjon over Bluetooth. I tillegg må vi lagre at vi har sendt ut en melding til deltagere, slik at vi ikke sender ut flere meldinger før vi har fått svar på den forrige.</em></p>
+<p><em>Når spillet skal starte så må vi sørge for at alle micro:bitene kan
+kommunisere med hverandre, og da må vi bestemme et gruppe-nummer som alle
+deltagere bruker når man sender informasjon over Bluetooth. I tillegg må vi
+lagre at vi har sendt ut en melding til deltagere, slik at vi ikke sender ut
+flere meldinger før vi har fått svar på den forrige.</em></p>
 <section class="check" id="sjekkliste-2">
 <h2 class="check" id="sjekkliste-2">Sjekkliste</h2>
 <ul class="task-list">
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_3" disabled="true"><label for="cbx_3"> Start et nytt PXT-prosjekt, for eksempel ved å gå til
-<a href="https://makecode.microbit.org/?lang=no" target="_blank">makecode.microbit.org</a>.</label></p>
+<a href="https://makecode.microbit.org/?lang=no" target="_blank">makecode.microbit.org</a>
+.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_4" disabled="true"><label for="cbx_4"> Finn blokken <code>ved start</code> under <em>Basis</em> og dra den inn i kodefeltet.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Gå til <em>Radio</em> og finn blokken <code>radio sett gruppe</code>. I utgangspunktet står det tallet <code>1</code> i denne blokken, men du bestemmer selv hvilket tall du vil bruke.</label></p>
+<p><input type="checkbox" id="cbx_5" disabled="true"><label for="cbx_5"> Gå til <em>Radio</em> og finn blokken <code>radio sett gruppe</code>. I utgangspunktet står
+det tallet <code>1</code> i denne blokken, men du bestemmer selv hvilket tall du vil bruke.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Til slutt går vi til <em>Variabler</em> og velger blokken <code>sett variabel til</code>. Denne kan du bytte navn på ved å klikke på <em>variabel</em> og så på <em>Rename variable</em>. Den bør hete <em>MessageSent</em>.</label></p>
+<p><input type="checkbox" id="cbx_6" disabled="true"><label for="cbx_6"> Til slutt går vi til <em>Variabler</em> og velger blokken <code>sett variabel til</code>.
+Denne kan du bytte navn på ved å klikke på <em>variabel</em> og så på <em>Rename
+variable</em>. Den bør hete <em>MessageSent</em>.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_7" disabled="true"><label for="cbx_7"> Til <em>MessageSent</em> kobler vi blokken <code>usann</code>, som du finner under <em>Logikk</em>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Når spillet starter skal alle spillerne ha <code>0</code> poeng. Lag en variabel for hver spiller med navn <code>Player1</code>, <code>Player2</code> osv. som du setter til <code>0</code> poeng.</label></p>
+<p><input type="checkbox" id="cbx_8" disabled="true"><label for="cbx_8"> Når spillet starter skal alle spillerne ha <code>0</code> poeng. Lag en variabel for
+hver spiller med navn <code>Player1</code>, <code>Player2</code> osv. som du setter til <code>0</code> poeng.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_9" disabled="true"><label for="cbx_9"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -96,14 +114,18 @@ function relative (url) {
 </ul>
 <section class="protip" id="obs">
 <h3 class="protip" id="obs">OBS!</h3>
-<p>Husk at gruppenummeret du har valgt må brukes alle steder i spillet hvor du skal bestemme gruppenummer. I denne oppgaven har vi valgt tallet <code>37</code>.</p>
-<p>I oppgaven antar vi at vi har fem spillere. Dersom dere er færre spillere enn det så trenger du ikke legge til så mange spillere.</p>
+<p>Husk at gruppenummeret du har valgt må brukes alle steder i spillet hvor du
+skal bestemme gruppenummer. I denne oppgaven har vi valgt tallet <code>37</code>.</p>
+<p>I oppgaven antar vi at vi har fem spillere. Dersom dere er færre spillere enn
+det så trenger du ikke legge til så mange spillere.</p>
 </section>
 </section>
 </section>
 <section class="activity" id="steg-2-vise-poeng-pa-skjermen">
 <h1 class="activity" id="steg-2-vise-poeng-pa-skjermen">Steg 2: Vise poeng på skjermen</h1>
-<p><em>For å holde oversikt over hvor mange poeng de forskjellige spillerne har så viser vi dette på skjermen til spillederen. Dersom noen av de får 5 poeng så gir vi beskjed om at den spilleren vant.</em></p>
+<p><em>For å holde oversikt over hvor mange poeng de forskjellige spillerne har så
+viser vi dette på skjermen til spillederen. Dersom noen av de får 5 poeng så
+gir vi beskjed om at den spilleren vant.</em></p>
 <section class="check" id="sjekkliste-3">
 <h2 class="check" id="sjekkliste-3">Sjekkliste</h2>
 <ul class="task-list">
@@ -111,26 +133,38 @@ function relative (url) {
 <p><input type="checkbox" id="cbx_10" disabled="true"><label for="cbx_10"> Først legger vi til <code>gjenta for alltid</code>-blokken fra <em>Basis</em>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi vil vise poengsummen til hver spiller i radene på skjermen til spillederen. <code>Player1</code> vises i rad <code>1</code>, <code>Player2</code> vises i rad <code>2</code> osv. Legg til blokken <code>tenn x y</code> fra <em>Skjerm</em>. La <code>y</code> være lik <code>0</code>.</label></p>
+<p><input type="checkbox" id="cbx_11" disabled="true"><label for="cbx_11"> Vi vil vise poengsummen til hver spiller i radene på skjermen til
+spillederen. <code>Player1</code> vises i rad <code>1</code>, <code>Player2</code> vises i rad <code>2</code> osv. Legg til
+blokken <code>tenn x y</code> fra <em>Skjerm</em>. La <code>y</code> være lik <code>0</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Vi må sette <code>x</code> til å være lik poengsummmen til spillerne. Fordi koordinatene til skjermen starter på <code>(0,0)</code> og <em>ikke</em> <code>(1,1)</code> så må vi trekke fra ett poeng hele tiden, slik at lysene sier hvor mange poeng spilleren har. Det kan gjøres slik:</label></p>
+<p><input type="checkbox" id="cbx_12" disabled="true"><label for="cbx_12"> Vi må sette <code>x</code> til å være lik poengsummmen til spillerne. Fordi
+koordinatene til skjermen starter på <code>(0,0)</code> og <em>ikke</em> <code>(1,1)</code> så må vi trekke
+fra ett poeng hele tiden, slik at lysene sier hvor mange poeng spilleren har.
+Det kan gjøres slik:</label></p>
 <p><figure><img src="forever_part1.png" alt=""></figure></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_13" disabled="true"><label for="cbx_13"> Gjør det samme for <code>Player2</code>, <code>Player3</code>, <code>Player4</code> og <code>Player5</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Legg til en <code>hvis-blokken</code>og sjekk om <code>Player1</code> er lik <code>5</code> poeng. Da har spilleren vunnet.</label></p>
+<p><input type="checkbox" id="cbx_14" disabled="true"><label for="cbx_14"> Legg til en <code>hvis-blokken</code>og sjekk om <code>Player1</code> er lik <code>5</code> poeng. Da har
+spilleren vunnet.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Dersom <code>Player1</code> har <code>5</code> poeng så skal vi sende ut beskjed til alle om dette. Først legger vi til <code>radio send tekst</code>, og så legger vi til <code>vis tekst</code>. Sett begge tekstene til <em>P1 Won!</em>. Da ser koden slik ut:</label></p>
+<p><input type="checkbox" id="cbx_15" disabled="true"><label for="cbx_15"> Dersom <code>Player1</code> har <code>5</code> poeng så skal vi sende ut beskjed til alle om
+dette. Først legger vi til <code>radio send tekst</code>, og så legger vi til <code>vis tekst</code>.
+Sett begge tekstene til <em>P1 Won!</em>. Da ser koden slik ut:</label></p>
 </li>
 </ul>
 <p><figure><img src="forever_part2.png" alt=""></figure></p>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Utvid <code>hvis-blokken</code> til <code>hvis - ellers hvis - ellers hvis - ellers hvis - ellers hvis</code>, slik at du kan sjekke poengene til alle spillere, og gjør det samme for <code>Player2</code>, <code>Player3</code>, <code>Player4</code> og <code>Player5</code> dersom de har vunnet istedenfor.</label></p>
+<p><input type="checkbox" id="cbx_16" disabled="true"><label for="cbx_16"> Utvid <code>hvis-blokken</code> til
+<code>hvis - ellers hvis - ellers hvis - ellers hvis - ellers hvis</code>, slik at du kan
+sjekke poengene til alle spillere, og gjør det
+samme for <code>Player2</code>, <code>Player3</code>, <code>Player4</code> og <code>Player5</code> dersom de har vunnet
+istedenfor.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_17" disabled="true"><label for="cbx_17"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -141,28 +175,35 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-3-sende-ut-meldinger-til-deltagerne">
 <h1 class="activity" id="steg-3-sende-ut-meldinger-til-deltagerne">Steg 3: Sende ut meldinger til deltagerne</h1>
-<p><em>Så må vi sende ut meldinger til deltagere om hva de skal herme etter. Vi lager en blokk for hver av de forskjellige meldingene, ut ifra reglene beskrevet over.</em></p>
+<p><em>Så må vi sende ut meldinger til deltagere om hva de skal herme etter. Vi lager
+en blokk for hver av de forskjellige meldingene, ut ifra reglene beskrevet
+over.</em></p>
 <section class="check" id="sjekkliste-4">
 <h2 class="check" id="sjekkliste-4">Sjekkliste</h2>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Først må vi finne blokken som heter <code>når knapp A trykkes</code>. Den ligger under <em>Inndata</em>.</label></p>
+<p><input type="checkbox" id="cbx_18" disabled="true"><label for="cbx_18"> Først må vi finne blokken som heter <code>når knapp A trykkes</code>. Den ligger
+under <em>Inndata</em>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Så henter vi <code>hvis-blokken</code> fra <em>Logikk</em> og setter den sammen med <code>erlik-blokken</code> (<code>=</code>) fra samme kategori. Her skal du sjekke om <code>MessageSent</code> er lik <code>usann</code>. Klarer du å sette dette sammen?</label></p>
+<p><input type="checkbox" id="cbx_19" disabled="true"><label for="cbx_19"> Så henter vi <code>hvis-blokken</code> fra <em>Logikk</em> og setter den sammen med
+<code>erlik-blokken</code> (<code>=</code>) fra samme kategori. Her skal du sjekke om <code>MessageSent</code>
+er lik <code>usann</code>. Klarer du å sette dette sammen?</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_20" disabled="true"><label for="cbx_20"> Inni <code>hvis-blokken</code> setter vi <code>radio send tekst</code> med teksten <code>A</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Til slutt legger vi også til blokken <code>sett MessageSent til</code> fra <em>Variabler</em> og setter verdien til <code>sann</code>.</label></p>
+<p><input type="checkbox" id="cbx_21" disabled="true"><label for="cbx_21"> Til slutt legger vi også til blokken <code>sett MessageSent til</code> fra
+<em>Variabler</em> og setter verdien til <code>sann</code>.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_22" disabled="true"><label for="cbx_22"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
 <p><figure><img src="actions_button_a.png" alt=""></figure></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Gjør det samme for <code>B</code>, <code>C</code>, <code>&lt;</code> og <code>&gt;</code>. Sjekk tabellen ovenfor for å se hva som skal gjøres.</label></p>
+<p><input type="checkbox" id="cbx_23" disabled="true"><label for="cbx_23"> Gjør det samme for <code>B</code>, <code>C</code>, <code>&lt;</code> og <code>&gt;</code>. Sjekk tabellen ovenfor for å se
+hva som skal gjøres.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_24" disabled="true"><label for="cbx_24"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -173,7 +214,8 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-4-sjekke-svaret-til-deltagerne">
 <h1 class="activity" id="steg-4-sjekke-svaret-til-deltagerne">Steg 4: Sjekke svaret til deltagerne</h1>
-<p><em>Etter hver runde må spillederen sjekke hvem av deltagerne som var raskest til å herme.</em></p>
+<p><em>Etter hver runde må spillederen sjekke hvem av deltagerne som var raskest til
+å herme.</em></p>
 <section class="check" id="sjekkliste-5">
 <h2 class="check" id="sjekkliste-5">Sjekkliste</h2>
 <ul class="task-list">
@@ -184,16 +226,21 @@ function relative (url) {
 <p><input type="checkbox" id="cbx_26" disabled="true"><label for="cbx_26"> Sjekk om <code>MessageSent</code> er lik <code>sann</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Dersom <code>MessageSent</code> er lik <code>sann</code> så skal du sjekke om <code>receivedNumber</code> er lik <code>1</code>, for da har <code>Player1</code> vunnet denne runden. Vi får altså en <code>hvis-blokk</code> inni en annen <code>hvis-blokk</code>.</label></p>
+<p><input type="checkbox" id="cbx_27" disabled="true"><label for="cbx_27"> Dersom <code>MessageSent</code> er lik <code>sann</code> så skal du sjekke om <code>receivedNumber</code>
+er lik <code>1</code>, for da har <code>Player1</code> vunnet denne runden. Vi får altså en
+<code>hvis-blokk</code> inni en annen <code>hvis-blokk</code>.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_28" disabled="true"><label for="cbx_28"> Dersom <code>receivedNumber</code> er lik <code>1</code> så tar vi blokken <code>endre Player1 med 1</code> fra <em>Variabler</em> inni den innerste <code>hvis-blokken</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Under <code>endre Player1 med 1</code> legger du til <code>radio send tekst</code> med tallet <code>1</code>. Da sender vi beskjed til alle om hvem som vant. Legg også til <code>vis tall</code> med tallet <code>1</code>. Da viser vi det også på spillederen sin micro:bit.</label></p>
+<p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> Under <code>endre Player1 med 1</code> legger du til <code>radio send tekst</code> med tallet
+<code>1</code>. Da sender vi beskjed til alle om hvem som vant. Legg også til <code>vis tall</code>
+med tallet <code>1</code>. Da viser vi det også på spillederen sin micro:bit.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Så legger vi til en pause på <code>1</code> sekund mellom de to <code>hvis-blokkene</code> før vi går videre til neste runde. Dette gjør du ved å legge til blokken <code>pause (ms)</code> og setter den til <code>1000</code>. Tusen millisekund er det samme som ett sekund.</label></p>
+<p><input type="checkbox" id="cbx_30" disabled="true"><label for="cbx_30"> Så legger vi til en pause på <code>1</code> sekund mellom de to <code>hvis-blokkene</code> før
+vi går videre til neste runde. Dette gjør du ved å legge til blokken <code>pause (ms)</code> og setter den til <code>1000</code>. Tusen millisekund er det samme som ett sekund.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_31" disabled="true"><label for="cbx_31"> Til slutt endrer vi <code>MessageSent</code> til <code>usann</code>.</label></p>
@@ -203,7 +250,11 @@ function relative (url) {
 <p><figure><img src="check_answer_part1.png" alt=""></figure></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Utvid <code>hvis-blokken</code> til <code>hvis - ellers hvis - ellers hvis - ellers hvis - ellers hvis</code>, slik at du kan sjekke om det var noen av de andre spillerne som vant denne runden, og gjør det samme for <code>Player2</code>, <code>Player3</code>, <code>Player4</code> og <code>Player5</code> dersom de har vunnet istedenfor.</label></p>
+<p><input type="checkbox" id="cbx_33" disabled="true"><label for="cbx_33"> Utvid <code>hvis-blokken</code> til
+<code>hvis - ellers hvis - ellers hvis - ellers hvis - ellers hvis</code>, slik at du kan
+sjekke om det var noen av de andre spillerne som vant denne runden, og gjør det
+samme for <code>Player2</code>, <code>Player3</code>, <code>Player4</code> og <code>Player5</code> dersom de har vunnet
+istedenfor.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_34" disabled="true"><label for="cbx_34"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -216,13 +267,16 @@ function relative (url) {
 <h1 class="activity" id="steg-5-overfore-programmet-til-spillederen">Steg 5: Overføre programmet til spillederen</h1>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Gi navnet <code>spilleder</code>til programmet ditt. Dette gjør du ved å endre teksten helt nede på midten på skjermen din.</label></p>
+<p><input type="checkbox" id="cbx_35" disabled="true"><label for="cbx_35"> Gi navnet <code>spilleder</code>til programmet ditt. Dette gjør du ved å endre
+teksten helt nede på midten på skjermen din.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Koble den enen micro:biten din til datamaskinen med en USB-kabel. Denne micro:biten blir spillederen i spillet.</label></p>
+<p><input type="checkbox" id="cbx_36" disabled="true"><label for="cbx_36"> Koble den enen micro:biten din til datamaskinen med en USB-kabel. Denne
+micro:biten blir spillederen i spillet.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Klikk deretter på knappen <code>Last ned</code> nede til venstre på skjermen. Det lastes nå ned en fil som heter <code>spilleder.hex</code> til datamaskinen din.</label></p>
+<p><input type="checkbox" id="cbx_37" disabled="true"><label for="cbx_37"> Klikk deretter på knappen <code>Last ned</code> nede til venstre på skjermen. Det
+lastes nå ned en fil som heter <code>spilleder.hex</code> til datamaskinen din.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_38" disabled="true"><label for="cbx_38"> Flytte denne filen over til MICROBIT-disken på maskinen din.</label></p>
@@ -231,7 +285,8 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-6-programmere-spillerne">
 <h1 class="activity" id="steg-6-programmere-spillerne">Steg 6: Programmere spillerne</h1>
-<p><em>Først må vi sørge for at spillerene kobler seg til spillederen og gir de et spillernummer, slik at vi kan sjekke hvem som vinner.</em></p>
+<p><em>Først må vi sørge for at spillerene kobler seg til spillederen og gir de et
+spillernummer, slik at vi kan sjekke hvem som vinner.</em></p>
 <section class="check" id="sjekkliste-6">
 <h2 class="check" id="sjekkliste-6">Sjekkliste</h2>
 <ul class="task-list">
@@ -242,13 +297,17 @@ function relative (url) {
 <p><input type="checkbox" id="cbx_40" disabled="true"><label for="cbx_40"> Finn blokken <code>ved start</code> under <em>Basis</em> og dra den inn i kodefeltet.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Gå til <em>Radio</em> og finn blokken <code>radio sett gruppe</code>. Husk å fylle inn det samme tallet her som du gjorde på <code>spilleder</code>.</label></p>
+<p><input type="checkbox" id="cbx_41" disabled="true"><label for="cbx_41"> Gå til <em>Radio</em> og finn blokken <code>radio sett gruppe</code>. Husk å fylle inn det
+samme tallet her som du gjorde på <code>spilleder</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Gå så til <em>Variabler</em> og velger blokken <code>sett variabel til</code>. Denne kan du bytte navn på ved å klikke på <em>variabel</em> og så på <em>Rename variable</em>. Den bør hete <em>Player</em>. Sett verdien til <code>1</code>.</label></p>
+<p><input type="checkbox" id="cbx_42" disabled="true"><label for="cbx_42"> Gå så til <em>Variabler</em> og velger blokken <code>sett variabel til</code>. Denne kan du
+bytte navn på ved å klikke på <em>variabel</em> og så på <em>Rename variable</em>. Den bør
+hete <em>Player</em>. Sett verdien til <code>1</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Til slutt viser vi tallet vårt til skjerm, ved å hente blokken <code>vis tall</code> og koble den til variabelen <code>Player</code>.</label></p>
+<p><input type="checkbox" id="cbx_43" disabled="true"><label for="cbx_43"> Til slutt viser vi tallet vårt til skjerm, ved å hente blokken <code>vis tall</code>
+og koble den til variabelen <code>Player</code>.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_44" disabled="true"><label for="cbx_44"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -259,7 +318,8 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-7-nar-spiller-mottar-melding">
 <h1 class="activity" id="steg-7-nar-spiller-mottar-melding">Steg 7: Når spiller mottar melding</h1>
-<p><em>Neste steg er å motta meldingen om hva vi skal herme etter, og lagre den. Da kan vi senere sjekke om vi har gjort rett.</em></p>
+<p><em>Neste steg er å motta meldingen om hva vi skal herme etter, og lagre den. Da
+kan vi senere sjekke om vi har gjort rett.</em></p>
 <section class="check" id="sjekkliste-7">
 <h2 class="check" id="sjekkliste-7">Sjekkliste</h2>
 <ul class="task-list">
@@ -270,7 +330,9 @@ function relative (url) {
 <p><input type="checkbox" id="cbx_46" disabled="true"><label for="cbx_46"> Vis teksten <code>receivedString</code> på skjermen.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Opprett en ny variabel med navn <code>Press</code> og sett denne til <code>receivedString</code>. Da har vi lagret dette til å sjekke om vi har klart å herme etter spillederen.</label></p>
+<p><input type="checkbox" id="cbx_47" disabled="true"><label for="cbx_47"> Opprett en ny variabel med navn <code>Press</code> og sett denne til
+<code>receivedString</code>. Da har vi lagret dette til å sjekke om vi har klart å herme
+etter spillederen.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_48" disabled="true"><label for="cbx_48"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -286,22 +348,29 @@ function relative (url) {
 <h2 class="check" id="sjekkliste-8">Sjekkliste</h2>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Vi starter med å herme etter spilleder dersom meldingen var <code>A</code>. Først må vi finne blokken som heter <code>når knapp A trykkes</code>. Den ligger under <em>Inndata</em>.</label></p>
+<p><input type="checkbox" id="cbx_49" disabled="true"><label for="cbx_49"> Vi starter med å herme etter spilleder dersom meldingen var <code>A</code>. Først må
+vi finne blokken som heter <code>når knapp A trykkes</code>. Den ligger under <em>Inndata</em>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Så henter vi <code>hvis-blokken</code> fra <em>Logikk</em> og setter den sammen med <code>erlik-blokken</code> (<code>=</code>) fra samme kategori. Her skal du sjekke om <code>Press</code> er lik <code>A</code>.</label></p>
+<p><input type="checkbox" id="cbx_50" disabled="true"><label for="cbx_50"> Så henter vi <code>hvis-blokken</code> fra <em>Logikk</em> og setter den sammen med
+<code>erlik-blokken</code> (<code>=</code>) fra samme kategori. Her skal du sjekke om <code>Press</code> er lik
+<code>A</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Dersom <code>Press</code> er lik <code>A</code> så skal vi sende spillernummeret vårt tilbake til spilleder. Legg til blokken <code>radio send tall</code> inni <code>hvis-blokken</code> og koble den til <code>Player</code>. Legg også til blokken <code>tøm skjermen</code> fra <em>Basis</em>.</label></p>
+<p><input type="checkbox" id="cbx_51" disabled="true"><label for="cbx_51"> Dersom <code>Press</code> er lik <code>A</code> så skal vi sende spillernummeret vårt tilbake
+til spilleder. Legg til blokken <code>radio send tall</code> inni <code>hvis-blokken</code> og koble
+den til <code>Player</code>. Legg også til blokken <code>tøm skjermen</code> fra <em>Basis</em>.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_52" disabled="true"><label for="cbx_52"> Utvid <code>hvis-blokken</code> til <code>hvis - ellers</code>.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> <code>Press</code> ikke er lik <code>A</code> så skal man vise et surt fjes. Du finner blokken <code>vis ikon</code> under <em>Basis</em>. Velg et passende ikon.</label></p>
+<p><input type="checkbox" id="cbx_53" disabled="true"><label for="cbx_53"> <code>Press</code> ikke er lik <code>A</code> så skal man vise et surt fjes. Du finner blokken
+<code>vis ikon</code> under <em>Basis</em>. Velg et passende ikon.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Legg også til <code>pause</code> i <code>500</code> ms. Til slutt kan du finne blokken <code>vis tekst</code> og legge variabelen <code>Press</code> inni den, for å vise hva du egentlig burde gjort.</label></p>
+<p><input type="checkbox" id="cbx_54" disabled="true"><label for="cbx_54"> Legg også til <code>pause</code> i <code>500</code> ms. Til slutt kan du finne blokken <code>vis tekst</code> og legge variabelen <code>Press</code> inni den, for å vise hva du egentlig burde
+gjort.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_55" disabled="true"><label for="cbx_55"> Dersom du har gjort alt rett så vil koden din se slik ut:</label></p>
@@ -319,70 +388,91 @@ function relative (url) {
 </section>
 <section class="activity" id="steg-9-overfore-programmet-til-spillerne">
 <h1 class="activity" id="steg-9-overfore-programmet-til-spillerne">Steg 9: Overføre programmet til spillerne</h1>
-<p><em>Overfør programmet til hver av spillerne sine micro:biter. Husk å endre programmet med spillernummer mellom hver gang og last ned på nytt.</em></p>
+<p><em>Overfør programmet til hver av spillerne sine micro:biter. Husk å endre
+programmet med spillernummer mellom hver gang og last ned på nytt.</em></p>
 <section class="check" id="sjekkliste-9">
 <h2 class="check" id="sjekkliste-9">Sjekkliste</h2>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_58" disabled="true"><label for="cbx_58"> Gi navnet <code>spiller</code>til programmet ditt. Dette gjør du ved å endre teksten helt nede på midten på skjermen din.</label></p>
+<p><input type="checkbox" id="cbx_58" disabled="true"><label for="cbx_58"> Gi navnet <code>spiller</code>til programmet ditt. Dette gjør du ved å endre teksten
+helt nede på midten på skjermen din.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_59" disabled="true"><label for="cbx_59"> Koble den enen micro:biten din til datamaskinen med en USB-kabel. Denne micro:biten blir spillederen i spillet.</label></p>
+<p><input type="checkbox" id="cbx_59" disabled="true"><label for="cbx_59"> Koble den enen micro:biten din til datamaskinen med en USB-kabel. Denne
+micro:biten blir spillederen i spillet.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_60" disabled="true"><label for="cbx_60"> Klikk deretter på knappen <code>Last ned</code> nede til venstre på skjermen. Det lastes nå ned en fil som heter <code>spiller.hex</code> til datamaskinen din.</label></p>
+<p><input type="checkbox" id="cbx_60" disabled="true"><label for="cbx_60"> Klikk deretter på knappen <code>Last ned</code> nede til venstre på skjermen. Det
+lastes nå ned en fil som heter <code>spiller.hex</code> til datamaskinen din.</label></p>
 </li>
 <li class="task-list-item">
 <p><input type="checkbox" id="cbx_61" disabled="true"><label for="cbx_61"> Flytte denne filen over til MICROBIT-disken på maskinen din.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_62" disabled="true"><label for="cbx_62"> Endre spillernummer i programmet og gjør samme prosess for hver av spillerne som skal være med.</label></p>
+<p><input type="checkbox" id="cbx_62" disabled="true"><label for="cbx_62"> Endre spillernummer i programmet og gjør samme prosess for hver av
+spillerne som skal være med.</label></p>
 </li>
 </ul>
 <section class="protip" id="obs-2">
 <h3 class="protip" id="obs-2">OBS!</h3>
-<p>Husk å endre hvilket nummer hver spiller er mellom hver nye microbit du kobler til og laster ned programmet til. Du må laste ned programmet på nytt for hver av spillerne med de endringene du har gjort.</p>
+<p>Husk å endre hvilket nummer hver spiller er mellom hver nye microbit du kobler
+til og laster ned programmet til. Du må laste ned programmet på nytt for hver
+av spillerne med de endringene du har gjort.</p>
 </section>
 </section>
 <section class="challenge" id="utfordringer">
 <h2 class="challenge" id="utfordringer">Utfordringer</h2>
 <ul class="task-list">
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_63" disabled="true"><label for="cbx_63"> Legge til flere elementer som spillerne skal reagere på. For eksempel dersom micro:biten ristes.</label></p>
+<p><input type="checkbox" id="cbx_63" disabled="true"><label for="cbx_63"> Legge til flere elementer som spillerne skal reagere på. For eksempel
+dersom micro:biten ristes.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_64" disabled="true"><label for="cbx_64"> Endre koden til spilleder slik at micro:biten automatisk velger helt tilfeldig hva spillerne skal herme etter.</label></p>
+<p><input type="checkbox" id="cbx_64" disabled="true"><label for="cbx_64"> Endre koden til spilleder slik at micro:biten automatisk velger helt
+tilfeldig hva spillerne skal herme etter.</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_65" disabled="true"><label for="cbx_65"> Endre koden slik at det er mulig å jukse i spillet for spillerne. Kan du gjøre slik at de alltid svarer rett? Kan du gjøre slik at en spiller alltid svarer raskest?</label></p>
+<p><input type="checkbox" id="cbx_65" disabled="true"><label for="cbx_65"> Endre koden slik at det er mulig å jukse i spillet for spillerne. Kan du
+gjøre slik at de alltid svarer rett? Kan du gjøre slik at en spiller alltid
+svarer raskest?</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" id="cbx_66" disabled="true"><label for="cbx_66"> Endre koden til spillederen slik at han sjekker at spillerne faktisk har svart rett, for å passe på at de ikke har jukset. Vær obs på at du da også må endre på spillerne sin kode.</label></p>
+<p><input type="checkbox" id="cbx_66" disabled="true"><label for="cbx_66"> Endre koden til spillederen slik at han sjekker at spillerne faktisk har
+svart rett, for å passe på at de ikke har jukset. Vær obs på at du da også må
+endre på spillerne sin kode.</label></p>
 </li>
 </ul>
 </section>
 <section class="protip" id="sikkerhet-med-server-og-klient">
 <h2 class="protip" id="sikkerhet-med-server-og-klient">Sikkerhet med server og klient</h2>
-<p>Vi har nå laget en applikasjon med server (spilllederen) og klienter (spillerene). Spillerne kommuniserer gjennom hver sin klient, men koordinerer (teller hvem som vinner) på en server.</p>
+<p>Vi har nå laget en applikasjon med server (spilllederen) og klienter
+(spillerene). Spillerne kommuniserer gjennom hver sin klient, men koordinerer
+(teller hvem som vinner) på en server.</p>
 <section>
 <h3 id="sikkerhet-i-spillet-vart">Sikkerhet i spillet vårt</h3>
-<p>Hver klient kan i prinsippet bestemme hvilken kode som skal kjøre på sin egen enhet. Dette gjør det mulig å jukse! For å unngå at det er mulig å jukse må vi tenke oss om for hvordan vi koder serveren vår og hvordan vi koder klienten vår.</p>
-<p><strong>Å la klienten sende tilbake &quot;jeg hadde rett&quot; er ikke sikkert.</strong> Da kan jeg lage min egen klient som alltid gir meg alle poengene, uansett om jeg har svart rett eller galt.</p>
-<p><strong>Å la klienten sende tilbake &quot;jeg svarte B&quot; er bedre.</strong> Da må jeg faktisk vite svaret for å kunne få poeng. <em>Hva tror du skjer dersom du gjetter alle svarene hele tiden? Klarer du tenke på en måte å unngå at dette er mulig?</em></p>
+<p>Hver klient kan i prinsippet bestemme hvilken kode som skal kjøre på sin egen
+enhet. Dette gjør det mulig å jukse! For å unngå at det er mulig å jukse må vi
+tenke oss om for hvordan vi koder serveren vår og hvordan vi koder klienten vår.</p>
+<p><strong>Å la klienten sende tilbake &quot;jeg hadde rett&quot; er ikke sikkert.</strong> Da kan jeg
+lage min egen klient som alltid gir meg alle poengene, uansett om jeg har svart
+rett eller galt.</p>
+<p><strong>Å la klienten sende tilbake &quot;jeg svarte B&quot; er bedre.</strong> Da må jeg faktisk vite
+svaret for å kunne få poeng. <em>Hva tror du skjer dersom du gjetter alle svarene
+hele tiden? Klarer du tenke på en måte å unngå at dette er mulig?</em></p>
 </section>
 <section>
 <h3 id="sikkerhet-pa-facebook">Sikkerhet på Facebook</h3>
 <p>Facebook er en annen applikasjon som er delt inn i klient og server.</p>
-<p><strong>Klienten viser bildene dine og vennene dine</strong>. Du ser klienten når du går til <code>facebook.com</code> i en nettleser. Når du bruker Facebook-appen på en mobiltelefon, bruker du en annen klient.</p>
-<p><strong>Serveren holder styr på all informasjonen</strong>. Serveren kan si om du prøver å logge inn med rett brukernavn og passord. Serveren vet hvem som er vennene dine, og den vet hvem som kan administrere hvilke sider og grupper.</p>
-<p>Hva hadde skjedd dersom gruppeadministrasjon ble håndtert i klienten? Hvordan kunne du da laget din egen klient? Hva kunne du gjort med denne?</p>
+<p><strong>Klienten viser bildene dine og vennene dine</strong>. Du ser klienten når du går til
+<code>facebook.com</code> i en nettleser. Når du bruker Facebook-appen på en mobiltelefon,
+bruker du en annen klient.</p>
+<p><strong>Serveren holder styr på all informasjonen</strong>. Serveren kan si om du prøver å
+logge inn med rett brukernavn og passord. Serveren vet hvem som er vennene
+dine, og den vet hvem som kan administrere hvilke sider og grupper.</p>
+<p>Hva hadde skjedd dersom gruppeadministrasjon ble håndtert i klienten? Hvordan
+kunne du da laget din egen klient? Hva kunne du gjort med denne?</p>
 </section>
 </section>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med Micro:bit: PXT: Hermegåsa&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/pxt_hermegaasa" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/microbit/pxt_hermegaasa" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Felix Bjerke og Tjerand Silde</p>
-</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-67775835-1', 'auto');
-ga('send', 'pageview');</script></body></html>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>

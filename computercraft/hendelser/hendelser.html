@@ -50,7 +50,7 @@ term.clear()
 term.setCursorPos(x, y)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-<span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)    <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)    <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-built_in">print</span>(hendelse)                               <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-built_in">print</span>(tast)                                   <span class="hljs-comment">-- ny linje</span>
 </code></pre>
@@ -76,7 +76,7 @@ term.clear()
 term.setCursorPos(x, y)
 <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-<span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
+<span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
 <span class="hljs-keyword">if</span> tast == keys.q <span class="hljs-keyword">then</span>                        <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Du trykket Q'</span>)                     <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">else</span>                                          <span class="hljs-comment">-- ny linje</span>
@@ -95,7 +95,7 @@ trykket. Dersom tasten <code>Q</code> trykkes avslutter vi løkken med <code>bre
     term.setCursorPos(x, y)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-    <span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
+    <span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
     <span class="hljs-keyword">if</span> tast == keys.q <span class="hljs-keyword">then</span>
         <span class="hljs-keyword">break</span>                                 <span class="hljs-comment">-- endret linje</span>
     <span class="hljs-keyword">end</span>
@@ -117,7 +117,7 @@ verdiene av <code>x</code> og <code>y</code> avhengig av hvilken piltast som try
     term.setCursorPos(x, y)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'O'</span>)
 
-    <span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
+    <span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
     <span class="hljs-keyword">if</span> tast == keys.q <span class="hljs-keyword">then</span>
         <span class="hljs-keyword">break</span>
     <span class="hljs-keyword">end</span>
@@ -146,8 +146,8 @@ etter. Vi bruker tilfeldige tall for å bestemme hvor skatten skal
 ligge. Endre begynnelsen av programmet ditt som følger:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">local</span> x = <span class="hljs-number">20</span>
 <span class="hljs-keyword">local</span> y = <span class="hljs-number">10</span>
-<span class="hljs-keyword">local</span> skattX = math.random(<span class="hljs-number">1</span>, <span class="hljs-number">50</span>)             <span class="hljs-comment">-- ny linje</span>
-<span class="hljs-keyword">local</span> skattY = math.random(<span class="hljs-number">1</span>, <span class="hljs-number">18</span>)             <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> skattX = <span class="hljs-built_in">math</span>.<span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>, <span class="hljs-number">50</span>)             <span class="hljs-comment">-- ny linje</span>
+<span class="hljs-keyword">local</span> skattY = <span class="hljs-built_in">math</span>.<span class="hljs-built_in">random</span>(<span class="hljs-number">1</span>, <span class="hljs-number">18</span>)             <span class="hljs-comment">-- ny linje</span>
 
 <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
     term.clear()
@@ -162,7 +162,7 @@ ligge. Endre begynnelsen av programmet ditt som følger:</label></p>
         <span class="hljs-keyword">break</span>                                 <span class="hljs-comment">-- ny linje</span>
     <span class="hljs-keyword">end</span>                                       <span class="hljs-comment">-- ny linje</span>
 
-    <span class="hljs-keyword">local</span> hendelse, tast = os.pullEvent(<span class="hljs-string">'key'</span>)
+    <span class="hljs-keyword">local</span> hendelse, tast = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'key'</span>)
     <span class="hljs-comment">-- resten av programmet er som tidligere</span>
 </code></pre>
 <p>Prøv spillet! Fungerer det som du hadde trodd? Klarer du å kanskje
@@ -310,7 +310,7 @@ dette skal være mulig kan vi bytte ut <code>os.pullEvent</code> med noe som
 heter <code>os.pullEventRaw</code>. Disse fungerer omtrent på samme måte, men
 den siste bryr seg ikke om <code>Ctrl-T</code>.</label></p>
 <p>Skriv <code>edit startup</code> og legg til en linje øverst i koden din:</p>
-<pre><code class="lua">os.pullEvent = os.pullEventRaw                <span class="hljs-comment">-- ny linje</span>
+<pre><code class="lua"><span class="hljs-built_in">os</span>.pullEvent = <span class="hljs-built_in">os</span>.pullEventRaw                <span class="hljs-comment">-- ny linje</span>
 <span class="hljs-keyword">local</span> passord = <span class="hljs-string">'kodeklubben'</span>
 
 <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
@@ -503,7 +503,7 @@ av <strong>heisann</strong> som vi skrev tidligere.</label></p>
 <p><input type="checkbox" id="cbx_29" disabled="true"><label for="cbx_29"> La oss se på koden til <strong>hello</strong>. Skriv <code>edit hello</code>. Du vil se det
 følgende:</label></p>
 <pre><code class="lua"><span class="hljs-keyword">if</span> term.isColour() <span class="hljs-keyword">then</span>
-    term.setTextColour( <span class="hljs-number">2</span>^math.random(<span class="hljs-number">0</span>,<span class="hljs-number">15</span>) )
+    term.setTextColour( <span class="hljs-number">2</span>^<span class="hljs-built_in">math</span>.<span class="hljs-built_in">random</span>(<span class="hljs-number">0</span>,<span class="hljs-number">15</span>) )
 <span class="hljs-keyword">end</span>
 textutils.slowPrint( <span class="hljs-string">"Hello World!"</span> )
 term.setTextColour( colours.white )
@@ -580,7 +580,7 @@ du kan bruke musen.</label></p>
 <pre><code class="lua">term.clear()
 
 <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
-    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = os.pullEvent(<span class="hljs-string">'mouse_click'</span>)
+    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'mouse_click'</span>)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Du klikket '</span> .. knapp)
     <span class="hljs-built_in">print</span>(<span class="hljs-string">'Posisjon: x = '</span> .. x .. <span class="hljs-string">', y = '</span> .. y)
 <span class="hljs-keyword">end</span>
@@ -597,7 +597,7 @@ som er tegnet. Endre koden til</label></p>
 <pre><code class="lua">term.clear()
 
 <span class="hljs-keyword">while</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">do</span>
-    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = os.pullEvent(<span class="hljs-string">'mouse_click'</span>)
+    <span class="hljs-keyword">local</span> hendelse, knapp, x, y = <span class="hljs-built_in">os</span>.pullEvent(<span class="hljs-string">'mouse_click'</span>)
     term.setCursorPos(x, y)                   <span class="hljs-comment">-- ny linje</span>
 
     <span class="hljs-keyword">if</span> knapp == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span>                        <span class="hljs-comment">-- ny linje</span>
@@ -628,9 +628,4 @@ prøv å forbedre programmet ditt.</p>
 </section>
 </section>
 </div><div class="improve"><h3>Forbedre denne siden</h3><p>Funnet en feil? Kunne noe vært bedre? Hvis ja, vennligst gi oss tilbakemelding ved å lage en sak på Github eller fiks feilen selv om du kan. Vi er takknemlige for enhver tilbakemelding!</p><a href="https://github.com/kodeklubben/oppgaver/issues/new?title=Problem med ComputerCraft: Hendelser&amp;body=Oppgavens kildekode: https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft/hendelser" class="issue">Rapporter et problem</a><a href="https://github.com/kodeklubben/oppgaver/tree/master/src/computercraft/hendelser" class="code">Vis koden og fiks selv</a></div></div><div class="col-xs-12"><div id="footer" class="clearfix"><div class="license"><p><strong>Lisens:</strong></p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.no">CC BY-SA 4.0</a></div><div class="author"><p><strong>Forfatter</strong></p><p>Geir Arne Hjelle</p>
-</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-67775835-1', 'auto');
-ga('send', 'pageview');</script></body></html>
+</div></div></div></div></div><div class="intro-question modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Hei der!</h4></div><div class="modal-body"><p>Ser ut som dette er ditt første besøk, vil du ha en omvisning?</p></div><div class="modal-footer"><button class="btn btn-success">Ja!</button><button data-dismiss="modal" class="btn btn-danger">Nei takk</button></div></div></div></div><script src="../../assets/vendor.min.js"></script><script src="../../assets/script.min.js"></script></body></html>
