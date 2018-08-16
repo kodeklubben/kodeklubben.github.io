@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" width="200" height="145.5" xmlns="http://www.w3.org/2000/svg">
+ <style type="text/css">
+   .st0{fill:#EF2B2D;}
+   .st1{fill:#FFFFFF;}
+	 .st2{fill:#002868;}
+  </style>
+  <rect id="svg_1" height="145.5" width="200" class="st0"/>
+  <rect id="svg_2" height="145.5" width="36.4" class="st1" x="54.5"/>
+  <rect id="svg_3" height="36.4" width="200" class="st1" y="54.5"/>
+  <rect id="svg_4" height="145.5" width="18.2" class="st2" x="63.6"/>
+  <rect id="svg_5" height="18.2" width="200" class="st2" y="63.6"/>
+  <rect stroke="#000" id="svg_6" height="53.999896" width="108.666457" y="90.861076" x="90.833351" stroke-width="1.5" fill="#fff"/>
+  <text style="cursor: move;" stroke="#000" transform="matrix(2.4011214203921725,0,0,2.0758040528708643,-404.41783083811157,-132.26854925366678) " xml:space="preserve" text-anchor="start" font-family="Arvo, sans-serif" font-size="24" id="svg_7" y="128.836657" x="212.1037" stroke-width="0" fill="#000000">NN</text>
+</svg>
