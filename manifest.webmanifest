@@ -1,0 +1,62 @@
+{
+  "icons": [
+    {
+      "src": "/icon_1024x1024.8ae88fff6be1cc531a93cfabde82eeb7.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_512x512.eb15d3842061bb70a6ec0685c31d53fe.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.6e6aaf448c8fa834cca163e62a951b7c.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_256x256.590a44b0c0a5708ce1006b479a3f81f1.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.23d3f0ef67b8e95d755a477a3c6658c7.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_152x152.050b36fcde449372d38f2579ddbdb057.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_144x144.de0a6c92905cf8e728222eba13846eeb.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.a64676e000879e3d4934530c31275088.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.014347e8b15449191b90d0299121a6bf.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_72x72.9436eea66eb91990782ea026ed144cce.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "name": "Lær Kidsa Koding",
+  "short_name": "LKK",
+  "orientation": "any",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "På denne siden finner du oppgaver for barn og unge i alle aldre som ønsker å lære programmering. Alt innholdet på siden er gratis å bruke, og er ofte benyttet på kodeklubben og programmeringsfag i skolen.",
+  "background_color": "#fff",
+  "theme_color": "#fff"
+}
