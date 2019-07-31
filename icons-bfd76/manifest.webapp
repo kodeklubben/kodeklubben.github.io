@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "Lær Kidsa Koding",
+  "description": "På denne siden finner du oppgaver for barn og unge i alle aldre som ønsker å lære programmering. Alt innholdet på siden er gratis å bruke, og er ofte benyttet på kodeklubben og programmeringsfag i skolen.",
+  "icons": {
+    "60": "/icons-bfd76/firefox_app_60x60.png",
+    "128": "/icons-bfd76/firefox_app_128x128.png",
+    "512": "/icons-bfd76/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
