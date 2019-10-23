@@ -8331,6 +8331,7 @@ button.close {
 @font-face {
   font-family: OpenDyslexic-Regular;
   src: url(/CCV-assets/OpenDyslexic-Regular.3f8cac.ttf);
+  font-display: swap;
 }
 
 html {
